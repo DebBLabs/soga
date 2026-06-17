@@ -64,8 +64,9 @@ def main():
     print("Approval Status: GRANTED")
     print()
     print("Note:")
-    print("For Gate 2, approval is represented as scenario evidence.")
-    print("Production approval lifecycle is future work.")
+    print("For Gate 2, caregiver approval is represented as a scenario-level approval event.")
+    print("The current proof path demonstrates re-evaluation by clearing the supervised runtime condition.")
+    print("Production approval lifecycle and approval evidence handling are future work.")
 
     allow_result = run_state(mission_file, "INDEPENDENT")
 
