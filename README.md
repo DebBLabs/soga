@@ -1,35 +1,30 @@
 # SOGA
 
-**Subject-Oriented Governance Architecture**
+## Subject-Oriented Governance Architecture
 
-SOGA is an execution-time governance layer that evaluates whether delegated authority remains legitimate at the moment of execution.
+SOGA is an execution-time governance layer.
 
-SOGA is not an identity system.
+It evaluates whether delegated authority remains legitimate when execution is requested.
 
-SOGA is not an authorization protocol.
+SOGA does not replace identity, authorization, or delegation systems.
 
-SOGA sits above delegation, authorization and identity systems and evaluates whether a requested action should still be allowed, restricted, or denied when execution is requested.
+Instead, SOGA evaluates whether delegated authority should still be exercised now.
 
-## Core Principle
-
-Protocols carry evidence.
-
-SOGA evaluates legitimacy.
-
-The PDP governs.
-
-The CDP is the API.
+---
 
 ## The Problem
 
-Most authorization systems answer:
+Authentication answers:
 
-- Who are you?
-- What are you allowed to do?
+Who are you?
 
-SOGA evaluates a third question:
+Authorization answers:
 
-- Should this still be allowed now?
+What are you allowed to do?
+
+Governance answers:
+
+Should this still be allowed now?
 
 Execution-time legitimacy may depend on:
 
@@ -40,7 +35,9 @@ Execution-time legitimacy may depend on:
 - Policy constraints
 - Authority evidence
 
-These conditions can change after delegation is issued.
+These conditions may change after delegation is issued.
+
+---
 
 ## Three Claims
 
@@ -57,6 +54,27 @@ Governance outcomes may change when the subject's condition changes, even when a
 RESTRICT is not a softened DENY.
 
 It is a first-class governance outcome that enables constrained execution, supervision, bounded continuation, or holding behavior when execution remains possible under additional governance conditions.
+
+---
+
+## Start Here
+
+For a first-time review, begin with:
+
+1. docs/START_HERE.md
+2. Governance Overview
+3. Canonical Caregiver Scenario
+4. Governance View Pattern Verification
+5. Repository Inventory
+
+These artifacts explain:
+
+- Why SOGA exists
+- How it works
+- What governance decisions look like
+- How the model generalizes across missions
+
+---
 
 ## Architecture
 
@@ -84,87 +102,118 @@ Governance PDP
 
 ↓
 
-Canonical Decision Package
+Canonical Decision Package (CDP)
 
 ↓
 
-Execution / PEP
+Execution / Policy Enforcement Point (PEP)
 
-The Canonical Decision Package (CDP) is the authoritative governance artifact produced for each execution event.
+The Canonical Decision Package (CDP) is the governance artifact produced for each execution event.
 
-## Specification
-
-The normative specification is:
-
-`docs/canonical_decision_package_v0_1.md`
-
-Additional architecture documents:
-
-- `docs/service_map_v0_1.md`
-- `docs/stable_interfaces_v0_1.md`
-- `docs/repository_curation_v0_1.md`
-- `docs/agent_evidence_model_v0_1.md`
-- `docs/mission_working_representation_v0_1.md`
+---
 
 ## Demonstrations
 
 Protocol Independence
+
 python3 -m tools.protocol_independence_demo
 
 Subject Agency State
+
 python3 -m tools.subject_agency_state_demo
 
 Mission Intake to CDP
+
 python3 -m tools.mission_to_cdp_demo
 
-Additional demonstrations:
+Additional demonstrations
 
-* tools/restrict_visibility_demo.py
-* tools/multi_agent_cdp_demo.py
+python3 -m tools.restrict_visibility_demo
 
-AAuth, UCAN, and ZCAP Proofs
+python3 -m tools.canonical_caregiver_scenario
 
-Supporting protocol proofs are available for reviewers interested in protocol integration:
+python3 -m tools.governance_view_demo
 
-* tools/aauth_runtime_envelope_v0_1_proof.py
-* tools/ucan_runtime_envelope_v0_1_proof.py
-* tools/zcap_runtime_envelope_v0_1_proof.py
-* tools/pep_end_to_end_proof.py
+---
 
-These proofs demonstrate protocol-specific evidence entering the same Runtime Envelope and Governance PDP.
-
-Regression
+## Regression
 
 Run the frozen regression suite:
 
 python3 -m tools.cdp_regression
 
-The regression suite validates governance behavior across the frozen use cases and confirms Canonical Decision Package generation across domains.
+Expected result:
 
-Status
+CDP REGRESSION PASS: 10 use cases, 38 canonical decision packages
+
+---
+
+## Current Status
 
 Current repository status:
 
-* Protocol-independent Governance PDP
-* Canonical Decision Package architecture
-* Subject Agency State governance model
-* Mission Intake pipeline
-* Multi-agent advisory evidence support
-* Frozen regression suite
+- Protocol-independent Governance PDP
+- Canonical Decision Package architecture
+- Subject Agency State governance model
+- Mission Intake pipeline
+- Multi-agent advisory evidence support
+- Frozen regression suite
 
-Protocol Ecosystem Alignment
+---
 
-Current protocol proofs include AAuth, UCAN, and ZCAP.
+## Specifications
 
-SOGA does not depend on any particular delegation, authorization, or identity protocol. Protocol-specific authority evidence is normalized into a common Runtime Envelope before governance evaluation.
+Primary specification:
+
+docs/canonical_decision_package_v0_1.md
+
+Additional architecture references:
+
+docs/service_map_v0_1.md
+
+docs/stable_interfaces_v0_1.md
+
+docs/repository_curation_v0_1.md
+
+docs/agent_evidence_model_v0_1.md
+
+docs/mission_working_representation_v0_1.md
+
+---
+
+## Protocol Ecosystem Alignment
+
+Current protocol proofs include:
+
+- AAuth
+- UCAN
+- ZCAP
+
+SOGA does not depend on any particular delegation, authorization, or identity protocol.
+
+Protocol-specific authority evidence is normalized into a common Runtime Envelope before governance evaluation.
 
 The Governance PDP evaluates execution-time legitimacy independently of the originating protocol, allowing the same governance semantics to be applied across heterogeneous ecosystems.
 
-Additional protocol adapters, including OAuth/OIDC/OIDF-aligned authority artifacts, GNAP-style authorization models, agent interoperability frameworks, and emerging delegated authority ecosystems, may be added without changing Governance PDP semantics, Canonical Decision Package structure, or Policy Enforcement Point behavior.
+Additional protocol adapters may be added without changing:
 
-Community-contributed protocol adapters are encouraged. New delegation, authorization, identity, or agent ecosystems may be integrated by implementing the Runtime Envelope contract and demonstrating equivalent governance outcomes through the Governance PDP.
+- Governance PDP semantics
+- Canonical Decision Package structure
+- Policy Enforcement Point behavior
+
+Community-contributed protocol adapters are encouraged.
+
+---
+
+## Scope
 
 This repository is a reference implementation of SOGA governance semantics.
 
-It does not prescribe production deployment topology, distributed service architecture, or network-scale implementation strategy.
+It does not prescribe:
+
+- Production deployment topology
+- Distributed service architecture
+- Approval service design
+- Notification architecture
+- Network-scale implementation strategy
 
