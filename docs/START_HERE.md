@@ -1,10 +1,10 @@
 # Start Here
 
-This repository contains the SOGA reference implementation.
+This repository contains the SOGA Governance Laboratory and reference implementation.
 
 SOGA means **Subject-Oriented Governance Architecture**.
 
-SOGA is an execution-time governance layer that evaluates whether a requested action remains legitimate when execution is requested.
+SOGA evaluates whether delegated authority should still be exercised at execution time.
 
 It is not an identity protocol.
 
@@ -12,58 +12,73 @@ It is not an authorization protocol.
 
 It is not a delegation protocol.
 
-SOGA consumes evidence from those systems and produces a Canonical Decision Package.
+SOGA consumes authority evidence and produces governance decisions.
+
+---
+
+## Read These First
+
+For a first-time review, read these five artifacts in order:
+
+1. `docs/governance_overview.md`
+2. `docs/north_star_governance_lifecycle.md`
+3. `canonical_caregiver_scenario.md`
+4. `sprints/gate-3/pattern_verification.md`
+5. `docs/repository_inventory_v0_1.md`
+
+This sequence answers:
+
+1. Why does this matter?
+2. How does it work?
+3. Show me.
+4. Does it generalize?
+5. Where does it live?
+
+---
 
 ## Core Principle
 
-Protocols carry evidence.
+Authentication answers:
 
-SOGA evaluates legitimacy.
+Who are you?
 
-The PDP governs.
+Authorization answers:
 
-The CDP is the API.
+What were you permitted to do?
 
-## Recommended Reading Order
+Governance answers:
 
-1. `README.md`
-2. `docs/canonical_decision_package_v0_1.md`
-3. `docs/service_map_v0_1.md`
-4. `docs/stable_interfaces_v0_1.md`
-5. `docs/repository_curation_v0_1.md`
-6. `docs/future_deployment_considerations_v0_1.md`
-7. docs/service_map_v0_1.md
-8. docs/stable_interfaces_v0_1.md
+Should that authority still be exercised now?
 
-## Primary Demonstrations
+---
+
+## What This Repository Demonstrates
+
+- Mission steps are the primary unit of governance.
+- Protocol artifacts provide supporting evidence.
+- Subject Agency State can change governance outcomes.
+- RESTRICT is a first-class governance path.
+- RESTRICT is not a degraded ALLOW.
+- Execution consumes governance decisions; it does not recreate governance logic.
+
+---
+
+## Primary Review Commands
 
 Run:
 
-python3 -m tools.protocol_independence_demo
+```bash
+python3 -m tools.restrict_visibility_demo
 python3 -m tools.subject_agency_state_demo
-python3 -m tools.mission_to_cdp_demo
-Supporting Proofs
-
-For protocol-specific review:
-python3 -m tools.aauth_runtime_envelope_v0_1_proof
 python3 -m tools.pep_end_to_end_proof
-Regression
-
-Run:
+python3 -m tools.canonical_caregiver_scenario
+python3 -m tools.governance_view_demo
 python3 -m tools.cdp_regression
-
-Expected results
+Expected regression result:
 CDP REGRESSION PASS: 10 use cases, 38 canonical decision packages
-What This Repository Demonstrates
-
-* Protocol changes do not change governance outcomes.
-* Subject Agency State changes do change governance outcomes.
-* RESTRICT is a first-class execution path.
-* The Canonical Decision Package is the governance artifact.
-* Execution and visualization consume the CDP; they do not reconstruct governance logic.
-
 Scope
 
 This repository is a reference implementation of SOGA governance semantics.
 
-It does not prescribe production deployment topology, distributed service architecture, or network-scale implementation strategy.
+It does not prescribe production deployment topology, distributed service architecture, approval service design, notification architecture, or network-scale implementation strategy.
+
