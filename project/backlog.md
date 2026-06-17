@@ -377,3 +377,119 @@ Notes:
 
 Priority: Low
 
+
+---
+
+## Gate 2 Review Observations
+
+### B-016 Concrete Mission Step Language
+
+Status: Open
+
+Observation:
+
+"Complete Purchase" is architecturally valid, but reviewers may need a more concrete step description.
+
+Example:
+
+Purchase birthday gift under $100 and ship to approved address.
+
+Priority: Medium
+
+---
+
+### B-017 Mission-First Authority Evidence Labels
+
+Status: Open
+
+Observation:
+
+Authority evidence should be labeled mission-first and protocol-second.
+
+Preferred framing:
+
+Delegated purchasing authority represented as AAuth-shaped mission evidence.
+
+Priority: Medium
+
+---
+
+### B-018 Multi-Mission Actor Continuity
+
+Status: Open
+
+Observation:
+
+Alice and Beth should be reusable across multiple missions so reviewers can see governance invariants across scenarios.
+
+Priority: Medium
+
+
+---
+
+## Gate 2 Review Observations
+
+### B-016 Concrete Mission Step Language
+
+Status: Open
+
+Observation:
+
+"Complete Purchase" is architecturally valid, but reviewers may need a more concrete step description.
+
+Example:
+
+Purchase birthday gift under $100 and ship to approved address.
+
+Priority: Medium
+
+---
+
+### B-017 Mission-First Authority Evidence Labels
+
+Status: Open
+
+Observation:
+
+Authority evidence should be labeled mission-first and protocol-second.
+
+Preferred framing:
+
+Delegated purchasing authority represented as AAuth-shaped mission evidence.
+
+Priority: Medium
+
+---
+
+### B-018 Multi-Mission Actor Continuity
+
+Status: Open
+
+Observation:
+
+Alice and Beth should be reusable across multiple missions so reviewers can see governance invariants across scenarios.
+
+
+Priority: Medium
+
+
+---
+
+### B-019 Restrict Mode Exposure Review
+
+Status: Open
+
+Observation:
+
+SUPERVISED_EXECUTION originates from the current implementation path.
+
+Determine whether restrict_mode is:
+
+- internal implementation evidence
+- governance-visible concept
+- future profile-specific extension
+
+Do not elevate restrict_mode to a primary Governance View field until reviewed.
+
+Priority: Medium
+
