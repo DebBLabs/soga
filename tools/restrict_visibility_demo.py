@@ -6,7 +6,7 @@ from tools.subject_agency_state_demo import run_state
 
 
 def main():
-    result = run_state("SUPERVISED")
+    result = run_state("missions/gift_purchase_mission.json", "SUPERVISED")
 
     print("SOGA RESTRICT VISIBILITY DEMO")
     print("=============================")
