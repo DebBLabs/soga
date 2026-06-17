@@ -1,0 +1,44 @@
+{
+  "id": "research",
+  "title": "Research Collaboration Support",
+  "request": "My research assistant may gather literature and organize references but may not submit papers or commit funding.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-research-001",
+    "title": "bounded research support",
+    "objective": "support research activities",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "research_assistant",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "collect_references"
+    ],
+    "forbidden_actions": [
+      "submit_publication",
+      "commit_funding",
+      "accept_authorship"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May collect references and organize research materials but may not submit publications, commit funding, or accept authorship."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "INDEPENDENT",
+      "evaluate_at_execution": true
+    }
+  }
+}

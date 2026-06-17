@@ -1,0 +1,55 @@
+{
+  "mission_id": "mission-gift-purchase-001",
+  "title": "Buy and deliver a birthday gift",
+  "objective": "Buy a birthday gift for the subject's granddaughter and have it delivered before the deadline.",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "actors": [
+    {
+      "actor_id": "subject_agent",
+      "role": "agent_acting_on_behalf_of_subject"
+    },
+    {
+      "actor_id": "recommendation_agent",
+      "role": "delegated_agent"
+    },
+    {
+      "actor_id": "retail_service",
+      "role": "resource_service"
+    }
+  ],
+  "resources": [
+    {
+      "resource_id": "person_profile",
+      "protocol_hint": "aauth"
+    },
+    {
+      "resource_id": "gift_recommendation_task",
+      "protocol_hint": "ucan"
+    },
+    {
+      "resource_id": "checkout_api",
+      "protocol_hint": "zcap"
+    }
+  ],
+  "allowed_actions": [
+    "read_person_context",
+    "recommend_gift",
+    "purchase_gift"
+  ],
+  "forbidden_actions": [
+    "spend_over_budget",
+    "change_shipping_address_without_confirmation"
+  ],
+  "bounds": {
+    "max_budget_usd": 100,
+    "deadline": "2026-06-15",
+    "requires_receipt": true
+  },
+  "governance": {
+    "subject_agency_state": "INDEPENDENT",
+    "evaluate_at_execution": true
+  }
+}

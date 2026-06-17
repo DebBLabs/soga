@@ -1,0 +1,49 @@
+{
+  "mission_id": "mission-incident-response-investigation",
+  "title": "Incident Response Investigation",
+  "source_reference_mission": "missions/reference/incident_response_investigation.md",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "subject_agent": {
+    "agent_id": "subject_agent",
+    "role": "agent_acting_on_behalf_of_subject"
+  },
+  "scenario": "An enterprise delegates authority to a Subject Agent to investigate a suspected cybersecurity incident. The investigation may continue for hours or days while system conditions evolve.",
+  "objective": "Determine the scope and impact of the incident while preserving evidence and minimizing operational disruption.",
+  "preferences": [
+    "Minimize impact to production systems.",
+    "Preserve forensic evidence.",
+    "Prefer automated collection where possible.",
+    "Prefer notification before disruptive actions."
+  ],
+  "hard_constraints": [
+    "Never destroy or alter evidence.",
+    "Never exceed the delegated investigation scope.",
+    "Never access systems outside the approved boundary.",
+    "Never initiate remediation actions without separate authorization."
+  ],
+  "fallback_behaviors": [
+    "Hold execution.",
+    "Escalate for additional approval.",
+    "Terminate the mission.",
+    "Return RESTRICT or DENY."
+  ],
+  "governance_questions": [
+    "Mission versus session",
+    "Execution-time legitimacy",
+    "Scope expansion",
+    "Long-running missions",
+    "RESTRICT versus DENY"
+  ],
+  "notes": "Authority granted at mission creation does not guarantee that execution remains legitimate throughout the lifetime of the investigation. Governance must be evaluated continuously at execution time.",
+  "governance": {
+    "subject_agency_state": "ACTIVE",
+    "evaluate_at_execution": true
+  },
+  "metadata": {
+    "builder": "reference_mission_builder",
+    "status": "generated_from_reference_mission_v0_1"
+  }
+}

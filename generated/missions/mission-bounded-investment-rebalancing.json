@@ -1,0 +1,49 @@
+{
+  "mission_id": "mission-bounded-investment-rebalancing",
+  "title": "Bounded Investment Rebalancing",
+  "source_reference_mission": "missions/reference/bounded_investment_rebalancing.md",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "subject_agent": {
+    "agent_id": "subject_agent",
+    "role": "agent_acting_on_behalf_of_subject"
+  },
+  "scenario": "A Subject authorizes a Subject Agent to rebalance a small investment portfolio within predefined risk and capital boundaries.",
+  "objective": "Rebalance the portfolio to remain aligned with the Subject's declared investment preferences and risk tolerance.",
+  "preferences": [
+    "Prefer low-cost index funds.",
+    "Prefer minimal tax impact.",
+    "Prefer small adjustments over large reallocations.",
+    "Prefer avoiding unnecessary interruptions."
+  ],
+  "hard_constraints": [
+    "Never exceed the authorized capital limit.",
+    "Never increase the declared risk category without authorization.",
+    "Never execute trades outside approved asset classes.",
+    "Never continue if market conditions invalidate the delegated bounds."
+  ],
+  "fallback_behaviors": [
+    "Hold execution.",
+    "Pause and request review.",
+    "Continue only within conservative predefined limits.",
+    "Return DENY."
+  ],
+  "governance_questions": [
+    "Financial fiduciary boundaries",
+    "Preference versus hard constraint",
+    "Runtime market context",
+    "Autonomous background execution",
+    "RESTRICT versus DENY"
+  ],
+  "notes": "This mission tests whether execution remains legitimate when financial conditions change after authority was delegated.",
+  "governance": {
+    "subject_agency_state": "ACTIVE",
+    "evaluate_at_execution": true
+  },
+  "metadata": {
+    "builder": "reference_mission_builder",
+    "status": "generated_from_reference_mission_v0_1"
+  }
+}

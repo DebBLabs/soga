@@ -1,0 +1,50 @@
+{
+  "mission_id": "mission-birthday-gift-purchase",
+  "title": "Birthday Gift Purchase",
+  "source_reference_mission": "missions/reference/birthday_gift.md",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "subject_agent": {
+    "agent_id": "subject_agent",
+    "role": "agent_acting_on_behalf_of_subject"
+  },
+  "scenario": "Bob wishes to purchase a birthday gift for his niece. He delegates this task to his personal agent.",
+  "objective": "Purchase an appropriate birthday gift and arrange delivery before the birthday.",
+  "preferences": [
+    "Stay near the target budget.",
+    "Prefer highly rated items.",
+    "Prefer delivery before the birthday.",
+    "Prefer a gift consistent with prior purchases."
+  ],
+  "hard_constraints": [
+    "Do not exceed $100 without additional authorization.",
+    "Do not change the shipping address.",
+    "Do not purchase prohibited items.",
+    "Do not disclose personal information beyond what is necessary."
+  ],
+  "fallback_behaviors": [
+    "Search for equivalent alternatives.",
+    "Hold execution.",
+    "Request confirmation from the subject or designated delegate.",
+    "Follow previously authorized fallback rules.",
+    "Return a RESTRICT or DENY decision as appropriate."
+  ],
+  "governance_questions": [
+    "Preference vs. hard constraint",
+    "Execution-time evaluation",
+    "Subject reachability",
+    "Fallback behavior",
+    "RESTRICT vs. DENY outcomes"
+  ],
+  "notes": "This mission is intentionally protocol-independent. It should be projectable into AAuth, UCAN, ZCAP, and future delegation mechanisms while preserving its governance semantics.",
+  "governance": {
+    "subject_agency_state": "ACTIVE",
+    "evaluate_at_execution": true
+  },
+  "metadata": {
+    "builder": "reference_mission_builder",
+    "status": "generated_from_reference_mission_v0_1"
+  }
+}

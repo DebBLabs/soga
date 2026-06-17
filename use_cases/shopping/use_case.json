@@ -1,0 +1,43 @@
+{
+  "id": "shopping",
+  "title": "Bounded Purchase Mission",
+  "request": "My agent may buy a birthday gift for my nephew.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-shopping-gift-001",
+    "title": "buy birthday gift",
+    "objective": "buy a birthday gift",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "shopping_agent",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "purchase_gift"
+    ],
+    "forbidden_actions": [
+      "buy_age_restricted_item",
+      "create_recurring_commitment"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May purchase a gift under budget but may not buy age-restricted items or make recurring commitments."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "INDEPENDENT",
+      "evaluate_at_execution": true
+    }
+  }
+}

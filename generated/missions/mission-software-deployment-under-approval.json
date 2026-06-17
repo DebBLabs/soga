@@ -1,0 +1,46 @@
+{
+  "mission_id": "mission-software-deployment-under-approval",
+  "title": "Software Deployment Under Approval",
+  "source_reference_mission": "missions/reference/software_deployment.md",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "subject_agent": {
+    "agent_id": "subject_agent",
+    "role": "agent_acting_on_behalf_of_subject"
+  },
+  "scenario": "Bob delegates software deployment to an enterprise deployment agent. Deployment has been approved but execution may occur hours later.",
+  "objective": "Deploy the approved software update safely.",
+  "preferences": [
+    "Minimize downtime.",
+    "Deploy during maintenance window.",
+    "Preserve rollback capability."
+  ],
+  "hard_constraints": [
+    "Never deploy outside the approved window.",
+    "Never exceed approved scope.",
+    "Never bypass required approvals."
+  ],
+  "fallback_behaviors": [
+    "Hold execution.",
+    "Deny execution.",
+    "Follow rollback policy."
+  ],
+  "governance_questions": [
+    "Session versus mission",
+    "Approval versus execution",
+    "Execution-time governance",
+    "Revocation",
+    "RESTRICT versus DENY"
+  ],
+  "notes": "Authorization may have been valid when the mission was created. SOGA evaluates whether execution remains legitimate at execution time.",
+  "governance": {
+    "subject_agency_state": "ACTIVE",
+    "evaluate_at_execution": true
+  },
+  "metadata": {
+    "builder": "reference_mission_builder",
+    "status": "generated_from_reference_mission_v0_1"
+  }
+}

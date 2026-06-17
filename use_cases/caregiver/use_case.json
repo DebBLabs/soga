@@ -1,0 +1,45 @@
+{
+  "id": "caregiver",
+  "title": "Bounded Caregiver Support",
+  "request": "My caregiver may coordinate my daily care while I recover from surgery.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-caregiver-001",
+    "title": "bounded caregiver support",
+    "objective": "coordinate daily care during recovery",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "caregiver",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "schedule_appointment",
+      "purchase_gift"
+    ],
+    "forbidden_actions": [
+      "authorize_treatment",
+      "transfer_assets",
+      "change_beneficiary"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May coordinate care and obtain routine supplies but may not authorize treatment, transfer assets, or change beneficiaries."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "SUPERVISED",
+      "evaluate_at_execution": true
+    }
+  }
+}

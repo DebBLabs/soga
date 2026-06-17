@@ -1,0 +1,49 @@
+{
+  "mission_id": "mission-travel-displacement",
+  "title": "Travel Displacement",
+  "source_reference_mission": "missions/reference/travel_displacement.md",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "subject_agent": {
+    "agent_id": "subject_agent",
+    "role": "agent_acting_on_behalf_of_subject"
+  },
+  "scenario": "Alice delegates travel management to a Subject Agent. During travel, weather and airline disruptions require replanning while the Subject is temporarily unreachable.",
+  "objective": "Maintain the overall travel mission while minimizing disruption and preserving previously expressed preferences.",
+  "preferences": [
+    "Prefer direct flights.",
+    "Prefer existing hotel reservations.",
+    "Minimize additional cost.",
+    "Minimize unnecessary interruptions to the Subject."
+  ],
+  "hard_constraints": [
+    "Never exceed the authorized travel budget.",
+    "Never change the final destination.",
+    "Never extend the trip without authorization.",
+    "Never disclose unnecessary personal information."
+  ],
+  "fallback_behaviors": [
+    "Search for equivalent alternatives.",
+    "Hold execution.",
+    "Continue only within delegated limits.",
+    "Return RESTRICT or DENY."
+  ],
+  "governance_questions": [
+    "Preferences versus hard constraints",
+    "Fallback behavior",
+    "Subject reachability",
+    "Dynamic execution context",
+    "Mission continuity"
+  ],
+  "notes": "This mission illustrates that execution-time governance must evaluate changing environmental conditions while preserving the Subject's delegated intent.",
+  "governance": {
+    "subject_agency_state": "ACTIVE",
+    "evaluate_at_execution": true
+  },
+  "metadata": {
+    "builder": "reference_mission_builder",
+    "status": "generated_from_reference_mission_v0_1"
+  }
+}

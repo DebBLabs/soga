@@ -1,0 +1,11 @@
+{
+  "subject_id": "subject-001",
+  "standing_preferences": [],
+  "standing_constraints": [],
+  "standing_delegations": [],
+  "confirmed_answers": [],
+  "metadata": {
+    "profile_version": "0.01",
+    "purpose": "Standing Subject Representation Store for Mission Intake"
+  }
+}

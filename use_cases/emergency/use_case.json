@@ -1,0 +1,45 @@
+{
+  "id": "emergency",
+  "title": "Emergency Response Support",
+  "request": "My emergency representative may coordinate urgent care if I become unresponsive.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-emergency-001",
+    "title": "emergency response",
+    "objective": "coordinate urgent emergency response",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "emergency_representative",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "schedule_appointment",
+      "submit_claim_documents"
+    ],
+    "forbidden_actions": [
+      "change_beneficiary",
+      "transfer_assets",
+      "authorize_nonessential_procedure"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May coordinate emergency care and related administration but may not change beneficiaries, transfer assets, or authorize nonessential procedures."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "DELEGATED",
+      "evaluate_at_execution": true
+    }
+  }
+}

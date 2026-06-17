@@ -1,0 +1,61 @@
+{
+  "subject_id": "subject-001",
+  "standing_capabilities": [
+    {
+      "capability_id": "cap-calendar-create-001",
+      "provider": "calendar_service",
+      "capability": "create_calendar_event",
+      "evidence_type": "oauth_or_gnap_token",
+      "status": "active"
+    },
+    {
+      "capability_id": "cap-bank-pay-bill-001",
+      "provider": "banking_service",
+      "capability": "pay_bill",
+      "evidence_type": "bank_account_authorization",
+      "status": "active"
+    },
+    {
+      "capability_id": "cap-travel-rebook-001",
+      "provider": "travel_service",
+      "capability": "rebook_travel",
+      "evidence_type": "travel_account_authorization",
+      "status": "active"
+    },
+    {
+      "capability_id": "cap-commerce-purchase-001",
+      "provider": "commerce_service",
+      "capability": "purchase_gift",
+      "evidence_type": "payment_account_authorization",
+      "status": "active"
+    },
+    {
+      "capability_id": "cap-insurance-claim-001",
+      "provider": "insurance_service",
+      "capability": "submit_claim_documents",
+      "evidence_type": "insurance_portal_authorization",
+      "status": "active"
+    },
+    {
+      "capability_id": "cap-insurance-status-001",
+      "provider": "insurance_service",
+      "capability": "check_claim_status",
+      "evidence_type": "insurance_portal_authorization",
+      "status": "active"
+    },
+    {
+      "capability_id": "cap-enterprise-deploy-001",
+      "provider": "deployment_service",
+      "capability": "deploy_release",
+      "evidence_type": "change_approval_authorization",
+      "status": "active"
+    },
+    {
+      "capability_id": "cap-research-reference-001",
+      "provider": "research_workspace",
+      "capability": "collect_references",
+      "evidence_type": "research_workspace_authorization",
+      "status": "active"
+    }
+  ]
+}

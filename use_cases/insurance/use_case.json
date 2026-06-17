@@ -1,0 +1,44 @@
+{
+  "id": "insurance",
+  "title": "Insurance Claim Support",
+  "request": "My representative may help manage an insurance claim.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-insurance-claim-001",
+    "title": "manage insurance claim",
+    "objective": "support insurance claim management",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "representative",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "submit_claim_documents",
+      "check_claim_status"
+    ],
+    "forbidden_actions": [
+      "settle_claim",
+      "accept_payment_terms"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May submit documents and check status but may not settle the claim or accept payment terms without approval."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "INDEPENDENT",
+      "evaluate_at_execution": true
+    }
+  }
+}

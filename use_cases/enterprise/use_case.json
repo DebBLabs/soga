@@ -1,0 +1,44 @@
+{
+  "id": "enterprise",
+  "title": "Enterprise Change Management",
+  "request": "My deployment agent may deploy approved releases but may not bypass governance controls.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-enterprise-001",
+    "title": "bounded enterprise deployment",
+    "objective": "deploy approved software releases",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "deployment_agent",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "deploy_release"
+    ],
+    "forbidden_actions": [
+      "bypass_change_control",
+      "grant_admin_access",
+      "disable_security_monitoring"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May deploy approved releases but may not bypass change control, grant administrative access, or disable security monitoring."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "INDEPENDENT",
+      "evaluate_at_execution": true
+    }
+  }
+}

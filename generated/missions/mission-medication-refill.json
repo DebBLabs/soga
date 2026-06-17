@@ -1,0 +1,50 @@
+{
+  "mission_id": "mission-medication-refill",
+  "title": "Medication Refill",
+  "source_reference_mission": "missions/reference/medication_refill.md",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "subject_agent": {
+    "agent_id": "subject_agent",
+    "role": "agent_acting_on_behalf_of_subject"
+  },
+  "scenario": "Alice delegates medication refill management to her personal agent. The agent may monitor refill status, communicate with the pharmacy, and arrange delivery.",
+  "objective": "Ensure medication is refilled and delivered before the existing supply is exhausted.",
+  "preferences": [
+    "Prefer home delivery.",
+    "Prefer the existing pharmacy.",
+    "Minimize cost.",
+    "Avoid unnecessary interruptions to the subject."
+  ],
+  "hard_constraints": [
+    "Never refill medications that require additional authorization.",
+    "Never change prescribing physician.",
+    "Never substitute medication without authorization.",
+    "Never expose protected information unnecessarily."
+  ],
+  "fallback_behaviors": [
+    "Attempt pickup alternatives.",
+    "Pause execution.",
+    "Notify the appropriate party.",
+    "Continue only within previously authorized bounds.",
+    "Return RESTRICT or DENY."
+  ],
+  "governance_questions": [
+    "Long-running missions",
+    "Subject reachability",
+    "Execution-time evaluation",
+    "Escalation paths",
+    "Healthcare delegation"
+  ],
+  "notes": "The same mission should produce identical governance decisions regardless of whether execution is projected through AAuth, UCAN, ZCAP, or future protocols.",
+  "governance": {
+    "subject_agency_state": "ACTIVE",
+    "evaluate_at_execution": true
+  },
+  "metadata": {
+    "builder": "reference_mission_builder",
+    "status": "generated_from_reference_mission_v0_1"
+  }
+}

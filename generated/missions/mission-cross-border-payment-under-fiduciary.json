@@ -1,0 +1,49 @@
+{
+  "mission_id": "mission-cross-border-payment-under-fiduciary",
+  "title": "Cross-Border Payment Under Fiduciary",
+  "source_reference_mission": "missions/reference/cross_border_payment_under_fiduciary.md",
+  "subject": {
+    "subject_id": "subject-001",
+    "display_name": "Subject"
+  },
+  "subject_agent": {
+    "agent_id": "subject_agent",
+    "role": "agent_acting_on_behalf_of_subject"
+  },
+  "scenario": "Bob has delegated limited fiduciary authority to a Subject Agent to execute an approved payment to a family member living in another country. The payment may occur after changing financial or regulatory conditions.",
+  "objective": "Execute the authorized payment while preserving the Subject's financial interests and complying with delegated authority.",
+  "preferences": [
+    "Minimize transaction fees.",
+    "Prefer previously approved payment channels.",
+    "Complete the payment promptly.",
+    "Preserve an auditable record."
+  ],
+  "hard_constraints": [
+    "Never exceed the authorized payment amount.",
+    "Never change the recipient.",
+    "Never change the destination account.",
+    "Never violate applicable legal or regulatory restrictions."
+  ],
+  "fallback_behaviors": [
+    "Hold execution.",
+    "Escalate to the authorized fiduciary.",
+    "Continue only within previously delegated authority.",
+    "Return DENY."
+  ],
+  "governance_questions": [
+    "Fiduciary duty",
+    "Execution-time authorization",
+    "Runtime financial context",
+    "Delegated authority boundaries",
+    "RESTRICT versus DENY"
+  ],
+  "notes": "This mission demonstrates that possessing authority to make payments does not imply authority to alter payment semantics or exceed delegated boundaries.",
+  "governance": {
+    "subject_agency_state": "ACTIVE",
+    "evaluate_at_execution": true
+  },
+  "metadata": {
+    "builder": "reference_mission_builder",
+    "status": "generated_from_reference_mission_v0_1"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "banking",
+  "title": "Bounded Banking Support",
+  "request": "My attorney may pay household bills while I am unavailable.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-banking-support-001",
+    "title": "pay household bills",
+    "objective": "pay household bills",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "attorney",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "pay_bill"
+    ],
+    "forbidden_actions": [
+      "change_beneficiary",
+      "transfer_assets"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May pay existing household bills but may not transfer assets or change beneficiaries."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "SUPERVISED",
+      "evaluate_at_execution": true
+    }
+  }
+}

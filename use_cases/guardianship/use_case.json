@@ -1,0 +1,45 @@
+{
+  "id": "guardianship",
+  "title": "Bounded Guardianship Support",
+  "request": "My court-appointed guardian may manage my healthcare and finances while I am incapacitated.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-guardianship-001",
+    "title": "bounded guardianship",
+    "objective": "manage healthcare and finances while incapacitated",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "guardian",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "pay_bill",
+      "schedule_appointment"
+    ],
+    "forbidden_actions": [
+      "change_beneficiary",
+      "transfer_assets",
+      "authorize_nonessential_procedure"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May manage routine healthcare and finances but may not change beneficiaries, transfer assets, or authorize nonessential procedures."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "LAPSED",
+      "evaluate_at_execution": true
+    }
+  }
+}

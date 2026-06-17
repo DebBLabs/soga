@@ -1,0 +1,22 @@
+{
+  "id": "medical_appointments",
+  "title": "Medical Appointment Management",
+  "request": "My niece should manage my medical appointments while I am traveling.",
+  "answers": [
+    "May schedule appointments but may not authorize treatment."
+  ],
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "intake_conversation"
+    }
+  ],
+  "expected": {
+    "ready_steps": [
+      "schedule_appointment"
+    ],
+    "denied_steps": [
+      "authorize_treatment"
+    ]
+  }
+}

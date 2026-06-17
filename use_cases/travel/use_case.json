@@ -1,0 +1,43 @@
+{
+  "id": "travel",
+  "title": "Travel Displacement Response",
+  "request": "My assistant may change travel arrangements if my flight is disrupted.",
+  "available_evidence": [
+    {
+      "type": "human_confirmation",
+      "source": "use_case_fixture"
+    }
+  ],
+  "cmr": {
+    "mission_id": "mission-travel-displacement-001",
+    "title": "change disrupted travel",
+    "objective": "change disrupted travel arrangements",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Subject"
+    },
+    "actors": [
+      {
+        "actor_id": "assistant",
+        "role": "delegated_representative"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "rebook_travel"
+    ],
+    "forbidden_actions": [
+      "approve_unnecessary_upgrade",
+      "book_unrelated_travel"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "May rebook comparable travel after disruption but may not approve unnecessary upgrades or unrelated travel."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "SUPERVISED",
+      "evaluate_at_execution": true
+    }
+  }
+}
