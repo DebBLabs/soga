@@ -56,7 +56,7 @@ Should that authority still be exercised now?
 
 - Mission steps are the primary unit of governance.
 - Protocol artifacts provide supporting evidence.
-- Subject Agency State can change governance outcomes.
+- Subject Agency State also changes governance outcomes.
 - RESTRICT is a first-class governance path.
 - RESTRICT is not a degraded ALLOW.
 - Execution consumes governance decisions; it does not recreate governance logic.

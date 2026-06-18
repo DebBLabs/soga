@@ -16,6 +16,9 @@ Alice
 Delegate:
 Beth
 
+Relationship:
+Beth is Alice's caregiver.
+
 Delegate Role:
 Caregiver Delegate
 

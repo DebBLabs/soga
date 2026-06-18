@@ -493,3 +493,138 @@ Do not elevate restrict_mode to a primary Governance View field until reviewed.
 
 Priority: Medium
 
+
+---
+
+## Sprint 5 — Governance Workbench
+
+Status: Approved in Principle
+
+Authorization: Deferred pending Alan review
+
+Purpose:
+
+Expose the existing mission set through a common Governance View so reviewers can explore the same governance lifecycle across multiple mission types.
+
+---
+
+### Trigger
+
+Sprint 5 may begin only after Alan review has been received or explicitly deferred.
+
+---
+
+### Objective
+
+Create a mission exploration layer using existing outputs only.
+
+The reviewer should be able to select an existing mission and see the same Governance View structure applied consistently.
+
+---
+
+### Initial Scope
+
+- Mission selector
+- Existing missions only
+- Existing governance outputs only
+- Same Governance View structure
+- Same actors where appropriate
+- No new governance logic
+- No new protocols
+- No approval service
+- No notification service
+- No production UI
+
+---
+
+### Current Pattern Verified Missions
+
+- Birthday Gift Purchase
+- Medication Refill
+- Travel Displacement
+
+Pattern verification result:
+
+RESTRICT
+→ HOLDING
+→ Approval Required
+→ Approval Granted
+→ Re-Evaluation
+→ ALLOW
+→ EXECUTING
+
+The Governance View generalized across all three without modification to the view structure.
+
+---
+
+### Candidate Mission Set
+
+Existing use cases available for future selector:
+
+- banking
+- caregiver
+- emergency
+- enterprise
+- guardianship
+- insurance
+- medical_appointments
+- research
+- shopping
+- travel
+
+Existing generated missions available for future selector:
+
+- mission-birthday-gift-purchase
+- mission-medication-refill
+- mission-travel-displacement
+- mission-medical-appointment-scheduling
+- mission-caregiver-absence-response
+- mission-bounded-investment-rebalancing
+- mission-cross-border-payment-under-fiduciary
+- mission-incident-response-investigation
+- mission-advance-directive-enforcement
+- mission-software-deployment-under-approval
+
+---
+
+### Success Criteria
+
+A reviewer can explore the existing mission set through a single Governance View and understand:
+
+- what mission is being attempted
+- which mission step is governed
+- what authority evidence is present
+- what Subject Agency State applies
+- why RESTRICT occurs
+- what action is required
+- how re-evaluation resumes execution
+
+without reading code or raw JSON.
+
+---
+
+### Non-Goals
+
+Sprint 5 does not include:
+
+- new governance logic
+- new protocols
+- new use cases
+- production workbench
+- persistence
+- approval service
+- notification service
+- UI framework commitment
+- architectural revision
+
+---
+
+### Notes
+
+Sprint 5 should not begin before Alan review because his feedback may affect:
+
+- which missions are foregrounded
+- how the selector is labeled
+- how the Governance View is presented
+- whether any reviewer-facing terms need clarification
+
