@@ -1,0 +1,60 @@
+{
+  "id": "multi_hop",
+  "title": "Multi-Hop Delegation Evidence Transport",
+  "request": "Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.",
+  "available_evidence": [
+    {
+      "type": "delegation_chain",
+      "source": "use_case_fixture",
+      "chain": [
+        "Alice -> Beth",
+        "Beth -> care_agent"
+      ],
+      "scope": "Schedule medical appointments only"
+    }
+  ],
+  "notes": [
+    "This scenario demonstrates delegation evidence transport only.",
+    "SOGA performs a single execution-time governance evaluation for the requested action.",
+    "Per-hop governance evaluation is future work. See B-020."
+  ],
+  "cmr": {
+    "mission_id": "mission-multi-hop-delegation-001",
+    "title": "schedule cardiology appointment",
+    "objective": "schedule a cardiology appointment for Alice",
+    "subject": {
+      "subject_id": "subject-001",
+      "display_name": "Alice"
+    },
+    "actors": [
+      {
+        "actor_id": "beth",
+        "role": "delegated_representative"
+      },
+      {
+        "actor_id": "care_agent",
+        "role": "executing_agent"
+      }
+    ],
+    "resources": [],
+    "allowed_actions": [
+      "schedule_appointment"
+    ],
+    "forbidden_actions": [
+      "authorize_treatment",
+      "change_medication",
+      "access_unrelated_records"
+    ],
+    "bounds": {
+      "confirmed_authority": [
+        "Alice delegates appointment coordination to Beth.",
+        "Beth delegates scheduling execution to the care agent.",
+        "The care agent may schedule appointments but may not authorize treatment, change medication, or access unrelated records."
+      ]
+    },
+    "governance": {
+      "subject_agency_state": "SUPERVISED",
+      "evaluate_at_execution": true
+    }
+  }
+}

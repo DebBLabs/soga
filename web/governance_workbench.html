@@ -65,6 +65,7 @@
 <option value="guardianship">guardianship</option>
 <option value="insurance">insurance</option>
 <option value="medical_appointments">medical_appointments</option>
+<option value="multi_hop">multi_hop</option>
 <option value="research">research</option>
 <option value="shopping">shopping</option>
 <option value="travel">travel</option>
@@ -609,6 +610,91 @@
       <p><strong>Request:</strong> My niece should manage my medical appointments while I am traveling.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
+      <table>
+        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
+        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
+<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+      </table>
+    </section>
+    
+            </div>
+            
+            <div class="use-case" id="multi_hop">
+              <h2>Multi-Hop Delegation Evidence Transport</h2>
+              <p class="id">Use case: multi_hop</p>
+              
+              <div class="note">
+                <strong>Scenario Notes</strong>
+                <ul><li>This scenario demonstrates delegation evidence transport only.</li>
+<li>SOGA performs a single execution-time governance evaluation for the requested action.</li>
+<li>Per-hop governance evaluation is future work. See B-020.</li></ul>
+              </div>
+            
+              
+    <section class="package">
+      <h3>GovernanceDetermination.ALLOW</h3>
+      <p><strong>Mission:</strong> schedule cardiology appointment</p>
+      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
+      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
+      <table>
+        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
+        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+      </table>
+    </section>
+    
+
+    <section class="package">
+      <h3>GovernanceDetermination.DENY</h3>
+      <p><strong>Mission:</strong> schedule cardiology appointment</p>
+      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
+      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
+      <table>
+        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
+        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
+<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+      </table>
+    </section>
+    
+
+    <section class="package">
+      <h3>GovernanceDetermination.DENY</h3>
+      <p><strong>Mission:</strong> schedule cardiology appointment</p>
+      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
+      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Receipt:</strong> step-change_medication</p>
+      <table>
+        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
+        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
+<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
+<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+      </table>
+    </section>
+    
+
+    <section class="package">
+      <h3>GovernanceDetermination.DENY</h3>
+      <p><strong>Mission:</strong> schedule cardiology appointment</p>
+      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
+      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Receipt:</strong> step-access_unrelated_records</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
         <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>

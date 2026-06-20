@@ -11,6 +11,7 @@ USE_CASES = [
     "guardianship",
     "insurance",
     "medical_appointments",
+    "multi_hop",
     "research",
     "shopping",
     "travel",
