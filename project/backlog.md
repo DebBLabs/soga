@@ -628,3 +628,79 @@ Sprint 5 should not begin before Alan review because his feedback may affect:
 - how the Governance View is presented
 - whether any reviewer-facing terms need clarification
 
+
+---
+
+## Internal Review Observations
+
+Status: Backlog
+
+### Governance vs forbidden_actions Semantics
+
+Question:
+
+Should `forbidden_actions` be treated as a governance construct, a permission-system construct, or both?
+
+Observation:
+
+Permission systems typically assume anything not explicitly allowed is forbidden.
+
+Governance systems may prohibit specific actions while remaining agnostic about the complete permission model of the underlying resource.
+
+Future work should clarify the intended boundary.
+
+Status: Backlog
+
+---
+
+### Subject Agency State Semantics in Banking Scenarios
+
+Question:
+
+What operational behavior does Subject Agency State = Supervised imply in financial delegation scenarios?
+
+Examples:
+
+- Approval required for every transaction?
+- Approval required only for exceptional transactions?
+- Approval required above defined thresholds?
+- Approval required only when governance determines RESTRICT?
+
+Future work should clarify expected behavior and reviewer-facing explanations.
+
+Status: Backlog
+
+
+---
+
+### B-020 Delegation Hop Governance Evaluation
+
+Status: Future Architecture
+
+Observation:
+
+Current SOGA implementation evaluates delegation chains as authority evidence presented to a single execution-time governance evaluation.
+
+The Governance PDP does not currently perform independent governance evaluation at each delegation hop and does not produce per-hop governance receipts.
+
+Future work should evaluate whether delegation chains require:
+
+- Parent principal tracking
+- Delegated principal tracking
+- Hop-specific scope attenuation
+- Expiry evaluation per hop
+- Revocation evaluation per hop
+- Typed admission or denial receipts per hop
+
+Question:
+
+Should SOGA evolve from delegation-chain evidence evaluation toward explicit per-hop governance evaluation?
+
+Notes:
+
+Current implementation remains delegation-evidence based.
+
+Do not imply per-hop governance evaluation until implemented.
+
+Priority: Medium
+
