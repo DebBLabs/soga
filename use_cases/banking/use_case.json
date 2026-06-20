@@ -39,5 +39,8 @@
       "subject_agency_state": "SUPERVISED",
       "evaluate_at_execution": true
     }
-  }
+  },
+  "notes": [
+    "This scenario uses Supervised as an illustrative example. Approval requirements remain policy dependent and are not currently standardized by SOGA."
+  ]
 }

@@ -55,11 +55,26 @@ def main():
             for package in packages
         )
 
+        notes = use_case.get("notes", [])
+        notes_html = ""
+        if notes:
+            note_items = "\n".join(
+                f"<li>{safe(note)}</li>"
+                for note in notes
+            )
+            notes_html = f"""
+              <div class="note">
+                <strong>Scenario Notes</strong>
+                <ul>{note_items}</ul>
+              </div>
+            """
+
         sections.append(
             f"""
             <div class="use-case" id="{safe(use_case_id)}">
               <h2>{safe(use_case.get("title"))}</h2>
               <p class="id">Use case: {safe(use_case_id)}</p>
+              {notes_html}
               {rendered}
             </div>
             """
