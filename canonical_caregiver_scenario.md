@@ -40,9 +40,23 @@ Alice can participate, but this mission step requires caregiver approval before 
 Mission:
 Purchase Birthday Gift
 
+Purpose:
+
+Alice wants her granddaughter's birthday gift purchased and delivered on time.
+
 Objective:
 
-Purchase a birthday gift on Alice's behalf.
+Allow Beth to complete the purchase on Alice's behalf while preserving Alice's participation and oversight.
+
+Why Delegation Exists:
+
+The delegation is not for general purchasing authority.
+
+The delegation exists for a specific purpose: completing a birthday gift purchase for Alice's granddaughter.
+
+Mission Context:
+
+The purpose of the mission remains visible throughout governance evaluation. Authority evidence explains what may be done. Mission context explains why the authority was delegated.
 
 ---
 
@@ -100,4 +114,3 @@ ALLOW
 Post-Approval Execution State:
 
 EXECUTING
-
