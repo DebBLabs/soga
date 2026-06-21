@@ -49,7 +49,29 @@
   </style>
 </head>
 <body>
+
   <h1>SOGA Governance Workbench</h1>
+
+  <div class="note">
+    <p>
+      <strong>
+        SOGA Governance Laboratory —
+        Demonstration environment.
+      </strong>
+    </p>
+
+    <p>
+      Governance determinations influence
+      execution outcomes.
+    </p>
+
+    <p>
+      This workbench is not a production
+      execution environment, workflow
+      engine, orchestration runtime,
+      or agent framework.
+    </p>
+  </div>
 
   <div class="note">
     <p><strong>One governance model. Many mission types. Same lifecycle visible across all of them.</strong></p>
@@ -87,6 +109,7 @@
       <p><strong>Mission:</strong> pay household bills</p>
       <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-pay_bill</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -105,6 +128,7 @@
       <p><strong>Mission:</strong> pay household bills</p>
       <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -123,6 +147,7 @@
       <p><strong>Mission:</strong> pay household bills</p>
       <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -147,6 +172,7 @@
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -165,6 +191,7 @@
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-purchase_gift</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -183,6 +210,7 @@
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -201,6 +229,7 @@
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -219,6 +248,7 @@
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -243,6 +273,7 @@
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -261,6 +292,7 @@
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-submit_claim_documents</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -279,6 +311,7 @@
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -297,6 +330,7 @@
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -315,6 +349,7 @@
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_nonessential_procedure</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -339,6 +374,7 @@
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-deploy_release</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -357,6 +393,7 @@
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-bypass_change_control</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -375,6 +412,7 @@
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-grant_admin_access</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -393,6 +431,7 @@
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-disable_security_monitoring</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -417,6 +456,7 @@
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-pay_bill</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -435,6 +475,7 @@
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -453,6 +494,7 @@
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -471,6 +513,7 @@
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -489,6 +532,7 @@
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_nonessential_procedure</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -513,6 +557,7 @@
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-submit_claim_documents</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -531,6 +576,7 @@
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-check_claim_status</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -549,6 +595,7 @@
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-settle_claim</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -567,6 +614,7 @@
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-accept_payment_terms</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -591,6 +639,7 @@
       <p><strong>Mission:</strong> manage medical appointments</p>
       <p><strong>Request:</strong> My niece should manage my medical appointments while I am traveling.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -609,6 +658,7 @@
       <p><strong>Mission:</strong> manage medical appointments</p>
       <p><strong>Request:</strong> My niece should manage my medical appointments while I am traveling.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -640,6 +690,7 @@
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -658,6 +709,7 @@
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -676,6 +728,7 @@
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_medication</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -694,6 +747,7 @@
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-access_unrelated_records</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -718,6 +772,7 @@
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-collect_references</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -736,6 +791,7 @@
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-submit_publication</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -754,6 +810,7 @@
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-commit_funding</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -772,6 +829,7 @@
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-accept_authorship</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -796,6 +854,7 @@
       <p><strong>Mission:</strong> buy birthday gift</p>
       <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-purchase_gift</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -814,6 +873,7 @@
       <p><strong>Mission:</strong> buy birthday gift</p>
       <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-buy_age_restricted_item</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -832,6 +892,7 @@
       <p><strong>Mission:</strong> buy birthday gift</p>
       <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-create_recurring_commitment</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -856,6 +917,7 @@
       <p><strong>Mission:</strong> change disrupted travel</p>
       <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-rebook_travel</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -874,6 +936,7 @@
       <p><strong>Mission:</strong> change disrupted travel</p>
       <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-approve_unnecessary_upgrade</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -892,6 +955,7 @@
       <p><strong>Mission:</strong> change disrupted travel</p>
       <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
       <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-book_unrelated_travel</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -920,5 +984,6 @@
     selector.addEventListener("change", showSelected);
     showSelected();
   </script>
+
 </body>
 </html>

@@ -14,10 +14,28 @@ def safe(value):
     return html.escape(str(value))
 
 
+def execution_outcome(determination):
+
+    if determination == "ALLOW":
+        return "EXECUTING"
+
+    if determination == "RESTRICT":
+        return "HOLDING"
+
+    if determination == "DENY":
+        return "ABORTED"
+
+    return "UNKNOWN"
+
+
 def package_to_view(use_case_id, use_case, package):
     mission = package.get("mission", {})
     dimensions = package.get("dimension_results", {})
     receipt = package.get("execution_receipt")
+
+    outcome = execution_outcome(
+        package.get("governance_determination")
+    )
 
     rows = "\n".join(
         f"<tr><td>{safe(k)}</td><td>{safe(v)}</td></tr>"
@@ -30,6 +48,7 @@ def package_to_view(use_case_id, use_case, package):
       <p><strong>Mission:</strong> {safe(mission.get("title"))}</p>
       <p><strong>Request:</strong> {safe(use_case.get("request"))}</p>
       <p><strong>Subject Agency State:</strong> {safe(package.get("subject_agency_state"))}</p>
+      <p><strong>Execution Outcome:</strong> {safe(outcome)}</p>
       <p><strong>Execution Receipt:</strong> {safe(receipt)}</p>
       <table>
         <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
@@ -136,7 +155,29 @@ def main():
   </style>
 </head>
 <body>
+
   <h1>SOGA Governance Workbench</h1>
+
+  <div class="note">
+    <p>
+      <strong>
+        SOGA Governance Laboratory —
+        Demonstration environment.
+      </strong>
+    </p>
+
+    <p>
+      Governance determinations influence
+      execution outcomes.
+    </p>
+
+    <p>
+      This workbench is not a production
+      execution environment, workflow
+      engine, orchestration runtime,
+      or agent framework.
+    </p>
+  </div>
 
   <div class="note">
     <p><strong>One governance model. Many mission types. Same lifecycle visible across all of them.</strong></p>
@@ -163,6 +204,7 @@ def main():
     selector.addEventListener("change", showSelected);
     showSelected();
   </script>
+
 </body>
 </html>
 """

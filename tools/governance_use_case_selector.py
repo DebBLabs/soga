@@ -10,13 +10,24 @@ def line():
     print("-" * 72)
 
 
+def execution_outcome(determination):
+
+    decision = str(determination).upper()
+
+    if "ALLOW" in decision:
+        return "EXECUTING"
+
+    if "RESTRICT" in decision:
+        return "HOLDING"
+
+    if "DENY" in decision:
+        return "ABORTED"
+
+    return "UNKNOWN"
+
+
 def print_lifecycle(package):
     decision = package["governance_determination"]
-    receipt = package.get("execution_receipt")
-    if isinstance(receipt, dict):
-        execution = receipt.get("execution_status")
-    else:
-        execution = receipt
 
     print()
     print("Governance Lifecycle")
@@ -27,7 +38,11 @@ def print_lifecycle(package):
         ("Authority evidence presented", True),
         ("Subject state evaluated", True),
         (f"Governance issued {decision}", True),
-        (f"Execution receipt: {execution}", True),
+        (
+            f"Execution outcome: "
+            f"{execution_outcome(decision)}",
+            True,
+        ),
     ]
 
     for label, complete in steps:
@@ -40,30 +55,49 @@ def print_package(use_case_id, use_case, package):
     print("=" * 72)
     print("MISSION GOVERNANCE VIEW")
     print("=" * 72)
+
     print("Use Case:", use_case_id)
     print("Mission:", package["mission"].get("title"))
     print("Request:", use_case["request"])
-    print()
-    print("Subject Agency State:", package["subject_agency_state"])
-    print("Governance Decision:", package["governance_determination"])
-    receipt = package.get("execution_receipt")
-    if isinstance(receipt, dict):
-        execution_status = receipt.get("execution_status")
-    else:
-        execution_status = receipt
 
-    print("Execution Receipt:", execution_status)
+    print()
+    print(
+        "Subject Agency State:",
+        package["subject_agency_state"],
+    )
+
+    decision = package["governance_determination"]
+
+    print(
+        "Governance Decision:",
+        decision,
+    )
+
+    print(
+        "Execution Outcome:",
+        execution_outcome(decision),
+    )
+
+    print(
+        "Execution Receipt:",
+        package.get("execution_receipt"),
+    )
+
     print()
     print("Dimension Results")
     line()
+
     for name, value in package["dimension_results"].items():
         print(f"{name}: {value}")
 
-    if package["governance_determination"] == "RESTRICT":
+    if "RESTRICT" in str(decision):
         print()
         print("Required Action")
         line()
-        print("Review required before unrestricted execution may proceed.")
+        print(
+            "Review required before unrestricted "
+            "execution may proceed."
+        )
 
     print_lifecycle(package)
 
@@ -78,7 +112,9 @@ def run_use_case_view(use_case_id):
     ]
 
     if not packages:
-        raise AssertionError(f"{use_case_id}: no canonical decision packages")
+        raise AssertionError(
+            f"{use_case_id}: no canonical decision packages"
+        )
 
     print()
     print("#" * 72)
@@ -86,7 +122,11 @@ def run_use_case_view(use_case_id):
     print("#" * 72)
 
     for package in packages:
-        print_package(use_case_id, use_case, package)
+        print_package(
+            use_case_id,
+            use_case,
+            package,
+        )
 
     print()
     print("PASS:", use_case_id)
@@ -94,19 +134,29 @@ def run_use_case_view(use_case_id):
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Explore SOGA Governance View across regression use cases."
+        description=(
+            "Explore SOGA Governance View "
+            "across regression use cases."
+        )
     )
+
     parser.add_argument(
         "use_case",
         nargs="?",
         choices=USE_CASES + ["all"],
         default="all",
     )
+
     args = parser.parse_args()
 
-    selected = USE_CASES if args.use_case == "all" else [args.use_case]
+    selected = (
+        USE_CASES
+        if args.use_case == "all"
+        else [args.use_case]
+    )
 
     print("Available use cases:")
+
     for use_case_id in USE_CASES:
         marker = "*" if use_case_id in selected else "-"
         print(marker, use_case_id)
