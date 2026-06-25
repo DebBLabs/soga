@@ -3,43 +3,52 @@
 <head>
   <meta charset="utf-8">
   <title>SOGA Governance Workbench</title>
+
   <style>
     body {
       font-family: system-ui, sans-serif;
       margin: 2rem;
       max-width: 1000px;
     }
+
     select {
       font-size: 1rem;
       padding: 0.4rem;
       margin-bottom: 1.5rem;
     }
+
     .use-case {
       display: none;
       border-top: 2px solid #333;
       padding-top: 1rem;
     }
+
     .use-case.active {
       display: block;
     }
+
     .package {
       border: 1px solid #ccc;
       border-radius: 8px;
       padding: 1rem;
       margin: 1rem 0;
     }
+
     table {
       border-collapse: collapse;
       width: 100%;
     }
+
     th, td {
       border: 1px solid #ddd;
       padding: 0.5rem;
       text-align: left;
     }
+
     th {
       background: #f4f4f4;
     }
+
     .note {
       background: #f8f8f8;
       padding: 1rem;
@@ -47,6 +56,7 @@
       margin-bottom: 1rem;
     }
   </style>
+
 </head>
 <body>
 
@@ -74,11 +84,24 @@
   </div>
 
   <div class="note">
-    <p><strong>One governance model. Many mission types. Same lifecycle visible across all of them.</strong></p>
-    <p>This page is generated from existing SOGA regression use cases. It does not introduce new governance logic.</p>
+    <p>
+      <strong>
+        One governance model. Many mission types.
+        Same lifecycle visible across all of them.
+      </strong>
+    </p>
+
+    <p>
+      This page is generated from existing SOGA
+      regression use cases. It does not introduce
+      new governance logic.
+    </p>
   </div>
 
-  <label for="selector"><strong>Select mission type:</strong></label>
+  <label for="selector">
+    <strong>Select mission type:</strong>
+  </label>
+
   <select id="selector">
     <option value="banking">banking</option>
 <option value="caregiver">caregiver</option>
@@ -103,6 +126,8 @@
                 <ul><li>This scenario uses Supervised as an illustrative example. Approval requirements remain policy dependent and are not currently standardized by SOGA.</li></ul>
               </div>
             
+              
+              
               
     <section class="package">
       <h3>GovernanceDetermination.ALLOW</h3>
@@ -165,6 +190,49 @@
             <div class="use-case" id="caregiver">
               <h2>Bounded Caregiver Support</h2>
               <p class="id">Use case: caregiver</p>
+              
+              
+    <div class="note">
+      <strong>Reference RESTRICT Lifecycle</strong>
+
+      <p>
+      Subject Agency State: SUPERVISED
+      </p>
+
+      <p>
+      Governance Determination: RESTRICT
+      </p>
+
+      <p>
+      Execution Outcome: HOLDING
+      </p>
+
+      <p>
+      Approval Event (Scenario Demonstration)
+      </p>
+
+      <p>
+      Governance Re-Evaluation
+      </p>
+
+      <p>
+      Governance Determination: ALLOW
+      </p>
+
+      <p>
+      Execution Outcome: EXECUTING
+      </p>
+
+      <p>
+      Source: Canonical Caregiver Scenario
+      </p>
+
+      <p>
+      Reference execution layer only.
+      Not a production approval service.
+      </p>
+    </div>
+    
               
               
     <section class="package">
@@ -268,6 +336,8 @@
               <p class="id">Use case: emergency</p>
               
               
+              
+              
     <section class="package">
       <h3>GovernanceDetermination.ALLOW</h3>
       <p><strong>Mission:</strong> emergency response</p>
@@ -369,6 +439,8 @@
               <p class="id">Use case: enterprise</p>
               
               
+              
+              
     <section class="package">
       <h3>GovernanceDetermination.ALLOW</h3>
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
@@ -449,6 +521,8 @@
             <div class="use-case" id="guardianship">
               <h2>Bounded Guardianship Support</h2>
               <p class="id">Use case: guardianship</p>
+              
+              
               
               
     <section class="package">
@@ -552,6 +626,8 @@
               <p class="id">Use case: insurance</p>
               
               
+              
+              
     <section class="package">
       <h3>GovernanceDetermination.ALLOW</h3>
       <p><strong>Mission:</strong> manage insurance claim</p>
@@ -634,6 +710,8 @@
               <p class="id">Use case: medical_appointments</p>
               
               
+              
+              
     <section class="package">
       <h3>GovernanceDetermination.ALLOW</h3>
       <p><strong>Mission:</strong> manage medical appointments</p>
@@ -684,6 +762,53 @@
 <li>Per-hop governance evaluation is future work. See B-020.</li></ul>
               </div>
             
+              
+              
+    <div class="note">
+      <strong>Delegation Evidence Boundary</strong>
+
+      <pre>
+Alice
+  ↓
+Beth
+  ↓
+Care Agent
+  ↓
+Execution Request
+
+        ↓
+
+Single Governance Evaluation
+
+        ↓
+
+Governance Determination
+      </pre>
+
+      <p>
+      Delegation chains arrive as authority evidence.
+      </p>
+
+      <p>
+      SOGA performs one governance evaluation
+      at execution time.
+      </p>
+
+      <p>
+      Current implementation does not perform
+      per-hop governance evaluation.
+      </p>
+
+      <p>
+      Current implementation does not produce
+      per-hop governance receipts.
+      </p>
+
+      <p>
+      Future Architecture: B-020
+      </p>
+    </div>
+    
               
     <section class="package">
       <h3>GovernanceDetermination.ALLOW</h3>
@@ -765,6 +890,8 @@
             <div class="use-case" id="research">
               <h2>Research Collaboration Support</h2>
               <p class="id">Use case: research</p>
+              
+              
               
               
     <section class="package">
@@ -849,6 +976,8 @@
               <p class="id">Use case: shopping</p>
               
               
+              
+              
     <section class="package">
       <h3>GovernanceDetermination.ALLOW</h3>
       <p><strong>Mission:</strong> buy birthday gift</p>
@@ -910,6 +1039,8 @@
             <div class="use-case" id="travel">
               <h2>Travel Displacement Response</h2>
               <p class="id">Use case: travel</p>
+              
+              
               
               
     <section class="package">
@@ -977,11 +1108,20 @@
 
     function showSelected() {
       cases.forEach(el => el.classList.remove("active"));
-      const selected = document.getElementById(selector.value);
-      if (selected) selected.classList.add("active");
+
+      const selected =
+        document.getElementById(selector.value);
+
+      if (selected) {
+        selected.classList.add("active");
+      }
     }
 
-    selector.addEventListener("change", showSelected);
+    selector.addEventListener(
+      "change",
+      showSelected
+    );
+
     showSelected();
   </script>
 
