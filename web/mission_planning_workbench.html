@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>SOGA Mission Planning Workbench</title>
+
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 2rem;
+      max-width: 1100px;
+    }
+
+    select {
+      font-size: 1rem;
+      padding: 0.4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .scenario {
+      display: none;
+      border-top: 2px solid #333;
+      padding-top: 1rem;
+    }
+
+    .scenario.active {
+      display: block;
+    }
+
+    .panel {
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+      margin: 1rem 0;
+      background: #fff;
+    }
+
+    .note {
+      background: #f8f8f8;
+      padding: 1rem;
+      border-left: 4px solid #444;
+      margin-bottom: 1rem;
+    }
+
+    .boundary {
+      background: #f8f8f8;
+      border: 2px dashed #444;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-weight: bold;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+
+    th, td {
+      border: 1px solid #ddd;
+      padding: 0.5rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #f4f4f4;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>SOGA Mission Planning Workbench</h1>
+
+  <div class="note">
+    <p><strong>Mission planning demonstration.</strong></p>
+    <p>
+    This page shows notional mission construction and task classification.
+    It does not perform governance evaluation.
+    </p>
+    <p>
+    The mission side identifies which tasks need authority.
+    SOGA governance is a separate execution-time function.
+    </p>
+  </div>
+
+  <label for="selector"><strong>Select mission:</strong></label>
+
+  <select id="selector">
+    <option value="banking">Bounded Banking Support</option>
+<option value="caregiver">Caregiver Recovery Support</option>
+<option value="emergency">Emergency Response Support</option>
+<option value="enterprise">Enterprise Operations Support</option>
+<option value="guardianship">Guardianship Support</option>
+<option value="insurance">Insurance Claim Support</option>
+<option value="medical_appointments">Medical Appointment Scheduling</option>
+<option value="multi_hop">Multi-Hop Appointment Delegation</option>
+<option value="research">Research Support</option>
+<option value="shopping">Bounded Shopping Support</option>
+<option value="travel">Travel Displacement Support</option>
+  </select>
+
+  
+    <section class="scenario" id="banking">
+      <h2>Bounded Banking Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-bounded-banking-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>My attorney may pay household bills while I am unavailable.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support routine household banking without expanding authority.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Review unpaid household bills</td>
+          <td>banking / bill review</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Check account balance</td>
+          <td>banking read access</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Pay electric bill</td>
+          <td>bill payment</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Pay water bill</td>
+          <td>bill payment</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Change beneficiary</td>
+          <td>account administration</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+
+        <tr>
+          <td>Transfer assets</td>
+          <td>asset transfer</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 6</li>
+          <li>Tasks with no authority needed: 2</li>
+          <li>Authority-bearing tasks: 2</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 2</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="caregiver">
+      <h2>Caregiver Recovery Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-caregiver-recovery-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>My caregiver may coordinate my daily care while I recover from surgery.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Coordinate daily recovery support within bounded caregiver authority.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Check clinic hours</td>
+          <td>public directory lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Schedule follow-up appointment</td>
+          <td>calendar / scheduling</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Coordinate transportation</td>
+          <td>transportation service</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Purchase approved supplies</td>
+          <td>shopping / payment</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Authorize treatment</td>
+          <td>clinical authorization</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 1</li>
+          <li>Authority-bearing tasks: 3</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 1</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="emergency">
+      <h2>Emergency Response Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-emergency-response-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>If I am in an emergency, help coordinate immediate support.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support emergency response while preserving authority boundaries.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Locate nearest emergency facility</td>
+          <td>maps / directory lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Notify emergency contact</td>
+          <td>messaging</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Share emergency information</td>
+          <td>health information exchange</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Unlock home access for responder</td>
+          <td>smart lock / device</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Make non-emergency financial decision</td>
+          <td>financial system</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 1</li>
+          <li>Authority-bearing tasks: 3</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 1</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="enterprise">
+      <h2>Enterprise Operations Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-enterprise-operations-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>Help respond to an operational incident using approved enterprise procedures.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support incident response while respecting enterprise authority boundaries.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Review incident summary</td>
+          <td>ticketing system read access</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Collect system logs</td>
+          <td>observability platform</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Restart service</td>
+          <td>operations control</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Deploy approved patch</td>
+          <td>deployment system</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Bypass change control</td>
+          <td>administrative override</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 2</li>
+          <li>Authority-bearing tasks: 2</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 1</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="guardianship">
+      <h2>Guardianship Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-guardianship-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>My guardian may help manage approved care and support tasks.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support guardianship actions within delegated and legal authority.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Review appointment calendar</td>
+          <td>calendar read access</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Schedule appointment</td>
+          <td>calendar / scheduling</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Pay approved provider invoice</td>
+          <td>payment system</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Submit required form</td>
+          <td>government / provider portal</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Authorize major surgery</td>
+          <td>clinical authorization</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 1</li>
+          <li>Authority-bearing tasks: 3</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 1</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="insurance">
+      <h2>Insurance Claim Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-insurance-claim-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>Help me prepare and submit an insurance claim.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support insurance claim preparation and bounded submission.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Review policy coverage</td>
+          <td>policy lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Collect claim documents</td>
+          <td>document management</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Submit claim</td>
+          <td>insurance portal</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Upload supporting evidence</td>
+          <td>insurance portal</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Accept settlement offer</td>
+          <td>insurance portal</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 2</li>
+          <li>Authority-bearing tasks: 3</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 0</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="medical_appointments">
+      <h2>Medical Appointment Scheduling</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-medical-appointment-scheduling</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>Schedule my medical appointment according to my preferences.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Find and schedule an appointment without exceeding scheduling authority.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Find available appointment slots</td>
+          <td>scheduling availability lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Check provider location</td>
+          <td>directory / maps</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Book appointment</td>
+          <td>scheduling system</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Notify patient</td>
+          <td>messaging</td>
+          <td>context dependent</td>
+          <td>possible delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Authorize treatment</td>
+          <td>clinical authorization</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 2</li>
+          <li>Authority-bearing tasks: 1</li>
+          <li>Context-dependent authority tasks: 1</li>
+          <li>Not permitted tasks: 1</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="multi_hop">
+      <h2>Multi-Hop Appointment Delegation</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-multi-hop-appointment-delegation</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>Alice delegates appointment coordination to Beth. Beth delegates scheduling execution to a care agent.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Schedule a cardiology appointment through a delegated chain.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Find cardiology availability</td>
+          <td>scheduling availability lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Compare appointment windows</td>
+          <td>calendar / scheduling lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Schedule cardiology appointment</td>
+          <td>scheduling system</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Notify Alice and Beth</td>
+          <td>messaging</td>
+          <td>context dependent</td>
+          <td>possible delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Change medication</td>
+          <td>medication management</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 2</li>
+          <li>Authority-bearing tasks: 1</li>
+          <li>Context-dependent authority tasks: 1</li>
+          <li>Not permitted tasks: 1</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="research">
+      <h2>Research Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-research-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>Help conduct research and prepare outputs without exceeding delegated authority.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support bounded research work and identify authority-bearing actions.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Search literature</td>
+          <td>academic search</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Summarize papers</td>
+          <td>document analysis</td>
+          <td>no</td>
+          <td>local execution</td>
+        </tr>
+        
+
+        <tr>
+          <td>Draft report</td>
+          <td>document generation</td>
+          <td>no</td>
+          <td>local execution</td>
+        </tr>
+        
+
+        <tr>
+          <td>Submit dataset</td>
+          <td>research repository</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Submit publication</td>
+          <td>publication system</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 5</li>
+          <li>Tasks with no authority needed: 3</li>
+          <li>Authority-bearing tasks: 2</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 0</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="shopping">
+      <h2>Bounded Shopping Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-bounded-shopping-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>Help purchase approved items within my limits.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support shopping while separating search from purchase authority.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Search products</td>
+          <td>product search</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Compare prices</td>
+          <td>product search</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Read reviews</td>
+          <td>public web lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Add approved item to cart</td>
+          <td>commerce site</td>
+          <td>context dependent</td>
+          <td>possible delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Place order</td>
+          <td>commerce / payment</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Purchase prohibited item</td>
+          <td>commerce / payment</td>
+          <td>not permitted</td>
+          <td>blocked before governance</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 6</li>
+          <li>Tasks with no authority needed: 3</li>
+          <li>Authority-bearing tasks: 1</li>
+          <li>Context-dependent authority tasks: 1</li>
+          <li>Not permitted tasks: 1</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+    <section class="scenario" id="travel">
+      <h2>Travel Displacement Support</h2>
+
+      <div class="panel">
+        <h3>Mission Identity</h3>
+        <p><strong>Mission ID:</strong> mission-travel-displacement-support</p>
+        <p>
+        This is a notional mission planning view.
+        It demonstrates task classification only.
+        It is not yet integrated with a runtime agent implementation.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Human Intent</h3>
+        <p>Help me recover from travel disruption and get home safely.</p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Construction</h3>
+        <p><strong>Objective:</strong> Support travel recovery while identifying authority-bearing actions.</p>
+        <p>
+        Mission construction turns human intent into a task plan.
+        It identifies capabilities and authority-bearing tasks.
+        It does not approve, deny, restrict, evaluate Subject Agency State,
+        or produce a governance determination.
+        </p>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Plan / Task Classification</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Task</th>
+              <th>Capability Needed</th>
+              <th>Authority Needed</th>
+              <th>Route</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+        <tr>
+          <td>Check flight status</td>
+          <td>airline status lookup</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Search alternate flights</td>
+          <td>travel search</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Search hotels</td>
+          <td>hotel search</td>
+          <td>no</td>
+          <td>capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Book replacement flight</td>
+          <td>travel booking / payment</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Book hotel</td>
+          <td>hotel booking / payment</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+
+        <tr>
+          <td>Submit reimbursement request</td>
+          <td>expense system</td>
+          <td>yes</td>
+          <td>delegated capability invocation</td>
+        </tr>
+        
+          </tbody>
+        </table>
+      </div>
+
+      <div class="panel">
+        <h3>Mission Planning Summary</h3>
+        <ul>
+          <li>Total mission tasks: 6</li>
+          <li>Tasks with no authority needed: 3</li>
+          <li>Authority-bearing tasks: 3</li>
+          <li>Context-dependent authority tasks: 0</li>
+          <li>Not permitted tasks: 0</li>
+        </ul>
+      </div>
+
+      <div class="boundary">
+        Mission planning ends here. Governance is separate.
+        SOGA sees only authority-bearing execution requests when they reach
+        the execution boundary.
+      </div>
+    </section>
+    
+
+  <script>
+    const selector = document.getElementById("selector");
+    const scenarios = document.querySelectorAll(".scenario");
+
+    function showSelected() {
+      scenarios.forEach(
+        el => el.classList.remove("active")
+      );
+
+      const selected =
+        document.getElementById(selector.value);
+
+      if (selected) {
+        selected.classList.add("active");
+      }
+    }
+
+    selector.addEventListener(
+      "change",
+      showSelected
+    );
+
+    showSelected();
+  </script>
+</body>
+</html>

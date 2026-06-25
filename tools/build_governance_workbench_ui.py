@@ -234,10 +234,13 @@ def mission_builder_panel(use_case_id):
     """
 
 
-def package_to_view(use_case_id, use_case, package):
+def package_to_view(use_case_id, use_case, package, entry_number):
     mission = package.get("mission", {})
     dimensions = package.get("dimension_results", {})
     receipt = package.get("execution_receipt")
+    execution_context = package.get("execution_context", {})
+    step_id = execution_context.get("step_id")
+    action = execution_context.get("action")
 
     decision = display_value(
         package.get("governance_determination")
@@ -258,10 +261,13 @@ def package_to_view(use_case_id, use_case, package):
 
     return f"""
     <section class="package">
-      <h3>{safe(decision)}</h3>
-      <p><strong>Mission:</strong> {safe(mission.get("title"))}</p>
-      <p><strong>Request:</strong> {safe(use_case.get("request"))}</p>
-      <p><strong>Subject Agency State:</strong> {safe(subject_state)}</p>
+      <h3>Runtime Log Entry {entry_number}</h3>
+      <p><strong>Decision:</strong> {safe(decision)}</p>
+      <p><strong>Mission Context:</strong> {safe(mission.get("title"))}</p>
+      <p><strong>Mission ID:</strong> {safe(mission.get("mission_id"))}</p>
+      <p><strong>Task Action:</strong> {safe(action)}</p>
+      <p><strong>Task Step ID:</strong> {safe(step_id)}</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> {safe(subject_state)}</p>
       <p><strong>Execution Outcome:</strong> {safe(outcome)}</p>
       <p><strong>Execution Receipt:</strong> {safe(receipt)}</p>
       <table>
@@ -292,8 +298,13 @@ def main():
         ]
 
         rendered = "\n".join(
-            package_to_view(use_case_id, use_case, package)
-            for package in packages
+            package_to_view(
+                use_case_id,
+                use_case,
+                package,
+                index,
+            )
+            for index, package in enumerate(packages, start=1)
         )
 
         notes = use_case.get("notes", [])
@@ -445,25 +456,25 @@ def main():
 
 <body>
 
-  <h1>SOGA Governance Workbench</h1>
+  <h1>SOGA Governance Decision Workbench</h1>
 
   <div class="note">
     <p>
       <strong>
-        SOGA Governance Laboratory -
+        SOGA Governance Decision Log -
         Demonstration environment.
       </strong>
     </p>
 
     <p>
-      Governance determinations influence
-      execution outcomes.
+      This page shows governance decisions for authority-bearing
+      execution requests.
     </p>
 
     <p>
-      This workbench is not a production
-      execution environment, workflow
-      engine, orchestration runtime,
+      This workbench is not a mission planner,
+      mission builder, execution environment,
+      workflow engine, orchestration runtime,
       or agent framework.
     </p>
   </div>
@@ -471,19 +482,21 @@ def main():
   <div class="note">
     <p>
       <strong>
-      One governance model. Many mission types.
-      Same lifecycle visible across all of them.
+      One governance model. Many authority-bearing
+      execution requests. Same decision lifecycle
+      visible across all of them.
       </strong>
     </p>
 
     <p>
       This page is generated from existing SOGA
-      regression use cases. It does not introduce
-      new governance logic.
+      regression use cases. It shows only the tasks
+      that reached governance evaluation. It does not
+      introduce new governance logic.
     </p>
   </div>
 
-  <label for="selector"><strong>Select mission type:</strong></label>
+  <label for="selector"><strong>Select governance scenario:</strong></label>
 
   <select id="selector">
     {options}

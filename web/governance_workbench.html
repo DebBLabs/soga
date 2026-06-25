@@ -96,25 +96,25 @@
 
 <body>
 
-  <h1>SOGA Governance Workbench</h1>
+  <h1>SOGA Governance Decision Workbench</h1>
 
   <div class="note">
     <p>
       <strong>
-        SOGA Governance Laboratory -
+        SOGA Governance Decision Log -
         Demonstration environment.
       </strong>
     </p>
 
     <p>
-      Governance determinations influence
-      execution outcomes.
+      This page shows governance decisions for authority-bearing
+      execution requests.
     </p>
 
     <p>
-      This workbench is not a production
-      execution environment, workflow
-      engine, orchestration runtime,
+      This workbench is not a mission planner,
+      mission builder, execution environment,
+      workflow engine, orchestration runtime,
       or agent framework.
     </p>
   </div>
@@ -122,19 +122,21 @@
   <div class="note">
     <p>
       <strong>
-      One governance model. Many mission types.
-      Same lifecycle visible across all of them.
+      One governance model. Many authority-bearing
+      execution requests. Same decision lifecycle
+      visible across all of them.
       </strong>
     </p>
 
     <p>
       This page is generated from existing SOGA
-      regression use cases. It does not introduce
-      new governance logic.
+      regression use cases. It shows only the tasks
+      that reached governance evaluation. It does not
+      introduce new governance logic.
     </p>
   </div>
 
-  <label for="selector"><strong>Select mission type:</strong></label>
+  <label for="selector"><strong>Select governance scenario:</strong></label>
 
   <select id="selector">
     <option value="banking">banking</option>
@@ -165,10 +167,13 @@
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> pay household bills</p>
-      <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> pay household bills</p>
+      <p><strong>Mission ID:</strong> mission-banking-support-001</p>
+      <p><strong>Task Action:</strong> pay_bill</p>
+      <p><strong>Task Step ID:</strong> step-pay_bill</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-pay_bill</p>
       <table>
@@ -191,10 +196,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> pay household bills</p>
-      <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> pay household bills</p>
+      <p><strong>Mission ID:</strong> mission-banking-support-001</p>
+      <p><strong>Task Action:</strong> change_beneficiary</p>
+      <p><strong>Task Step ID:</strong> step-change_beneficiary</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
@@ -217,10 +225,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> pay household bills</p>
-      <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> pay household bills</p>
+      <p><strong>Mission ID:</strong> mission-banking-support-001</p>
+      <p><strong>Task Action:</strong> transfer_assets</p>
+      <p><strong>Task Step ID:</strong> step-transfer_assets</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
@@ -322,10 +333,13 @@
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> bounded caregiver support</p>
-      <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> bounded caregiver support</p>
+      <p><strong>Mission ID:</strong> mission-caregiver-001</p>
+      <p><strong>Task Action:</strong> schedule_appointment</p>
+      <p><strong>Task Step ID:</strong> step-schedule_appointment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
@@ -348,10 +362,13 @@
     
 
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> bounded caregiver support</p>
-      <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> bounded caregiver support</p>
+      <p><strong>Mission ID:</strong> mission-caregiver-001</p>
+      <p><strong>Task Action:</strong> purchase_gift</p>
+      <p><strong>Task Step ID:</strong> step-purchase_gift</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-purchase_gift</p>
       <table>
@@ -374,10 +391,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded caregiver support</p>
-      <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded caregiver support</p>
+      <p><strong>Mission ID:</strong> mission-caregiver-001</p>
+      <p><strong>Task Action:</strong> authorize_treatment</p>
+      <p><strong>Task Step ID:</strong> step-authorize_treatment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
@@ -400,10 +420,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded caregiver support</p>
-      <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 4</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded caregiver support</p>
+      <p><strong>Mission ID:</strong> mission-caregiver-001</p>
+      <p><strong>Task Action:</strong> transfer_assets</p>
+      <p><strong>Task Step ID:</strong> step-transfer_assets</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
@@ -426,10 +449,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded caregiver support</p>
-      <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 5</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded caregiver support</p>
+      <p><strong>Mission ID:</strong> mission-caregiver-001</p>
+      <p><strong>Task Action:</strong> change_beneficiary</p>
+      <p><strong>Task Step ID:</strong> step-change_beneficiary</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
@@ -461,10 +487,13 @@
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> emergency response</p>
-      <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> emergency response</p>
+      <p><strong>Mission ID:</strong> mission-emergency-001</p>
+      <p><strong>Task Action:</strong> schedule_appointment</p>
+      <p><strong>Task Step ID:</strong> step-schedule_appointment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
@@ -487,10 +516,13 @@
     
 
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> emergency response</p>
-      <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> emergency response</p>
+      <p><strong>Mission ID:</strong> mission-emergency-001</p>
+      <p><strong>Task Action:</strong> submit_claim_documents</p>
+      <p><strong>Task Step ID:</strong> step-submit_claim_documents</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-submit_claim_documents</p>
       <table>
@@ -513,10 +545,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> emergency response</p>
-      <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> emergency response</p>
+      <p><strong>Mission ID:</strong> mission-emergency-001</p>
+      <p><strong>Task Action:</strong> change_beneficiary</p>
+      <p><strong>Task Step ID:</strong> step-change_beneficiary</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
@@ -539,10 +574,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> emergency response</p>
-      <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 4</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> emergency response</p>
+      <p><strong>Mission ID:</strong> mission-emergency-001</p>
+      <p><strong>Task Action:</strong> transfer_assets</p>
+      <p><strong>Task Step ID:</strong> step-transfer_assets</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
@@ -565,10 +603,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> emergency response</p>
-      <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 5</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> emergency response</p>
+      <p><strong>Mission ID:</strong> mission-emergency-001</p>
+      <p><strong>Task Action:</strong> authorize_nonessential_procedure</p>
+      <p><strong>Task Step ID:</strong> step-authorize_nonessential_procedure</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_nonessential_procedure</p>
       <table>
@@ -600,10 +641,13 @@
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> bounded enterprise deployment</p>
-      <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> bounded enterprise deployment</p>
+      <p><strong>Mission ID:</strong> mission-enterprise-001</p>
+      <p><strong>Task Action:</strong> deploy_release</p>
+      <p><strong>Task Step ID:</strong> step-deploy_release</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-deploy_release</p>
       <table>
@@ -626,10 +670,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded enterprise deployment</p>
-      <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded enterprise deployment</p>
+      <p><strong>Mission ID:</strong> mission-enterprise-001</p>
+      <p><strong>Task Action:</strong> bypass_change_control</p>
+      <p><strong>Task Step ID:</strong> step-bypass_change_control</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-bypass_change_control</p>
       <table>
@@ -652,10 +699,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded enterprise deployment</p>
-      <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded enterprise deployment</p>
+      <p><strong>Mission ID:</strong> mission-enterprise-001</p>
+      <p><strong>Task Action:</strong> grant_admin_access</p>
+      <p><strong>Task Step ID:</strong> step-grant_admin_access</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-grant_admin_access</p>
       <table>
@@ -678,10 +728,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded enterprise deployment</p>
-      <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 4</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded enterprise deployment</p>
+      <p><strong>Mission ID:</strong> mission-enterprise-001</p>
+      <p><strong>Task Action:</strong> disable_security_monitoring</p>
+      <p><strong>Task Step ID:</strong> step-disable_security_monitoring</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-disable_security_monitoring</p>
       <table>
@@ -713,10 +766,13 @@
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> bounded guardianship</p>
-      <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> bounded guardianship</p>
+      <p><strong>Mission ID:</strong> mission-guardianship-001</p>
+      <p><strong>Task Action:</strong> pay_bill</p>
+      <p><strong>Task Step ID:</strong> step-pay_bill</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-pay_bill</p>
       <table>
@@ -739,10 +795,13 @@
     
 
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> bounded guardianship</p>
-      <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> bounded guardianship</p>
+      <p><strong>Mission ID:</strong> mission-guardianship-001</p>
+      <p><strong>Task Action:</strong> schedule_appointment</p>
+      <p><strong>Task Step ID:</strong> step-schedule_appointment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
@@ -765,10 +824,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded guardianship</p>
-      <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded guardianship</p>
+      <p><strong>Mission ID:</strong> mission-guardianship-001</p>
+      <p><strong>Task Action:</strong> change_beneficiary</p>
+      <p><strong>Task Step ID:</strong> step-change_beneficiary</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
@@ -791,10 +853,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded guardianship</p>
-      <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 4</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded guardianship</p>
+      <p><strong>Mission ID:</strong> mission-guardianship-001</p>
+      <p><strong>Task Action:</strong> transfer_assets</p>
+      <p><strong>Task Step ID:</strong> step-transfer_assets</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
@@ -817,10 +882,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded guardianship</p>
-      <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 5</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded guardianship</p>
+      <p><strong>Mission ID:</strong> mission-guardianship-001</p>
+      <p><strong>Task Action:</strong> authorize_nonessential_procedure</p>
+      <p><strong>Task Step ID:</strong> step-authorize_nonessential_procedure</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_nonessential_procedure</p>
       <table>
@@ -852,10 +920,13 @@
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> manage insurance claim</p>
-      <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> manage insurance claim</p>
+      <p><strong>Mission ID:</strong> mission-insurance-claim-001</p>
+      <p><strong>Task Action:</strong> submit_claim_documents</p>
+      <p><strong>Task Step ID:</strong> step-submit_claim_documents</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-submit_claim_documents</p>
       <table>
@@ -878,10 +949,13 @@
     
 
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> manage insurance claim</p>
-      <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> manage insurance claim</p>
+      <p><strong>Mission ID:</strong> mission-insurance-claim-001</p>
+      <p><strong>Task Action:</strong> check_claim_status</p>
+      <p><strong>Task Step ID:</strong> step-check_claim_status</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-check_claim_status</p>
       <table>
@@ -904,10 +978,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> manage insurance claim</p>
-      <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> manage insurance claim</p>
+      <p><strong>Mission ID:</strong> mission-insurance-claim-001</p>
+      <p><strong>Task Action:</strong> settle_claim</p>
+      <p><strong>Task Step ID:</strong> step-settle_claim</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-settle_claim</p>
       <table>
@@ -930,10 +1007,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> manage insurance claim</p>
-      <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 4</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> manage insurance claim</p>
+      <p><strong>Mission ID:</strong> mission-insurance-claim-001</p>
+      <p><strong>Task Action:</strong> accept_payment_terms</p>
+      <p><strong>Task Step ID:</strong> step-accept_payment_terms</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-accept_payment_terms</p>
       <table>
@@ -965,10 +1045,13 @@
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> manage medical appointments</p>
-      <p><strong>Request:</strong> My niece should manage my medical appointments while I am traveling.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> manage medical appointments</p>
+      <p><strong>Mission ID:</strong> mission-intake-generated-001</p>
+      <p><strong>Task Action:</strong> schedule_appointment</p>
+      <p><strong>Task Step ID:</strong> step-schedule_appointment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
@@ -991,10 +1074,13 @@
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> manage medical appointments</p>
-      <p><strong>Request:</strong> My niece should manage my medical appointments while I am traveling.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> manage medical appointments</p>
+      <p><strong>Mission ID:</strong> mission-intake-generated-001</p>
+      <p><strong>Task Action:</strong> authorize_treatment</p>
+      <p><strong>Task Step ID:</strong> step-authorize_treatment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
@@ -1135,10 +1221,13 @@ Governance Determination
     
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> schedule cardiology appointment</p>
-      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> schedule cardiology appointment</p>
+      <p><strong>Mission ID:</strong> mission-multi-hop-delegation-001</p>
+      <p><strong>Task Action:</strong> schedule_appointment</p>
+      <p><strong>Task Step ID:</strong> step-schedule_appointment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
@@ -1161,10 +1250,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> schedule cardiology appointment</p>
-      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> schedule cardiology appointment</p>
+      <p><strong>Mission ID:</strong> mission-multi-hop-delegation-001</p>
+      <p><strong>Task Action:</strong> authorize_treatment</p>
+      <p><strong>Task Step ID:</strong> step-authorize_treatment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
@@ -1187,10 +1279,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> schedule cardiology appointment</p>
-      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> schedule cardiology appointment</p>
+      <p><strong>Mission ID:</strong> mission-multi-hop-delegation-001</p>
+      <p><strong>Task Action:</strong> change_medication</p>
+      <p><strong>Task Step ID:</strong> step-change_medication</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_medication</p>
       <table>
@@ -1213,10 +1308,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> schedule cardiology appointment</p>
-      <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 4</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> schedule cardiology appointment</p>
+      <p><strong>Mission ID:</strong> mission-multi-hop-delegation-001</p>
+      <p><strong>Task Action:</strong> access_unrelated_records</p>
+      <p><strong>Task Step ID:</strong> step-access_unrelated_records</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-access_unrelated_records</p>
       <table>
@@ -1248,10 +1346,13 @@ Governance Determination
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> bounded research support</p>
-      <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> bounded research support</p>
+      <p><strong>Mission ID:</strong> mission-research-001</p>
+      <p><strong>Task Action:</strong> collect_references</p>
+      <p><strong>Task Step ID:</strong> step-collect_references</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-collect_references</p>
       <table>
@@ -1274,10 +1375,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded research support</p>
-      <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded research support</p>
+      <p><strong>Mission ID:</strong> mission-research-001</p>
+      <p><strong>Task Action:</strong> submit_publication</p>
+      <p><strong>Task Step ID:</strong> step-submit_publication</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-submit_publication</p>
       <table>
@@ -1300,10 +1404,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded research support</p>
-      <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded research support</p>
+      <p><strong>Mission ID:</strong> mission-research-001</p>
+      <p><strong>Task Action:</strong> commit_funding</p>
+      <p><strong>Task Step ID:</strong> step-commit_funding</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-commit_funding</p>
       <table>
@@ -1326,10 +1433,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> bounded research support</p>
-      <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 4</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> bounded research support</p>
+      <p><strong>Mission ID:</strong> mission-research-001</p>
+      <p><strong>Task Action:</strong> accept_authorship</p>
+      <p><strong>Task Step ID:</strong> step-accept_authorship</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-accept_authorship</p>
       <table>
@@ -1361,10 +1471,13 @@ Governance Determination
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> buy birthday gift</p>
-      <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> buy birthday gift</p>
+      <p><strong>Mission ID:</strong> mission-shopping-gift-001</p>
+      <p><strong>Task Action:</strong> purchase_gift</p>
+      <p><strong>Task Step ID:</strong> step-purchase_gift</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-purchase_gift</p>
       <table>
@@ -1387,10 +1500,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> buy birthday gift</p>
-      <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> buy birthday gift</p>
+      <p><strong>Mission ID:</strong> mission-shopping-gift-001</p>
+      <p><strong>Task Action:</strong> buy_age_restricted_item</p>
+      <p><strong>Task Step ID:</strong> step-buy_age_restricted_item</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-buy_age_restricted_item</p>
       <table>
@@ -1413,10 +1529,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> buy birthday gift</p>
-      <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> buy birthday gift</p>
+      <p><strong>Mission ID:</strong> mission-shopping-gift-001</p>
+      <p><strong>Task Action:</strong> create_recurring_commitment</p>
+      <p><strong>Task Step ID:</strong> step-create_recurring_commitment</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-create_recurring_commitment</p>
       <table>
@@ -1448,10 +1567,13 @@ Governance Determination
               
               
     <section class="package">
-      <h3>ALLOW</h3>
-      <p><strong>Mission:</strong> change disrupted travel</p>
-      <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 1</h3>
+      <p><strong>Decision:</strong> ALLOW</p>
+      <p><strong>Mission Context:</strong> change disrupted travel</p>
+      <p><strong>Mission ID:</strong> mission-travel-displacement-001</p>
+      <p><strong>Task Action:</strong> rebook_travel</p>
+      <p><strong>Task Step ID:</strong> step-rebook_travel</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-rebook_travel</p>
       <table>
@@ -1474,10 +1596,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> change disrupted travel</p>
-      <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 2</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> change disrupted travel</p>
+      <p><strong>Mission ID:</strong> mission-travel-displacement-001</p>
+      <p><strong>Task Action:</strong> approve_unnecessary_upgrade</p>
+      <p><strong>Task Step ID:</strong> step-approve_unnecessary_upgrade</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-approve_unnecessary_upgrade</p>
       <table>
@@ -1500,10 +1625,13 @@ Governance Determination
     
 
     <section class="package">
-      <h3>DENY</h3>
-      <p><strong>Mission:</strong> change disrupted travel</p>
-      <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
-      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
+      <h3>Runtime Log Entry 3</h3>
+      <p><strong>Decision:</strong> DENY</p>
+      <p><strong>Mission Context:</strong> change disrupted travel</p>
+      <p><strong>Mission ID:</strong> mission-travel-displacement-001</p>
+      <p><strong>Task Action:</strong> book_unrelated_travel</p>
+      <p><strong>Task Step ID:</strong> step-book_unrelated_travel</p>
+      <p><strong>Subject Agency State at Decision Time:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-book_unrelated_travel</p>
       <table>
