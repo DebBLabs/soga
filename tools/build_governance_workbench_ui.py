@@ -14,59 +14,49 @@ def safe(value):
     return html.escape(str(value))
 
 
-def execution_outcome(determination):
+def display_value(value):
+    text = str(value)
 
-    if determination == "ALLOW":
+    if "." in text:
+        return text.split(".")[-1]
+
+    return text
+
+
+def determination_key(value):
+    return display_value(value).upper()
+
+
+def execution_outcome(determination):
+    decision = determination_key(determination)
+
+    if decision == "ALLOW":
         return "EXECUTING"
 
-    if determination == "RESTRICT":
+    if decision == "RESTRICT":
         return "HOLDING"
 
-    if determination == "DENY":
+    if decision == "DENY":
         return "ABORTED"
 
     return "UNKNOWN"
 
 
 def caregiver_restrict_lifecycle():
-
     return """
     <div class="note">
       <strong>Reference RESTRICT Lifecycle</strong>
 
-      <p>
-      Subject Agency State: SUPERVISED
-      </p>
+      <p>Subject Agency State: SUPERVISED</p>
+      <p>Governance Determination: RESTRICT</p>
+      <p>Execution Outcome: HOLDING</p>
+      <p>Approval Event: Scenario Demonstration</p>
+      <p>Governance Re-Evaluation</p>
+      <p>Governance Determination: ALLOW</p>
+      <p>Execution Outcome: EXECUTING</p>
 
       <p>
-      Governance Determination: RESTRICT
-      </p>
-
-      <p>
-      Execution Outcome: HOLDING
-      </p>
-
-      <p>
-      Approval Event (Scenario Demonstration)
-      </p>
-
-      <p>
-      Governance Re-Evaluation
-      </p>
-
-      <p>
-      Governance Determination: ALLOW
-      </p>
-
-      <p>
-      Execution Outcome: EXECUTING
-      </p>
-
-      <p>
-      Source: Canonical Caregiver Scenario
-      </p>
-
-      <p>
+      Source: Canonical Caregiver Scenario.
       Reference execution layer only.
       Not a production approval service.
       </p>
@@ -75,25 +65,29 @@ def caregiver_restrict_lifecycle():
 
 
 def delegation_boundary_panel():
-
     return """
     <div class="note">
       <strong>Delegation Evidence Boundary</strong>
 
       <pre>
 Alice
-  ↓
+  |
+  v
 Beth
-  ↓
+  |
+  v
 Care Agent
-  ↓
+  |
+  v
 Execution Request
 
-        ↓
+  |
+  v
 
 Single Governance Evaluation
 
-        ↓
+  |
+  v
 
 Governance Determination
       </pre>
@@ -124,31 +118,162 @@ Governance Determination
     """
 
 
+def mission_builder_panel(use_case_id):
+    if use_case_id == "caregiver":
+        human_intent = (
+            "My caregiver may coordinate my daily care "
+            "while I recover from surgery."
+        )
+
+        mission_items = [
+            ("Objective", "Coordinate daily care during recovery"),
+            ("Subject", "Patient"),
+            ("Delegate", "Caregiver"),
+            (
+                "Allowed actions",
+                "Schedule appointments; coordinate transportation; "
+                "purchase approved items",
+            ),
+            (
+                "Prohibited actions",
+                "Authorize treatment; transfer assets; change beneficiaries",
+            ),
+            ("Governance requirement", "Evaluate at execution time"),
+        ]
+
+        peer_items = [
+            "Canonical Mission Representation",
+            "Delegation Evidence",
+            "Subject Agency State",
+            "Other governance-relevant inputs",
+        ]
+
+    elif use_case_id == "multi_hop":
+        human_intent = (
+            "Alice delegates appointment coordination to Beth. "
+            "Beth delegates scheduling execution to a Care Agent."
+        )
+
+        mission_items = [
+            ("Objective", "Schedule cardiology appointment"),
+            ("Subject", "Alice"),
+            ("Delegates", "Beth; Care Agent"),
+            ("Allowed actions", "Schedule appointment"),
+            (
+                "Prohibited actions",
+                "Authorize treatment; change medication; "
+                "access unrelated records",
+            ),
+            ("Governance requirement", "Evaluate at execution time"),
+        ]
+
+        peer_items = [
+            "Canonical Mission Representation",
+            "Delegation Evidence",
+            "Subject Agency State",
+            "Other governance-relevant inputs",
+        ]
+
+    else:
+        return ""
+
+    mission_rows = "\n".join(
+        f"<tr><td>{safe(name)}</td><td>{safe(value)}</td></tr>"
+        for name, value in mission_items
+    )
+
+    peer_list = "\n".join(
+        f"<li>{safe(item)}</li>"
+        for item in peer_items
+    )
+
+    return f"""
+    <div class="note mission-builder-panel">
+      <strong>Notional Mission Builder</strong>
+
+      <p>
+      Mission Builder - independent adjacent contribution.
+      Produces mission context consumed by the Governance Server
+      alongside delegation evidence, authorization context, policy
+      inputs, capability context, Subject Agency State, runtime
+      conditions, and the execution request.
+      </p>
+
+      <div class="mission-grid">
+        <div class="mission-box">
+          <h4>Human Intent</h4>
+          <p>{safe(human_intent)}</p>
+        </div>
+
+        <div class="mission-box">
+          <h4>Canonical Mission Representation</h4>
+          <table>
+            <tbody>
+              {mission_rows}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mission-box">
+          <h4>Representative Peer Inputs</h4>
+          <ul>
+            {peer_list}
+          </ul>
+        </div>
+      </div>
+
+      <div class="convergence">
+        <strong>Convergence Point</strong>
+        <p>
+        The CMR is one contributor among several. These inputs
+        converge as Governance-Relevant Information before the
+        SOGA Governance Server evaluates execution-time legitimacy.
+        </p>
+      </div>
+    </div>
+    """
+
+
 def package_to_view(use_case_id, use_case, package):
     mission = package.get("mission", {})
     dimensions = package.get("dimension_results", {})
     receipt = package.get("execution_receipt")
+
+    decision = display_value(
+        package.get("governance_determination")
+    )
+
+    subject_state = display_value(
+        package.get("subject_agency_state")
+    )
 
     outcome = execution_outcome(
         package.get("governance_determination")
     )
 
     rows = "\n".join(
-        f"<tr><td>{safe(k)}</td><td>{safe(v)}</td></tr>"
+        f"<tr><td>{safe(k)}</td><td>{safe(display_value(v))}</td></tr>"
         for k, v in dimensions.items()
     )
 
     return f"""
     <section class="package">
-      <h3>{safe(package.get("governance_determination"))}</h3>
+      <h3>{safe(decision)}</h3>
       <p><strong>Mission:</strong> {safe(mission.get("title"))}</p>
       <p><strong>Request:</strong> {safe(use_case.get("request"))}</p>
-      <p><strong>Subject Agency State:</strong> {safe(package.get("subject_agency_state"))}</p>
+      <p><strong>Subject Agency State:</strong> {safe(subject_state)}</p>
       <p><strong>Execution Outcome:</strong> {safe(outcome)}</p>
       <p><strong>Execution Receipt:</strong> {safe(receipt)}</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody>{rows}</tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          {rows}
+        </tbody>
       </table>
     </section>
     """
@@ -188,6 +313,11 @@ def main():
               </div>
             """
 
+        mission_html = ""
+
+        if use_case_id in {"caregiver", "multi_hop"}:
+            mission_html = mission_builder_panel(use_case_id)
+
         lifecycle_html = ""
 
         if use_case_id == "caregiver":
@@ -204,6 +334,7 @@ def main():
               <h2>{safe(use_case.get("title"))}</h2>
               <p class="id">Use case: {safe(use_case_id)}</p>
               {notes_html}
+              {mission_html}
               {lifecycle_html}
               {delegation_html}
               {rendered}
@@ -261,6 +392,7 @@ def main():
       border: 1px solid #ddd;
       padding: 0.5rem;
       text-align: left;
+      vertical-align: top;
     }}
 
     th {{
@@ -273,9 +405,44 @@ def main():
       border-left: 4px solid #444;
       margin-bottom: 1rem;
     }}
-  </style>
 
+    .mission-builder-panel {{
+      background: #fafafa;
+      border-left: 4px solid #222;
+    }}
+
+    .mission-grid {{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }}
+
+    .mission-box {{
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+    }}
+
+    .mission-box h4 {{
+      margin-top: 0;
+    }}
+
+    .convergence {{
+      background: #fff;
+      border: 1px dashed #777;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }}
+
+    pre {{
+      white-space: pre-wrap;
+    }}
+  </style>
 </head>
+
 <body>
 
   <h1>SOGA Governance Workbench</h1>
@@ -283,7 +450,7 @@ def main():
   <div class="note">
     <p>
       <strong>
-        SOGA Governance Laboratory —
+        SOGA Governance Laboratory -
         Demonstration environment.
       </strong>
     </p>
@@ -304,8 +471,8 @@ def main():
   <div class="note">
     <p>
       <strong>
-        One governance model. Many mission types.
-        Same lifecycle visible across all of them.
+      One governance model. Many mission types.
+      Same lifecycle visible across all of them.
       </strong>
     </p>
 
@@ -316,9 +483,7 @@ def main():
     </p>
   </div>
 
-  <label for="selector">
-    <strong>Select mission type:</strong>
-  </label>
+  <label for="selector"><strong>Select mission type:</strong></label>
 
   <select id="selector">
     {options}
@@ -331,7 +496,9 @@ def main():
     const cases = document.querySelectorAll(".use-case");
 
     function showSelected() {{
-      cases.forEach(el => el.classList.remove("active"));
+      cases.forEach(
+        el => el.classList.remove("active")
+      );
 
       const selected =
         document.getElementById(selector.value);
@@ -363,4 +530,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-

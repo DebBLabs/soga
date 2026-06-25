@@ -43,6 +43,7 @@
       border: 1px solid #ddd;
       padding: 0.5rem;
       text-align: left;
+      vertical-align: top;
     }
 
     th {
@@ -55,9 +56,44 @@
       border-left: 4px solid #444;
       margin-bottom: 1rem;
     }
-  </style>
 
+    .mission-builder-panel {
+      background: #fafafa;
+      border-left: 4px solid #222;
+    }
+
+    .mission-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .mission-box {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 1rem;
+    }
+
+    .mission-box h4 {
+      margin-top: 0;
+    }
+
+    .convergence {
+      background: #fff;
+      border: 1px dashed #777;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+
+    pre {
+      white-space: pre-wrap;
+    }
+  </style>
 </head>
+
 <body>
 
   <h1>SOGA Governance Workbench</h1>
@@ -65,7 +101,7 @@
   <div class="note">
     <p>
       <strong>
-        SOGA Governance Laboratory —
+        SOGA Governance Laboratory -
         Demonstration environment.
       </strong>
     </p>
@@ -86,8 +122,8 @@
   <div class="note">
     <p>
       <strong>
-        One governance model. Many mission types.
-        Same lifecycle visible across all of them.
+      One governance model. Many mission types.
+      Same lifecycle visible across all of them.
       </strong>
     </p>
 
@@ -98,9 +134,7 @@
     </p>
   </div>
 
-  <label for="selector">
-    <strong>Select mission type:</strong>
-  </label>
+  <label for="selector"><strong>Select mission type:</strong></label>
 
   <select id="selector">
     <option value="banking">banking</option>
@@ -129,59 +163,81 @@
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> pay household bills</p>
       <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-pay_bill</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> pay household bills</p>
       <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> pay household bills</p>
       <p><strong>Request:</strong> My attorney may pay household bills while I am unavailable.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -192,42 +248,72 @@
               <p class="id">Use case: caregiver</p>
               
               
+    <div class="note mission-builder-panel">
+      <strong>Notional Mission Builder</strong>
+
+      <p>
+      Mission Builder - independent adjacent contribution.
+      Produces mission context consumed by the Governance Server
+      alongside delegation evidence, authorization context, policy
+      inputs, capability context, Subject Agency State, runtime
+      conditions, and the execution request.
+      </p>
+
+      <div class="mission-grid">
+        <div class="mission-box">
+          <h4>Human Intent</h4>
+          <p>My caregiver may coordinate my daily care while I recover from surgery.</p>
+        </div>
+
+        <div class="mission-box">
+          <h4>Canonical Mission Representation</h4>
+          <table>
+            <tbody>
+              <tr><td>Objective</td><td>Coordinate daily care during recovery</td></tr>
+<tr><td>Subject</td><td>Patient</td></tr>
+<tr><td>Delegate</td><td>Caregiver</td></tr>
+<tr><td>Allowed actions</td><td>Schedule appointments; coordinate transportation; purchase approved items</td></tr>
+<tr><td>Prohibited actions</td><td>Authorize treatment; transfer assets; change beneficiaries</td></tr>
+<tr><td>Governance requirement</td><td>Evaluate at execution time</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mission-box">
+          <h4>Representative Peer Inputs</h4>
+          <ul>
+            <li>Canonical Mission Representation</li>
+<li>Delegation Evidence</li>
+<li>Subject Agency State</li>
+<li>Other governance-relevant inputs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="convergence">
+        <strong>Convergence Point</strong>
+        <p>
+        The CMR is one contributor among several. These inputs
+        converge as Governance-Relevant Information before the
+        SOGA Governance Server evaluates execution-time legitimacy.
+        </p>
+      </div>
+    </div>
+    
+              
     <div class="note">
       <strong>Reference RESTRICT Lifecycle</strong>
 
-      <p>
-      Subject Agency State: SUPERVISED
-      </p>
+      <p>Subject Agency State: SUPERVISED</p>
+      <p>Governance Determination: RESTRICT</p>
+      <p>Execution Outcome: HOLDING</p>
+      <p>Approval Event: Scenario Demonstration</p>
+      <p>Governance Re-Evaluation</p>
+      <p>Governance Determination: ALLOW</p>
+      <p>Execution Outcome: EXECUTING</p>
 
       <p>
-      Governance Determination: RESTRICT
-      </p>
-
-      <p>
-      Execution Outcome: HOLDING
-      </p>
-
-      <p>
-      Approval Event (Scenario Demonstration)
-      </p>
-
-      <p>
-      Governance Re-Evaluation
-      </p>
-
-      <p>
-      Governance Determination: ALLOW
-      </p>
-
-      <p>
-      Execution Outcome: EXECUTING
-      </p>
-
-      <p>
-      Source: Canonical Caregiver Scenario
-      </p>
-
-      <p>
+      Source: Canonical Caregiver Scenario.
       Reference execution layer only.
       Not a production approval service.
       </p>
@@ -236,96 +322,131 @@
               
               
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-purchase_gift</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded caregiver support</p>
       <p><strong>Request:</strong> My caregiver may coordinate my daily care while I recover from surgery.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -338,97 +459,133 @@
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-submit_claim_documents</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> emergency response</p>
       <p><strong>Request:</strong> My emergency representative may coordinate urgent care if I become unresponsive.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_nonessential_procedure</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -441,78 +598,107 @@
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-deploy_release</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-bypass_change_control</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-grant_admin_access</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded enterprise deployment</p>
       <p><strong>Request:</strong> My deployment agent may deploy approved releases but may not bypass governance controls.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-disable_security_monitoring</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -525,97 +711,133 @@
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-pay_bill</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_beneficiary</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-transfer_assets</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded guardianship</p>
       <p><strong>Request:</strong> My court-appointed guardian may manage my healthcare and finances while I am incapacitated.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_nonessential_procedure</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -628,78 +850,107 @@
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-submit_claim_documents</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-check_claim_status</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-settle_claim</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> manage insurance claim</p>
       <p><strong>Request:</strong> My representative may help manage an insurance claim.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-accept_payment_terms</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -712,40 +963,55 @@
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> manage medical appointments</p>
       <p><strong>Request:</strong> My niece should manage my medical appointments while I am traveling.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> manage medical appointments</p>
       <p><strong>Request:</strong> My niece should manage my medical appointments while I am traveling.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -763,24 +1029,82 @@
               </div>
             
               
+    <div class="note mission-builder-panel">
+      <strong>Notional Mission Builder</strong>
+
+      <p>
+      Mission Builder - independent adjacent contribution.
+      Produces mission context consumed by the Governance Server
+      alongside delegation evidence, authorization context, policy
+      inputs, capability context, Subject Agency State, runtime
+      conditions, and the execution request.
+      </p>
+
+      <div class="mission-grid">
+        <div class="mission-box">
+          <h4>Human Intent</h4>
+          <p>Alice delegates appointment coordination to Beth. Beth delegates scheduling execution to a Care Agent.</p>
+        </div>
+
+        <div class="mission-box">
+          <h4>Canonical Mission Representation</h4>
+          <table>
+            <tbody>
+              <tr><td>Objective</td><td>Schedule cardiology appointment</td></tr>
+<tr><td>Subject</td><td>Alice</td></tr>
+<tr><td>Delegates</td><td>Beth; Care Agent</td></tr>
+<tr><td>Allowed actions</td><td>Schedule appointment</td></tr>
+<tr><td>Prohibited actions</td><td>Authorize treatment; change medication; access unrelated records</td></tr>
+<tr><td>Governance requirement</td><td>Evaluate at execution time</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="mission-box">
+          <h4>Representative Peer Inputs</h4>
+          <ul>
+            <li>Canonical Mission Representation</li>
+<li>Delegation Evidence</li>
+<li>Subject Agency State</li>
+<li>Other governance-relevant inputs</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="convergence">
+        <strong>Convergence Point</strong>
+        <p>
+        The CMR is one contributor among several. These inputs
+        converge as Governance-Relevant Information before the
+        SOGA Governance Server evaluates execution-time legitimacy.
+        </p>
+      </div>
+    </div>
+    
+              
               
     <div class="note">
       <strong>Delegation Evidence Boundary</strong>
 
       <pre>
 Alice
-  ↓
+  |
+  v
 Beth
-  ↓
+  |
+  v
 Care Agent
-  ↓
+  |
+  v
 Execution Request
 
-        ↓
+  |
+  v
 
 Single Governance Evaluation
 
-        ↓
+  |
+  v
 
 Governance Determination
       </pre>
@@ -811,77 +1135,105 @@ Governance Determination
     
               
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-schedule_appointment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-authorize_treatment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-change_medication</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> schedule cardiology appointment</p>
       <p><strong>Request:</strong> Alice delegates appointment coordination to Beth, and Beth delegates scheduling execution to a care agent.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-access_unrelated_records</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -894,78 +1246,107 @@ Governance Determination
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-collect_references</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-submit_publication</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-commit_funding</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> bounded research support</p>
       <p><strong>Request:</strong> My research assistant may gather literature and organize references but may not submit papers or commit funding.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-accept_authorship</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -978,59 +1359,81 @@ Governance Determination
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> buy birthday gift</p>
       <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-purchase_gift</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> buy birthday gift</p>
       <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-buy_age_restricted_item</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> buy birthday gift</p>
       <p><strong>Request:</strong> My agent may buy a birthday gift for my nephew.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-create_recurring_commitment</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -1043,59 +1446,81 @@ Governance Determination
               
               
               
+              
     <section class="package">
-      <h3>GovernanceDetermination.ALLOW</h3>
+      <h3>ALLOW</h3>
       <p><strong>Mission:</strong> change disrupted travel</p>
       <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> EXECUTING</p>
       <p><strong>Execution Receipt:</strong> step-rebook_travel</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.PASS</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>PASS</td></tr>
+<tr><td>authority</td><td>PASS</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>PASS</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> change disrupted travel</p>
       <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-approve_unnecessary_upgrade</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
 
     <section class="package">
-      <h3>GovernanceDetermination.DENY</h3>
+      <h3>DENY</h3>
       <p><strong>Mission:</strong> change disrupted travel</p>
       <p><strong>Request:</strong> My assistant may change travel arrangements if my flight is disrupted.</p>
-      <p><strong>Subject Agency State:</strong> SubjectAgencyState.INDEPENDENT</p>
+      <p><strong>Subject Agency State:</strong> INDEPENDENT</p>
       <p><strong>Execution Outcome:</strong> ABORTED</p>
       <p><strong>Execution Receipt:</strong> step-book_unrelated_travel</p>
       <table>
-        <thead><tr><th>Dimension</th><th>Result</th></tr></thead>
-        <tbody><tr><td>mission</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>authority</td><td>DimensionEvaluation.FAIL</td></tr>
-<tr><td>subject_agency_state</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>reachability</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>execution_context</td><td>DimensionEvaluation.PASS</td></tr>
-<tr><td>policy</td><td>DimensionEvaluation.FAIL</td></tr></tbody>
+        <thead>
+          <tr>
+            <th>Dimension</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>mission</td><td>FAIL</td></tr>
+<tr><td>authority</td><td>FAIL</td></tr>
+<tr><td>subject_agency_state</td><td>PASS</td></tr>
+<tr><td>reachability</td><td>PASS</td></tr>
+<tr><td>execution_context</td><td>PASS</td></tr>
+<tr><td>policy</td><td>FAIL</td></tr>
+        </tbody>
       </table>
     </section>
     
@@ -1107,7 +1532,9 @@ Governance Determination
     const cases = document.querySelectorAll(".use-case");
 
     function showSelected() {
-      cases.forEach(el => el.classList.remove("active"));
+      cases.forEach(
+        el => el.classList.remove("active")
+      );
 
       const selected =
         document.getElementById(selector.value);
