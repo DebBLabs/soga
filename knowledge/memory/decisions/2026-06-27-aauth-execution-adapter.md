@@ -106,3 +106,54 @@ SOGA owns the canonical governance model and the translation into that model.
 
 This preserves the architectural separation established in the Project Constitution and Architectural Principles.
 
+
+---
+
+## Gate 1 Boundary Test
+
+The adapter's responsibility ends when it produces a RuntimeEnvelope.
+
+The adapter should:
+
+- Receive an AAuth execution request
+- Extract mission context
+- Extract delegation evidence
+- Extract authorization context
+- Extract subject identity
+- Extract runtime conditions
+- Translate each into SOGA canonical form
+- Package everything into a RuntimeEnvelope
+- Return the RuntimeEnvelope
+
+The adapter should not:
+
+- Evaluate Subject Agency State
+- Apply policy
+- Produce a governance determination
+- Generate a Canonical Decision Package
+- Make any ALLOW / RESTRICT / DENY decision
+
+Those responsibilities belong to the Runtime Governance Engine and downstream CDP packaging.
+
+## Architectural Test
+
+The test question for the implementation is:
+
+    Does AAuthExecutionAdapter return a RuntimeEnvelope and nothing else?
+
+If yes, the boundary is correct.
+
+If the adapter returns anything resembling a governance determination, policy evaluation result, or Canonical Decision Package, it has crossed the boundary and taken on Runtime Governance Engine responsibilities.
+
+## Current Result
+
+Sprint 8 Task 1 passes this boundary test.
+
+The adapter returns a RuntimeEnvelope.
+
+It does not evaluate governance.
+
+It does not produce ALLOW, RESTRICT, or DENY.
+
+It does not generate a Canonical Decision Package.
+
