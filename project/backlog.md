@@ -704,3 +704,19 @@ Do not imply per-hop governance evaluation until implemented.
 
 Priority: Medium
 
+
+## B-021 — Reachability Default Policy Configuration
+
+Status: Future Backlog
+
+During Sprint 8 Task 2 Gate 1 review, the runtime bridge default for omitted reachability was accepted as non-blocking for the initial ALLOW path.
+
+Current behavior:
+If an AAuth execution request omits reachability, the runtime bridge treats omitted reachability as Reachable.
+
+Reason:
+This supports the initial ALLOW demonstration path while preserving explicit UNKNOWN or UNREACHABLE values when supplied.
+
+Architectural note:
+This default is governance-relevant. As SOGA matures, reachability defaults should move into policy configuration rather than remaining hardcoded in bridge logic.
+
