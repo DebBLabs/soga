@@ -106,3 +106,50 @@ All baseline cases passed.
 
 Provide CURRENT_STATE.md and Required Reading artifacts to Claude and confirm synchronization before Sprint 9 begins.
 
+
+---
+
+# Sprint 9 Completion
+
+Sprint 9 — Governed Interaction Inputs: COMPLETE.
+
+Artifact:
+
+- sprints/pre-july-16/sprint-9-governed-interaction-inputs.md
+
+Research Outcome:
+
+- Defined a provisional, optional, additive
+  `execution_context.interaction_context`
+  schema for Compaia interaction governance.
+
+Repository Status:
+
+- No executable code modified.
+- No RuntimeEnvelope implementation changes.
+- No adapter modifications.
+- No regression modifications.
+
+Regression Baseline:
+
+Verified on 2026-06-29.
+
+Results:
+
+- AAuth ACTIVE → ALLOW / EXECUTING
+- UCAN ACTIVE → ALLOW / EXECUTING
+- ZCAP ACTIVE → ALLOW / EXECUTING
+- AAuth IMPAIRED → RESTRICT / HOLDING
+- UCAN IMPAIRED → RESTRICT / HOLDING
+- ZCAP IMPAIRED → RESTRICT / HOLDING
+
+All baseline cases passed.
+
+Promotion Path:
+
+- specifications/runtime-envelope/v0.1/interaction_context.md
+
+Pending:
+
+- Gate 2 implementation authorization before any Python changes.
+

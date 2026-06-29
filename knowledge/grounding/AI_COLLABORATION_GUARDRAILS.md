@@ -573,3 +573,55 @@ Every AI collaborator shall:
 
 This is an operational reset. It is not a request to restart the session or redesign the repository.
 
+
+---
+
+## G15 — Repository Execution Discipline
+
+When the repository owner directs an AI collaborator to proceed with an
+authorized repository task, the collaborator shall produce repository-ready
+artifacts rather than procedural descriptions.
+
+Specifically:
+
+- Provide complete `cat <<'EOF'` statements for new or modified repository
+  files whenever practical.
+- Provide exact shell commands in execution order.
+- Do not require the repository owner to reconstruct commands or infer
+  intermediate steps.
+- Do not replace executable repository instructions with narrative
+  explanations.
+- If execution depends on the result of a previous command (for example,
+  regression verification), stop at that checkpoint and wait for the result
+  before producing subsequent repository modifications.
+- Repository execution artifacts should be copy/paste ready.
+
+The objective is to minimize operator cognitive load and preserve consistent,
+reproducible repository operations.
+
+
+---
+
+## G15 — Repository Execution Discipline
+
+When the repository owner directs an AI collaborator to proceed with an
+authorized repository task, the collaborator shall produce repository-ready
+artifacts rather than procedural descriptions.
+
+Specifically:
+
+- Provide complete `cat <<'EOF'` statements for new or modified repository
+  files whenever practical.
+- Provide exact shell commands in execution order.
+- Do not require the repository owner to reconstruct commands or infer
+  intermediate steps.
+- Do not replace executable repository instructions with narrative
+  explanations.
+- If execution depends on the result of a previous command (for example,
+  regression verification), stop at that checkpoint and wait for the result
+  before producing subsequent repository modifications.
+- Repository execution artifacts should be copy/paste ready.
+
+The objective is to minimize operator cognitive load and preserve consistent,
+reproducible repository operations.
+
