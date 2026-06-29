@@ -1,199 +1,108 @@
 # CURRENT STATE
+## Deb B Labs Research Program
 
-Last Updated: 2026-06-27
-
----
-
-# Repository
-
-Repository: soga-clean
-
-Primary Branch:
-(update as needed)
-
-Current Working Branch:
-(update as needed)
+Last Updated: 2026-06-29
 
 ---
 
-# Current Phase
+# Synchronization Contract
 
-Pre-July 16 Demonstration Track
+This document is the repository synchronization contract.
 
-Objective:
+Every collaborator shall synchronize from this document before
+beginning substantive work.
 
-Demonstrate execution-time governance integrated into a real autonomous agent ecosystem while preserving protocol independence.
+If additional repository documents are required, they are listed
+under Required Reading.
 
----
-
-# Architecture Status
-
-## Mission Builder
-
-Status:
-ACTIVE DEVELOPMENT
-
-Purpose:
-Transforms human intent into structured mission representations.
-
-Current State:
-
-- Mission decomposition operational
-- Mission Working Representation (MWR) established
-- Protocol-independent design maintained
-
-Next Milestone:
-
-Mission Planning Workbench
+Synchronization is complete only after this document and any listed
+Required Reading have been reviewed.
 
 ---
 
-## Runtime Governance
+# Repository Version
 
-Status:
-ACTIVE DEVELOPMENT
-
-Purpose:
-
-Evaluate every execution request immediately before execution.
-
-Current State:
-
-- Runtime Governance Engine implemented
-- Canonical Decision Package pipeline established
-- Execution boundary identified
-- Runtime evidence model active
-
-Next Milestone:
-
-Replace demonstration governance stub with production runtime engine.
+Branch: main
+Commit: 71f78aa
+Repository Status: RuntimeEnvelope Specification v0.1 committed. Sprint 9 authorized. Implementation not yet started.
 
 ---
 
-## Execution Boundary
+# Current Program Phase
 
-Status:
-WORKING
-
-Current Demonstration:
-
-Execution requests entering the Christian Posta AAuth demonstration are intercepted before execution.
-
-Current implementation uses a temporary governance stub returning ALLOW.
-
-This proves interception without changing surrounding architecture.
+Program: Pre-July 16 Program
+Phase: Phase 3 — Active
+Gate: Repository synchronization before Sprint 9
 
 ---
 
-## Canonical Decision Package
+# Current Sprint
 
-Status:
-WORKING
-
-Current State:
-
-Decision generation operational.
-
-Additional runtime serialization and visualization remain planned.
-
----
-
-# External Integrations
-
-## AAuth
-
-Status:
-WORKING
-
-Notes:
-
-Execution boundary successfully integrated.
-
-Protocol remains external to SOGA.
-
----
-
-## Person Server
-
-Status:
-WORKING
-
-Notes:
-
-Consent and delegated authority evidence available through integration.
-
----
-
-## Christian Posta Demonstration
-
-Status:
-WORKING
-
-Current Achievement:
-
-First successful insertion of SOGA execution boundary into an existing autonomous-agent framework.
+Sprint: Sprint 9 — Governed Interaction Inputs
+Research Question: What is the minimum information required to govern a Compaia interaction?
+Status: Authorized. Not yet started.
 
 ---
 
 # Regression Baseline
 
-Regression suite should remain green before every architectural merge.
+Current verified baseline:
 
-Current baseline:
+- AAuth ACTIVE: ALLOW / EXECUTING
+- UCAN ACTIVE: ALLOW / EXECUTING
+- ZCAP ACTIVE: ALLOW / EXECUTING
+- AAuth IMPAIRED: RESTRICT / HOLDING
+- UCAN IMPAIRED: RESTRICT / HOLDING
+- ZCAP IMPAIRED: RESTRICT / HOLDING
 
-(Update from latest verified regression.)
+Regression command:
 
----
+python3 -m tools.regression_baseline
 
-# Current Engineering Priorities
+Result:
 
-Priority 1
-
-Replace execution-boundary governance stub.
-
-Priority 2
-
-Generate runtime Canonical Decision Package.
-
-Priority 3
-
-Mission Planning Workbench.
-
-Priority 4
-
-Governance Decision Workbench.
-
-Priority 5
-
-RESTRICT execution implementation.
-
-Priority 6
-
-Physical embodiment (Misty).
-
-Priority 7
-
-Governed autonomous team presence.
+All baseline cases passed.
 
 ---
 
-# Known Issues
+# Changed Since Previous Sync
 
-Record only active implementation issues.
-
-Remove entries once resolved.
-
-(Currently none.)
+- AI Collaboration Guardrails created at knowledge/grounding/AI_COLLABORATION_GUARDRAILS.md.
+- SESSION_BOOTSTRAP updated to distinguish orientation from operational guardrails.
+- CURRENT_STATE designated as the repository synchronization contract.
+- Session initialization protocol tested with Claude.
+- Claude correctly reported lack of repository access and requested CURRENT_STATE.md only.
+- Sprint 9 authorized but not started.
+- Start-session packaging concept identified for future tooling; tool should package repository state, not generate it.
 
 ---
 
-# Notes For Next Session
+# Required Reading
 
-Update this section at the end of each working session.
+- knowledge/grounding/SESSION_BOOTSTRAP.md
+- knowledge/grounding/AI_COLLABORATION_GUARDRAILS.md
 
-Include:
+---
 
-- what completed
-- what remains
-- immediate next coding task
+# Current Priorities
+
+1. Finish repository synchronization updates.
+2. Test CURRENT_STATE-based initialization with Claude.
+3. Begin Sprint 9 after synchronization is confirmed.
+
+---
+
+# Open Risks
+
+- State provenance remains an open research question.
+- Per-hop governance evaluation remains future architecture under B-020.
+- Protocol Projection remains an open verification item.
+- Avoid allowing adapter work to collapse into governance logic.
+- Avoid replacing existing repository structures before inspecting them.
+
+---
+
+# Immediate Next Action
+
+Provide CURRENT_STATE.md and Required Reading artifacts to Claude and confirm synchronization before Sprint 9 begins.
 
