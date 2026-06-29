@@ -126,3 +126,44 @@ Do not edit historical entries.
 
 Append new entries.
 
+
+# ----------------------------------------------------------------------
+# Research Observation
+# Date: 2026-06-28
+# RO-2026-06-28-001
+# ----------------------------------------------------------------------
+
+Title:
+Transition from Governance Foundation to Governance Application
+
+Status:
+Research Observation
+
+Summary:
+
+Following independent architectural review by Claude, Gemini, and CG,
+the project reached a common conclusion that the governance foundation
+has matured sufficiently to begin exercising the architecture through
+broader systems while governance research continues in parallel.
+
+This is a program observation, not an architectural decision.
+
+Observations:
+
+- SOGA is enabling science rather than the end goal.
+- Compaia remains the North Star.
+- Existing standards should be adopted wherever they satisfy the
+  research question.
+- Where standards stop, genuine architectural gaps should be
+  documented and demonstrated rather than invented preemptively.
+- State Provenance remains an open research question.
+- Evidence provenance and evidence acquisition emerged as areas
+  requiring future investigation but are not yet architectural
+  commitments.
+
+Impact:
+
+Future sprint planning should prioritize exercising the governance
+layer in increasingly realistic environments while maintaining
+architectural discipline.
+

@@ -671,52 +671,37 @@ Future work should clarify expected behavior and reviewer-facing explanations.
 Status: Backlog
 
 
----
 
-### B-020 Delegation Hop Governance Evaluation
+B-020 — Delegation Hop Governance Evaluation
 
 Status: Future Architecture
 
-Observation:
+Origin:
+External architectural review (June 2026)
 
-Current SOGA implementation evaluates delegation chains as authority evidence presented to a single execution-time governance evaluation.
+Problem:
+Current SOGA implementation evaluates delegation chains as authority evidence within a single Runtime Envelope and produces a single Canonical Decision Package per execution event. The Governance PDP does not currently perform independent governance evaluation of each delegation hop.
 
-The Governance PDP does not currently perform independent governance evaluation at each delegation hop and does not produce per-hop governance receipts.
+Architectural Question:
+Should delegation legitimacy be evaluated solely through accumulated authority evidence, or should each delegation hop receive an independent governance evaluation and governance receipt?
 
-Future work should evaluate whether delegation chains require:
+Future Scope:
 
-- Parent principal tracking
-- Delegated principal tracking
-- Hop-specific scope attenuation
-- Expiry evaluation per hop
-- Revocation evaluation per hop
-- Typed admission or denial receipts per hop
+* Parent principal identification
+* Delegated principal identification
+* Hop-specific authority scope
+* Hop-specific expiry evaluation
+* Hop-specific revocation evaluation
+* Typed admission/denial reason per hop
+* Governance receipt generation per hop
+* Delegation chain auditability independent of source protocol
 
-Question:
+Current State:
+Delegation chain, attenuation, expiry, and revocation information may be carried as authority evidence and diagnostic inputs. They are not currently evaluated as independent governance events.
 
-Should SOGA evolve from delegation-chain evidence evaluation toward explicit per-hop governance evaluation?
+Acceptance Criteria:
+A multi-hop delegation chain can be evaluated hop-by-hop, producing a governance determination and receipt for each delegation boundary prior to execution authorization.
 
 Notes:
-
-Current implementation remains delegation-evidence based.
-
-Do not imply per-hop governance evaluation until implemented.
-
-Priority: Medium
-
-
-## B-021 — Reachability Default Policy Configuration
-
-Status: Future Backlog
-
-During Sprint 8 Task 2 Gate 1 review, the runtime bridge default for omitted reachability was accepted as non-blocking for the initial ALLOW path.
-
-Current behavior:
-If an AAuth execution request omits reachability, the runtime bridge treats omitted reachability as Reachable.
-
-Reason:
-This supports the initial ALLOW demonstration path while preserving explicit UNKNOWN or UNREACHABLE values when supplied.
-
-Architectural note:
-This default is governance-relevant. As SOGA matures, reachability defaults should move into policy configuration rather than remaining hardcoded in bridge logic.
+This item is not part of Sprint 5. Sprint 5 demonstrates multi-hop delegation evidence transport through Mission Intake, Protocol Projection, Runtime Envelope normalization, and runtime governance evaluation. Per-hop governance evaluation is a future architectural enhancement.
 
