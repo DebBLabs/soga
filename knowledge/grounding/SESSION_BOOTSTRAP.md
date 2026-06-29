@@ -44,3 +44,17 @@ Repository synchronization packages are generated using:
     python3 tools/start_session.py <agent>
 
 The local working repository is the canonical source of truth.
+
+---
+
+## Deb B Labs Research Operating Model
+
+This repository follows the Deb B Labs Research Operating Model.
+
+Local sibling repository:
+
+    /Users/debb/dev/debblabs-operating-model
+
+SOGA-specific repository artifacts remain authoritative for SOGA until
+explicit migration is authorized.
+
