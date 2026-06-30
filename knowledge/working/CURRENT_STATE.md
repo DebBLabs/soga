@@ -19,9 +19,9 @@ Repository artifacts take precedence over conversation, summaries, or memory.
 
 Branch: main
 
-Last verified closeout commit:
+Current Repository HEAD:
 
-b90c846
+a828d56
 
 Repository HEAD is displayed by:
 
@@ -39,7 +39,9 @@ Phase: Phase 3 — Active
 
 # Sprint Status
 
-Sprint 9 — Governed Interaction Inputs:
+Sprint 9 — Governed Interaction Inputs
+
+Status:
 
 CLOSED.
 
@@ -55,47 +57,83 @@ Regression:
 
 PASS.
 
-Sprint 10:
-
-Not yet authorized.
-
 ---
 
-# Sprint 9 Artifact
-
-sprints/pre-july-16/sprint-9-governed-interaction-inputs.md
-
-Schema:
-
-execution_context.interaction_context
+Sprint 10 — interaction_context Implementation
 
 Status:
 
-Provisional, optional, additive.
+CLOSED.
 
-No executable code modified.
+Implementation Planning:
+
+APPROVED.
+
+Implementation Gate 1 (Claude):
+
+APPROVED.
+
+Implementation Gate 2 (Gemini):
+
+APPROVED.
+
+Sprint Closeout (Deb):
+
+APPROVED.
+
+Regression:
+
+PASS.
 
 ---
 
-# Next Decision
+# Sprint 10 Implementation
 
-Implementation authorization for interaction_context.
+Commit:
 
-Promotion path:
+a828d56
 
-specifications/runtime-envelope/v0.1/interaction_context.md
+Implemented:
+
+- Optional execution_context.interaction_context
+- Structural validation during normalization
+- Optional governance evaluation support
+- Regression baseline preserved
+
+Explicitly unchanged:
+
+- RuntimeEnvelope dataclass
+- flatten_runtime_envelope
+- RuntimeGovernanceEngine
+- adapters
+
+---
+
+# Regression Baseline
+
+Verified after implementation.
+
+Results:
+
+- AAuth ACTIVE → ALLOW / EXECUTING
+- UCAN ACTIVE → ALLOW / EXECUTING
+- ZCAP ACTIVE → ALLOW / EXECUTING
+- AAuth IMPAIRED → RESTRICT / HOLDING
+- UCAN IMPAIRED → RESTRICT / HOLDING
+- ZCAP IMPAIRED → RESTRICT / HOLDING
+
+All baseline cases passed.
 
 ---
 
 # Carried Forward
 
-- projection rule placement
-- RuntimeDimensionEvaluator boundary
-- RuntimeEnvelope implementation strategy
-- normalizer/model delegation misalignment
-- state provenance remains open
-- per-hop governance remains future architecture under B-020
-- Protocol Projection remains an open verification item
+- interaction_context demonstration scenario
+- RuntimeDimensionEvaluator refinement
+- normalizer/model delegation alignment
+- state provenance research
+- per-hop governance (B-020)
+- Protocol Projection verification
 
 ---
 
@@ -108,7 +146,15 @@ specifications/runtime-envelope/v0.1/interaction_context.md
 
 # Immediate Next Action
 
-Do not authorize Sprint 10 yet.
+Sprint 10 is complete.
 
-Next program decision is whether to authorize implementation planning for interaction_context.
+The next program direction is determined by the Repository Curator (Deb).
+
+Potential next work includes:
+
+- Authorize the next research sprint.
+- Expand interaction_context demonstrations.
+- Continue Pre-July 16 program objectives.
+
+No further implementation proceeds without explicit authorization.
 

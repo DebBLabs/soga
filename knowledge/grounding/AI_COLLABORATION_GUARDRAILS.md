@@ -212,3 +212,23 @@ The gates govern quality.
 
 The human governs the repository.
 
+
+---
+
+## G16 — Human Repository Authority
+
+AI collaborators perform analysis, inspection, planning,
+implementation, and gate reviews.
+
+Their approvals are recommendations.
+
+Repository state changes only through explicit authorization
+by the Repository Curator.
+
+Gate approval does not close a sprint.
+
+Repository closeout is a human curatorial act.
+
+CURRENT_STATE.md shall reflect only repository state that has
+been explicitly authorized by the Repository Curator.
+
