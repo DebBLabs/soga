@@ -190,10 +190,21 @@ class RuntimeDimensionEvaluator:
         runtime,
     ):
 
+        interaction_context = runtime.get(
+            "interaction_context",
+        )
+
         if runtime.get(
             "execution_context_valid",
             True,
         ):
+            if interaction_context is not None:
+                if runtime.get(
+                    "interaction_requires_supervision",
+                    False,
+                ):
+                    return "REVIEW"
+
             if runtime.get(
                 "context_requires_supervision",
                 False,

@@ -70,6 +70,32 @@ def normalize_runtime_envelope(payload: Dict[str, Any]) -> Dict[str, Any]:
     envelope["execution_context"].setdefault("request_id", generate_request_id())
     envelope["execution_context"].setdefault("evaluated_at", now_iso())
     envelope["execution_context"].setdefault("source", "runtime_envelope")
+    envelope["execution_context"].setdefault("interaction_context", None)
+
+    interaction_context = envelope["execution_context"].get("interaction_context")
+
+    if interaction_context is not None:
+        if not isinstance(interaction_context, dict):
+            raise ValueError("interaction_context must be a dictionary when present")
+
+        required_interaction_fields = (
+            "interaction_id",
+            "participant_id",
+            "participant_type",
+            "interaction_boundary",
+        )
+
+        missing_fields = [
+            field
+            for field in required_interaction_fields
+            if not interaction_context.get(field)
+        ]
+
+        if missing_fields:
+            raise ValueError(
+                "interaction_context missing required field(s): "
+                + ", ".join(missing_fields)
+            )
 
     if envelope["execution_context"].get("evaluated_at") is None:
         envelope["execution_context"]["evaluated_at"] = now_iso()
