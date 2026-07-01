@@ -1,20 +1,23 @@
 # Research Observations
 
-This document records research observations, hypotheses, and open questions
-that emerge during literature synthesis and repository development.
+Purpose:
 
-Observations recorded here are NOT architecture, specifications, or accepted
-repository design. They require further investigation before promotion into
-canonical artifacts.
+Capture research observations emerging during literature synthesis that have
+not yet been promoted into architecture or specifications.
+
+Repository artifacts record established work.
+
+Research observations record hypotheses requiring further investigation.
 
 ---
 
 ## RO-001 — Governance Normalization
 
-Date: 2026-06-30
-
 Status:
+
 Research Observation
+
+---
 
 ### Observation
 
@@ -28,44 +31,51 @@ Governance normalization asks:
 
 These are distinct research questions.
 
-The Governance Evidence Taxonomy is not attempting semantic normalization.
-Its purpose is to normalize heterogeneous observations into governance
-significance.
+---
 
 ### Example
 
-The following observations are not semantically equivalent:
+High cognitive load
 
-- High cognitive load
-- Emergency stop proximity
-- Loss of operator attention
-- Delegation depth exceeded
+Emergency stop proximity
 
-Yet each may independently contribute to the same governance outcome such as:
+Loss of operator attention
 
-- REVIEW
-- RESTRICT
+Delegation depth exceeded
 
-The classification function therefore appears to map heterogeneous observations
-to governance significance rather than semantic equivalence.
+These observations are not semantically equivalent.
+
+Yet each may independently contribute to governance outcomes such as:
+
+REVIEW
+
+RESTRICT
+
+The classification function therefore appears to normalize governance
+significance rather than semantic equivalence.
+
+---
 
 ### Current Assessment
 
-The current literature synthesis has not identified a framework that unifies
-governance significance mapping across HCI, robotics, and agent frameworks.
+Current literature synthesis has not identified a framework that unifies
+governance significance mapping across HCI, robotics, embodied AI,
+identity systems and agent frameworks.
 
-This remains a research hypothesis requiring further investigation.
+This remains a research hypothesis.
 
-No architectural conclusions are drawn from this observation.
+No architectural conclusions are drawn.
 
 ---
 
 ## Future Investigation
 
-Future work should determine:
+Determine whether governance normalization is a distinct scientific construct.
 
-- whether governance normalization is genuinely distinct from semantic normalization;
-- whether a generalized classification function can be formally defined;
-- what measurable properties characterize governance significance;
-- how heterogeneous evidence contributes across the six governance dimensions.
+Identify existing adjacent theories.
+
+Define measurable governance significance.
+
+Determine how heterogeneous observations contribute across the six
+governance dimensions.
 

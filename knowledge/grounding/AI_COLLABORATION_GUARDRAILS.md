@@ -232,3 +232,45 @@ Repository closeout is a human curatorial act.
 CURRENT_STATE.md shall reflect only repository state that has
 been explicitly authorized by the Repository Curator.
 
+
+---
+
+## G17 — Existing Artifact Preservation
+
+Before modifying an existing repository artifact, an AI collaborator shall
+first inspect the current file content.
+
+For existing files:
+
+- Do not recreate from memory.
+- Do not overwrite with a reconstructed version.
+- Do not provide a replacement `cat <<'EOF'` command unless the Repository
+  Curator explicitly requests full replacement.
+- Prefer targeted patches or append operations.
+- If full replacement is necessary, clearly state that the existing file will
+  be replaced and wait for explicit authorization.
+
+Repository artifacts shall be extended from their current committed state,
+not silently regenerated.
+
+
+---
+
+## G17 — Existing Artifact Preservation
+
+Before modifying an existing repository artifact, an AI collaborator shall
+first inspect the current file content.
+
+For existing files:
+
+- Do not recreate from memory.
+- Do not overwrite with a reconstructed version.
+- Do not provide a replacement `cat <<'EOF'` command unless the Repository
+  Curator explicitly requests full replacement.
+- Prefer targeted patches or append operations.
+- If full replacement is necessary, clearly state that the existing file will
+  be replaced and wait for explicit authorization.
+
+Repository artifacts shall be extended from their current committed state,
+not silently regenerated.
+

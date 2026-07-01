@@ -1,68 +1,84 @@
 # Methodological Constraints
 
-These constraints guide future research sprints.
+These constraints guide future research.
 
-They describe how research should be conducted, not how SOGA should be
-implemented.
+They do not prescribe architecture.
 
 ---
 
-## MC-001 — Demonstrate Novelty
+## MC-001
 
-Novelty must be demonstrated through literature review and comparison,
+Novelty shall be demonstrated through literature and comparative analysis,
 not asserted.
 
 ---
 
-## MC-002 — Explicit Mapping Method
+## MC-002
 
-Classification functions shall specify:
+Classification functions shall explicitly define:
 
 - input observations
+
 - governance targets
+
 - mapping logic
+
 - confidence model
+
+- provenance
+
 - failure conditions
 
 ---
 
-## MC-003 — Bounded LLM Usage
+## MC-003
 
-If LLMs contribute to classification:
+If LLMs participate in classification:
 
 - their role shall be explicit;
-- they shall be evaluated against non-LLM baselines;
-- reproducibility shall be measured.
+
+- reproducibility shall be measurable;
+
+- evaluation shall include non-LLM baselines.
 
 ---
 
-## MC-004 — Define Success Before Building
+## MC-004
 
-Research shall define measurable success criteria before implementation.
+Success metrics shall be defined before implementation.
 
 Examples include:
 
 - accuracy
+
 - consistency
+
 - explainability
+
 - auditability
+
 - latency
+
 - human effort
 
 ---
 
-## MC-005 — Falsifiable Research Questions
+## MC-005
 
-Each sprint investigates a bounded research question that can be evaluated
-using evidence.
+Research questions shall be bounded and falsifiable.
+
+Each sprint investigates a question answerable through evidence rather than
+attempting an end-to-end solution.
 
 ---
 
-## MC-006 — Baselines Required
+## MC-006
 
 Every claimed improvement shall identify:
 
-- the comparison baseline;
-- the evaluation method;
-- the measured improvement.
+- comparison baseline;
+
+- evaluation method;
+
+- measurable outcome.
 

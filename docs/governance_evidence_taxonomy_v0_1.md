@@ -1,6 +1,6 @@
 # Governance Evidence Taxonomy v0.1
 
-Status: Research artifact
+Status: Research Artifact
 
 Date: 2026-06-30
 
@@ -8,116 +8,148 @@ Date: 2026-06-30
 
 ## Purpose
 
-This taxonomy identifies execution-time evidence types that may be
-relevant to SOGA governance evaluation.
+The Governance Evidence Taxonomy defines the candidate execution-time evidence
+types that may contribute to SOGA governance evaluation.
 
-It extends existing repository evidence artifacts. It does not replace
-them.
+It extends existing repository artifacts. It does not replace them.
 
 ---
 
-## Relationship to Existing Artifacts
+## Repository Relationships
 
-- `docs/agent_evidence_model_v0_1.md` defines how evidence is contributed.
-- `specifications/runtime-envelope/v0.1/` defines where evidence is carried.
-- `docs/stable_interfaces_v0_1.md` defines stable evidence interfaces.
-- This taxonomy defines candidate evidence types and controlled values.
+Agent Evidence Model v0.1
+    Defines how evidence is contributed.
+
+RuntimeEnvelope Specification v0.1
+    Defines where evidence resides within the canonical envelope.
+
+Stable Interfaces v0.1
+    Defines the interface contract for evidence contribution.
+
+Governance Evidence Taxonomy v0.1
+    Defines candidate evidence types and controlled vocabularies.
 
 ---
 
 ## Scope
 
-This is literature synthesis.
+Literature synthesis only.
 
-It is not architecture.
-It is not implementation.
-It does not modify RuntimeEnvelope.
-It does not modify SOGA governance logic.
+Not architecture.
 
----
+Not implementation.
 
-## Mission Evidence
+No RuntimeEnvelope changes.
 
-- mission_phase: planning | active | critical | completing | complete
-- plan_deviation: none | minor | significant | abandoned
-- criticality: routine | elevated | critical
-- deadline_proximity: nominal | approaching | imminent
+No governance engine changes.
 
 ---
 
-## Authority Evidence
+# Mission Evidence
 
-- trust_calibration: undertrust | calibrated | overtrust
-- runtime_loa: controlled scale or vocabulary
-- delegation_depth: integer hop count
-- delegation_attenuation: none | partial | significant
+mission_phase
 
----
+plan_deviation
 
-## Subject Evidence
+criticality
 
-- agency_state: Independent | Supervised | Managed | Delegated | Lapsed
-- subject_posture: monitoring | overriding | collaborating | disconnected
-- workload_level: low | moderate | high | overloaded
-- situation_awareness: level_1 | level_2 | level_3 | degraded
+deadline_proximity
 
 ---
 
-## Reachability Evidence
+# Authority Evidence
 
-- availability_state: available | occupied | unreachable | unknown
-- attention_lock: focused_on_agent | distracted | unknown
-- interruption_cost: low | moderate | high
-- breakpoint_proximity: at_breakpoint | approaching | mid_task
+trust_calibration
 
----
+runtime_level_of_autonomy
 
-## Execution Context Evidence
+delegation_depth
 
-- privacy_sensitivity: private | semi_private | public
-- environmental_hazard: none | caution | critical
-- spatial_hazard_index: nominal | caution_proximity | emergency_stop_imminent
-- system_fault_vector: none | degraded | fault_active
-- operational_status: nominal | degraded_performance | hard_fault_imminent
-- safety_margin: clear | warning_proximity | breach_imminent
+delegation_attenuation
 
 ---
 
-## Policy Evidence
+# Subject Evidence
 
-- procedure_compliance: compliant | minor_deviation | violation
-- safety_constraint: satisfied | approaching_limit | violated
-- ethical_constraint: none | flagged | violated
-- escalation_trigger: none | condition_met
+agency_state
 
----
+subject_posture
 
-## Interaction Evidence Gap
+workload_level
 
-Interaction evidence remains a named taxonomy gap.
-
-Candidate evidence types:
-
-- interaction_id: unique identifier
-- turn_holder: human | system | unassigned | transitioning
-- boundary_state: quiescent | pending_entry | inside_boundary | exiting
-- handoff_phase: stable_control | request_transfer | synchronized | execution_shifted
-- interaction_topology: direct | supervised | multi_agent_cascade
+situation_awareness
 
 ---
 
-## Open Questions
+# Reachability Evidence
 
-- Should interaction evidence remain separate or map into existing dimensions?
-- Is handoff_phase an interaction property or cross-dimensional governance event?
-- What classification functions map raw observations into this vocabulary?
-- What metrics evaluate classification accuracy, consistency, and auditability?
+availability_state
+
+attention_lock
+
+interruption_cost
+
+breakpoint_proximity
 
 ---
 
-## G9 Preservation
+# Execution Context Evidence
 
-This taxonomy is research evidence only.
+privacy_sensitivity
 
-It does not promote any field into architecture.
+environmental_hazard
+
+spatial_hazard_index
+
+system_fault_vector
+
+operational_status
+
+safety_margin
+
+---
+
+# Policy Evidence
+
+procedure_compliance
+
+safety_constraint
+
+ethical_constraint
+
+escalation_trigger
+
+---
+
+# Interaction Evidence (Named Gap)
+
+interaction_id
+
+turn_holder
+
+boundary_state
+
+handoff_phase
+
+interaction_topology
+
+---
+
+## Open Research Questions
+
+Should Interaction Evidence remain a separate taxonomy block?
+
+Is handoff a property of the interaction boundary or a cross-dimensional governance event?
+
+What classification functions transform heterogeneous observations into governance evidence?
+
+How should confidence, provenance, explainability and auditability be measured?
+
+---
+
+## Repository Status
+
+Research artifact only.
+
+No architectural decisions are made by this document.
 
