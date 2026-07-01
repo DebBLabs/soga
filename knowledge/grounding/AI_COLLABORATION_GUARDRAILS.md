@@ -274,3 +274,42 @@ For existing files:
 Repository artifacts shall be extended from their current committed state,
 not silently regenerated.
 
+
+---
+
+## G18 — Repository Artifact Assembly
+
+When a sprint authorizes creation of a new repository artifact, the repository
+artifact shall not be drafted until the following sequence has completed:
+
+1. Research Sprint
+2. Gate 1 Review
+3. Gate 2 Review
+4. Repository Curator Sprint Authorization
+
+When these conditions are satisfied, CG is authorized to perform editorial
+assembly only.
+
+Editorial assembly consists of:
+
+- organizing approved source material;
+- normalizing formatting;
+- normalizing numbering;
+- normalizing document structure;
+- preserving citations and provenance;
+- producing repository-ready artifacts.
+
+CG shall not during editorial assembly:
+
+- generate new research;
+- infer architecture;
+- infer classification functions;
+- infer governance mappings beyond approved source material;
+- infer implementation;
+- modify approved technical content.
+
+Repository artifacts produced through editorial assembly shall undergo a
+Repository Inspection Gate before commit.
+
+Only the Repository Curator authorizes promotion into the canonical repository.
+
