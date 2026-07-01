@@ -79,3 +79,49 @@ Define measurable governance significance.
 Determine how heterogeneous observations contribute across the six
 governance dimensions.
 
+
+---
+
+## RO-002 — Evidence Sufficiency for Governance Decisions
+
+Date: 2026-07-01
+
+Status:
+Research Observation
+
+### Observation
+
+Governance normalization determines the governance significance of heterogeneous execution-time observations.
+
+A separate question emerges:
+
+    When is there sufficient evidence to safely exercise delegated authority?
+
+Evidence sufficiency asks whether the available evidence is sufficient, given the consequence severity of the requested action, to responsibly exercise delegated authority on behalf of a human subject.
+
+The density, recency, and confidence of available evidence inputs must adaptively scale to match the risk profile of the requested action.
+
+### Current Assessment
+
+Adjacent research exists in:
+
+- Bayesian decision theory
+- Dempster-Shafer evidence fusion
+- Safety case engineering
+- Sequential analysis
+- Signal detection theory
+- Runtime safety certification
+
+This remains a research hypothesis requiring further investigation.
+
+No architectural conclusions are drawn from this observation.
+
+### Future Investigation
+
+Future work should determine:
+
+- whether governance evidence sufficiency represents a distinct scientific construct;
+- how consequence severity influences evidence thresholds;
+- how evidence sufficiency relates to governance normalization;
+- whether existing decision theory can be adapted to delegated authority governance.
+
