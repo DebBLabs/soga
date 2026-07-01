@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-06-29
+Last Updated: 2026-06-30
 
 ---
 
@@ -19,13 +19,9 @@ Repository artifacts take precedence over conversation, summaries, or memory.
 
 Branch: main
 
-Current Repository HEAD:
+Current Status:
 
-a828d56
-
-Repository HEAD is displayed by:
-
-python3 tools/start_session.py <agent>
+Research Synthesis Sprint CLOSED.
 
 ---
 
@@ -39,9 +35,11 @@ Phase: Phase 3 — Active
 
 # Sprint Status
 
-Sprint 9 — Governed Interaction Inputs
+Sprint 10 — interaction_context Implementation:
 
-Status:
+CLOSED.
+
+Research Synthesis Sprint — Governance Evidence Taxonomy v0.1:
 
 CLOSED.
 
@@ -53,86 +51,44 @@ Gate 2:
 
 APPROVED.
 
-Regression:
+Repository Inspection:
 
-PASS.
+COMPLETE.
+
+Repository Curator Closeout:
+
+APPROVED.
 
 ---
 
-Sprint 10 — interaction_context Implementation
+# Research Deliverables
 
-Status:
-
-CLOSED.
-
-Implementation Planning:
-
-APPROVED.
-
-Implementation Gate 1 (Claude):
-
-APPROVED.
-
-Implementation Gate 2 (Gemini):
-
-APPROVED.
-
-Sprint Closeout (Deb):
-
-APPROVED.
-
-Regression:
-
-PASS.
+- docs/governance_evidence_taxonomy_v0_1.md
+- knowledge/research/RESEARCH_OBSERVATIONS.md
+- knowledge/research/METHODOLOGICAL_CONSTRAINTS.md
 
 ---
 
-# Sprint 10 Implementation
+# Key Finding
 
-Commit:
+The Governance Evidence Taxonomy extends existing repository artifacts.
 
-a828d56
+It does not replace:
 
-Implemented:
-
-- Optional execution_context.interaction_context
-- Structural validation during normalization
-- Optional governance evaluation support
-- Regression baseline preserved
-
-Explicitly unchanged:
-
-- RuntimeEnvelope dataclass
-- flatten_runtime_envelope
-- RuntimeGovernanceEngine
-- adapters
-
----
-
-# Regression Baseline
-
-Verified after implementation.
-
-Results:
-
-- AAuth ACTIVE → ALLOW / EXECUTING
-- UCAN ACTIVE → ALLOW / EXECUTING
-- ZCAP ACTIVE → ALLOW / EXECUTING
-- AAuth IMPAIRED → RESTRICT / HOLDING
-- UCAN IMPAIRED → RESTRICT / HOLDING
-- ZCAP IMPAIRED → RESTRICT / HOLDING
-
-All baseline cases passed.
+- Agent Evidence Model v0.1
+- RuntimeEnvelope Specification v0.1
+- Stable Interfaces v0.1
 
 ---
 
 # Carried Forward
 
-- interaction_context demonstration scenario
-- RuntimeDimensionEvaluator refinement
-- normalizer/model delegation alignment
-- state provenance research
-- per-hop governance (B-020)
+- Execution-time observation inventory
+- Governance normalization research hypothesis
+- Classification function research
+- Handoff placement question
+- Interaction Evidence gap
+- B-020 per-hop delegation chain lineage
 - Protocol Projection verification
 
 ---
@@ -141,20 +97,23 @@ All baseline cases passed.
 
 - knowledge/grounding/SESSION_BOOTSTRAP.md
 - knowledge/grounding/AI_COLLABORATION_GUARDRAILS.md
+- docs/governance_evidence_taxonomy_v0_1.md
+- knowledge/research/RESEARCH_OBSERVATIONS.md
+- knowledge/research/METHODOLOGICAL_CONSTRAINTS.md
 
 ---
 
 # Immediate Next Action
 
-Sprint 10 is complete.
+Await Repository Curator directive.
 
-The next program direction is determined by the Repository Curator (Deb).
+Recommended next research sprint:
 
-Potential next work includes:
+Execution-Time Observation Inventory
 
-- Authorize the next research sprint.
-- Expand interaction_context demonstrations.
-- Continue Pre-July 16 program objectives.
+Research question:
 
-No further implementation proceeds without explicit authorization.
+What execution-time observations are already available from HCI, robotics, embodied AI, identity systems, and agent frameworks that could serve as inputs to governance?
+
+No implementation proceeds without explicit authorization.
 
