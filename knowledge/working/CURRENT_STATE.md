@@ -122,3 +122,33 @@ Updated through HEAD d26564a.
 
 Await Repository Curator directive.
 
+
+---
+
+## Repository Guardrails
+
+### G19 — Ecosystem Neutrality
+
+Commit:
+09b2ce7
+
+Status:
+
+Committed
+
+Summary:
+
+G19 establishes that SOGA remains ecosystem-neutral.
+
+Repository artifacts shall continue to demonstrate:
+
+- protocol-neutral projection
+- canonical RuntimeEnvelope
+- protocol-neutral governance evaluation
+- Canonical Decision Package
+- composable service boundaries
+
+Future implementation, demonstrations, and presentations shall not optimize the architecture for any single standards body, protocol, implementation framework, execution environment, or demonstration audience.
+
+This guardrail applies to all future repository work.
+
