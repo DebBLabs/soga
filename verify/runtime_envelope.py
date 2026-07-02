@@ -101,8 +101,36 @@ def normalize_runtime_envelope(payload: Dict[str, Any]) -> Dict[str, Any]:
         envelope["execution_context"]["evaluated_at"] = now_iso()
 
     envelope["mission"].setdefault("mission_id", None)
+    envelope["mission"].setdefault("constraints", {
+        "global": {},
+        "stage_gate": [],
+        "delegation": {},
+    })
     envelope["mission"].setdefault("forbidden_conditions", [])
     envelope["mission"].setdefault("soga_constraints", {})
+
+    constraints = envelope["mission"].get("constraints", {})
+
+    projected_constraints = {
+        "global": {},
+        "stage_gate": [],
+        "delegation": {},
+    }
+
+    for scope in ("global", "delegation"):
+        for key, value in constraints.get(scope, {}).items():
+            projected_constraints[scope][key] = {
+                "value": value,
+                "governance_reasoning_token": None,
+            }
+
+    for item in constraints.get("stage_gate", []):
+        if isinstance(item, dict):
+            entry = dict(item)
+            entry.setdefault("governance_reasoning_token", None)
+            projected_constraints["stage_gate"].append(entry)
+
+    envelope["mission"]["soga_constraints"] = projected_constraints
 
     envelope["delegation"].setdefault("delegation_id", None)
     envelope["delegation"].setdefault("credential_refs", [])

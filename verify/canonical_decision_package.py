@@ -78,6 +78,8 @@ class CanonicalDecisionPackage:
 
     restrict_mode: Optional[str] = None
 
+    governance_reasoning_token: Optional[Any] = None
+
     execution_receipt: Optional[str] = None
 
     provenance: Optional[str] = None

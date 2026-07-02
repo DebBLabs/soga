@@ -29,6 +29,11 @@ class MissionTemplate:
     allowed_actions: List[str] = field(default_factory=list)
     forbidden_actions: List[str] = field(default_factory=list)
     bounds: Dict[str, Any] = field(default_factory=dict)
+    constraints: Dict[str, Any] = field(default_factory=lambda: {
+        "global": {},
+        "stage_gate": [],
+        "delegation": {},
+    })
     references: Dict[str, Any] = field(default_factory=dict)
     metadata: Dict[str, Any] = field(default_factory=dict)
 
@@ -41,6 +46,7 @@ class MissionTemplate:
             "allowed_actions": self.allowed_actions,
             "forbidden_actions": self.forbidden_actions,
             "bounds": self.bounds,
+            "constraints": self.constraints,
             "references": self.references,
             "metadata": self.metadata,
         }

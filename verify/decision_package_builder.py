@@ -55,6 +55,7 @@ def build_decision_package(
     execution_receipt: str,
     provenance: str,
     restrict_mode=None,
+    governance_reasoning_token=None,
 ):
 
     package = CanonicalDecisionPackage(
@@ -116,6 +117,8 @@ def build_decision_package(
         policy=policy,
 
         restrict_mode=restrict_mode,
+
+        governance_reasoning_token=governance_reasoning_token,
 
         execution_receipt=execution_receipt,
         provenance=provenance,
