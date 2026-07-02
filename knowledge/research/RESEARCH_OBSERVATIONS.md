@@ -125,3 +125,62 @@ Future work should determine:
 - how evidence sufficiency relates to governance normalization;
 - whether existing decision theory can be adapted to delegated authority governance.
 
+
+---
+
+## RO-003 — The Projection Pattern
+
+Date Captured: 2026-07-02
+
+Status:
+Open Research Observation
+
+### Observation
+
+A consistent structural pattern has been observed independently
+across four architectural layers of SOGA:
+
+Authoring Representation
+      ↓
+Projection / Normalization
+      ↓
+Canonical Runtime Representation
+      ↓
+Governance Evaluation
+      ↓
+Canonical Decision Package
+
+Observed independently in:
+
+- Protocol Projection (AAuth, UCAN, ZCAP adapters)
+- RuntimeEnvelope normalization
+- Mission Constraints projection
+- Canonical Decision Package construction
+
+SOGA does not absorb external semantics. It projects them into
+a uniform, protocol-neutral canonical representation.
+
+### Current Assessment
+
+Research observation only.
+
+Requires further evidence before promotion to an architectural
+principle.
+
+Not yet architecture.
+
+Dependencies:
+
+None.
+
+Observation is additive to RO-001 and RO-002.
+
+### Future Investigation
+
+Future work should determine:
+
+- whether the projection pattern is universal across all protocol adapters;
+- whether additional architectural layers exhibit the same projection structure;
+- whether this represents an implementation regularity or a fundamental governance principle;
+- what criteria would justify promotion from research observation to an architectural principle.
+
