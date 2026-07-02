@@ -1,11 +1,9 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-07-01
+Last Updated: 2026-07-02
 
 ---
-
-## Purpose
 
 This document is the repository synchronization contract.
 
@@ -15,191 +13,112 @@ Repository artifacts take precedence over conversation, summaries, AI memory, or
 
 ---
 
-# Repository Status
+## Repository HEAD
 
-Repository HEAD:
-c33196f
-
-Branch:
-main
-
-Repository Status:
-Clean
-
-Repository Curator:
-Deb Bucci
+Current HEAD:
+d26564a
 
 ---
 
-# Completed Research Sprints
+## Current Program State
 
-## Research Synthesis Sprint
-Status:
-CLOSED
-
-Primary Outcomes:
-
-- Governance Evidence Taxonomy v0.1
-- Methodological Constraints
-- Research Observations
-- AI Collaboration Guardrails foundation
-
----
-
-## Execution-Time Observation Catalog Sprint
-Status:
-CLOSED
+### Execution-Time Observation Catalog Sprint
+Status: CLOSED
 
 Repository Commit:
 d354d8a
 
 Primary Artifact:
-
 docs/execution_time_observation_catalog_v0_1.md
 
 Outcome:
-
 - 16 execution-time observations across four domains
-- Repository Inspection completed
+- Gate 1: APPROVED
+- Gate 2: APPROVED
+- Repository Inspection: PASSED
 - Research artifact committed
 
----
+### Governance Normalization Research Sprint
+Status: CLOSED
 
-## Governance Normalization Research Sprint
-Status:
-CLOSED
-
-Repository Commit:
-c33196f
-
-Primary Artifact:
-
-docs/governance_normalization_research_v0_1.md
-
-Gate Status:
-
-- Gate 1: APPROVED (Claude)
-- Gate 2: APPROVED (Gemini)
+- Gate 1: APPROVED
+- Gate 2: APPROVED
 - Repository Inspection: PASSED
-- Repository Curator: APPROVED
+- Research Assessment committed
+- Outcomes 3 and 4 confirmed
 
-Research Outcome:
+### Mission Constraints Sprint
+Status: CLOSED
 
-Adjacent work exists and is valuable.
+Completed:
 
-Governance Normalization is confirmed as a distinct research direction
-through the specific combination of:
+- Structured MissionTemplate constraints
+  - global
+  - stage_gate
+  - delegation
 
-- heterogeneous runtime observations
-- governance significance
-- delegated authority context
-- execution-time assessment
+- RuntimeEnvelope projection into soga_constraints
 
-Research Conclusions:
+- Passive governance_reasoning_token propagation
 
-- Outcome 3 — Adjacent work exists
-- Outcome 4 — Distinct research contribution
+- Canonical Decision Package support
 
-Strongest adjacent framework:
+- Mission Constraints Projection Demo
 
-Subjective Logic (Jøsang)
+Regression:
+PASS (6/6 baseline)
 
-Key scientific finding:
-
-Safety and legitimacy are orthogonal properties.
-
----
-
-# Current Repository Artifacts
-
-Research
-
-- docs/governance_evidence_taxonomy_v0_1.md
-- docs/execution_time_observation_catalog_v0_1.md
-- docs/governance_normalization_research_v0_1.md
-
-Research Knowledge
-
-- knowledge/research/RESEARCH_OBSERVATIONS.md
-- knowledge/research/METHODOLOGICAL_CONSTRAINTS.md
-
-Governance
-
-- knowledge/grounding/AI_COLLABORATION_GUARDRAILS.md
-
-Working State
-
-- knowledge/working/CURRENT_STATE.md
+No governance engine changes.
+No new governance dimensions.
+B-020 remains out of scope.
 
 ---
 
-# Research Observations
+## Research Observations
 
 RO-001
-
 Governance Normalization
-
-Status:
-
-Confirmed through research assessment.
-
-Research outcomes:
-
-- Adjacent work exists.
-- Distinct research direction established.
+Status: Confirmed research direction.
 
 RO-002
-
 Evidence Sufficiency for Governance Decisions
+Status: Captured.
+Deferred pending future research.
 
-Status:
-
-Captured.
-
-Deferred pending Classification Function research.
-
----
-
-# Candidate Future Workstreams
-
-Not Yet Authorized
-
-- Ecosystem Responsibility Mapping
-- Classification Functions
-- Evidence Sufficiency Research
-- Decision Policies
+RO-003
+Projection Pattern
+Status: Logged as an open research observation.
+Research only.
+Not an architectural principle.
 
 ---
 
-# Carried Forward Repository Items
-
-Architecture
+## Carried Forward
 
 - interaction_context demonstration
 - projection rule placement
-- delegation misalignment evaluation
+- delegation misalignment
+- B-020 governed delegation chains
 - Protocol Projection verification
-- B-020 follow-up
+- Ecosystem implementation signals
+- Phase 1B legacy coupling observed in runtime_envelope.py
 
-Research
-
-- Evidence Sufficiency (RO-002)
-- Ecosystem Responsibility Mapping
-- Classification Function research
+Phase 1B legacy coupling is recorded as technical debt.
+No refactor performed during the Mission Constraints Sprint.
 
 ---
 
-# External Activities
+## Public Communications
 
-LinkedIn
+LinkedIn governance post:
+Published.
 
-Mission and execution-time governance post published.
+Repository:
+Updated through HEAD d26564a.
 
 ---
 
-# Immediate Next Action
+## Immediate Next Action
 
 Await Repository Curator directive.
-
-No additional research, implementation, or repository modifications begin until explicitly authorized.
 
