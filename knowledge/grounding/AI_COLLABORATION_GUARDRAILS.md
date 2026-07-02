@@ -1,7 +1,7 @@
 # AI Collaboration Guardrails
 ## Deb B Labs Research Program
 
-Last Updated: 2026-06-29
+Last Updated: 2026-07-02
 
 ---
 
@@ -256,27 +256,6 @@ not silently regenerated.
 
 ---
 
-## G17 — Existing Artifact Preservation
-
-Before modifying an existing repository artifact, an AI collaborator shall
-first inspect the current file content.
-
-For existing files:
-
-- Do not recreate from memory.
-- Do not overwrite with a reconstructed version.
-- Do not provide a replacement `cat <<'EOF'` command unless the Repository
-  Curator explicitly requests full replacement.
-- Prefer targeted patches or append operations.
-- If full replacement is necessary, clearly state that the existing file will
-  be replaced and wait for explicit authorization.
-
-Repository artifacts shall be extended from their current committed state,
-not silently regenerated.
-
-
----
-
 ## G18 — Repository Artifact Assembly
 
 When a sprint authorizes creation of a new repository artifact, the repository
@@ -312,4 +291,63 @@ Repository artifacts produced through editorial assembly shall undergo a
 Repository Inspection Gate before commit.
 
 Only the Repository Curator authorizes promotion into the canonical repository.
+
+
+---
+
+## G19 — Ecosystem Neutrality
+
+**Intent**
+
+SOGA SHALL remain ecosystem-neutral.
+
+The architecture SHALL NOT evolve toward a solution optimized for any single standards body, protocol, implementation framework, execution platform, or demonstration audience.
+
+**Rationale**
+
+SOGA exists to provide protocol-independent execution-time governance.
+
+Identity systems establish delegated authority.
+
+Mission systems establish intent.
+
+Capability systems expose executable functions.
+
+SOGA governs whether delegated authority should exercise a capability for a mission under current runtime conditions.
+
+This architectural boundary remains constant regardless of ecosystem.
+
+**Implementation Rule**
+
+Every implementation decision shall be evaluated against the following question:
+
+> Would this implementation remain correct if OAuth, AAuth, GNAP, UCAN, ZCAP, MCP, AIIM mission representations, or future protocols changed independently?
+
+If the answer is **no**, the implementation has become coupled to a particular ecosystem and shall be reconsidered.
+
+**Presentation Rule**
+
+DIF, OIDF, AIIM, MCP, robotics, healthcare, backend platforms, and future communities are different views of the same canonical architecture.
+
+Presentation materials may emphasize different entry points for different audiences.
+
+The repository shall continue to represent one architecture.
+
+**Repository Rule**
+
+Repository artifacts should continue to demonstrate:
+
+- protocol-neutral projection
+- canonical RuntimeEnvelope
+- protocol-neutral governance evaluation
+- Canonical Decision Package
+- composable service boundaries
+
+Repository artifacts shall not imply that SOGA is specific to any individual protocol, standards effort, implementation framework, or execution environment.
+
+**Status**
+
+Program Governance Guardrail.
+
+Applies to all future implementation and presentation work.
 
