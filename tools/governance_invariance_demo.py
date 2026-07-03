@@ -1,5 +1,29 @@
 from __future__ import annotations
 
+# Scientific Claim
+# ----------------
+# This demonstration verifies Governance Invariance:
+#
+#   Mission Origin × Execution Capability ≠ Governance Logic
+#
+# When authority, mission intent, constraints, and runtime state
+# are semantically equivalent, the governance decision is identical
+# regardless of mission origin or execution capability.
+#
+# Methodological Note
+# -------------------
+# Semantic equivalence is established before invariance is demonstrated.
+# The AAuth payload and AIIM-style payload are aligned to carry
+# equivalent supervision state so that equivalent governance evidence
+# is presented to the PDP across all three runs.
+#
+# The claim is not: any AAuth mission produces the same result as
+# any AIIM mission.
+#
+# The claim is: when semantic governance inputs are equivalent,
+# the governance decision is invariant regardless of origin
+# or execution capability.
+
 from input_adapters.aiim_adapter import aiim_to_runtime_envelope_v0_1
 from input_adapters.aauth_adapter import (
     first_mission_statement,
