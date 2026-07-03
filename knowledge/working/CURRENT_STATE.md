@@ -17,7 +17,7 @@ Repository artifacts take precedence over conversation, summaries, AI memory, or
 
 Current HEAD:
 
-a862627
+d06209e
 
 ---
 
@@ -153,6 +153,35 @@ UNCHANGED
 
 ---
 
+### Repository Governance Sprint
+Status: CLOSED
+
+Repository Commits:
+23f97b7
+d06209e
+
+Outcome:
+- G20 — Repository Documentation Integrity added to AI Collaboration Guardrails
+- README synchronized with current public repository identity
+- README now reflects:
+  - Governance Invariance
+  - five ecosystem passive adapter demonstration
+  - research observations
+  - passive adapter specification
+  - stable interface entry points
+- Public GitHub repository synchronized
+
+Public Repository:
+https://github.com/DebBLabs/soga
+
+Regression:
+PASS (6/6 baseline)
+
+Working Tree:
+clean
+
+---
+
 ## Stable Interface Artifacts
 
 ### Passive Adapter Specification v0.1
@@ -251,6 +280,30 @@ Repository artifacts shall continue to demonstrate:
 
 Future implementation, demonstrations, and presentations shall not optimize the architecture for any individual standards body, protocol, implementation framework, execution environment, or demonstration audience.
 
+### G20 — Repository Documentation Integrity
+
+Repository Commit:
+23f97b7
+
+Status:
+Committed
+
+Any proposed change to a repository-defining document requires gate review before generation.
+
+Repository-defining documents include:
+- README.md
+- CURRENT_STATE.md
+- Stable interface specifications
+- Architecture documents
+- PROJECT_CONSTITUTION.md
+- ARCHITECTURE_PRINCIPLES.md
+- SESSION_BOOTSTRAP.md
+- AI_COLLABORATION_GUARDRAILS.md
+
+Once approved, the replacement is delivered as a complete artifact — never as fragments, summaries, or partial edits.
+
+Repository Curator authorization required before commit.
+
 ---
 
 ## Public Communications
@@ -258,13 +311,33 @@ Future implementation, demonstrations, and presentations shall not optimize the 
 LinkedIn governance post:
 Published.
 
+Public GitHub repository:
+https://github.com/DebBLabs/soga
+
 Repository synchronized through HEAD:
 
-a862627
+d06209e
+
+---
+
+## Phase 2 Direction
+
+Status:
+AUTHORIZED AS NEXT DIRECTION
+
+Phase 2 implementation direction:
+
+- Stage Gates
+- Capability Registry
+- Mission Execution Engine
+- Mission Builder
+
+These build upward from the stable GovernancePDP, RuntimeEnvelope, Canonical Decision Package, and Passive Adapter boundaries.
+
+No changes to GovernancePDP, RuntimeEnvelope, or Canonical Decision Package are authorized by this transition alone.
 
 ---
 
 ## Immediate Next Action
 
 Await Repository Curator directive.
-
