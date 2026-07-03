@@ -1,0 +1,21 @@
+{
+  "protocol": "ucan",
+  "source": "fixture_ucan",
+  "ucan": {
+    "jti": "ucan-caregiver-001",
+    "iss": "subject-aunt-001",
+    "aud": "caregiver-agent",
+    "fct": {
+      "mission_id": "mission-caregiver-invariance-001",
+      "subject_id": "subject-aunt-001",
+      "subject_agency_state": "SUPERVISED",
+      "objective": "Schedule caregiver follow-up appointment."
+    },
+    "att": [
+      {
+        "with": "calendar-service",
+        "can": "calendar.write"
+      }
+    ]
+  }
+}

@@ -4,166 +4,156 @@ from __future__ import annotations
 # ----------------
 # This demonstration verifies Governance Invariance:
 #
-#   Mission Origin × Execution Capability ≠ Governance Logic
+#   Origin Representation × Execution Surface ≠ Governance Core
 #
-# When authority, mission intent, constraints, and runtime state
-# are semantically equivalent, the governance decision is identical
-# regardless of mission origin or execution capability.
+# Static representative payloads stand in for what external ecosystems
+# would deliver. The report is generated at runtime by projecting each
+# payload through its passive adapter, evaluating the resulting canonical
+# RuntimeEnvelope with the actual GovernancePDP, and printing the resulting
+# DecisionPackage fields.
 #
-# Methodological Note
-# -------------------
-# Semantic equivalence is established before invariance is demonstrated.
-# The AAuth payload and AIIM-style payload are aligned to carry
-# equivalent supervision state so that equivalent governance evidence
-# is presented to the PDP across all three runs.
+# The claim is not: any ecosystem payload produces the same result as any
+# other ecosystem payload.
 #
-# The claim is not: any AAuth mission produces the same result as
-# any AIIM mission.
-#
-# The claim is: when semantic governance inputs are equivalent,
-# the governance decision is invariant regardless of origin
-# or execution capability.
+# The claim is: when semantic governance inputs are equivalent, the
+# governance decision is invariant regardless of origin representation.
 
-from input_adapters.aiim_adapter import aiim_to_runtime_envelope_v0_1
+import glob
+import json
+from pathlib import Path
+from typing import Any, Dict
+
 from input_adapters.aauth_adapter import (
     first_mission_statement,
     mission_statement_to_runtime_envelope_v0_1,
 )
-from builders.protocol_projection import mission_to_aauth_artifact
-from tools.mcp_capability_stub import invoke_mcp_style_capability
+from input_adapters.aiim_adapter import aiim_to_runtime_envelope_v0_1
+from input_adapters.mcp_adapter import mcp_to_runtime_envelope_v0_1
+from input_adapters.oauth_adapter import oauth_gnap_to_runtime_envelope_v0_1
+from input_adapters.ucan_adapter import ucan_to_runtime_envelope_v0_1
+from input_adapters.zcap_adapter import zcap_to_runtime_envelope_v0_1
 from verify.governance_pdp import GovernancePDP
-from verify.mission_template import MissionLifecycle, MissionTemplate
 
 
-def build_mission() -> MissionTemplate:
-    return MissionTemplate(
-        mission_id="mission-caregiver-invariance-001",
-        lifecycle=MissionLifecycle.ACTIVE,
-        subject_id="subject-aunt-001",
-        objective="Schedule caregiver follow-up appointment.",
-        allowed_actions=["calendar.write"],
-        forbidden_actions=["treatment.authorize"],
-        bounds={"supervision_required": True},
-        constraints={
-            "global": {
-                "supervision_required": True,
-            },
-            "stage_gate": [],
-            "delegation": {},
-        },
-        metadata={
-            "scenario": "caregiver_aunt_niece",
-        },
-    )
+LABELS = {
+    "aauth": "AAuth",
+    "aiim": "AIIM-style",
+    "oauth_gnap": "OAuth/GNAP-style",
+    "ucan": "UCAN",
+    "zcap": "ZCAP",
+    "mcp": "MCP-style",
+}
 
 
-def aauth_envelope():
-    mission = build_mission()
-    artifact = mission_to_aauth_artifact(mission)
-    artifact["subject_agency_state"] = "IMPAIRED"
-    mission_statement = first_mission_statement(artifact)
-
-    mission_statement.setdefault("soga_constraints", {})
-    mission_statement["soga_constraints"]["supervision_required"] = True
+def aauth_envelope(payload: Dict[str, Any]):
+    mission_statement = first_mission_statement(payload)
+    if mission_statement is None:
+        raise RuntimeError("No AAuth mission statement found")
     return mission_statement_to_runtime_envelope_v0_1(
-        artifact,
+        payload,
         mission_statement,
     )
 
 
-def aiim_envelope():
-    return aiim_to_runtime_envelope_v0_1(
-        {
-            "source": "governance_invariance_demo",
-            "subject_agency_state": "SUPERVISED",
-            "capability": "calendar.write",
-            "aiim_mission": {
-                "mission_id": "mission-caregiver-invariance-001",
-                "objective": "Schedule caregiver follow-up appointment.",
-                "subject_id": "subject-aunt-001",
-                "actions": ["calendar.write"],
-                "delegated_authority": {
-                    "authority_id": "authority-aiim-caregiver-001",
-                    "delegator": "subject-aunt-001",
-                    "delegate": "care-coordinator-agent",
-                    "basis": "caregiver scheduling support",
-                },
-                "constraints": {
-                    "global": {
-                        "supervision_required": True,
-                    },
-                    "stage_gate": [],
-                    "delegation": {},
-                    "forbidden_conditions": ["treatment.authorize"],
-                },
-            },
-        }
+def oauth_gnap_envelope(payload: Dict[str, Any]):
+    return oauth_gnap_to_runtime_envelope_v0_1(
+        payload,
+        payload.get("governance_context", {}),
     )
 
 
-def run_case(origin: str, capability_transport: str, envelope):
-    decision = GovernancePDP().evaluate(envelope)
-    package = decision.to_dict()
+def mcp_envelope(payload: Dict[str, Any]):
+    return mcp_to_runtime_envelope_v0_1(
+        payload,
+        payload.get("governance_context", {}),
+    )
 
-    token = "supervision_required"
 
-    package["governance_reasoning_token"] = token
+ADAPTER_MAP = {
+    "aauth": aauth_envelope,
+    "aiim": aiim_to_runtime_envelope_v0_1,
+    "oauth_gnap": oauth_gnap_envelope,
+    "ucan": ucan_to_runtime_envelope_v0_1,
+    "zcap": zcap_to_runtime_envelope_v0_1,
+    "mcp": mcp_envelope,
+}
 
-    if capability_transport == "MCP":
-        capability_result = invoke_mcp_style_capability(
-            package,
-            "calendar.write",
-        )
-    else:
-        capability_result = {
-            "capability": "calendar.write",
-            "transport": "rest-style-stub",
-            "governance_determination": decision.decision.value,
-            "would_invoke": decision.decision.value == "ALLOW",
-            "decision_package_received": True,
-            "governance_reasoning_token": token,
-        }
+
+def governance_reasoning_token(decision) -> str:
+    if decision.rule == "subject_agency_state_requires_constraints":
+        return "supervision_required"
+    return decision.rule
+
+
+def capability_label(protocol: str, payload: Dict[str, Any]) -> str:
+    if protocol == "mcp":
+        return "MCP"
+    return payload.get("capability_transport", "REST")
+
+
+def run_payload(path: Path, pdp: GovernancePDP) -> Dict[str, Any]:
+    with path.open("r") as handle:
+        payload = json.load(handle)
+
+    protocol = payload.get("protocol")
+    adapter = ADAPTER_MAP.get(protocol)
+
+    if adapter is None:
+        raise RuntimeError(f"No adapter registered for protocol: {protocol}")
+
+    envelope = adapter(payload)
+    decision = pdp.evaluate(envelope)
 
     return {
-        "origin": origin,
-        "capability": capability_transport,
+        "file": path.name,
+        "origin": LABELS.get(protocol, protocol),
+        "capability": capability_label(protocol, payload),
         "decision": decision.decision.value,
-        "token": token,
-        "capability_result": capability_result,
+        "token": governance_reasoning_token(decision),
+        "rule": decision.rule,
+        "reason_class": decision.reason_class,
     }
 
 
-def main():
-    runs = [
-        run_case("AAuth", "REST", aauth_envelope()),
-        run_case("AIIM-style", "REST", aiim_envelope()),
-        run_case("AIIM-style", "MCP", aiim_envelope()),
+def main() -> None:
+    payload_paths = [
+        Path(item)
+        for item in sorted(glob.glob("tests/fixtures/payloads/*_caregiver.json"))
     ]
 
-    print("Governance Invariance Demo")
-    print("==========================")
-    print()
-    print("Run | Origin     | Capability | Decision | Token")
-    print("----|------------|------------|----------|---------------------")
+    pdp = GovernancePDP()
+    results = [run_payload(path, pdp) for path in payload_paths]
 
-    for index, result in enumerate(runs, start=1):
+    print("Governance Invariance Demonstration")
+    print("Scenario: Caregiver Discharge Follow-Up")
+    print()
+    print("Static representative payloads -> passive adapters -> RuntimeEnvelope -> GovernancePDP -> DecisionPackage")
+    print()
+    print(f"{'Origin':<18} {'Capability':<12} {'Decision':<10} {'Token':<24} {'Rule'}")
+    print("-" * 92)
+
+    for result in results:
         print(
-            f"{index:<3} | "
-            f"{result['origin']:<10} | "
-            f"{result['capability']:<10} | "
-            f"{result['decision']:<8} | "
-            f"{result['token']}"
+            f"{result['origin']:<18} "
+            f"{result['capability']:<12} "
+            f"{result['decision']:<10} "
+            f"{result['token']:<24} "
+            f"{result['rule']}"
         )
 
-    decisions = {result["decision"] for result in runs}
-    tokens = {result["token"] for result in runs}
+    decisions = {result["decision"] for result in results}
+    tokens = {result["token"] for result in results}
 
-    print()
+    print("-" * 92)
+
     if len(decisions) == 1 and len(tokens) == 1:
-        print("Governance decision: INVARIANT across all three runs.")
-        print("Governance reasoning token: INVARIANT across all three runs.")
+        print("Governance decision: INVARIANT")
+        print("Governance reasoning token: INVARIANT")
     else:
-        print("Governance invariance: FAILED.")
+        print("Governance invariance: FAILED")
+
+    print("GovernancePDP:       UNCHANGED")
+    print("RuntimeEnvelope:     UNCHANGED")
 
 
 if __name__ == "__main__":

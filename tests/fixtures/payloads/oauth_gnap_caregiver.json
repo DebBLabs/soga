@@ -1,0 +1,41 @@
+{
+  "protocol": "oauth_gnap",
+  "source": "fixture_oauth_gnap",
+  "source_protocol": "oauth-gnap-style",
+  "grant": {
+    "grant_id": "grant-oauth-gnap-caregiver-001",
+    "client_id": "client-caregiver-agent",
+    "authorization_details": [
+      {
+        "mission_id": "mission-caregiver-invariance-001",
+        "objective": "Schedule caregiver follow-up appointment.",
+        "actions": ["calendar.write"],
+        "resource": "calendar-service"
+      }
+    ]
+  },
+  "access_token": {
+    "jti": "token-oauth-gnap-caregiver-001",
+    "sub": "subject-aunt-001",
+    "scope": "calendar.write",
+    "iss": "issuer-oauth-gnap-stub",
+    "aud": "calendar-service"
+  },
+  "governance_context": {
+    "source": "static_configuration",
+    "subject_id": "subject-aunt-001",
+    "subject_agency_state": "SUPERVISED",
+    "mission_id": "mission-caregiver-invariance-001",
+    "objective": "Schedule caregiver follow-up appointment.",
+    "capability": "calendar.write",
+    "governance_reasoning_token": "supervision_required",
+    "mission_constraints": {
+      "global": {
+        "supervision_required": true
+      },
+      "stage_gate": [],
+      "delegation": {},
+      "forbidden_conditions": ["treatment.authorize"]
+    }
+  }
+}

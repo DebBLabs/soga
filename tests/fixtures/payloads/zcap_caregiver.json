@@ -1,0 +1,17 @@
+{
+  "protocol": "zcap",
+  "source": "fixture_zcap",
+  "subject_id": "subject-aunt-001",
+  "subject_agency_state": "SUPERVISED",
+  "mission_id": "mission-caregiver-invariance-001",
+  "objective": "Schedule caregiver follow-up appointment.",
+  "supervision_required": true,
+  "forbidden_conditions": ["treatment.authorize"],
+  "capability": {
+    "id": "zcap-caregiver-001",
+    "controller": "subject-aunt-001",
+    "invocationTarget": "calendar-service",
+    "allowedAction": "calendar.write",
+    "parentCapability": "zcap-root-caregiver"
+  }
+}

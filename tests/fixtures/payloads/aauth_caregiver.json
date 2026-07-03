@@ -1,0 +1,19 @@
+{
+  "protocol": "aauth",
+  "subject_agency_state": "SUPERVISED",
+  "authorization_details": [
+    {
+      "type": "aauth_mission_statement",
+      "mission_id": "mission-caregiver-invariance-001",
+      "subject_id": "subject-aunt-001",
+      "actions": ["calendar.write"],
+      "description": "Schedule caregiver follow-up appointment.",
+      "soga_constraints": {
+        "subject_agency_state": "SUPERVISED",
+        "supervision_required": true,
+        "forbidden_conditions": ["treatment.authorize"]
+      }
+    }
+  ],
+  "source": "fixture_aauth"
+}

@@ -1,0 +1,26 @@
+{
+  "protocol": "aiim",
+  "subject_agency_state": "SUPERVISED",
+  "capability": "calendar.write",
+  "aiim_mission": {
+    "mission_id": "mission-caregiver-invariance-001",
+    "objective": "Schedule caregiver follow-up appointment.",
+    "subject_id": "subject-aunt-001",
+    "actions": ["calendar.write"],
+    "delegated_authority": {
+      "authority_id": "authority-aiim-caregiver-001",
+      "delegator": "subject-aunt-001",
+      "delegate": "care-coordinator-agent",
+      "basis": "caregiver scheduling support"
+    },
+    "constraints": {
+      "global": {
+        "supervision_required": true
+      },
+      "stage_gate": [],
+      "delegation": {},
+      "forbidden_conditions": ["treatment.authorize"]
+    }
+  },
+  "source": "fixture_aiim"
+}
