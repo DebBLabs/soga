@@ -184,3 +184,73 @@ Future work should determine:
 - whether this represents an implementation regularity or a fundamental governance principle;
 - what criteria would justify promotion from research observation to an architectural principle.
 
+
+---
+
+## RO-004 — Governance Invariance Across Variable Origins and Execution Surfaces
+
+Date Captured: 2026-07-03
+
+Status:
+Open Research Observation
+
+### Observation
+
+Sprint A demonstrated a broader invariance pattern:
+
+Origin Representation
+      ↓
+Projection
+      ↓
+Canonical Runtime Representation
+      ↓
+Governance Evaluation
+      ↓
+Canonical Decision Package
+      ↓
+Execution Surface
+
+Both the origin representation and the execution surface may vary while the governance core remains invariant.
+
+The demonstrated pattern is not limited to mission origin versus capability type.
+
+It generalizes to the architectural property that external origin formats and downstream execution surfaces can vary independently when equivalent governance inputs are projected into the canonical runtime representation.
+
+### Current Assessment
+
+Research observation only.
+
+Sprint A provides executable evidence that equivalent governance inputs can produce the same governance decision and the same governance reasoning token across:
+
+- AAuth origin representation with REST-style execution surface
+- AIIM-style origin representation with REST-style execution surface
+- AIIM-style origin representation with MCP-style execution surface
+
+The demonstrated invariant was:
+
+    Mission Origin × Execution Capability ≠ Governance Logic
+
+The stronger observed pattern is:
+
+    Origin Representation × Execution Surface ≠ Governance Core
+
+This requires further validation across additional origin representations, capability surfaces, and governance decisions before promotion to architectural principle.
+
+Not yet architecture.
+
+Dependencies:
+
+- RO-001 — Governance Normalization
+- RO-003 — The Projection Pattern
+- G19 — Ecosystem Neutrality
+
+### Future Investigation
+
+Future work should determine:
+
+- whether governance invariance holds across additional origin representations;
+- whether governance invariance holds across additional execution surfaces;
+- whether ALLOW, RESTRICT, and DENY cases all preserve invariance under equivalent governance inputs;
+- whether governance_reasoning_token invariance is sufficient evidence of governance equivalence;
+- what criteria would justify promotion from research observation to architectural principle.
+
