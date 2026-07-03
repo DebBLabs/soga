@@ -17,7 +17,7 @@ Repository artifacts take precedence over conversation, summaries, AI memory, or
 
 Current HEAD:
 
-16cfacd
+1ead1e2
 
 ---
 
@@ -63,7 +63,6 @@ Repository Commit:
 53ea506
 
 Completed:
-
 - Structured MissionTemplate constraints
   - global
   - stage_gate
@@ -86,31 +85,91 @@ B-020 remains out of scope.
 Status: CLOSED
 
 Repository Commits:
-
 d0cca74
 9dd06c3
 
 Outcome:
-
 - AIIM-style passive origin adapter
 - MCP-style capability stub
 - Governance Invariance demonstration
 - Methodological clarification distinguishing semantic equivalence from protocol equivalence
 
 Demonstrated:
-
 Equivalent governance inputs produce invariant governance decisions across multiple origin representations and execution surfaces.
 
 Regression:
 PASS (6/6 baseline)
 
 No GovernancePDP changes.
-
 No RuntimeEnvelope changes.
-
 No governance dimensions added.
-
 G19 validated.
+
+---
+
+### Sprint B — Adapter Boundary Expansion
+Status: CLOSED
+
+Repository Commit:
+1ead1e2
+
+Outcome:
+- Passive Adapter Specification v0.1
+- OAuth/GNAP-style passive adapter
+- MCP-style passive adapter
+- Five representative payload fixtures
+  - AAuth
+  - AIIM-style
+  - OAuth/GNAP-style
+  - UCAN
+  - ZCAP
+- Expanded Governance Invariance demonstration generated from fixture payloads
+- UCAN and ZCAP adapters verified, not rewritten
+
+Demonstrated:
+Representative ecosystem payloads are projected through passive adapters into the canonical RuntimeEnvelope and evaluated by the actual GovernancePDP.
+
+Current generated result:
+- AAuth — RESTRICT — supervision_required
+- AIIM-style — RESTRICT — supervision_required
+- OAuth/GNAP-style — RESTRICT — supervision_required
+- UCAN — RESTRICT — supervision_required
+- ZCAP — RESTRICT — supervision_required
+
+Regression:
+PASS (6/6 baseline)
+
+Gate 1:
+APPROVED
+
+Gate 2:
+APPROVED
+
+GovernancePDP:
+UNCHANGED
+
+RuntimeEnvelope:
+UNCHANGED
+
+---
+
+## Stable Interface Artifacts
+
+### Passive Adapter Specification v0.1
+
+Repository Path:
+docs/passive_adapter_specification_v0_1.md
+
+Status:
+Stable Interface
+
+Purpose:
+Defines the passive adapter boundary for projecting ecosystem-specific representations into the canonical SOGA RuntimeEnvelope.
+
+Key rule:
+Adapters may append governance context only from static configuration or deterministic lookup from an explicitly declared source.
+
+Adapters must not infer, calculate, or deduce governance context.
 
 ---
 
@@ -163,6 +222,9 @@ Not an architectural principle.
 - Protocol Projection verification
 - Ecosystem implementation signals
 - Phase 1B legacy coupling observed in runtime_envelope.py
+- Stage Gates before Mission Execution Engine
+- Capability Registry as next likely implementation layer
+- Multi-principal governance requires research before implementation
 
 Phase 1B legacy coupling remains recorded as technical debt.
 
@@ -175,18 +237,15 @@ No refactor performed.
 ### G19 — Ecosystem Neutrality
 
 Repository Commit:
-
 09b2ce7
 
 Status:
-
 Committed
 
 Repository artifacts shall continue to demonstrate:
-
 - protocol-neutral projection
 - canonical RuntimeEnvelope
-- protocol-neutral governance evaluation
+- protocol-neutral and ecosystem-neutral governance evaluation
 - Canonical Decision Package
 - composable service boundaries
 
@@ -201,7 +260,7 @@ Published.
 
 Repository synchronized through HEAD:
 
-16cfacd
+1ead1e2
 
 ---
 
