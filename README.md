@@ -2,13 +2,16 @@
 
 ## Subject-Oriented Governance Architecture
 
-SOGA is an execution-time governance layer.
+SOGA is an execution-time governance layer implemented as a
+composable Governance Policy Server.
 
-It evaluates whether delegated authority remains legitimate when execution is requested.
+It evaluates whether delegated authority remains legitimate
+when execution is requested — regardless of the protocol,
+platform, or ecosystem that established that authority.
 
-SOGA does not replace identity, authorization, or delegation systems.
-
-Instead, SOGA evaluates whether delegated authority should still be exercised now.
+SOGA does not replace identity, authorization, or delegation
+systems. It governs whether delegated authority should still
+be exercised now.
 
 ---
 
@@ -29,7 +32,7 @@ Should this still be allowed now?
 Execution-time legitimacy may depend on:
 
 - Subject Agency State
-- Mission status
+- Mission status and constraints
 - Reachability
 - Execution context
 - Policy constraints
@@ -41,173 +44,267 @@ These conditions may change after delegation is issued.
 
 ## Three Claims
 
-### 1. Protocol changes do not change governance outcomes
+### 1. Governance decisions are invariant across ecosystems
 
-The same governance evaluation should produce the same result regardless of whether delegation evidence arrives through AAuth, UCAN, ZCAP, or another protocol.
+When authority, mission intent, constraints, and runtime state
+are semantically equivalent, the governance decision is identical
+regardless of mission origin or execution capability.
+
+This has been demonstrated across five protocol ecosystems:
+AAuth, UCAN, ZCAP, OAuth/GNAP, and AIIM-style missions.
 
 ### 2. Subject Agency State changes do change governance outcomes
 
-Governance outcomes may change when the subject's condition changes, even when authority evidence remains unchanged.
+Governance outcomes may change when the subject's condition
+changes, even when authority evidence remains unchanged.
 
 ### 3. RESTRICT is a real execution path
 
 RESTRICT is not a softened DENY.
 
-It is a first-class governance outcome that enables constrained execution, supervision, bounded continuation, or holding behavior when execution remains possible under additional governance conditions.
-
----
-
-## Start Here
-
-For a first-time review, begin with:
-
-1. docs/START_HERE.md
-2. Governance Overview
-3. Canonical Caregiver Scenario
-4. Governance View Pattern Verification
-5. Repository Inventory
-
-These artifacts explain:
-
-- Why SOGA exists
-- How it works
-- What governance decisions look like
-- How the model generalizes across missions
+It is a first-class governance outcome that enables constrained
+execution, supervision, bounded continuation, or holding
+behavior when execution remains possible under additional
+governance conditions.
 
 ---
 
 ## Architecture
 
-Human Intent
-
-↓
-
-Mission Intake
-
-↓
-
-Canonical Mission Representation
-
-↓
-
-Protocol Adapters
-
-↓
-
-Runtime Envelope
-
-↓
-
-Governance PDP
-
-↓
-
-Canonical Decision Package (CDP)
-
-↓
-
+```
+Ecosystem Payload (representative fixture)
+        ↓
+Passive Adapter (ecosystem-neutral projection)
+        ↓
+Canonical RuntimeEnvelope
+(structured mission constraints + authority evidence)
+        ↓
+SOGA Governance Policy Server (GovernancePDP)
+        ↓
+Canonical Decision Package
+(CDP + governance_reasoning_token)
+        ↓
 Execution / Policy Enforcement Point (PEP)
+```
 
-The Canonical Decision Package (CDP) is the governance artifact produced for each execution event.
+The Governance Policy Server evaluates the canonical
+RuntimeEnvelope. It does not require knowledge of the
+originating protocol, platform, or ecosystem.
+
+Passive adapters absorb ecosystem specificity.
+Governance evaluates canonical representations.
 
 ---
 
-## Demonstrations
+## Ecosystem Neutrality
 
-Protocol Independence
+SOGA is designed to remain ecosystem-neutral.
 
-python3 -m tools.protocol_independence_demo
+Current protocol adapters:
 
-Subject Agency State
+- AAuth
+- UCAN
+- ZCAP
+- OAuth/GNAP
+- AIIM-style (healthcare mission representation)
+- MCP (capability surface)
 
+Each ecosystem is projected through a passive adapter into
+the canonical RuntimeEnvelope. The Governance Policy Server
+evaluates the same canonical structure regardless of origin.
+
+Additional protocol adapters may be added without changing:
+
+- Governance Policy Server semantics
+- Canonical Decision Package structure
+- RuntimeEnvelope structure
+- Policy Enforcement Point behavior
+
+See: docs/passive_adapter_specification_v0_1.md
+
+---
+
+## Governance Invariance Demonstration
+
+The primary demonstration verifies governance invariance
+across five protocol ecosystems.
+
+```bash
+python3 tools/governance_invariance_demo.py
+```
+
+Expected output:
+
+```
+Governance Invariance Demonstration
+Scenario: Caregiver Discharge Follow-Up
+
+Origin                   Capability   Decision   Token
+────────────────────────────────────────────────────────────
+AAuth             REST         RESTRICT   supervision_required
+UCAN              REST         RESTRICT   supervision_required
+ZCAP              REST         RESTRICT   supervision_required
+OAuth/GNAP        REST         RESTRICT   supervision_required
+AIIM              REST         RESTRICT   supervision_required
+
+Governance decision: INVARIANT
+GovernancePDP:       UNCHANGED
+RuntimeEnvelope:     UNCHANGED
+```
+
+This demonstration exercises:
+- Real passive adapters for each ecosystem
+- Real GovernancePDP evaluation
+- Real Canonical Decision Package output
+- Representative static payload fixtures
+
+Only external transports and live protocol services
+are represented by static fixtures.
+
+---
+
+## Additional Demonstrations
+
+Behavioral demonstrations:
+
+```bash
 python3 -m tools.subject_agency_state_demo
-
-Mission Intake to CDP
-
-python3 -m tools.mission_to_cdp_demo
-
-Additional demonstrations
-
-python3 -m tools.restrict_visibility_demo
-
 python3 -m tools.canonical_caregiver_scenario
-
+python3 -m tools.restrict_visibility_demo
 python3 -m tools.governance_view_demo
+```
+
+Mission constraints demonstration:
+
+```bash
+python3 tools/mission_constraints_demo.py
+```
 
 ---
 
 ## Regression
 
-Run the frozen regression suite:
+Run the verified regression baseline:
 
-python3 -m tools.cdp_regression
+```bash
+python3 -m tools.regression_baseline
+```
 
 Expected result:
 
-CDP REGRESSION PASS: 10 use cases, 38 canonical decision packages
+```
+AAuth ACTIVE:    ALLOW / EXECUTING
+UCAN ACTIVE:     ALLOW / EXECUTING
+ZCAP ACTIVE:     ALLOW / EXECUTING
+AAuth IMPAIRED:  RESTRICT / HOLDING
+UCAN IMPAIRED:   RESTRICT / HOLDING
+ZCAP IMPAIRED:   RESTRICT / HOLDING
+
+All baseline cases passed.
+```
 
 ---
 
-## Current Status
+## Scientific Research Foundations
 
-Current repository status:
+SOGA is developed as an executable research program.
+The following research observations have been captured
+and logged in knowledge/research/RESEARCH_OBSERVATIONS.md:
 
-- Protocol-independent Governance PDP
-- Canonical Decision Package architecture
-- Subject Agency State governance model
-- Mission Intake pipeline
-- Multi-agent advisory evidence support
-- Frozen regression suite
+**RO-001 — Governance Normalization**
+Governance normalization is a distinct scientific problem.
+Adjacent work exists (Subjective Logic, policy reasoning,
+runtime safety) but no existing framework addresses the
+complete chain: heterogeneous observations → governance
+significance → delegated authority context → execution-time
+decision support.
+Status: Confirmed research direction.
+
+**RO-002 — Evidence Sufficiency for Governance Decisions**
+When is there sufficient evidence to safely exercise
+delegated authority? The required evidence threshold
+scales with consequence severity.
+Status: Captured. Deferred pending future research.
+
+**RO-003 — The Projection Pattern**
+A consistent structural pattern appears independently
+across four architectural layers:
+Authoring Representation → Projection →
+Canonical Runtime Representation →
+Governance Evaluation → Canonical Decision Package.
+Status: Open research observation.
+
+**RO-004 — Governance Invariance**
+When authority, mission intent, constraints, and runtime
+state are semantically equivalent, the governance decision
+is identical regardless of mission origin or execution
+capability. Demonstrated across five protocol ecosystems.
+Status: Empirically demonstrated (Sprint A and Sprint B).
 
 ---
 
-## Specifications
+## Mission Constraints
 
-Primary specification:
+Missions may carry explicit governance constraints:
 
-docs/canonical_decision_package_v0_1.md
+```
+mission:
+  objective
+  delegated_authority
+  constraints:
+    global         (supervision_required, execution_window)
+    stage_gate     (named boundaries requiring human clearance)
+    delegation     (redelegation_depth, sub-agent bounds)
+  forbidden_conditions
+```
 
-Additional architecture references:
-
-docs/service_map_v0_1.md
-
-docs/stable_interfaces_v0_1.md
-
-docs/repository_curation_v0_1.md
-
-docs/agent_evidence_model_v0_1.md
-
-docs/mission_working_representation_v0_1.md
+Mission constraints are projected into the canonical
+RuntimeEnvelope as soga_constraints and carry a
+governance_reasoning_token identifying which constraint
+triggered the governance decision.
 
 ---
 
-## Protocol Ecosystem Alignment
+## Stable Interface Documents
 
-Current protocol proofs include:
+- docs/stable_interfaces_v0_1.md
+- docs/passive_adapter_specification_v0_1.md
+- docs/canonical_decision_package_v0_1.md
+- docs/governance_evidence_taxonomy_v0_1.md
+- docs/execution_time_observation_catalog_v0_1.md
+- docs/governance_normalization_research_v0_1.md
 
-- AAuth
-- UCAN
-- ZCAP
+---
 
-SOGA does not depend on any particular delegation, authorization, or identity protocol.
+## Representative Payload Fixtures
 
-Protocol-specific authority evidence is normalized into a common Runtime Envelope before governance evaluation.
+tests/fixtures/payloads/ contains representative
+wire-format snapshots for each supported ecosystem.
 
-The Governance PDP evaluates execution-time legitimacy independently of the originating protocol, allowing the same governance semantics to be applied across heterogeneous ecosystems.
+Each fixture carries provenance identifying the
+source specification and scenario it represents.
 
-Additional protocol adapters may be added without changing:
+Payloads are static. Governance reports are generated
+from actual CDP decisions.
 
-- Governance PDP semantics
-- Canonical Decision Package structure
-- Policy Enforcement Point behavior
+---
 
-Community-contributed protocol adapters are encouraged.
+## Start Here
+
+For a first-time review:
+
+1. docs/START_HERE.md
+2. docs/governance_overview.md
+3. tools/governance_invariance_demo.py
+4. docs/passive_adapter_specification_v0_1.md
+5. knowledge/research/RESEARCH_OBSERVATIONS.md
 
 ---
 
 ## Scope
 
-This repository is a reference implementation of SOGA governance semantics.
+This repository is a reference implementation of SOGA
+governance semantics and an executable research program.
 
 It does not prescribe:
 
@@ -217,3 +314,8 @@ It does not prescribe:
 - Notification architecture
 - Network-scale implementation strategy
 
+SOGA is designed to be composable. Each layer —
+passive adapters, RuntimeEnvelope normalization,
+Governance Policy Server, Canonical Decision Package,
+PEP — may evolve independently while preserving
+stable canonical interfaces.
