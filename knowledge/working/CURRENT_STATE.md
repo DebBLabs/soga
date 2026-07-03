@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-07-02
+Last Updated: 2026-07-03
 
 ---
 
@@ -16,7 +16,8 @@ Repository artifacts take precedence over conversation, summaries, AI memory, or
 ## Repository HEAD
 
 Current HEAD:
-d26564a
+
+16cfacd
 
 ---
 
@@ -38,17 +39,28 @@ Outcome:
 - Repository Inspection: PASSED
 - Research artifact committed
 
+---
+
 ### Governance Normalization Research Sprint
 Status: CLOSED
 
+Repository Commit:
+c33196f
+
+Outcome:
 - Gate 1: APPROVED
 - Gate 2: APPROVED
 - Repository Inspection: PASSED
 - Research Assessment committed
 - Outcomes 3 and 4 confirmed
 
+---
+
 ### Mission Constraints Sprint
 Status: CLOSED
+
+Repository Commit:
+53ea506
 
 Completed:
 
@@ -56,13 +68,9 @@ Completed:
   - global
   - stage_gate
   - delegation
-
 - RuntimeEnvelope projection into soga_constraints
-
 - Passive governance_reasoning_token propagation
-
 - Canonical Decision Package support
-
 - Mission Constraints Projection Demo
 
 Regression:
@@ -74,21 +82,74 @@ B-020 remains out of scope.
 
 ---
 
+### Sprint A — Governance Invariance Demonstration
+Status: CLOSED
+
+Repository Commits:
+
+d0cca74
+9dd06c3
+
+Outcome:
+
+- AIIM-style passive origin adapter
+- MCP-style capability stub
+- Governance Invariance demonstration
+- Methodological clarification distinguishing semantic equivalence from protocol equivalence
+
+Demonstrated:
+
+Equivalent governance inputs produce invariant governance decisions across multiple origin representations and execution surfaces.
+
+Regression:
+PASS (6/6 baseline)
+
+No GovernancePDP changes.
+
+No RuntimeEnvelope changes.
+
+No governance dimensions added.
+
+G19 validated.
+
+---
+
 ## Research Observations
 
 RO-001
 Governance Normalization
-Status: Confirmed research direction.
+
+Status:
+Confirmed research direction.
 
 RO-002
 Evidence Sufficiency for Governance Decisions
-Status: Captured.
+
+Status:
+Captured.
 Deferred pending future research.
 
 RO-003
-Projection Pattern
-Status: Logged as an open research observation.
+The Projection Pattern
+
+Status:
+Logged as an open research observation.
+
 Research only.
+
+Not an architectural principle.
+
+RO-004
+Governance Invariance Across Variable Origins and Execution Surfaces
+
+Repository Commit:
+16cfacd
+
+Status:
+Logged as an open research observation.
+
+Research only.
+
 Not an architectural principle.
 
 ---
@@ -103,25 +164,9 @@ Not an architectural principle.
 - Ecosystem implementation signals
 - Phase 1B legacy coupling observed in runtime_envelope.py
 
-Phase 1B legacy coupling is recorded as technical debt.
-No refactor performed during the Mission Constraints Sprint.
+Phase 1B legacy coupling remains recorded as technical debt.
 
----
-
-## Public Communications
-
-LinkedIn governance post:
-Published.
-
-Repository:
-Updated through HEAD d26564a.
-
----
-
-## Immediate Next Action
-
-Await Repository Curator directive.
-
+No refactor performed.
 
 ---
 
@@ -129,16 +174,13 @@ Await Repository Curator directive.
 
 ### G19 — Ecosystem Neutrality
 
-Commit:
+Repository Commit:
+
 09b2ce7
 
 Status:
 
 Committed
-
-Summary:
-
-G19 establishes that SOGA remains ecosystem-neutral.
 
 Repository artifacts shall continue to demonstrate:
 
@@ -148,7 +190,22 @@ Repository artifacts shall continue to demonstrate:
 - Canonical Decision Package
 - composable service boundaries
 
-Future implementation, demonstrations, and presentations shall not optimize the architecture for any single standards body, protocol, implementation framework, execution environment, or demonstration audience.
+Future implementation, demonstrations, and presentations shall not optimize the architecture for any individual standards body, protocol, implementation framework, execution environment, or demonstration audience.
 
-This guardrail applies to all future repository work.
+---
+
+## Public Communications
+
+LinkedIn governance post:
+Published.
+
+Repository synchronized through HEAD:
+
+16cfacd
+
+---
+
+## Immediate Next Action
+
+Await Repository Curator directive.
 
