@@ -351,3 +351,26 @@ Program Governance Guardrail.
 
 Applies to all future implementation and presentation work.
 
+
+---
+
+## G20 — Repository Documentation Integrity
+
+Any proposed change to a repository-defining document requires
+gate review before generation.
+
+Repository-defining documents include:
+
+- README.md
+- CURRENT_STATE.md
+- Stable interface specifications
+- Architecture documents
+- PROJECT_CONSTITUTION.md
+- ARCHITECTURE_PRINCIPLES.md
+- SESSION_BOOTSTRAP.md
+- AI_COLLABORATION_GUARDRAILS.md
+
+Once approved, the replacement is delivered as a complete
+artifact — never as fragments, summaries, or partial edits.
+
+Repository Curator authorization required before commit.
