@@ -586,3 +586,26 @@ The assistant shall never:
 Status:
 Program Governance Guardrail.
 Effective immediately.
+
+---
+
+## G22 — Execution Command Convention
+
+Terminal commands intended for execution shall be presented
+in bash code blocks.
+
+Repository documentation and explanatory text shall not be
+presented as executable terminal commands.
+
+Repository artifacts shall follow G20 and G21.
+
+When a guardrail violation occurs, the Repository Curator
+may correct it by stating the guardrail name.
+Example: "Apply G21" or "Apply G22."
+
+The assistant shall apply this convention consistently
+throughout the session from the bootstrap package.
+
+Status:
+Program Governance Guardrail.
+Effective immediately.
