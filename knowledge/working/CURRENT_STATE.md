@@ -21,7 +21,7 @@ summaries, AI memory, or discussion.
 
 Current HEAD:
 
-933963b
+32eaa55
 
 Repository HEAD is displayed by:
 
@@ -39,166 +39,106 @@ Phase: Active Development — Mission Authoring and Governed Execution
 ## Completed Sprints
 
 ### Execution-Time Observation Catalog Sprint
-Status: CLOSED
-Commit: d354d8a
-Artifact: docs/execution_time_observation_catalog_v0_1.md
-Outcome: 16 execution-time observations across four domains
-
----
+Status: CLOSED — Commit: d354d8a
 
 ### Governance Normalization Research Sprint
-Status: CLOSED
-Commit: c33196f
-Artifact: docs/governance_normalization_research_v0_1.md
-Outcome: Governance Normalization confirmed as distinct research
-direction. Outcomes 3 and 4. 10 negative findings.
-
----
+Status: CLOSED — Commit: c33196f
 
 ### Mission Constraints Sprint
-Status: CLOSED
-Commit: 53ea506
-Outcome:
-- Structured MissionTemplate constraints (global, stage_gate, delegation)
-- RuntimeEnvelope projection into soga_constraints
-- Passive governance_reasoning_token propagation
-- Canonical Decision Package support
-Regression: PASS (6/6)
-
----
+Status: CLOSED — Commit: 53ea506
 
 ### Sprint A — Governance Invariance Demonstration
-Status: CLOSED
-Commits: d0cca74, 9dd06c3
-Outcome:
-- AIIM-style passive origin adapter
-- MCP-style capability stub
-- Governance Invariance demonstration
-- Methodological clarification: semantic equivalence
-  distinct from protocol equivalence
-Demonstrated: Equivalent governance inputs produce invariant
-governance decisions across multiple origin representations
-and execution surfaces.
-Regression: PASS (6/6)
-GovernancePDP: UNCHANGED
-RuntimeEnvelope: UNCHANGED
-
----
+Status: CLOSED — Commits: d0cca74, 9dd06c3
+Outcome: Governance invariance demonstrated across five ecosystems.
+GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED
 
 ### Sprint B — Adapter Boundary Expansion
-Status: CLOSED
-Commit: 1ead1e2
-Outcome:
-- Passive Adapter Specification v0.1
-- OAuth/GNAP-style passive adapter
-- MCP-style passive adapter
-- Five representative payload fixtures
-  (AAuth, AIIM, OAuth/GNAP, UCAN, ZCAP)
-- Expanded Governance Invariance demonstration
-- UCAN and ZCAP adapters verified
-Generated result:
-- AAuth — RESTRICT — supervision_required
-- AIIM-style — RESTRICT — supervision_required
-- OAuth/GNAP-style — RESTRICT — supervision_required
-- UCAN — RESTRICT — supervision_required
-- ZCAP — RESTRICT — supervision_required
-Regression: PASS (6/6)
-GovernancePDP: UNCHANGED
-RuntimeEnvelope: UNCHANGED
-
----
+Status: CLOSED — Commit: 1ead1e2
+Outcome: Passive Adapter Specification v0.1. Five ecosystem adapters.
+GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED
 
 ### Repository Governance Sprint
-Status: CLOSED
-Commits: 23f97b7, d06209e
-Outcome:
-- G20 committed
-- README synchronized
-- Public GitHub synchronized
+Status: CLOSED — Commits: 23f97b7, d06209e
+Outcome: G20, G21, G22 committed. README synchronized.
 Public Repository: https://github.com/DebBLabs/soga
-Regression: PASS (6/6)
-
----
 
 ### Sprint C — Stage Gate Architecture
 Status: CLOSED
+Phase C1 Commit: d7a922f — docs/stage_gate_architecture_v0_1.md
+Phase C2 Commit: 933963b — engines/stage_gate_engine.py
+GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
 
-Phase C1 — Research Definition
-Commit: d7a922f
-Artifact: docs/stage_gate_architecture_v0_1.md
-Outcome: Stage Gate defined as execution-time governance
-checkpoint. Four-phase lifecycle documented. Three architectural
-resolutions recorded. GovernancePDP separation confirmed.
+### Sprint D — Capability Registry
+Status: CLOSED — Commit: 9136c51
+Artifacts: engines/capability_registry.py, four capability fixtures
+GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
 
-Phase C2 — Implementation
-Commit: 933963b
+### Sprint E — Governed Execution Pipeline
+Status: CLOSED — Commit: e5b9894
+Artifacts: engines/governed_execution_loop.py, tools/governed_execution_demo.py
+Outcome: Four-phase governed execution lifecycle demonstrated.
+GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
+
+### Sprint F — Mission Builder Integration
+Status: CLOSED — Commit: 32eaa55
 Artifacts:
-- engines/stage_gate_engine.py
-- tools/stage_gate_demo.py
-Outcome:
-- StageGateEngine determines when governance is invoked
-- GovernancePDP determines what the governance decision is
-- Four-phase lifecycle demonstrated
-- In-memory interruption record (durable implementation Sprint E)
-- Phase 4 ruling: supervisor clearance creates localized
-  authority expansion for specific step
-
+- builders/mission_builder.py (extended with build_governed_mission)
+- tests/fixtures/missions/caregiver_discharge_followup.json
+- tools/mission_builder_demo.py
+Outcome: Complete end-to-end pipeline demonstrated.
+Human intent → authored mission → governed execution →
+Stage Gate → GovernancePDP → CDP trail → capability resolution.
 Gate 1: APPROVED (Claude)
 Gate 2: APPROVED (Gemini)
 Regression: PASS (6/6)
-GovernancePDP: UNCHANGED
-RuntimeEnvelope: UNCHANGED
-CDP: UNCHANGED
+All ten architectural invariants: UNCHANGED
+
+---
+
+## Complete Governed Execution Pipeline
+
+```
+Mission fixture (human authored)
+      ↓
+Mission Builder (build_governed_mission)
+      ↓
+GovernedExecutionLoop
+      ↓
+StageGateEngine (when to invoke governance)
+      ↓
+GovernancePDP (what the decision is)
+      ↓
+CDP (ALLOW / RESTRICT / DENY)
+      ↓
+CapabilityRegistry (which implementation)
+      ↓
+REST / MCP / human
+```
 
 ---
 
 ## Stable Interface Artifacts
 
-### Passive Adapter Specification v0.1
-Path: docs/passive_adapter_specification_v0_1.md
-Status: Stable Interface
-
-### Stage Gate Architecture v0.1
-Path: docs/stage_gate_architecture_v0_1.md
-Status: Research Definition (Phase C1)
+- docs/passive_adapter_specification_v0_1.md
+- docs/stage_gate_architecture_v0_1.md
 
 ---
 
 ## Research Observations
 
-RO-001 — Governance Normalization
-Status: Confirmed research direction.
-
-RO-002 — Evidence Sufficiency for Governance Decisions
-Status: Captured. Deferred pending future research.
-
-RO-003 — The Projection Pattern
-Status: Open research observation. Research only.
-
-RO-004 — Governance Invariance
-Commit: 16cfacd
-Status: Empirically demonstrated (Sprint A and Sprint B).
-Research only.
+RO-001 — Governance Normalization: Confirmed research direction.
+RO-002 — Evidence Sufficiency: Captured. Deferred.
+RO-003 — The Projection Pattern: Open research observation.
+RO-004 — Governance Invariance: Empirically demonstrated.
 
 ---
 
 ## Repository Guardrails
 
-G19 — Ecosystem Neutrality
-Commit: 09b2ce7
-Status: Committed
-
-G20 — Repository Documentation Integrity
-Commit: 23f97b7
-Status: Committed
-
-G21 — Repository Artifact Fidelity
-Commit: 2836ee9
-Status: Committed
-
-G22 — Execution Command Convention
-Commit: 7b8f48b
-Status: Committed
+G19 — Ecosystem Neutrality — Commit: 09b2ce7
+G20 — Repository Documentation Integrity — Commit: 23f97b7
+G21 — Repository Artifact Fidelity — Commit: 2836ee9
+G22 — Execution Command Convention — Commit: 7b8f48b
 
 ---
 
@@ -210,8 +150,9 @@ Status: Committed
 - B-020 governed delegation chains
 - Protocol Projection verification
 - Phase 1B legacy coupling in runtime_envelope.py
-- Execution Interruption Record durable implementation (Sprint E)
-- Multi-principal governance requires research before implementation
+- Execution Interruption Record durable implementation
+- data_sensitivity G9 observation — informational only
+- Multi-principal governance requires research first
 
 ---
 
@@ -219,26 +160,36 @@ Status: Committed
 
 LinkedIn governance post: Published
 Public GitHub: https://github.com/DebBLabs/soga
-Repository synchronized through HEAD: 933963b
+Repository synchronized through HEAD: 32eaa55
+
+---
+
+## Phase 2 Status
+
+All Phase 2 sprints complete:
+
+Sprint C — Stage Gates: CLOSED
+Sprint D — Capability Registry: CLOSED
+Sprint E — Governed Execution Pipeline: CLOSED
+Sprint F — Mission Builder Integration: CLOSED
+
+The complete governed execution pipeline is now
+demonstrated end-to-end in the public repository.
 
 ---
 
 ## Next Authorized Direction
 
-Sprint D — Capability Registry
+Await Repository Curator directive.
 
-Research question (candidate):
-Can a protocol-neutral Capability Registry be defined that
-allows mission steps to declare required capabilities without
-coupling to specific execution mechanisms?
+Candidate next directions:
+- July 13 DIF preparation and demo rehearsal
+- July 16 Dick Hardt preparation
+- Additional ecosystem adapters
+- Durable Execution Interruption Record (Phase 3)
+- Natural language Mission Builder UI
 
-Implementation sequence:
-1. Sprint D — Capability Registry
-2. Sprint E — Mission Execution Engine
-3. Sprint F — Mission Builder
-
-No changes to GovernancePDP, RuntimeEnvelope, or Canonical
-Decision Package are authorized by this transition alone.
+No implementation proceeds without explicit authorization.
 
 ---
 
