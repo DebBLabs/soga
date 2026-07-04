@@ -1,0 +1,27 @@
+{
+  "_provenance": "Domain: health information. Scenario: reading electronic health record data needed for a governed care-related mission step.",
+  "canonical_name": "ehr.read",
+  "implementations": [
+    {
+      "type": "REST",
+      "stub_endpoint": "/stub/ehr/read"
+    },
+    {
+      "type": "MCP",
+      "stub_endpoint": "mcp://ehr/read"
+    },
+    {
+      "type": "stub",
+      "stub_endpoint": "stub://ehr/read"
+    }
+  ],
+  "required_authority_scope": [
+    "read_health_record"
+  ],
+  "governance_dimensions_affected": [
+    "delegation_scope",
+    "subject_agency",
+    "data_sensitivity",
+    "execution_context"
+  ]
+}

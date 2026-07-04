@@ -1,0 +1,26 @@
+{
+  "_provenance": "Domain: communications. Scenario: sending a notification to a caregiver, supervisor, or mission participant.",
+  "canonical_name": "notification.send",
+  "implementations": [
+    {
+      "type": "REST",
+      "stub_endpoint": "/stub/notifications/send"
+    },
+    {
+      "type": "MCP",
+      "stub_endpoint": "mcp://notifications/send"
+    },
+    {
+      "type": "human",
+      "stub_endpoint": "human://operator/notify"
+    }
+  ],
+  "required_authority_scope": [
+    "send_notification"
+  ],
+  "governance_dimensions_affected": [
+    "delegation_scope",
+    "execution_context",
+    "supervision"
+  ]
+}

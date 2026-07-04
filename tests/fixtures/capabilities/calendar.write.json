@@ -1,0 +1,25 @@
+{
+  "_provenance": "Domain: personal productivity. Scenario: writing a calendar event as part of a governed mission step.",
+  "canonical_name": "calendar.write",
+  "implementations": [
+    {
+      "type": "REST",
+      "stub_endpoint": "/stub/calendar/write"
+    },
+    {
+      "type": "MCP",
+      "stub_endpoint": "mcp://calendar/write"
+    },
+    {
+      "type": "stub",
+      "stub_endpoint": "stub://calendar/write"
+    }
+  ],
+  "required_authority_scope": [
+    "create_calendar_event"
+  ],
+  "governance_dimensions_affected": [
+    "delegation_scope",
+    "execution_context"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "_provenance": "Domain: care coordination. Scenario: scheduling an appointment for a subject through provider, calendar, or human-assisted channels.",
+  "canonical_name": "appointment.schedule",
+  "implementations": [
+    {
+      "type": "REST",
+      "stub_endpoint": "/stub/appointments/schedule"
+    },
+    {
+      "type": "MCP",
+      "stub_endpoint": "mcp://appointments/schedule"
+    },
+    {
+      "type": "human",
+      "stub_endpoint": "human://care-coordinator/schedule"
+    }
+  ],
+  "required_authority_scope": [
+    "schedule_appointment"
+  ],
+  "governance_dimensions_affected": [
+    "delegation_scope",
+    "subject_agency",
+    "execution_context"
+  ]
+}
