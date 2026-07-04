@@ -55,3 +55,33 @@ def build_mission_template(data: Dict[str, Any]) -> MissionTemplate:
 
 def mission_file_to_template(path: str | Path) -> MissionTemplate:
     return build_mission_template(load_mission_file(path))
+
+
+def build_governed_mission(
+    data: Dict[str, Any],
+) -> Dict[str, Any]:
+    """
+    Builds the mission dict shape required by GovernedExecutionLoop.
+
+    Does not replace build_mission_template.
+    Serves the governed execution pipeline introduced in Sprint E.
+    """
+
+    return {
+        "mission_id": str(data["mission_id"]),
+        "subject_id": str(data["subject_id"]),
+        "authority_id": str(data["authority_id"]),
+        "objective": str(data.get("objective", "")),
+        "scenario": data.get("scenario"),
+        "constraints": {
+            "global": dict(
+                data.get("constraints", {}).get("global", {})
+            ),
+            "stage_gate": list(
+                data.get("constraints", {}).get("stage_gate", [])
+            ),
+            "delegation": dict(
+                data.get("constraints", {}).get("delegation", {})
+            ),
+        },
+    }

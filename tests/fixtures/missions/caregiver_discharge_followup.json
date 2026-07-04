@@ -1,0 +1,29 @@
+{
+  "_provenance": "Domain: care coordination. Scenario: caregiver schedules a discharge follow-up appointment subject to supervision clearance.",
+  "mission_id": "caregiver-discharge-follow-up",
+  "subject_id": "subject-001",
+  "authority_id": "authority-caregiver-001",
+  "objective": "Schedule caregiver discharge follow-up appointment.",
+  "scenario": "caregiver_discharge_follow_up",
+  "constraints": {
+    "global": {},
+    "stage_gate": [
+      {
+        "gate_id": "gate-supervision-required",
+        "name": "supervision_required",
+        "step_id": "schedule_appointment",
+        "governance_reasoning_token": "supervision_required",
+        "required_evidence": "supervisor_confirmation",
+        "restrict_path": "HOLDING"
+      }
+    ],
+    "delegation": {}
+  },
+  "steps": [
+    {
+      "step_id": "schedule_appointment",
+      "action": "schedule_appointment",
+      "required_capability": "appointment.schedule"
+    }
+  ]
+}
