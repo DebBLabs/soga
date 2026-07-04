@@ -21,7 +21,7 @@ summaries, AI memory, or discussion.
 
 Current HEAD:
 
-32eaa55
+64a6744
 
 Repository HEAD is displayed by:
 
@@ -75,21 +75,17 @@ GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
 
 ### Sprint E — Governed Execution Pipeline
 Status: CLOSED — Commit: e5b9894
-Artifacts: engines/governed_execution_loop.py, tools/governed_execution_demo.py
-Outcome: Four-phase governed execution lifecycle demonstrated.
+Artifacts: engines/governed_execution_loop.py
 GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
 
 ### Sprint F — Mission Builder Integration
 Status: CLOSED — Commit: 32eaa55
 Artifacts:
-- builders/mission_builder.py (extended with build_governed_mission)
+- builders/mission_builder.py (extended)
 - tests/fixtures/missions/caregiver_discharge_followup.json
 - tools/mission_builder_demo.py
 Outcome: Complete end-to-end pipeline demonstrated.
-Human intent → authored mission → governed execution →
-Stage Gate → GovernancePDP → CDP trail → capability resolution.
-Gate 1: APPROVED (Claude)
-Gate 2: APPROVED (Gemini)
+Gate 1: APPROVED (Claude) — Gate 2: APPROVED (Gemini)
 Regression: PASS (6/6)
 All ten architectural invariants: UNCHANGED
 
@@ -97,23 +93,9 @@ All ten architectural invariants: UNCHANGED
 
 ## Complete Governed Execution Pipeline
 
-```
-Mission fixture (human authored)
-      ↓
-Mission Builder (build_governed_mission)
-      ↓
-GovernedExecutionLoop
-      ↓
-StageGateEngine (when to invoke governance)
-      ↓
-GovernancePDP (what the decision is)
-      ↓
-CDP (ALLOW / RESTRICT / DENY)
-      ↓
-CapabilityRegistry (which implementation)
-      ↓
-REST / MCP / human
-```
+Mission fixture → Mission Builder → GovernedExecutionLoop
+→ StageGateEngine → GovernancePDP → CDP
+→ CapabilityRegistry → REST / MCP / human
 
 ---
 
@@ -160,7 +142,7 @@ G22 — Execution Command Convention — Commit: 7b8f48b
 
 LinkedIn governance post: Published
 Public GitHub: https://github.com/DebBLabs/soga
-Repository synchronized through HEAD: 32eaa55
+Repository synchronized through HEAD: 64a6744
 
 ---
 
@@ -173,12 +155,9 @@ Sprint D — Capability Registry: CLOSED
 Sprint E — Governed Execution Pipeline: CLOSED
 Sprint F — Mission Builder Integration: CLOSED
 
-The complete governed execution pipeline is now
-demonstrated end-to-end in the public repository.
-
 ---
 
-## Next Authorized Direction
+## Immediate Next Action
 
 Await Repository Curator directive.
 
@@ -186,13 +165,7 @@ Candidate next directions:
 - July 13 DIF preparation and demo rehearsal
 - July 16 Dick Hardt preparation
 - Additional ecosystem adapters
-- Durable Execution Interruption Record (Phase 3)
+- Durable Execution Interruption Record
 - Natural language Mission Builder UI
 
 No implementation proceeds without explicit authorization.
-
----
-
-## Immediate Next Action
-
-Await Repository Curator directive.
