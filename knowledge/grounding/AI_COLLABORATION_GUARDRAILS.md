@@ -374,3 +374,76 @@ Once approved, the replacement is delivered as a complete
 artifact — never as fragments, summaries, or partial edits.
 
 Repository Curator authorization required before commit.
+
+---
+
+## G21 — Repository Artifact Fidelity
+
+Repository artifacts shall be produced as complete, directly usable
+artifacts.
+
+When generating repository files using:
+
+cat <<'EOF'
+
+the assistant shall emit only the literal file contents.
+
+Within the heredoc, the assistant shall not include:
+
+- Markdown code fences
+- Syntax highlighting
+- Commentary
+- Explanatory text
+- Metadata
+- Message identifiers
+- Nested code blocks
+- Partial examples
+- Placeholder text
+
+The artifact shall be directly executable or directly pasteable
+without manual reconstruction.
+
+Repository artifacts shall be delivered as complete files whenever
+reasonably possible.
+
+If the repository artifact is too large to fit safely within a single
+response, the assistant shall explicitly choose one of the following
+approaches:
+
+Option A — Sequential Repository Sections
+
+- Divide the artifact into clearly identified sequential sections.
+- Each section shall be delivered as a complete cat <<'EOF' block.
+- Sections shall be designed for direct sequential execution.
+- No manual editing or reconstruction shall be required.
+
+Option B — Generated File
+
+- Generate the complete repository artifact as a downloadable file.
+- The user may upload or copy the generated file into the repository.
+- The assistant shall not truncate, summarize, or partially reproduce
+  repository-defining artifacts.
+
+The assistant shall never require the Repository Curator to manually
+reconstruct repository artifacts from conversational fragments.
+
+This guardrail applies to, but is not limited to:
+
+- README.md
+- CURRENT_STATE.md
+- AI_COLLABORATION_GUARDRAILS.md
+- SESSION_BOOTSTRAP.md
+- PROJECT_CONSTITUTION.md
+- ARCHITECTURE_PRINCIPLES.md
+- Stable interface specifications
+- Source code
+- Documentation
+- Repository scripts
+- Demonstration programs
+
+Status:
+
+Program Governance Guardrail.
+
+Applies to all future repository artifacts.
+
