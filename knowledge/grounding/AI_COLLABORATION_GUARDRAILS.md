@@ -447,3 +447,142 @@ Program Governance Guardrail.
 
 Applies to all future repository artifacts.
 
+
+---
+
+## G21 - Repository Artifact Fidelity
+
+Repository artifacts shall be delivered as complete, directly usable
+repository artifacts.
+
+When producing repository artifacts using:
+
+cat <<'EOF'
+
+the assistant shall emit only the literal repository contents.
+
+The assistant shall not insert conversational formatting into the
+artifact including, but not limited to:
+
+- Markdown formatting
+- Markdown code fences
+- Syntax highlighting
+- Rich text
+- Message identifiers
+- Commentary
+- Explanatory text
+- Nested code examples
+- Partial examples
+- Placeholder text
+
+Repository artifacts shall be immediately executable or immediately
+pasteable without manual reconstruction.
+
+Terminal-delivered repository artifacts shall be emitted using plain
+ASCII whenever practical.
+
+Avoid typographic substitutions including:
+
+- smart quotes
+- em dashes
+- en dashes
+- unicode bullets
+- non-breaking spaces
+- decorative separators
+
+If a repository-defining artifact is too large for reliable delivery in
+a single response, the assistant shall explicitly choose one of the
+following approaches before generation.
+
+Option A - Sequential Repository Sections
+
+- Produce numbered sequential cat <<'EOF' sections.
+- Each section shall begin with a complete cat command.
+- Each section shall terminate with a matching EOF.
+- No manual reconstruction shall be required.
+
+Option B - Repository File
+
+- Produce the complete repository artifact as a downloadable file.
+- The human Repository Curator may place or upload the file into the
+  repository.
+- Repository-defining artifacts shall never be truncated into
+  conversational fragments.
+
+Repository-defining artifacts include, but are not limited to:
+
+- source code
+- documentation
+- specifications
+- demonstrations
+- repository scripts
+- README.md
+- CURRENT_STATE.md
+- AI_COLLABORATION_GUARDRAILS.md
+- SESSION_BOOTSTRAP.md
+- PROJECT_CONSTITUTION.md
+- ARCHITECTURE_PRINCIPLES.md
+
+Status:
+
+Program Governance Guardrail.
+
+Effective immediately.
+
+
+---
+
+## G21 — Repository Artifact Fidelity
+
+Repository artifacts shall be delivered as complete repository artifacts.
+
+When a repository artifact is intended for direct insertion into the
+repository, the assistant shall deliver it as a complete terminal-ready
+artifact.
+
+For repository artifacts generated using cat <<'EOF':
+
+- The assistant shall generate the complete cat <<'EOF' command.
+- The assistant shall generate the complete repository contents.
+- The assistant shall generate the terminating EOF on a line by itself.
+- The assistant shall verify that the heredoc is complete before ending
+  the response.
+- The Repository Curator shall never be required to construct or repair
+  a cat statement.
+
+Before generating a repository artifact, the assistant shall determine
+whether the complete artifact can be delivered reliably in a single
+cat <<'EOF' block.
+
+For artifacts under approximately 100 lines, a single cat <<'EOF' block
+is preferred.
+
+For artifacts over approximately 100 lines, the assistant shall choose
+one of the following methods before generation:
+
+Option A — Sequential cat Sections
+
+- Divide the artifact into numbered sections.
+- Each section shall begin with a complete cat <<'EOF' command.
+- Each section shall contain complete repository text.
+- Each section shall terminate with its own matching EOF.
+- Sections shall be executed sequentially without manual reconstruction.
+
+Option B — Generated Repository File
+
+- Produce the complete repository artifact as a downloadable file.
+- The Repository Curator may copy or upload the file into the repository.
+- The assistant shall not truncate the artifact into conversational
+  fragments.
+
+The assistant shall never:
+
+- provide an incomplete cat statement,
+- omit the terminating EOF,
+- require manual reconstruction of a repository artifact,
+- switch from a repository artifact into conversational prose before
+  the artifact is complete.
+
+Status:
+Program Governance Guardrail.
+Effective immediately.
