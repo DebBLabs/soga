@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-07-04
+Last Updated: 2026-07-05
 
 ---
 
@@ -21,7 +21,7 @@ summaries, AI memory, or discussion.
 
 Current HEAD:
 
-64a6744
+321efd5
 
 Repository HEAD is displayed by:
 
@@ -49,53 +49,60 @@ Status: CLOSED — Commit: 53ea506
 
 ### Sprint A — Governance Invariance Demonstration
 Status: CLOSED — Commits: d0cca74, 9dd06c3
-Outcome: Governance invariance demonstrated across five ecosystems.
 GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED
 
 ### Sprint B — Adapter Boundary Expansion
 Status: CLOSED — Commit: 1ead1e2
-Outcome: Passive Adapter Specification v0.1. Five ecosystem adapters.
 GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED
 
 ### Repository Governance Sprint
 Status: CLOSED — Commits: 23f97b7, d06209e
-Outcome: G20, G21, G22 committed. README synchronized.
 Public Repository: https://github.com/DebBLabs/soga
 
 ### Sprint C — Stage Gate Architecture
 Status: CLOSED
-Phase C1 Commit: d7a922f — docs/stage_gate_architecture_v0_1.md
-Phase C2 Commit: 933963b — engines/stage_gate_engine.py
+Phase C1 Commit: d7a922f
+Phase C2 Commit: 933963b
 GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
 
 ### Sprint D — Capability Registry
 Status: CLOSED — Commit: 9136c51
-Artifacts: engines/capability_registry.py, four capability fixtures
 GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
 
 ### Sprint E — Governed Execution Pipeline
 Status: CLOSED — Commit: e5b9894
-Artifacts: engines/governed_execution_loop.py
 GovernancePDP: UNCHANGED — RuntimeEnvelope: UNCHANGED — CDP: UNCHANGED
 
 ### Sprint F — Mission Builder Integration
 Status: CLOSED — Commit: 32eaa55
-Artifacts:
-- builders/mission_builder.py (extended)
-- tests/fixtures/missions/caregiver_discharge_followup.json
-- tools/mission_builder_demo.py
-Outcome: Complete end-to-end pipeline demonstrated.
-Gate 1: APPROVED (Claude) — Gate 2: APPROVED (Gemini)
-Regression: PASS (6/6)
 All ten architectural invariants: UNCHANGED
+
+### Payload Fixture Provenance Sprint
+Status: CLOSED — Commit: 321efd5
+Outcome: _provenance and _scenario metadata added to
+five protocol payload fixtures. No governance content
+modified. Demo output unchanged. Regression PASS 6/6.
+
+---
+
+## Active Sprint
+
+### Live Governance Workbench Sprint
+Status: AUTHORIZED
+Gate 1: APPROVED (Claude)
+Gate 2: APPROVED (Gemini)
+Deliverable: tools/live_governance_workbench.py
+Flask server with live GovernedExecutionLoop behind
+browser UI. Multiple scenario dropdown. No existing
+files modified.
 
 ---
 
 ## Complete Governed Execution Pipeline
 
-Mission fixture → Mission Builder → GovernedExecutionLoop
-→ StageGateEngine → GovernancePDP → CDP
-→ CapabilityRegistry → REST / MCP / human
+Mission fixture -> Mission Builder -> GovernedExecutionLoop
+-> StageGateEngine -> GovernancePDP -> CDP
+-> CapabilityRegistry -> REST / MCP / human
 
 ---
 
@@ -108,9 +115,9 @@ Mission fixture → Mission Builder → GovernedExecutionLoop
 
 ## Research Observations
 
-RO-001 — Governance Normalization: Confirmed research direction.
+RO-001 — Governance Normalization: Confirmed.
 RO-002 — Evidence Sufficiency: Captured. Deferred.
-RO-003 — The Projection Pattern: Open research observation.
+RO-003 — The Projection Pattern: Open observation.
 RO-004 — Governance Invariance: Empirically demonstrated.
 
 ---
@@ -142,30 +149,20 @@ G22 — Execution Command Convention — Commit: 7b8f48b
 
 LinkedIn governance post: Published
 Public GitHub: https://github.com/DebBLabs/soga
-Repository synchronized through HEAD: 64a6744
+Repository synchronized through HEAD: 321efd5
 
 ---
 
-## Phase 2 Status
+## Next Authorized Direction
 
-All Phase 2 sprints complete:
+Live Governance Workbench Sprint — IN PROGRESS
 
-Sprint C — Stage Gates: CLOSED
-Sprint D — Capability Registry: CLOSED
-Sprint E — Governed Execution Pipeline: CLOSED
-Sprint F — Mission Builder Integration: CLOSED
+After workbench: Demo rehearsal and narrative audit
+before July 13 DIF presentation.
 
 ---
 
 ## Immediate Next Action
 
-Await Repository Curator directive.
-
-Candidate next directions:
-- July 13 DIF preparation and demo rehearsal
-- July 16 Dick Hardt preparation
-- Additional ecosystem adapters
-- Durable Execution Interruption Record
-- Natural language Mission Builder UI
-
-No implementation proceeds without explicit authorization.
+CG implementing Live Governance Workbench Sprint.
+Await Gate review before commit.
