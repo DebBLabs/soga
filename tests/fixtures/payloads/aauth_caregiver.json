@@ -1,4 +1,6 @@
 {
+  "_provenance": "Source: AAuth Protocol specification. Scenario: Caregiver discharge follow-up — supervised subject requiring caregiver approval.",
+  "_scenario": "caregiver_discharge_followup",
   "protocol": "aauth",
   "subject_agency_state": "SUPERVISED",
   "authorization_details": [

@@ -1,4 +1,6 @@
 {
+  "_provenance": "Source: UCAN specification / IIW delegation model. Scenario: Caregiver discharge follow-up — supervised subject requiring caregiver approval.",
+  "_scenario": "caregiver_discharge_followup",
   "protocol": "ucan",
   "source": "fixture_ucan",
   "ucan": {

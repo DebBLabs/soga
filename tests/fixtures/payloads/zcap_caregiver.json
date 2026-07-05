@@ -1,4 +1,6 @@
 {
+  "_provenance": "Source: DIF ZCAP-LD specification. Scenario: Caregiver discharge follow-up — supervised subject requiring caregiver approval.",
+  "_scenario": "caregiver_discharge_followup",
   "protocol": "zcap",
   "source": "fixture_zcap",
   "subject_id": "subject-aunt-001",
@@ -13,5 +15,22 @@
     "invocationTarget": "calendar-service",
     "allowedAction": "calendar.write",
     "parentCapability": "zcap-root-caregiver"
+  },
+  "governance_context": {
+    "source": "static_configuration",
+    "subject_id": "subject-aunt-001",
+    "subject_agency_state": "SUPERVISED",
+    "mission_id": "mission-caregiver-invariance-001",
+    "objective": "Schedule caregiver follow-up appointment.",
+    "capability": "calendar.write",
+    "governance_reasoning_token": "supervision_required",
+    "mission_constraints": {
+      "global": {
+        "supervision_required": true
+      },
+      "stage_gate": [],
+      "delegation": {},
+      "forbidden_conditions": ["treatment.authorize"]
+    }
   }
 }

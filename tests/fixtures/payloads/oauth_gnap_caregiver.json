@@ -1,4 +1,6 @@
 {
+  "_provenance": "Source: GNAP specification / delegated authority lifecycle. Scenario: Caregiver discharge follow-up — supervised subject requiring caregiver approval.",
+  "_scenario": "caregiver_discharge_followup",
   "protocol": "oauth_gnap",
   "source": "fixture_oauth_gnap",
   "source_protocol": "oauth-gnap-style",

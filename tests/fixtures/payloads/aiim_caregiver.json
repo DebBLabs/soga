@@ -1,4 +1,6 @@
 {
+  "_provenance": "Source: AIIM healthcare mission representation. Scenario: Caregiver discharge follow-up — supervised subject requiring caregiver approval.",
+  "_scenario": "caregiver_discharge_followup",
   "protocol": "aiim",
   "subject_agency_state": "SUPERVISED",
   "capability": "calendar.write",
