@@ -18,21 +18,21 @@ SOGA consumes authority evidence and produces governance decisions.
 
 ## Read These First
 
-For a first-time review, read these five artifacts in order:
+For a first-time review, read these artifacts in order:
 
 1. `docs/governance_overview.md`
 2. `docs/north_star_governance_lifecycle.md`
-3. `canonical_caregiver_scenario.md`
-4. `sprints/gate-3/pattern_verification.md`
-5. `docs/repository_inventory_v0_1.md`
+3. `docs/passive_adapter_specification_v0_1.md`
+4. `knowledge/research/RESEARCH_OBSERVATIONS.md`
+5. `docs/RESEARCH_METHODOLOGY.md`
 
 This sequence answers:
 
 1. Why does this matter?
 2. How does it work?
-3. Show me.
-4. Does it generalize?
-5. Where does it live?
+3. What architecture is stable?
+4. What has been demonstrated?
+5. How is research conducted?
 
 ---
 
@@ -44,7 +44,7 @@ Who are you?
 
 Authorization answers:
 
-What were you permitted to do?
+What are you allowed to do?
 
 Governance answers:
 
@@ -55,30 +55,118 @@ Should that authority still be exercised now?
 ## What This Repository Demonstrates
 
 - Mission steps are the primary unit of governance.
-- Protocol artifacts provide supporting evidence.
-- Subject Agency State also changes governance outcomes.
-- RESTRICT is a first-class governance path.
-- RESTRICT is not a degraded ALLOW.
+- Protocol artifacts provide supporting authority evidence.
+- Subject Agency State changes governance outcomes.
+- RESTRICT is a first-class governance outcome.
 - Execution consumes governance decisions; it does not recreate governance logic.
+- Governance evaluation remains invariant across representative protocol projections.
 
 ---
 
-## Primary Review Commands
+## Primary Demonstrations
+
+Canonical Caregiver Scenario
 
 Run:
 
-```bash
-python3 -m tools.restrict_visibility_demo
-python3 -m tools.subject_agency_state_demo
-python3 -m tools.pep_end_to_end_proof
-python3 -m tools.canonical_caregiver_scenario
-python3 -m tools.governance_view_demo
-python3 -m tools.cdp_regression
-Expected regression result:
-CDP REGRESSION PASS: 10 use cases, 38 canonical decision packages
-Scope
+    python3 -m tools.canonical_caregiver_scenario
 
-This repository is a reference implementation of SOGA governance semantics.
+Demonstrates:
 
-It does not prescribe production deployment topology, distributed service architecture, approval service design, notification architecture, or network-scale implementation strategy.
+    RESTRICT
+    → HOLDING
+    → approval or new evidence
+    → full re-evaluation
+    → ALLOW
+    → EXECUTING
+
+Governance Invariance
+
+Run:
+
+    python3 tools/governance_invariance_demo.py
+
+Subject Agency State
+
+Run:
+
+    python3 -m tools.subject_agency_state_demo
+
+Regression Baseline
+
+Run:
+
+    python3 -m tools.regression_baseline
+
+---
+
+## Stable Interfaces
+
+The following interfaces are considered stable:
+
+- RuntimeEnvelope
+- Passive Adapter
+- Governance Policy Server
+- Canonical Decision Package
+- Capability Registry
+- REST / MCP / human execution surface
+
+---
+
+## Canonical Outcomes
+
+The canonical governance outcomes are:
+
+- ALLOW — execution may proceed
+- RESTRICT — authority exists but execution is held pending additional conditions, evidence, or interaction
+- DENY — execution may not proceed
+
+RESTRICT is a persistent, first-class governance outcome.
+
+It is not a softened DENY.
+
+---
+
+## Research Discipline
+
+Repository architecture evolves only after research.
+
+Research artifacts distinguish:
+
+- Verified
+- Observed
+- Hypothesis
+- Future Research
+
+See:
+
+`docs/RESEARCH_METHODOLOGY.md`
+
+---
+
+## Scope
+
+This repository is a reference implementation of SOGA governance semantics and an executable research program.
+
+It does not prescribe:
+
+- production deployment topology
+- distributed service architecture
+- approval service implementation
+- notification architecture
+- protocol-specific deployment models
+
+SOGA remains protocol-neutral.
+
+Protocol ecosystems currently represented by repository fixtures include:
+
+- AAuth
+- UCAN
+- ZCAP
+- OAuth/GNAP
+- AIIM-style mission representations
+
+Representative fixtures demonstrate governance invariance.
+
+They are not claims of complete live protocol implementations.
 

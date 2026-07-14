@@ -1021,3 +1021,304 @@ Research composition, precedence, conflict resolution, disclosure, and accountab
 
 **Priority:** Medium
 
+
+---
+
+# Post-DIF Research Backlog
+## Captured 2026-07-13
+
+The following items arose from the DIF Trusted AI Agents Working Group discussion and subsequent AAuth integration analysis.
+
+These are research items only. They do not authorize architectural or implementation changes.
+
+---
+
+## B-021 — Authorization Terminology Normalization
+
+**Status:** Future Research
+
+**Observed:**
+
+The DIF discussion exposed ambiguity among:
+
+- governance
+- policy creation
+- policy access
+- policy evaluation
+- enforcement
+- validator
+- verifier
+- PAP
+- PDP
+- PEP
+
+Participants interpreted the current `GovernancePDP` and Capability Registry boundaries differently.
+
+**Hypothesis:**
+
+SOGA may implement a richer contextual execution-time decision function than a conventional PDP, while still relying on conventional policy and enforcement concepts.
+
+**Action:**
+
+Map current SOGA components against conventional PAP, PDP, PEP, validator, verifier, and governance terminology before proposing any rename or component-boundary change.
+
+**Priority:** High
+
+---
+
+## B-022 — Authorization Propagation Versus Identity Chaining
+
+**Status:** Future Research
+
+**Observed:**
+
+The DIF discussion distinguished authorization propagation from identity chaining.
+
+Identity may remain useful for attribution, accountability, audit, revocation, policy lookup, and dispute resolution.
+
+The operative mechanism for delegated execution may instead be the propagation of bounded authority through an execution lineage.
+
+**Hypothesis:**
+
+Identity is carried as reference evidence, while authorization and execution context determine whether authority may continue.
+
+**Action:**
+
+Test this framing against:
+
+- AAuth
+- UCAN
+- ZCAP
+- capability-system literature
+- conventional OAuth delegation
+- multi-hop delegation scenarios
+
+**Priority:** High
+
+---
+
+## B-023 — Capability Registry Architectural Boundary
+
+**Status:** Future Research
+
+**Observed:**
+
+DIF participants questioned whether the Capability Registry belongs outside the current decision boundary.
+
+**Open Questions:**
+
+Is the Capability Registry:
+
+- descriptive input to the decision service
+- a PAP-like source
+- part of the PDP boundary
+- part of a broader execution-control envelope
+- correctly placed, with only the diagram requiring clarification
+
+**Action:**
+
+Inspect implementation behavior and stable interface documents before proposing any movement or relabeling.
+
+**Priority:** High
+
+---
+
+## B-024 — RESTRICT Semantic Classification
+
+**Status:** Future Research
+
+**Verified:**
+
+SOGA implements RESTRICT as a first-class outcome.
+
+The caregiver scenario demonstrates:
+
+RESTRICT
+→ HOLDING
+→ new event or approval
+→ full re-evaluation
+→ ALLOW
+
+**Open Question:**
+
+Should RESTRICT be modeled as:
+
+- a PDP decision
+- an execution interruption state
+- a request for additional evidence
+- a transition into authorization
+- a transition into governance
+- a composite lifecycle state
+
+**Priority:** High
+
+---
+
+## B-025 — Person Server and Powerbox Comparison
+
+**Status:** Future Research
+
+**Observed:**
+
+Alan Karp compared the AAuth Person Server to a powerbox from capability-system literature.
+
+**Hypothesis:**
+
+The analogy may clarify the distinction among:
+
+- person-scoped authority availability
+- mission-scoped authority use
+- agent-scoped delegated subsets
+
+**Action:**
+
+Review primary capability-system literature before treating the analogy as exact.
+
+**Priority:** Medium
+
+---
+
+## B-026 — Wallet Contribution to Person Server Implementation
+
+**Status:** Future Research
+
+**Observed:**
+
+A conventional wallet may provide keys, credentials, signatures, and holder-controlled identity material.
+
+AAuth Person Server behavior may additionally require mission state, history, justification, policy access, interaction, negotiation, and authorization processing.
+
+**Open Question:**
+
+Can an existing wallet implement the full Person Server role, or only supply components to a broader Person Server service?
+
+**Priority:** Medium
+
+---
+
+## B-027 — KYAOS / CHAOS Primary-Source Review
+
+**Status:** Future Research
+
+**Observed:**
+
+Alan Karp stated that the project referred to in the meeting as KYAOS or CHAOS belongs near UCAN and ZCAP in the protocol landscape.
+
+**Unverified:**
+
+The preferred spelling, repository, specification, and precise architecture have not yet been confirmed.
+
+**Action:**
+
+Locate and read the project's primary materials before adding it to public documentation or protocol fixtures.
+
+**Priority:** Medium
+
+---
+
+## B-028 — AuthZEN Authorization API Projection
+
+**Status:** Future Research
+
+**Hypothesis:**
+
+The AuthZEN Authorization API may provide an output-normalization path from the Canonical Decision Package to an external Policy Enforcement Point.
+
+Potential symmetry:
+
+Protocol evidence
+→ RuntimeEnvelope normalization
+→ SOGA decision
+→ CDP
+→ AuthZEN-compatible projection
+
+**Action:**
+
+Read the primary AuthZEN Authorization API specification and evaluate:
+
+- request and response schemas
+- binary decision assumptions
+- obligations or metadata
+- extension mechanisms
+- RESTRICT representation
+- interaction requirements
+- compatibility with CDP reasoning and evidence
+
+**Priority:** Medium
+
+---
+
+## B-029 — Enforcement and Contextual Governance Separation
+
+**Status:** Future Research
+
+**Observed:**
+
+Kernel, hardware, or PEP enforcement can intercept an action and prevent execution until conditions are met.
+
+SOGA evaluates whether authority remains legitimate in the current mission and execution context.
+
+**Hypothesis:**
+
+Enforcement and contextual governance are separate but complementary architectural layers.
+
+**Action:**
+
+Map:
+
+- interception
+- governance consultation
+- interaction evidence
+- re-evaluation
+- final enforcement
+
+against the existing SOGA execution pipeline.
+
+**Priority:** Medium
+
+---
+
+## B-030 — Christian Connector Integration-State Inspection
+
+**Status:** Future Research
+
+**Observed:**
+
+Christian's AAuth reference implementation was cloned for connector work.
+
+**Unverified:**
+
+The current repository record does not yet establish:
+
+- exact upstream repository and branch
+- current AAuth draft version
+- connector implementation state
+- Person Server decision hook
+- external Governance Server consultation
+- deferred interaction status
+- live FIDO or CTAP2 behavior
+
+**Action:**
+
+Inspect the cloned repository and connector code directly before scheduling or describing further integration work.
+
+**Priority:** High
+
+---
+
+## B-031 — Multi-Principal Governance
+
+**Status:** Future Research
+
+**Observation:**
+
+Some missions may be subject to multiple governance sources, including personal, enterprise, fiduciary, or regulatory governance.
+
+A simple tenant or policy-source switch may be insufficient where those sources are simultaneously active or potentially adversarial.
+
+**Action:**
+
+Research composition, precedence, conflict resolution, disclosure, and accountability before proposing architecture.
+
+**Priority:** Medium
+

@@ -5,61 +5,95 @@ This document records formally adopted guardrails governing AI-assisted research
 
 Repository artifacts are authoritative over conversation, AI memory, summaries, or inference.
 
-Guardrails G19–G22 are already committed and referenced in `knowledge/working/CURRENT_STATE.md`.
+---
 
-This document adds G23.
+## G19 — Ecosystem Neutrality
+
+SOGA shall remain protocol-neutral.
+
+External ecosystems may provide authority evidence.
+
+They shall not become implicit architectural dependencies without explicit authorization.
+
+---
+
+## G20 — Repository Documentation Integrity
+
+Repository documentation shall accurately reflect the implemented repository.
+
+Research, proposals, and future ideas shall not be presented as implemented architecture.
+
+---
+
+## G21 — Repository Artifact Fidelity
+
+Repository artifacts shall be generated as complete replacement files.
+
+Repository artifacts shall:
+
+- be complete
+- preserve internal consistency
+- be immediately pasteable
+- require no manual reconstruction
+
+Fragments, partial edits, or mixed narrative are not acceptable repository artifacts.
+
+---
+
+## G22 — Execution Command Convention
+
+Repository execution commands shall be documented using the repository's canonical command form.
+
+Examples shall match executable repository behavior.
 
 ---
 
 ## G23 — Primary Source Grounding
 
-No architectural claim about an external specification, protocol, standard, or published framework may be built solely on memory, general knowledge, inference, secondary summaries, or partial topic-driven reading.
+No architectural claim about an external specification, protocol, standard, or published framework may be built solely on memory, inference, secondary summaries, or partial topic-driven reading.
 
 ### Origin
 
 During AAuth and SOGA alignment work, AI collaborators operated for an extended period using a plausible, internally consistent, and partly incorrect model of AAuth's Person Server.
 
-The Person Server was initially treated as resource-scoped.
+The incorrect model remained convincing until the primary specification was read directly.
 
-The primary specification defines it as person-scoped: the person chooses the Person Server, and that server may operate across the person's agents and missions.
-
-The incorrect model remained convincing until the foundational specification text was read directly.
+This guardrail was adopted to prevent similar failures.
 
 ### Required Sequence
 
-Before producing an architectural claim, comparison, diagram, mapping, or implementation recommendation involving an external source:
+Before producing architectural comparisons or implementation recommendations involving external work:
 
-1. Read the source's foundational role, terminology, trust, and architectural definitions first.
-2. Read the relevant mechanisms, flows, appendices, and edge cases second.
-3. Compare the external architecture with SOGA only after completing those readings.
-4. State plainly whether the primary source was read directly and recently.
-5. If the source was not read directly and recently, classify the claim as unverified and provisional.
-6. Preserve uncertainty where the source itself is incomplete, ambiguous, exploratory, or silent.
+1. Read foundational terminology and architecture.
+2. Read relevant mechanisms and interaction flows.
+3. Compare with SOGA.
+4. State whether the primary source was read directly and recently.
+5. Classify unverified conclusions as provisional.
+6. Preserve uncertainty where the source is incomplete or exploratory.
 
 ### Evidence Discipline
 
-A citation alone is not grounding.
+The following are not sufficient grounding:
 
-A previously fetched definition recalled from memory is not grounding.
+- citations alone
+- remembered definitions
+- search-result excerpts
+- partial or topic-driven reading
 
-A search-result excerpt is not grounding.
-
-A topic-driven reading that skips foundational definitions is not sufficient grounding.
-
-Primary Source Grounding requires a current, direct reading of the relevant source architecture and mechanisms.
+Primary Source Grounding requires direct reading of the relevant source.
 
 ### Required Classification
 
-Claims involving external work shall be classified as one of:
+Claims involving external work shall be classified as:
 
-- **Verified** — confirmed through primary specification text, executed repository behavior, canonical repository artifacts, or an authoritative transcript.
-- **Observed** — stated, demonstrated, or discussed by another party but not independently verified.
-- **Hypothesis** — an architectural interpretation or proposed explanation under investigation.
-- **Future Research** — explicitly unresolved and requiring further inspection, experimentation, or primary-source review.
+- Verified
+- Observed
+- Hypothesis
+- Future Research
 
 ### Applies To
 
-This guardrail applies to all AI collaborators and all external material, including specifications, protocols, standards, implementations, research papers, presentations, and published documentation.
+This guardrail applies to all AI collaborators and all external specifications, standards, implementations, research papers, presentations, and published documentation.
 
 It is not limited to AAuth.
 
@@ -67,4 +101,5 @@ It is not limited to AAuth.
 
 ## Status
 
-G23 is formally adopted for repository and research work upon commit of this file.
+These guardrails govern repository research and architectural work upon commit of this file.
+

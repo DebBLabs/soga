@@ -1,293 +1,242 @@
-# Research Methodology
-## Deb B Labs Research Program
+# SOGA Research Methodology
 
-This document defines the standing methodology for research conducted within the SOGA repository.
+Version: 1.0
 
-Its purpose is to preserve scientific rigor, repository integrity, and architectural discipline when humans and AI collaborators investigate external specifications, implementation behavior, and emerging architectural questions.
+Status: Adopted
 
----
+This methodology defines how research is conducted before architectural change is proposed within SOGA.
 
-## 1. Repository Is Canonical
-
-Repository artifacts take precedence over:
-
-- conversation history
-- AI memory
-- summaries
-- informal notes
-- inferred project state
-
-Before substantive work begins, collaborators shall inspect the repository and synchronize against:
-
-- `knowledge/working/CURRENT_STATE.md`
-- relevant specifications
-- relevant implementation files
-- current Git status and history
-
-Conversation may support the work.
-
-Conversation does not define repository truth.
+Repository architecture shall evolve from verified evidence rather than assumption, intuition, or accumulated discussion.
 
 ---
 
-## 2. Inspect Before Write
+# Research Sequence
 
-Before modifying an existing artifact:
+All research follows the same progression.
 
-1. Read the current artifact in full.
-2. Inspect related implementation and documentation.
-3. Identify the exact gap being addressed.
-4. Preserve unrelated content.
-5. Produce a complete replacement artifact when required by repository guardrails.
+1. Investigate
+2. Observe
+3. Form Hypotheses
+4. Verify
+5. Propose
+6. Review
+7. Authorize
+8. Implement
+9. Validate
 
-No artifact shall be rewritten from memory.
-
----
-
-## 3. Primary Source Grounding
-
-External architectural claims must follow G23 — Primary Source Grounding.
-
-Before comparing an external specification, protocol, standard, implementation, or framework with SOGA:
-
-1. Read foundational role, terminology, trust, and architectural definitions.
-2. Read the relevant mechanisms, flows, appendices, and edge cases.
-3. Compare the external work with SOGA only after those readings.
-4. State whether the source was read directly and recently.
-5. Preserve uncertainty where the source is incomplete, ambiguous, exploratory, or silent.
-
-A citation alone is not grounding.
-
-A search-result excerpt is not grounding.
-
-A topic-driven partial reading is not sufficient grounding.
+No step may be skipped.
 
 ---
 
-## 4. Evidence Classification
+## Phase 1 — Investigate
 
-Every research artifact shall classify material using one of four evidence levels.
+Research begins with inspection.
 
-### Verified
+Sources may include:
+
+- primary specifications
+- repository inspection
+- executable behavior
+- authoritative transcripts
+- published papers
+- implementation code
+
+Research begins by understanding existing work before proposing new work.
+
+---
+
+## Phase 2 — Observe
+
+Record what is actually present.
+
+Observations describe existing facts.
+
+Observations do not explain.
+
+Observations do not predict.
+
+Observations do not redesign.
+
+---
+
+## Phase 3 — Hypothesize
+
+Hypotheses explain observations.
+
+Hypotheses remain provisional until verified.
+
+Multiple competing hypotheses may coexist.
+
+---
+
+## Phase 4 — Verify
+
+Verification requires evidence.
+
+Evidence may include:
+
+- primary-source specifications
+- repository execution
+- repository artifacts
+- implementation inspection
+- reproduced experiments
+- authoritative transcripts
+
+Secondary summaries alone are insufficient.
+
+---
+
+## Phase 5 — Propose
+
+Only verified evidence may support architectural proposals.
+
+Proposals shall distinguish:
+
+- existing architecture
+- proposed architecture
+- research direction
+
+---
+
+## Phase 6 — Review
+
+Architectural proposals undergo review before implementation.
+
+Review may include:
+
+- repository gate review
+- standards discussion
+- external expert feedback
+- implementation feasibility
+
+Review does not authorize implementation.
+
+---
+
+## Phase 7 — Authorization
+
+Implementation begins only after explicit authorization.
+
+Research alone does not authorize implementation.
+
+Discussion alone does not authorize implementation.
+
+Hypotheses alone do not authorize implementation.
+
+---
+
+## Phase 8 — Implementation
+
+Implementation follows approved architecture.
+
+Repository commits shall not silently introduce architectural change.
+
+Architectural changes shall be documented.
+
+---
+
+## Phase 9 — Validation
+
+Validation confirms that implementation matches the approved architecture.
+
+Validation includes:
+
+- repository inspection
+- demonstrations
+- regression testing
+- documentation synchronization
+
+---
+
+# Evidence Classification
+
+Every research claim shall be classified.
+
+## Verified
 
 Confirmed through one or more of:
 
+- primary specification
 - executed repository behavior
-- committed repository artifacts
-- primary specification text
-- authoritative source documentation
-- authoritative meeting transcript
-
-Verified does not mean universally proven.
-
-It means the statement is directly supported by the cited evidence.
-
-### Observed
-
-Reported, demonstrated, or discussed by another party but not independently verified.
-
-Examples:
-
-- a statement made during a meeting
-- a demonstration viewed but not reproduced
-- a claim made in Slack
-- an architectural interpretation offered by an external participant
-
-Observed material must not be promoted to Verified without independent confirmation.
-
-### Hypothesis
-
-A current architectural interpretation, possible explanation, mapping, or design direction under investigation.
-
-Hypotheses may guide research.
-
-They are not implementation requirements or canonical architecture.
-
-### Future Research
-
-An explicitly unresolved question requiring:
-
-- additional primary-source review
-- repository inspection
-- experimentation
-- implementation evidence
-- external consultation
-
-Future Research items belong in research artifacts or the backlog until formally authorized.
+- canonical repository artifact
+- authoritative transcript
 
 ---
 
-## 5. Research Is Not Architecture
+## Observed
 
-Research findings do not become canonical architecture automatically.
-
-Promotion into architecture requires:
-
-1. Primary-source grounding where external work is involved.
-2. Clear evidence classification.
-3. Repository inspection.
-4. Explicit Gate review.
-5. Explicit authorization.
-6. Documentation and implementation alignment.
-
-A useful idea is not the same as an adopted design.
+Presented or demonstrated by another party but not independently verified.
 
 ---
 
-## 6. Research Is Not Implementation
+## Hypothesis
 
-The repository shall distinguish among:
+Architectural interpretation under investigation.
 
-- implemented behavior
-- representative fixture behavior
-- illustrative examples
-- research hypotheses
-- future work
-
-Static fixtures shall not be described as live protocol integrations.
-
-Representative mappings shall not be described as specification-verified unless they have been checked against the primary source.
-
-Planned interfaces shall not be described as implemented.
+Not yet verified.
 
 ---
 
-## 7. Terminology Normalization
+## Future Research
 
-Terminology corrections shall be separated from architectural changes.
+Open question requiring additional investigation.
 
-A terminology normalization pass may:
-
-- correct transcription errors
-- normalize protocol names
-- align capitalization
-- distinguish conventional terms from project-specific terms
-- document unresolved naming questions
-
-A terminology normalization pass shall not silently:
-
-- move component boundaries
-- alter runtime behavior
-- rename canonical interfaces
-- redefine architectural responsibilities
-
-Examples requiring explicit verification include:
-
-- AAuth, not AOTH
-- AuthZEN capitalization
-- KYAOS / CHAOS project naming
-- conventional PAP, PDP, PEP, verifier, and validator terminology
+No architectural conclusion has been reached.
 
 ---
 
-## 8. Attribution Discipline
+# Primary Source Grounding
 
-Research artifacts shall distinguish:
+Architectural comparison with external work requires direct reading of the primary source.
 
-- what the repository demonstrates
-- what Deb B Labs concludes
-- what an external participant stated
-- what an AI collaborator inferred
+Required sequence:
 
-Meeting conclusions shall not be attributed to participants unless supported by the transcript or direct record.
+1. Read foundational architecture and terminology.
+2. Read mechanisms and interaction flows.
+3. Compare with SOGA.
+4. State whether the primary source was read directly and recently.
+5. Preserve uncertainty where the source is incomplete or exploratory.
 
-Team preference shall not be represented as external agreement.
-
-Discovery and contribution attribution shall remain accurate.
-
----
-
-## 9. Protocol and Ecosystem Neutrality
-
-SOGA remains protocol-neutral unless explicitly changed through architectural review.
-
-Protocol-specific behavior belongs at adapter or projection boundaries.
-
-The governance core shall not be altered merely to mirror one external ecosystem.
-
-When protocols differ, the repository shall distinguish:
-
-- verified protocol artifacts
-- representative protocol evidence
-- illustrative ecosystem context
-- unverified mappings
+Primary-source grounding is mandatory before architectural comparison.
 
 ---
 
-## 10. Incremental Research Progression
+# Repository Discipline
 
-Research should proceed through the following sequence:
+Repository artifacts take precedence over:
 
-Observation
-→ Evidence classification
-→ Primary-source review
-→ Hypothesis
-→ Experiment or implementation inspection
-→ Gate review
-→ Architectural proposal
-→ Authorized implementation
+- conversation
+- summaries
+- AI memory
+- inference
 
-Steps may reveal that no architectural change is required.
+Research artifacts do not modify architecture.
 
-That is a valid research outcome.
+Backlog items do not modify architecture.
 
----
+Meeting notes do not modify architecture.
 
-## 11. Multi-AI Collaboration
-
-AI collaborators may propose, challenge, inspect, and review.
-
-No AI collaborator is authoritative.
-
-When collaborators disagree:
-
-1. Inspect the repository.
-2. Read the primary source.
-3. Identify the evidence level.
-4. Preserve unresolved disagreement as research.
-5. Escalate architectural promotion through Gate review.
-
-The human principal retains final editorial and architectural authority.
+Architecture changes require explicit authorization.
 
 ---
 
-## 12. Required Research Artifact Structure
+# Standing Principles
 
-New research artifacts should include:
+Research before architecture.
 
-- Purpose
-- Scope
-- Source status
-- Verified findings
-- Observed findings
-- Hypotheses
-- Future Research
-- Architectural impact
-- Implementation impact
-- Open questions
-- References or provenance
+Inspection before implementation.
 
-Sections may be omitted when genuinely inapplicable, but evidence levels must remain visible.
+Evidence before conclusions.
 
----
+Verification before promotion.
 
-## 13. Repository Update Sequence
+Authorization before change.
 
-Documentation and research synchronization shall follow this order:
-
-1. Inspect repository state.
-2. Capture research artifacts.
-3. Update backlog.
-4. Update public documentation.
-5. Update reviewer entry points.
-6. Run repository and regression checks.
-7. Complete Gate review.
-8. Commit.
-9. Update `CURRENT_STATE.md` last.
-10. Commit the synchronized current state.
+Synchronization before new work.
 
 ---
 
 ## Status
 
 This methodology becomes the standing SOGA research methodology upon commit of this file.
+
