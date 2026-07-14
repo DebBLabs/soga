@@ -1,0 +1,62 @@
+<svg width="680" height="470" viewBox="0 0 680 470" xmlns="http://www.w3.org/2000/svg" role="img">
+<title>AAuth as fully specified today, verified against draft-hardt-oauth-aauth-protocol</title>
+<desc>Agent Provider issues the agent token. The agent signs requests to the resource and separately proposes a mission to the person server. The resource publishes an R3 vocabulary describing its operations, fetched by both the Person Server and the Access Server, not the agent. The person server federates with the access server for authorization.</desc>
+<defs>
+<marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M2 1L8 5L2 9" fill="none" stroke="#5F5E5A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></marker>
+</defs>
+<rect width="680" height="470" fill="#FFFFFF"/>
+<text x="40" y="34" font-family="Arial, sans-serif" font-size="16" font-weight="500" fill="#2C2C2A">AAuth — Full Specification Map (verified)</text>
+<text x="40" y="52" font-family="Arial, sans-serif" font-size="11" fill="#5F5E5A">Deb B Labs — SOGA / AAuth Alignment — 2026-07-09 — Source: draft-hardt-oauth-aauth-protocol-09</text>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"><rect x="40" y="90" width="120" height="40" rx="8"/></g>
+<text x="100" y="110" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#0C447C">AP</text>
+
+<g fill="#E1F5EE" stroke="#0F6E56" stroke-width="0.5"><rect x="210" y="90" width="160" height="40" rx="8"/></g>
+<text x="290" y="110" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#085041">Person</text>
+
+<line x1="100" y1="130" x2="150" y2="340" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+<line x1="290" y1="130" x2="290" y2="170" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"><rect x="190" y="170" width="200" height="56" rx="8"/></g>
+<text x="290" y="190" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#0C447C">Person Server</text>
+<text x="290" y="208" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="12" fill="#185FA5">consent, mission log</text>
+
+<line x1="390" y1="198" x2="430" y2="198" stroke="#5F5E5A" stroke-width="1" fill="none"/>
+<text x="410" y="188" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#5F5E5A">federation</text>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"><rect x="430" y="170" width="180" height="56" rx="8"/></g>
+<text x="520" y="190" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#0C447C">Access Server</text>
+<text x="520" y="208" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="12" fill="#185FA5">resource policy</text>
+
+<line x1="170" y1="340" x2="245" y2="226" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+<text x="120" y="290" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#5F5E5A">resource token</text>
+<line x1="220" y1="306" x2="260" y2="226" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"><rect x="90" y="250" width="220" height="56" rx="8"/></g>
+<text x="200" y="270" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#0C447C">Mission</text>
+<text x="200" y="288" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="12" fill="#185FA5">agent proposes, PS approves</text>
+
+<line x1="155" y1="340" x2="180" y2="306" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+
+<line x1="520" y1="340" x2="510" y2="226" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+<line x1="470" y1="306" x2="500" y2="226" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+<line x1="410" y1="250" x2="330" y2="226" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"><rect x="390" y="250" width="220" height="56" rx="8"/></g>
+<text x="500" y="270" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#0C447C">R3 vocabulary</text>
+<text x="500" y="288" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="12" fill="#185FA5">fetched by PS and AS</text>
+
+<line x1="535" y1="340" x2="510" y2="306" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"><rect x="60" y="340" width="190" height="56" rx="8"/></g>
+<text x="155" y="360" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#0C447C">Agent</text>
+<text x="155" y="378" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="12" fill="#185FA5">signs every request</text>
+
+<line x1="250" y1="368" x2="440" y2="368" stroke="#5F5E5A" stroke-width="1" fill="none" marker-end="url(#arrow)"/>
+
+<g fill="#E6F1FB" stroke="#185FA5" stroke-width="0.5"><rect x="440" y="340" width="190" height="56" rx="8"/></g>
+<text x="535" y="360" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="14" font-weight="500" fill="#0C447C">Resource</text>
+<text x="535" y="378" text-anchor="middle" dominant-baseline="central" font-family="Arial, sans-serif" font-size="12" fill="#185FA5">publishes R3, issues token</text>
+
+<text x="40" y="450" font-family="Arial, sans-serif" font-size="10" fill="#888780">Verified against spec text: Protocol Overview, Person Server, Mission, R3 vocabulary sections. Solid lines = specified relationships.</text>
+</svg>
