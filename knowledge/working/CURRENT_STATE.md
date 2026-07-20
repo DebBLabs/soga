@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-07-14
+Last Updated: 2026-07-20
 
 ---
 
@@ -9,17 +9,20 @@ Last Updated: 2026-07-14
 
 This document is the repository synchronization contract.
 
-Every collaborator shall synchronize from this document before beginning substantive work.
+Every collaborator shall synchronize from this document before beginning
+substantive work.
 
-Repository artifacts take precedence over conversation, AI memory, summaries, or discussion.
+Repository artifacts take precedence over conversation, AI memory,
+summaries, or discussion.
+
+This document is the sole synchronization contract. Strategy artifacts
+in `knowledge/strategy/` are subordinate to it and referenced by it.
 
 ---
 
 ## Repository HEAD
 
-Current HEAD:
-
-(To be updated immediately after the next commit.)
+Current HEAD: (set to the G0 initialization commit hash at commit time)
 
 Repository HEAD is displayed by:
 
@@ -29,68 +32,61 @@ Repository HEAD is displayed by:
 
 ## Current Program Phase
 
-Program: SOGA Phase 2
+Program: Embodied Governance Research Program
+(per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: Research Synchronization and AAuth Integration Investigation
+Phase: Program Initialization
+
+Active Sprint: G0 — Program Initialization
+
+---
+
+## Program Structure
+
+- Program governance: continuous — `knowledge/strategy/PROGRAM_CHARTER.md`
+- Continuous program tracks: Research, Implementation, Standards,
+  Funding & Partnerships, Outreach — `knowledge/strategy/TRACKS.md`
+- Research sprints: time-boxed —
+  `knowledge/strategy/SPRINT_ROADMAP_G0_G30.md`
+- Decisions: `knowledge/strategy/DECISION_LOG.md`
+
+---
+
+## Authorized Sprint Sequence
+
+G0 → G24 → G25 → G26 → G27 → G28 → G29 → G30
+
+(Definitions, entry criteria, and exit criteria in the sprint roadmap.)
 
 ---
 
 ## Last Completed Sprint
 
-### Repository Synchronization Sprint
-
-Status: COMPLETE
-
-Purpose:
-
-Synchronize repository documentation, research artifacts, guardrails, backlog, and methodology following the DIF Trusted AI Agents Working Group discussions.
-
-Deliverables:
-
-- G23 adopted.
-- Repository Research Methodology established.
-- DIF Trusted AI Agents debrief captured.
-- AAuth integration status captured.
-- Backlog synchronized.
-- Terminology normalized.
-- Research evidence classifications standardized.
-
-No architecture changed.
-
-No governance logic changed.
-
-No runtime behavior changed.
+Repository Synchronization Sprint — COMPLETE (see prior CURRENT_STATE
+revision for deliverables; G23 adopted, methodology established).
 
 ---
 
-## Active Research
+## Active Work
 
-### AAuth Integration Investigation
+### G0 — Program Initialization
 
 Status: ACTIVE
 
-Purpose:
+Deliverables: strategy artifacts published; CURRENT_STATE.md amended
+(this revision); HEAD field corrected; drift resolved;
+`live_governance_workbench.py` formally dispositioned as a deferred,
+noncanonical exploratory artifact pending conceptual clarification and
+discussion with Dick Hardt (D-011).
 
-Determine the current implementation state before beginning connector work.
-
-Inspection targets include:
-
-- Christian's connector implementation
-- cloned repository state
-- Person Server integration point
-- Governance Server consultation point
-- deferred interaction flow
-- CTAP2 / FIDO status
-- User Presence vs User Verification
-- external governance interface
-
-Repository inspection required before implementation work.
+Exit: Gate 1 verification (Claude, advisory) against the five criteria
+in the sprint roadmap; G24 activation authorized by the PI.
 
 ---
 
 ## Stable Repository Architecture
 
-Canonical execution pipeline:
+Canonical execution pipeline (unchanged):
 
 Mission Builder
 → Stage Gate
@@ -100,74 +96,35 @@ Mission Builder
 → Capability Registry
 → REST / MCP / human execution surface
 
+No architecture changed. No governance logic changed. No runtime
+behavior changed.
+
 ---
 
 ## Research Methodology
 
-Repository research now follows the documented methodology in:
-
-    docs/RESEARCH_METHODOLOGY.md
-
-Research artifacts classify findings as:
-
-- Verified
-- Observed
-- Hypothesis
-- Future Research
-
-Architectural changes are authorized only after sufficient verified evidence.
+`docs/RESEARCH_METHODOLOGY.md` — evidence classes: Verified, Observed,
+Hypothesis, Future Research. Architectural changes are authorized only
+after sufficient verified evidence.
 
 ---
 
 ## Repository Guardrails
 
 G19 — Ecosystem Neutrality
-
 G20 — Repository Documentation Integrity
-
 G21 — Repository Artifact Fidelity
-
 G22 — Execution Command Convention
-
 G23 — Primary Source Grounding
-
----
-
-## Active Backlog Themes
-
-Current research emphasis:
-
-- authorization propagation
-- Person Server architecture
-- mission-scoped authority
-- execution-time governance terminology
-- attenuation
-- Governance Server interface
-- multi-principal governance
-- subject state reconciliation
-- capability registry boundaries
-
----
-
-## Public Repository Status
-
-Public GitHub repository synchronized.
-
-Documentation synchronized.
-
-Research methodology synchronized.
-
-Architecture unchanged.
 
 ---
 
 ## Immediate Next Action
 
-Inspect cloned AAuth implementation and determine:
+Complete G0 deliverables, run Gate 1 verification, and upon PI
+authorization activate G24 (Research Synchronization: PIC report and
+feedback, Why PIC review, AAuth office-hour reconciliation, research
+notes synchronization).
 
-- current connector state
-- current execution path
-- available integration hooks
-
-before authorizing implementation work.
-
+The AAuth Integration Investigation (G25) remains the first
+inspection-phase objective and follows G24.
