@@ -22,7 +22,7 @@ in `knowledge/strategy/` are subordinate to it and referenced by it.
 
 ## Repository HEAD
 
-Current HEAD: ea27973
+Current HEAD: b5a9097
 
 Repository HEAD is displayed by:
 
@@ -35,9 +35,9 @@ Repository HEAD is displayed by:
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: Program Initialization
+Phase: Mission Model and Permission Endpoint
 
-Active Sprint: G0 — Program Initialization
+Active Sprint: G26 — Mission Model and Permission Endpoint
 
 ---
 
@@ -62,23 +62,37 @@ G0 → G24 → G25 → G26 → G27 → G28 → G29 → G30
 
 ## Last Completed Sprint
 
-Repository Synchronization Sprint — COMPLETE (see prior CURRENT_STATE
-revision for deliverables; G23 adopted, methodology established).
+G0 — Program Initialization: COMPLETE (Gate 1 verified 2026-08-06).
+G24 — Research Synchronization: COMPLETE. PIC resolved (Nicola Gallo,
+Provenance Identity Continuity). AAuth office-hour reconciliation superseded by
+Dick Hardt's written answers of 2026-08-05. Research notes synchronized to
+`knowledge/research/AAUTH_FINDINGS_2026-08-05.md`.
+G25 — AAuth Integration Investigation: COMPLETE for the specification half.
+Connector and repository inspection carried forward into G26.
 
 ---
 
 ## Active Work
 
-### G0 — Program Initialization
-Status: ACTIVE — deliverables complete, awaiting Gate 1
-Deliverables: strategy artifacts published; CURRENT_STATE.md amended;
-HEAD field corrected; drift resolved; `live_governance_workbench.py`
-dispositioned as a deferred, noncanonical exploratory artifact.
-D-011 RESOLVED 2026-08-05 — conceptual clarification obtained via written
-exchange with Dick Hardt. Governance is not a single function requiring an
-attachment point; SOGA is the PS's governance policy.
-Exit: Gate 1 verification (Claude, advisory) against the five criteria in the
-sprint roadmap; next-sprint activation authorized by the PI.
+### G26 — Mission Model and Permission Endpoint
+Status: ACTIVE (activated 2026-08-06)
+
+Scope:
+- Resolve the mission model ADR. Narrowed by the 2026-08-05 findings: missions
+  are immutable, have no step structure, and evolve only through the mission
+  log.
+- Implement the AAuth permission endpoint as the first integration surface.
+- Adopt the AAuth mission object natively (D-013).
+- Run one notional mission end to end through the permission endpoint.
+- Inspect the connector implementation and cloned repository state (carried
+  forward from G25).
+
+Exit: mission model ADR recorded; permission endpoint running; one notional
+mission demonstrated; connector inspection complete.
+
+External commitment: Dick Hardt, end of August 2026 — permission endpoint
+implemented and one notional mission run through it, then office hours or a
+call.
 
 ---
 
@@ -119,23 +133,28 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Run Gate 1 verification and close G0.
+Execute G26.
 
-Then resolve the roadmap conflict below before activating anything.
+Sequence:
+1. Inspect the connector implementation and cloned repository state.
+2. Adopt the AAuth mission object natively — approver, agent, approved_at,
+   approved_tools, description; `s256` over canonical form; immutable after
+   approval.
+3. Build the append-only mission log with decision attribution (person vs.
+   delegate acting on their behalf).
+4. Stand up a mock Person Server exposing the permission endpoint.
+5. Route the decision to the governance engine: approved intent, mission log,
+   and subject agency state in; ALLOW / RESTRICT / DENY plus obligations out.
+6. Support both paths — with a mission and without. Permission works either way.
+7. Demonstrate: same action, same mission, different subject agency state,
+   different outcome.
 
-ROADMAP CONFLICT — PI decision required.
-The authorized sequence is G24 then G25. On 2026-08-05 an external commitment
-was made to Dick Hardt: permission endpoint implemented and one notional
-mission run through it by end of August, followed by office hours or a call.
-That is implementation work and maps to neither G24 nor G25 as written.
-Either the roadmap moves or the commitment does. Do not slide silently.
+Deferred within G26: token endpoint, access server, federation, HTTP Message
+Signatures, well-known metadata, live revocation, agent identity.
 
-Sprint scope changes from the 2026-08-05 findings:
-- G24 thinner. PIC resolved (Nicola Gallo, Provenance Identity Continuity;
-  already cited in the published threat model). AAuth office-hour
-  reconciliation superseded by Dick Hardt's written answers.
-- G25 partially satisfied from primary source. Remainder requires code.
-- G26 narrower. Two of three candidate mission models eliminated: missions are
-  immutable and have no steps, and evolve only through the mission log.
+Known open design question, expected to surface during implementation: RESTRICT
+is three-valued at an endpoint that expects granted or refused. How a restricted
+permission is rendered is an implementation choice the specification does not
+make.
 
 Findings: `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`

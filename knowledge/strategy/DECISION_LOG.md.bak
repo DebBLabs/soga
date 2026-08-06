@@ -131,19 +131,3 @@ core maintainers. Not an IIW-timeframe deliverable.
 ## D-016 — PECOSE dropped
 Requires letters from five people working on the open source tool. Not
 satisfiable this round.
-
-
-## D-017 — Close G0, G24, and G25
-G0 deliverables complete; Gate 1 verified 2026-08-06. G24 satisfied: PIC
-resolved, office-hour reconciliation superseded by Dick Hardt's written
-answers, research notes synchronized. G25 satisfied for the specification half;
-connector and repository inspection carried forward into G26 rather than
-deferred.
-
-## D-018 — Activate G26, rescoped
-G26 rescoped to mission model plus permission endpoint implementation. The
-mission model ADR is narrower than originally planned: two of three candidate
-models are eliminated by the specification. The permission endpoint work is
-added because it is the first integration surface (D-014) and because an
-external commitment exists to Dick Hardt for end of August. This resolves the
-roadmap conflict recorded 2026-08-05.
