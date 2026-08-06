@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-07-20
+Last Updated: 2026-08-06
 
 ---
 
@@ -22,7 +22,7 @@ in `knowledge/strategy/` are subordinate to it and referenced by it.
 
 ## Repository HEAD
 
-Current HEAD: (set to the G0 initialization commit hash at commit time)
+Current HEAD: ea27973
 
 Repository HEAD is displayed by:
 
@@ -70,17 +70,15 @@ revision for deliverables; G23 adopted, methodology established).
 ## Active Work
 
 ### G0 — Program Initialization
-
-Status: ACTIVE
-
-Deliverables: strategy artifacts published; CURRENT_STATE.md amended
-(this revision); HEAD field corrected; drift resolved;
-`live_governance_workbench.py` formally dispositioned as a deferred,
-noncanonical exploratory artifact pending conceptual clarification and
-discussion with Dick Hardt (D-011).
-
-Exit: Gate 1 verification (Claude, advisory) against the five criteria
-in the sprint roadmap; G24 activation authorized by the PI.
+Status: ACTIVE — deliverables complete, awaiting Gate 1
+Deliverables: strategy artifacts published; CURRENT_STATE.md amended;
+HEAD field corrected; drift resolved; `live_governance_workbench.py`
+dispositioned as a deferred, noncanonical exploratory artifact.
+D-011 RESOLVED 2026-08-05 — conceptual clarification obtained via written
+exchange with Dick Hardt. Governance is not a single function requiring an
+attachment point; SOGA is the PS's governance policy.
+Exit: Gate 1 verification (Claude, advisory) against the five criteria in the
+sprint roadmap; next-sprint activation authorized by the PI.
 
 ---
 
@@ -121,68 +119,23 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Complete G0 deliverables, run Gate 1 verification, and upon PI
-authorization activate G24 (Research Synchronization: PIC report and
-feedback, Why PIC review, AAuth office-hour reconciliation, research
-notes synchronization).
+Run Gate 1 verification and close G0.
 
-The AAuth Integration Investigation (G25) remains the first
-inspection-phase objective and follows G24.
+Then resolve the roadmap conflict below before activating anything.
 
----
-## Session Addendum — 2026-08-05
+ROADMAP CONFLICT — PI decision required.
+The authorized sequence is G24 then G25. On 2026-08-05 an external commitment
+was made to Dick Hardt: permission endpoint implemented and one notional
+mission run through it by end of August, followed by office hours or a call.
+That is implementation work and maps to neither G24 nor G25 as written.
+Either the roadmap moves or the commitment does. Do not slide silently.
 
-D-011 resolved; G0 exit unblocked, Gate 1 may run.
-
-Findings recorded in `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`.
-
-External commitment: Dick Hardt, end of August — permission endpoint
-implemented, one notional mission run through it, then office hours or a call.
-
-ROADMAP CONFLICT — requires PI decision, not a silent slide.
-The authorized sequence is G24 then G25. The commitment above is implementation
-work and maps to neither as written. Either the roadmap moves or the commitment
-does.
-
-Scope changes:
+Sprint scope changes from the 2026-08-05 findings:
 - G24 thinner. PIC resolved (Nicola Gallo, Provenance Identity Continuity;
-  already cited in the published threat model). AAuth office-hour reconciliation
-  superseded by Dick's written answers.
+  already cited in the published threat model). AAuth office-hour
+  reconciliation superseded by Dick Hardt's written answers.
 - G25 partially satisfied from primary source. Remainder requires code.
 - G26 narrower. Two of three candidate mission models eliminated: missions are
-  immutable and have no steps, and evolve only through the log.
+  immutable and have no steps, and evolve only through the mission log.
 
-Open items:
-- AAuth chapter: Appendix B.3.7 citation unresolved; confused-deputy claim needs
-  scoping to identity-based access mode; key-rotation persistence claim
-  unverified; "Offline: No" is inference, not spec.
-- Published threat model Editors field misspells the editor's name.
-
----
-## Session Addendum — 2026-08-05
-
-D-011 resolved; G0 exit unblocked, Gate 1 may run.
-
-Findings recorded in `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`.
-
-External commitment: Dick Hardt, end of August — permission endpoint
-implemented, one notional mission run through it, then office hours or a call.
-
-ROADMAP CONFLICT — requires PI decision, not a silent slide.
-The authorized sequence is G24 then G25. The commitment above is implementation
-work and maps to neither as written. Either the roadmap moves or the commitment
-does.
-
-Scope changes:
-- G24 thinner. PIC resolved (Nicola Gallo, Provenance Identity Continuity;
-  already cited in the published threat model). AAuth office-hour reconciliation
-  superseded by Dick's written answers.
-- G25 partially satisfied from primary source. Remainder requires code.
-- G26 narrower. Two of three candidate mission models eliminated: missions are
-  immutable and have no steps, and evolve only through the log.
-
-Open items:
-- AAuth chapter: Appendix B.3.7 citation unresolved; confused-deputy claim needs
-  scoping to identity-based access mode; key-rotation persistence claim
-  unverified; "Offline: No" is inference, not spec.
-- Published threat model Editors field misspells the editor's name.
+Findings: `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`
