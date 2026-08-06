@@ -128,3 +128,61 @@ notes synchronization).
 
 The AAuth Integration Investigation (G25) remains the first
 inspection-phase objective and follows G24.
+
+---
+## Session Addendum — 2026-08-05
+
+D-011 resolved; G0 exit unblocked, Gate 1 may run.
+
+Findings recorded in `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`.
+
+External commitment: Dick Hardt, end of August — permission endpoint
+implemented, one notional mission run through it, then office hours or a call.
+
+ROADMAP CONFLICT — requires PI decision, not a silent slide.
+The authorized sequence is G24 then G25. The commitment above is implementation
+work and maps to neither as written. Either the roadmap moves or the commitment
+does.
+
+Scope changes:
+- G24 thinner. PIC resolved (Nicola Gallo, Provenance Identity Continuity;
+  already cited in the published threat model). AAuth office-hour reconciliation
+  superseded by Dick's written answers.
+- G25 partially satisfied from primary source. Remainder requires code.
+- G26 narrower. Two of three candidate mission models eliminated: missions are
+  immutable and have no steps, and evolve only through the log.
+
+Open items:
+- AAuth chapter: Appendix B.3.7 citation unresolved; confused-deputy claim needs
+  scoping to identity-based access mode; key-rotation persistence claim
+  unverified; "Offline: No" is inference, not spec.
+- Published threat model Editors field misspells the editor's name.
+
+---
+## Session Addendum — 2026-08-05
+
+D-011 resolved; G0 exit unblocked, Gate 1 may run.
+
+Findings recorded in `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`.
+
+External commitment: Dick Hardt, end of August — permission endpoint
+implemented, one notional mission run through it, then office hours or a call.
+
+ROADMAP CONFLICT — requires PI decision, not a silent slide.
+The authorized sequence is G24 then G25. The commitment above is implementation
+work and maps to neither as written. Either the roadmap moves or the commitment
+does.
+
+Scope changes:
+- G24 thinner. PIC resolved (Nicola Gallo, Provenance Identity Continuity;
+  already cited in the published threat model). AAuth office-hour reconciliation
+  superseded by Dick's written answers.
+- G25 partially satisfied from primary source. Remainder requires code.
+- G26 narrower. Two of three candidate mission models eliminated: missions are
+  immutable and have no steps, and evolve only through the log.
+
+Open items:
+- AAuth chapter: Appendix B.3.7 citation unresolved; confused-deputy claim needs
+  scoping to identity-based access mode; key-rotation persistence claim
+  unverified; "Offline: No" is inference, not spec.
+- Published threat model Editors field misspells the editor's name.

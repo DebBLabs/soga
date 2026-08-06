@@ -85,3 +85,49 @@ Format: ID — Date — Decision — Rationale (brief) — Status
   (c) optional Outcome field added to track registers; (d) subscription
   review confirmed as standing governance, not procurement —
   Refinements only; no architectural change — PROPOSED.
+
+## D-011 — RESOLVED 2026-08-05
+Conceptual clarification obtained via written exchange with Dick Hardt.
+Governance is not a single function requiring an attachment point; SOGA is the
+PS's governance policy. G0 exit unblocked.
+
+## D-013 — Adopt AAuth mission structure natively
+Adopt the AAuth mission object rather than translating into it. Requires a G19
+neutrality statement: the fields are generic and map to other substrates.
+Retain the adapter boundary despite shape agreement — the draft will move.
+
+## D-014 — Permission endpoint is the first integration surface
+Chosen over the token endpoint. Works with or without a mission, requires no
+resource or AS participation, and carries the residual decisions that fall
+outside `approved_tools`.
+
+## D-015 — AuthZen MCP hook deferred
+Extension approval requires a dedicated working group and a vote of all nine
+core maintainers. Not an IIW-timeframe deliverable.
+
+## D-016 — PECOSE dropped
+Requires letters from five people working on the open source tool. Not
+satisfiable this round.
+
+## D-011 — RESOLVED 2026-08-05
+Conceptual clarification obtained via written exchange with Dick Hardt.
+Governance is not a single function requiring an attachment point; SOGA is the
+PS's governance policy. G0 exit unblocked.
+
+## D-013 — Adopt AAuth mission structure natively
+Adopt the AAuth mission object rather than translating into it. Requires a G19
+neutrality statement: the fields are generic and map to other substrates.
+Retain the adapter boundary despite shape agreement — the draft will move.
+
+## D-014 — Permission endpoint is the first integration surface
+Chosen over the token endpoint. Works with or without a mission, requires no
+resource or AS participation, and carries the residual decisions that fall
+outside `approved_tools`.
+
+## D-015 — AuthZen MCP hook deferred
+Extension approval requires a dedicated working group and a vote of all nine
+core maintainers. Not an IIW-timeframe deliverable.
+
+## D-016 — PECOSE dropped
+Requires letters from five people working on the open source tool. Not
+satisfiable this round.
