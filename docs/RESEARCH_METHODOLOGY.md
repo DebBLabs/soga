@@ -254,3 +254,25 @@ Before any claim that a specification does not address a concern:
    mechanism is specified elsewhere in the same document.
 
 Applies to all collaborators, human and agent.
+
+## G24 — Source and Claim Discipline
+
+Do not strengthen a source beyond what it actually says.
+
+Before stating a material fact as researched, verified, confirmed, or established:
+
+1. Identify whether the statement is:
+   - verified fact,
+   - source-reported claim,
+   - inference,
+   - or unverified information.
+2. Cross-check material biographical, employment, organizational, funding,
+   deadline, standards-status, or company claims against multiple independent
+   sources when reasonably available.
+3. Do not convert an affiliation, profile label, title, or organization field
+   into a more specific employment or legal relationship without direct support.
+4. If only one source supports a material claim, attribute it to that source
+   rather than presenting it as independently verified.
+5. State inferences explicitly as inferences.
+
+Applies to all collaborators, human and agent.
