@@ -241,7 +241,7 @@ Synchronization before new work.
 This methodology becomes the standing SOGA research methodology upon commit of this file.
 
 
-## G23 — Operational Form
+## RM-01 — Absence Claims
 
 Verification is asymmetric. Claiming a specification *says* something requires
 finding the text. Claiming a specification *lacks* something requires searching
@@ -255,7 +255,7 @@ Before any claim that a specification does not address a concern:
 
 Applies to all collaborators, human and agent.
 
-## G24 — Source and Claim Discipline
+## RM-02 — Source and Claim Discipline
 
 Do not strengthen a source beyond what it actually says.
 
