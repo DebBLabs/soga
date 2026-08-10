@@ -240,3 +240,17 @@ Synchronization before new work.
 
 This methodology becomes the standing SOGA research methodology upon commit of this file.
 
+
+## G23 — Operational Form
+
+Verification is asymmetric. Claiming a specification *says* something requires
+finding the text. Claiming a specification *lacks* something requires searching
+for it and recording that the search returned nothing.
+
+Before any claim that a specification does not address a concern:
+1. Search the primary source for the concern's own vocabulary, not ours.
+2. Record the terms searched alongside the finding.
+3. A deferral to a companion specification is not an absence. Check whether the
+   mechanism is specified elsewhere in the same document.
+
+Applies to all collaborators, human and agent.
