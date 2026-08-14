@@ -7,6 +7,50 @@ Checkpoint at time of research: main @ e00beabf7b503d6c7150058ad996bc7bfeeecdb1
 
 ---
 
+## Correction annotation — 2026-08-14
+
+Status: architectural correction authorized after Stage Gate review. The
+original search log, findings, and conclusion remain below as research-history
+evidence.
+
+The absence finding in this artifact is valid only for a terminal permission
+response with `permission: denied`: revision `-10` defines no structured
+remediation field on that response beyond the optional Markdown `reason`.
+That true terminal-response finding was incorrectly generalized to the
+permission flow as a whole.
+
+AAuth `-10` already defines deferred prerequisite mechanisms that may operate
+before a terminal permission decision:
+
+- `requirement=approval`: another party's approval is pending; the agent polls
+  for the result without directing a user.
+- `requirement=interaction`: a user must act at an interaction endpoint; the
+  agent receives and relays the required interaction URL and code.
+- `requirement=clarification`: the recipient must answer a question carried in
+  the `clarification` response field.
+- `requirement=claims`: identity claims are required; in `-10` this is an
+  AS-to-PS mechanism during token issuance.
+- `updated_request`: not a requirement value, but an action available in
+  response to clarification. The defined shape carries a replacement resource
+  token and optional justification; `-10` does not define an equivalent
+  resource-token-free reformulation body specifically for the permission
+  endpoint.
+
+The initial search began with SOGA vocabulary such as `restriction`,
+`constraint`, `remediation`, and `obligation`. Those searches correctly found
+no corresponding fields on the terminal denied response, but they did not by
+themselves test the draft's own prerequisite vocabulary and interaction model.
+The later searches for `requirement`, `clarification`, and `updated_request`
+show that the permission flow has structured deferred mechanisms even though
+the terminal denied object has no structured remediation carrier.
+
+Accordingly, the statements in F6 and the original conclusion that the
+registered requirement values do not define a reformulation or prerequisite
+path are corrected by this annotation. They remain below to preserve the
+chronology of the research finding and its subsequent narrowing.
+
+---
+
 ## 1. Source
 
 Primary source read directly: **`draft-hardt-oauth-aauth-protocol-10.txt`**
@@ -220,7 +264,14 @@ and once in a non-normative rationale appendix:
 3660, 7763), not as a defined field or mechanism. Neither term names any
 element of the permission response object.
 
-### F6 — Verified: A general, named extension point exists in the protocol (`AAuth-Requirement` / `requirement` value), and one of its registered values (`clarification`) allows a question — not remediation guidance — to flow to the agent pre-decision
+### F6 — Original finding; narrowed by the correction annotation above
+
+A general, named extension point exists in the protocol
+(`AAuth-Requirement` / `requirement` value), and one of its registered values
+(`clarification`) allows a question to flow to the agent pre-decision. The
+original text below incorrectly treated this as the only relevant deferred
+mechanism and did not account for `updated_request` as a clarification response
+action or for the distinct approval, interaction, and claims prerequisites.
 
 Section 12.4.2, quoted verbatim:
 
@@ -283,6 +334,11 @@ remediation guidance.
 ---
 
 ## 6. Conclusion
+
+**Historical conclusion — narrowed and corrected by the annotation at the top
+of this artifact.** The statements below remain unchanged as the original
+research record; they must not be read as applying to the entire deferred
+permission flow.
 
 **An extension point exists whose content is undefined for the specific
 question asked.**
