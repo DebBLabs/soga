@@ -147,3 +147,18 @@ models are eliminated by the specification. The permission endpoint work is
 added because it is the first integration surface (D-014) and because an
 external commitment exists to Dick Hardt for end of August. This resolves the
 roadmap conflict recorded 2026-08-05.
+
+## D-019 — Implement the reviewed G26 mission and permission decision
+
+Authorized by Deb following Claude Stage Gate PASS with the required amendment
+incorporated. Adopt the immutable native AAuth mission shape and append-only
+mission log; project SOGA `ALLOW` to AAuth `granted` and SOGA `DENY` to AAuth
+`denied`. A completely internally discharged pre-grant `RESTRICT` may
+ultimately project to `granted`; agent-participation `RESTRICT` remains pending
+through AAuth deferred response. If required structured interaction cannot be
+represented safely, use the August fallback of AAuth `denied` plus its
+specification-defined `reason`. Preserve the underlying SOGA decision and
+attribution separately because AAuth `granted`/`denied` cannot reconstruct it.
+Do not assign arbitrary SOGA requirements to `clarification`, invent deferred
+termination semantics, or solve post-grant obligations. Full rationale and
+boundaries: `knowledge/strategy/G26_MISSION_PERMISSION_DECISION.md`.
