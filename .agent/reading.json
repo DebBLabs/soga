@@ -1,0 +1,8 @@
+{
+  "gate": "G26",
+  "required": [
+    "knowledge/working/CURRENT_STATE.md",
+    "knowledge/strategy/DECISION_LOG.md",
+    "docs/RESEARCH_METHODOLOGY.md"
+  ]
+}
