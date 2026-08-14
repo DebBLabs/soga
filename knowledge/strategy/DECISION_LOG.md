@@ -162,3 +162,20 @@ attribution separately because AAuth `granted`/`denied` cannot reconstruct it.
 Do not assign arbitrary SOGA requirements to `clarification`, invent deferred
 termination semantics, or solve post-grant obligations. Full rationale and
 boundaries: `knowledge/strategy/G26_MISSION_PERMISSION_DECISION.md`.
+
+## D-020 — Resolve G26 pre-grant RESTRICT path semantics
+
+Authorized after Stage Gate review on 2026-08-14. Going forward, `HOLDING`
+means that nothing executes until human clearance; `SUPERVISED_EXECUTION`
+means execution proceeds under human monitoring without prior clearance.
+Subject agency state may contribute to `RESTRICT` but does not select its
+operational path. An authorized mission/policy constraint selects the path;
+absence of such a declaration fails closed. The canonical caregiver constraint
+selects `HOLDING`, requires `supervisor_confirmation`, and references
+`authority-caregiver-001`. AAuth `requirement=approval` carries the deferred
+prerequisite. Approval evidence causes governance re-evaluation with the same
+mission, action, and `SUPERVISED` subject; approval alone never implies
+`granted`. Earlier combined terminology remains historical evidence and is
+resolved prospectively, not characterized as an established historical error
+or supersession. Full semantics and boundaries are recorded in
+`knowledge/strategy/G26_MISSION_PERMISSION_DECISION.md`.

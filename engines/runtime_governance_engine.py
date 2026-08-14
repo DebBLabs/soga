@@ -10,6 +10,10 @@ from engines.restrict_mode_selector import (
 from engines.runtime_dimension_evaluator import (
     RuntimeDimensionEvaluator,
 )
+from engines.restrict_policy import (
+    approval_satisfies_constraint,
+    authorized_restrict_constraint,
+)
 
 
 class RuntimeGovernanceEngine:
@@ -76,6 +80,25 @@ class RuntimeGovernanceEngine:
                 )
             )
 
+            policy = runtime.get("policy", {})
+            constraint = authorized_restrict_constraint(policy, item["action"])
+            approval_evidence = policy.get("approval_evidence")
+            if (
+                dimensions["subject_agency_state"] == "REVIEW"
+                and all(
+                    value == "PASS"
+                    for name, value in dimensions.items()
+                    if name != "subject_agency_state"
+                )
+                and approval_satisfies_constraint(
+                    approval_evidence,
+                    constraint,
+                    mission_s256=str(policy.get("mission_s256", "")),
+                    action=item["action"],
+                )
+            ):
+                dimensions["subject_agency_state"] = "PASS"
+
             restrict_mode = None
 
             if "FAIL" in dimensions.values():
@@ -91,7 +114,11 @@ class RuntimeGovernanceEngine:
                 decision = "RESTRICT"
                 restrict_mode = (
                     RestrictModeSelector()
-                    .select(dimensions)
+                    .select(
+                        dimensions,
+                        policy=policy,
+                        action=item["action"],
+                    )
                 )
                 reason = restrict_mode["reason"]
 

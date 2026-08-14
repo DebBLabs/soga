@@ -88,6 +88,37 @@ class MissionLogEntry:
     payload: Mapping[str, Any]
 
 
+@dataclass(frozen=True)
+class ProvisionalG26ApprovalEvidence:
+    """Temporary G26 evidence; must converge on canonical Stage Gate evidence."""
+
+    pending_id: str
+    evaluation_reference: str
+    mission_s256: str
+    action: str
+    originating_soga_decision: str
+    constraint_reference: str
+    restrict_path: str
+    required_evidence: str
+    authority_reference: str
+    asserted_by: str
+    person_server_authenticated_assertion: bool
+    holder_attribution_asserted: bool
+    human_attribution: str | None
+    result: str
+    recorded_at: str
+    provenance: str
+    reevaluation_reference: str | None = None
+    reevaluation_result: str | None = None
+    evidence_schema: str = "provisional-g26-approval-evidence-v1"
+    convergence_obligation: str = (
+        "future-canonical-stage-gate-clearance-evidence-schema"
+    )
+
+    def to_dict(self) -> dict[str, Any]:
+        return asdict(self)
+
+
 class MissionLog:
     """Append-only in-memory log used by the G26 mock Person Server."""
 

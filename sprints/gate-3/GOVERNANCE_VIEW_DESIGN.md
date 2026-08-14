@@ -143,3 +143,14 @@ RESTRICT
 → ALLOW
 → EXECUTING
 without reading code, specifications, or terminal output.
+
+---
+
+## 2026-08-14 Prospective terminology annotation
+
+This June design remains historical evidence. Going forward, `HOLDING` means
+that nothing executes until human clearance, while `SUPERVISED_EXECUTION` means
+execution proceeds with human monitoring and requires no prior clearance. The
+caregiver lifecycle displayed here is the `HOLDING` path. Its approval event is
+durably represented as a Person Server assertion attributable to a holder of
+the referenced authority, not merely as the statement "Beth approved."

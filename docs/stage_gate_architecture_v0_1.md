@@ -384,3 +384,16 @@ This document extends:
   Projection Pattern applies to Phase 4 resubmission
 
 No existing document is modified by this research definition.
+
+---
+
+## 2026-08-14 Prospective terminology annotation
+
+This June artifact is preserved as historical evidence. Later Stage Gate review
+resolved the operational meanings prospectively: `HOLDING` waits for human
+clearance and permits no execution before that action;
+`SUPERVISED_EXECUTION` proceeds under human monitoring without prior clearance.
+Subject state may contribute to `RESTRICT`, while authorized mission/policy
+constraints select the operational path. Earlier combined usage is a historical
+semantic conflict; this annotation does not characterize it as an established
+historical mistake or rewrite its original claims.

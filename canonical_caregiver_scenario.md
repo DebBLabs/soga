@@ -114,3 +114,13 @@ ALLOW
 Post-Approval Execution State:
 
 EXECUTING
+
+---
+
+## 2026-08-14 G26 semantic annotation
+
+This scenario exercises `HOLDING`, not `SUPERVISED_EXECUTION`. The authorized
+constraint requires `supervisor_confirmation` and references
+`authority-caregiver-001`. G26 records a Person Server authenticated assertion
+that approval is attributable to a holder of that authority; "Beth approval"
+is human attribution when supplied, not the durable evidence semantics.

@@ -49,6 +49,21 @@ registered requirement values do not define a reformulation or prerequisite
 path are corrected by this annotation. They remain below to preserve the
 chronology of the research finding and its subsequent narrowing.
 
+### G26 implementation application — 2026-08-14
+
+The canonical caregiver `HOLDING` prerequisite uses the verified approval
+shape: HTTP `202`, `AAuth-Requirement: requirement=approval`, same-origin
+unguessable `Location`, `Retry-After`, `Cache-Control: no-store`, and polling.
+Explicit approver decline uses the polling `403 denied` error; configured
+expiry uses `408 expired`; a terminal result is delivered once and subsequent
+polls return `410`. Approval triggers governance re-evaluation and does not
+itself mean AAuth `granted`.
+
+The implementation deliberately does not assign `SUPERVISED_EXECUTION` to this
+pre-grant flow. It records temporary approval material as provisional G26
+evidence with an explicit convergence obligation rather than treating it as a
+canonical Stage Gate clearance schema.
+
 ---
 
 ## 1. Source

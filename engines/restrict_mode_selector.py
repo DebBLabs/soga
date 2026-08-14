@@ -8,10 +8,9 @@ class RestrictModeSelector:
     The execution layer implements it.
     """
 
-    def select(
-        self,
-        dimensions,
-    ):
+    def select(self, dimensions, *, policy=None, action=None):
+
+        policy = policy or {}
 
         if dimensions["reachability"] == "REVIEW":
             return {
@@ -29,10 +28,18 @@ class RestrictModeSelector:
             }
 
         if dimensions["subject_agency_state"] == "REVIEW":
+            from engines.restrict_policy import authorized_restrict_constraint
+
+            constraint = authorized_restrict_constraint(policy, action)
+            if constraint is not None:
+                return {
+                    "mode": constraint["restrict_path"],
+                    "reason": "Authorized mission/policy constraint selected the RESTRICT path.",
+                    "constraint": constraint,
+                }
             return {
-                "mode": "supervised_execution",
-                "reason":
-                    "Subject governance state requires supervision.",
+                "mode": "fail_closed",
+                "reason": "SOGA RESTRICT has no authorized operational path; no path was inferred.",
             }
 
         if dimensions["execution_context"] == "REVIEW":

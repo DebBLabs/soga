@@ -52,6 +52,47 @@ Deferred-interaction termination is an open implementation question. G26
 defines no timeout, expiry, cancellation, or other implicit termination
 semantics.
 
+## Authorized correction — HOLDING approval path
+
+The following correction was authorized after primary-source verification and
+Stage Gate review on 2026-08-14. It narrows and replaces the G26 implementation
+direction above where they conflict; the earlier text remains visible as the
+decision chronology.
+
+`HOLDING` and `SUPERVISED_EXECUTION` are distinct operational RESTRICT paths.
+`HOLDING` requires human clearance before execution. `SUPERVISED_EXECUTION`
+allows execution to proceed under human monitoring without prior clearance;
+its relationship to post-grant conditions remains Future Research.
+
+Subject agency state may cause a SOGA dimension to enter `REVIEW` and contribute
+to `RESTRICT`, but it does not select an operational path. Authorized
+mission/policy constraints select that path. A `RESTRICT` without an authorized
+path fails closed: no path is inferred and AAuth `granted` is prohibited.
+
+The canonical caregiver constraint declares `restrict_path=HOLDING`,
+`required_evidence=supervisor_confirmation`, and
+`authority_reference=authority-caregiver-001`. G26 recognizes authority only
+through the Person Server's authenticated assertion that the approval is
+attributable to a holder of that referenced authority. It does not resolve the
+authority holder or independently authenticate the human approver.
+
+HOLDING uses AAuth `requirement=approval`. Explicit approval records provisional
+G26 approval evidence and causes governance to re-evaluate the same mission,
+action, and `SUPERVISED` subject state. Only a resulting SOGA `ALLOW` projects
+to AAuth `granted`. Explicit decline terminates polling with the AAuth `403`
+`denied` error and is not recorded as SOGA `DENY`. Pending approval has a
+configurable expiry policy and uses the AAuth `408 expired` terminal response;
+G26 defines no caregiver-specific duration or general escalation semantics.
+
+The provisional evidence has an explicit convergence obligation to a future
+canonical Stage Gate clearance-evidence schema. G26 does not change
+`StageGateEngine` or declare its provisional structure canonical.
+
+The June artifacts contain conflicting combined terminology. They are
+preserved and annotated as historical evidence; this decision resolves the
+meanings prospectively without asserting an established historical mistake or
+silent supersession.
+
 ## Neutrality statement
 
 The adopted fields express generic approval provenance, delegate identity,

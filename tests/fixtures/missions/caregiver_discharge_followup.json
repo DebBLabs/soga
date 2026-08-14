@@ -14,6 +14,7 @@
         "step_id": "schedule_appointment",
         "governance_reasoning_token": "supervision_required",
         "required_evidence": "supervisor_confirmation",
+        "authority_reference": "authority-caregiver-001",
         "restrict_path": "HOLDING"
       }
     ],
