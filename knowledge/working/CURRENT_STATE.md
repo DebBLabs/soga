@@ -22,11 +22,12 @@ in `knowledge/strategy/` are subordinate to it and referenced by it.
 
 ## Repository HEAD
 
-Current HEAD: b5a9097
+Repository HEAD is authoritative only as reported live by:
 
-Repository HEAD is displayed by:
+    git rev-parse HEAD
 
-    git rev-parse --short HEAD
+This document does not record a HEAD value. A recorded value would be
+invalidated by the commit that updates it.
 
 ---
 
