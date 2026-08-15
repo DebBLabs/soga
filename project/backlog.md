@@ -1021,7 +1021,6 @@ Research composition, precedence, conflict resolution, disclosure, and accountab
 
 **Priority:** Medium
 
-
 ---
 
 # Post-DIF Research Backlog
@@ -1322,3 +1321,32 @@ Research composition, precedence, conflict resolution, disclosure, and accountab
 
 **Priority:** Medium
 
+---
+
+## B-032 — G26 Approval Negative-Control Regression Coverage
+
+**Status:** Open — coverage gap, not an implementation defect
+
+**Evidence:** `knowledge/research/G26_GATE_REVIEW_2026-08-14.md`, negative
+controls 7 and 9; finalized checklist at
+`knowledge/strategy/G26_STAGE_GATE_CHECKLIST.md`.
+
+**Established implementation paths lacking exact regression cases:**
+
+1. Correct authority reference + correct constraint reference + approval not
+   affirmatively satisfied → no grant.
+2. Valid approval evidence + governance re-evaluation still `RESTRICT` → no
+   grant.
+
+The Stage Gate review established both code paths. This item records missing
+regression protection only and must not be reported as a runtime defect.
+
+**External presentation condition:** Dedicated coverage for Control 7 is
+required before the canonical caregiver approval path is presented externally
+to Dick Hardt.
+
+**Completion evidence:** Add focused tests exercising the exact two
+combinations above and retain the existing G26 behavioral and regression
+baseline results.
+
+**Priority:** High before external caregiver-path presentation
