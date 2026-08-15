@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-08-06
+Last Updated: 2026-08-14
 
 ---
 
@@ -95,6 +95,27 @@ External commitment: Dick Hardt, end of August 2026 — permission endpoint
 implemented and one notional mission run through it, then office hours or a
 call.
 
+### 2026-08-14 — G26 caregiver approval integration validated
+
+G26 AAuth permission integration is implemented, Stage Gate PASS,
+live-walkthrough validated, and regression-protected through Controls 7 and 9.
+
+Demonstrated continuous flow:
+
+SOGA RESTRICT/HOLDING → conformant AAuth approval pending → unchanged first
+poll → PS-authenticated approval assertion → same mission/action/SUPERVISED
+subject re-evaluated → SOGA ALLOW → one-time AAuth granted → subsequent 410.
+
+B-032 is complete. No runtime or StageGateEngine changes were required for
+negative-control coverage.
+
+Known implementation/demo limitations:
+
+- Mock HTTP server currently emits HTTP/1.0.
+- Pending state is process-local/in-memory.
+
+These are implementation/demo limitations and are not G26 governance findings.
+
 ---
 
 ## Stable Repository Architecture
@@ -134,28 +155,15 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Execute G26.
+Continue AAuth integration toward a substantial end-of-August runnable and
+briefable demonstration. Push implementation fidelity as far as practical
+while preserving the established Stage Gate process and avoiding unrelated
+scope expansion.
 
-Sequence:
-1. Inspect the connector implementation and cloned repository state.
-2. Adopt the AAuth mission object natively — approver, agent, approved_at,
-   approved_tools, description; `s256` over canonical form; immutable after
-   approval.
-3. Build the append-only mission log with decision attribution (person vs.
-   delegate acting on their behalf).
-4. Stand up a mock Person Server exposing the permission endpoint.
-5. Route the decision to the governance engine: approved intent, mission log,
-   and subject agency state in; ALLOW / RESTRICT / DENY plus obligations out.
-6. Support both paths — with a mission and without. Permission works either way.
-7. Demonstrate: same action, same mission, different subject agency state,
-   different outcome.
+After the AAuth sprint reaches its exit, begin the AIIM integration sprint
+targeting September 10. The intended progression is:
 
-Deferred within G26: token endpoint, access server, federation, HTTP Message
-Signatures, well-known metadata, live revocation, agent identity.
+AAuth proves the governance mechanism → AIIM demonstrates
+portability/interoperability of the same governance core.
 
-Known open design question, expected to surface during implementation: RESTRICT
-is three-valued at an endpoint that expects granted or refused. How a restricted
-permission is rendered is an implementation choice the specification does not
-make.
-
-Findings: `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`
+Do not reopen settled G26 semantics absent new evidence.
