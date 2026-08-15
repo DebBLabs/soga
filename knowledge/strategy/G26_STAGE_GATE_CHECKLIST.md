@@ -40,14 +40,15 @@ regression test; it is not an implementation-defect finding.
 - [x] 4. Evidence for another constraint does not satisfy this one.
 - [x] 5. Explicit decline does not grant.
 - [x] 6. Missing authorized restrict path does not grant.
-- [ ] 7. Evidence with the correct authority reference and correct constraint reference but not affirmatively satisfied → no grant. **Established via code path; dedicated regression coverage required before the caregiver approval path is presented externally to Dick Hardt.**
+- [x] 7. Evidence with the correct authority reference and correct constraint reference but not affirmatively satisfied → no grant. **Dedicated regression coverage added after PASS; external-presentation condition satisfied.**
 - [x] 8. A different agent presenting the pending_url does not receive the result.
-- [ ] 9. Valid approval where re-evaluation still returns RESTRICT → no grant emitted. **Established via code path; dedicated regression coverage required.**
+- [x] 9. Valid approval where re-evaluation still returns RESTRICT → no grant emitted. **Dedicated regression coverage added after PASS.**
 
 ## PASS interpretation
 
 The Stage Gate result is PASS because every criterion was established through
 direct implementation inspection, with existing tests used as corroboration.
-Controls 7 and 9 are coverage gaps only: their implementation branches were
-established, but their exact combinations are not protected by dedicated
-tests. The follow-up is tracked as B-032 in `project/backlog.md`.
+At PASS time, Controls 7 and 9 were coverage gaps only: their implementation
+branches were established, but their exact combinations lacked dedicated
+tests. B-032 in `project/backlog.md` records their subsequent regression
+coverage and completion without rewriting the original review artifact.

@@ -1325,7 +1325,7 @@ Research composition, precedence, conflict resolution, disclosure, and accountab
 
 ## B-032 — G26 Approval Negative-Control Regression Coverage
 
-**Status:** Open — coverage gap, not an implementation defect
+**Status:** Complete — regression coverage added; no implementation defect found
 
 **Evidence:** `knowledge/research/G26_GATE_REVIEW_2026-08-14.md`, negative
 controls 7 and 9; finalized checklist at
@@ -1345,8 +1345,11 @@ regression protection only and must not be reported as a runtime defect.
 required before the canonical caregiver approval path is presented externally
 to Dick Hardt.
 
-**Completion evidence:** Add focused tests exercising the exact two
-combinations above and retain the existing G26 behavioral and regression
-baseline results.
+**Completion evidence:** `tests/test_g26_permission.py` now includes
+`test_correct_references_without_affirmative_satisfaction_do_not_grant` and
+`test_valid_approval_does_not_grant_when_reevaluation_remains_restrict`. Both
+exercise the real approval and governance paths. The focused G26 suite,
+regression baseline, and compile/diff checks passed on 2026-08-14.
 
-**Priority:** High before external caregiver-path presentation
+**External presentation condition:** Satisfied. Control 7 now has dedicated
+coverage before external caregiver-path presentation to Dick Hardt.

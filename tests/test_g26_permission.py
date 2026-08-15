@@ -7,6 +7,7 @@ from pathlib import Path
 
 from aauth_permission import PermissionService
 from aauth_permission.http_server import create_server
+from engines.restrict_policy import approval_satisfies_constraint
 
 
 FIXTURE = json.loads(
@@ -141,6 +142,60 @@ class G26PermissionTests(unittest.TestCase):
         status, result = self.service.poll(body["pending_id"], agent=self.mission.agent)
         self.assertEqual(status, 200)
         self.assertEqual(result["permission"], "denied")
+
+    def test_correct_references_without_affirmative_satisfaction_do_not_grant(self):
+        body = self.start_holding()
+        pending_id = body["pending_id"]
+        self.service.record_approval(
+            pending_id,
+            **self.assertion(holder_attribution_asserted=False),
+        )
+        pending = self.service.pending[pending_id]
+        evidence = pending["approval_evidence"]
+        self.assertEqual(evidence["authority_reference"], "authority-caregiver-001")
+        self.assertEqual(evidence["constraint_reference"], "gate-supervision-required")
+        self.assertEqual(evidence["required_evidence"], "supervisor_confirmation")
+        self.assertFalse(evidence["holder_attribution_asserted"])
+        self.assertEqual(pending["reevaluation"]["governance_determination"], "RESTRICT")
+        status, result = self.service.poll(pending_id, agent=self.mission.agent)
+        self.assertEqual(status, 200)
+        self.assertEqual(result["permission"], "denied")
+        self.assertNotEqual(result.get("permission"), "granted")
+
+    def test_valid_approval_does_not_grant_when_reevaluation_remains_restrict(self):
+        policy = json.loads(json.dumps(FIXTURE["constraints"]))
+        policy["requires_escalation"] = True
+        self.service.authorize_mission_policy(self.mission.s256, policy)
+        status, body = self.service.permission(self.request("SUPERVISED"))
+        self.assertEqual(status, 202)
+        pending_id = body["pending_id"]
+        self.service.record_approval(pending_id, **self.assertion())
+        pending = self.service.pending[pending_id]
+        evidence = pending["approval_evidence"]
+        self.assertTrue(evidence["person_server_authenticated_assertion"])
+        self.assertTrue(evidence["holder_attribution_asserted"])
+        self.assertEqual(evidence["result"], "approve")
+        self.assertTrue(
+            approval_satisfies_constraint(
+                evidence,
+                pending["constraint"],
+                mission_s256=self.mission.s256,
+                action="schedule_appointment",
+            )
+        )
+        self.assertEqual(pending["reevaluation"]["governance_determination"], "RESTRICT")
+        self.assertEqual(
+            pending["reevaluation"]["governance_decision"]["dimensions"]["policy"],
+            "REVIEW",
+        )
+        self.assertEqual(
+            pending["reevaluation"]["governance_decision"]["restrict_mode"]["mode"],
+            "HOLDING",
+        )
+        status, result = self.service.poll(pending_id, agent=self.mission.agent)
+        self.assertEqual(status, 200)
+        self.assertEqual(result["permission"], "denied")
+        self.assertNotEqual(result.get("permission"), "granted")
 
     def test_explicit_decline_is_terminal_error_not_soga_deny(self):
         body = self.start_holding()
