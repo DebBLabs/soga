@@ -3,3 +3,6 @@
 external-repos/
 
 .agent/SESSION_INIT.md
+
+*.bak
+.DS_Store
