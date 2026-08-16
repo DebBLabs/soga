@@ -36,9 +36,9 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: Mission Model and Permission Endpoint
+Phase: Mission Model and Permission Endpoint — G26 complete
 
-Active Sprint: G26 — Mission Model and Permission Endpoint
+Active Sprint: None activated; G26 complete pending subsequent PI direction
 
 ---
 
@@ -70,13 +70,15 @@ Dick Hardt's written answers of 2026-08-05. Research notes synchronized to
 `knowledge/research/AAUTH_FINDINGS_2026-08-05.md`.
 G25 — AAuth Integration Investigation: COMPLETE for the specification half.
 Connector and repository inspection carried forward into G26.
+G26 — Mission Model and Permission Endpoint: COMPLETE. Exit criteria satisfied
+2026-08-16; see D-022 and completed B-030.
 
 ---
 
 ## Active Work
 
 ### G26 — Mission Model and Permission Endpoint
-Status: ACTIVE (activated 2026-08-06)
+Status: COMPLETE (activated 2026-08-06; completed 2026-08-16)
 
 Scope:
 - Resolve the mission model ADR. Narrowed by the 2026-08-05 findings: missions
@@ -90,6 +92,13 @@ Scope:
 
 Exit: mission model ADR recorded; permission endpoint running; one notional
 mission demonstrated; connector inspection complete.
+
+Exit criteria satisfied. The mission-model ADR criterion is satisfied by
+D-013, D-019, and `knowledge/strategy/G26_MISSION_PERMISSION_DECISION.md`.
+D-018's rescope supersedes the roadmap's fuller three-candidate exit artifact;
+no reconstruction of that evaluation is required. The permission endpoint and
+canonical caregiver lifecycle are demonstrated, and connector inspection is
+complete through B-030. See D-022.
 
 External commitment: Dick Hardt, end of August 2026 — permission endpoint
 implemented and one notional mission run through it, then office hours or a
@@ -222,8 +231,8 @@ briefable demonstration. Push implementation fidelity as far as practical
 while preserving the established Stage Gate process and avoiding unrelated
 scope expansion.
 
-After the AAuth sprint reaches its exit, begin the AIIM integration sprint
-targeting September 10. The intended progression is:
+G26 has reached its exit. Subsequent sprint or Gate 1b activation requires
+separate PI direction. The recorded intended progression remains:
 
 AAuth proves the governance mechanism → AIIM demonstrates
 portability/interoperability of the same governance core.

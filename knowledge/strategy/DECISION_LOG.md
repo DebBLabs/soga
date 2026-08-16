@@ -174,3 +174,17 @@ required nor established. The future disposition of StageGateEngine is deferred
 to Gate 1b, where the continuing role of the older step-bearing governed-mission
 model will be evaluated. This decision authorizes no runtime change, defect
 repair, or Gate 1b work.
+
+## D-022 — Close G26 and satisfy the rescoped mission-model ADR exit criterion
+
+PI disposition accepted on 2026-08-16. The G26 mission-model ADR exit criterion
+is satisfied by D-013, D-019, and
+`knowledge/strategy/G26_MISSION_PERMISSION_DECISION.md`. D-018's rescope
+supersedes the roadmap's fuller three-candidate exit artifact; no reconstruction
+of that evaluation is required.
+
+The remaining G26 exit criteria are satisfied: the permission endpoint is
+running, the canonical caregiver mission was demonstrated through the complete
+permission and evidence-driven re-evaluation lifecycle, and the connector
+inspection is complete through B-030. G26 is complete. This decision does not
+open Gate 1b, alter the older mission model, or authorize runtime changes.
