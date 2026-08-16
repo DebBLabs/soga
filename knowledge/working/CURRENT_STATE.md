@@ -128,11 +128,11 @@ Decision Package → PermissionService.
 Mission Builder, StageGateEngine, GovernedExecutionLoop, and capability registry
 are present in the repository but were not reached by that path.
 
-This creates an unresolved synchronization/architecture-description
-contradiction with the "Canonical execution pipeline (unchanged)" below and
-the accompanying statement that no architecture changed. Gate 1a does not
-resolve the contradiction by declaring either path canonical, obsolete, or
-aspirational. Disposition is required before Gate 1b. See B-033.
+This created a synchronization/architecture-description contradiction with the
+then-standing "Canonical execution pipeline (unchanged)" statement. B-033
+resolved the contradiction prospectively by identifying that pipeline as
+target/designed architecture, without declaring either path obsolete or
+characterizing the prior statement as historically erroneous.
 
 Gate 1a also established a documentation defect in
 `knowledge/working/IMPLEMENTATION_STATUS.md`: its Person Server / Person Server
@@ -178,10 +178,18 @@ bridge. The older governed-execution path reaches Mission Builder,
 StageGateEngine, RuntimeEnvelope, GovernancePDP, the older `DecisionPackage`,
 and Capability Registry resolution, but not external action execution.
 
-The substantive unresolved architectural issue is StageGateEngine clearance
-handling in relation to the G26 constraint/evidence/re-evaluation path. No
-decision has been made whether StageGateEngine converges into, is replaced by,
-or permanently coexists with that path.
+B-035 established a schema-level convergence obligation only. StageGateEngine
+operates on a mission-execution step in the older step-bearing model; G26
+operates on a permission request/action under the native immutable, step-free
+AAuth mission. G26 is bound to a future canonical Stage Gate clearance-evidence
+schema, not to StageGateEngine itself. No mechanism-level convergence,
+replacement, or coexistence is required or established. The future disposition
+of StageGateEngine is deferred to Gate 1b, where the continuing role of the
+older step-bearing governed-mission model will be evaluated.
+
+Future schema convergence must preserve G26's assurance and binding properties
+and must not weaken D-019, D-020, or the recorded G26 trust boundary. See D-021
+and B-036.
 
 Current G26 proves permission-boundary governance and evidence-driven
 re-evaluation; it does not prove governed execution of the requested external

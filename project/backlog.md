@@ -1427,7 +1427,7 @@ execution.
 
 ## B-035 — StageGateEngine and G26 Clearance/Evidence Path Relationship
 
-**Status:** Open — separate architectural decision required
+**Status:** Complete — PI accepted advisory determination; recorded in D-021
 
 **Established question:**
 
@@ -1444,3 +1444,83 @@ or permanently coexists with the G26 path.
 
 No runtime change, schema convergence, replacement, coexistence commitment, or
 other implementation authorization is created by this backlog item.
+
+**Approved disposition:**
+
+B-035 resolves as a schema-level convergence obligation with no mechanism-level
+relationship required or established between StageGateEngine and G26. The
+mechanisms operate on different units of work:
+
+- StageGateEngine operates on a mission-execution step in the older step-bearing
+  model.
+- G26 operates on a permission request/action under the native immutable,
+  step-free AAuth mission adopted by D-013.
+
+The repository binds G26 to a future canonical Stage Gate clearance-evidence
+schema, not to StageGateEngine itself. Future schema convergence must preserve
+the assurance and binding properties established by G26 and must not weaken
+D-019, D-020, or the recorded G26 trust boundary.
+
+Mechanism-level convergence, replacement, or coexistence is neither required
+nor established. The future disposition of StageGateEngine is deferred to Gate
+1b, where the continuing role of the older step-bearing governed-mission model
+will be evaluated.
+
+---
+
+## B-036 — StageGateEngine Clearance Validation Ignores Affirmative Satisfaction
+
+**Status:** Open — repair not authorized
+
+**Source:** Reproduced under B-035 verification at
+`main @ 7337f7ee3bbf1f41a18533d8f1f86a7b18ffc158`. This defect was not required
+for B-035 closure.
+
+**Defect:**
+
+At `engines/stage_gate_engine.py:121`, when a gate declares
+`required_evidence`, `_has_clearance()` returns
+`clearance_evidence.get("type") == required_evidence` and never inspects
+affirmative satisfaction. `satisfied`, `supervisor_confirmed`, `source`,
+`authority`, and `provenance` are ignored.
+
+**Inverted strictness:**
+
+When `required_evidence` is `None`, the function checks `satisfied`; when it is
+configured — the stricter configuration — it stops checking satisfaction.
+
+**Reproduction:**
+
+```json
+{"type": "supervisor_confirmation", "satisfied": false}
+```
+
+yields `_has_clearance: True` and `RESUBMIT_FOR_GOVERNANCE`.
+
+**Blast radius:**
+
+- `GovernedExecutionLoop` uses StageGateEngine routing and would observe false
+  clearance as `RESUBMIT_FOR_GOVERNANCE`.
+- No repository test exercises StageGateEngine or `_has_clearance()`.
+- `tools/stage_gate_demo.py` succeeds with matching evidence type, but that
+  success does not establish that affirmative clearance was validated.
+- `tools/governed_execution_demo.py` and `tools/mission_builder_demo.py` provide
+  a flat evidence shape not recognized by `_has_clearance()`; their subsequent
+  ALLOW results follow a subject-state change and do not establish actual
+  clearance.
+- The three demos — `tools/stage_gate_demo.py`,
+  `tools/governed_execution_demo.py`, and `tools/mission_builder_demo.py` — are
+  in the repair blast radius and will break when `_has_clearance()` is repaired;
+  their current success does not establish actual clearance.
+- The deferred `knowledge/working/deferred/live_governance_workbench.py` uses
+  the same flat evidence pattern and has the same limitation.
+
+**Future scope:**
+
+- establish one canonical clearance-evidence shape;
+- require affirmative satisfaction in addition to matching evidence type;
+- update callers and add direct StageGateEngine / `_has_clearance()` tests.
+
+Any future canonical clearance-evidence schema must rise to G26's assurance
+level, not reduce G26 to the current StageGate evidence shape. A future repair
+must not weaken D-019, D-020, or the recorded G26 trust boundary.

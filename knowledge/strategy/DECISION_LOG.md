@@ -109,30 +109,6 @@ core maintainers. Not an IIW-timeframe deliverable.
 Requires letters from five people working on the open source tool. Not
 satisfiable this round.
 
-## D-011 — RESOLVED 2026-08-05
-Conceptual clarification obtained via written exchange with Dick Hardt.
-Governance is not a single function requiring an attachment point; SOGA is the
-PS's governance policy. G0 exit unblocked.
-
-## D-013 — Adopt AAuth mission structure natively
-Adopt the AAuth mission object rather than translating into it. Requires a G19
-neutrality statement: the fields are generic and map to other substrates.
-Retain the adapter boundary despite shape agreement — the draft will move.
-
-## D-014 — Permission endpoint is the first integration surface
-Chosen over the token endpoint. Works with or without a mission, requires no
-resource or AS participation, and carries the residual decisions that fall
-outside `approved_tools`.
-
-## D-015 — AuthZen MCP hook deferred
-Extension approval requires a dedicated working group and a vote of all nine
-core maintainers. Not an IIW-timeframe deliverable.
-
-## D-016 — PECOSE dropped
-Requires letters from five people working on the open source tool. Not
-satisfiable this round.
-
-
 ## D-017 — Close G0, G24, and G25
 G0 deliverables complete; Gate 1 verified 2026-08-06. G24 satisfied: PIC
 resolved, office-hour reconciliation superseded by Dick Hardt's written
@@ -179,3 +155,22 @@ mission, action, and `SUPERVISED` subject; approval alone never implies
 resolved prospectively, not characterized as an established historical error
 or supersession. Full semantics and boundaries are recorded in
 `knowledge/strategy/G26_MISSION_PERMISSION_DECISION.md`.
+
+## D-021 — Resolve B-035 at the evidence-schema boundary
+
+PI disposition accepted on 2026-08-16. B-035 resolves as a schema-level
+convergence obligation; no mechanism-level relationship is required or
+established between StageGateEngine and G26. StageGateEngine operates on a
+mission-execution step in the older step-bearing model. G26 operates on a
+permission request/action under the native immutable, step-free AAuth mission
+adopted by D-013. The repository binds G26 provisional approval evidence to a
+future canonical Stage Gate clearance-evidence schema, not to StageGateEngine
+itself.
+
+Future schema convergence must preserve the assurance and binding properties
+established by G26 and must not weaken D-019, D-020, or the recorded G26 trust
+boundary. Mechanism-level convergence, replacement, or coexistence is neither
+required nor established. The future disposition of StageGateEngine is deferred
+to Gate 1b, where the continuing role of the older step-bearing governed-mission
+model will be evaluated. This decision authorizes no runtime change, defect
+repair, or Gate 1b work.
