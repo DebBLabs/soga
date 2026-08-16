@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-08-14
+Last Updated: 2026-08-16
 
 ---
 
@@ -115,6 +115,36 @@ Known implementation/demo limitations:
 - Pending state is process-local/in-memory.
 
 These are implementation/demo limitations and are not G26 governance findings.
+
+### 2026-08-16 — Gate 1a implementation lineage and current architecture PASS
+
+Gate 1a received an advisory agent gate-verification PASS under D-008 at
+`1811c87cd239f4843a4805ded985e11ad9f54235`. The PASS records the gate findings;
+it does not itself constitute PI authorization. The executed G26/AAuth path was:
+
+AAuth adapter → RuntimeEnvelope → RuntimeGovernanceEngine/SOGA → Canonical
+Decision Package → PermissionService.
+
+Mission Builder, StageGateEngine, GovernedExecutionLoop, and capability registry
+are present in the repository but were not reached by that path.
+
+This creates an unresolved synchronization/architecture-description
+contradiction with the "Canonical execution pipeline (unchanged)" below and
+the accompanying statement that no architecture changed. Gate 1a does not
+resolve the contradiction by declaring either path canonical, obsolete, or
+aspirational. Disposition is required before Gate 1b. See B-033.
+
+Gate 1a also established a documentation defect in
+`knowledge/working/IMPLEMENTATION_STATUS.md`: its Person Server / Person Server
+Integration, Christian Posta Demo, and Runtime Restrict status statements do not
+match the implementation and reachable-history evidence. See B-034. This is a
+documentation defect, not a Gate 1a evidence problem.
+
+External-claim boundary: current G26 demonstrates governance determination at
+the permission boundary, evidence-driven re-evaluation, mock Person Server
+authentication, and process-local state. It does not demonstrate governed
+execution of the requested external action. Permission enforcement and action
+execution remain distinct claims.
 
 ---
 

@@ -1353,3 +1353,70 @@ regression baseline, and compile/diff checks passed on 2026-08-14.
 
 **External presentation condition:** Satisfied. Control 7 now has dedicated
 coverage before external caregiver-path presentation to Dick Hardt.
+
+---
+
+## B-033 — Gate 1a Canonical-Pipeline Synchronization Contradiction
+
+**Status:** Open — disposition required before Gate 1b
+
+**Established by Gate 1a:**
+
+The working G26/AAuth integration reaches:
+
+AAuth adapter → RuntimeEnvelope → RuntimeGovernanceEngine/SOGA → Canonical
+Decision Package → PermissionService.
+
+It does not reach Mission Builder, StageGateEngine, GovernedExecutionLoop, or
+capability registry. `knowledge/working/CURRENT_STATE.md` separately describes
+an unchanged canonical execution pipeline containing those components and says
+that no architecture changed.
+
+**Required disposition:**
+
+Synchronize the architecture description before Gate 1b. This item does not
+declare either path canonical, obsolete, or aspirational; that requires a
+subsequent decision.
+
+**Boundary:** Documentation/architecture-description synchronization only. No
+runtime remediation or Gate 1b functional subtraction is authorized by this
+item.
+
+---
+
+## B-034 — Gate 1a Stale Implementation Status and Dangling Lineage References
+
+**Status:** Open — documentation defect
+
+**Established inconsistencies in `knowledge/working/IMPLEMENTATION_STATUS.md`:**
+
+- Person Server and Person Server Integration are described as working although
+  the G26 implementation explicitly provides a mock Person Server boundary.
+- Christian Posta Demo is described as working although its implementation and
+  history are not reachable in this repository.
+- Runtime Restrict is described as planned although G26 demonstrably executes
+  RESTRICT/HOLDING.
+
+These are documentation defects, not Gate 1a evidence defects.
+
+**Dangling-reference disposition evidence:**
+
+- `tools/sanity_check.sh` actively expects external A2A gateway verification and
+  GNAP container names whose implementations are not present in reachable
+  repository history. Whether the script should be updated or explicitly scoped
+  to external infrastructure requires a decision; repository evidence does not
+  make the correct disposition unambiguous.
+- `knowledge/memory/milestones/first-aauth-execution-boundary.md` names
+  `agentgateway/run-aauth-extauth.sh` as a modified file in an external
+  `christian-posta/aauth-full-demo` branch. The milestone should be explicitly
+  marked as an external reference; the referenced implementation is not present
+  or reachable in this repository. The milestone claim itself is not rewritten
+  by this item.
+
+**External-claim boundary:**
+
+Current G26 demonstrates a governance decision at the permission boundary with
+evidence-driven re-evaluation, mock Person Server authentication, and
+process-local state. Governed execution of the requested external action itself
+is not demonstrated. Permission enforcement must not be reported as action
+execution.
