@@ -1358,7 +1358,7 @@ coverage before external caregiver-path presentation to Dick Hardt.
 
 ## B-033 — Gate 1a Canonical-Pipeline Synchronization Contradiction
 
-**Status:** Open — disposition required before Gate 1b
+**Status:** Complete — synchronization disposition recorded in CURRENT_STATE
 
 **Established by Gate 1a:**
 
@@ -1372,11 +1372,13 @@ capability registry. `knowledge/working/CURRENT_STATE.md` separately describes
 an unchanged canonical execution pipeline containing those components and says
 that no architecture changed.
 
-**Required disposition:**
+**Synchronization disposition:**
 
-Synchronize the architecture description before Gate 1b. This item does not
-declare either path canonical, obsolete, or aspirational; that requires a
-subsequent decision.
+`knowledge/working/CURRENT_STATE.md` now identifies the pipeline as
+target/designed architecture rather than a claim of complete current traversal.
+It preserves the deliberate adoption in commit `2dd9d5c`, does not characterize
+the prior statement as historically erroneous, and records both the limit of
+current reachability evidence and the scope boundaries of G26.
 
 **Boundary:** Documentation/architecture-description synchronization only. No
 runtime remediation or Gate 1b functional subtraction is authorized by this
@@ -1420,3 +1422,25 @@ evidence-driven re-evaluation, mock Person Server authentication, and
 process-local state. Governed execution of the requested external action itself
 is not demonstrated. Permission enforcement must not be reported as action
 execution.
+
+---
+
+## B-035 — StageGateEngine and G26 Clearance/Evidence Path Relationship
+
+**Status:** Open — separate architectural decision required
+
+**Established question:**
+
+The relationship between StageGateEngine clearance/evidence handling and the
+G26 constraint/evidence/re-evaluation path is unresolved.
+
+**Required disposition:**
+
+Determine that relationship through a separate architectural decision. This
+item does not pre-decide whether StageGateEngine converges into, is replaced by,
+or permanently coexists with the G26 path.
+
+**Boundary:**
+
+No runtime change, schema convergence, replacement, coexistence commitment, or
+other implementation authorization is created by this backlog item.

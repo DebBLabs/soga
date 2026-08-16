@@ -148,9 +148,9 @@ execution remain distinct claims.
 
 ---
 
-## Stable Repository Architecture
+## Target/Designed Repository Architecture
 
-Canonical execution pipeline (unchanged):
+Target/designed architecture pipeline — not a claim of complete current traversal:
 
 Mission Builder
 → Stage Gate
@@ -160,8 +160,32 @@ Mission Builder
 → Capability Registry
 → REST / MCP / human execution surface
 
-No architecture changed. No governance logic changed. No runtime
-behavior changed.
+Commit `2dd9d5c` deliberately promoted this pipeline into the stable
+architecture block as the "Canonical execution pipeline (unchanged)," together
+with the statement that no architecture, governance logic, or runtime behavior
+changed. That adoption is preserved as repository chronology. Gate 1a does not
+establish whether the complete pipeline was reachable when the statement was
+adopted and does not characterize the prior statement as historically
+erroneous.
+
+Prospectively, the standing pipeline is not a claim that a current test, demo,
+or runtime traverses every listed component end to end. Gate 1a found no such
+current traversal. The current G26 path receives an already-approved mission,
+so Mission Builder is outside G26 scope; G26 terminates at the permission
+boundary, so Capability Registry and external action execution are also outside
+its scope. G26 reaches the canonical decision-package path through the AAuth
+bridge. The older governed-execution path reaches Mission Builder,
+StageGateEngine, RuntimeEnvelope, GovernancePDP, the older `DecisionPackage`,
+and Capability Registry resolution, but not external action execution.
+
+The substantive unresolved architectural issue is StageGateEngine clearance
+handling in relation to the G26 constraint/evidence/re-evaluation path. No
+decision has been made whether StageGateEngine converges into, is replaced by,
+or permanently coexists with that path.
+
+Current G26 proves permission-boundary governance and evidence-driven
+re-evaluation; it does not prove governed execution of the requested external
+action. Permission enforcement and action execution remain distinct claims.
 
 ---
 
