@@ -2,7 +2,7 @@
 
 from .adapter import AdapterError, FakeSurface, TargetBoundAdapter
 from .lifecycle import LifecycleError, SessionGrantService
-from .runtime import ActionDecision, Decision, PrototypeRuntime
+from .runtime import ActionDecision, ActionRequest, Decision, PrototypeRuntime
 from .state_machine import OperatingState, SafetyStateMachine
 
 __all__ = [
@@ -10,6 +10,7 @@ __all__ = [
     "FakeSurface",
     "LifecycleError",
     "ActionDecision",
+    "ActionRequest",
     "Decision",
     "OperatingState",
     "SafetyStateMachine",

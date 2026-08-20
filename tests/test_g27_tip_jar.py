@@ -3,7 +3,13 @@ import unittest
 
 from g27_tip_jar.adapter import AdapterError, FakeSurface, Invocation, TargetBoundAdapter
 from g27_tip_jar.lifecycle import GrantState, LifecycleError, SessionGrantService, SessionState
-from g27_tip_jar.runtime import ActionDecision, Decision, PrototypeRuntime, RuntimeErrorAtStage
+from g27_tip_jar.runtime import (
+    ActionDecision,
+    ActionRequest,
+    Decision,
+    PrototypeRuntime,
+    RuntimeErrorAtStage,
+)
 from g27_tip_jar.state_machine import OperatingState, SafetyStateMachine, StateTransitionError
 
 
@@ -265,7 +271,7 @@ class G27TipJarTests(unittest.TestCase):
         )
         self.assertEqual(self.surface_a.received, ())
 
-    def test_negative_wrong_mission_stops_at_decision_binding(self):
+    def test_negative_wrong_mission_stops_at_request_binding_before_pending(self):
         session = self.consume(self.issue())
         with self.assertRaises(RuntimeErrorAtStage) as caught:
             self.runtime.submit(
@@ -274,9 +280,149 @@ class G27TipJarTests(unittest.TestCase):
             )
         self.assertEqual(
             (caught.exception.stage, caught.exception.code),
-            ("decision_binding", "wrong_mission"),
+            ("request_binding", "wrong_mission"),
         )
         self.assertEqual(self.surface_a.received, ())
+
+    def test_two_stage_request_is_observably_pending_before_governance(self):
+        session = self.consume(self.issue())
+        result = self.runtime.begin_request(
+            ActionRequest(
+                request_id="two-stage-request",
+                mission_s256=session.mission_s256,
+                session_id=session.session_id,
+                platform_id=session.platform_id,
+                agent_id="tip-jar-agent",
+                action="greet_participant",
+                catalog_version="catalog-v1",
+            ),
+            channel_key=session.channel_key,
+        )
+        self.assertEqual(result, {"request_id": "two-stage-request", "state": "pending"})
+        self.assertEqual(self.machine_a.state, OperatingState.PENDING)
+        self.assertEqual(self.machine_a.phone_status, "pending")
+        self.assertEqual(self.surface_a.received, ())
+        self.assertEqual(self.surface_b.received, ())
+        self.assertEqual([event["kind"] for event in self.runtime.events], ["request_received"])
+
+    def test_two_stage_identical_pending_request_is_idempotent_without_duplicate_event(self):
+        session = self.consume(self.issue())
+        request = ActionRequest(
+            request_id="repeat-pending",
+            mission_s256=session.mission_s256,
+            session_id=session.session_id,
+            platform_id=session.platform_id,
+            agent_id="tip-jar-agent",
+            action="greet_participant",
+            catalog_version="catalog-v1",
+        )
+        first = self.runtime.begin_request(request, channel_key=session.channel_key)
+        second = self.runtime.begin_request(request, channel_key=session.channel_key)
+        self.assertEqual(first, second)
+        self.assertEqual([event["kind"] for event in self.runtime.events], ["request_received"])
+
+    def test_two_stage_resolved_request_cannot_reenter_pending(self):
+        session = self.consume(self.issue())
+        request = ActionRequest(
+            request_id="already-resolved",
+            mission_s256=session.mission_s256,
+            session_id=session.session_id,
+            platform_id=session.platform_id,
+            agent_id="tip-jar-agent",
+            action="greet_participant",
+            catalog_version="catalog-v1",
+        )
+        self.runtime.begin_request(request, channel_key=session.channel_key)
+        self.runtime.resolve_request(
+            session_id=session.session_id,
+            request_id=request.request_id,
+            decision_reference="resolved-deny",
+            outcome=Decision.DENY,
+        )
+        with self.assertRaises(RuntimeErrorAtStage) as caught:
+            self.runtime.begin_request(request, channel_key=session.channel_key)
+        self.assertEqual(
+            (caught.exception.stage, caught.exception.code),
+            ("idempotency", "request_already_resolved"),
+        )
+
+    def test_two_stage_deny_event_order_records_skipped_dispatch(self):
+        session = self.consume(self.issue())
+        request = ActionRequest(
+            request_id="ordered-deny",
+            mission_s256=session.mission_s256,
+            session_id=session.session_id,
+            platform_id=session.platform_id,
+            agent_id="tip-jar-agent",
+            action="greet_participant",
+            catalog_version="catalog-v1",
+        )
+        self.runtime.begin_request(request, channel_key=session.channel_key)
+        self.runtime.resolve_request(
+            session_id=session.session_id,
+            request_id=request.request_id,
+            decision_reference="ordered-deny",
+            outcome=Decision.DENY,
+        )
+        self.assertEqual(
+            [event["kind"] for event in self.runtime.events],
+            ["request_received", "decision_received", "dispatch_skipped", "outcome_recorded"],
+        )
+
+    def test_two_stage_allow_records_request_decision_dispatch_and_outcome_separately(self):
+        session = self.consume(self.issue())
+        request = ActionRequest(
+            request_id="ordered-request",
+            mission_s256=session.mission_s256,
+            session_id=session.session_id,
+            platform_id=session.platform_id,
+            agent_id="tip-jar-agent",
+            action="greet_participant",
+            catalog_version="catalog-v1",
+        )
+        self.runtime.begin_request(request, channel_key=session.channel_key)
+        receipt = self.runtime.resolve_request(
+            session_id=session.session_id,
+            request_id=request.request_id,
+            decision_reference="ordered-allow",
+            outcome=Decision.ALLOW,
+        )
+        self.assertEqual(receipt["physical_outcome"], "unknown")
+        self.assertEqual(
+            [event["kind"] for event in self.runtime.events],
+            ["request_received", "decision_received", "dispatch_recorded", "outcome_recorded"],
+        )
+
+    def test_two_stage_safety_halt_beats_late_allow_in_event_history(self):
+        session = self.consume(self.issue())
+        request = ActionRequest(
+            request_id="halted-pending-request",
+            mission_s256=session.mission_s256,
+            session_id=session.session_id,
+            platform_id=session.platform_id,
+            agent_id="tip-jar-agent",
+            action="greet_participant",
+            catalog_version="catalog-v1",
+        )
+        self.runtime.begin_request(request, channel_key=session.channel_key)
+        self.runtime.safety_stop("misty-a")
+        with self.assertRaises(RuntimeErrorAtStage) as caught:
+            self.runtime.resolve_request(
+                session_id=session.session_id,
+                request_id=request.request_id,
+                decision_reference="late-allow",
+                outcome=Decision.ALLOW,
+            )
+        self.assertEqual(
+            (caught.exception.stage, caught.exception.code),
+            ("session_validation", "terminal_safety_stopped"),
+        )
+        self.assertEqual(
+            [event["kind"] for event in self.runtime.events],
+            ["request_received", "safety_halt", "decision_received", "decision_rejected"],
+        )
+        self.assertEqual(self.surface_a.received, ())
+        self.assertEqual(self.runtime.pending_request_ids, ())
 
     def test_audit_receipts_do_not_retain_presented_grant_handle(self):
         grant = self.issue(grant_id="presented-bearer-handle")

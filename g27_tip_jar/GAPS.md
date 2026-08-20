@@ -12,5 +12,8 @@
   safe boundaries, and claimed receipt states are not instantiated in the
   adopted artifacts. Per-primitive acceptance cases cannot be generated until
   those inputs are supplied; this prototype does not invent them.
+- Runtime event history is process-local, memory-only, and unbounded. The
+  interactive terminal is an acceptance surface over that same state; it is not
+  a durable audit service or a participant application.
 - The package contains no network transport, Misty address, robot discovery,
   hardware adapter, or actuation mechanism.
