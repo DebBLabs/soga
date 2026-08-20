@@ -233,3 +233,9 @@ recorded in the canonical repository. This decision records the authorization
 prospectively and does not backdate or rewrite that sequence. The package must
 still pass its technical reviews, PI walkthrough, acceptance review, and commit
 controls; this decision alone does not establish G27 exit.
+
+Implementation-scope clarification recorded on 2026-08-20: the PI confirmed
+that a local, single-process, terminal-driven two-stage flow and its in-memory
+event display are acceptance-test evidence within D-024. They are not a public
+demonstration and introduce no transport. Localhost HTTP or any split-service
+stage requires a later decision before implementation.
