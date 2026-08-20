@@ -212,3 +212,24 @@ evidence boundaries. This decision authorizes conceptual G27 work only. It does
 not authorize implementation, robot power/network connection, physical
 execution, G28 entry, or G27 closure. A/B isolation and network-placement
 requirements remain preconditions to connecting either Misty.
+
+## D-024 — Authorize bounded G27 acceptance implementation
+
+PI disposition accepted on 2026-08-20. Authorize G27 implementation from this
+decision forward solely to produce the acceptance evidence required for G27
+exit. The authorized scope is the session-grant lifecycle and state machine,
+the target-bound execution adapter, recording-only fake execution surfaces for
+Misty A and Misty B, and their acceptance tests.
+
+The fake surfaces may record what they receive but may not simulate or claim a
+physical outcome. This decision authorizes no robot power, robot or external
+network connection, physical actuation, hardware adapter, robot discovery,
+G28 entry, or public demonstration. Unknown implementation choices remain gaps;
+they are not decided in code.
+
+The uncommitted G27 implementation package was produced after the PI instructed
+CG in chat to begin coding but before that implementation authorization was
+recorded in the canonical repository. This decision records the authorization
+prospectively and does not backdate or rewrite that sequence. The package must
+still pass its technical reviews, PI walkthrough, acceptance review, and commit
+controls; this decision alone does not establish G27 exit.
