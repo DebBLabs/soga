@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-08-16
+Last Updated: 2026-08-20
 
 ---
 
@@ -36,9 +36,9 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: Mission Model and Permission Endpoint — G26 complete
+Phase: Embodied Capability and Physical Safety Model
 
-Active Sprint: None activated; G26 complete pending subsequent PI direction
+Active Sprint: G27 — Embodied Capability and Physical Safety Model
 
 ---
 
@@ -76,6 +76,35 @@ G26 — Mission Model and Permission Endpoint: COMPLETE. Exit criteria satisfied
 ---
 
 ## Active Work
+
+### G27 — Embodied Capability and Physical Safety Model
+Status: ACTIVE (activated 2026-08-20)
+
+The G27 session-grant package passed advisory review and is committed at
+`dc50ea2`:
+
+- `knowledge/research/G27_TIP_JAR_SCENARIO_DECOMPOSITION.md`
+- `knowledge/research/G27_SESSION_GRANT_PERSON_SERVER_CONTRACT_2026-08-18.md`
+- `knowledge/research/G27_SESSION_GRANT_CANDIDATE_CONFORMANCE_2026-08-18.md`
+
+D-023 adopts the six Tip Jar policy dispositions and prototype boundary in
+`knowledge/strategy/G27_POLICY_DISPOSITIONS_2026-08-20.md`. This completes a
+substantial G27 decision package; it does not complete G27.
+
+Remaining G27 exit work:
+
+- per-capability risk, authority, context, interruptibility, revocation,
+  degradation, audit, and locality model;
+- Misty A/Misty B state-isolation specification;
+- network-placement and partition behavior;
+- mid-actuation interruption semantics;
+- bystander/non-delegating affected-subject threat-model extension;
+- positive control reaching Authority Established through permitted semantic
+  action without relaxing a boundary; and
+- prototype negative-control acceptance criteria.
+
+Neither Misty may be powered or connected until the required isolation and
+network-placement controls exist. G28 entry remains closed.
 
 ### G26 — Mission Model and Permission Endpoint
 Status: COMPLETE (activated 2026-08-06; completed 2026-08-16)
@@ -226,15 +255,15 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Continue AAuth integration toward a substantial end-of-August runnable and
-briefable demonstration. Push implementation fidelity as far as practical
-while preserving the established Stage Gate process and avoiding unrelated
-scope expansion.
+Execute the remaining G27 conceptual work before implementation or robot
+connection:
 
-G26 has reached its exit. Subsequent sprint or Gate 1b activation requires
-separate PI direction. The recorded intended progression remains:
+1. define the testable Misty A/Misty B isolation property;
+2. define network placement and partition behavior;
+3. complete the per-capability and conceptual safety model;
+4. define positive- and negative-control acceptance criteria; and
+5. submit the completed G27 model to its exit gate.
 
-AAuth proves the governance mechanism → AIIM demonstrates
-portability/interoperability of the same governance core.
-
-Do not reopen settled G26 semantics absent new evidence.
+Preserve the real-first prototype boundary in D-023. Do not reopen settled G26
+semantics absent new evidence. Do not enter G28 or power/connect either Misty
+before G27 entry criteria are satisfied.

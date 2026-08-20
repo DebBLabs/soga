@@ -188,3 +188,27 @@ running, the canonical caregiver mission was demonstrated through the complete
 permission and evidence-driven re-evaluation lifecycle, and the connector
 inspection is complete through B-030. G26 is complete. This decision does not
 open Gate 1b, alter the older mission model, or authorize runtime changes.
+
+## D-023 — Activate G27 and adopt the Tip Jar policy dispositions
+
+PI disposition accepted on 2026-08-20 following advisory review of the G27
+session-grant package committed at `dc50ea2`. Activate G27 — Embodied Capability
+and Physical Safety Model — and adopt the six Tip Jar policy dispositions and
+prototype boundary recorded in
+`knowledge/strategy/G27_POLICY_DISPOSITIONS_2026-08-20.md`.
+
+The adopted model uses one persistent native AAuth mission, a distinct
+single-use participation credential, and separate bounded session state. The
+first session has a five-minute hard maximum and a one-minute inactivity
+timeout; replay, duplicate execution, concurrent physical sessions, and
+terminal revival are prohibited. Unknown-age and unknown-identity participants
+may reach positive authorization only for the finite, low-risk,
+attribute-independent action envelope. Physical safety remains independent and
+local.
+
+The prototype is real-first and may substitute provisional components only for
+named missing functions while preserving the approved contract and honest
+evidence boundaries. This decision authorizes conceptual G27 work only. It does
+not authorize implementation, robot power/network connection, physical
+execution, G28 entry, or G27 closure. A/B isolation and network-placement
+requirements remain preconditions to connecting either Misty.
