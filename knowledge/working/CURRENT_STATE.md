@@ -115,9 +115,12 @@ disposition. A localhost or split-service stage requires D-025 before
 implementation. Any Misty power, connection, network discovery, status request,
 or actuation requires a later explicit decision and is outside D-024.
 
-The untracked embodied-execution and Misty community landscape artifact is not
-adopted and must pass its intended research gate before commit. G28 entry
-remains closed.
+The corrected embodied-execution and Misty community landscape research note
+passed independent Claude and AGy research gates, as recorded in PI-retained
+external reports, and is adopted at
+`knowledge/research/EMBODIED_EXECUTION_AND_MISTY_COMMUNITY_LANDSCAPE_2026-08-20.md`.
+It is research context only and does not authorize D-025, G28 entry, robot
+connection, actuation, or public demonstration. G28 entry remains closed.
 
 ### G26 — Mission Model and Permission Endpoint
 Status: COMPLETE (activated 2026-08-06; completed 2026-08-16)
@@ -270,12 +273,11 @@ G23 — Primary Source Grounding
 
 Synchronize and review the current G27 checkpoint before publication:
 
-1. review this synchronization update and the G27 reading configuration;
-2. disposition the untracked embodied-execution and Misty community landscape
-   artifact through its intended research gate;
-3. regenerate the SHA-pinned session package from a clean committed tree;
-4. decide whether to authorize localhost/split-service work through D-025; and
-5. submit G27 to its final exit disposition when its required evidence package
+1. commit the independently gated embodied-execution and Misty community
+   landscape research note and this adoption record;
+2. regenerate the SHA-pinned session package from a clean committed tree;
+3. decide whether to authorize localhost/split-service work through D-025; and
+4. submit G27 to its final exit disposition when its required evidence package
    is complete.
 
 Do not reopen settled G26 semantics absent new evidence. Do not implement
