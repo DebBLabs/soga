@@ -1,10 +1,10 @@
 # Embodied Execution and Misty II Community Landscape
 
-Date: 2026-08-20  
-Revised: 2026-08-27  
+Date: 2026-08-20
+Revised: 2026-08-27
 Status: Research Note — not implementation authorization, robot-connection
-authorization, G28 entry, or evidence of physical behavior.  
-Evidence Classification: claim-level labels below  
+authorization, G28 entry, or evidence of physical behavior.
+Evidence Classification: claim-level labels below
 Cross-Reference: `knowledge/strategy/PROGRAM_CHARTER.md`,
 `knowledge/strategy/SPRINT_ROADMAP_G0_G30.md` (G27/G28),
 `knowledge/research/G27_CAPABILITY_SAFETY_MODEL_2026-08-20.md`
