@@ -1,8 +1,13 @@
 {
-  "gate": "G26",
+  "gate": "G27",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
-    "docs/RESEARCH_METHODOLOGY.md"
+    "docs/RESEARCH_METHODOLOGY.md",
+    "knowledge/strategy/G27_POLICY_DISPOSITIONS_2026-08-20.md",
+    "knowledge/research/G27_SESSION_GRANT_PERSON_SERVER_CONTRACT_2026-08-18.md",
+    "knowledge/research/G27_AB_ISOLATION_NETWORK_REQUIREMENTS_2026-08-20.md",
+    "knowledge/research/G27_CAPABILITY_SAFETY_MODEL_2026-08-20.md",
+    "g27_tip_jar/GAPS.md"
   ]
 }

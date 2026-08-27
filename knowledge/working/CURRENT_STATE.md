@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-08-20
+Last Updated: 2026-08-27
 
 ---
 
@@ -88,23 +88,36 @@ The G27 session-grant package passed advisory review and is committed at
 - `knowledge/research/G27_SESSION_GRANT_CANDIDATE_CONFORMANCE_2026-08-18.md`
 
 D-023 adopts the six Tip Jar policy dispositions and prototype boundary in
-`knowledge/strategy/G27_POLICY_DISPOSITIONS_2026-08-20.md`. This completes a
-substantial G27 decision package; it does not complete G27.
+`knowledge/strategy/G27_POLICY_DISPOSITIONS_2026-08-20.md`.
 
-Remaining G27 exit work:
+The remaining G27 modeling artifacts are adopted and committed:
 
-- per-capability risk, authority, context, interruptibility, revocation,
-  degradation, audit, and locality model;
-- Misty A/Misty B state-isolation specification;
-- network-placement and partition behavior;
-- mid-actuation interruption semantics;
-- bystander/non-delegating affected-subject threat-model extension;
-- positive control reaching Authority Established through permitted semantic
-  action without relaxing a boundary; and
-- prototype negative-control acceptance criteria.
+- isolation and network requirements at `a52b7e8`;
+- capability safety model at `a434db1`; and
+- the D-023 policy dispositions at `84d3546`.
 
-Neither Misty may be powered or connected until the required isolation and
-network-placement controls exist. G28 entry remains closed.
+D-024 authorizes bounded G27 acceptance implementation using fake recording
+surfaces only. The authorization and its terminal-only scope clarification are
+committed at `6d687b3` and `bce388f`. The bounded implementation and interactive
+two-stage acceptance flow are committed at `4a7acac` and `d95db19`.
+
+PI-retained external reports record independent Claude and AGy review passes
+and the PI's visible terminal walkthrough; those review transcripts are not
+repository artifacts. The full repository test suite passes 63 tests.
+The implementation demonstrates an observably Pending request, separately
+delivered governance, target-bound dispatch to recording surfaces, unknown
+physical outcome, replay and concurrency controls, and a safety halt defeating
+a late ALLOW. It contains no robot, network, HTTP, actuation, or physical-success
+path.
+
+G27 remains ACTIVE pending canonical-state synchronization and final exit
+disposition. A localhost or split-service stage requires D-025 before
+implementation. Any Misty power, connection, network discovery, status request,
+or actuation requires a later explicit decision and is outside D-024.
+
+The untracked embodied-execution and Misty community landscape artifact is not
+adopted and must pass its intended research gate before commit. G28 entry
+remains closed.
 
 ### G26 — Mission Model and Permission Endpoint
 Status: COMPLETE (activated 2026-08-06; completed 2026-08-16)
@@ -255,15 +268,16 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Execute the remaining G27 conceptual work before implementation or robot
-connection:
+Synchronize and review the current G27 checkpoint before publication:
 
-1. define the testable Misty A/Misty B isolation property;
-2. define network placement and partition behavior;
-3. complete the per-capability and conceptual safety model;
-4. define positive- and negative-control acceptance criteria; and
-5. submit the completed G27 model to its exit gate.
+1. review this synchronization update and the G27 reading configuration;
+2. disposition the untracked embodied-execution and Misty community landscape
+   artifact through its intended research gate;
+3. regenerate the SHA-pinned session package from a clean committed tree;
+4. decide whether to authorize localhost/split-service work through D-025; and
+5. submit G27 to its final exit disposition when its required evidence package
+   is complete.
 
-Preserve the real-first prototype boundary in D-023. Do not reopen settled G26
-semantics absent new evidence. Do not enter G28 or power/connect either Misty
-before G27 entry criteria are satisfied.
+Do not reopen settled G26 semantics absent new evidence. Do not implement
+localhost transport without D-025. Do not enter G28 or power, connect, discover,
+query, or actuate either Misty without a later explicit PI decision.
