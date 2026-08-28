@@ -110,10 +110,11 @@ physical outcome, replay and concurrency controls, and a safety halt defeating
 a late ALLOW. It contains no robot, network, HTTP, actuation, or physical-success
 path.
 
-G27 remains ACTIVE pending canonical-state synchronization and final exit
-disposition. A localhost or split-service stage requires D-025 before
-implementation. Any Misty power, connection, network discovery, status request,
-or actuation requires a later explicit decision and is outside D-024.
+G27 remains ACTIVE pending final exit disposition. Canonical-state
+synchronization is complete at `ec955cf`. A localhost or split-service stage
+requires D-025 before implementation. Any Misty power, connection, network
+discovery, status request, or actuation requires a later explicit decision and
+is outside D-024.
 
 The corrected embodied-execution and Misty community landscape research note
 passed independent Claude and AGy research gates, as recorded in PI-retained
