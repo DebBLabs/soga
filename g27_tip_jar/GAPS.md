@@ -17,6 +17,11 @@
   safe boundaries, and claimed receipt states are not instantiated in the
   adopted artifacts. Per-primitive acceptance cases cannot be generated until
   those inputs are supplied; this prototype does not invent them.
+- D-023 specifies per-action cardinality for the first mission (including
+  greeting once, bounded choice changes, one dance, a bounded conversation turn
+  count, and close once), but this prototype does not enforce those counters.
+  Single-use grants and request idempotency do not substitute for per-action or
+  per-session turn limits.
 - Runtime event history is process-local, memory-only, and unbounded. The
   interactive terminal is an acceptance surface over that same state; it is not
   a durable audit service or a participant application.

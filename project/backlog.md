@@ -1243,3 +1243,56 @@ yields `_has_clearance: True` and `RESUBMIT_FOR_GOVERNANCE`.
 Any future canonical clearance-evidence schema must rise to G26's assurance
 level, not reduce G26 to the current StageGate evidence shape. A future repair
 must not weaken D-019, D-020, or the recorded G26 trust boundary.
+
+---
+
+## B-037 — G29 Non-Participant Privacy in a Public Living Laboratory
+
+**Status:** Open — disposition deferred to G29; no public collection authorized
+
+**Concern:**
+
+A camera, microphone, or other sensor operating in a public or shared space may
+collect information about people who did not initiate a session, receive the
+participant notice, or have a meaningful opportunity to decline observation.
+Notice plus intentional approach may support the participant interaction; it
+does not make a passer-by a participant or make observation of that person
+consensual.
+
+**Current boundary:**
+
+G27 avoids rather than resolves this issue. Camera and perception are not
+required for the first positive Tip Jar path; photography, identification,
+emotion or age inference, participant tracking, and retained bystander
+audio/image data are excluded. A bystander remains a non-delegating affected
+subject. These boundaries do not establish a lawful, ethical, or
+research-valid method for sensor use in public.
+
+**Required G29 disposition before public interactions count as research
+evidence:**
+
+- enumerate every sensor and every form of participant and non-participant data,
+  including transient processing, buffers, derived features, logs, and retained
+  audio or imagery;
+- decide which non-participant collection is prohibited, technically avoided,
+  minimized, or separately justified, rather than treating general notice as
+  consent;
+- define purpose, access, disclosure, retention, deletion, and incident rules
+  for each permitted data class;
+- define what a bystander can object to or request, including stop, access, and
+  deletion, and state honestly when an unidentified person cannot practicably
+  exercise a proposed right;
+- address children and other people who may not be able to understand or act on
+  notice;
+- specify how instrumentation and evidence records prove the adopted collection
+  boundary without themselves creating an additional privacy exposure; and
+- define when an event must stop or its observations must be excluded from
+  research evidence because the non-participant boundary failed.
+
+**Boundary:**
+
+This item does not activate G29, authorize a public demonstration, permit any
+camera or microphone use, or authorize collection, retention, identification,
+inference, or processing of participant or bystander data. G29 methodology must
+be adopted before G30 entry or before a public interaction is represented as
+research evidence.

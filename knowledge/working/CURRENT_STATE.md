@@ -103,24 +103,37 @@ two-stage acceptance flow are committed at `4a7acac` and `d95db19`.
 
 PI-retained external reports record independent Claude and AGy review passes
 and the PI's visible terminal walkthrough; those review transcripts are not
-repository artifacts. The full repository test suite passes 63 tests.
+repository artifacts. Their reviewed scope, checkpoints, results, corrections,
+and unresolved limits are summarized canonically in
+`knowledge/research/G27_REVIEW_EVIDENCE_SUMMARY_2026-08-30.md`. The full
+repository test suite passes 63 tests.
 The implementation demonstrates an observably Pending request, separately
 delivered governance, target-bound dispatch to recording surfaces, unknown
 physical outcome, replay and concurrency controls, and a safety halt defeating
 a late ALLOW. It contains no robot, network, HTTP, actuation, or physical-success
-path.
+path in the active G27 runtime or adapter.
 
 G27 remains ACTIVE pending final exit disposition. Canonical-state
-synchronization is complete at `ec955cf`. A localhost or split-service stage
-requires D-025 before implementation. Any Misty power, connection, network
-discovery, status request, or actuation requires a later explicit decision and
-is outside D-024.
+synchronization is complete at `ec955cf`. D-025 prospectively authorizes the
+loopback-only split-service acceptance stage at `90a668e`. The implementation is
+committed at `a5af621`; the D-026 platform-wide safety-latch admission rule and
+explicit session-count assertions are committed at `680e444`. The PI-visible
+terminal walkthrough and Claude technical gate are summarized in
+`knowledge/research/G27_D025_REVIEW_EVIDENCE_SUMMARY_2026-08-30.md`. The full
+suite passes 72 tests. Independent AGy verification reported PASS with no
+blocking findings and confirmed that D-026 refines section 4 of the safety
+model. Its reverse review identified D-023 per-action cardinality as specified
+but not implemented; that boundary is recorded in `g27_tip_jar/GAPS.md`. Only
+the final G27 exit disposition remains pending. Any Misty power, connection,
+external-network access, discovery, status request, or actuation requires a
+later explicit decision and remains outside D-024, D-025, and D-026.
 
 The corrected embodied-execution and Misty community landscape research note
 passed independent Claude and AGy research gates, as recorded in PI-retained
 external reports, and is adopted at
 `knowledge/research/EMBODIED_EXECUTION_AND_MISTY_COMMUNITY_LANDSCAPE_2026-08-20.md`.
-It is research context only and does not authorize D-025, G28 entry, robot
+It is research context only and did not authorize D-025. D-025 was separately
+authorized prospectively at `90a668e` and does not authorize G28 entry, robot
 connection, actuation, or public demonstration. G28 entry remains closed.
 
 ### G26 — Mission Model and Permission Endpoint
@@ -272,15 +285,12 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Synchronize and review the current G27 checkpoint before publication:
+Complete final G27 disposition:
 
-1. commit the independently gated embodied-execution and Misty community
-   landscape research note and this adoption record;
-2. regenerate the SHA-pinned session package from a clean committed tree;
-3. decide whether to authorize localhost/split-service work through D-025; and
-4. submit G27 to its final exit disposition when its required evidence package
-   is complete.
+1. commit the synchronized canonical evidence; and
+2. record the PI's final G27 exit disposition without converting known prototype
+   gaps into completed implementation claims.
 
-Do not reopen settled G26 semantics absent new evidence. Do not implement
-localhost transport without D-025. Do not enter G28 or power, connect, discover,
-query, or actuate either Misty without a later explicit PI decision.
+Do not reopen settled G26 semantics absent new evidence. Keep the D-025 stage
+strictly loopback-only and recording-only. Do not enter G28 or power, connect,
+discover, query, or actuate either Misty without a later explicit PI decision.
