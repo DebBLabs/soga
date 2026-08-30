@@ -311,10 +311,19 @@ process restart, participant retry, or release of the other Misty cannot clear
 it. The outcome remains safety-specific; it is not rewritten as governance
 `DENY`, participant withdrawal, or capability revocation.
 
+The latch is also a platform-wide session-admission gate. Participation grants
+may still be issued while it is latched because issuance alone causes no
+interaction, but a grant for that platform cannot be consumed and no new
+session can be admitted. The unused grant remains subject to its ordinary
+validity and expiry rules. Admission can resume only after the verified
+per-platform operator release below.
+
 Release is a per-platform operator action after verification; it never resumes
-the interrupted request. After release, the platform enters neutral only under
-the neutral-entry rule above. If neutral cannot be established, execution
-remains inhibited and the outcome is recorded as unknown or failed.
+the interrupted request or revive the stopped session. A participant must use a
+fresh, still-valid grant or obtain a new one. After release, the platform enters
+neutral only under the neutral-entry rule above. If neutral cannot be
+established, execution remains inhibited and the outcome is recorded as unknown
+or failed.
 
 ## 5. Trigger and priority rules
 

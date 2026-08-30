@@ -271,3 +271,19 @@ adapter, actuation, physical execution, public demonstration, G28 entry, or G27
 closure. Unknown choices remain recorded gaps rather than decisions made in
 code. The implementation remains subject to technical review, independent
 verification, PI-visible terminal walkthrough, and commit controls.
+
+## D-026 — Make a latched safety stop a platform-wide session-admission gate
+
+PI disposition accepted on 2026-08-30 after the D-025 technical review exposed
+an implementation/model mismatch. While a platform safety stop is latched,
+participation grants may still be issued because issuance causes no interaction.
+However, no grant for that platform may be consumed and no new participant
+session may be admitted. A rejected admission leaves the grant unconsumed and
+subject to its existing validity and expiry rules.
+
+Session admission may resume only after verified operator release for that
+platform. Release never revives the stopped session or interrupted request; the
+participant must present a fresh, still-valid grant or obtain a new one. This
+decision records the implementation's fail-closed behavior in the adopted G27
+safety model. It does not authorize robot contact, execution, G28 entry, or G27
+closure.

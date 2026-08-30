@@ -140,6 +140,7 @@ class G27LocalhostTests(unittest.TestCase):
         status = self.client.status()
         self.assertEqual(status["grants"][next_grant["grant_id"]]["state"], "issued")
         self.assertEqual(status["sessions"][first_session["session_id"]]["state"], "safety_stopped")
+        self.assertEqual(len(status["sessions"]), 1)
         self.assertEqual(status["fake_receipts"], {"misty-a": 0, "misty-b": 0})
 
     def test_recording_adapter_rejects_non_loopback_configuration(self):

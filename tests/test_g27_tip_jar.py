@@ -77,6 +77,7 @@ class G27TipJarTests(unittest.TestCase):
         )
         self.assertEqual(next_grant.state, GrantState.ISSUED)
         self.assertEqual(first_session.state, SessionState.SAFETY_STOPPED)
+        self.assertEqual(len(self.service.sessions), 1)
         self.assertEqual(self.surface_a.received, ())
 
     def invocation(self, session, request_id="request-1", platform_id=None):
