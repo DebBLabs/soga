@@ -7,7 +7,7 @@ from typing import Mapping
 
 from .adapter import Invocation, TargetBoundAdapter
 from .lifecycle import LifecycleError, SessionGrantService, SessionState
-from .state_machine import OperatingState, SafetyStateMachine
+from .state_machine import OperatingState, SafetyStateMachine, StateTransitionError
 
 
 class Decision(str, Enum):
@@ -81,6 +81,35 @@ class PrototypeRuntime:
         with self._lock:
             return tuple(key[1] for key in self._pending)
 
+    def initiate_session(
+        self,
+        grant_id: str,
+        *,
+        platform_id: str,
+        mission_s256: str,
+        notice_version: str,
+        policy_version: str,
+        channel_key: str,
+    ):
+        """Admit and consume a grant atomically with the platform safety gate."""
+        with self._lock:
+            machine = self.state_machines.get(platform_id)
+            if machine is None:
+                raise RuntimeErrorAtStage("target_resolution", "unknown_platform")
+            if machine.safety_latched:
+                raise RuntimeErrorAtStage("session_admission", "safety_stopped")
+            try:
+                return self.sessions.initiate_and_consume(
+                    grant_id,
+                    platform_id=platform_id,
+                    mission_s256=mission_s256,
+                    notice_version=notice_version,
+                    policy_version=policy_version,
+                    channel_key=channel_key,
+                )
+            except LifecycleError as exc:
+                raise RuntimeErrorAtStage(exc.stage, exc.code) from exc
+
     def begin_request(self, request: ActionRequest, *, channel_key: str) -> dict:
         with self._lock:
             machine = self.state_machines.get(request.platform_id)
@@ -105,7 +134,10 @@ class PrototypeRuntime:
                 raise RuntimeErrorAtStage(exc.stage, exc.code) from exc
             if session.mission_s256 != request.mission_s256:
                 raise RuntimeErrorAtStage("request_binding", "wrong_mission")
-            machine.enter_pending(request.request_id)
+            try:
+                machine.enter_pending(request.request_id)
+            except StateTransitionError as exc:
+                raise RuntimeErrorAtStage("state_gate", str(exc)) from exc
             self._pending[request_key] = PendingAction(request, channel_key)
             self._record_event(
                 "request_received",

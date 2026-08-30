@@ -58,6 +58,27 @@ class G27TipJarTests(unittest.TestCase):
             channel_key=channel_key,
         )
 
+    def test_safety_latched_platform_rejects_new_session_and_preserves_grant(self):
+        first_session = self.consume(self.issue(grant_id="first-safety-session"))
+        self.runtime.safety_stop("misty-a")
+        next_grant = self.issue(grant_id="post-safety-grant")
+        with self.assertRaises(RuntimeErrorAtStage) as caught:
+            self.runtime.initiate_session(
+                next_grant.grant_id,
+                platform_id=next_grant.platform_id,
+                mission_s256=next_grant.mission_s256,
+                notice_version=next_grant.notice_version,
+                policy_version=next_grant.policy_version,
+                channel_key="post-safety-channel",
+            )
+        self.assertEqual(
+            (caught.exception.stage, caught.exception.code),
+            ("session_admission", "safety_stopped"),
+        )
+        self.assertEqual(next_grant.state, GrantState.ISSUED)
+        self.assertEqual(first_session.state, SessionState.SAFETY_STOPPED)
+        self.assertEqual(self.surface_a.received, ())
+
     def invocation(self, session, request_id="request-1", platform_id=None):
         return Invocation(
             request_id=request_id,

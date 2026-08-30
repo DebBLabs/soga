@@ -8,7 +8,7 @@ from typing import Callable
 from .adapter import AdapterError, FakeSurface, TargetBoundAdapter
 from .lifecycle import Grant, GrantState, LifecycleError, SessionGrantService
 from .runtime import ActionDecision, ActionRequest, Decision, PrototypeRuntime, RuntimeErrorAtStage
-from .state_machine import OperatingState, SafetyStateMachine
+from .state_machine import OperatingState, SafetyStateMachine, StateTransitionError
 
 
 class DemoFailure(RuntimeError):
@@ -73,7 +73,7 @@ def issue(harness: Harness, platform_id: str, grant_id: str) -> Grant:
 
 
 def consume(harness: Harness, grant: Grant, channel: str):
-    return harness.sessions.initiate_and_consume(
+    return harness.runtime.initiate_session(
         grant.grant_id,
         platform_id=grant.platform_id,
         mission_s256=grant.mission_s256,
@@ -128,7 +128,7 @@ def same_grant_race() -> None:
         try:
             consume(harness, grant, channel)
             results.append((channel, "session_created"))
-        except LifecycleError as exc:
+        except (LifecycleError, RuntimeErrorAtStage) as exc:
             results.append((channel, f"rejected_at_{exc.stage}:{exc.code}"))
 
     threads = [threading.Thread(target=scan, args=(f"scanner-{index}",)) for index in range(2)]
@@ -159,7 +159,7 @@ def different_grant_race() -> None:
         try:
             consume(harness, grant, f"channel-{grant.platform_id}")
             results.append((grant.grant_id, "session_created"))
-        except LifecycleError as exc:
+        except (LifecycleError, RuntimeErrorAtStage) as exc:
             results.append((grant.grant_id, f"rejected_at_{exc.stage}:{exc.code}"))
 
     threads = [threading.Thread(target=scan, args=(grant,)) for grant in grants]
@@ -413,7 +413,7 @@ def interactive() -> int:
                 show_events()
             else:
                 print("  unknown command; type help")
-        except (LifecycleError, RuntimeErrorAtStage, AdapterError) as exc:
+        except (LifecycleError, RuntimeErrorAtStage, AdapterError, StateTransitionError) as exc:
             stage = getattr(exc, "stage", "state")
             code = getattr(exc, "code", str(exc))
             print(f"  rejected at {stage}:{code}")
@@ -426,13 +426,17 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument(
         "scenario",
         nargs="?",
-        choices=["all", "interactive", *SCENARIOS],
+        choices=["all", "interactive", "localhost", *SCENARIOS],
         default="all",
         help="scenario to run (default: all)",
     )
     args = parser.parse_args(argv)
     if args.scenario == "interactive":
         return interactive()
+    if args.scenario == "localhost":
+        from .localhost_demo import interactive_localhost
+
+        return interactive_localhost()
     print("G27 TIP JAR — FAKE-SURFACE TERMINAL DEMONSTRATION")
     print("No network, robot connection, actuation, or physical outcome is used.")
     selected = SCENARIOS.values() if args.scenario == "all" else (SCENARIOS[args.scenario],)
