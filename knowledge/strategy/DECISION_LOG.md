@@ -287,3 +287,32 @@ participant must present a fresh, still-valid grant or obtain a new one. This
 decision records the implementation's fail-closed behavior in the adopted G27
 safety model. It does not authorize robot contact, execution, G28 entry, or G27
 closure.
+
+## D-027 — Close G27 at the bounded acceptance boundary
+
+PI exit disposition accepted on 2026-08-30 after the D-025 implementation,
+PI-visible terminal walkthrough, Claude technical gate, correction recheck, and
+independent AGy forward-and-reverse verification. Close G27 — Embodied
+Capability and Physical Safety Model — as complete for its adopted modeling and
+bounded fake/localhost acceptance scope.
+
+The exit evidence consists of the adopted session-grant package, D-023 policy
+dispositions, A/B isolation and network requirements, capability safety model,
+landscape research, D-024 in-process acceptance implementation, D-025
+loopback-only split-service implementation, 72 passing tests, and the canonical
+review summaries committed at `322c672`. D-026 refines section 4 of the safety
+model by making a latched safety stop a platform-wide session-admission gate;
+the model and code agree on that boundary.
+
+This exit does not convert prototype limits into completed capabilities.
+Durable or distributed concurrency remains unimplemented. D-023 per-action and
+conversation-turn cardinality remains specified but unenforced. Fake surfaces
+prove receipt only, not physical outcome or safety. Physical measurement and
+robot integration remain for a separately authorized G28. Non-participant
+privacy remains B-037 under G29 before public interaction can count as research
+evidence.
+
+G27 closure does not activate G28 and authorizes no robot power, connection,
+external-network access, discovery, status query, hardware adapter, actuation,
+physical execution, MCP conformance claim, production deployment, or public
+demonstration.

@@ -36,9 +36,9 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: Embodied Capability and Physical Safety Model
+Phase: Between G27 completion and any separately authorized G28 entry
 
-Active Sprint: G27 — Embodied Capability and Physical Safety Model
+Active Sprint: None — G28 is not activated
 
 ---
 
@@ -72,13 +72,15 @@ G25 — AAuth Integration Investigation: COMPLETE for the specification half.
 Connector and repository inspection carried forward into G26.
 G26 — Mission Model and Permission Endpoint: COMPLETE. Exit criteria satisfied
 2026-08-16; see D-022 and completed B-030.
+G27 — Embodied Capability and Physical Safety Model: COMPLETE. Bounded modeling,
+fake-surface, and localhost acceptance scope closed 2026-08-30 under D-027.
 
 ---
 
 ## Active Work
 
 ### G27 — Embodied Capability and Physical Safety Model
-Status: ACTIVE (activated 2026-08-20)
+Status: COMPLETE (activated 2026-08-20; completed 2026-08-30 under D-027)
 
 The G27 session-grant package passed advisory review and is committed at
 `dc50ea2`:
@@ -113,9 +115,10 @@ physical outcome, replay and concurrency controls, and a safety halt defeating
 a late ALLOW. It contains no robot, network, HTTP, actuation, or physical-success
 path in the active G27 runtime or adapter.
 
-G27 remains ACTIVE pending final exit disposition. Canonical-state
-synchronization is complete at `ec955cf`. D-025 prospectively authorizes the
-loopback-only split-service acceptance stage at `90a668e`. The implementation is
+G27 is complete at its bounded acceptance boundary under D-027. Canonical-state
+synchronization through stage one is committed at `ec955cf`. D-025
+prospectively authorizes the loopback-only split-service acceptance stage at
+`90a668e`. The implementation is
 committed at `a5af621`; the D-026 platform-wide safety-latch admission rule and
 explicit session-count assertions are committed at `680e444`. The PI-visible
 terminal walkthrough and Claude technical gate are summarized in
@@ -123,10 +126,10 @@ terminal walkthrough and Claude technical gate are summarized in
 suite passes 72 tests. Independent AGy verification reported PASS with no
 blocking findings and confirmed that D-026 refines section 4 of the safety
 model. Its reverse review identified D-023 per-action cardinality as specified
-but not implemented; that boundary is recorded in `g27_tip_jar/GAPS.md`. Only
-the final G27 exit disposition remains pending. Any Misty power, connection,
+but not implemented; that boundary is recorded in `g27_tip_jar/GAPS.md` and in
+D-027 rather than treated as completed. Any Misty power, connection,
 external-network access, discovery, status request, or actuation requires a
-later explicit decision and remains outside D-024, D-025, and D-026.
+later explicit decision and remains outside D-024, D-025, D-026, and D-027.
 
 The corrected embodied-execution and Misty community landscape research note
 passed independent Claude and AGy research gates, as recorded in PI-retained
@@ -285,12 +288,13 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Complete final G27 disposition:
+Pause at the clean G27 boundary. When the PI is ready to continue:
 
-1. commit the synchronized canonical evidence; and
-2. record the PI's final G27 exit disposition without converting known prototype
-   gaps into completed implementation claims.
+1. regenerate the SHA-pinned session package after the D-027 commit;
+2. review G28 entry criteria and the unresolved G27 boundaries; and
+3. activate G28 only through a new explicit PI decision.
 
-Do not reopen settled G26 semantics absent new evidence. Keep the D-025 stage
-strictly loopback-only and recording-only. Do not enter G28 or power, connect,
-discover, query, or actuate either Misty without a later explicit PI decision.
+Do not reopen settled G26 or G27 semantics absent new evidence. Keep the D-025
+stage strictly loopback-only and recording-only. Do not enter G28 or power,
+connect, discover, query, or actuate either Misty without a later explicit PI
+decision.

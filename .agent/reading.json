@@ -1,5 +1,5 @@
 {
-  "gate": "G27",
+  "gate": "G27_COMPLETE",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
