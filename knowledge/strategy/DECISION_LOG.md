@@ -239,3 +239,35 @@ that a local, single-process, terminal-driven two-stage flow and its in-memory
 event display are acceptance-test evidence within D-024. They are not a public
 demonstration and introduce no transport. Localhost HTTP or any split-service
 stage requires a later decision before implementation.
+
+## D-025 — Authorize localhost split-service acceptance implementation
+
+PI disposition accepted on 2026-08-30. Authorize the next G27 acceptance stage
+solely to determine whether the D-024 session, governance, target-binding,
+safety-precedence, and truthful-outcome semantics survive separation across
+localhost service boundaries.
+
+The authorized scope is a terminal-driven local client and loopback-only HTTP
+services for the authoritative grant/session lifecycle, separately delivered
+governance decisions, and target-bound fake recording surfaces for Misty A and
+Misty B. Services must bind only to explicit loopback addresses, use ephemeral
+or explicitly configured local ports, and fail closed rather than bind all
+interfaces, discover a target, use a hardcoded address fallback, or route to the
+other fake platform. One authoritative session service retains the D-024
+one-live-session and single-consumption semantics; this decision does not claim
+multi-process replicated-state atomicity.
+
+HTTP status establishes only the response of the named local fake service. It
+does not establish robot availability, dispatch, start, completion, neutral
+state, or physical safety. Fake surfaces remain recording-only and every
+physical outcome remains `unknown`. The implementation must preserve distinct
+request, decision, dispatch, and outcome events; Pending must be observable;
+and a safety halt must defeat a late `ALLOW` across the service boundary.
+
+This decision does not authorize an MCP implementation or claim MCP
+conformance. It authorizes no non-loopback or external network access, robot
+power, Misty address or credential, robot discovery, status query, hardware
+adapter, actuation, physical execution, public demonstration, G28 entry, or G27
+closure. Unknown choices remain recorded gaps rather than decisions made in
+code. The implementation remains subject to technical review, independent
+verification, PI-visible terminal walkthrough, and commit controls.
