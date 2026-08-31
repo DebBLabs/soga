@@ -139,6 +139,22 @@ It is research context only and did not authorize D-025. D-025 was separately
 authorized prospectively at `90a668e` and does not authorize G28 entry, robot
 connection, actuation, or public demonstration. G28 entry remains closed.
 
+### Post-G27 Representative-Authority Research Input
+
+The corrected
+`knowledge/research/REPRESENTATIVE_AUTHORITY_CONTRACT_2026-08-31.md` passed a
+read-only Gate 1 against `2b39c89` and is adopted as non-authorizing research
+input. Scenario inspection establishes three open boundaries: the AAuth bridge
+does not receive live authority validity inputs; affected-person assent or
+refusal has no independent decision-relevant path; and a credential does not
+establish co-presence or a representative relationship. These are recorded as
+B-038, B-039, and B-040.
+
+The artifact selects no credential, wallet, protocol extension, component owner,
+legal rule, or precedence rule. This post-G27 research does not reopen G27,
+authorize implementation, enter G28 or G29, authorize sensor use, or permit
+powering, connecting, discovering, querying, or actuating either Misty.
+
 ### G26 — Mission Model and Permission Endpoint
 Status: COMPLETE (activated 2026-08-06; completed 2026-08-16)
 
@@ -288,11 +304,13 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Pause at the clean G27 boundary. When the PI is ready to continue:
+Remain at the closed G27 boundary:
 
-1. regenerate the SHA-pinned session package after the D-027 commit;
-2. review G28 entry criteria and the unresolved G27 boundaries; and
-3. activate G28 only through a new explicit PI decision.
+1. gate and commit the post-G27 representative-authority research
+   synchronization;
+2. regenerate the SHA-pinned session package from the resulting clean HEAD;
+3. review G28 entry criteria and the unresolved boundaries; and
+4. activate G28 only through a new explicit PI decision.
 
 Do not reopen settled G26 or G27 semantics absent new evidence. Keep the D-025
 stage strictly loopback-only and recording-only. Do not enter G28 or power,

@@ -1296,3 +1296,120 @@ camera or microphone use, or authorize collection, retention, identification,
 inference, or processing of participant or bystander data. G29 methodology must
 be adopted before G30 entry or before a public interaction is represented as
 research evidence.
+
+---
+
+## B-038 — Live Authority Validity, Limits, and Revocation on the AAuth Bridge
+
+**Status:** Open — verified implementation gap; no repair authorized
+
+**Concern:**
+
+`engines/aauth_execution_runtime_bridge.py:100-113` supplies seven hardcoded
+inputs to authority evaluation. Five purport to describe current state:
+`revoked`, `expired`, `delegation_hops`, `elapsed_seconds`, and `attenuated`.
+Two are policy limits: `max_delegation_hops` and `max_elapsed_seconds`. None is
+derived from incoming AAuth authority evidence or a current validity check on
+this path. In particular, live input cannot produce `revoked: True` or
+`expired: True` through `AAuthExecutionRuntimeBridge`.
+
+This finding is scoped to the AAuth execution bridge. Other repository adapters
+may accept revocation or related authority input; their existence does not make
+the AAuth bridge's hardcoded values live.
+
+**Future disposition required:**
+
+- identify the authoritative source and freshness rule for every current-state
+  input;
+- distinguish observed authority state from configured policy limits;
+- define revocation authority and propagation for each supported authority
+  basis without assuming a centralized revocation registry;
+- fail closed when required current validity cannot be established; and
+- add negative tests proving revoked, expired, over-depth, over-time, and
+  attenuation conditions reach decision evaluation through the AAuth path.
+
+**Boundary:**
+
+This item records a gap only. It does not select a revocation mechanism, modify
+G26 or G27, authorize implementation, enter G28, or authorize external network
+or robot access.
+
+---
+
+## B-039 — Independent Affected-Person Assent, Refusal, and Precedence
+
+**Status:** Open — verified representation and decision-path gap
+
+**Concern:**
+
+The current AAuth permission-to-runtime decision path has no independent signal
+for an affected person's current assent or refusal.
+`PermissionService.record_approval` carries the approver's `approve | decline`
+result; it does not separately carry the answer of the person affected by an
+action. Open context can physically receive arbitrary data, but the AAuth runtime
+bridge and governance dimensions do not define, validate, or evaluate an
+affected-person response.
+
+Representative approval and the affected person's current answer are separate
+facts. The current AAuth decision path cannot evaluate both without collapsing
+them. G27 session termination and safety controls do not supply the missing
+affected-person answer to this authority evaluation.
+
+**Future disposition required:**
+
+- define how assent, refusal, withdrawal, inability to answer, and absence of a
+  required response are represented and attributed;
+- bind the signal to the affected person, mission, session, request, action,
+  time, and applicable notice or context;
+- define when a representative may answer and how representative authority is
+  evidenced independently;
+- explicitly decide precedence for age, capacity, emergency, authority basis,
+  mission, action, and context rather than assuming refusal always overrides or
+  never overrides; and
+- preserve the distinction through reevaluation, enforcement, and evidence.
+
+**Boundary:**
+
+This item does not establish legal capacity, consent, guardianship, emergency,
+or clinical policy and does not authorize collecting identity or relationship
+evidence. Authoritative domain research and PI disposition are required before
+implementation.
+
+---
+
+## B-040 — Embodied Co-Presence Evidence and Social-Presence Research Boundary
+
+**Status:** Open — evidence-channel gap verified; broader HCI work remains research
+
+**Concern:**
+
+The representative-authority scenarios expose a concrete observation gap: a QR
+scan or credential proves neither that a claimed participant or representative
+is physically present nor that a claimed relationship exists. G27 deliberately
+excludes perception from the first Tip Jar mission and therefore avoids rather
+than resolves co-presence verification.
+
+B-037 addresses collection from non-participants and the privacy boundary for
+public sensors. It does not address what an embodied system's presence
+communicates to people, how people interpret its attention or silence, or how
+social expectations, interruption, anthropomorphism, and relational meaning
+should affect governance. The repository records these as emerging questions in
+`knowledge/memory/discoveries/governed-team-presence.md`; it does not establish
+empirical answers.
+
+**Future disposition required:**
+
+- decide which missions require co-presence, relationship, or continued-presence
+  evidence and which remain safe for an unidentified participant;
+- determine whether any observation channel can establish the required fact
+  without violating B-037 or creating unjustified surveillance;
+- conduct primary-source HRI/HCI research before converting social-presence
+  hypotheses into policy or requirements; and
+- distinguish artistic/public engagement from human-subject research evidence
+  until G29 methodology is adopted.
+
+**Boundary:**
+
+This item authorizes no sensor use, identity inference, relationship inference,
+public research claim, Misty connection, or G28/G29 entry. It does not claim that
+anthropomorphism or other social effects have been measured in this program.
