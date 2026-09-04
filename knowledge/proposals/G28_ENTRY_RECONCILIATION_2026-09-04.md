@@ -16,7 +16,9 @@ physical connection begins.
 - `knowledge/working/CURRENT_STATE.md` states that G28 is not activated and may
   be activated only through a new explicit PI decision.
 - `knowledge/strategy/SPRINT_ROADMAP_G0_G30.md` names G28 `Governed Misty B
-  Runtime Prototype` and assigns Misty A the comparative-control role.
+  Runtime Prototype` and includes isolation from Misty A as a measure. D-006 in
+  `knowledge/strategy/DECISION_LOG.md` assigns Misty A the stable comparative
+  baseline and lower-capability-control role.
 - G27 closure authorizes no Misty power, connection, discovery, query, hardware
   adapter, external-network access, actuation, or public demonstration.
 - G27's physical-safety, isolation, network, target-binding, cardinality, and
@@ -97,4 +99,3 @@ constitutional Gate 1 and Gate 2.
 
 Required advisory ruling: PASS, PASS WITH CONDITIONS, or FAIL. A reviewer PASS
 is advisory and is not PI authorization.
-
