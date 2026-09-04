@@ -1,5 +1,5 @@
 {
-  "gate": "G27_COMPLETE",
+  "gate": "M01_MISSION_FORMATION",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
@@ -12,6 +12,11 @@
     "knowledge/research/G27_REVIEW_EVIDENCE_SUMMARY_2026-08-30.md",
     "knowledge/research/G27_D025_REVIEW_EVIDENCE_SUMMARY_2026-08-30.md",
     "knowledge/research/REPRESENTATIVE_AUTHORITY_CONTRACT_2026-08-31.md",
-    "g27_tip_jar/GAPS.md"
+    "g27_tip_jar/GAPS.md",
+    "knowledge/proposals/HOPE_COORDINATION_READINESS_2026-09-04.md",
+    "knowledge/proposals/G28_ENTRY_RECONCILIATION_2026-09-04.md",
+    "knowledge/proposals/G28_GATE1_ENTRY_REVIEW_2026-09-04.md",
+    "knowledge/proposals/G28_GATE2_ENTRY_REVIEW_2026-09-04.md",
+    "knowledge/proposals/G28_GATE2_ENTRY_REVIEW_CORRECTION_2026-09-04.md"
   ]
 }

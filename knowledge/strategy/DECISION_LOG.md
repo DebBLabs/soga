@@ -316,3 +316,33 @@ G27 closure does not activate G28 and authorizes no robot power, connection,
 external-network access, discovery, status query, hardware adapter, actuation,
 physical execution, MCP conformance claim, production deployment, or public
 demonstration.
+
+## D-028 — Activate M01 Misty A precursor at Mission Formation only
+
+PI disposition accepted on 2026-09-04 after Claude/Gate 1 and Gemini/AGy Gate 2
+independently reviewed the G28 entry discrepancy and both issued advisory PASS
+WITH CONDITIONS rulings. Activate `M01 — Governed Misty A QR Action Precursor`
+as a formally named precursor sprint before G28. Preserve the roadmap's G28 —
+Governed Misty B Runtime Prototype — without amendment.
+
+M01 begins at Mission Formation for the 2026-09-04 3:00 PM session. The native
+immutable AAuth Mission and mission log remain the authoritative mission
+representation. Mission Formation may define the objective, boundaries,
+allowed and prohibited actions, requirements, risks, acceptance criteria, and
+proposed finite C1 action catalog. A human-readable mission specification is
+explanatory and may not become a competing mission type.
+
+This decision authorizes Mission Formation only. It does not authorize
+implementation, code changes, a physical adapter, robot power, network
+connection, discovery, status query, external-network access, actuation, or
+public demonstration. Implementation requires a later explicit Mission
+Authorization after the completed mission package passes the existing review
+process. Physical connection and execution require a still-later explicit
+Physical Execution Authorization supported by inherited G27 hardware, network,
+independent local safety, target-binding, cardinality, negative-test, and
+truthful-receipt evidence.
+
+The temporary HOPE shared-file coordination mechanism may carry bounded review
+requests and responses during M01. It carries evidence only, creates no agent or
+human authority, and may not infer Deb's authorization from a message or file.
+Its permanent adoption is not decided by D-028.

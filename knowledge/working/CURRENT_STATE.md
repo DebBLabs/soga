@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-08-27
+Last Updated: 2026-09-04
 
 ---
 
@@ -36,9 +36,13 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: Between G27 completion and any separately authorized G28 entry
+Phase: M01 precursor Mission Formation before any separately authorized G28
+entry
 
-Active Sprint: None — G28 is not activated
+Active Sprint: M01 — Governed Misty A QR Action Precursor
+
+Active authorization boundary: Mission Formation only under D-028. G28 remains
+inactive and retains its Misty B roadmap identity.
 
 ---
 
@@ -78,6 +82,32 @@ fake-surface, and localhost acceptance scope closed 2026-08-30 under D-027.
 ---
 
 ## Active Work
+
+### M01 — Governed Misty A QR Action Precursor
+Status: ACTIVE AT MISSION FORMATION ONLY (authorized 2026-09-04 under D-028)
+
+M01 is a formally named precursor sprint before G28. It uses Misty A to form a
+bounded QR-requested governed-action mission while leaving the roadmap's G28 —
+Governed Misty B Runtime Prototype — unchanged.
+
+The native immutable AAuth Mission and mission log remain the authoritative
+mission representation. Mission Formation may define objective, boundaries,
+allowed and prohibited actions, requirements, risks, acceptance criteria, and
+the proposed finite C1 action catalog. It may not implement the mission.
+
+Claude/Gate 1 and Gemini/AGy Gate 2 independently reviewed the entry proposal
+and issued advisory PASS WITH CONDITIONS rulings. Both recommend the separately
+named precursor disposition. The review chain and HOPE coordination readiness
+record are committed in `knowledge/proposals/`.
+
+D-028 does not authorize code changes, a physical adapter, Misty power or
+network connection, discovery, status query, external-network access,
+actuation, or public demonstration. Implementation requires a later explicit
+Mission Authorization after the completed mission package passes the existing
+review process. Physical connection and execution require a still-later
+explicit Physical Execution Authorization supported by the inherited G27
+hardware, network, safety, target-binding, cardinality, negative-test, and
+truthful-receipt evidence.
 
 ### G27 — Embodied Capability and Physical Safety Model
 Status: COMPLETE (activated 2026-08-20; completed 2026-08-30 under D-027)
@@ -304,15 +334,16 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Remain at the closed G27 boundary:
+Prepare and conduct M01 Mission Formation at the 2026-09-04 3:00 PM session:
 
-1. gate and commit the post-G27 representative-authority research
-   synchronization;
-2. regenerate the SHA-pinned session package from the resulting clean HEAD;
-3. review G28 entry criteria and the unresolved boundaries; and
-4. activate G28 only through a new explicit PI decision.
+1. synchronize every agent at the committed M01 checkpoint;
+2. define the native AAuth Mission, explanatory mission specification, finite
+   C1 catalog, constraints, risks, and acceptance criteria;
+3. submit the completed mission package to constitutional Gate 1 and Gate 2;
+4. present Deb with a Mission Authorization decision only after both advisory
+   reviews and correction cycles are durably recorded.
 
-Do not reopen settled G26 or G27 semantics absent new evidence. Keep the D-025
-stage strictly loopback-only and recording-only. Do not enter G28 or power,
-connect, discover, query, or actuate either Misty without a later explicit PI
-decision.
+Do not implement M01 before Mission Authorization. Do not enter or rewrite G28.
+Do not power, connect, discover, query, or actuate Misty A or Misty B before a
+later explicit Physical Execution Authorization supported by the required G27
+evidence.
