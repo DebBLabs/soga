@@ -44,8 +44,9 @@ CG inspected the cited historical checkout read-only and verified:
   shapes and an RGB-camera path;
 - the historical checkout currently has unrelated untracked files and is not a
   clean source for direct reuse; and
-- `misty_ip.py` was not present in the inspected checkout, so that filename
-  remains unverified unless separately sourced.
+- `adapters/misty/python-sdk/misty_ip.py` exists in the inspected checkout. The
+  earlier provenance check missed it because it is nested under `python-sdk/`.
+  Its presence is historical evidence only and does not authorize reuse.
 
 The historical files demonstrate prior code and operational context. They are
 not authorized implementation inputs and do not prove present network,
