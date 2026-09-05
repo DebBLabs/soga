@@ -363,3 +363,36 @@ dispatch; G28 activation; or a physical-success claim. Physical connection and
 execution require a later explicit PI Physical Execution Authorization after
 independent Gate 1 and Gate 2 implementation review and the inherited G27
 pre-connection evidence.
+
+## D-030 — Authorize M01 physical preparation without device connection
+
+PI Physical Preparation Authorization received on 2026-09-05. Authorize
+powering Misty A solely to verify reported serial `20221304273`, obtain the
+current IP from the trusted Verizon G3100 router record, inspect battery and
+physical condition, and confirm the operator-stop procedure. This does not
+authorize computer connection, address discovery or scanning, device query,
+configuration, or actuation.
+
+The PI subsequently adopted the run-specific Misty A binding supported by the
+case serial, router record, historical address corroboration, clean power-on,
+and Misty Studio response: serial `20221304273`, MAC `00:d0:ca:01:a2:61`, and
+current DHCP IPv4 `192.168.1.183`. Because the lease is dynamic, the address
+must be rechecked immediately before any later physical run.
+
+## D-031 — Authorize bounded read-only Misty A connection verification
+
+PI Connection Verification Authorization and later Extended Read-Only
+Verification Authorization received on 2026-09-05. Authorize read-only access
+to `http://192.168.1.183` solely for identity, battery, network, and system
+status; prohibit configuration and LED, speech, movement, camera, microphone,
+mapping, skill, or other action commands, and prohibit address discovery.
+
+One root GET returned HTTP 200 and Misty Studio. Loading the visible Misty
+Studio dashboard then automatically initialized its ordinary Live Data page,
+including camera preview and distance telemetry, without an operator click.
+Codex stopped and closed the tab immediately because camera access was outside
+the stated categories. The PI reviewed the visible behavior and classified it
+as normal website API initialization rather than actuation. The dashboard
+showed 100% battery and a Halt control. No control, configuration, or actuation
+command was sent. This decision records observed evidence only and does not
+authorize physical execution.

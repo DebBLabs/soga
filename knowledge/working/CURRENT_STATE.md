@@ -343,15 +343,20 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Complete M01 non-physical implementation validation under D-029:
+Complete M01 physical-run preparation under D-029 through D-031:
 
-1. preserve the adopted native mission and Mission Authorization;
-2. implement and test the QR/grant/session/SOGA/recording-surface path;
-3. retain truthful evidence for positive and negative controls;
-4. submit the implementation checkpoint to constitutional Gate 1 and Gate 2;
-5. present Deb with a Physical Execution Authorization decision only after both
-   advisory reviews and correction cycles are durably recorded and every G27
-   pre-connection prerequisite is evidenced.
+1. preserve the adopted Misty A binding: serial `20221304273`, MAC
+   `00:d0:ca:01:a2:61`, and current DHCP IPv4 `192.168.1.183`;
+2. recheck the router lease immediately before any physical run;
+3. resolve and record network isolation, physical inspection, and independent
+   operator-stop evidence;
+4. obtain Deb's explicit adoption of the candidate pink, one-second, and yellow
+   neutral parameters;
+5. instantiate and independently review the exact physical-run checkpoint;
+6. request separate Physical Execution Authorization only after presenting all
+   evidence and remaining risks.
 
-Do not enter or rewrite G28. Do not power, connect, discover, query, or actuate
-Misty A or Misty B before a later explicit Physical Execution Authorization.
+Do not enter or rewrite G28. D-030 and D-031 permit only their completed
+preparation and read-only verification. Do not configure or actuate Misty A,
+and do not access Misty B, before a later explicit Physical Execution
+Authorization.
