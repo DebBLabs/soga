@@ -84,8 +84,8 @@ fake-surface, and localhost acceptance scope closed 2026-08-30 under D-027.
 ## Active Work
 
 ### M01 — Governed Misty A QR Action Precursor
-Status: ACTIVE AT NON-PHYSICAL IMPLEMENTATION AND VALIDATION (authorized
-2026-09-05 under D-029)
+Status: ACTIVE AT PHYSICAL-RUN PREPARATION; ACTUATION NOT AUTHORIZED
+(D-029 through D-031)
 
 M01 is a formally named precursor sprint before G28. It uses Misty A to form a
 bounded QR-requested governed-action mission while leaving the roadmap's G28 —
@@ -109,14 +109,18 @@ authorized native mission uses the local test-fixture approver identifier
 `m01.signal_light`. Codex may implement and validate the bounded QR path on
 fake and loopback recording surfaces only.
 
-This authorization does not establish a production Person Server or durable
-wallet service. It does not authorize Misty power or network connection,
-discovery, status query, external-network access, physical adapter dispatch,
-actuation, G28 entry, or public demonstration. Physical connection and
-execution require a later explicit Physical Execution Authorization supported
-by independent Gate 1 and Gate 2 implementation review and the inherited G27
-hardware, network, safety, target-binding, cardinality, negative-test, and
-truthful-receipt evidence.
+Misty A has since been powered under D-030 and read-only connected under D-031.
+The PI adopted serial `20221304273`, MAC `00:d0:ca:01:a2:61`, and current DHCP
+IPv4 `192.168.1.183` as the run-specific binding. Misty Studio returned HTTP
+200; its default dashboard automatically initialized Live Data, including a
+camera preview and distance telemetry; battery displayed 100%. No action
+control or actuation command was used.
+
+The local Person Server remains a test fixture rather than a production or
+durable wallet service. Physical actuation, G28 entry, and public demonstration
+remain unauthorized. Execution requires a later explicit Physical Execution
+Authorization supported by independent review of the exact live-run checkpoint
+and the inherited G27 evidence.
 
 ### G27 — Embodied Capability and Physical Safety Model
 Status: COMPLETE (activated 2026-08-20; completed 2026-08-30 under D-027)
