@@ -114,8 +114,16 @@ class M01Flow:
                 "mission": {"s256": self.mission.s256},
                 "agent": AGENT_ID,
                 "subject": {
-                    "subject_id": "m01-local-test-subject",
+                    "subject_id": "m01-anonymous-participant-session",
                     "subject_agency_state": "INDEPENDENT",
+                    "context": {
+                        "identity_status": "UNKNOWN",
+                        "age_status": "UNKNOWN",
+                        "representation_basis": (
+                            "D-023 permits this bounded action without "
+                            "identity or age evidence"
+                        ),
+                    },
                 },
             }
         )

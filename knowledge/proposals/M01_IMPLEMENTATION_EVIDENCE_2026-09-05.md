@@ -30,6 +30,24 @@ physical adapter, or actuation code in `m01_qr`.
 The approver represents the explicitly adopted local test fixture; it is not a
 claim that a production Person Server exists.
 
+## Subject and policy representation
+
+The local request represents the scanner as
+`m01-anonymous-participant-session` with `identity_status: UNKNOWN` and
+`age_status: UNKNOWN`. `subject_agency_state: INDEPENDENT` is the existing SOGA
+agency-state input for this bounded session; it is not a claim that identity,
+age, competence, or broader authority has been verified. D-023 §1 explicitly
+permits the bounded interaction and selected low-risk action without identity
+or age evidence. No identity- or age-dependent action is authorized.
+
+The mission policy supplied to the existing SOGA bridge is intentionally empty
+apart from the mission hash that `PermissionService` binds into it. The current
+`m01.signal_light` request reaches `ALLOW` because all existing governance
+dimensions pass and no adopted M01-specific restriction applies—not because a
+new permissive rule or bypass was added. Any future catalog action requires a
+new reviewed mission/policy disposition and cannot inherit this result by
+analogy.
+
 ## Positive evidence
 
 The focused test verifies that one opaque grant is consumed into one bounded
@@ -48,6 +66,8 @@ The focused suite verifies:
 - grant replay rejection without a second session or dispatch;
 - safety latch precedence without grant consumption or dispatch; and
 - deterministic native mission construction with exactly one approved action.
+- explicit identity-unknown and age-unknown subject context plus the intended
+  mission-hash-only policy input in the recorded SOGA envelope.
 
 Existing G27 regression tests continue covering wrong platform, missing target,
 decision-binding conflict, stale and late decisions, concurrency, expiry,

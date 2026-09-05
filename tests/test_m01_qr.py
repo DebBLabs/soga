@@ -52,6 +52,17 @@ class M01QRTests(unittest.TestCase):
             ],
             ["mission_approved", "soga_decision", "aauth_projection"],
         )
+        soga_entry = self.flow.person_server.mission_log.entries(
+            self.flow.mission.s256
+        )[1]
+        subject = soga_entry.payload["soga_decision"]["runtime_envelope"]["subject"]
+        self.assertEqual(subject["subject_id"], "m01-anonymous-participant-session")
+        self.assertEqual(subject["context"]["identity_status"], "UNKNOWN")
+        self.assertEqual(subject["context"]["age_status"], "UNKNOWN")
+        self.assertEqual(
+            soga_entry.payload["soga_decision"]["runtime_envelope"]["policy"],
+            {"mission_s256": self.flow.mission.s256},
+        )
 
     def test_qr_contains_no_action_target_or_network_address(self):
         payload = self.flow.offer(grant_id="opaque-reference-1").qr_payload
