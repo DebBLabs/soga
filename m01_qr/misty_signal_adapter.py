@@ -71,30 +71,49 @@ class MistySignalLightAdapter:
             ):
                 raise AdapterError("decision_binding", "missing_binding")
 
-            signal_response = dict(
-                self._transport(self.api_base_url + LED_PATH, SIGNAL_RGB)
-            )
-            self._wait(self.duration_seconds)
-            neutral_response = dict(
-                self._transport(self.api_base_url + LED_PATH, NEUTRAL_RGB)
-            )
-            signal_acknowledged = signal_response.get("status") == "Success"
-            neutral_acknowledged = neutral_response.get("status") == "Success"
+            signal_status = "transport_error"
+            wait_status = "completed"
+            neutral_status = "transport_error"
+            try:
+                signal_response = dict(
+                    self._transport(self.api_base_url + LED_PATH, SIGNAL_RGB)
+                )
+                signal_status = (
+                    "robot_api_acknowledged"
+                    if signal_response.get("status") == "Success"
+                    else "robot_api_not_acknowledged"
+                )
+            except Exception:
+                pass
+            try:
+                self._wait(self.duration_seconds)
+            except Exception:
+                wait_status = "wait_error"
+            try:
+                neutral_response = dict(
+                    self._transport(self.api_base_url + LED_PATH, NEUTRAL_RGB)
+                )
+                neutral_status = (
+                    "robot_api_acknowledged"
+                    if neutral_response.get("status") == "Success"
+                    else "robot_api_not_acknowledged"
+                )
+            except Exception:
+                pass
             receipt = {
                 "request_id": invocation.request_id,
                 "platform_id": invocation.platform_id,
                 "adapter_status": (
                     "robot_api_acknowledged"
-                    if signal_acknowledged and neutral_acknowledged
-                    else "robot_api_not_acknowledged"
+                    if signal_status == neutral_status == "robot_api_acknowledged"
+                    and wait_status == "completed"
+                    else "robot_api_incomplete"
                 ),
+                "signal_adapter_status": signal_status,
+                "wait_status": wait_status,
                 "physical_outcome": "unknown",
                 "neutral_outcome": "unknown",
-                "neutral_adapter_status": (
-                    "robot_api_acknowledged"
-                    if neutral_acknowledged
-                    else "robot_api_not_acknowledged"
-                ),
+                "neutral_adapter_status": neutral_status,
                 "execution_surface": "misty_api_transport",
             }
             self._receipts[invocation.request_id] = receipt

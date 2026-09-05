@@ -26,7 +26,7 @@ It then waits for an explicitly supplied bounded interval (currently exercised a
 {"red": 255, "green": 255, "blue": 0}
 ```
 
-The adapter contains no HTTP client, no default or fallback IP address, no discovery mechanism, no status query, and no other Misty action. The interval and wait function are required injections, and intervals outside `(0, 5]` seconds are rejected. API acknowledgments for both signal and neutral requests are recorded separately; both physical and neutral outcomes remain `unknown` because API responses do not prove the observed physical states.
+The adapter contains no HTTP client, no default or fallback IP address, no discovery mechanism, no status query, and no other Misty action. The interval and wait function are required injections, and intervals outside `(0, 5]` seconds are rejected. API acknowledgments for signal and neutral are recorded separately; both physical and neutral outcomes remain `unknown` because API responses do not prove observed physical states. If signal transport, the wait, or neutral transport raises, the adapter still attempts the remaining neutral sequence, seals an incomplete receipt, and prevents the same request from redispatching.
 
 ## Verification
 
@@ -35,6 +35,8 @@ The adapter contains no HTTP client, no default or fallback IP address, no disco
 - The full governed QR-to-SOGA-to-adapter path was exercised with an injected fake transport.
 - The fake transport received exactly two calls to `http://127.0.0.1:30001/api/led`: fixed pink RGB, then—after the injected one-second wait—fixed yellow RGB.
 - Construction without an explicit target was rejected.
+- Signal response-timeout uncertainty still caused the neutral request to be attempted; the incomplete receipt was cached and identical replay did not call transport again.
+- Non-positive and greater-than-five-second durations were rejected.
 - Search confirmed no historical `192.168.*` address or network-client import exists in `m01_qr`.
 
 ## Nonclaims and stop boundary

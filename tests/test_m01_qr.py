@@ -169,6 +169,8 @@ class M01QRTests(unittest.TestCase):
             ],
         )
         self.assertEqual(receipt["adapter_status"], "robot_api_acknowledged")
+        self.assertEqual(receipt["signal_adapter_status"], "robot_api_acknowledged")
+        self.assertEqual(receipt["wait_status"], "completed")
         self.assertEqual(receipt["execution_surface"], "misty_api_transport")
         self.assertEqual(receipt["physical_outcome"], "unknown")
         self.assertEqual(receipt["neutral_outcome"], "unknown")
@@ -183,6 +185,62 @@ class M01QRTests(unittest.TestCase):
                 wait=lambda _seconds: None,
                 duration_seconds=1.0,
             )
+
+    def test_signal_transport_error_still_attempts_neutral_and_seals_replay(self):
+        calls = []
+
+        def uncertain_signal_transport(url, payload):
+            calls.append((url, dict(payload)))
+            if len(calls) == 1:
+                raise TimeoutError("response timeout after possible delivery")
+            return {"status": "Success"}
+
+        platform_id = "m01-misty-a-error-fixture"
+        adapter = MistySignalLightAdapter(
+            platform_id=platform_id,
+            api_base_url="http://127.0.0.1:30002/api",
+            transport=uncertain_signal_transport,
+            wait=lambda _seconds: None,
+            duration_seconds=1.0,
+        )
+        flow = M01Flow(
+            monotonic=self.clock,
+            platform_id=platform_id,
+            execution_adapter=adapter,
+        )
+        receipt = flow.scan_and_request(
+            flow.offer(grant_id="grant-uncertain-signal").qr_payload,
+            channel_key="channel-uncertain-signal",
+            request_id="request-uncertain-signal",
+        )
+        self.assertEqual(len(calls), 2)
+        self.assertEqual(calls[1][1], {"red": 255, "green": 255, "blue": 0})
+        self.assertEqual(receipt["adapter_status"], "robot_api_incomplete")
+        self.assertEqual(receipt["signal_adapter_status"], "transport_error")
+        self.assertEqual(receipt["neutral_adapter_status"], "robot_api_acknowledged")
+        self.assertEqual(receipt["physical_outcome"], "unknown")
+        self.assertEqual(receipt["neutral_outcome"], "unknown")
+
+        replay_receipt = adapter.dispatch(
+            adapter._invocations["request-uncertain-signal"],
+            bound_platform_id=platform_id,
+        )
+        self.assertEqual(replay_receipt, {
+            key: receipt[key]
+            for key in replay_receipt
+        })
+        self.assertEqual(len(calls), 2)
+
+    def test_duration_must_be_positive_and_at_most_five_seconds(self):
+        for duration in (0, -1, 5.1):
+            with self.assertRaises(Exception):
+                MistySignalLightAdapter(
+                    platform_id="m01-misty-a-duration-fixture",
+                    api_base_url="http://127.0.0.1:30003/api",
+                    transport=lambda _url, _payload: {"status": "Success"},
+                    wait=lambda _seconds: None,
+                    duration_seconds=duration,
+                )
 
 
 if __name__ == "__main__":
