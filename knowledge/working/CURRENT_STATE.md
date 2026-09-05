@@ -84,7 +84,8 @@ fake-surface, and localhost acceptance scope closed 2026-08-30 under D-027.
 ## Active Work
 
 ### M01 — Governed Misty A QR Action Precursor
-Status: ACTIVE AT MISSION FORMATION ONLY (authorized 2026-09-04 under D-028)
+Status: ACTIVE AT NON-PHYSICAL IMPLEMENTATION AND VALIDATION (authorized
+2026-09-05 under D-029)
 
 M01 is a formally named precursor sprint before G28. It uses Misty A to form a
 bounded QR-requested governed-action mission while leaving the roadmap's G28 —
@@ -100,12 +101,20 @@ and issued advisory PASS WITH CONDITIONS rulings. Both recommend the separately
 named precursor disposition. The review chain and HOPE coordination readiness
 record are committed in `knowledge/proposals/`.
 
-D-028 does not authorize code changes, a physical adapter, Misty power or
-network connection, discovery, status query, external-network access,
-actuation, or public demonstration. Implementation requires a later explicit
-Mission Authorization after the completed mission package passes the existing
-review process. Physical connection and execution require a still-later
-explicit Physical Execution Authorization supported by the inherited G27
+D-029 records Deb's Mission Authorization after the corrected mission package
+received independent constitutional Gate 1 and Gate 2 PASS rulings. The
+authorized native mission uses the local test-fixture approver identifier
+`urn:debblabs:person-server:deb-bucci`, mission-agent identifier
+`soga-m01-misty-a-qr-agent-v1`, and sole initial action
+`m01.signal_light`. Codex may implement and validate the bounded QR path on
+fake and loopback recording surfaces only.
+
+This authorization does not establish a production Person Server or durable
+wallet service. It does not authorize Misty power or network connection,
+discovery, status query, external-network access, physical adapter dispatch,
+actuation, G28 entry, or public demonstration. Physical connection and
+execution require a later explicit Physical Execution Authorization supported
+by independent Gate 1 and Gate 2 implementation review and the inherited G27
 hardware, network, safety, target-binding, cardinality, negative-test, and
 truthful-receipt evidence.
 
@@ -334,16 +343,15 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Prepare and conduct M01 Mission Formation at the 2026-09-04 3:00 PM session:
+Complete M01 non-physical implementation validation under D-029:
 
-1. synchronize every agent at the committed M01 checkpoint;
-2. define the native AAuth Mission, explanatory mission specification, finite
-   C1 catalog, constraints, risks, and acceptance criteria;
-3. submit the completed mission package to constitutional Gate 1 and Gate 2;
-4. present Deb with a Mission Authorization decision only after both advisory
-   reviews and correction cycles are durably recorded.
+1. preserve the adopted native mission and Mission Authorization;
+2. implement and test the QR/grant/session/SOGA/recording-surface path;
+3. retain truthful evidence for positive and negative controls;
+4. submit the implementation checkpoint to constitutional Gate 1 and Gate 2;
+5. present Deb with a Physical Execution Authorization decision only after both
+   advisory reviews and correction cycles are durably recorded and every G27
+   pre-connection prerequisite is evidenced.
 
-Do not implement M01 before Mission Authorization. Do not enter or rewrite G28.
-Do not power, connect, discover, query, or actuate Misty A or Misty B before a
-later explicit Physical Execution Authorization supported by the required G27
-evidence.
+Do not enter or rewrite G28. Do not power, connect, discover, query, or actuate
+Misty A or Misty B before a later explicit Physical Execution Authorization.

@@ -346,3 +346,20 @@ The temporary HOPE shared-file coordination mechanism may carry bounded review
 requests and responses during M01. It carries evidence only, creates no agent or
 human authority, and may not infer Deb's authorization from a message or file.
 Its permanent adoption is not decided by D-028.
+
+## D-029 — Authorize M01 implementation and non-physical validation
+
+PI Mission Authorization received on 2026-09-05. Adopt
+`urn:debblabs:person-server:deb-bucci` as the M01 local test-fixture approver
+identifier, `soga-m01-misty-a-qr-agent-v1` as the mission-agent identifier, and
+`m01.signal_light` as the sole action eligible for the initial physical run.
+
+Authorize Codex to implement and test the bounded QR-action path using fake and
+loopback recording surfaces under the reviewed M01 mission package and inherited
+G27 controls. This authorization does not establish a production Person Server
+or durable wallet-backed authority service. It does not authorize powering,
+connecting, discovering, querying, or actuating Misty; a physical adapter
+dispatch; G28 activation; or a physical-success claim. Physical connection and
+execution require a later explicit PI Physical Execution Authorization after
+independent Gate 1 and Gate 2 implementation review and the inherited G27
+pre-connection evidence.
