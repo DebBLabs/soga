@@ -147,6 +147,8 @@ class M01QRTests(unittest.TestCase):
             platform_id=platform_id,
             api_base_url="http://127.0.0.1:30001/api",
             transport=fake_transport,
+            wait=lambda seconds: calls.append(("wait", seconds)),
+            duration_seconds=1.0,
         )
         flow = M01Flow(
             monotonic=self.clock,
@@ -160,11 +162,17 @@ class M01QRTests(unittest.TestCase):
         )
         self.assertEqual(
             calls,
-            [("http://127.0.0.1:30001/api/led", {"red": 255, "green": 105, "blue": 180})],
+            [
+                ("http://127.0.0.1:30001/api/led", {"red": 255, "green": 105, "blue": 180}),
+                ("wait", 1.0),
+                ("http://127.0.0.1:30001/api/led", {"red": 255, "green": 255, "blue": 0}),
+            ],
         )
         self.assertEqual(receipt["adapter_status"], "robot_api_acknowledged")
         self.assertEqual(receipt["execution_surface"], "misty_api_transport")
         self.assertEqual(receipt["physical_outcome"], "unknown")
+        self.assertEqual(receipt["neutral_outcome"], "unknown")
+        self.assertEqual(receipt["neutral_adapter_status"], "robot_api_acknowledged")
 
     def test_prepared_misty_adapter_has_no_default_target(self):
         with self.assertRaises(Exception):
@@ -172,6 +180,8 @@ class M01QRTests(unittest.TestCase):
                 platform_id="m01-misty-a",
                 api_base_url="",
                 transport=lambda _url, _payload: {"status": "Success"},
+                wait=lambda _seconds: None,
+                duration_seconds=1.0,
             )
 
 

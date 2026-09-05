@@ -10,6 +10,7 @@ from .mission import ACTION, CATALOG_VERSION
 
 
 SIGNAL_RGB = {"red": 255, "green": 105, "blue": 180}
+NEUTRAL_RGB = {"red": 255, "green": 255, "blue": 0}
 LED_PATH = "/led"
 
 
@@ -26,6 +27,8 @@ class MistySignalLightAdapter:
         platform_id: str,
         api_base_url: str,
         transport: Callable[[str, Mapping[str, int]], Mapping[str, object]],
+        wait: Callable[[float], None],
+        duration_seconds: float,
     ) -> None:
         if not platform_id:
             raise AdapterError("adapter_configuration", "missing_platform")
@@ -34,9 +37,13 @@ class MistySignalLightAdapter:
         api_base_url = api_base_url.rstrip("/")
         if not api_base_url.endswith("/api"):
             raise AdapterError("adapter_configuration", "api_base_must_end_in_api")
+        if duration_seconds <= 0 or duration_seconds > 5:
+            raise AdapterError("adapter_configuration", "invalid_bounded_duration")
         self.platform_id = platform_id
         self.api_base_url = api_base_url
         self._transport = transport
+        self._wait = wait
+        self.duration_seconds = duration_seconds
         self._lock = RLock()
         self._receipts: dict[str, dict] = {}
         self._invocations: dict[str, Invocation] = {}
@@ -64,15 +71,30 @@ class MistySignalLightAdapter:
             ):
                 raise AdapterError("decision_binding", "missing_binding")
 
-            response = dict(self._transport(self.api_base_url + LED_PATH, SIGNAL_RGB))
-            acknowledged = response.get("status") == "Success"
+            signal_response = dict(
+                self._transport(self.api_base_url + LED_PATH, SIGNAL_RGB)
+            )
+            self._wait(self.duration_seconds)
+            neutral_response = dict(
+                self._transport(self.api_base_url + LED_PATH, NEUTRAL_RGB)
+            )
+            signal_acknowledged = signal_response.get("status") == "Success"
+            neutral_acknowledged = neutral_response.get("status") == "Success"
             receipt = {
                 "request_id": invocation.request_id,
                 "platform_id": invocation.platform_id,
                 "adapter_status": (
-                    "robot_api_acknowledged" if acknowledged else "robot_api_not_acknowledged"
+                    "robot_api_acknowledged"
+                    if signal_acknowledged and neutral_acknowledged
+                    else "robot_api_not_acknowledged"
                 ),
                 "physical_outcome": "unknown",
+                "neutral_outcome": "unknown",
+                "neutral_adapter_status": (
+                    "robot_api_acknowledged"
+                    if neutral_acknowledged
+                    else "robot_api_not_acknowledged"
+                ),
                 "execution_surface": "misty_api_transport",
             }
             self._receipts[invocation.request_id] = receipt
