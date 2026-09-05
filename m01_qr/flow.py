@@ -37,10 +37,18 @@ class M01Flow:
 
     QR input contains only an opaque grant reference. SOGA evaluates the
     AAuth-shaped request before the existing G27 runtime records a dispatch.
-    No URL, robot endpoint, discovery, or physical transport exists here.
+    The default path has no URL, robot endpoint, discovery, or physical
+    transport. A separately configured adapter may be injected for reviewed
+    preparation and later execution checkpoints.
     """
 
-    def __init__(self, *, monotonic: Callable[[], float]) -> None:
+    def __init__(
+        self,
+        *,
+        monotonic: Callable[[], float],
+        platform_id: str = PLATFORM_ID,
+        execution_adapter=None,
+    ) -> None:
         authorized = build_mission()
         self.person_server = PermissionService(
             person_server_id=APPROVER_ID,
@@ -60,19 +68,25 @@ class M01Flow:
             raise M01FlowError("mission", "hash_mismatch")
         self.person_server.authorize_mission_policy(self.mission.s256, {})
         self.sessions = SessionGrantService(monotonic=monotonic)
-        self.surface = FakeSurface(PLATFORM_ID)
-        self.machine = SafetyStateMachine(PLATFORM_ID)
+        self.platform_id = platform_id
+        self.surface = FakeSurface(platform_id) if execution_adapter is None else None
+        adapter = (
+            TargetBoundAdapter({platform_id: self.surface})
+            if execution_adapter is None
+            else execution_adapter
+        )
+        self.machine = SafetyStateMachine(platform_id)
         self.runtime = PrototypeRuntime(
             sessions=self.sessions,
-            adapter=TargetBoundAdapter({PLATFORM_ID: self.surface}),
-            state_machines={PLATFORM_ID: self.machine},
+            adapter=adapter,
+            state_machines={platform_id: self.machine},
         )
         self._action_count: dict[str, int] = {}
 
     def offer(self, *, grant_id: str | None = None) -> QROffer:
         grant = self.sessions.issue_grant(
             mission_s256=self.mission.s256,
-            platform_id=PLATFORM_ID,
+            platform_id=self.platform_id,
             notice_version=NOTICE_VERSION,
             policy_version=POLICY_VERSION,
             issuer=APPROVER_ID,
@@ -98,7 +112,7 @@ class M01Flow:
 
         session = self.runtime.initiate_session(
             grant_id,
-            platform_id=PLATFORM_ID,
+            platform_id=self.platform_id,
             mission_s256=self.mission.s256,
             notice_version=NOTICE_VERSION,
             policy_version=POLICY_VERSION,
@@ -145,7 +159,7 @@ class M01Flow:
                 decision=Decision.ALLOW,
                 mission_s256=self.mission.s256,
                 session_id=session.session_id,
-                platform_id=PLATFORM_ID,
+                platform_id=self.platform_id,
                 agent_id=AGENT_ID,
                 action=requested_action,
                 catalog_version=CATALOG_VERSION,
@@ -157,8 +171,8 @@ class M01Flow:
             **receipt,
             "mission_s256": self.mission.s256,
             "governance_projection": projection,
-            "execution_surface": "recording_only",
-            "physical_outcome": "unknown",
+            "execution_surface": receipt.get("execution_surface", "recording_only"),
+            "physical_outcome": receipt.get("physical_outcome", "unknown"),
         }
 
     @staticmethod

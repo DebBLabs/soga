@@ -2,7 +2,15 @@ import unittest
 
 from g27_tip_jar.runtime import RuntimeErrorAtStage
 
-from m01_qr import ACTION, AGENT_ID, APPROVER_ID, M01Flow, M01FlowError, build_mission
+from m01_qr import (
+    ACTION,
+    AGENT_ID,
+    APPROVER_ID,
+    M01Flow,
+    M01FlowError,
+    MistySignalLightAdapter,
+    build_mission,
+)
 from m01_qr.flow import PLATFORM_ID
 
 
@@ -126,6 +134,45 @@ class M01QRTests(unittest.TestCase):
         self.assertIn("session_admission: safety_stopped", str(caught.exception))
         self.assertEqual(self.flow.sessions.inspect("grant-safety")["state"], "issued")
         self.assertEqual(self.flow.surface.received, ())
+
+    def test_prepared_misty_adapter_runs_governed_path_with_fake_transport(self):
+        calls = []
+
+        def fake_transport(url, payload):
+            calls.append((url, dict(payload)))
+            return {"status": "Success"}
+
+        platform_id = "m01-misty-a-explicit-test-fixture"
+        adapter = MistySignalLightAdapter(
+            platform_id=platform_id,
+            api_base_url="http://127.0.0.1:30001/api",
+            transport=fake_transport,
+        )
+        flow = M01Flow(
+            monotonic=self.clock,
+            platform_id=platform_id,
+            execution_adapter=adapter,
+        )
+        receipt = flow.scan_and_request(
+            flow.offer(grant_id="grant-prepared-adapter").qr_payload,
+            channel_key="channel-prepared-adapter",
+            request_id="request-prepared-adapter",
+        )
+        self.assertEqual(
+            calls,
+            [("http://127.0.0.1:30001/api/led", {"red": 255, "green": 105, "blue": 180})],
+        )
+        self.assertEqual(receipt["adapter_status"], "robot_api_acknowledged")
+        self.assertEqual(receipt["execution_surface"], "misty_api_transport")
+        self.assertEqual(receipt["physical_outcome"], "unknown")
+
+    def test_prepared_misty_adapter_has_no_default_target(self):
+        with self.assertRaises(Exception):
+            MistySignalLightAdapter(
+                platform_id="m01-misty-a",
+                api_base_url="",
+                transport=lambda _url, _payload: {"status": "Success"},
+            )
 
 
 if __name__ == "__main__":
