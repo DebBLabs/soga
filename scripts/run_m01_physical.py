@@ -18,6 +18,11 @@ PLATFORM_ID = "urn:debblabs:misty-a:20221304273"
 EXPECTED_AUTHORIZATION = "D-032"
 
 
+def authorization_is_recorded() -> bool:
+    decision_log = REPOSITORY_ROOT / "knowledge" / "strategy" / "DECISION_LOG.md"
+    return "## D-032 —" in decision_log.read_text(encoding="utf-8")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(
         description="Run the single governed M01 Misty A signal-light action."
@@ -27,6 +32,8 @@ def main() -> int:
     args = parser.parse_args()
     if args.authorization != EXPECTED_AUTHORIZATION:
         raise SystemExit("Physical execution blocked: D-032 is required")
+    if not authorization_is_recorded():
+        raise SystemExit("Physical execution blocked: D-032 is not recorded")
 
     adapter = MistySignalLightAdapter(
         platform_id=PLATFORM_ID,

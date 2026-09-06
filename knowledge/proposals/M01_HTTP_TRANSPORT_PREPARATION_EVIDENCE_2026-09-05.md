@@ -25,4 +25,6 @@ strict transport, signal adapter, one-second wait, and terminal confirmation.
 It requires an explicit API base URL and the future Physical Execution
 Authorization identifier `D-032`; without both, it exits before constructing a
 session or sending any request. The only physical-run confirmation text accepted
-is `EXECUTE m01.signal_light`.
+is `EXECUTE m01.signal_light`. The runner also reads the repository decision
+log and fails closed unless an actual `## D-032 —` decision heading exists;
+the command-line codeword cannot substitute for a recorded authorization.
