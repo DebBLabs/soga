@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-09-04
+Last Updated: 2026-09-06
 
 ---
 
@@ -36,13 +36,13 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M01 precursor Mission Formation before any separately authorized G28
-entry
+Phase: M02 Stage 1 — current-source wallet-assisted Person Server research
 
-Active Sprint: M01 — Governed Misty A QR Action Precursor
+Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: Mission Formation only under D-028. G28 remains
-inactive and retains its Misty B roadmap identity.
+Active authorization boundary: Stage 1 research only under D-035. No wallet
+service execution, implementation, dependency installation, external exposure,
+Misty access, or G28 activation is authorized.
 
 ---
 
@@ -78,48 +78,51 @@ G26 — Mission Model and Permission Endpoint: COMPLETE. Exit criteria satisfied
 2026-08-16; see D-022 and completed B-030.
 G27 — Embodied Capability and Physical Safety Model: COMPLETE. Bounded modeling,
 fake-surface, and localhost acceptance scope closed 2026-08-30 under D-027.
+M01 — Governed Misty A QR Action Precursor: COMPLETE. One bounded,
+QR-requested `m01.signal_light` action completed under D-032; outcome recorded
+under D-033 and sprint accepted 2026-09-06 under D-034.
 
 ---
 
 ## Active Work
 
+### M02 — Wallet-Assisted AAuth Person Server
+Status: STAGE 1 CURRENT-SOURCE RESEARCH AUTHORIZED UNDER D-035
+
+M02 investigates which Person Server responsibilities can be supplied by a
+person-controlled wallet and Wallet Attached Storage and which remain in a
+separate AAuth Person Server and SOGA governance service. The Person Server is
+reusable infrastructure; Misty Tip Jar is its first embodied proving mission,
+not its owner or limit.
+
+Stage 1 may obtain clean read-only source checkouts at exact pinned revisions,
+inspect changes since the August assessments, verify licenses and runnable
+status without executing the services, and produce a responsibility/conformance
+matrix. Published AAuth `-10`, later base-protocol editor changes, and the R3
+editor draft must remain separately identified. R3 `per-call` is an
+investigation subject, not adopted protocol behavior.
+
+The current AAuth execution bridge's B-038 inability to derive live authority
+validity, revocation, expiry, delegation depth, elapsed time, and attenuation
+from incoming evidence remains a binding limitation. B-039 requires
+representative approval to remain distinct from the affected person's assent
+or refusal. Wallet, QR, payment, credential, and session possession establish
+none of those authorities by themselves.
+
+Stages 2 through 4 require later PI decisions. No wallet service may run; no
+integration or dependency may be installed; no service may be externally
+exposed; and neither Misty robot may be powered, connected, queried,
+configured, discovered, or actuated under D-035.
+
 ### M01 — Governed Misty A QR Action Precursor
-Status: PHYSICAL ACCEPTANCE RUN COMPLETED; EXIT REVIEW PENDING UNDER D-033
+Status: COMPLETE (accepted 2026-09-06 under D-034)
 
-M01 is a formally named precursor sprint before G28. It uses Misty A to form a
-bounded QR-requested governed-action mission while leaving the roadmap's G28 —
-Governed Misty B Runtime Prototype — unchanged.
-
-The native immutable AAuth Mission and mission log remain the authoritative
-mission representation. Mission Formation may define objective, boundaries,
-allowed and prohibited actions, requirements, risks, acceptance criteria, and
-the proposed finite C1 action catalog. It may not implement the mission.
-
-Claude/Gate 1 and Gemini/AGy Gate 2 independently reviewed the entry proposal
-and issued advisory PASS WITH CONDITIONS rulings. Both recommend the separately
-named precursor disposition. The review chain and HOPE coordination readiness
-record are committed in `knowledge/proposals/`.
-
-D-029 records Deb's Mission Authorization after the corrected mission package
-received independent constitutional Gate 1 and Gate 2 PASS rulings. The
-authorized native mission uses the local test-fixture approver identifier
-`urn:debblabs:person-server:deb-bucci`, mission-agent identifier
-`soga-m01-misty-a-qr-agent-v1`, and sole initial action
-`m01.signal_light`. Codex may implement and validate the bounded QR path on
-fake and loopback recording surfaces only.
-
-Misty A has since been powered under D-030 and read-only connected under D-031.
-The PI adopted serial `20221304273`, MAC `00:d0:ca:01:a2:61`, and current DHCP
-IPv4 `192.168.1.183` as the run-specific binding. Misty Studio returned HTTP
-200; its default dashboard automatically initialized Live Data, including a
-camera preview and distance telemetry; battery displayed 100%. No action
-control or actuation command was used.
-
-The local Person Server remains a test fixture rather than a production or
-durable wallet service. The single D-032 pink-to-yellow execution completed:
-pink was directly observed, both API calls were acknowledged, and the neutral
-appearance was consistent with yellow but not independently measured. G28
-entry, public demonstration, retry, and every other action remain unauthorized.
+M01 completed one bounded governed physical action. The G3100 use was a
+one-time accepted exception and is not precedent. Deb confirmed on 2026-09-06
+that Misty A is powered off and on the shelf. Beryl placement is mandatory
+before every future Misty power-on or access but was not represented as already
+complete. D-032 is exhausted; D-034 authorizes no subsequent robot access and
+does not activate G28.
 
 ### G27 — Embodied Capability and Physical Safety Model
 Status: COMPLETE (activated 2026-08-20; completed 2026-08-30 under D-027)
@@ -346,14 +349,19 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Complete the M01 exit stage gate under D-033:
+Execute M02 Stage 1 only:
 
-1. preserve the D-032 authorization, terminal receipt, and PI observation;
-2. obtain independent Gate 1 and Gate 2 exit recommendations;
-3. present Deb with `ACCEPT`, `REWORK`, or `FAIL` for M01 closure;
-4. secure Misty A behind the Beryl router as the immediate operational
-   follow-up;
-5. keep G28 inactive until a separate PI activation decision.
+1. create or refresh isolated read-only source checkouts at the exact proposed
+   revisions without modifying upstream projects;
+2. verify origin, revision, license, and non-executed runnable documentation for
+   Freewallet, both WAS implementations, the WAS specification, and current
+   AAuth base/R3 editor sources;
+3. inspect and classify material changes since the pinned August evidence;
+4. produce the wallet/WAS/Person Server/SOGA/session/resource responsibility
+   matrix with evidence-level labels;
+5. obtain Gate 1 and Gate 2 review before asking Deb to authorize Stage 2.
 
-Do not enter or rewrite G28. D-032 is exhausted. Do not configure, query, or
-actuate Misty A further, and do not access Misty B, without new authorization.
+Do not run wallet or WAS services, install their dependencies, implement an
+integration, expose a service, enter or rewrite G28, or access either Misty
+robot. Beryl placement remains mandatory before any future Misty power-on or
+access.

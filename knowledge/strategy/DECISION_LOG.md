@@ -433,3 +433,54 @@ API acknowledgment. Record the neutral physical outcome as consistent with
 yellow by PI observation and inference, not independently measured. No
 follow-up query or command was sent. This records evidence but does not close
 M01, activate G28, or authorize further physical action.
+
+## D-034 — Accept and close M01 with Beryl as a pre-next-access prerequisite
+
+PI disposition received on 2026-09-06: **ACCEPT M01**. Gate 1 and Gate 2
+reviewed the exit reconciliation at `ddcdabb` and recommended acceptance after
+the documented corrections. The completed M01 objective was one bounded,
+QR-requested, governed `m01.signal_light` action with truthful separation of API
+acknowledgment, direct pink observation, and the inferred neutral appearance.
+The post-authorization test repair passed the complete 88-test suite.
+
+The Verizon G3100 use remains a one-time accepted exception and creates no
+precedent. Misty A was not moved behind the Beryl router. Deb directly confirmed
+on 2026-09-06 that Misty A is powered off and on the shelf; this is PI-observed
+physical-state evidence, not a software query. Beryl placement is reclassified
+prospectively as a hard prerequisite before every future Misty power-on,
+connection, query, configuration, discovery, demonstration, or actuation. No
+future Misty A network exposure under any router is authorized until that
+placement is confirmed through a later decision.
+
+The runner's decision-log check establishes presence of a durable plaintext
+authorization record; it is not cryptographic or unforgeable. Deb states from
+her own knowledge as PI and physical-asset owner that Misty B is already owned;
+the repository independently establishes neither ownership nor a procurement
+requirement. Unit qualification, isolation, and explicit PI authorization
+remain required before any use.
+
+D-032 is exhausted. D-034 closes M01 but activates no successor mission,
+authorizes no robot access, and does not activate or rewrite G28.
+
+## D-035 — Authorize M02 Stage 1 wallet-assisted Person Server research only
+
+PI authorization received on 2026-09-06. Activate `M02 — Wallet-Assisted AAuth
+Person Server` at Stage 1 current-source research only under the independently
+reviewed mission-formation proposal. Authorize clean read-only source checkouts
+at exact pinned revisions, source-diff inspection, license and documented
+runnable-status verification without service execution, and production of a
+responsibility/conformance matrix.
+
+Stage 1 must keep Freewallet, Wallet Attached Storage, the AAuth Person Server,
+SOGA governance, participant admission, representative authority,
+affected-person assent/refusal, payment/donation, and resource enforcement as
+distinct responsibilities. It must preserve B-038's missing live
+validity/revocation inputs and B-039's independent affected-person path as open
+constraints rather than implying that wallet evidence resolves them. Published
+AAuth `-10`, later editor base changes, and R3 must remain separately sourced;
+R3 `per-call` is research input, not adopted behavior.
+
+D-035 authorizes no wallet or WAS service execution, integration implementation,
+dependency installation, external exposure, production credential use, Misty
+access, or G28 activation. Stages 2 through 4 require later independent review
+and explicit PI authorization.
