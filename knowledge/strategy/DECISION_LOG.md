@@ -484,3 +484,50 @@ D-035 authorizes no wallet or WAS service execution, integration implementation,
 dependency installation, external exposure, production credential use, Misty
 access, or G28 activation. Stages 2 through 4 require later independent review
 and explicit PI authorization.
+
+## D-036 — Authorize M02 Stage 2 bounded localhost Person Server implementation
+
+PI authorization received on 2026-09-06 after the Stage 2 proposal received
+independent PASS results from Claude Gate 1 and Gemini/AGy Gate 2 at
+`2debcd10db5b6a7082b04d339b2bb2967cd6de5b`.
+
+Authorize M02 Stage 2 bounded localhost Person Server implementation, including
+the narrowly described B-038 live-input repair, using test-only identities and
+no execution surface. Authorize a local test-agent acceptance harness and a
+small SQLite-backed local store so restart, transaction, and one-authoritative-
+transition behavior can be stated and tested explicitly. Test and administrative
+fixtures must use a visibly non-protocol `/_test/` namespace.
+
+The implementation must replace spoofable magic-header trust with verified
+test cryptographic bindings; derive supported current validity, expiry,
+revocation, mission, agent, issuer, and audience inputs from retained Person
+Server evidence; keep policy limits separate; and fail closed when a selected
+policy requires unavailable delegation-depth, elapsed-time, or attenuation
+evidence. This is a bounded partial repair of B-038 for the selected local
+person-token profile, not closure of the general backlog item or a conformance
+claim.
+
+No wallet/WAS/Posta service execution or dependency installation, external
+exposure, production credentials, participant-session implementation,
+representative/affected-person policy, Misty access, physical actuation, R3
+implementation, or G28 activation is authorized.
+
+## D-037 — Accept M02 Stage 2 bounded localhost Person Server implementation
+
+PI acceptance received on 2026-09-06 after independent forward and reverse
+implementation gates and post-PASS hardening rechecks returned PASS. Accept and
+authorize committing the bounded localhost Person Server package, D-036,
+synchronized canonical state, B-038 partial-repair status, tests, and review
+evidence. Final verification passed 44/44 focused Stage 2 tests and 132/132
+repository tests before the visible walkthrough harness was added.
+
+The PI additionally required direct terminal-visible evidence before final
+gates. The `m02_person_server walkthrough` harness was added within D-036 to
+show real loopback HTTP, SQLite state, signed mission/action permission reaching
+SOGA, deferred resolution, one-time terminal delivery, and revocation, while
+showing explicitly that no execution surface exists. It must receive a narrow
+independent review before inclusion in the accepted commit.
+
+D-037 does not authorize M02 Stages 3–4, wallet/WAS/Posta service execution,
+external exposure, production credentials, Misty access, physical actuation,
+R3 implementation, or G28 activation.

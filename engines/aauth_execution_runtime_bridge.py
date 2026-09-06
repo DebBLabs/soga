@@ -33,6 +33,8 @@ def _title_case_enum(value: str, default: str) -> str:
 
 def evaluate_aauth_execution_request(
     execution_request: Dict[str, Any],
+    *,
+    verified_authority_state: Dict[str, Any] | None = None,
 ) -> Dict[str, Any]:
     """
     Evaluate an AAuth execution request through SOGA runtime governance.
@@ -97,8 +99,10 @@ def evaluate_aauth_execution_request(
     ):
         reachability = "Reachable"
 
-    runtime = {
-        "authority": {
+    if verified_authority_state is None:
+        # Compatibility-only path for the pre-M02 callers. New Person Server
+        # code must pass state derived from verified retained authority.
+        authority_runtime = {
             "revoked": False,
             "expired": False,
             "delegation_hops": 0,
@@ -110,7 +114,65 @@ def evaluate_aauth_execution_request(
                 "source_protocol": envelope.authority.source_protocol,
                 "authority_id": envelope.authority.authority_id,
             },
-        },
+        }
+    else:
+        required_authority_inputs = {
+            "revoked",
+            "expired",
+            "delegation_hops",
+            "max_delegation_hops",
+            "elapsed_seconds",
+            "max_elapsed_seconds",
+            "attenuated",
+        }
+        missing = required_authority_inputs.difference(verified_authority_state)
+        if missing:
+            raise ValueError(
+                "verified_authority_state is missing required live inputs: "
+                + ", ".join(sorted(missing))
+            )
+        boolean_fields = {"revoked", "expired", "attenuated"}
+        integer_fields = {
+            "delegation_hops",
+            "max_delegation_hops",
+            "elapsed_seconds",
+            "max_elapsed_seconds",
+        }
+        if any(type(verified_authority_state[name]) is not bool for name in boolean_fields):
+            raise TypeError("verified authority flags must be booleans")
+        if any(
+            type(verified_authority_state[name]) is not int
+            or verified_authority_state[name] < 0
+            for name in integer_fields
+        ):
+            raise TypeError("verified authority counts and limits must be non-negative integers")
+        authority_runtime = {
+            name: verified_authority_state[name] for name in required_authority_inputs
+        }
+        authority_runtime["additional_inputs"] = {
+            "source_protocol": envelope.authority.source_protocol,
+            "authority_id": envelope.authority.authority_id,
+            "live_input_source": verified_authority_state.get("source"),
+            "observed_at": verified_authority_state.get("observed_at"),
+            "unavailable": list(verified_authority_state.get("unavailable", ())),
+        }
+        required_authority_facts = set(
+            envelope.policy.get("required_authority_facts", ())
+        )
+        unavailable_authority_facts = set(
+            verified_authority_state.get("unavailable", ())
+        )
+        unavailable_required = required_authority_facts.intersection(
+            unavailable_authority_facts
+        )
+        if unavailable_required:
+            raise ValueError(
+                "required verified authority facts are unavailable: "
+                + ", ".join(sorted(unavailable_required))
+            )
+
+    runtime = {
+        "authority": authority_runtime,
         "subject_agency_state": subject_agency_state,
         "reachability": reachability,
         "execution_context": envelope.execution_context,

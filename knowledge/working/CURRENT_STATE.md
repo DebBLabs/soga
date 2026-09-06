@@ -36,14 +36,17 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 1 research complete and independently reviewed
+Phase: M02 — Stage 2 bounded localhost Person Server implementation authorized
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-035 is exhausted by the completed Stage 1
-research. Stage 2 is not authorized. No wallet service execution,
-implementation, dependency installation, external exposure, Misty access, or
-G28 activation is authorized.
+Active authorization boundary: D-036 authorizes only the reviewed bounded
+localhost Person Server implementation, test-only identities, local acceptance
+harness, SQLite state, and narrow B-038 live-input repair. No wallet/WAS/Posta
+service execution or dependency installation, external exposure, production
+credentials, participant-session or representative/affected-person policy,
+Misty access, physical actuation, R3 implementation, or G28 activation is
+authorized.
 
 ---
 
@@ -88,7 +91,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGE 1 COMPLETE AND GATE-REVIEWED; STAGE 2 NOT AUTHORIZED
+Status: STAGE 1 COMPLETE; STAGE 2 ACCEPTED UNDER D-037, COMMIT PENDING
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -117,11 +120,24 @@ representative approval to remain distinct from the affected person's assent
 or refusal. Wallet, QR, payment, credential, and session possession establish
 none of those authorities by themselves.
 
-Stages 2 through 4 require later PI decisions. D-035 authorizes no further
-research or execution by implication. No wallet service may run; no
-integration or dependency may be installed; no service may be externally
+The Stage 2 proposal in
+`knowledge/proposals/M02_STAGE2_LOCAL_PERSON_SERVER_PROPOSAL_2026-09-06.md`
+received independent PASS results from Claude Gate 1 and Gemini/AGy Gate 2 at
+`2debcd1`. D-036 prospectively authorizes its bounded localhost implementation,
+including the narrow B-038 repair, local test-agent harness, test-only
+cryptographic identities, and explicit SQLite persistence model. Exact
+implementation evidence is recorded in
+`knowledge/proposals/M02_STAGE2_IMPLEMENTATION_EVIDENCE_2026-09-06.md`.
+Claude Gate 1 and Gemini/AGy Gate 2 returned PASS on the implementation and
+again on the post-PASS hardening. The final focused suite passes 44/44 and the
+complete repository suite passes 132/132. D-037 accepts Stage 2 and authorizes
+commit after narrow review of the subsequently added terminal-visible
+walkthrough harness. No later stage is active.
+
+Stages 3 and 4 require later PI decisions. No wallet/WAS/Posta service may run
+and no related dependency may be installed; no service may be externally
 exposed; and neither Misty robot may be powered, connected, queried,
-configured, discovered, or actuated under D-035.
+configured, discovered, or actuated under D-036.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)

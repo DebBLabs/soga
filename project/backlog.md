@@ -1301,7 +1301,7 @@ research evidence.
 
 ## B-038 — Live Authority Validity, Limits, and Revocation on the AAuth Bridge
 
-**Status:** Open — verified implementation gap; no repair authorized
+**Status:** Open — bounded partial repair authorized under D-036; general gap remains
 
 **Concern:**
 
@@ -1330,9 +1330,12 @@ the AAuth bridge's hardcoded values live.
 
 **Boundary:**
 
-This item records a gap only. It does not select a revocation mechanism, modify
-G26 or G27, authorize implementation, enter G28, or authorize external network
-or robot access.
+D-036 authorizes only the Stage 2 local person-token profile to derive its
+supported validity, expiry, revocation, mission, agent, issuer, and audience
+state from authenticated retained Person Server evidence. General authority
+carriers, multi-hop delegation, and unsupported elapsed-time or attenuation
+evidence remain open and must fail closed when required. D-036 does not modify
+G27, enter G28, or authorize external network or robot access.
 
 ---
 
@@ -1429,14 +1432,25 @@ review began because file creation alone is not a dispatch event. The omission
 was detected when the PI questioned the lack of the normally immediate
 response. Creating the two matching signals woke both pollers.
 
+The defect recurred during the M02 Stage 2 proposal gate: Codex created both
+signals, checked once before responses existed, and then stopped coordinating
+instead of continuing the required response-file poll. Both reviewers completed
+normally; the PI again had to identify that only this interface had stopped.
+This recurrence confirms that signal existence is not sufficient evidence of
+either active review or completed review.
+
 **Required process correction:**
 
 - treat request creation and signal creation as one dispatch operation;
 - verify both the request path and matching signal path immediately;
 - confirm that each poller observed the signal before reporting that a review
   is running; and
-- continue polling the response files in the active turn when the PI has asked
-  Codex to coordinate the review.
+- continue bounded polling of both response files in the active turn when the
+  PI has asked Codex to coordinate the review;
+- treat a nonempty response file, not a request or signal file, as the minimum
+  evidence that a reviewer responded; and
+- read each completed response in full before reporting a gate result or
+  proceeding to corrections, authorization, implementation, or commit.
 
 **Boundary:**
 
