@@ -36,13 +36,14 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 Stage 1 — current-source wallet-assisted Person Server research
+Phase: M02 — Stage 1 research complete and independently reviewed
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: Stage 1 research only under D-035. No wallet
-service execution, implementation, dependency installation, external exposure,
-Misty access, or G28 activation is authorized.
+Active authorization boundary: D-035 is exhausted by the completed Stage 1
+research. Stage 2 is not authorized. No wallet service execution,
+implementation, dependency installation, external exposure, Misty access, or
+G28 activation is authorized.
 
 ---
 
@@ -87,7 +88,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGE 1 CURRENT-SOURCE RESEARCH AUTHORIZED UNDER D-035
+Status: STAGE 1 COMPLETE AND GATE-REVIEWED; STAGE 2 NOT AUTHORIZED
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -95,12 +96,19 @@ separate AAuth Person Server and SOGA governance service. The Person Server is
 reusable infrastructure; Misty Tip Jar is its first embodied proving mission,
 not its owner or limit.
 
-Stage 1 may obtain clean read-only source checkouts at exact pinned revisions,
-inspect changes since the August assessments, verify licenses and runnable
-status without executing the services, and produce a responsibility/conformance
-matrix. Published AAuth `-10`, later base-protocol editor changes, and the R3
-editor draft must remain separately identified. R3 `per-call` is an
-investigation subject, not adopted protocol behavior.
+Stage 1 inspected six clean detached source checkouts, verified revisions,
+licenses, documented-but-unexecuted runnable status, and material changes since
+the August evidence, and produced the responsibility/conformance matrix in
+`knowledge/research/M02_STAGE1_WALLET_PERSON_SERVER_CONFORMANCE_REFRESH_2026-09-06.md`.
+Claude Gate 1 and Gemini/AGy Gate 2 independently returned PASS; the durable
+summary is `knowledge/research/M02_STAGE1_REVIEW_EVIDENCE_SUMMARY_2026-09-06.md`.
+
+The evidence supports a hybrid composition hypothesis: wallet UI/keys/evidence,
+WAS protected storage and atomic primitives, a separate AAuth Person Server,
+separate SOGA governance, separately owned participant admission, and
+resource/adapter enforcement. This is not an adopted build/reuse decision.
+Published AAuth `-10`, later base-editor material, and exploratory R3 remain
+separately sourced; R3 `per-call` is not adopted behavior.
 
 The current AAuth execution bridge's B-038 inability to derive live authority
 validity, revocation, expiry, delegation depth, elapsed time, and attenuation
@@ -109,7 +117,8 @@ representative approval to remain distinct from the affected person's assent
 or refusal. Wallet, QR, payment, credential, and session possession establish
 none of those authorities by themselves.
 
-Stages 2 through 4 require later PI decisions. No wallet service may run; no
+Stages 2 through 4 require later PI decisions. D-035 authorizes no further
+research or execution by implication. No wallet service may run; no
 integration or dependency may be installed; no service may be externally
 exposed; and neither Misty robot may be powered, connected, queried,
 configured, discovered, or actuated under D-035.
@@ -349,19 +358,15 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Execute M02 Stage 1 only:
+Present the independently reviewed Stage 1 evidence to Deb for disposition on
+whether to form and authorize a bounded Stage 2 local Person Server proposal.
+Do not infer that authorization from completion of Stage 1.
 
-1. create or refresh isolated read-only source checkouts at the exact proposed
-   revisions without modifying upstream projects;
-2. verify origin, revision, license, and non-executed runnable documentation for
-   Freewallet, both WAS implementations, the WAS specification, and current
-   AAuth base/R3 editor sources;
-3. inspect and classify material changes since the pinned August evidence;
-4. produce the wallet/WAS/Person Server/SOGA/session/resource responsibility
-   matrix with evidence-level labels;
-5. obtain Gate 1 and Gate 2 review before asking Deb to authorize Stage 2.
+Before any Stage 2 decision, preserve the open choices: the hybrid composition
+is only a hypothesis; the AGPL and DID Cooperative license boundaries, exact
+trust messages, B-038 live authority inputs, B-039 affected-person path, and
+participant-session owner remain unresolved.
 
-Do not run wallet or WAS services, install their dependencies, implement an
+Do not run wallet or WAS services, install dependencies, implement an
 integration, expose a service, enter or rewrite G28, or access either Misty
-robot. Beryl placement remains mandatory before any future Misty power-on or
-access.
+robot. Beryl placement remains mandatory before future Misty power-on or access.

@@ -1413,3 +1413,33 @@ empirical answers.
 This item authorizes no sensor use, identity inference, relationship inference,
 public research claim, Misty connection, or G28/G29 entry. It does not claim that
 anthropomorphism or other social effects have been measured in this program.
+
+---
+
+## B-041 — HOPE Request Dispatch Requires a Matching Signal
+
+**Status:** Open — process defect reproduced and corrected during M02 Stage 1
+
+**Concern:**
+
+On 2026-09-06, Codex wrote the M02 Stage 1 Gate 1 and Gate 2 request files into
+the correct Claude and Gemini HOPE queue directories but did not create their
+matching `.signal` files. Both polling processes were healthy, yet neither
+review began because file creation alone is not a dispatch event. The omission
+was detected when the PI questioned the lack of the normally immediate
+response. Creating the two matching signals woke both pollers.
+
+**Required process correction:**
+
+- treat request creation and signal creation as one dispatch operation;
+- verify both the request path and matching signal path immediately;
+- confirm that each poller observed the signal before reporting that a review
+  is running; and
+- continue polling the response files in the active turn when the PI has asked
+  Codex to coordinate the review.
+
+**Boundary:**
+
+This is a coordination-process defect. It does not affect the substance of the
+M02 research report and creates no implementation, service, network, robot, or
+G28 authority.
