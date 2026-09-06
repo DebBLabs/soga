@@ -418,3 +418,18 @@ to type `EXECUTE m01.signal_light` in the terminal. Stop after the terminal
 receipt and PI visual observation. API acknowledgment does not establish
 physical success; physical and neutral outcomes remain unknown until the PI
 records an observation.
+
+## D-033 — Record M01 authorized physical execution outcome
+
+The single D-032 `m01.signal_light` execution occurred on 2026-09-05 through
+the independently reviewed governed runner. One earlier terminal invocation
+cancelled before dispatch because its confirmation did not match. The successful
+invocation reported governance granted and API acknowledgment for both the pink
+signal and yellow neutral commands, with no retry.
+
+The PI directly observed the pink signal. The PI described the final color as
+yellow or green and then concluded it was yellow given the commanded value and
+API acknowledgment. Record the neutral physical outcome as consistent with
+yellow by PI observation and inference, not independently measured. No
+follow-up query or command was sent. This records evidence but does not close
+M01, activate G28, or authorize further physical action.

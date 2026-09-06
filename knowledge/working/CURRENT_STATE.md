@@ -84,7 +84,7 @@ fake-surface, and localhost acceptance scope closed 2026-08-30 under D-027.
 ## Active Work
 
 ### M01 — Governed Misty A QR Action Precursor
-Status: ONE PHYSICAL SIGNAL-LIGHT RUN AUTHORIZED UNDER D-032; NOT YET EXECUTED
+Status: PHYSICAL ACCEPTANCE RUN COMPLETED; EXIT REVIEW PENDING UNDER D-033
 
 M01 is a formally named precursor sprint before G28. It uses Misty A to form a
 bounded QR-requested governed-action mission while leaving the roadmap's G28 —
@@ -116,10 +116,10 @@ camera preview and distance telemetry; battery displayed 100%. No action
 control or actuation command was used.
 
 The local Person Server remains a test fixture rather than a production or
-durable wallet service. Only the single D-032 pink-to-yellow signal-light
-execution is authorized. G28 entry, public demonstration, retry, and every
-other action remain unauthorized. Terminal execution still requires the PI's
-exact confirmation.
+durable wallet service. The single D-032 pink-to-yellow execution completed:
+pink was directly observed, both API calls were acknowledged, and the neutral
+appearance was consistent with yellow but not independently measured. G28
+entry, public demonstration, retry, and every other action remain unauthorized.
 
 ### G27 — Embodied Capability and Physical Safety Model
 Status: COMPLETE (activated 2026-08-20; completed 2026-08-30 under D-027)
@@ -346,20 +346,14 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Complete M01 physical-run preparation under D-029 through D-031:
+Complete the M01 exit stage gate under D-033:
 
-1. preserve the adopted Misty A binding: serial `20221304273`, MAC
-   `00:d0:ca:01:a2:61`, and current DHCP IPv4 `192.168.1.183`;
-2. recheck the router lease immediately before any physical run;
-3. resolve and record network isolation, physical inspection, and independent
-   operator-stop evidence;
-4. obtain Deb's explicit adoption of the candidate pink, one-second, and yellow
-   neutral parameters;
-5. instantiate and independently review the exact physical-run checkpoint;
-6. request separate Physical Execution Authorization only after presenting all
-   evidence and remaining risks.
+1. preserve the D-032 authorization, terminal receipt, and PI observation;
+2. obtain independent Gate 1 and Gate 2 exit recommendations;
+3. present Deb with `ACCEPT`, `REWORK`, or `FAIL` for M01 closure;
+4. secure Misty A behind the Beryl router as the immediate operational
+   follow-up;
+5. keep G28 inactive until a separate PI activation decision.
 
-Do not enter or rewrite G28. D-030 and D-031 permit only their completed
-preparation and read-only verification. Do not configure or actuate Misty A,
-and do not access Misty B, before a later explicit Physical Execution
-Authorization.
+Do not enter or rewrite G28. D-032 is exhausted. Do not configure, query, or
+actuate Misty A further, and do not access Misty B, without new authorization.
