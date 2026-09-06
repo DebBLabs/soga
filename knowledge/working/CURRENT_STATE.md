@@ -84,8 +84,7 @@ fake-surface, and localhost acceptance scope closed 2026-08-30 under D-027.
 ## Active Work
 
 ### M01 — Governed Misty A QR Action Precursor
-Status: ACTIVE AT PHYSICAL-RUN PREPARATION; ACTUATION NOT AUTHORIZED
-(D-029 through D-031)
+Status: ONE PHYSICAL SIGNAL-LIGHT RUN AUTHORIZED UNDER D-032; NOT YET EXECUTED
 
 M01 is a formally named precursor sprint before G28. It uses Misty A to form a
 bounded QR-requested governed-action mission while leaving the roadmap's G28 —
@@ -117,10 +116,10 @@ camera preview and distance telemetry; battery displayed 100%. No action
 control or actuation command was used.
 
 The local Person Server remains a test fixture rather than a production or
-durable wallet service. Physical actuation, G28 entry, and public demonstration
-remain unauthorized. Execution requires a later explicit Physical Execution
-Authorization supported by independent review of the exact live-run checkpoint
-and the inherited G27 evidence.
+durable wallet service. Only the single D-032 pink-to-yellow signal-light
+execution is authorized. G28 entry, public demonstration, retry, and every
+other action remain unauthorized. Terminal execution still requires the PI's
+exact confirmation.
 
 ### G27 — Embodied Capability and Physical Safety Model
 Status: COMPLETE (activated 2026-08-20; completed 2026-08-30 under D-027)

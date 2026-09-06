@@ -396,3 +396,25 @@ as normal website API initialization rather than actuation. The dashboard
 showed 100% battery and a Halt control. No control, configuration, or actuation
 command was sent. This decision records observed evidence only and does not
 authorize physical execution.
+
+## D-032 — Authorize one M01 Misty A physical signal-light execution
+
+PI Physical Execution Authorization received on 2026-09-05. Adopt
+`urn:debblabs:misty-a:20221304273` as the canonical Misty A platform identifier
+for this run and confirm the binding MAC `00:d0:ca:01:a2:61` at current DHCP
+IPv4 `192.168.1.183`. The PI attests that Misty is stable, surroundings are
+clear, battery is 100%, and the PI is present with immediate access to Halt or
+hardware power-off.
+
+Authorize exactly one `m01.signal_light` execution: POST pink
+`(255,105,180)` to `/api/led`, wait 1.0 second, then POST yellow
+`(255,255,0)` to the same endpoint. Authorize no retry and no other endpoint or
+action. For this single Dazza/HOPE acceptance run, the PI accepts use of the
+current G3100 network before moving Misty behind the Beryl router immediately
+afterward.
+
+Execution must use the independently reviewed runner and still requires the PI
+to type `EXECUTE m01.signal_light` in the terminal. Stop after the terminal
+receipt and PI visual observation. API acknowledgment does not establish
+physical success; physical and neutral outcomes remain unknown until the PI
+records an observation.
