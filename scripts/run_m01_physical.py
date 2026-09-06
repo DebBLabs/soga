@@ -18,9 +18,11 @@ PLATFORM_ID = "urn:debblabs:misty-a:20221304273"
 EXPECTED_AUTHORIZATION = "D-032"
 
 
-def authorization_is_recorded() -> bool:
-    decision_log = REPOSITORY_ROOT / "knowledge" / "strategy" / "DECISION_LOG.md"
-    return "## D-032 —" in decision_log.read_text(encoding="utf-8")
+def authorization_is_recorded(decision_text: str | None = None) -> bool:
+    if decision_text is None:
+        decision_log = REPOSITORY_ROOT / "knowledge" / "strategy" / "DECISION_LOG.md"
+        decision_text = decision_log.read_text(encoding="utf-8")
+    return "## D-032 —" in decision_text
 
 
 def main() -> int:
@@ -53,7 +55,10 @@ def main() -> int:
     print("Target:", args.api_base_url)
     print("QR grant:", offer.qr_payload)
     print("Action: pink (255,105,180) for 1.0 second, then yellow (255,255,0)")
-    confirmation = input('Type EXECUTE m01.signal_light and press Enter: ')
+    try:
+        confirmation = input('Type EXECUTE m01.signal_light and press Enter: ')
+    except EOFError:
+        confirmation = ""
     if confirmation != "EXECUTE m01.signal_light":
         raise SystemExit("Physical execution cancelled: confirmation mismatch")
 
