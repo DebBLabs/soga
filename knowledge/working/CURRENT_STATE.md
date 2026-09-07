@@ -36,13 +36,13 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 2 bounded localhost Person Server implementation authorized
+Phase: M02 — Stage 2 bounded localhost Person Server accepted and committed
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-036 authorizes only the reviewed bounded
-localhost Person Server implementation, test-only identities, local acceptance
-harness, SQLite state, and narrow B-038 live-input repair. No wallet/WAS/Posta
+Active authorization boundary: D-037 accepted and authorized committing the
+bounded Stage 2 package; that commit authority was exercised at `ac5cea8`.
+M02 Stages 3 and 4 are not authorized. No wallet/WAS/Posta
 service execution or dependency installation, external exposure, production
 credentials, participant-session or representative/affected-person policy,
 Misty access, physical actuation, R3 implementation, or G28 activation is
@@ -91,7 +91,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGE 1 COMPLETE; STAGE 2 ACCEPTED UNDER D-037, COMMIT PENDING
+Status: STAGE 1 COMPLETE; STAGE 2 ACCEPTED, COMMITTED, AND PUSHED AT `ac5cea8`
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -132,7 +132,30 @@ Claude Gate 1 and Gemini/AGy Gate 2 returned PASS on the implementation and
 again on the post-PASS hardening. The final focused suite passes 44/44 and the
 complete repository suite passes 132/132. D-037 accepts Stage 2 and authorizes
 commit after narrow review of the subsequently added terminal-visible
-walkthrough harness. No later stage is active.
+walkthrough harness. The exact committed hash was subsequently rerun: 44/44
+focused tests and 132/132 repository tests passed. Evidence is recorded in
+`knowledge/proposals/M02_STAGE2_POSTCOMMIT_VERIFICATION_2026-09-07.md`.
+The proposal's public verification-key-document responsibility was narrowed in
+the accepted implementation to test-only HMAC key metadata; it remains an open
+protocol-shaped JWKS decision and is not an AAuth conformance claim.
+No later stage is active.
+
+The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
+`39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
+informative minimal-Person-Server appendix. It does not invalidate Stage 2's
+explicit test-only, nonconformant boundary, but it sharpens the protocol-shaped
+metadata, JWKS, person-token, and authorization-token choices that must be made
+before a later implementation or conformance claim. See
+`knowledge/research/M02_AAUTH_EDITOR_DELTA_2026-09-07.md`.
+
+A temporary persistent-polling pilot proved file transport and shutdown but did
+not prove fresh reviewer reasoning or provide the PI-required live visibility.
+It was not adopted. Real gates remain visible one-shot reviews, with Codex
+responsible for actively monitoring both response files through completion.
+A subsequent synthetic foreground AGy repair invoked fresh reasoning, streamed
+tool activity, completed two sequential requests without restarting the queue
+runner, rejected denied or empty responses as errors, and stopped cleanly. It
+does not support interactive approvals and is not yet adopted for real gates.
 
 Stages 3 and 4 require later PI decisions. No wallet/WAS/Posta service may run
 and no related dependency may be installed; no service may be externally
@@ -374,14 +397,16 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Present the independently reviewed Stage 1 evidence to Deb for disposition on
-whether to form and authorize a bounded Stage 2 local Person Server proposal.
-Do not infer that authorization from completion of Stage 1.
+Gate the Stage 2 post-commit synchronization, AAuth editor delta, and polling
+pilot record. After any corrections, commit and push the synchronized package
+and regenerate the session initialization file. A later Stage 3 proposal may be
+prepared for PI disposition, but no Stage 3 implementation or service execution
+may be inferred from Stage 2 completion.
 
-Before any Stage 2 decision, preserve the open choices: the hybrid composition
-is only a hypothesis; the AGPL and DID Cooperative license boundaries, exact
-trust messages, B-038 live authority inputs, B-039 affected-person path, and
-participant-session owner remain unresolved.
+Preserve the open choices: the hybrid composition remains a hypothesis; the
+AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
+surface, exact trust messages, remaining B-038 authority inputs, B-039
+affected-person path, and participant-session owner remain unresolved.
 
 Do not run wallet or WAS services, install dependencies, implement an
 integration, expose a service, enter or rewrite G28, or access either Misty

@@ -1457,3 +1457,22 @@ either active review or completed review.
 This is a coordination-process defect. It does not affect the substance of the
 M02 research report and creates no implementation, service, network, robot, or
 G28 authority.
+
+**2026-09-07 pilot result:** A PI-authorized synthetic persistent-polling pilot
+proved file transport, sequential dispatch without restart, duplicate and
+missing-request handling, and clean shutdown. It did not prove that queued work
+invokes fresh model reasoning, did not provide the PI-required live terminal
+visibility, omitted the out-of-order and HEAD-mismatch cases, and exposed a
+Claude response-token fidelity difference. Persistent background reviewers are
+not adopted. Real gates continue as visible one-shot reviews, with Codex
+actively monitoring both response files through completion. See
+`knowledge/proposals/HOPE_PERSISTENT_POLLING_PILOT_2026-09-07.md`.
+
+**2026-09-07 foreground repair:** A temporary foreground AGy queue runner
+invoked fresh model reasoning rather than a scripted response, visibly streamed
+tool activity, processed two sequential synthetic requests without restarting
+the runner, and stopped cleanly. An initial out-of-bound search attempt was
+denied; the runner was corrected to classify any denied action or empty response
+as an error. AGy's stream mode cannot display interactive permission prompts,
+so the repair does not authorize unattended approvals or yet adopt persistent
+review for real gates.
