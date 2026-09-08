@@ -554,3 +554,19 @@ reviewed by both gates.
 
 D-038 does not authorize Stage 3B code or tests, Stage 4, public exposure,
 personal data, payment, Misty access, physical actuation, R3, G28, or G29.
+
+## D-039 — Accept M02 Stage 3A as a gated negative result
+
+PI acceptance received on 2026-09-08 after the standalone Stage 3A evidence
+report received PASS results from Claude Gate 1 and Gemini/AGy Gate 2.
+
+Accept M02 Stage 3A as a gated negative result. Authorize committing and
+pushing the standalone evidence report and synchronized canonical state. The
+exact selected Freewallet and WAS sources were acquired, installed from their
+locked dependencies, and built. No candidate service was started: the selected
+WAS executable hardcodes a wildcard `0.0.0.0` listener, which conflicts with
+D-038's literal-loopback boundary and could not be changed or wrapped under
+Stage 3A authority.
+
+Stage 3B remains unauthorized pending a separately reviewed response to the WAS
+wildcard-bind limitation. All other D-038 boundaries remain in force.
