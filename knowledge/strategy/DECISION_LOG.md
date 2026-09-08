@@ -531,3 +531,26 @@ independent review before inclusion in the accepted commit.
 D-037 does not authorize M02 Stages 3–4, wallet/WAS/Posta service execution,
 external exposure, production credentials, Misty access, physical actuation,
 R3 implementation, or G28 activation.
+
+## D-038 — Authorize M02 Stage 3A exact-source runtime reproduction
+
+PI authorization received on 2026-09-07 after the M02 Stage 3 wallet/WAS
+composition proposal received independent PASS results from Claude Gate 1 and
+Gemini/AGy Gate 2.
+
+Authorize M02 Stage 3A exact-source runtime reproduction under the reviewed
+proposal. This authorization permits clean detached checkouts of Freewallet
+`8e806c0` and WAS teaching server `2090a60`, lockfile-pinned dependency
+installation within those checkouts, and test-only literal-loopback execution
+and interface auditing. Package-registry access is permitted only for the
+approved dependency installation; application runtime external-network access
+is prohibited.
+
+Stop if WAS requires Postgres or Docker, Freewallet requires unavailable
+graphical-browser/WebAuthn/WebCrypto support, or either runtime requires source
+modification, external services, production credentials, or undocumented
+trust. Stage 3A must end with services stopped and a standalone evidence report
+reviewed by both gates.
+
+D-038 does not authorize Stage 3B code or tests, Stage 4, public exposure,
+personal data, payment, Misty access, physical actuation, R3, G28, or G29.

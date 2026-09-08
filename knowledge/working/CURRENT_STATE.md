@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-09-06
+Last Updated: 2026-09-07
 
 ---
 
@@ -36,17 +36,18 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 2 bounded localhost Person Server accepted and committed
+Phase: M02 — Stage 3A exact-source runtime reproduction authorized
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-037 accepted and authorized committing the
-bounded Stage 2 package; that commit authority was exercised at `ac5cea8`.
-M02 Stages 3 and 4 are not authorized. No wallet/WAS/Posta
-service execution or dependency installation, external exposure, production
-credentials, participant-session or representative/affected-person policy,
-Misty access, physical actuation, R3 implementation, or G28 activation is
-authorized.
+Active authorization boundary: D-038 authorizes Stage 3A only: clean detached
+checkouts of Freewallet `8e806c0` and WAS teaching server `2090a60`,
+lockfile-pinned dependency installation inside those checkouts, and test-only
+literal-loopback runtime reproduction and interface auditing under the reviewed
+proposal. Package-registry access is limited to that installation; application
+runtime external-network access is prohibited. Stage 3B code or tests, Stage 4,
+public exposure, personal data, payment, Misty access, physical actuation, R3,
+G28, and G29 remain unauthorized.
 
 ---
 
@@ -91,7 +92,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGE 1 COMPLETE; STAGE 2 ACCEPTED, COMMITTED, AND PUSHED AT `ac5cea8`
+Status: STAGES 1–2 COMPLETE; STAGE 3A AUTHORIZED UNDER D-038
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -138,7 +139,16 @@ focused tests and 132/132 repository tests passed. Evidence is recorded in
 The proposal's public verification-key-document responsibility was narrowed in
 the accepted implementation to test-only HMAC key metadata; it remains an open
 protocol-shaped JWKS decision and is not an AAuth conformance claim.
-No later stage is active.
+The Stage 3 wallet/WAS composition proposal in
+`knowledge/proposals/M02_STAGE3_WALLET_WAS_COMPOSITION_PROPOSAL_2026-09-07.md`
+received independent PASS results from Claude Gate 1 and Gemini/AGy Gate 2.
+D-038 authorizes only its Stage 3A exact-source reproduction phase. Stage 3A
+must stop rather than expand if WAS requires Postgres or Docker, Freewallet
+requires unavailable graphical-browser/WebAuthn/WebCrypto support, or either
+runtime requires source modification, external services, production
+credentials, or undocumented trust. It ends with all services stopped and a
+standalone evidence report reviewed by both gates. Stage 3B remains separately
+unauthorized.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -157,10 +167,10 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Stages 3 and 4 require later PI decisions. No wallet/WAS/Posta service may run
-and no related dependency may be installed; no service may be externally
-exposed; and neither Misty robot may be powered, connected, queried,
-configured, discovered, or actuated under D-036.
+Only the exact Stage 3A source, installation, loopback-runtime, and audit work
+described above may proceed. No Stage 3B code or tests may be written; no
+service may be externally exposed; and neither Misty robot may be powered,
+connected, queried, configured, discovered, or actuated under D-038.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -397,17 +407,17 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Gate the Stage 2 post-commit synchronization, AAuth editor delta, and polling
-pilot record. After any corrections, commit and push the synchronized package
-and regenerate the session initialization file. A later Stage 3 proposal may be
-prepared for PI disposition, but no Stage 3 implementation or service execution
-may be inferred from Stage 2 completion.
+Commit and push the D-038 authorization checkpoint. Then conduct Stage 3A only:
+reproduce the exact selected Freewallet and WAS teaching-server sources under
+the reviewed installation, literal-loopback, test-data, and stop conditions.
+End with every service stopped and a standalone evidence report for both gates.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
 surface, exact trust messages, remaining B-038 authority inputs, B-039
 affected-person path, and participant-session owner remain unresolved.
 
-Do not run wallet or WAS services, install dependencies, implement an
-integration, expose a service, enter or rewrite G28, or access either Misty
-robot. Beryl placement remains mandatory before future Misty power-on or access.
+Do not write Stage 3B code or tests, implement an integration, expose a service,
+use personal data or payment, enter or rewrite G28/G29, or access either Misty
+robot. Application runtime external-network access remains prohibited. Beryl
+placement remains mandatory before future Misty power-on or access.

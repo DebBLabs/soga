@@ -1,5 +1,5 @@
 {
-  "gate": "M02_STAGE2_POSTCOMMIT_SYNC_AND_AAUTH_EDITOR_DELTA",
+  "gate": "M02_STAGE3A_EXACT_SOURCE_RUNTIME_REPRODUCTION",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
@@ -26,6 +26,7 @@
     "knowledge/proposals/M02_STAGE2_POSTCOMMIT_VERIFICATION_2026-09-07.md",
     "knowledge/research/M02_AAUTH_EDITOR_DELTA_2026-09-07.md",
     "knowledge/proposals/HOPE_PERSISTENT_POLLING_PILOT_2026-09-07.md",
+    "knowledge/proposals/M02_STAGE3_WALLET_WAS_COMPOSITION_PROPOSAL_2026-09-07.md",
     "project/backlog.md"
   ]
 }

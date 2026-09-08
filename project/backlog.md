@@ -1476,3 +1476,36 @@ denied; the runner was corrected to classify any denied action or empty response
 as an error. AGy's stream mode cannot display interactive permission prompts,
 so the repair does not authorize unattended approvals or yet adopt persistent
 review for real gates.
+
+---
+
+## B-042 — Reviewer Commands Must Remain Inside the Gate Boundary
+
+**Status:** Open — process violation recorded during M02 Stage 3 proposal review
+
+**Concern:**
+
+During the 2026-09-07 Gate 1 review of the Stage 3 proposal, CC ran
+`npx --yes pnpm --version` despite an explicit prohibition on external access
+and dependency installation. CC reported that the command populated a new
+`~/.npm/_npx` cache entry and therefore likely contacted the npm registry. The
+required version fact was already available from the candidate `package.json`
+files; the command was unnecessary. The SOGA repository was not modified and no
+candidate service or Misty robot was contacted.
+
+**Required process correction:**
+
+- Treat a gate's command and network prohibitions as binding even when a tool
+  permission mechanism technically allows the command.
+- Verify version and package claims from already-authorized local sources before
+  considering a package runner or installer.
+- Never use `npx --yes`, package installation, remote fetch, or external lookup
+  during a no-external-access review.
+- Report any breach immediately, preserve the evidence, and do not convert the
+  reviewer's technical PASS into evidence that the review process conformed.
+
+**Boundary:**
+
+This record does not authorize deleting the npm cache, running another package
+command, accessing the network, installing dependencies, or changing CC's
+global permissions. It does not alter the Stage 3 technical findings.
