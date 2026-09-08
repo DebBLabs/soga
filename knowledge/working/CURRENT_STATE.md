@@ -36,16 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R3 Docker containment characterization authorized
+Phase: M02 — Stage 3A-R3 digest-pinned Node image acquisition authorized
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-044 authorizes only Docker readiness and
-local-image inventory, independently reviewed synthetic containment tooling,
-and—if every preflight control passes—bounded reachability testing of the exact
-Freewallet `8e806c0` and WAS `2090a60` builds. No image or dependency acquisition
-is authorized. Stage 3B and every activity excluded by D-044 remain
-unauthorized.
+Active authorization boundary: D-045 authorizes exactly one pull and isolated
+verification of the full-digest `linux/arm64` Node image selected in the
+independently reviewed acquisition proposal. It does not authorize containment
+preflight or candidate execution. Stage 3B and every activity excluded by
+D-045 remain unauthorized.
 
 ---
 
@@ -90,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 AUTHORIZED UNDER D-044
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 IMAGE ACQUISITION AUTHORIZED UNDER D-045
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -191,6 +190,17 @@ script, and complete cleanup. Claude Gate 1 and Gemini/AGy Gate 2 returned PASS
 on the proposal and its precision corrections. D-044 authorizes only that
 Stage 3A-R3 characterization and conditional candidate reachability attempt.
 
+Phase 0 found Docker Desktop `28.5.2` on `linux/arm64`, no fixed-name R3
+resources or fixed-port listeners, and only two cached Python A2A/GNAP images.
+Because no local Node 24+ image existed, D-044's no-acquisition boundary stopped
+the attempt before scripts, containers, networks, registry access, or candidate
+execution. Both gates confirmed the evidence at
+`knowledge/research/M02_STAGE3AR3_DOCKER_CONTAINMENT_EVIDENCE_2026-09-08.md`.
+They also verified the Docker Official Image selection and full arm64 manifest
+digest in
+`knowledge/proposals/M02_STAGE3AR3_NODE_IMAGE_ACQUISITION_PROPOSAL_2026-09-08.md`.
+D-045 authorizes only its one pinned pull and isolated Node version check.
+
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
 informative minimal-Person-Server appendix. It does not invalidate Stage 2's
@@ -208,12 +218,12 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only the Stage 3A-R3 readiness inventory and creation of reviewable synthetic
-preflight/startup tooling may proceed. No such script may execute until both
-gates pass it, and no candidate may start unless every synthetic control passes.
-No Stage 3B code or tests may be written. No service may be externally exposed;
-neither Misty robot may be powered, connected, queried, configured, discovered,
-or actuated.
+Only the D-045 digest-pinned image pull, metadata inspection, and isolated
+network-disabled Node version check may proceed. Containment tooling may not be
+written or executed until the acquisition evidence passes both gates. No
+candidate may start and no Stage 3B code or tests may be written. No service may
+be externally exposed; neither Misty robot may be powered, connected, queried,
+configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -450,11 +460,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the D-044 authorization checkpoint. Then perform Docker
-readiness and immutable local-image inventory. If readiness permits, create the
-synthetic preflight and candidate-startup scripts and obtain both independent
-reviews before executing either script. Do not start a candidate unless every
-synthetic containment control passes.
+Commit and push the D-045 authorization checkpoint. Then perform exactly one
+pull of the selected full-digest `linux/arm64` image, verify its immutable local
+metadata, run only the isolated network-disabled Node version check, clean the
+verification container, and prepare standalone acquisition evidence for both
+gates. Do not begin containment preflight tooling or candidate execution.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -465,4 +475,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-044.
+separate PI routine-tool-approval proposal remains unadopted and outside D-045.

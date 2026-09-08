@@ -664,3 +664,29 @@ D-044 authorizes no image pull, build, load, import, registry access,
 dependency operation, source modification, Stage 3B work, wallet interaction,
 Person Server integration, external exposure, personal data, payment, Misty
 access, physical actuation, R3 protocol work, G28, or G29.
+
+## D-045 — Authorize digest-pinned Node image acquisition for Stage 3A-R3
+
+PI authorization received on 2026-09-08 after Claude Gate 1 and Gemini/AGy
+Gate 2 independently confirmed the Stage 3A-R3 Phase 0 stop and returned PASS
+on the digest-pinned image-acquisition proposal.
+
+Authorize acquisition and verification of the exact `linux/arm64` Node image
+identified by full digest in
+`knowledge/proposals/M02_STAGE3AR3_NODE_IMAGE_ACQUISITION_PROPOSAL_2026-09-08.md`,
+with every boundary and exclusion in that proposal remaining in force. The
+selected reference is
+`docker.io/library/node@sha256:e9b5516b06baeaea9a8e65a7aec6a85fbb960a30b52b66968f2c8092b3e2a3eb`.
+
+D-045 permits exactly one digest-pinned pull for `linux/arm64`, only the
+anonymous Docker Hub token exchange and content-layer downloads intrinsic to
+that pull, local immutable metadata verification, and one disposable
+network-disabled `node --version` verification container under the reviewed
+isolation and resource controls. Exact Node `v24.20.0`, cleanup, standalone
+evidence, and both post-execution gates are required.
+
+D-045 authorizes no Docker login, other image, mutable-tag reliance, mirror
+substitution, build, load, import, tag, push, package operation, containment
+preflight, port publication, candidate execution, Stage 3B, wallet interaction,
+Person Server integration, external exposure, personal data, payment, Misty
+access, physical actuation, R3 protocol work, G28, or G29.
