@@ -36,16 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R2 fixed-port containment authorized
+Phase: M02 — Stage 3A-R2 accepted negative result; containment unresolved
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-042 authorizes only the independently reviewed
-Stage 3A-R2 fixed-port containment preflight and bounded research harness using
-the existing exact Freewallet `8e806c0` and WAS `2090a60` build outputs, fixed
-ports `46321` and `46322`, and temporary test-only storage. Every pre-start
-control must pass and every process and listener must stop afterward. Stage 3B
-and every activity excluded by the proposal remain unauthorized.
+Active authorization boundary: D-043 accepts Stage 3A-R2 only as a gated
+negative result. No R2 launcher, preflight program, or sandbox profile is
+adopted. Stage 3B remains unauthorized pending a separately reviewed
+containment decision, and every activity excluded by D-042 remains
+unauthorized.
 
 ---
 
@@ -90,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R2 AUTHORIZED UNDER D-042
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R2 ACCEPTED NEGATIVE UNDER D-043
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -171,7 +170,15 @@ while retaining literal `127.0.0.1` application listeners and URLs. Its
 preflight distinguishes sandbox denial from ordinary refusal and characterizes
 wildcard, IPv6, other-loopback-port, and TEST-NET behavior before either
 candidate may start. Claude Gate 1 and Gemini/AGy Gate 2 returned PASS. D-042
-authorizes only that Stage 3A-R2 attempt.
+authorized only that Stage 3A-R2 attempt. The literal IPv4 nonce exchange
+passed and other-port and TEST-NET connections were denied, but the same
+symbolic-`localhost` rule admitted a prohibited `0.0.0.0` wildcard bind. The
+pre-start control failed, so the launcher was never executed and neither
+candidate was imported, served, or started. The temporary profile, preflight,
+and launcher were removed rather than adopted. The standalone report at
+`knowledge/research/M02_STAGE3AR2_FIXED_PORT_CONTAINMENT_EVIDENCE_2026-09-08.md`
+received final PASS from both gates and was accepted under D-043. Stage 3B
+remains unauthorized pending a separately reviewed containment decision.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -190,10 +197,10 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only the Stage 3A-R2 preflight, harness, and runtime evidence described under
-D-042 may proceed. No Stage 3B code or tests may be written. No service may be
-externally exposed; neither Misty robot may be powered, connected, queried,
-configured, discovered, or actuated.
+No Stage 3A-R2 machinery is adopted and no further containment or candidate
+execution is authorized. No Stage 3B code or tests may be written. No service
+may be externally exposed; neither Misty robot may be powered, connected,
+queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -430,11 +437,10 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the D-042 authorization checkpoint. Then execute only the
-reviewed Stage 3A-R2 fixed-port preflight and, if every control passes, the
-bounded candidate reachability harness. Stop all processes and listeners and
-prepare a standalone evidence report for both gates. Do not infer Stage 3B
-authority from any successful result.
+Hold at the Stage 3A-R2 negative result. Before any further runtime reproduction
+or Stage 3B work, prepare and independently review a containment decision that
+addresses the demonstrated wildcard-bind failure. Do not reuse the removed R2
+machinery or infer Stage 3B authority from the accepted research result.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -444,4 +450,5 @@ affected-person path, and participant-session owner remain unresolved.
 Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
-placement remains mandatory before future Misty power-on or access.
+placement remains mandatory before future Misty power-on or access. The
+separate PI routine-tool-approval proposal remains unadopted and outside D-043.

@@ -620,3 +620,22 @@ pass and all processes and listeners to stop afterward.
 
 Stage 3B and all other activities excluded by the reviewed proposal remain
 unauthorized.
+
+## D-043 — Accept M02 Stage 3A-R2 as a gated negative result
+
+PI acceptance received on 2026-09-08 after the Stage 3A-R2 evidence report and
+removal correction received PASS results from Claude Gate 1 and Gemini/AGy
+Gate 2.
+
+Accept M02 Stage 3A-R2 as a gated negative result. Authorize committing and
+pushing the standalone evidence report and synchronized canonical state. The
+fixed-port symbolic-`localhost` sandbox profile passed the literal IPv4 nonce
+exchange and denied a different loopback port and TEST-NET, but it also admitted
+the prohibited `0.0.0.0` wildcard bind. The required pre-start control therefore
+failed and neither candidate was imported, served, or started.
+
+No R2 launcher, preflight program, or sandbox profile is adopted; the temporary
+research machinery was removed before acceptance and the standalone report
+preserves the executed profile and complete preflight output. Stage 3B remains
+unauthorized pending a separately reviewed containment decision. All D-042
+boundaries remain in force.
