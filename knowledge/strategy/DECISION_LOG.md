@@ -589,3 +589,19 @@ D-040 authorizes no dependency installation or registry access, upstream source
 modification, Stage 3B code or tests, wallet interaction, Person Server
 integration, external exposure, personal data, payment, Misty access, physical
 actuation, R3, G28, or G29.
+
+## D-041 — Accept M02 Stage 3A-R as a gated negative result
+
+PI acceptance received on 2026-09-08 after the Stage 3A-R evidence report and
+its archival correction received PASS results from Claude Gate 1 and
+Gemini/AGy Gate 2.
+
+Accept M02 Stage 3A-R as a gated negative result. Authorize committing and
+pushing the standalone evidence report and synchronized canonical state. No
+launcher or sandbox profile is adopted. The reviewed literal-IP sandbox profile
+failed parsing before Node, any synthetic socket, or either candidate ran. The
+unsafe unexecuted research machinery was removed; its material profile text and
+review findings remain in the standalone evidence record.
+
+Stage 3B remains unauthorized pending a separately reviewed containment
+approach. All D-040 boundaries remain in force.

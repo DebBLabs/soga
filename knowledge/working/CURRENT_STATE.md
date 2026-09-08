@@ -36,18 +36,17 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R source-supported loopback recovery authorized
+Phase: M02 — Stage 3A-R accepted as a gated negative result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-040 authorizes only the reviewed Stage 3A-R
-research launcher using the existing exact Freewallet `8e806c0` and WAS
-`2090a60` build outputs, documented WAS package-root exports, temporary
-test-only storage, finite limits, verified OS-level network containment, and
-literal `127.0.0.1` listeners. Stage 3B code or tests, dependency installation
-or registry access, upstream source modification, wallet interaction, Person
-Server integration, external exposure, personal data, payment, Misty access,
-physical actuation, R3, G28, and G29 remain unauthorized.
+Active authorization boundary: D-041 accepts only the Stage 3A-R gated negative
+result, standalone evidence report, and canonical synchronization. No launcher
+or sandbox profile is adopted. Stage 3B remains unauthorized pending a
+separately reviewed containment approach. All D-040 exclusions remain in force,
+including dependency installation or registry access, upstream modification,
+wallet interaction, Person Server integration, external exposure, personal
+data, payment, Misty access, physical actuation, R3, G28, and G29.
 
 ---
 
@@ -92,7 +91,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R AUTHORIZED UNDER D-040
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R ACCEPTED AS NEGATIVE RESULT UNDER D-041
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -157,9 +156,14 @@ The response proposal at
 uses the selected WAS package's documented library-composition seam so a
 SOGA-owned research launcher, rather than upstream protocol code, owns the
 literal-loopback listener. After required containment corrections, Claude Gate
-1 and Gemini/AGy Gate 2 returned PASS. D-040 authorizes only that recovery
-execution and requires the OS-level containment preflight to pass before either
-candidate starts and all listeners to be absent afterward.
+1 and Gemini/AGy Gate 2 returned PASS. D-040 authorized only that recovery
+attempt. The exact reviewed macOS sandbox profile rejected literal
+`127.0.0.1` during parsing, before Node or either candidate ran. The unsafe
+unexecuted launcher and profile were removed rather than adopted. The standalone
+report at
+`knowledge/research/M02_STAGE3AR_LOOPBACK_RECOVERY_EVIDENCE_2026-09-08.md`
+received final PASS from both gates and was accepted under D-041. Stage 3B
+remains unauthorized pending a separately reviewed containment approach.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -178,10 +182,10 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only the Stage 3A-R launcher and bounded runtime evidence described under D-040
-may proceed. No Stage 3B code or tests may be written. No service may be
-externally exposed; neither Misty robot may be powered, connected, queried,
-configured, discovered, or actuated.
+Stage 3A-R is complete as a negative result. No launcher or sandbox profile is
+adopted and no candidate service may start under D-041. No Stage 3B code or
+tests may be written. No service may be externally exposed; neither Misty robot
+may be powered, connected, queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -418,11 +422,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the D-040 authorization checkpoint. Then execute only the
-reviewed Stage 3A-R recovery: prove containment first, run the exact built
-packages through the documented composition on literal loopback, stop every
-service, and prepare a standalone evidence report for both gates. Do not infer
-Stage 3B authority from a successful recovery.
+Commit and push the D-041 Stage 3A-R negative-result evidence and synchronized
+canonical state. Before any further candidate execution or Stage 3B
+disposition, prepare and independently review a different containment approach.
+Do not infer authority to recreate the removed launcher or profile, substitute
+`localhost`, start either candidate, or write Stage 3B code or tests.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
