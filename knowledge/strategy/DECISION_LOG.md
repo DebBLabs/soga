@@ -690,3 +690,20 @@ substitution, build, load, import, tag, push, package operation, containment
 preflight, port publication, candidate execution, Stage 3B, wallet interaction,
 Person Server integration, external exposure, personal data, payment, Misty
 access, physical actuation, R3 protocol work, G28, or G29.
+
+## D-046 — Accept Stage 3A-R3 digest-pinned Node image acquisition
+
+PI acceptance received on 2026-09-08 after the standalone acquisition evidence
+received PASS results from Claude Gate 1 and Gemini/AGy Gate 2.
+
+Accept M02 Stage 3A-R3 digest-pinned Node image acquisition and isolated
+verification as a gated positive result. Authorize committing and pushing the
+standalone acquisition evidence and synchronized canonical state. The exact
+`linux/arm64` Docker Official Image selected under D-045 is locally retained by
+full digest and returned Node `v24.20.0` in the reviewed network-disabled,
+disposable verification container. Cleanup was independently confirmed.
+
+Proceed under D-044 to create, but not execute, the synthetic containment
+preflight and candidate-startup scripts for full independent review. Neither
+script, the containment preflight, nor any candidate may run until both script
+reviews pass. Stage 3B and all other D-044 and D-045 exclusions remain in force.

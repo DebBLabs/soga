@@ -36,15 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R3 digest-pinned Node image acquisition authorized
+Phase: M02 — Stage 3A-R3 containment scripts authorized for creation and review
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-045 authorizes exactly one pull and isolated
-verification of the full-digest `linux/arm64` Node image selected in the
-independently reviewed acquisition proposal. It does not authorize containment
-preflight or candidate execution. Stage 3B and every activity excluded by
-D-045 remain unauthorized.
+Active authorization boundary: D-046 accepts the full-digest Node image
+acquisition and authorizes creation—but not execution—of the Stage 3A-R3
+synthetic containment preflight and candidate-startup scripts. Both scripts
+must pass both independent reviews before either may run. Stage 3B and every
+activity excluded by D-044 and D-045 remain unauthorized.
 
 ---
 
@@ -89,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 IMAGE ACQUISITION AUTHORIZED UNDER D-045
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 SCRIPT CREATION AUTHORIZED UNDER D-046
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -199,7 +199,14 @@ execution. Both gates confirmed the evidence at
 They also verified the Docker Official Image selection and full arm64 manifest
 digest in
 `knowledge/proposals/M02_STAGE3AR3_NODE_IMAGE_ACQUISITION_PROPOSAL_2026-09-08.md`.
-D-045 authorizes only its one pinned pull and isolated Node version check.
+D-045 authorized only its one pinned pull and isolated Node version check. The
+full-digest image was acquired once, immutable metadata matched, and the
+network-disabled disposable verification returned exact Node `v24.20.0`.
+Cleanup left no R3 container, network, or fixed-port listener. Both gates
+returned PASS on
+`knowledge/research/M02_STAGE3AR3_NODE_IMAGE_ACQUISITION_EVIDENCE_2026-09-08.md`,
+and D-046 accepts that result and permits only creation and review of the R3
+scripts.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -218,10 +225,10 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only the D-045 digest-pinned image pull, metadata inspection, and isolated
-network-disabled Node version check may proceed. Containment tooling may not be
-written or executed until the acquisition evidence passes both gates. No
-candidate may start and no Stage 3B code or tests may be written. No service may
+Only creation and independent review of the Stage 3A-R3 synthetic containment
+preflight and candidate-startup scripts may proceed. Neither script may execute
+until both reviews pass, and no candidate may start unless every synthetic
+control later passes. No Stage 3B code or tests may be written. No service may
 be externally exposed; neither Misty robot may be powered, connected, queried,
 configured, discovered, or actuated.
 
@@ -460,11 +467,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the D-045 authorization checkpoint. Then perform exactly one
-pull of the selected full-digest `linux/arm64` image, verify its immutable local
-metadata, run only the isolated network-disabled Node version check, clean the
-verification container, and prepare standalone acquisition evidence for both
-gates. Do not begin containment preflight tooling or candidate execution.
+Commit and push the D-046 acceptance checkpoint. Then create the complete
+synthetic containment preflight and candidate-startup scripts and send their
+full contents to both gates. Do not execute either script, create an R3 network
+or container, publish a port, or start either candidate before both reviews
+return PASS.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -475,4 +482,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-045.
+separate PI routine-tool-approval proposal remains unadopted and outside D-046.

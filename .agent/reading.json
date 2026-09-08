@@ -1,5 +1,5 @@
 {
-  "gate": "M02_STAGE3A_R3_NODE_IMAGE_ACQUISITION",
+  "gate": "M02_STAGE3A_R3_SCRIPT_REVIEW",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
@@ -35,6 +35,7 @@
     "knowledge/proposals/M02_STAGE3AR3_DOCKER_CONTAINMENT_PROPOSAL_2026-09-08.md",
     "knowledge/research/M02_STAGE3AR3_DOCKER_CONTAINMENT_EVIDENCE_2026-09-08.md",
     "knowledge/proposals/M02_STAGE3AR3_NODE_IMAGE_ACQUISITION_PROPOSAL_2026-09-08.md",
+    "knowledge/research/M02_STAGE3AR3_NODE_IMAGE_ACQUISITION_EVIDENCE_2026-09-08.md",
     "project/backlog.md"
   ]
 }

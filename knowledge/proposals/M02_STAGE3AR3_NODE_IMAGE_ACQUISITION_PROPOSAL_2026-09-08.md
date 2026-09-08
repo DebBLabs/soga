@@ -1,7 +1,7 @@
 # M02 Stage 3A-R3 Proposal — Digest-Pinned Node Image Acquisition
 
 Date: 2026-09-08
-Status: AUTHORIZED UNDER D-045 — ACQUISITION NOT YET STARTED
+Status: COMPLETED AND ACCEPTED UNDER D-046
 Prepared from checkpoint: `main @ 4aaca2b`
 
 ## Purpose
