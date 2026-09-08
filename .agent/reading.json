@@ -1,5 +1,5 @@
 {
-  "gate": "M02_STAGE3A_R_ACCEPTED_NEGATIVE_RESULT",
+  "gate": "M02_STAGE3A_R2_FIXED_PORT_CONTAINMENT",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
@@ -30,6 +30,7 @@
     "knowledge/research/M02_STAGE3A_EXACT_SOURCE_RUNTIME_EVIDENCE_2026-09-08.md",
     "knowledge/proposals/M02_STAGE3A_LOOPBACK_RECOVERY_PROPOSAL_2026-09-08.md",
     "knowledge/research/M02_STAGE3AR_LOOPBACK_RECOVERY_EVIDENCE_2026-09-08.md",
+    "knowledge/proposals/M02_STAGE3AR2_FIXED_PORT_CONTAINMENT_PROPOSAL_2026-09-08.md",
     "project/backlog.md"
   ]
 }

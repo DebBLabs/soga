@@ -605,3 +605,18 @@ review findings remain in the standalone evidence record.
 
 Stage 3B remains unauthorized pending a separately reviewed containment
 approach. All D-040 boundaries remain in force.
+
+## D-042 — Authorize M02 Stage 3A-R2 fixed-port containment
+
+PI authorization received on 2026-09-08 after the fixed-port containment
+proposal received PASS results from Claude Gate 1 and Gemini/AGy Gate 2.
+
+Authorize M02 Stage 3A-R2 fixed-port containment under the independently
+reviewed proposal. Permit creation and execution of the bounded research
+harness and preflight using the existing exact Freewallet `8e806c0` and WAS
+`2090a60` build outputs, fixed ports `46321` and `46322`, temporary test-only
+storage, and the reviewed sandbox controls. Require all pre-start controls to
+pass and all processes and listeners to stop afterward.
+
+Stage 3B and all other activities excluded by the reviewed proposal remain
+unauthorized.
