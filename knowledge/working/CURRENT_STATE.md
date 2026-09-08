@@ -36,16 +36,18 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A accepted as a gated negative result
+Phase: M02 — Stage 3A-R source-supported loopback recovery authorized
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-039 accepts and authorizes committing the
-Stage 3A negative-result evidence and canonical synchronization. Stage 3B
-remains unauthorized pending a separately reviewed response to the selected WAS
-executable's hardcoded wildcard listener. All D-038 prohibitions remain in
-force, including Stage 3B code or tests, Stage 4, public exposure, personal
-data, payment, Misty access, physical actuation, R3, G28, and G29.
+Active authorization boundary: D-040 authorizes only the reviewed Stage 3A-R
+research launcher using the existing exact Freewallet `8e806c0` and WAS
+`2090a60` build outputs, documented WAS package-root exports, temporary
+test-only storage, finite limits, verified OS-level network containment, and
+literal `127.0.0.1` listeners. Stage 3B code or tests, dependency installation
+or registry access, upstream source modification, wallet interaction, Person
+Server integration, external exposure, personal data, payment, Misty access,
+physical actuation, R3, G28, and G29 remain unauthorized.
 
 ---
 
@@ -90,7 +92,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A ACCEPTED AS NEGATIVE RESULT UNDER D-039
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R AUTHORIZED UNDER D-040
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -150,6 +152,15 @@ received PASS from both gates and was accepted as a negative result under
 D-039. Stage 3B remains separately unauthorized pending a reviewed response to
 the wildcard-bind limitation.
 
+The response proposal at
+`knowledge/proposals/M02_STAGE3A_LOOPBACK_RECOVERY_PROPOSAL_2026-09-08.md`
+uses the selected WAS package's documented library-composition seam so a
+SOGA-owned research launcher, rather than upstream protocol code, owns the
+literal-loopback listener. After required containment corrections, Claude Gate
+1 and Gemini/AGy Gate 2 returned PASS. D-040 authorizes only that recovery
+execution and requires the OS-level containment preflight to pass before either
+candidate starts and all listeners to be absent afterward.
+
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
 informative minimal-Person-Server appendix. It does not invalidate Stage 2's
@@ -167,10 +178,10 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Stage 3A is complete. No Stage 3B code or tests may be written and neither
-candidate service may be started under D-039. No service may be externally
-exposed; neither Misty robot may be powered, connected, queried, configured,
-discovered, or actuated.
+Only the Stage 3A-R launcher and bounded runtime evidence described under D-040
+may proceed. No Stage 3B code or tests may be written. No service may be
+externally exposed; neither Misty robot may be powered, connected, queried,
+configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -407,11 +418,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the D-039 Stage 3A negative-result evidence and synchronized
-canonical state. Before any Stage 3B disposition, prepare and independently
-review a response to the WAS wildcard-bind limitation. Do not infer authority
-to patch upstream source, create a wrapper, select another revision, start a
-candidate service, or write Stage 3B code or tests.
+Commit and push the D-040 authorization checkpoint. Then execute only the
+reviewed Stage 3A-R recovery: prove containment first, run the exact built
+packages through the documented composition on literal loopback, stop every
+service, and prepare a standalone evidence report for both gates. Do not infer
+Stage 3B authority from a successful recovery.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server

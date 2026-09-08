@@ -570,3 +570,22 @@ Stage 3A authority.
 
 Stage 3B remains unauthorized pending a separately reviewed response to the WAS
 wildcard-bind limitation. All other D-038 boundaries remain in force.
+
+## D-040 — Authorize M02 Stage 3A-R source-supported loopback recovery
+
+PI authorization received on 2026-09-08 after the recovery proposal and its
+network-containment corrections received PASS results from Claude Gate 1 and
+Gemini/AGy Gate 2.
+
+Authorize M02 Stage 3A-R source-supported loopback recovery under the reviewed
+proposal. Permit a bounded SOGA research launcher using the exact existing
+Freewallet `8e806c0` and WAS `2090a60` build outputs, WAS's documented
+package-root exports, temporary test-only storage, finite limits, and literal
+`127.0.0.1` listeners. Require the OS-level network-containment preflight to
+pass before either candidate starts, and require all services and listeners
+stopped afterward.
+
+D-040 authorizes no dependency installation or registry access, upstream source
+modification, Stage 3B code or tests, wallet interaction, Person Server
+integration, external exposure, personal data, payment, Misty access, physical
+actuation, R3, G28, or G29.

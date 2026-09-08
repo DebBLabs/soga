@@ -1,5 +1,5 @@
 {
-  "gate": "M02_STAGE3A_ACCEPTED_NEGATIVE_RESULT",
+  "gate": "M02_STAGE3A_R_LOOPBACK_RECOVERY",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
@@ -28,6 +28,7 @@
     "knowledge/proposals/HOPE_PERSISTENT_POLLING_PILOT_2026-09-07.md",
     "knowledge/proposals/M02_STAGE3_WALLET_WAS_COMPOSITION_PROPOSAL_2026-09-07.md",
     "knowledge/research/M02_STAGE3A_EXACT_SOURCE_RUNTIME_EVIDENCE_2026-09-08.md",
+    "knowledge/proposals/M02_STAGE3A_LOOPBACK_RECOVERY_PROPOSAL_2026-09-08.md",
     "project/backlog.md"
   ]
 }
