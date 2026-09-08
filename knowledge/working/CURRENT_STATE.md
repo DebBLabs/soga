@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-09-07
+Last Updated: 2026-09-08
 
 ---
 
@@ -36,15 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R3 containment scripts authorized for creation and review
+Phase: M02 — Stage 3A-R3 synthetic containment preflight authorized
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-046 accepts the full-digest Node image
-acquisition and authorizes creation—but not execution—of the Stage 3A-R3
-synthetic containment preflight and candidate-startup scripts. Both scripts
-must pass both independent reviews before either may run. Stage 3B and every
-activity excluded by D-044 and D-045 remain unauthorized.
+Active authorization boundary: D-047 authorizes execution of only the
+independently reviewed Stage 3A-R3 synthetic Docker containment preflight.
+Candidate startup requires a passing preflight and separate PI authorization.
+Stage 3B and every activity excluded by D-044 through D-046 remain
+unauthorized.
 
 ---
 
@@ -89,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 SCRIPT CREATION AUTHORIZED UNDER D-046
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 SYNTHETIC PREFLIGHT AUTHORIZED UNDER D-047
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -205,8 +205,11 @@ network-disabled disposable verification returned exact Node `v24.20.0`.
 Cleanup left no R3 container, network, or fixed-port listener. Both gates
 returned PASS on
 `knowledge/research/M02_STAGE3AR3_NODE_IMAGE_ACQUISITION_EVIDENCE_2026-09-08.md`,
-and D-046 accepts that result and permits only creation and review of the R3
-scripts.
+and D-046 accepts that result and permits creation and review of the R3
+scripts. Both complete scripts subsequently received PASS results from Claude
+Gate 1 and Gemini/AGy Gate 2 after fail-closed cleanup, collision preservation,
+deterministic selection, holdpoint timing, and bounded diagnostics corrections.
+D-047 authorizes execution of only the synthetic containment preflight.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -225,12 +228,11 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only creation and independent review of the Stage 3A-R3 synthetic containment
-preflight and candidate-startup scripts may proceed. Neither script may execute
-until both reviews pass, and no candidate may start unless every synthetic
-control later passes. No Stage 3B code or tests may be written. No service may
-be externally exposed; neither Misty robot may be powered, connected, queried,
-configured, discovered, or actuated.
+Only the Stage 3A-R3 synthetic containment preflight may execute. Candidate
+startup remains prohibited unless every synthetic control passes and the PI
+separately authorizes proceeding. No Stage 3B code or tests may be written. No
+service may be externally exposed; neither Misty robot may be powered,
+connected, queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -467,11 +469,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the D-046 acceptance checkpoint. Then create the complete
-synthetic containment preflight and candidate-startup scripts and send their
-full contents to both gates. Do not execute either script, create an R3 network
-or container, publish a port, or start either candidate before both reviews
-return PASS.
+Commit the exact independently reviewed Stage 3A-R3 scripts and D-047
+authorization checkpoint. Execute only the synthetic containment preflight,
+capture standalone evidence, and send that evidence to both gates. Do not run
+the candidate-startup script or start either candidate without a passing
+preflight and separate PI authorization.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -482,4 +484,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-046.
+separate PI routine-tool-approval proposal remains unadopted and outside D-047.

@@ -707,3 +707,22 @@ Proceed under D-044 to create, but not execute, the synthetic containment
 preflight and candidate-startup scripts for full independent review. Neither
 script, the containment preflight, nor any candidate may run until both script
 reviews pass. Stage 3B and all other D-044 and D-045 exclusions remain in force.
+
+## D-047 — Authorize Stage 3A-R3 synthetic containment preflight execution
+
+PI authorization received on 2026-09-08 after the complete synthetic
+containment preflight and candidate-startup scripts received PASS results from
+Claude Gate 1 and Gemini/AGy Gate 2. The reviewed corrections make functional
+success contingent on cleanup success, preserve pre-existing resource
+collisions, make asset selection deterministic, start the candidate holdpoint
+only after both services are ready, and bound failure diagnostics.
+
+Authorize execution of only the independently reviewed M02 Stage 3A-R3
+synthetic Docker containment preflight, using the exact digest-pinned image and
+reviewed script. Complete cleanup and a standalone evidence report reviewed by
+both gates are required.
+
+Candidate startup remains prohibited unless the synthetic preflight passes and
+the PI separately authorizes proceeding. Stage 3B and all D-044 through D-046
+exclusions remain in force. The separate PI routine-tool-approval proposal is
+unadopted and outside this decision.
