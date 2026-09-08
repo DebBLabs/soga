@@ -639,3 +639,28 @@ research machinery was removed before acceptance and the standalone report
 preserves the executed profile and complete preflight output. Stage 3B remains
 unauthorized pending a separately reviewed containment decision. All D-042
 boundaries remain in force.
+
+## D-044 — Authorize M02 Stage 3A-R3 Docker containment characterization
+
+PI authorization received on 2026-09-08 after the Docker containment proposal
+and its precision corrections received PASS results from Claude Gate 1 and
+Gemini/AGy Gate 2.
+
+Authorize Docker Desktop startup, daemon readiness and local-image inventory,
+creation and execution of the independently reviewed synthetic containment
+preflight, and—only if every preflight control passes—bounded reachability
+testing of exact Freewallet `8e806c0` and WAS `2090a60` build outputs in two
+disposable containers. Use only a selected immutable, already-local Node 24+
+image, fixed host ports `127.0.0.1:46321` and `127.0.0.1:46322`, an internal
+Docker network, temporary test-only storage, finite limits, and the reviewed
+isolation controls.
+
+Every privilege, license, subscription, update, network-access, or security
+prompt is a PI holdpoint. Every preflight or startup script must receive both
+independent reviews before execution. Require complete cleanup and standalone
+evidence reviewed by both gates.
+
+D-044 authorizes no image pull, build, load, import, registry access,
+dependency operation, source modification, Stage 3B work, wallet interaction,
+Person Server integration, external exposure, personal data, payment, Misty
+access, physical actuation, R3 protocol work, G28, or G29.
