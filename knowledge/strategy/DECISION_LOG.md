@@ -726,3 +726,21 @@ Candidate startup remains prohibited unless the synthetic preflight passes and
 the PI separately authorizes proceeding. Stage 3B and all D-044 through D-046
 exclusions remain in force. The separate PI routine-tool-approval proposal is
 unadopted and outside this decision.
+
+## D-048 — Accept Stage 3A-R3 synthetic containment preflight as a negative result
+
+PI acceptance received on 2026-09-08 after the standalone synthetic preflight
+evidence received PASS results from Claude Gate 1 and Gemini/AGy Gate 2.
+
+Accept M02 Stage 3A-R3 synthetic containment preflight as a gated negative
+result. The internal Docker network passed its initial control, but the
+literal-loopback synthetic nonce endpoint did not become ready within the
+finite readiness window. The preflight exited nonzero and cleanup was confirmed:
+no R3 container, R3 network, or fixed-port listener remained. No candidate was
+started or contacted.
+
+Authorize committing and pushing the standalone evidence report and
+synchronized canonical state. Candidate startup remains prohibited. Any
+diagnosis, script modification, repeated preflight, or alternative containment
+attempt requires a separately reviewed proposal and authorization. Stage 3B
+and all D-047 exclusions remain in force.

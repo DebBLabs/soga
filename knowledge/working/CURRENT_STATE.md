@@ -36,15 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R3 synthetic containment preflight authorized
+Phase: M02 — Stage 3A-R3 synthetic containment preflight completed negative
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-047 authorizes execution of only the
-independently reviewed Stage 3A-R3 synthetic Docker containment preflight.
-Candidate startup requires a passing preflight and separate PI authorization.
-Stage 3B and every activity excluded by D-044 through D-046 remain
-unauthorized.
+Active authorization boundary: D-048 accepts the Stage 3A-R3 synthetic Docker
+containment preflight as a gated negative result. Candidate startup remains
+prohibited. Diagnosis, script modification, repetition, or an alternative
+containment attempt requires a separately reviewed proposal and authorization.
+Stage 3B and every D-047 exclusion remain in force.
 
 ---
 
@@ -89,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 SYNTHETIC PREFLIGHT AUTHORIZED UNDER D-047
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 SYNTHETIC PREFLIGHT NEGATIVE UNDER D-048
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -209,7 +209,14 @@ and D-046 accepts that result and permits creation and review of the R3
 scripts. Both complete scripts subsequently received PASS results from Claude
 Gate 1 and Gemini/AGy Gate 2 after fail-closed cleanup, collision preservation,
 deterministic selection, holdpoint timing, and bounded diagnostics corrections.
-D-047 authorizes execution of only the synthetic containment preflight.
+D-047 authorized execution of only the synthetic containment preflight. The
+preflight created and verified its internal network, but its literal-loopback
+nonce endpoint did not become ready within the finite window. It failed closed
+with exit status 1 and cleanup left no R3 container, network, or fixed-port
+listener. No candidate ran. Both gates returned PASS on the standalone evidence
+at
+`knowledge/research/M02_STAGE3AR3_SYNTHETIC_PREFLIGHT_EVIDENCE_2026-09-08.md`,
+and D-048 accepts the run as a gated negative result.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -228,10 +235,10 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only the Stage 3A-R3 synthetic containment preflight may execute. Candidate
-startup remains prohibited unless every synthetic control passes and the PI
-separately authorizes proceeding. No Stage 3B code or tests may be written. No
-service may be externally exposed; neither Misty robot may be powered,
+Candidate startup remains prohibited. Diagnosis, script modification, another
+preflight, or an alternative containment attempt requires a separately
+reviewed proposal and authorization. No Stage 3B code or tests may be written.
+No service may be externally exposed; neither Misty robot may be powered,
 connected, queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
@@ -469,11 +476,10 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit the exact independently reviewed Stage 3A-R3 scripts and D-047
-authorization checkpoint. Execute only the synthetic containment preflight,
-capture standalone evidence, and send that evidence to both gates. Do not run
-the candidate-startup script or start either candidate without a passing
-preflight and separate PI authorization.
+Pause at the accepted D-048 negative checkpoint. Before any further R3 attempt,
+prepare a bounded diagnosis/recovery proposal for independent review and PI
+authorization. Do not rerun the preflight, modify its scripts, run the
+candidate-startup script, or start either candidate under the current boundary.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
