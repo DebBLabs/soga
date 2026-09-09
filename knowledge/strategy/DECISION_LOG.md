@@ -784,3 +784,33 @@ and a standalone evidence report reviewed by both gates are required.
 Candidate startup and every D-049 exclusion remain prohibited. Any additional
 run, script modification, candidate access, or expanded diagnosis requires a
 new reviewed proposal or authorization as applicable.
+
+## D-051 — Accept corrected Stage 3A-R3 diagnostic preflight as a negative result
+
+PI acceptance received on 2026-09-09 after the standalone corrected diagnostic
+preflight evidence received PASS results from Claude Gate 1 and Gemini/AGy Gate
+2. Gate 1 independently reproduced the post-run cleanup checks; Gate 2 verified
+the complete report, committed script, decision boundary, and interpretation
+using file-read-only inspection.
+
+Accept M02 Stage 3A-R3 corrected diagnostic preflight as a gated negative
+containment result with positive server-health discrimination. The corrected
+preflight made 49 host-loopback connection attempts over approximately 9.8
+seconds. At the diagnostic point, the synthetic container remained running,
+its bounded log contained `LISTENING_OK`, and its internal self-readiness probe
+received the expected nonce. The evidence therefore localizes the observed
+failure to the host-publication path for the exact tested topology without
+identifying a particular Docker component or rule and without generalizing to
+other hosts or configurations.
+
+The later non-loopback-host and container-egress controls did not run, so the
+complete containment preflight did not pass. Cleanup was independently
+confirmed: no matching R3 container, R3 network, or fixed-port listener
+remained. No candidate, wallet, Person Server integration, Stage 3B path, or
+Misty system was started or accessed.
+
+Authorize committing and pushing the standalone evidence report and
+synchronized canonical state. The one D-050 execution is consumed. Candidate
+startup remains prohibited. Any additional run, script change, comparison,
+alternative containment design, or candidate access requires separate review
+and prospective authorization. All D-050 exclusions remain in force.

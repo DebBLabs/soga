@@ -36,15 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R3 corrected diagnostic preflight authorized once
+Phase: M02 — Stage 3A-R3 corrected diagnostic preflight accepted as a negative result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-050 accepts the independently reviewed
-corrected `tools/m02_stage3ar3/preflight.py` and authorizes exactly one
-synthetic diagnostic execution after the exact reviewed file is committed and
-pushed. Candidate startup, any additional run or modification, Stage 3B, and
-every D-049 exclusion remain prohibited.
+Active authorization boundary: D-051 accepts the corrected diagnostic
+preflight as a gated negative containment result. The one D-050 execution is
+consumed. Candidate startup, any additional run or script change, comparison,
+alternative containment design, Stage 3B, and every D-050 exclusion remain
+prohibited pending separate review and prospective authorization.
 
 ---
 
@@ -89,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; ONE STAGE 3A-R3 DIAGNOSTIC PREFLIGHT AUTHORIZED UNDER D-050
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 DIAGNOSTIC PREFLIGHT ACCEPTED NEGATIVE UNDER D-051
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -233,6 +233,19 @@ and cleanup-dependent final success. D-050 accepts that reviewed script and
 authorizes its exact committed version to execute once, followed by independent
 cleanup verification and dual-gate evidence review.
 
+That one corrected diagnostic execution made 49 host-loopback connection
+attempts over approximately 9.8 seconds. The host never reached the synthetic
+nonce endpoint, while bounded container state and logs plus an internal
+self-readiness probe established that the synthetic server was running and
+serving the expected nonce inside the container. This is positive server-health
+discrimination and localizes the observed failure to the host-publication path
+for the exact tested topology; it does not identify a specific Docker component
+or generalize to other environments. The later non-loopback-host and egress
+controls did not run, so containment did not pass. Independent checks confirmed
+complete cleanup. Both gates returned PASS on
+`knowledge/research/M02_STAGE3AR3_DIAGNOSTIC_PREFLIGHT_EVIDENCE_2026-09-09.md`,
+and D-051 accepts the run as a gated negative result.
+
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
 informative minimal-Person-Server appendix. It does not invalidate Stage 2's
@@ -250,11 +263,12 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only the one D-050 synthetic diagnostic preflight may execute after its exact
-reviewed version is committed and pushed. Candidate startup and any additional
-preflight remain prohibited. No Stage 3B code or tests may be written. No
-service may be externally exposed; neither Misty robot may be powered,
-connected, queried, configured, discovered, or actuated.
+The one D-050 synthetic diagnostic execution is consumed. Candidate startup,
+any additional preflight or diagnostic, script change, comparison, or
+alternative containment design remains prohibited pending separate review and
+prospective authorization. No Stage 3B code or tests may be written. No service
+may be externally exposed; neither Misty robot may be powered, connected,
+queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -491,10 +505,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the exact corrected synthetic preflight accepted under D-050,
-execute it once, independently verify cleanup, and prepare a standalone evidence
-report for both gates. Do not modify or run the candidate-startup script or
-start either candidate.
+Stop at the accepted Stage 3A-R3 negative result. Before any further work,
+separately review and prospectively authorize a containment decision grounded
+in the host-publication-path evidence. Do not modify or rerun the preflight,
+modify or run the candidate-startup script, compare alternative configurations,
+or start either candidate.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -505,4 +520,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-047.
+separate PI routine-tool-approval proposal remains unadopted and outside D-051.
