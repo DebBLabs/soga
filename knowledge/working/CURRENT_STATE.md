@@ -40,11 +40,13 @@ Phase: M02 — Stage 3A-R4 internal-only preflight accepted as a negative result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-054 accepts the R4 internal-only synthetic
-preflight as a gated negative result at its in-container IPv6 control. The one
-D-053 execution is consumed. Candidate startup or access, IPv6-specific
-diagnosis, any additional execution or script change, Stage 3B, and every D-053
-exclusion remain prohibited pending separate review and authorization.
+Active authorization boundary: D-055 authorizes creation—but not execution—of
+the bounded R4 IPv6 control diagnosis script after the complete corrected
+proposal received PASS from both gates. The one D-053 execution is consumed.
+The complete unexecuted diagnostic script must receive PASS from both gates
+before commit or execution. Docker execution, candidate startup or access,
+another R4 preflight, reachability testing, MCP invocation, external services,
+Stage 3B, Misty access, and policy change remain prohibited.
 
 ---
 
@@ -89,7 +91,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R4 PREFLIGHT ACCEPTED NEGATIVE UNDER D-054
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R4 IPV6 DIAGNOSIS SCRIPT CREATED UNDER D-055
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -295,8 +297,9 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-The D-050 and D-053 executions are consumed. Candidate startup or access,
-further R3 work, IPv6-specific diagnosis, additional R4 execution or
+The D-050 and D-053 executions are consumed. D-055 authorizes only creation and
+dual review of the bounded IPv6 diagnosis script; it authorizes no execution.
+Candidate startup or access, further R3 work, additional R4 execution or
 modification, and any Stage 3B code or tests remain prohibited. No service may
 be externally exposed; neither Misty robot may be powered, connected, queried,
 configured, discovered, or actuated.
@@ -536,11 +539,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Stop at the accepted R4 negative result. Any IPv6-specific diagnosis, script
-change, additional execution, alternative containment design, or candidate
-access requires a separately reviewed proposal and prospective authorization.
-Do not modify or rerun either accepted R3 script, run the candidate-startup
-script, compare configurations, or start a candidate.
+Complete dual-gate full-file review of the unexecuted IPv6 diagnosis script
+created under D-055. Do not execute or commit it before both reviews pass.
+Execution requires a later separate prospective PI authorization. Do not modify
+or rerun either accepted R3/R4 preflight, run the candidate-startup script,
+compare configurations, or start a candidate.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -551,4 +554,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-054.
+separate PI routine-tool-approval proposal remains unadopted and outside D-055.

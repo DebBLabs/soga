@@ -890,3 +890,27 @@ startup and access remain prohibited. Any IPv6-specific diagnosis, script
 change, additional execution, alternative containment design, or candidate
 access requires separate review and prospective authorization. All D-053
 exclusions remain in force.
+
+## D-055 — Authorize Stage 3A-R4 IPv6 diagnosis script creation
+
+PI acceptance and authorization received on 2026-09-09 after the complete
+`knowledge/proposals/M02_STAGE3AR4_IPV6_CONTROL_DIAGNOSIS_PROPOSAL_2026-09-09.md`
+received PASS from Claude Gate 1 and Gemini/AGy Gate 2. Gate 1 initially found
+that the pre-start inventory both prohibited enumeration and required an
+undefined classification of MCP-related resources. The corrected proposal
+separates internal inspection from emitted output and replaces classification
+with two objective holdpoints: zero pre-existing running Docker containers and
+zero Docker-published host ports. Both gates then returned PASS with no required
+corrections.
+
+Accept the M02 Stage 3A-R4 IPv6 control diagnosis proposal as independently
+reviewed. Authorize Phase 1 script creation only: create, but do not execute,
+the bounded diagnostic script under the exact reviewed proposal. Require both
+independent reviewers to read the complete script and return PASS before commit
+or execution.
+
+No Docker execution, candidate startup or access, R4 preflight repetition,
+reachability testing, MCP invocation, external service, Stage 3B, Misty access,
+or policy change is authorized. Phase 2 requires the exact script to be
+committed after both reviews and a separate prospective PI authorization for
+one execution.
