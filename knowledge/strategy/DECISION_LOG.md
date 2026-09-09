@@ -860,3 +860,33 @@ Candidate startup and access, Freewallet or WAS execution, Stage 3B, wallet
 interaction, Person Server integration, external services, Misty access, and
 every D-052 exclusion remain prohibited. Any additional execution or script
 change requires separate prospective authorization.
+
+## D-054 — Accept Stage 3A-R4 internal-only preflight as a negative result
+
+PI acceptance received on 2026-09-09 after the standalone R4 internal-only
+synthetic preflight evidence received PASS results from Claude Gate 1 and
+Gemini/AGy Gate 2. Gate 1 independently reproduced the cleanup checks; Gate 2
+verified the complete report, committed script, decision boundary, and control
+sequence using file-read-only inspection.
+
+Accept M02 Stage 3A-R4 internal-only synthetic preflight as a gated negative
+result at the in-container IPv6 control. Docker-level inspection reported the
+internal network IPv6-disabled and the server endpoint without an IPv6 address
+or gateway, while the separate in-container kernel check returned the combined
+category `ipv6_present`. That category establishes only that a non-loopback IPv6
+address or a default-route record was observed; it does not identify which,
+establish usable IPv6, host, or external reachability, or establish candidate
+containment.
+
+Both synthetic processes were healthy at the stop point. The later readiness,
+inter-container, host-publication, TEST-NET, gateway, host-alias, and DNS
+controls did not run. Cleanup was independently confirmed: no matching R4
+container, R4 network, or fixed-port listener remained. No candidate or
+external system was started or accessed.
+
+Authorize committing and pushing the standalone evidence report and
+synchronized canonical state. The one D-053 execution is consumed. Candidate
+startup and access remain prohibited. Any IPv6-specific diagnosis, script
+change, additional execution, alternative containment design, or candidate
+access requires separate review and prospective authorization. All D-053
+exclusions remain in force.

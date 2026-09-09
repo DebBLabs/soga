@@ -36,15 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — One Stage 3A-R4 internal-only synthetic preflight authorized
+Phase: M02 — Stage 3A-R4 internal-only preflight accepted as a negative result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-053 accepts the independently reviewed R4
-synthetic preflight script and authorizes its exact committed version to execute
-once using only cached synthetic resources. Candidate startup or access, any
-additional execution or script change, Stage 3B, and every D-052 exclusion
-remain prohibited.
+Active authorization boundary: D-054 accepts the R4 internal-only synthetic
+preflight as a gated negative result at its in-container IPv6 control. The one
+D-053 execution is consumed. Candidate startup or access, IPv6-specific
+diagnosis, any additional execution or script change, Stage 3B, and every D-053
+exclusion remain prohibited pending separate review and authorization.
 
 ---
 
@@ -89,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; ONE STAGE 3A-R4 SYNTHETIC PREFLIGHT AUTHORIZED UNDER D-053
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R4 PREFLIGHT ACCEPTED NEGATIVE UNDER D-054
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -265,6 +265,19 @@ failure handling within the monotonic deadline. D-053 accepts the exact reviewed
 script and authorizes one execution after commit and push, followed by
 independent cleanup verification and dual-gate evidence review.
 
+That one R4 execution passed preconditions, cached-image verification, both
+network inspections, and server isolation. Docker reported IPv6 disabled and
+no server endpoint IPv6 address or gateway, but the in-container kernel check
+returned the combined category `ipv6_present`, meaning either a non-loopback
+IPv6 address or a default-route record was observed. The bounded category does
+not distinguish which and establishes no usable IPv6, host, or external
+reachability. The run stopped before readiness, inter-container exchange, and
+all later path controls. Both synthetic processes were healthy at the stop
+point, and independent checks confirmed complete cleanup. Both gates returned
+PASS on
+`knowledge/research/M02_STAGE3AR4_INTERNAL_ONLY_PREFLIGHT_EVIDENCE_2026-09-09.md`,
+and D-054 accepts the run as a gated negative result.
+
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
 informative minimal-Person-Server appendix. It does not invalidate Stage 2's
@@ -282,12 +295,11 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-The one D-050 diagnostic execution is consumed. Only one execution of the exact
-committed R4 synthetic preflight is authorized under D-053. Candidate startup
-or access, further R3 work, additional R4 execution or modification, and any
-Stage 3B code or tests remain prohibited. No service may be externally exposed;
-neither Misty robot may be powered, connected, queried, configured, discovered,
-or actuated.
+The D-050 and D-053 executions are consumed. Candidate startup or access,
+further R3 work, IPv6-specific diagnosis, additional R4 execution or
+modification, and any Stage 3B code or tests remain prohibited. No service may
+be externally exposed; neither Misty robot may be powered, connected, queried,
+configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -524,10 +536,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Commit and push the exact reviewed R4 synthetic preflight, execute it once under
-D-053, independently verify cleanup, and prepare a standalone evidence report
-for both gates. Do not modify or rerun either accepted R3 script, run the
-candidate-startup script, compare configurations, or start a candidate.
+Stop at the accepted R4 negative result. Any IPv6-specific diagnosis, script
+change, additional execution, alternative containment design, or candidate
+access requires a separately reviewed proposal and prospective authorization.
+Do not modify or rerun either accepted R3 script, run the candidate-startup
+script, compare configurations, or start a candidate.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -538,4 +551,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-053.
+separate PI routine-tool-approval proposal remains unadopted and outside D-054.
