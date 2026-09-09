@@ -764,3 +764,23 @@ Both independent reviewers must read the complete corrected script and return
 PASS before it is committed or executed. Candidate startup, Docker execution,
 preflight repetition, Stage 3B, candidate access, external services, Misty
 access, and every other proposal exclusion remain prohibited.
+
+## D-050 — Accept and authorize one corrected Stage 3A-R3 diagnostic preflight
+
+PI acceptance and authorization received on 2026-09-09 after the complete
+corrected `tools/m02_stage3ar3/preflight.py` received PASS results from Claude
+Gate 1 and Gemini/AGy Gate 2. The reviewed script repairs path-dependent
+readiness timing, removes Node evaluation and argument ambiguity, captures
+bounded container and self-readiness diagnostics, gives every subprocess a
+finite timeout, redacts host LAN addresses, and makes success contingent on
+best-effort complete cleanup and absence verification.
+
+Accept the corrected synthetic diagnostic preflight as independently reviewed.
+Authorize committing and pushing the exact reviewed script, then executing it
+once under the committed recovery proposal using only the cached digest-pinned
+Node image and synthetic resources. Independent post-run cleanup verification
+and a standalone evidence report reviewed by both gates are required.
+
+Candidate startup and every D-049 exclusion remain prohibited. Any additional
+run, script modification, candidate access, or expanded diagnosis requires a
+new reviewed proposal or authorization as applicable.

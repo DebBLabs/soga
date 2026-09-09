@@ -1,5 +1,5 @@
 {
-  "gate": "M02_STAGE3A_R3_DIAGNOSTIC_SCRIPT_CREATION",
+  "gate": "M02_STAGE3A_R3_DIAGNOSTIC_PREFLIGHT_EXECUTION",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",

@@ -36,16 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R3 diagnostic recovery script creation authorized
+Phase: M02 — Stage 3A-R3 corrected diagnostic preflight authorized once
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-049 authorizes modification of only
-`tools/m02_stage3ar3/preflight.py` to create—but not execute—the corrected
-synthetic diagnostic preflight under the independently reviewed recovery
-proposal. Both reviewers must read the complete corrected script and return
-PASS before commit or execution. Candidate startup, Docker execution, preflight
-repetition, Stage 3B, and every proposal exclusion remain prohibited.
+Active authorization boundary: D-050 accepts the independently reviewed
+corrected `tools/m02_stage3ar3/preflight.py` and authorizes exactly one
+synthetic diagnostic execution after the exact reviewed file is committed and
+pushed. Candidate startup, any additional run or modification, Stage 3B, and
+every D-049 exclusion remain prohibited.
 
 ---
 
@@ -90,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 DIAGNOSTIC SCRIPT CREATION AUTHORIZED UNDER D-049
+Status: STAGES 1–2 COMPLETE; ONE STAGE 3A-R3 DIAGNOSTIC PREFLIGHT AUTHORIZED UNDER D-050
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -227,6 +226,13 @@ received PASS from both gates after corrections. D-049 authorizes creation—but
 not execution—of the corrected synthetic preflight and requires complete-file
 PASS reviews before commit or execution.
 
+The complete corrected file then received PASS from both gates. It uses a
+wall-clock readiness deadline, bounded and normalized diagnostics, explicit
+subprocess timeouts, a named synthetic gateway value, host-address redaction,
+and cleanup-dependent final success. D-050 accepts that reviewed script and
+authorizes its exact committed version to execute once, followed by independent
+cleanup verification and dual-gate evidence review.
+
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
 informative minimal-Person-Server appendix. It does not invalidate Stage 2's
@@ -244,12 +250,11 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-Only the D-049 modification of `tools/m02_stage3ar3/preflight.py` may proceed.
-The corrected script may not be committed or executed before both complete-file
-reviews return PASS. Candidate startup and another preflight remain prohibited.
-No Stage 3B code or tests may be written. No service may be externally exposed;
-neither Misty robot may be powered, connected, queried, configured, discovered,
-or actuated.
+Only the one D-050 synthetic diagnostic preflight may execute after its exact
+reviewed version is committed and pushed. Candidate startup and any additional
+preflight remain prohibited. No Stage 3B code or tests may be written. No
+service may be externally exposed; neither Misty robot may be powered,
+connected, queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -486,10 +491,10 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Create only the corrected synthetic preflight authorized by D-049, then send
-the complete file to both gates. Do not commit, compile, import, or execute it
-before both reviews return PASS. Do not modify or run the candidate-startup
-script or start either candidate.
+Commit and push the exact corrected synthetic preflight accepted under D-050,
+execute it once, independently verify cleanup, and prepare a standalone evidence
+report for both gates. Do not modify or run the candidate-startup script or
+start either candidate.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
