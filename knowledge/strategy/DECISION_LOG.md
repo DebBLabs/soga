@@ -914,3 +914,44 @@ reachability testing, MCP invocation, external service, Stage 3B, Misty access,
 or policy change is authorized. Phase 2 requires the exact script to be
 committed after both reviews and a separate prospective PI authorization for
 one execution.
+
+## D-056 — Authorize one Stage 3A-R4 IPv6 diagnosis execution
+
+PI authorization received on 2026-09-09 after the exact diagnosis proposal,
+D-055, synchronized state, and `tools/m02_stage3ar4/ipv6_diagnosis.py` were
+committed and pushed at `aac9b7d46d40bf27599d6a64866343e12111224d`. Claude
+Gate 1 and Gemini/AGy Gate 2 read the complete unexecuted script and returned
+PASS after cleanup-reporting corrections. The exact committed script has not
+been executed, imported, compiled, linted, or tested.
+
+Authorize one Phase 2 execution of the exact committed M02 Stage 3A-R4 IPv6
+diagnosis script at `aac9b7d` under D-055. Require all pre-start holdpoints,
+finite limits, fail-closed cleanup, independent cleanup verification, a
+standalone evidence report, and review by both gates.
+
+No R4 preflight repetition, candidate startup or access, reachability testing,
+MCP invocation, external service, Stage 3B, Misty access, or policy change is
+authorized. This one execution is consumed when the process starts, including
+if it stops at a pre-start holdpoint or fails.
+
+## D-057 — Accept Stage 3A-R4 IPv6 diagnosis as a negative result
+
+PI acceptance received on 2026-09-09 after the standalone D-056 evidence
+received PASS from Claude Gate 1 and Gemini/AGy Gate 2. Gate 1 independently
+confirmed that no fixed diagnostic container, diagnostic network, or inherited
+port listener remained. Both gates verified that the exact committed script
+stopped at the configured-binding holdpoint before image inspection, resource
+creation, procfs reading, or any IPv6 diagnosis.
+
+Accept M02 Stage 3A-R4 IPv6 diagnosis as a gated negative result at the
+pre-start configured-binding holdpoint. The bounded inventory observed zero
+running Docker containers and two configured `HostConfig.PortBindings` across
+the stopped-container inventory. That count does not establish two active host
+listeners and identifies no unrelated container or port. The result establishes
+no IPv6 condition and no candidate containment.
+
+Authorize committing and pushing D-056, this acceptance, the standalone
+evidence report, and synchronized canonical state. No environment inspection
+or change, binding identification or removal, holdpoint revision, rerun,
+candidate access, Stage 3B, MCP invocation, external service, Misty access, or
+policy change is authorized.

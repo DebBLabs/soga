@@ -36,16 +36,16 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R4 internal-only preflight accepted as a negative result
+Phase: M02 — Stage 3A-R4 IPv6 diagnosis accepted as a negative result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-055 authorizes creation—but not execution—of
-the bounded R4 IPv6 control diagnosis script after the complete corrected
-proposal received PASS from both gates. The one D-053 execution is consumed.
-The complete unexecuted diagnostic script must receive PASS from both gates
-before commit or execution. Docker execution, candidate startup or access,
-another R4 preflight, reachability testing, MCP invocation, external services,
+Active authorization boundary: D-057 accepts the consumed D-056 IPv6 diagnosis
+as a gated negative result at its pre-start configured-binding holdpoint. It
+created no diagnostic resource, read no procfs state, and produced no IPv6
+finding. Another diagnosis or R4 preflight, environmental inspection or
+change, binding identification or removal, holdpoint revision, candidate
+startup or access, reachability testing, MCP invocation, external services,
 Stage 3B, Misty access, and policy change remain prohibited.
 
 ---
@@ -91,7 +91,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R4 IPV6 DIAGNOSIS SCRIPT CREATED UNDER D-055
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R4 IPV6 DIAGNOSIS ACCEPTED NEGATIVE UNDER D-057
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -539,11 +539,11 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Complete dual-gate full-file review of the unexecuted IPv6 diagnosis script
-created under D-055. Do not execute or commit it before both reviews pass.
-Execution requires a later separate prospective PI authorization. Do not modify
-or rerun either accepted R3/R4 preflight, run the candidate-startup script,
-compare configurations, or start a candidate.
+Stop at the accepted D-057 negative result. Do not inspect or change the
+unrelated configured bindings, revise the holdpoint, rerun the diagnosis,
+modify or rerun either accepted R3/R4 preflight, run the candidate-startup
+script, compare configurations, or start a candidate. Any new direction
+requires a separately reviewed proposal and prospective PI authorization.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
