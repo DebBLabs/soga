@@ -744,3 +744,23 @@ synchronized canonical state. Candidate startup remains prohibited. Any
 diagnosis, script modification, repeated preflight, or alternative containment
 attempt requires a separately reviewed proposal and authorization. Stage 3B
 and all D-047 exclusions remain in force.
+
+## D-049 — Authorize Stage 3A-R3 diagnostic recovery Phase 1 script creation
+
+PI authorization received on 2026-09-09 after
+`knowledge/proposals/M02_STAGE3AR3_PREFLIGHT_DIAGNOSIS_RECOVERY_PROPOSAL_2026-09-09.md`
+received PASS results from Claude Gate 1 and Gemini/AGy Gate 2, including a
+recheck of its cleanup tradeoff, complete interpretation set, and prospective
+authorization sequence.
+
+Authorize M02 Stage 3A-R3 diagnostic recovery Phase 1 under that independently
+reviewed proposal. Permit modification of only
+`tools/m02_stage3ar3/preflight.py` to create—but not execute—the corrected
+synthetic diagnostic preflight, including bounded readiness timing, container
+state and log capture, self-readiness probing, explicit subprocess timeouts,
+async probe compatibility, and fail-closed cleanup controls.
+
+Both independent reviewers must read the complete corrected script and return
+PASS before it is committed or executed. Candidate startup, Docker execution,
+preflight repetition, Stage 3B, candidate access, external services, Misty
+access, and every other proposal exclusion remain prohibited.
