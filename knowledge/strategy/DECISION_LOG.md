@@ -814,3 +814,26 @@ synchronized canonical state. The one D-050 execution is consumed. Candidate
 startup remains prohibited. Any additional run, script change, comparison,
 alternative containment design, or candidate access requires separate review
 and prospective authorization. All D-050 exclusions remain in force.
+
+## D-052 — Authorize Stage 3A-R4 internal-only preflight script creation
+
+PI authorization received on 2026-09-09 after
+`knowledge/proposals/M02_STAGE3AR4_INTERNAL_ONLY_CONTAINMENT_PROPOSAL_2026-09-09.md`
+received PASS results from Claude Gate 1 and Gemini/AGy Gate 2. The corrected
+proposal makes the claimed result IPv4-only, treats gateway or host-alias active
+refusal as disqualifying reachability, excludes Docker embedded-DNS forwarding
+from its claim, covers current and legacy Docker Desktop aliases, prohibits
+namespace sharing, and keeps precondition and cleanup failures distinct.
+
+Authorize M02 Stage 3A-R4 Phase 1 script creation under the independently
+reviewed internal-only containment proposal. Permit creation—but not execution—
+of the new R4 synthetic preflight script using the exact cached digest-pinned
+Node image specification, two isolated synthetic containers, no host
+publication, IPv4-only internal networking, bounded probes, redaction, finite
+limits, and fail-closed cleanup. Do not modify the accepted R3 scripts.
+
+Both independent reviewers must read the complete R4 script and return PASS
+before it is committed or executed. Docker execution, candidate startup or
+access, Freewallet or WAS execution, Stage 3B, wallet interaction, Person Server
+integration, external services, Misty access, and every other proposal
+exclusion remain prohibited.

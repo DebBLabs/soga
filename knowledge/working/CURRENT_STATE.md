@@ -36,15 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R3 corrected diagnostic preflight accepted as a negative result
+Phase: M02 — Stage 3A-R4 internal-only preflight script creation authorized
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-051 accepts the corrected diagnostic
-preflight as a gated negative containment result. The one D-050 execution is
-consumed. Candidate startup, any additional run or script change, comparison,
-alternative containment design, Stage 3B, and every D-050 exclusion remain
-prohibited pending separate review and prospective authorization.
+Active authorization boundary: D-052 permits creation—but not execution—of a
+new R4 internal-only synthetic preflight script under the independently
+reviewed proposal. The complete script requires both independent PASS reviews
+before commit or execution. Docker execution, candidate startup or access,
+Stage 3B, and every proposal exclusion remain prohibited.
 
 ---
 
@@ -89,7 +89,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R3 DIAGNOSTIC PREFLIGHT ACCEPTED NEGATIVE UNDER D-051
+Status: STAGES 1–2 COMPLETE; STAGE 3A-R4 SCRIPT CREATION AUTHORIZED UNDER D-052
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -246,6 +246,17 @@ complete cleanup. Both gates returned PASS on
 `knowledge/research/M02_STAGE3AR3_DIAGNOSTIC_PREFLIGHT_EVIDENCE_2026-09-09.md`,
 and D-051 accepts the run as a gated negative result.
 
+The internal-only R4 proposal at
+`knowledge/proposals/M02_STAGE3AR4_INTERNAL_ONLY_CONTAINMENT_PROPOSAL_2026-09-09.md`
+responds to the accepted host-publication failure by removing host publication
+entirely and placing a synthetic server and a separate test-only client on one
+IPv4-only internal Docker network. It preserves strict host-path probes, makes
+no claim that embedded-DNS forwarding is absent, and leaves later caller
+placement unresolved. Both gates returned PASS after IPv6, gateway-refusal,
+DNS-scope, Docker-alias, namespace-sharing, inherited-port, and cleanup-
+attribution corrections. D-052 authorizes creation—but not execution—of the R4
+synthetic script and requires complete-file PASS reviews before commit or run.
+
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
 informative minimal-Person-Server appendix. It does not invalidate Stage 2's
@@ -263,12 +274,11 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-The one D-050 synthetic diagnostic execution is consumed. Candidate startup,
-any additional preflight or diagnostic, script change, comparison, or
-alternative containment design remains prohibited pending separate review and
-prospective authorization. No Stage 3B code or tests may be written. No service
-may be externally exposed; neither Misty robot may be powered, connected,
-queried, configured, discovered, or actuated.
+The one D-050 synthetic diagnostic execution is consumed. Only creation of the
+new, unexecuted R4 synthetic preflight script is authorized under D-052.
+Candidate startup, Docker execution, further R3 work, and any Stage 3B code or
+tests remain prohibited. No service may be externally exposed; neither Misty
+robot may be powered, connected, queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -505,11 +515,10 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Stop at the accepted Stage 3A-R3 negative result. Before any further work,
-separately review and prospectively authorize a containment decision grounded
-in the host-publication-path evidence. Do not modify or rerun the preflight,
-modify or run the candidate-startup script, compare alternative configurations,
-or start either candidate.
+Create—but do not execute—the R4 synthetic preflight script under D-052. Have
+both independent reviewers read the complete file. Do not commit or execute it
+until both return PASS, and do not modify or rerun either accepted R3 script,
+run the candidate-startup script, compare configurations, or start a candidate.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -520,4 +529,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-051.
+separate PI routine-tool-approval proposal remains unadopted and outside D-052.
