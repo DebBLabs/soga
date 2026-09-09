@@ -837,3 +837,26 @@ before it is committed or executed. Docker execution, candidate startup or
 access, Freewallet or WAS execution, Stage 3B, wallet interaction, Person Server
 integration, external services, Misty access, and every other proposal
 exclusion remain prohibited.
+
+## D-053 — Accept and authorize one Stage 3A-R4 synthetic preflight
+
+PI acceptance and authorization received on 2026-09-09 after the complete
+`tools/m02_stage3ar4/preflight.py` received PASS results from Claude Gate 1 and
+Gemini/AGy Gate 2. The reviewed script creates two independent, unprivileged
+synthetic containers on one IPv4-only internal network; publishes no host port;
+requires an exact digest-pinned cached image; applies finite resource and time
+limits; treats active gateway or host-alias refusal as disqualifying; bounds and
+redacts output; captures failure diagnostics; and makes success contingent on
+complete cleanup.
+
+Accept the R4 synthetic preflight script as independently reviewed. Authorize
+committing and pushing the exact reviewed file, then executing it once using
+only the cached digest-pinned Node image and synthetic resources under the
+adopted internal-only containment proposal. Complete cleanup, independent
+cleanup verification, and a standalone evidence report reviewed by both gates
+are required.
+
+Candidate startup and access, Freewallet or WAS execution, Stage 3B, wallet
+interaction, Person Server integration, external services, Misty access, and
+every D-052 exclusion remain prohibited. Any additional execution or script
+change requires separate prospective authorization.
