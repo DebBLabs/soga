@@ -541,11 +541,12 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Proceed only with M02 Stage 3-Lib Phase 0 under D-058: reacquire the exact WAS
-teaching-server revision at the fixed temporary root, perform the one bounded
-frozen-lockfile installation and exact build, record standalone evidence, and
-stop for both gates and PI disposition. Phase 1 harness or test creation and
-Phase 2 execution remain unauthorized.
+Proceed only with M02 Stage 3-Lib Phase 1 create-only work under D-059. The
+exact WAS checkout, dependency tree, runner cache, and build output are
+preserved at `/private/tmp/m02-stage3lib-20260910/was-teaching-server` after
+both gates passed the Phase 0 evidence. Create the bounded SOGA-owned harness
+and tests for complete-file review, but do not execute, import, compile, lint,
+or test them. Phase 2 execution remains unauthorized.
 
 Do not inspect or change the unrelated configured bindings, revise the prior
 holdpoint, rerun the IPv6 diagnosis, modify or rerun either accepted R3/R4
@@ -561,4 +562,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-058.
+separate PI routine-tool-approval proposal remains unadopted and outside D-059.

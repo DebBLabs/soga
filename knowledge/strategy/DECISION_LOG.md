@@ -986,3 +986,35 @@ This does not authorize Phase 1 harness or test creation, WAS import or
 execution, any listener, Docker, Freewallet, wallet interaction, Person Server
 integration, Stage 3B, external runtime services, personal data, payment, Misty
 access, physical actuation, G28, or G29.
+
+## D-059 — Accept Stage 3-Lib Phase 0 and authorize Phase 1 creation
+
+PI acceptance and authorization received on 2026-09-10 after
+`knowledge/research/M02_STAGE3LIB_PHASE0_ACQUISITION_BUILD_EVIDENCE_2026-09-10.md`
+received PASS with no required corrections from Claude Gate 1 and Gemini/AGy
+Gate 2. Both reviewers independently verified the preserved checkout at exact
+commit `2090a606f2723e4d57ef0090db55fd1bdab9427e`, its hashes, tracked-clean
+source, build output, cache-only untracked state, public package-root exports,
+`createApp` construction, health route, and the evidence record's limited IPC
+and no-runtime claims. No candidate was imported or executed during review.
+
+Accept M02 Stage 3-Lib Phase 0 exact-source acquisition and build evidence as
+independently verified. Authorize committing and pushing the standalone Phase 0
+evidence and synchronized canonical state. Preserve the exact checkout,
+dependency tree, runner cache, and build output unchanged.
+
+Authorize M02 Stage 3-Lib Phase 1 create-only harness and test implementation
+under the reviewed proposal. Create only reviewed SOGA-owned source under
+`tools/m02_stage3lib`. Require the `FileSystemBackend` data root to be an
+explicit temporary directory outside both the SOGA repository and WAS checkout.
+Include the fail-closed network-attempt guards, dynamic import ordering,
+temporary execution-time package-root symlink logic, finite limits, local
+test-material rules, cleanup controls, and tests specified by the proposal.
+Also record the exact whole-source finding that the selected WAS source contains
+one `.listen(` call, only in `src/start.ts:66`.
+
+Do not execute, import, compile, lint, or test the harness before both
+independent reviewers read the complete files and return PASS. No WAS
+application execution, listener, Phase 2, Freewallet, wallet interaction,
+Person Server integration, Stage 3B, Docker, external runtime service, personal
+data, payment, Misty access, physical actuation, G28, or G29 is authorized.
