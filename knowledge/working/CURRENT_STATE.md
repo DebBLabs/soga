@@ -297,12 +297,14 @@ tool activity, completed two sequential requests without restarting the queue
 runner, rejected denied or empty responses as errors, and stopped cleanly. It
 does not support interactive approvals and is not yet adopted for real gates.
 
-The D-050 and D-053 executions are consumed. D-055 authorizes only creation and
-dual review of the bounded IPv6 diagnosis script; it authorizes no execution.
-Candidate startup or access, further R3 work, additional R4 execution or
-modification, and any Stage 3B code or tests remain prohibited. No service may
-be externally exposed; neither Misty robot may be powered, connected, queried,
-configured, discovered, or actuated.
+The D-050 and D-053 executions are consumed. D-055 authorized creation and dual
+review of the bounded IPv6 diagnosis script; D-056 subsequently authorized one
+execution, and D-057 accepted its pre-start configured-binding stop as a gated
+negative result. The script never progressed to image inspection, resource
+creation, procfs reading, or IPv6 diagnosis. Candidate startup or access,
+further R3 work, additional R4 execution or modification, and any Stage 3B code
+or tests remain prohibited. No service may be externally exposed; neither Misty
+robot may be powered, connected, queried, configured, discovered, or actuated.
 
 ### M01 — Governed Misty A QR Action Precursor
 Status: COMPLETE (accepted 2026-09-06 under D-034)
@@ -539,11 +541,16 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Stop at the accepted D-057 negative result. Do not inspect or change the
-unrelated configured bindings, revise the holdpoint, rerun the diagnosis,
-modify or rerun either accepted R3/R4 preflight, run the candidate-startup
-script, compare configurations, or start a candidate. Any new direction
-requires a separately reviewed proposal and prospective PI authorization.
+Proceed only with M02 Stage 3-Lib Phase 0 under D-058: reacquire the exact WAS
+teaching-server revision at the fixed temporary root, perform the one bounded
+frozen-lockfile installation and exact build, record standalone evidence, and
+stop for both gates and PI disposition. Phase 1 harness or test creation and
+Phase 2 execution remain unauthorized.
+
+Do not inspect or change the unrelated configured bindings, revise the prior
+holdpoint, rerun the IPv6 diagnosis, modify or rerun either accepted R3/R4
+preflight, run the candidate-startup script, compare configurations, or start a
+candidate.
 
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
@@ -554,4 +561,4 @@ Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-055.
+separate PI routine-tool-approval proposal remains unadopted and outside D-058.

@@ -955,3 +955,34 @@ evidence report, and synchronized canonical state. No environment inspection
 or change, binding identification or removal, holdpoint revision, rerun,
 candidate access, Stage 3B, MCP invocation, external service, Misty access, or
 policy change is authorized.
+
+## D-058 — Authorize M02 Stage 3-Lib Phase 0 exact-source reacquisition
+
+PI authorization received on 2026-09-10 after
+`knowledge/proposals/M02_STAGE3LIB_SOCKET_FREE_WAS_FEASIBILITY_PROPOSAL_2026-09-10.md`
+received PASS from Claude Gate 1 and Gemini/AGy Gate 2. Gate 1 first returned
+NOT READY on provenance, socket/IPC classification, objective observation,
+module resolution, credential-material rules, cleanup, and phase separation.
+After correction it identified two additional synchronization and commit-hygiene
+gaps. The final complete-file recheck returned PASS. Gate 2 returned PASS on the
+initial proposal and both corrected complete-file rechecks. Both reviews were
+read-only at `ff16893c148bf4a7a7b19e42d0a9d364739ed18a`; neither candidate was
+acquired, installed, built, imported, or executed during review.
+
+Authorize M02 Stage 3-Lib Phase 0 exact-source reacquisition and build
+verification under the independently reviewed proposal. Use the fixed temporary
+root `/private/tmp/m02-stage3lib-20260910` and reacquire only WAS teaching server
+commit `2090a606f2723e4d57ef0090db55fd1bdab9427e` from its recorded origin
+through a plain detached checkout with no submodule or LFS fetch. Permit one
+`pnpm@11.20.0` frozen-lockfile installation with a checkout-local runner cache
+and only the Git and package-registry access intrinsic to those operations.
+
+Require exact origin, commit, version, license, lockfile hash, Node version,
+clean-source status, build result, and any `tsx` IPC-pipe event to be recorded
+in standalone evidence and reviewed by both gates. Preserve the verified
+checkout, dependency tree, and cache unchanged pending PI disposition.
+
+This does not authorize Phase 1 harness or test creation, WAS import or
+execution, any listener, Docker, Freewallet, wallet interaction, Person Server
+integration, Stage 3B, external runtime services, personal data, payment, Misty
+access, physical actuation, G28, or G29.

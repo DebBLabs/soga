@@ -1,5 +1,5 @@
 {
-  "gate": "M02_STAGE3A_R4_PREFLIGHT_NEGATIVE_ACCEPTED",
+  "gate": "M02_STAGE3LIB_PHASE0_AUTHORIZED",
   "required": [
     "knowledge/working/CURRENT_STATE.md",
     "knowledge/strategy/DECISION_LOG.md",
@@ -41,6 +41,7 @@
     "knowledge/research/M02_STAGE3AR3_DIAGNOSTIC_PREFLIGHT_EVIDENCE_2026-09-09.md",
     "knowledge/proposals/M02_STAGE3AR4_INTERNAL_ONLY_CONTAINMENT_PROPOSAL_2026-09-09.md",
     "knowledge/research/M02_STAGE3AR4_INTERNAL_ONLY_PREFLIGHT_EVIDENCE_2026-09-09.md",
+    "knowledge/proposals/M02_STAGE3LIB_SOCKET_FREE_WAS_FEASIBILITY_PROPOSAL_2026-09-10.md",
     "project/backlog.md"
   ]
 }
