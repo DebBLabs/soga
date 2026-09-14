@@ -1098,3 +1098,26 @@ reviewed restoration evidence because the build stamp is absent, and a complete
 amendment does not complete restoration, close B-043, or authorize Phase 2,
 WAS application startup, listeners, network access, dependency changes, or any
 other previously excluded activity.
+
+## D-062 — Authorize one M02 Stage 3-Lib Phase 2 socket-free execution
+
+Recorded prospectively on 2026-09-14 before any Phase 2 test, controller, or
+harness execution. Both independent gates returned PASS on the exact proposal
+`knowledge/proposals/M02_STAGE3LIB_PHASE2_EXECUTION_PROPOSAL_2026-09-14.md`;
+Gate 1's conditional PASS became unconditional after its two exact fail-closed
+edits were applied and confirmed by a diff-only recheck.
+
+The PI accepts that proposal and authorizes committing and pushing it with this
+decision, followed by one execution of its exact controller, source-contract
+tests, and socket-free WAS harness. The execution must use the fixed candidate,
+Node executable, paths, manifest, time bounds, readiness synchronization,
+network-attempt guards, unprivileged observations, cleanup checks, standalone
+evidence, stop rules, and exclusions stated in the reviewed proposal.
+
+This decision authorizes no build or dependency operation, network listener or
+network access, WAS standalone startup, retry, diagnosis, repair, Freewallet,
+wallet or Person Server integration, Stage 3B, Docker, external service,
+personal data, payment, Misty access, physical actuation, MCP invocation, R3,
+G28, G29, or policy change. The one execution attempt is consumed when the
+source-contract test or controller begins. Its result may not be adopted until
+standalone evidence receives both independent reviews and PI disposition.

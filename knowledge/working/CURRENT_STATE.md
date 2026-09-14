@@ -40,12 +40,14 @@ Phase: M02 — Stage 3-Lib conditional Phase 2 prerequisite established
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-061 accepts the consumed Option A attempt as
+Active authorization boundary: D-062 authorizes exactly one independently
+reviewed Stage 3-Lib Phase 2 socket-free execution under the committed proposal.
+D-061 accepts the consumed Option A attempt as
 a gated negative result and subsequently recognizes the preserved compiled
 `dist/` as conditionally usable for a separately authorized Phase 2 library
 test. `dist/build-info.json` remains absent; provenance rests on the accepted
 restoration evidence, and a complete pre-use `dist/` hash manifest is required.
-B-043 remains open and Phase 2 remains unauthorized. No retry, diagnosis, harness/test
+B-043 remains open. Outside the exact D-062 run, no retry, diagnosis, harness/test
 execution, candidate startup, further dependency or network operation, Docker,
 Stage 3B, MCP invocation, policy change, wallet or Person Server integration,
 external service, Misty access, G28, or G29 is authorized.
