@@ -36,16 +36,16 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3-Lib Phase 1 accepted; exact environment restoration proposed
+Phase: M02 — Stage 3-Lib Option A restoration accepted as a gated negative result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-060 accepts and commits the independently
-reviewed Stage 3-Lib Phase 1 source only. Phase 2 and exact-environment
-restoration remain unauthorized. The restoration proposal is review material
-and creates no authority. Candidate execution, dependency or network activity,
-wallet or Person Server integration, external services, Misty access, G28, and
-G29 remain prohibited.
+Active authorization boundary: D-061 accepts the consumed Option A attempt as
+a gated negative result. Restoration is incomplete, B-043 remains open, and
+Phase 2 remains unauthorized. No retry, diagnosis, harness/test
+execution, candidate startup, further dependency or network operation, Docker,
+Stage 3B, MCP invocation, policy change, wallet or Person Server integration,
+external service, Misty access, G28, or G29 is authorized.
 
 ---
 
@@ -292,8 +292,9 @@ preservation; corrected complete-file rechecks returned PASS from both gates.
 D-060 accepts
 the source committed at `a3a8a87`; it has not been executed. The temporary
 Phase 0 environment was later found absent after host shutdown. B-043 records
-that preservation-process failure. Exact restoration and Phase 2 remain
-unauthorized pending separate review and PI disposition.
+that preservation-process failure. D-061 records the later authorized Option A
+attempt, which stopped at the upstream `tsx` IPC step and did not complete
+restoration. Phase 2 remains unauthorized.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -561,13 +562,15 @@ accepted under D-060, and was committed and pushed at
 `a3a8a87d6d49052f75093b0ae3d380102f73ab10`. It has not been executed,
 imported, compiled, linted, or tested. Phase 2 remains unauthorized.
 
-The Phase 0 temporary WAS checkout, dependency tree, runner cache, and build
-output previously under `/private/tmp/m02-stage3lib-20260910` was found absent
-after host shutdown. B-043 records the preservation-process failure. Do not execute or
-modify the accepted harness against an assumed substitute. The immediate next
-work is independent review and PI disposition of
-`knowledge/proposals/M02_STAGE3LIB_EXACT_ENVIRONMENT_RESTORATION_PROPOSAL_2026-09-14.md`.
-The proposal authorizes nothing by itself.
+After the Phase 0 environment was found absent, the PI selected Option A from
+the independently reviewed restoration proposal. D-061 records that
+authorization and its sequence. Exact reacquisition and frozen installation
+succeeded; the single build stopped at upstream `tsx` local-IPC creation.
+The attempt is consumed, restoration is incomplete, and the preserved partial
+environment may not be used by the harness. Both gates passed the corrected
+evidence and the PI accepted the result under D-061. The npm update-check and
+advisory POST are recorded as an unanticipated network-boundary variance.
+Further recovery requires a new reviewed proposal and prospective authorization.
 
 The 2026-09-10 Dmitry Zagidulin correspondence, Paul Knowles/BIT 2.0 context,
 and Dick Hardt's 2026-09-14 response to the three implementation questions are

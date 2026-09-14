@@ -1,7 +1,7 @@
 # M02 Stage 3-Lib — Exact Environment Restoration Proposal
 
 Date: 2026-09-14
-Status: PROPOSED — NOT AUTHORIZED
+Status: OPTION A AUTHORIZED UNDER D-061 — ATTEMPT CONSUMED; RESTORATION INCOMPLETE
 Prepared from checkpoint: `main @ a3a8a87d6d49052f75093b0ae3d380102f73ab10`
 
 ## Purpose and durability boundary

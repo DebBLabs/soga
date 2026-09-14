@@ -1048,3 +1048,40 @@ adoption only. It did not authorize Phase 2 execution, WAS application startup,
 a listener, Freewallet, wallet interaction, Person Server integration, Docker,
 an external service, personal data, payment, Misty access, physical actuation,
 G28, or G29.
+
+## D-061 — Record Option A restoration authorization and consumed negative attempt
+
+Recorded retrospectively on 2026-09-14 without backdating. After commit
+`a77d86d1170762bed707011735e1464d4b9403e1` committed the independently reviewed
+restoration proposal, the PI explicitly selected Option A and authorized its
+exact Git reacquisition, single frozen dependency installation, and single
+upstream build before any of those operations began. The authorization was
+given directly in the governing conversation but was not recorded in this log
+before execution. This entry records the actual sequence; it does not claim
+that checkpoint `a77d86d` itself contained execution authority.
+
+The exact source fetch and frozen installation succeeded. The one build attempt
+stopped nonzero at upstream `tsx` local-IPC pipe creation during
+`write-build-info`. No retry, harness/test execution, WAS application startup,
+or Phase 2 activity followed. The attempt is consumed and restoration is not
+complete.
+
+The npx debug record shows registry requests for an npm update check, pnpm
+metadata, a security-advisory POST carrying the pnpm package identifier, and
+the pnpm tarball. The update check and advisory request were not specifically
+enumerated in the proposal. Their boundary classification remains for PI
+disposition after independent review; this entry does not expand authorization
+retrospectively. Phase 2 and every proposal exclusion remain in force.
+
+After both independent gates returned PASS, the PI accepted this as a gated
+negative result. The single attempt is consumed, restoration is incomplete,
+B-043 remains open, and Phase 2 remains unauthorized. The npm update-check GET
+and security-advisory POST are classified as an unanticipated network-boundary
+variance that does not invalidate the source or failure evidence; future
+dependency authorizations must explicitly address or suppress them. The
+recorded `npx --version` check produced no observed network record.
+
+Preserve the exact partial environment unchanged at the non-durable Option A
+path as research evidence. It is not usable by the harness. Any retry,
+diagnosis, permission change, build, harness execution, or Phase 2 work
+requires a new independently reviewed proposal and prospective authorization.
