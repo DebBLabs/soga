@@ -36,13 +36,16 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3-Lib Option A restoration accepted as a gated negative result
+Phase: M02 — Stage 3-Lib conditional Phase 2 prerequisite established
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
 Active authorization boundary: D-061 accepts the consumed Option A attempt as
-a gated negative result. Restoration is incomplete, B-043 remains open, and
-Phase 2 remains unauthorized. No retry, diagnosis, harness/test
+a gated negative result and subsequently recognizes the preserved compiled
+`dist/` as conditionally usable for a separately authorized Phase 2 library
+test. `dist/build-info.json` remains absent; provenance rests on the accepted
+restoration evidence, and a complete pre-use `dist/` hash manifest is required.
+B-043 remains open and Phase 2 remains unauthorized. No retry, diagnosis, harness/test
 execution, candidate startup, further dependency or network operation, Docker,
 Stage 3B, MCP invocation, policy change, wallet or Person Server integration,
 external service, Misty access, G28, or G29 is authorized.
@@ -566,11 +569,19 @@ After the Phase 0 environment was found absent, the PI selected Option A from
 the independently reviewed restoration proposal. D-061 records that
 authorization and its sequence. Exact reacquisition and frozen installation
 succeeded; the single build stopped at upstream `tsx` local-IPC creation.
-The attempt is consumed, restoration is incomplete, and the preserved partial
-environment may not be used by the harness. Both gates passed the corrected
+The attempt is consumed and the upstream build remains incomplete. A later
+read-only source check established that `assertFreshBuild()` is called only by
+the standalone listening startup path; direct `createApp()` library use is
+unaffected, and `/health` falls back to the package version when
+`dist/build-info.json` is absent. The preserved compiled `dist/` is therefore
+conditionally usable for a separately authorized Phase 2 library test, with
+provenance resting on the accepted restoration evidence and a complete `dist/`
+hash manifest required before use. Both gates passed the corrected
 evidence and the PI accepted the result under D-061. The npm update-check and
 advisory POST are recorded as an unanticipated network-boundary variance.
-Further recovery requires a new reviewed proposal and prospective authorization.
+The build-recovery proposal was abandoned without execution or adoption.
+Phase 2 remains unauthorized and requires its own reviewed proposal and
+prospective authorization.
 
 The 2026-09-10 Dmitry Zagidulin correspondence, Paul Knowles/BIT 2.0 context,
 and the AAuth Slack thread rooted by Dick Hardt on 2026-08-30 and answered on

@@ -1085,3 +1085,16 @@ Preserve the exact partial environment unchanged at the non-durable Option A
 path as research evidence. It is not usable by the harness. Any retry,
 diagnosis, permission change, build, harness execution, or Phase 2 work
 requires a new independently reviewed proposal and prospective authorization.
+
+Subsequent amendment on 2026-09-14: the PI abandoned the unadopted build-recovery
+proposal without execution. A read-only check of the exact preserved source
+established that `assertFreshBuild()` is called only by the standalone server
+startup path; direct `createApp()` library use is unaffected, and `/health`
+falls back to the package version when `dist/build-info.json` is absent. The
+preserved compiled `dist/` is therefore conditionally usable for a separately
+authorized Phase 2 library test. Its provenance rests on the independently
+reviewed restoration evidence because the build stamp is absent, and a complete
+`dist/` hash manifest must be recorded before Phase 2 relies on it. This
+amendment does not complete restoration, close B-043, or authorize Phase 2,
+WAS application startup, listeners, network access, dependency changes, or any
+other previously excluded activity.
