@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-09-08
+Last Updated: 2026-09-14
 
 ---
 
@@ -36,17 +36,16 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3A-R4 IPv6 diagnosis accepted as a negative result
+Phase: M02 — Stage 3-Lib Phase 1 accepted; exact environment restoration proposed
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-057 accepts the consumed D-056 IPv6 diagnosis
-as a gated negative result at its pre-start configured-binding holdpoint. It
-created no diagnostic resource, read no procfs state, and produced no IPv6
-finding. Another diagnosis or R4 preflight, environmental inspection or
-change, binding identification or removal, holdpoint revision, candidate
-startup or access, reachability testing, MCP invocation, external services,
-Stage 3B, Misty access, and policy change remain prohibited.
+Active authorization boundary: D-060 accepts and commits the independently
+reviewed Stage 3-Lib Phase 1 source only. Phase 2 and exact-environment
+restoration remain unauthorized. The restoration proposal is review material
+and creates no authority. Candidate execution, dependency or network activity,
+wallet or Person Server integration, external services, Misty access, G28, and
+G29 remain prohibited.
 
 ---
 
@@ -91,7 +90,7 @@ under D-033 and sprint accepted 2026-09-06 under D-034.
 ## Active Work
 
 ### M02 — Wallet-Assisted AAuth Person Server
-Status: STAGES 1–2 COMPLETE; STAGE 3A-R4 IPV6 DIAGNOSIS ACCEPTED NEGATIVE UNDER D-057
+Status: STAGES 1–2 COMPLETE; STAGE 3-LIB PHASE 1 SOURCE ACCEPTED UNDER D-060
 
 M02 investigates which Person Server responsibilities can be supplied by a
 person-controlled wallet and Wallet Attached Storage and which remain in a
@@ -279,6 +278,22 @@ point, and independent checks confirmed complete cleanup. Both gates returned
 PASS on
 `knowledge/research/M02_STAGE3AR4_INTERNAL_ONLY_PREFLIGHT_EVIDENCE_2026-09-09.md`,
 and D-054 accepts the run as a gated negative result.
+
+Stage 3-Lib then selected the exact WAS package-root library surface as a
+socket-free feasibility path. D-058 authorized exact Phase 0 acquisition and
+build; the accepted evidence at
+`knowledge/research/M02_STAGE3LIB_PHASE0_ACQUISITION_BUILD_EVIDENCE_2026-09-10.md`
+records the exact source, hashes, frozen dependency installation, and successful
+build. D-059 accepted Phase 0 and authorized create-only Phase 1 source. One
+initial complete review round returned NOT READY on repository-boundary
+polarity, repository-root selection, valid local `did:key` construction,
+cleanup independence, timeout termination, test/source agreement, and error
+preservation; corrected complete-file rechecks returned PASS from both gates.
+D-060 accepts
+the source committed at `a3a8a87`; it has not been executed. The temporary
+Phase 0 environment was later found absent after host shutdown. B-043 records
+that preservation-process failure. Exact restoration and Phase 2 remain
+unauthorized pending separate review and PI disposition.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -541,12 +556,24 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-Proceed only with M02 Stage 3-Lib Phase 1 create-only work under D-059. The
-exact WAS checkout, dependency tree, runner cache, and build output are
-preserved at `/private/tmp/m02-stage3lib-20260910/was-teaching-server` after
-both gates passed the Phase 0 evidence. Create the bounded SOGA-owned harness
-and tests for complete-file review, but do not execute, import, compile, lint,
-or test them. Phase 2 execution remains unauthorized.
+M02 Stage 3-Lib Phase 1 source received PASS from both independent gates, was
+accepted under D-060, and was committed and pushed at
+`a3a8a87d6d49052f75093b0ae3d380102f73ab10`. It has not been executed,
+imported, compiled, linted, or tested. Phase 2 remains unauthorized.
+
+The Phase 0 temporary WAS checkout, dependency tree, runner cache, and build
+output previously under `/private/tmp/m02-stage3lib-20260910` was found absent
+after host shutdown. B-043 records the preservation-process failure. Do not execute or
+modify the accepted harness against an assumed substitute. The immediate next
+work is independent review and PI disposition of
+`knowledge/proposals/M02_STAGE3LIB_EXACT_ENVIRONMENT_RESTORATION_PROPOSAL_2026-09-14.md`.
+The proposal authorizes nothing by itself.
+
+The 2026-09-10 Dmitry Zagidulin correspondence, Paul Knowles/BIT 2.0 context,
+and Dick Hardt's 2026-09-14 response to the three implementation questions are
+recorded as non-authorizing research input in
+`knowledge/research/M02_WALLET_WAS_CORRESPONDENCE_CONTEXT_2026-09-14.md`.
+They clarify candidate direction but establish no integration or conformance.
 
 Do not inspect or change the unrelated configured bindings, revise the prior
 holdpoint, rerun the IPv6 diagnosis, modify or rerun either accepted R3/R4
@@ -556,10 +583,13 @@ candidate.
 Preserve the open choices: the hybrid composition remains a hypothesis; the
 AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
 surface, exact trust messages, remaining B-038 authority inputs, B-039
-affected-person path, and participant-session owner remain unresolved.
+affected-person path, B-040 co-presence/operator evidence, participant-session
+owner, and consistency of the current D-019/D-020 approval path with the
+protocol author's resource/authorization-server allocation remain unresolved.
 
 Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
 robot. Application runtime external-network access remains prohibited. Beryl
 placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-059.
+separate PI routine-tool-approval proposal remains unadopted and outside D-060
+and any pending restoration disposition.

@@ -1,7 +1,8 @@
 # M02 Stage 3-Lib Proposal — Exact-Source Socket-Free WAS Feasibility
 
 Date: 2026-09-10
-Status: PHASE 0 AUTHORIZED UNDER D-058 — PHASES 1–2 NOT AUTHORIZED
+Status: PHASE 0 ACCEPTED UNDER D-059; PHASE 1 SOURCE ACCEPTED UNDER D-060;
+PHASE 2 NOT AUTHORIZED
 Prepared from checkpoint: `main @ ff16893c148bf4a7a7b19e42d0a9d364739ed18a`
 
 ## Purpose

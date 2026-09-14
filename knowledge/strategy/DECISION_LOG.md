@@ -1018,3 +1018,33 @@ independent reviewers read the complete files and return PASS. No WAS
 application execution, listener, Phase 2, Freewallet, wallet interaction,
 Person Server integration, Stage 3B, Docker, external runtime service, personal
 data, payment, Misty access, physical actuation, G28, or G29 is authorized.
+
+## D-060 — Accept and commit Stage 3-Lib Phase 1 source
+
+Recorded retrospectively on 2026-09-14 without backdating. PI acceptance was
+received on 2026-09-10 after Claude Gate 1 and Gemini/AGy Gate 2
+read the complete create-only package under `tools/m02_stage3lib`. Initial
+reviews returned NOT READY on repository-boundary polarity, repository-root
+selection, valid local `did:key` construction, cleanup independence, timeout
+termination, test/source agreement, and error preservation. Corrected
+complete-file rechecks returned PASS from both gates without executing,
+importing, compiling, linting, or testing the package.
+
+Accept M02 Stage 3-Lib Phase 1 create-only harness and tests as independently
+reviewed. Authorize committing and pushing only the exact reviewed files under
+`tools/m02_stage3lib`. Preserve the exact WAS checkout, dependency tree,
+runner cache, and build output unchanged.
+
+That preservation directive records the historical acceptance as given; it was
+not met. The temporary root was later found absent after host shutdown. See
+B-043 and the proposed exact-environment restoration. This retrospective record
+creates no restoration or execution authority. Phase 1 review reports remain
+PI-retained outside the repository; D-060 records their scope, sequence, and
+results so the canonical decision does not depend on opening the transcripts.
+
+The accepted files were committed and pushed at
+`a3a8a87d6d49052f75093b0ae3d380102f73ab10`. This decision authorized source
+adoption only. It did not authorize Phase 2 execution, WAS application startup,
+a listener, Freewallet, wallet interaction, Person Server integration, Docker,
+an external service, personal data, payment, Misty access, physical actuation,
+G28, or G29.

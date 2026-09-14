@@ -1509,3 +1509,51 @@ candidate service or Misty robot was contacted.
 This record does not authorize deleting the npm cache, running another package
 command, accessing the network, installing dependencies, or changing CC's
 global permissions. It does not alter the Stage 3 technical findings.
+
+---
+
+## B-043 — Temporary Experimental Inputs Were Not Preserved Across Shutdown
+
+**Status:** Open — process failure observed before Stage 3-Lib Phase 2
+
+**Concern:**
+
+D-058 and D-059 required the exact WAS checkout, dependency tree, runner cache,
+and build output under `/private/tmp/m02-stage3lib-20260910` to remain preserved
+through Phase 1 review and future Phase 2 execution. After Phase 1 was accepted
+and committed, the PI asked whether anything required preservation before
+shutdown. Codex incorrectly advised that no repository update was needed and
+that a normal close should preserve the temporary environment. A later direct
+check found the complete temporary root absent.
+
+The committed Phase 0 evidence retains the exact origin, commit, tree, hashes,
+versions, commands, and observed build result. The environment is expected to
+be reproducible from those identifiers, pending verified restoration and
+continued upstream and package availability. The prepared checkout, installed
+dependency tree, cache, and build output nevertheless must be reacquired and
+independently verified before any Phase 2 execution.
+
+**Required process correction:**
+
+- at creation time, record whether any preserved location is durable across
+  reboot, planned or unplanned shutdown, and OS temporary-directory cleanup;
+- any decision ordering preservation must name that durability or select a
+  prospectively approved durable location;
+- before shutdown, either use that approved durable location or record that
+  exact-source restoration will be required;
+- treat restoration involving Git or package-registry access as a new bounded
+  operation requiring prospective authorization; and
+- verify presence, identity, and integrity against committed evidence
+  immediately before depending on any preserved or restored input.
+
+**Closure criterion:**
+
+Close only after the durability control is adopted and either a restored exact
+environment is independently verified or the restoration path is explicitly
+abandoned.
+
+**Boundary:**
+
+This item authorizes no reacquisition, installation, build, import, execution,
+network access, deletion, or environment relocation. It records a process
+failure and required future control.
