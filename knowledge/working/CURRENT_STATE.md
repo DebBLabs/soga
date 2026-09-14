@@ -573,7 +573,8 @@ advisory POST are recorded as an unanticipated network-boundary variance.
 Further recovery requires a new reviewed proposal and prospective authorization.
 
 The 2026-09-10 Dmitry Zagidulin correspondence, Paul Knowles/BIT 2.0 context,
-and Dick Hardt's 2026-09-14 response to the three implementation questions are
+and the AAuth Slack thread rooted by Dick Hardt on 2026-08-30 and answered on
+2026-09-14 are
 recorded as non-authorizing research input in
 `knowledge/research/M02_WALLET_WAS_CORRESPONDENCE_CONTEXT_2026-09-14.md`.
 They clarify candidate direction but establish no integration or conformance.
@@ -588,7 +589,8 @@ AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
 surface, exact trust messages, remaining B-038 authority inputs, B-039
 affected-person path, B-040 co-presence/operator evidence, participant-session
 owner, and consistency of the current D-019/D-020 approval path with the
-protocol author's resource/authorization-server allocation remain unresolved.
+protocol author's PS-clarification statement and resource/authorization-server
+allocation remain unresolved.
 
 Do not write Stage 3B code or tests, implement an integration, expose a service,
 use personal data or payment, enter or rewrite G28/G29, or access either Misty
