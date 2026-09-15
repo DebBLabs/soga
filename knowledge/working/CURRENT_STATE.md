@@ -559,6 +559,16 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
+The Risk-Based Independent Review Method was adopted prospectively under D-064
+at SHA-256
+`ede23e99ea02c02e76cc4c07a00d6cd0eff02c95c7d23ef88724a67b7d858b22` after
+independent final PASS reviews by Gemini/AGy Gate 2 and fresh read-only Codex
+reviewer `/root/final_method_review`. Codex is the author and integrator;
+Claude and the earlier Codex review subagent are disclosed contributors and
+were not counted as independent final reviewers. The method changes review
+routing and correction practices only and grants no implementation, execution,
+external-access, commit, physical-action, G28, or G29 authority.
+
 M02 Stage 3-Lib Phase 2 is complete and accepted under D-063. The exact WAS
 candidate was imported through its public package root and exercised without a
 listener through Fastify injection. Health returned 200; one bounded temporary

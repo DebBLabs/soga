@@ -1155,3 +1155,24 @@ This acceptance authorizes committing and pushing the reviewed evidence and
 synchronized canonical state. It does not authorize Stage 3B, Freewallet or
 Person Server integration, external services, dependency or network activity,
 Misty access, G28, G29, or disposal of preserved non-durable evidence.
+
+## D-064 — Adopt the Risk-Based Independent Review Method
+
+Recorded prospectively on 2026-09-15. The PI accepts and adopts
+`knowledge/proposals/RISK_BASED_INDEPENDENT_REVIEW_METHOD_2026-09-15.md` at
+SHA-256
+`ede23e99ea02c02e76cc4c07a00d6cd0eff02c95c7d23ef88724a67b7d858b22` as a
+governance-process change requiring mandatory dual review.
+
+Codex authored and integrated the method. Claude and the earlier Codex review
+subagent are disclosed contributors and did not count as independent final
+reviewers. Gemini/AGy Gate 2 and the fresh read-only Codex reviewer
+`/root/final_method_review` independently reviewed the exact final hash and
+returned PASS with no blocking or optional findings.
+
+The method is operative prospectively from this decision. It changes review
+routing, authorship allocation, bounded correction practices, and capacity
+continuity only. It grants no implementation, execution, external-access,
+commit, physical-action, G28, or G29 authority. D-028 remains controlling for
+queue authority, and B-041 and B-042 remain in force. The separate PI
+routine-tool-approval proposal remains unadopted and outside this decision.
