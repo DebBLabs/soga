@@ -36,19 +36,14 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3-Lib conditional Phase 2 prerequisite established
+Phase: M02 — Stage 3-Lib Phase 2 accepted as a gated positive result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-062 authorizes exactly one independently
-reviewed Stage 3-Lib Phase 2 socket-free execution under the committed proposal.
-D-061 accepts the consumed Option A attempt as
-a gated negative result and subsequently recognizes the preserved compiled
-`dist/` as conditionally usable for a separately authorized Phase 2 library
-test. `dist/build-info.json` remains absent; provenance rests on the accepted
-restoration evidence, and a complete pre-use `dist/` hash manifest is required.
-B-043 remains open. Outside the exact D-062 run, no retry, diagnosis, harness/test
-execution, candidate startup, further dependency or network operation, Docker,
+Active authorization boundary: D-063 accepts the completed Stage 3-Lib Phase 2
+run as a gated positive result establishing socket-free WAS library feasibility
+only. B-043 remains open. No retry, diagnosis, harness/test execution,
+candidate startup, further dependency or network operation, Docker,
 Stage 3B, MCP invocation, policy change, wallet or Person Server integration,
 external service, Misty access, G28, or G29 is authorized.
 
@@ -294,12 +289,14 @@ initial complete review round returned NOT READY on repository-boundary
 polarity, repository-root selection, valid local `did:key` construction,
 cleanup independence, timeout termination, test/source agreement, and error
 preservation; corrected complete-file rechecks returned PASS from both gates.
-D-060 accepts
-the source committed at `a3a8a87`; it has not been executed. The temporary
+D-060 accepted
+the source committed at `a3a8a87`; it had not yet been executed at that
+holdpoint. The temporary
 Phase 0 environment was later found absent after host shutdown. B-043 records
 that preservation-process failure. D-061 records the later authorized Option A
 attempt, which stopped at the upstream `tsx` IPC step and did not complete
-restoration. Phase 2 remains unauthorized.
+restoration. D-062 later authorized the bounded Phase 2 execution, and D-063
+accepts its independently verified positive result.
 
 The 2026-09-07 editor-repository delta from the Stage 1 AAuth baseline
 `39a017d` to `b6ca19b` names the off-wire Supervisor role and adds an
@@ -562,17 +559,20 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-M02 Stage 3-Lib Phase 1 source received PASS from both independent gates, was
-accepted under D-060, and was committed and pushed at
-`a3a8a87d6d49052f75093b0ae3d380102f73ab10`. It has not been executed,
-imported, compiled, linted, or tested. Phase 2 remains unauthorized.
+M02 Stage 3-Lib Phase 2 is complete and accepted under D-063. The exact WAS
+candidate was imported through its public package root and exercised without a
+listener through Fastify injection. Health returned 200; one bounded temporary
+Space provision returned 201 and was verified through `FileSystemBackend`.
+The harness recorded zero guarded network attempts, the synchronized live-PID
+observation found zero sockets, the user-visible TCP listener snapshots and
+298-file compiled-artifact manifest were unchanged, and cleanup completed.
 
 After the Phase 0 environment was found absent, the PI selected Option A from
 the independently reviewed restoration proposal. D-061 records that
 authorization and its sequence. Exact reacquisition and frozen installation
 succeeded; the single build stopped at upstream `tsx` local-IPC creation.
-The attempt is consumed and the upstream build remains incomplete. A later
-read-only source check established that `assertFreshBuild()` is called only by
+The restoration attempt is consumed and the upstream build remains incomplete.
+A later read-only source check established that `assertFreshBuild()` is called only by
 the standalone listening startup path; direct `createApp()` library use is
 unaffected, and `/health` falls back to the package version when
 `dist/build-info.json` is absent. The preserved compiled `dist/` is therefore
@@ -581,9 +581,15 @@ provenance resting on the accepted restoration evidence and a complete `dist/`
 hash manifest required before use. Both gates passed the corrected
 evidence and the PI accepted the result under D-061. The npm update-check and
 advisory POST are recorded as an unanticipated network-boundary variance.
-The build-recovery proposal was abandoned without execution or adoption.
-Phase 2 remains unauthorized and requires its own reviewed proposal and
-prospective authorization.
+The build-recovery proposal was abandoned without execution or adoption. D-062
+authorized the separate socket-free Phase 2 path. Its proposal and controller
+received Gate 1 review before execution; Gate 2's review of the final two
+controller edits occurred retrospectively during the post-run evidence gate,
+and D-063 records that sequence correction. Both post-run gates returned PASS.
+
+Next work requires a separately reviewed Stage 3B composition proposal. No
+Freewallet, wallet, Person Server, external-service, or Misty integration is
+currently authorized.
 
 The 2026-09-10 Dmitry Zagidulin correspondence, Paul Knowles/BIT 2.0 context,
 and the AAuth Slack thread rooted by Dick Hardt on 2026-08-30 and answered on
