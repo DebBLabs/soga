@@ -1557,3 +1557,40 @@ abandoned.
 This item authorizes no reacquisition, installation, build, import, execution,
 network access, deletion, or environment relocation. It records a process
 failure and required future control.
+
+---
+
+## B-044 — Reviewer Independence Was Not Preserved Across Queued Gates
+
+**Status:** Open — prospective controls required from the next review
+
+On 2026-09-15 the PI summarized Gate 2's disclosure: Gate 2 read Gate 1's
+response before writing its own in most review rounds, including 001–005,
+013–015, and 026–029; Gate 1 reviewed blind. The saved response files do not
+contain Gate 2's own disclosure wording. Unless individually confirmed
+otherwise, every Gate 2 review in this HOPE queue is treated as informed
+corroboration rather than an independent final review. This reclassifies Gate 2
+review bases relied on by D-061 through D-065, including rounds 017–018,
+019–022, and 023–025. Those decisions are not reopened, and their technical
+findings remain in force under D-066.
+
+**Required prospective controls:**
+
+- each gate receives a separate request containing the exact target hashes;
+- neither reviewer opens the other gate's request or response directory, or
+  `claude-to-cg/`, before posting;
+- every response ends with an explicit independence statement; and
+- the coordinator verifies both statements before describing dual reviews as
+  independent.
+
+These controls apply beginning with the Phase 3B-2 evidence review.
+
+**Closure criterion:**
+
+Close after one mandatory-dual gate demonstrates the controls above, with both
+independence statements and the coordinator's verification recorded.
+
+**Boundary:**
+
+This process correction grants no implementation, execution, commit, external
+access, physical action, G28, or G29 authority.

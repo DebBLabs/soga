@@ -36,16 +36,17 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3-Lib Phase 2 accepted as a gated positive result
+Phase: M02 — Stage 3B-1 source accepted; one Phase 3B-2 execution authorized
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-063 accepts the completed Stage 3-Lib Phase 2
-run as a gated positive result establishing socket-free WAS library feasibility
-only. B-043 remains open. No retry, diagnosis, harness/test execution,
-candidate startup, further dependency or network operation, Docker,
-Stage 3B, MCP invocation, policy change, wallet or Person Server integration,
-external service, Misty access, G28, or G29 is authorized.
+Active authorization boundary: D-067 accepts the exact hash-pinned Phase 3B-1
+source on the D-066 review basis and authorizes its commit followed by one
+execution of the exact committed Phase 3B-2 controller and focused test suite.
+All D-065 limits, observations, cleanup requirements, evidence requirements,
+and exclusions remain controlling. No external service or listener,
+Freewallet integration, personal data, payment, Misty access, physical
+actuation, G28, or G29 is authorized.
 
 ---
 
@@ -558,6 +559,18 @@ G23 — Primary Source Grounding
 ---
 
 ## Immediate Next Action
+
+D-066 records the PI-accepted review-independence deviation without backdating:
+for Phase 3B-1, Gate 1's request-029 PASS is the blind independent review and
+Gate 2's PASS is informed corroboration. B-044 requires separate hash-pinned
+requests, no cross-reading (including `claude-to-cg/`) before posting, explicit
+independence statements, and coordinator verification beginning with the
+Phase 3B-2 evidence review. Past decisions remain in force.
+
+Phase 3B-1 source is statically complete and accepted on that review basis.
+D-067 authorizes commit of the exact reviewed source and governance records,
+followed by one bounded Phase 3B-2 execution. The resulting evidence requires
+two blind independent reviews under B-044 before acceptance.
 
 Under D-065, M02 Stage 3B-1 is authorized for create-only implementation of the
 independently reviewed Person Server/WAS socket-free composition proposal at

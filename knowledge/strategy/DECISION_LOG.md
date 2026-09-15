@@ -1195,3 +1195,63 @@ listener, network or external-service access, dependency change, Phase 3B-2,
 Freewallet, personal data, payment, Misty access, physical actuation, G28, or
 G29 is authorized. The unrelated PI routine-tool-approval proposal remains
 excluded and untouched.
+
+## D-066 — Accept disclosed Phase 3B-1 review-independence deviation
+
+Recorded on 2026-09-15 without backdating or changing any earlier decision.
+The PI summarized Gate 2's disclosure as follows: Gate 2 read Gate 1's response
+before writing its own in most review rounds, including 001–005, 013–015, and
+026–029; Gate 1 reviewed blind. The saved Gate 2 response files do not
+themselves contain that disclosure, so this record treats the PI's wording as a
+summary rather than a verbatim statement by Gate 2.
+
+The PI accepts this as a deviation from D-064. For Phase 3B-1, the review basis
+is Gate 1's blind independent PASS plus Gate 2's informed corroborating PASS.
+Past decisions remain in force. Unless individually confirmed otherwise, every
+Gate 2 review in this HOPE queue is reclassified as informed corroboration, not
+an independent final review. This includes Gate 2 review bases relied on by
+D-061 through D-065, including rounds 017–018, 019–022, and 023–025 in addition
+to the rounds named above. Those decisions are not reopened, and their technical
+findings remain in force.
+
+B-044 records the affected rounds and prospective controls. Beginning with the
+Phase 3B-2 evidence review, each gate receives its own hash-pinned request;
+neither reviewer may open the other gate's request or response directory, or
+`claude-to-cg/`, before posting; every response must end with an explicit
+independence statement; and the coordinator must verify both statements before
+describing the reviews as independent. Gate 1 contributed wording to D-066 and
+B-044 and is not an independent reviewer of those records.
+
+Codex authored and integrated the Phase 3B-1 source reviewed at request 029:
+
+- `m02_was_composition/__init__.py` — SHA-256
+  `62e10c1f9bee9b3f27d1f0acb17f71a34ea89fcf30e39f93b83bb620de3d5f97`;
+- `m02_was_composition/adapter.py` — SHA-256
+  `9b1407c61303ae2c761ae3ecbd11b88256e779338de65d4083789bf232db15ad`;
+- `m02_was_composition/worker.mjs` — SHA-256
+  `ab3dda127a499452503ebff30bd93d13233dac27a49d10f2b9fc4f1dc177c9ec`;
+- `m02_was_composition/controller.py` — SHA-256
+  `8a0d3c9a2b5c570cbe158015add4413f654d918907899dccd47519efa8d73206`;
+- `tests/test_m02_was_composition.py` — SHA-256
+  `8c03c698294c082e07d41a4317bf3b38066b95618090ca65e1f2023ad2001539`.
+
+D-066 accepts that source as input to a prospective Phase 3B-2 authorization
+decision. D-066 itself authorizes no commit, import, test, execution, external
+access, Freewallet integration, Misty access, G28, or G29.
+
+## D-067 — Accept Phase 3B-1 and authorize one Phase 3B-2 execution
+
+Recorded prospectively on 2026-09-15 before any Phase 3B-2 import, test, or
+execution. The PI accepts Phase 3B-1 on the D-066 review basis: Gate 1's blind
+independent request-029 PASS plus Gate 2's informed corroborating PASS.
+
+The PI authorizes committing and pushing the five exact hash-pinned source
+files recorded in D-066 together with D-066, B-044, and synchronized canonical
+state. After that commit, the PI authorizes one execution of the exact committed
+controller and focused test suite under D-065, with all stated limits,
+observations, cleanup requirements, evidence requirements, and exclusions.
+
+The resulting evidence must receive two blind independent reviews under B-044
+before acceptance. No external service, listener, Freewallet integration,
+personal data, payment, Misty access, physical actuation, G28, or G29 is
+authorized.
