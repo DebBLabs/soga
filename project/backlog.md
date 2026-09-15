@@ -1562,7 +1562,7 @@ failure and required future control.
 
 ## B-044 — Reviewer Independence Was Not Preserved Across Queued Gates
 
-**Status:** Open — prospective controls required from the next review
+**Status:** Closed — controls demonstrated by blind review 033 on 2026-09-15
 
 On 2026-09-15 the PI summarized Gate 2's disclosure: Gate 2 read Gate 1's
 response before writing its own in most review rounds, including 001–005,
@@ -1587,8 +1587,10 @@ These controls apply beginning with the Phase 3B-2 evidence review.
 
 **Closure criterion:**
 
-Close after one mandatory-dual gate demonstrates the controls above, with both
-independence statements and the coordinator's verification recorded.
+Closed under D-068 after request 033 demonstrated the controls above. Both
+separate hash-pinned reviews ended with statements confirming no cross-reading,
+both returned PASS, and the coordinator verified those statements before
+characterizing the pair as independent.
 
 **Boundary:**
 

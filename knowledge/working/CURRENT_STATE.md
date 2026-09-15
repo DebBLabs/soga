@@ -36,17 +36,16 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Stage 3B-1 source accepted; one Phase 3B-2 execution authorized
+Phase: M02 — Stage 3B-2 accepted as a gated negative result
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-067 accepts the exact hash-pinned Phase 3B-1
-source on the D-066 review basis and authorizes its commit followed by one
-execution of the exact committed Phase 3B-2 controller and focused test suite.
-All D-065 limits, observations, cleanup requirements, evidence requirements,
-and exclusions remain controlling. No external service or listener,
-Freewallet integration, personal data, payment, Misty access, physical
-actuation, G28, or G29 is authorized.
+Active authorization boundary: D-068 accepts the single D-067 execution as a
+gated negative result at `execution:focused_tests`; the attempt is consumed and
+no failing test or cause is established. B-044 is closed after blind review 033
+demonstrated its separation controls. No diagnosis, code change, test
+execution, retry, external service, listener, Freewallet integration, personal
+data, payment, Misty access, physical actuation, G28, or G29 is authorized.
 
 ---
 
@@ -559,6 +558,18 @@ G23 — Primary Source Grounding
 ---
 
 ## Immediate Next Action
+
+D-068 accepts the independently reviewed Phase 3B-2 evidence at SHA-256
+`e27869c9690ceb50257fca688a519e8ebbba82662f377ac1384b2dd23089a83a` as a
+gated negative result. The exact controller reached the focused test suite and
+failed closed as `execution:focused_tests`; because bounded failure output was
+not retained, the failing test and cause remain unknown. The single execution
+is consumed. Any diagnosis or retry requires a separately reviewed prospective
+proposal and PI authorization.
+
+B-044 is closed: review 033 used separate hash-pinned requests, both reviewers
+reported no cross-reading and returned PASS, and the coordinator verified both
+independence statements.
 
 D-066 records the PI-accepted review-independence deviation without backdating:
 for Phase 3B-1, Gate 1's request-029 PASS is the blind independent review and
