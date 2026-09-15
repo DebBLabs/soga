@@ -1176,3 +1176,22 @@ continuity only. It grants no implementation, execution, external-access,
 commit, physical-action, G28, or G29 authority. D-028 remains controlling for
 queue authority, and B-041 and B-042 remain in force. The separate PI
 routine-tool-approval proposal remains unadopted and outside this decision.
+
+## D-065 — Authorize M02 Stage 3B-1 create-only composition source
+
+Recorded prospectively on 2026-09-15. After independent final PASS reviews by
+Claude Gate 1 and Gemini/AGy Gate 2, the PI accepts
+`knowledge/proposals/M02_STAGE3B_PERSON_SERVER_WAS_COMPOSITION_PROPOSAL_2026-09-15.md`
+at SHA-256
+`6e55b3aa4d1d9df477db279e82cde822ba02228bc7f20b62c2d446c16857c12a`.
+
+This decision authorizes committing and pushing that exact proposal, followed
+by Phase 3B-1 creation only of its complete adapter, Node worker, controller,
+and tests. The created files require complete independent review by both
+eligible gates before execution.
+
+No WAS import or execution, code compilation or test run, HTTP-service start,
+listener, network or external-service access, dependency change, Phase 3B-2,
+Freewallet, personal data, payment, Misty access, physical actuation, G28, or
+G29 is authorized. The unrelated PI routine-tool-approval proposal remains
+excluded and untouched.

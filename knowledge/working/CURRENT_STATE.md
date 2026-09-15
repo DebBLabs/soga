@@ -559,6 +559,14 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
+Under D-065, M02 Stage 3B-1 is authorized for create-only implementation of the
+independently reviewed Person Server/WAS socket-free composition proposal at
+SHA-256
+`6e55b3aa4d1d9df477db279e82cde822ba02228bc7f20b62c2d446c16857c12a`.
+The complete created source must receive both independent reviews before any
+import, compilation, test, or execution. Phase 3B-2 and every D-065 exclusion
+remain unauthorized.
+
 The Risk-Based Independent Review Method was adopted prospectively under D-064
 at SHA-256
 `ede23e99ea02c02e76cc4c07a00d6cd0eff02c95c7d23ef88724a67b7d858b22` after
