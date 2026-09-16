@@ -1311,3 +1311,11 @@ Codex is author/integrator. The accepted source SHA-256 values are:
 No import, compilation, lint, test, diagnostic run, composition repair, or other
 excluded activity is authorized. A separate execution proposal may be prepared
 for blind review; execution remains held for prospective PI authorization.
+
+## D-071 — Authorize create-only diagnostic bytecode correction
+
+Recorded prospectively on 2026-09-16. The PI authorizes only a create-only
+controller correction preserving `PYTHONDONTWRITEBYTECODE=1` in the diagnostic
+child environment. Both blind reviewers must PASS the exact corrected source
+and revised execution proposal before commit or execution. No tests, diagnostic
+run, composition repair, or other excluded activity is authorized.

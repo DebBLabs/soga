@@ -36,11 +36,13 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Diagnostic instrumentation accepted for commit
+Phase: M02 — Diagnostic child correction awaiting blind source/proposal review
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-070 accepts the exact request-037 source and
+Active authorization boundary: D-071 permits only the create-only diagnostic
+child bytecode-suppression correction, with blind source/proposal review before
+commit or execution. D-070 accepted the exact request-037 source and
 authorizes its commit/push, but no import, compilation, lint, test, diagnostic
 run, or composition repair. D-069 authorized create-only diagnostic
 instrumentation under the reviewed proposal. Complete source requires two
@@ -562,6 +564,11 @@ G23 — Primary Source Grounding
 ---
 
 ## Immediate Next Action
+
+D-071 authorizes only the create-only diagnostic child bytecode-suppression
+correction. Both blind gates must review the exact corrected controller and
+revised execution proposal before commit or execution. No test or run is
+authorized.
 
 D-070 accepts the exact instrumentation after both blind request-037 reviewers
 returned PASS. Commit/push the reviewed package and prepare a separate finite

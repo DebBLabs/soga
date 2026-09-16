@@ -60,8 +60,10 @@ def observe_process(process:subprocess.Popen,baseline:str|None=None):
 
 def _focused_execution(diagnostic=False)->tuple[int,bytes,bytes]:
     command=[PYTHON,'-m','m02_was_composition.diagnostic_tests'] if diagnostic else [PYTHON,'-m','unittest','tests.test_m02_was_composition','-v']
+    environment={'PATH':'/usr/bin:/bin:/usr/sbin:/sbin','LANG':'C','LC_ALL':'C','M02_STAGE3B_EXECUTE':'1'}
+    if diagnostic:environment['PYTHONDONTWRITEBYTECODE']='1'
     try:
-        process=subprocess.Popen(command,cwd=SOGA,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=False,start_new_session=True,env={'PATH':'/usr/bin:/bin:/usr/sbin:/sbin','LANG':'C','LC_ALL':'C','M02_STAGE3B_EXECUTE':'1'})
+        process=subprocess.Popen(command,cwd=SOGA,stdin=subprocess.DEVNULL,stdout=subprocess.PIPE,stderr=subprocess.PIPE,shell=False,start_new_session=True,env=environment)
     except OSError as error:
         raise RuntimeError('execution:child_spawn') from error
     out=bytearray();err=bytearray();overflow=[False]
