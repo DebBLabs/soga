@@ -1319,3 +1319,19 @@ controller correction preserving `PYTHONDONTWRITEBYTECODE=1` in the diagnostic
 child environment. Both blind reviewers must PASS the exact corrected source
 and revised execution proposal before commit or execution. No tests, diagnostic
 run, composition repair, or other excluded activity is authorized.
+
+## D-072 — Authorize one bounded diagnostic execution
+
+Recorded prospectively on 2026-09-16 after the PI instructed “perform diagnostic
+run”. Both blind request-039 reviewers returned PASS on the corrected controller
+and execution proposal; their independence statements and target hashes were
+verified. The reviewed files were committed and pushed at
+`8e69a6a7cd03ba76716555349324e1d60812ee3d`.
+
+Authorize the proposal's single synthetic instrumentation check, followed only
+on success by its single diagnostic controller invocation, with exact inputs,
+minimal environment, finite process-group limits, redacted retained evidence,
+cleanup verification, and subsequent blind dual evidence review. Record the
+resulting execution commit before invoking either process. No retry, composition
+repair, dependency change, listener, external service, Freewallet integration,
+Misty access, physical action, G28, or G29 is authorized.
