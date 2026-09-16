@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-09-14
+Last Updated: 2026-09-16
 
 ---
 
@@ -36,22 +36,20 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Diagnostic child correction awaiting blind source/proposal review
+Phase: M02 — Diagnostic negative result accepted; paused before further diagnosis
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-071 permits only the create-only diagnostic
-child bytecode-suppression correction, with blind source/proposal review before
-commit or execution. D-070 accepted the exact request-037 source and
-authorizes its commit/push, but no import, compilation, lint, test, diagnostic
-run, or composition repair. D-069 authorized create-only diagnostic
-instrumentation under the reviewed proposal. Complete source requires two
-blind reviews before commit or execution. D-068 accepts the single D-067 execution as a
-gated negative result at `execution:focused_tests`; the attempt is consumed and
-no failing test or cause is established. B-044 is closed after blind review 033
-demonstrated its separation controls. Beyond D-069's exact create-only scope, no diagnosis, code change, test
-execution, retry, external service, listener, Freewallet integration, personal
-data, payment, Misty access, physical actuation, G28, or G29 is authorized.
+Active authorization boundary: D-073 accepts the D-072 diagnostic execution
+as a gated negative result after both blind request-040 evidence reviewers
+returned PASS. The single attempt is consumed. Seven synthetic tests passed;
+31 focused composition tests produced seven failures and two errors. Test
+methods are retained, but all failing/error stages remain unknown and causes
+are unresolved. Cleanup passed; the exact WAS environment is preserved.
+No further diagnosis, source change, test/run, retry, dependency operation,
+external service, listener, Freewallet integration, personal data, payment,
+Misty access, physical actuation, G28, or G29 is authorized. B-044 remains
+closed; its blind-review separation controls continue to apply.
 
 ---
 
@@ -565,118 +563,27 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-D-071 authorizes only the create-only diagnostic child bytecode-suppression
-correction. Both blind gates must review the exact corrected controller and
-revised execution proposal before commit or execution. No test or run is
-authorized.
+This round is complete and paused under D-073. Resume by reading live HEAD,
+git status, this state, and D-073; do not rely on earlier queue checkpoints.
 
-D-070 accepts the exact instrumentation after both blind request-037 reviewers
-returned PASS. Commit/push the reviewed package and prepare a separate finite
-execution proposal. Execution requires independent proposal review and
-prospective PI authorization; no diagnostic run is currently authorized.
+The next candidate task is a separately reviewed, prospectively authorized
+diagnosis of the current focused failures, including why the two CompositionError
+records lost stage information. A worker-provided stage outside the diagnostic
+allowlist is only a reviewer hypothesis, not an established cause. No new
+inspection, code change, run, or retry is authorized by this acceptance.
 
-D-069 authorizes create-only modification of the diagnostic controller and
-creation of its bounded child runner and synthetic tests. Both eligible blind
-reviewers must inspect complete files before commit or execution. No import,
-compilation, lint, test, diagnostic run, or composition repair is authorized.
+Accepted evidence: knowledge/research/M02_STAGE3B_DIAGNOSTIC_EXECUTION_EVIDENCE_2026-09-16.md
+at SHA-256 cdd474696d906a4467e7e1e0b7bf74b2f386a0fa6198660c7e3d77d8a26fa8ca.
+Retain /private/tmp/m02-stage3b-diagnostics-20260916-001 unchanged pending a
+separate PI retention/removal decision. The report transcribes the redacted
+record so it survives temporary-directory loss. Preserve the exact WAS checkout,
+dependency tree, runner cache, and compiled artifacts unchanged.
 
-D-068 accepts the independently reviewed Phase 3B-2 evidence at SHA-256
-`e27869c9690ceb50257fca688a519e8ebbba82662f377ac1384b2dd23089a83a` as a
-gated negative result. The exact controller reached the focused test suite and
-failed closed as `execution:focused_tests`; because bounded failure output was
-not retained, the failing test and cause remain unknown. The single execution
-is consumed. Any diagnosis or retry requires a separately reviewed prospective
-proposal and PI authorization.
-
-B-044 is closed: review 033 used separate hash-pinned requests, both reviewers
-reported no cross-reading and returned PASS, and the coordinator verified both
-independence statements.
-
-D-066 records the PI-accepted review-independence deviation without backdating:
-for Phase 3B-1, Gate 1's request-029 PASS is the blind independent review and
-Gate 2's PASS is informed corroboration. B-044 requires separate hash-pinned
-requests, no cross-reading (including `claude-to-cg/`) before posting, explicit
-independence statements, and coordinator verification beginning with the
-Phase 3B-2 evidence review. Past decisions remain in force.
-
-Phase 3B-1 source is statically complete and accepted on that review basis.
-D-067 authorizes commit of the exact reviewed source and governance records,
-followed by one bounded Phase 3B-2 execution. The resulting evidence requires
-two blind independent reviews under B-044 before acceptance.
-
-Under D-065, M02 Stage 3B-1 is authorized for create-only implementation of the
-independently reviewed Person Server/WAS socket-free composition proposal at
-SHA-256
-`6e55b3aa4d1d9df477db279e82cde822ba02228bc7f20b62c2d446c16857c12a`.
-The complete created source must receive both independent reviews before any
-import, compilation, test, or execution. Phase 3B-2 and every D-065 exclusion
-remain unauthorized.
-
-The Risk-Based Independent Review Method was adopted prospectively under D-064
-at SHA-256
-`ede23e99ea02c02e76cc4c07a00d6cd0eff02c95c7d23ef88724a67b7d858b22` after
-independent final PASS reviews by Gemini/AGy Gate 2 and fresh read-only Codex
-reviewer `/root/final_method_review`. Codex is the author and integrator;
-Claude and the earlier Codex review subagent are disclosed contributors and
-were not counted as independent final reviewers. The method changes review
-routing and correction practices only and grants no implementation, execution,
-external-access, commit, physical-action, G28, or G29 authority.
-
-M02 Stage 3-Lib Phase 2 is complete and accepted under D-063. The exact WAS
-candidate was imported through its public package root and exercised without a
-listener through Fastify injection. Health returned 200; one bounded temporary
-Space provision returned 201 and was verified through `FileSystemBackend`.
-The harness recorded zero guarded network attempts, the synchronized live-PID
-observation found zero sockets, the user-visible TCP listener snapshots and
-298-file compiled-artifact manifest were unchanged, and cleanup completed.
-
-After the Phase 0 environment was found absent, the PI selected Option A from
-the independently reviewed restoration proposal. D-061 records that
-authorization and its sequence. Exact reacquisition and frozen installation
-succeeded; the single build stopped at upstream `tsx` local-IPC creation.
-The restoration attempt is consumed and the upstream build remains incomplete.
-A later read-only source check established that `assertFreshBuild()` is called only by
-the standalone listening startup path; direct `createApp()` library use is
-unaffected, and `/health` falls back to the package version when
-`dist/build-info.json` is absent. The preserved compiled `dist/` is therefore
-conditionally usable for a separately authorized Phase 2 library test, with
-provenance resting on the accepted restoration evidence and a complete `dist/`
-hash manifest required before use. Both gates passed the corrected
-evidence and the PI accepted the result under D-061. The npm update-check and
-advisory POST are recorded as an unanticipated network-boundary variance.
-The build-recovery proposal was abandoned without execution or adoption. D-062
-authorized the separate socket-free Phase 2 path. Its proposal and controller
-received Gate 1 review before execution; Gate 2's review of the final two
-controller edits occurred retrospectively during the post-run evidence gate,
-and D-063 records that sequence correction. Both post-run gates returned PASS.
-
-Next work requires a separately reviewed Stage 3B composition proposal. No
-Freewallet, wallet, Person Server, external-service, or Misty integration is
-currently authorized.
-
-The 2026-09-10 Dmitry Zagidulin correspondence, Paul Knowles/BIT 2.0 context,
-and the AAuth Slack thread rooted by Dick Hardt on 2026-08-30 and answered on
-2026-09-14 are
-recorded as non-authorizing research input in
-`knowledge/research/M02_WALLET_WAS_CORRESPONDENCE_CONTEXT_2026-09-14.md`.
-They clarify candidate direction but establish no integration or conformance.
-
-Do not inspect or change the unrelated configured bindings, revise the prior
-holdpoint, rerun the IPv6 diagnosis, modify or rerun either accepted R3/R4
-preflight, run the candidate-startup script, compare configurations, or start a
-candidate.
-
-Preserve the open choices: the hybrid composition remains a hypothesis; the
-AGPL and DID Cooperative license boundaries, protocol-shaped Person Server
-surface, exact trust messages, remaining B-038 authority inputs, B-039
-affected-person path, B-040 co-presence/operator evidence, participant-session
-owner, and consistency of the current D-019/D-020 approval path with the
-protocol author's PS-clarification statement and resource/authorization-server
-allocation remain unresolved.
-
-Do not write Stage 3B code or tests, implement an integration, expose a service,
-use personal data or payment, enter or rewrite G28/G29, or access either Misty
-robot. Application runtime external-network access remains prohibited. Beryl
-placement remains mandatory before future Misty power-on or access. The
-separate PI routine-tool-approval proposal remains unadopted and outside D-060
-and any pending restoration disposition.
+Person Server/WAS composition has not passed. Socket-free WAS library feasibility
+is the established earlier result; Freewallet integration remains unverified.
+Affected-person authority/consent, participant-session ownership, remaining B-038
+inputs, licensing, and alignment with Dick's PS/resource/AS allocation remain open.
+No external service, listener, personal data, payment, Misty access, physical
+actuation, G28, or G29 is authorized. Beryl placement is mandatory before future
+Misty access. The unrelated PI routine-tool proposal remains unadopted, unread,
+and untouched. No review-routing change is made.

@@ -1335,3 +1335,24 @@ cleanup verification, and subsequent blind dual evidence review. Record the
 resulting execution commit before invoking either process. No retry, composition
 repair, dependency change, listener, external service, Freewallet integration,
 Misty access, physical action, G28, or G29 is authorized.
+
+## D-073 — Accept diagnostic gated negative result and pause
+
+Recorded on 2026-09-16 after the PI agreed to accept and wrap up this round.
+Both request-040 reviewers returned PASS on evidence SHA-256
+`cdd474696d906a4467e7e1e0b7bf74b2f386a0fa6198660c7e3d77d8a26fa8ca`.
+Their blind independence/non-contributor statements were verified. These are
+evidence-quality passes, not composition acceptance.
+
+Accept the single D-072 execution as a gated negative result: seven synthetic
+tests passed; 31 focused tests produced seven failures and two errors. Failing
+methods are identified, but stages remain unknown and causes are unresolved.
+The attempt is consumed. Controller postflight and independent scoped cleanup
+inspection passed. Retain the diagnostic directory and exact WAS environment
+unchanged. A worker-stage allowlist mismatch is only a reviewer hypothesis.
+
+Authorize commit and push of the exact reviewed evidence, this acceptance,
+and synchronized canonical state. Pause here. Further diagnosis, code change,
+test/run, retry, dependency operation, external service, listener, Freewallet
+integration, personal data, payment, Misty access, physical actuation, G28,
+and G29 remain unauthorized. The unrelated PI proposal is excluded.
