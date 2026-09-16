@@ -1278,3 +1278,36 @@ This decision authorizes committing and pushing the evidence, this acceptance
 record, B-044 closure, and synchronized canonical state. It authorizes no
 diagnosis, code change, test execution, retry, external service, Freewallet
 integration, Misty access, G28, or G29.
+
+## D-069 — Authorize create-only diagnostic instrumentation
+
+Recorded prospectively on 2026-09-16 before implementation. The PI accepts the
+diagnostic instrumentation proposal at SHA-256
+`06d4833e17f617b83542c4fee32c26d563aa1ea476907d21975e67bb81174ea0` after
+both blind request-035 reviewers returned PASS. Codex is author/integrator;
+Claude's general retention recommendation is non-authoring review guidance.
+
+Authorize only the proposal's create-only controller modification, diagnostic
+runner, and synthetic instrumentation tests. Both eligible blind reviewers must
+inspect the complete created files before commit or execution. No imports,
+compilation, lint, tests, diagnostic run, composition repair, or other excluded
+activity is authorized. The adapter, worker, existing focused tests, exact WAS
+environment, and unrelated PI routine-tool proposal remain untouched.
+
+## D-070 — Accept reviewed diagnostic instrumentation for commit
+
+Recorded on 2026-09-16 after both blind request-037 source reviewers returned
+PASS and the coordinator verified their independence statements. The PI's
+instruction to proceed accepts the create-only instrumentation and authorizes
+committing and pushing the exact reviewed source, proposal, D-069, this
+acceptance record, and synchronized state.
+
+Codex is author/integrator. The accepted source SHA-256 values are:
+
+- controller: `f8e0775b6351f9626fc5dcd3ad94a17be0b0b233de27c7895056fdc6a1736dcf`;
+- diagnostic runner: `26396fa08b02a1971276604bfa7f474ff055c14a88e25075286c6576e59c3b1a`;
+- synthetic tests: `e468530de98b29b8849c8ef92668c095d031b13a11a097430381ca50d6120c49`.
+
+No import, compilation, lint, test, diagnostic run, composition repair, or other
+excluded activity is authorized. A separate execution proposal may be prepared
+for blind review; execution remains held for prospective PI authorization.
