@@ -1505,3 +1505,49 @@ pending separate disposition; repository transcription preserves the finding
 if temporary roots are lost. No retry, diagnosis, code change, dependency/build,
 external/network service, listener, wallet integration, personal data, payment,
 Misty access, physical action, G28 or G29. Excluded PI proposal untouched.
+
+## D-081 — Authorize one durable WAS preservation copy
+
+Recorded prospectively on 2026-09-17 after PI authorized one execution of the
+reviewed preservation utility, without restoration, candidate execution or retry.
+Both blind request-050 reviewers PASS the complete proposal and utility:
+- proposal SHA-256 f1144310c9d81a56096b0f508769b1d40501a64bd14e5ec1e70cd2a00d64999d
+- utility SHA-256 43f01413f655cb8cf681a1c2796cf83460744ec5776e8f9e4457bdfbdd3efa37
+Their blind/non-authoring statements and final pins were verified.
+
+Authorize only one preservation utility invocation under that exact plan with
+platform approval: source /private/tmp/m02-stage3lib-20260910 to exclusive durable
+bundle /Users/debb/dev/research-evidence/m02-was-20260917-001/environment.
+Original remains untouched. Adopt this local durability control: expected to
+survive normal reboot/shutdown/temp cleanup, not disk failure or user deletion.
+Absent verification.json means unverified partial copy; retain it on failure.
+Both blind gates must inspect post-copy evidence before acceptance. B-043 remains
+open; copy is not an alternate runtime root. Any future restore to the hardcoded
+path needs separate review and prospective authorization. No candidate execution,
+network, dependencies/build, listener, Docker, wallet/PS integration, personal
+data, payment, Misty access, G28/G29, automatic retry or unrelated PI change.
+
+## D-082 — Accept durable preservation evidence and stop
+
+Recorded on 2026-09-17 following PI's “proceed” after both blind request-051
+reviewers returned independent non-authoring PASS with no blockers. Accept
+evidence SHA-25664f10e9fbdd935d5007645b0ffe14a59b53249def72f74223ca3aed09ffd8fa2.
+Both gates independently recomputed full source/copy logical inventories:
+29235 entries, manifest SHA-256
+ceef625d8b233b55d8f7494347c6273301603fb7c9a208d4ff31115496e83f0c;
+same source/copy candidate commit/tree and expected298-file dist manifest.
+One D-081 copy consumed, no retry; original remains untouched in place.
+
+Accept /Users/debb/dev/research-evidence/m02-was-20260917-001/environment
+as durable local preservation evidence only. Normal shutdown/temp cleanup is
+covered by the selected location; disk failure, deletion and machine loss are
+not covered. Full manifest stays in the bundle; utility and verification record
+are transcribed in repository evidence. Content/type/mode equality does not
+prove copied dependency executability or inode/timestamp/xattr identity.
+
+Authorize commit/push of the exact reviewed preservation proposal/evidence,
+D-081, this acceptance, necessary canonical state and B-043 status note.
+Keep B-043 open pending separately authorized fixed-path restoration/verification
+or explicit abandonment. Pause here. No restoration, candidate/test execution,
+retry, source/dependency/build change, network, listener, wallet/PS integration,
+Misty access, physical action, G28/G29 or unrelated PI proposal change.

@@ -38,6 +38,13 @@ Program: Embodied Governance Research Program
 
 Phase: M02 — Corrected synthetic composition accepted; paused
 
+Durable preservation accepted under D-082 after both blind request-051 PASS
+reviews. Backup: /Users/debb/dev/research-evidence/m02-was-20260917-001/environment.
+Full source/dependency/cache/build manifest verified independently by both gates;
+original temporary environment remains unchanged. This is not a runtime root.
+B-043 remains open; any restoration to the hardcoded path requires separate
+review and prospective authorization. No further work is authorized; paused.
+
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
 Active authorization boundary: D-080 accepts the request-049 blind dual-reviewed
@@ -587,6 +594,13 @@ G23 — Primary Source Grounding
 ---
 
 ## Immediate Next Action
+
+STOPPING CHECKPOINT: D-080 accepted synthetic socket-free evidence composition;
+D-082 accepted durable environment preservation. On restart verify live HEAD,
+status, decisions and backup presence before proposing next work. Do not rerun
+or restore without prospective authorization. Temporary diagnostic/queue roots
+may disappear on reboot; durable reports transcribe primary records and utility.
+The WAS backup survives ordinary temp cleanup but not disk failure or deletion.
 
 Source-only diagnosis is accepted under D-075 after both blind request-043
 reviewers returned PASS. Read live HEAD, git status and D-075; do not rely on

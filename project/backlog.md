@@ -1516,6 +1516,14 @@ global permissions. It does not alter the Stage 3 technical findings.
 
 **Status:** Open — process failure observed before Stage 3-Lib Phase 2
 
+2026-09-17 update: D-081/D-082 adopted and verified durable local preservation at
+/Users/debb/dev/research-evidence/m02-was-20260917-001/environment. Both blind
+request-051 reviewers independently matched all29235 logical entries including
+dependencies/cache/build output. Original remains at the hardcoded temporary
+path; backup is not an alternate runtime. Durability-control half is addressed;
+item remains OPEN pending separately authorized fixed-path restoration and
+independent verification, or explicit abandonment. No restoration authority.
+
 **Concern:**
 
 D-058 and D-059 required the exact WAS checkout, dependency tree, runner cache,
