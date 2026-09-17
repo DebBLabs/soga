@@ -36,11 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Source-only diagnosis accepted; combined correction proposal next
+Phase: M02 — Combined corrections accepted; execution proposal pending
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-075 accepts the blind request-043-reviewed
+Active authorization boundary: D-077 accepts the request-046-reviewed five-file
+corrections after both blind independent PASS responses. Commit/push and
+preparation/review of a separate bounded execution proposal are authorized.
+No import, compilation, lint, tests, candidate execution or retry is authorized.
+D-075 accepts the blind request-043-reviewed
 source-only diagnosis under D-074 and authorizes its commit/push plus preparation
 and review of a combined create-only correction proposal. No code change or
 execution is authorized; specific prospective holdpoints remain in force.
@@ -569,7 +573,10 @@ G23 — Primary Source Grounding
 
 Source-only diagnosis is accepted under D-075 after both blind request-043
 reviewers returned PASS. Read live HEAD, git status and D-075; do not rely on
-earlier queue checkpoints. Prepare one combined create-only correction proposal.
+earlier queue checkpoints. D-076 authorized create-only implementation; D-077
+accepts the final request-046 sources after both blind independent reviews.
+Commit/push the accepted package, then prepare and independently review a separate
+finite execution proposal. Execution requires prospective PI authorization.
 
 Research report: knowledge/research/M02_STAGE3B_SOURCE_ONLY_DIAGNOSIS_2026-09-17.md,
 SHA-256 8c0aa2f2a469489aaf86ed1ab95357571988feabfe917257853c5056bc7381a7.

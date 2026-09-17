@@ -11,7 +11,7 @@ EXPECTED_NODE=Path('/opt/homebrew/Cellar/node/26.7.0/bin/node')
 RESULT_FIELDS={'request_id','subject','action','projection','status','mission_s256','authority_reference'}
 ENVELOPE_FIELDS={'schema','version','correlation_id','issuer','subject','mission_s256','request_id','action','projection','status','result_s256','authority_reference_s256','interpretation'}
 SECRET_KEYS=('token','secret','password','private_key','authorization','payment')
-CANONICAL_FIXTURES=({'z':True,'a':1},{'v':'\b\f\n\r\t\x00\x1f\x7f'},{'min':-MAX_SAFE_INTEGER,'max':MAX_SAFE_INTEGER})
+CANONICAL_FIXTURES=({'z':True,'a':1},{'v':'\b\f\n\r\t\x00\x1f\x7f'},{'min':-MAX_SAFE_INTEGER,'max':MAX_SAFE_INTEGER},{'2':'two','10':'ten','nested':[{'2':False,'10':None}]})
 
 class CompositionError(RuntimeError):
     def __init__(self,stage:str,detail:str): super().__init__(f'{stage}:{detail}'); self.stage=stage
@@ -36,7 +36,8 @@ def _validate(value:Any,path='$'):
     raise CompositionError('canonicalization',f'type {path}')
 
 def canonical_bytes(value:Mapping[str,Any])->bytes:
-    _validate(value); return json.dumps(value,ensure_ascii=True,separators=(',',':'),sort_keys=True).encode()
+    # Restricted ASCII research contract, not general-purpose JSON canonicalization.
+    _validate(value); return json.dumps(value,ensure_ascii=False,separators=(',',':'),sort_keys=True).encode('utf-8')
 
 def _text(value:Any,name:str)->str:
     if not isinstance(value,str) or not value or not value.isascii(): raise CompositionError('envelope_validation',name)

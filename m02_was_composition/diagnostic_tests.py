@@ -11,7 +11,7 @@ MAX_JSON = 16384
 CLASSES = {'CanonicalEnvelopeTests', 'AdapterContractTests', 'ControllerNegativeTests', 'AuthorizedCompositionTests'}
 OUTCOMES = {'success', 'failure', 'error', 'skip'}
 ERROR_CLASSES = {'AssertionError', 'CompositionError', 'RuntimeError', 'TypeError', 'ValueError', 'OSError', 'FileNotFoundError', 'TimeoutExpired'}
-STAGES = {'canonicalization', 'envelope_validation', 'secret_screen', 'binding', 'mode', 'observation', 'invocation_budget', 'worker_input', 'worker_readiness', 'worker_exit', 'worker_output', 'worker_timeout', 'cross_language_verification', 'readback', 'collision', 'prohibited_api', 'cleanup', 'partial_write', 'boundary', 'identifier', 'holdpoint'}
+STAGES = {'canonicalization', 'envelope_validation', 'secret_screen', 'binding', 'mode', 'observation', 'invocation_budget', 'worker_input', 'worker_readiness', 'worker_exit', 'worker_output', 'worker_timeout', 'cross_language_verification', 'readback', 'collision', 'prohibited_api', 'cleanup', 'partial_write', 'boundary', 'identifier', 'holdpoint', 'package_resolution', 'was_import', 'storage', 'input'}
 
 def allowed_test_identifiers():
     source=Path(__file__).resolve().parent.parent/'tests/test_m02_was_composition.py'

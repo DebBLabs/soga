@@ -1,8 +1,8 @@
 """D-065 create-only tests. Execution requires Phase 3B-2 authorization."""
-import os, shutil, tempfile, unittest
+import hashlib, json, os, shutil, tempfile, unittest
 from pathlib import Path
 from unittest import mock
-from m02_was_composition.adapter import CompositionAdapter, CompositionError, build_evidence_envelope, canonical_bytes
+from m02_was_composition.adapter import CANONICAL_FIXTURES, CompositionAdapter, CompositionError, build_evidence_envelope, canonical_bytes
 from m02_was_composition.controller import observe_process
 from m02_was_composition import controller
 
@@ -25,6 +25,8 @@ def live_observer(process,baseline=None):
 class CanonicalEnvelopeTests(unittest.TestCase):
     def test_bool_integer_and_key_order(self): self.assertEqual(canonical_bytes({'z':True,'a':1}),b'{"a":1,"z":true}')
     def test_control_characters(self): self.assertEqual(canonical_bytes({'v':'\b\f\n\r\t\x00\x1f\x7f'}),b'{"v":"\\b\\f\\n\\r\\t\\u0000\\u001f\x7f"}')
+    def test_numeric_looking_keys_are_lexically_sorted(self):
+        self.assertEqual(canonical_bytes({'2':'two','10':'ten','nested':[{'2':False,'10':None}]}),b'{"10":"ten","2":"two","nested":[{"10":null,"2":false}]}')
     def test_rejects_float_non_ascii_unsafe_integer_and_non_plain_type(self):
         for value in (1.5,'caf\N{LATIN SMALL LETTER E WITH ACUTE}',9_007_199_254_740_992,{1,2}):
             with self.subTest(value=value),self.assertRaises(CompositionError):canonical_bytes({'value':value})
@@ -47,6 +49,8 @@ class AdapterContractTests(unittest.TestCase):
         with self.assertRaises(CompositionError):adapter.store(envelope=envelope(),package_root=WAS,mode='other')
         with self.assertRaises(CompositionError) as caught:adapter.store(envelope=envelope(),package_root=WAS,mode='duplicate',second_envelope=envelope(request_id='other'),observer=live_observer)
         self.assertEqual(caught.exception.stage,'binding')
+        with self.assertRaises(CompositionError) as caught:adapter.store(envelope=envelope(),package_root=WAS,mode='collision',second_envelope=envelope(request_id='other'),observer=live_observer)
+        self.assertEqual(caught.exception.stage,'binding')
     def test_observer_is_mandatory_before_worker(self):
         with self.assertRaises(CompositionError) as caught:CompositionAdapter(worker=WORKER).store(envelope=envelope(),package_root=WAS)
         self.assertEqual(caught.exception.stage,'observation')
@@ -65,6 +69,18 @@ class AdapterContractTests(unittest.TestCase):
         # Structural assertion: stderr is parsed and its stage is used.
         source=(ROOT/'m02_was_composition/adapter.py').read_text()
         self.assertIn("failure.get('stage')",source)
+    def test_public_loader_identity_and_redacted_stages_are_explicit(self):
+        source=WORKER.read_text()
+        self.assertNotIn('createRequire',source)
+        self.assertIn("import.meta.resolve('was-teaching-server')",source)
+        self.assertIn("path.join(packageRoot, 'dist', 'index.js')",source)
+        self.assertIn('await fs.realpath(packageLink), packageRoot',source)
+        self.assertIn("{ flag: 'wx', mode: 0o600 }",source)
+        self.assertLess(source.index('installGuards(events)'),source.index('await import(pathToFileURL(loaderPath).href)'))
+        self.assertIn("['duplicate', 'collision'].includes(request.mode)",source)
+        self.assertNotIn('error?.message',source)
+        for mode in ('guard_child','guard_dns','guard_network','guard_worker','guard_spawn','guard_exec'):
+            self.assertIn("request.mode === '"+mode+"'",source)
     def test_controller_regenerates_manifest_and_checks_identity(self):
         source=(ROOT/'m02_was_composition/controller.py').read_text()
         for text in ("rglob('*')","rev-parse','HEAD^{tree}","Python 3.9.6","v26.7.0","GIT_OPTIONAL_LOCKS"):
@@ -105,7 +121,7 @@ class AuthorizedCompositionTests(unittest.TestCase):
     def test_successful_write_read_and_hash(self):
         response=self.adapter.store(envelope=envelope(),package_root=WAS,observer=observe_process)
         self.assertFalse(response['first']['idempotent']);self.assertEqual(response['networkAttempts'],0)
-        self.assertEqual(len(response['canonicalFixtures']),3)
+        self.assertEqual(len(response['canonicalFixtures']),len(CANONICAL_FIXTURES))
     def test_duplicate_is_idempotent_in_one_worker(self):
         value=envelope();response=self.adapter.store(envelope=value,package_root=WAS,mode='duplicate',second_envelope=value,observer=observe_process)
         self.assertTrue(response['second']['idempotent'])
@@ -135,7 +151,8 @@ class AuthorizedCompositionTests(unittest.TestCase):
         path.write_text("import fs from 'node:fs';let b='';for await(const c of process.stdin)b+=c;const r=JSON.parse(b);fs.writeFileSync(r.readyPath,'ready\\n',{flag:'wx'});while(!fs.existsSync(r.releasePath))await new Promise(x=>setTimeout(x,5));"+body)
         self.addCleanup(directory.cleanup);return path
     def test_mismatched_hash_fails_cross_language_verification(self):
-        worker=self._fake_worker("process.stdout.write(JSON.stringify({ok:true,networkAttempts:0,first:{s256:'wrong',version:1}}));")
+        fixtures=json.dumps([hashlib.sha256(canonical_bytes(item)).hexdigest() for item in CANONICAL_FIXTURES])
+        worker=self._fake_worker("process.stdout.write(JSON.stringify({ok:true,networkAttempts:0,canonicalFixtures:"+fixtures+",first:{s256:'wrong',version:1}}));")
         with self.assertRaises(CompositionError) as caught:CompositionAdapter(worker=worker).store(envelope=envelope(),package_root=WAS,observer=live_observer)
         self.assertEqual(caught.exception.stage,'cross_language_verification')
     def test_malformed_nonzero_and_excess_output_have_named_stages(self):
@@ -145,8 +162,13 @@ class AuthorizedCompositionTests(unittest.TestCase):
             self.assertEqual(caught.exception.stage,stage)
     def test_timeout_is_named_and_temp_root_is_removed(self):
         before=set(Path('/private/tmp').glob('m02-stage3b-run-*'))
-        with self.assertRaises(CompositionError) as caught:CompositionAdapter(worker=self._fake_worker("await new Promise(()=>{});"),timeout_seconds=1).store(envelope=envelope(),package_root=WAS,observer=live_observer)
+        with self.assertRaises(CompositionError) as caught:CompositionAdapter(worker=self._fake_worker("await new Promise(resolve=>setTimeout(resolve,5000));"),timeout_seconds=1).store(envelope=envelope(),package_root=WAS,observer=live_observer)
         self.assertEqual(caught.exception.stage,'worker_timeout');self.assertEqual(set(Path('/private/tmp').glob('m02-stage3b-run-*')),before)
+    def test_fixed_loading_failure_stages_survive_adapter(self):
+        for stage in ('package_resolution','was_import'):
+            with self.subTest(stage=stage),self.assertRaises(CompositionError) as caught:
+                CompositionAdapter(worker=self._fake_worker("process.stderr.write(JSON.stringify({ok:false,stage:"+json.dumps(stage)+"}));process.exitCode=1;")).store(envelope=envelope(),package_root=WAS,observer=live_observer)
+            self.assertEqual(caught.exception.stage,stage)
     def test_cleanup_failure_is_named_and_chains_primary(self):
         before=set(Path('/private/tmp').glob('m02-stage3b-run-*'));real_rmtree=shutil.rmtree
         try:

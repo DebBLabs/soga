@@ -1,11 +1,13 @@
 """Synthetic instrumentation tests. Running them requires separate authority."""
 import json
+import re
 import tempfile
 import unittest
 from pathlib import Path
 from unittest import mock
 from m02_was_composition import controller
-from m02_was_composition.diagnostic_tests import DiagnosticResult
+from m02_was_composition.diagnostic_tests import DiagnosticResult, STAGES
+from m02_was_composition.adapter import CompositionError
 
 IDENTIFIER='tests.test_m02_was_composition.AdapterContractTests.test_worker_failure_stage_is_preserved'
 
@@ -54,3 +56,18 @@ class DiagnosticInstrumentationTests(unittest.TestCase):
     def test_unallowlisted_test_identifier_is_rejected(self):
         value=json.loads(self.document());value['records'][0]['test']='tests.test_m02_was_composition.AdapterContractTests.test_injected'
         with self.assertRaisesRegex(RuntimeError,'diagnostic:test'):controller._diagnostic_document(json.dumps(value).encode(),1)
+    def test_fixed_worker_stages_are_retained_without_raw_messages(self):
+        for stage in ('input','package_resolution','was_import','storage','SECRET arbitrary'):
+            with self.subTest(stage=stage):
+                result=DiagnosticResult({IDENTIFIER})
+                error=CompositionError(stage,'SECRET bearer private data')
+                result.addError(SyntheticCase(),(CompositionError,error,None))
+                raw=result.document();value=controller._diagnostic_document(raw,1)
+                self.assertEqual(value['records'][0]['stage'],'unknown' if stage.startswith('SECRET') else stage)
+                self.assertNotIn(b'SECRET',raw);self.assertNotIn(b'bearer',raw)
+    def test_every_fixed_worker_stage_is_diagnostic_allowlisted(self):
+        source=(Path(__file__).resolve().parents[1]/'m02_was_composition/worker.mjs').read_text()
+        declaration=re.search(r'const ERROR_STAGES = new Set\(\[([^\]]+)\]\)',source)
+        self.assertIsNotNone(declaration)
+        categories=set(re.findall(r"'([a-z_]+)'",declaration.group(1)))
+        self.assertTrue(categories);self.assertTrue(categories.issubset(STAGES))

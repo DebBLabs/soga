@@ -1392,3 +1392,43 @@ The current-session permission does not prospectively adopt an unseen correction
 design or lift code/execution holdpoints. Implementation, imports, compilation,
 lint, tests, retry, network, dependencies, listeners, Freewallet integration,
 Misty access, physical action, G28 and G29 remain unauthorized.
+
+## D-076 — Authorize combined create-only correction
+
+Recorded prospectively on 2026-09-17 following the PI's “Authorized to proceed
+with create implementation”. Both blind request-044 reviewers passed the combined
+proposal at SHA-256
+`d22f91d0d23c2b004fa620ed02cd4810e7b91563f6b3d048b08a19d3b3fd8cc3`.
+Their independence statements and final target hash were verified.
+
+Authorize only the proposal's five-file create-only source/test corrections,
+preserving explicit candidate identity, guards, limits and cleanup. Both eligible
+blind reviewers must inspect complete created files before commit or execution.
+No imports, compilation, lint, tests, candidate execution, retry, network,
+dependency change, listener, Freewallet integration, Person Server change,
+Misty access, physical action, G28 or G29 is authorized.
+
+## D-077 — Accept reviewed combined corrections
+
+Recorded on 2026-09-17 following the PI's “yes please commit and proceed”.
+Accept the exact five-file final source reviewed in request 046. Both eligible
+reviewers returned blind independent PASS with no blocking findings; current
+file hashes match their dispatch. AGy explicitly corrected seven inaccurate
+descriptions in its earlier request-045 report; that earlier prose is not relied
+on as source evidence. Claude supplied a non-authoring stage-coverage finding;
+Codex authored and integrated the correction and regression test.
+
+Final SHA-256 pins:
+- adapter.py: 28bcbaeda80c7436353e6872e3fa2f35390e4089ae1ea7d5c64ced93afe071e7
+- worker.mjs: f3f58b1d603228c057d9a5af99045cd5783ea5a92ffaa0e550fc0cc1ce2d5b60
+- diagnostic_tests.py: 794a1b961d976abeaad044221e031358922016e9817c891e2403663337719403
+- tests/test_m02_was_composition.py: 9855fa34dab466314462b9cf4dbe1220e05a521678481d72a5768134d912922f
+- tests/test_m02_was_diagnostics.py: 2b15758936df7f95af9f40836f949bcca87ec86d24fbbff2cfadf10f45a4f903
+
+Authorize committing and pushing these reviewed sources, the reviewed combined
+proposal, D-076, this acceptance and necessary canonical synchronization. Permit
+preparation and blind dual review of a separate bounded execution proposal.
+No import, compilation, lint, test, candidate execution, retry, dependency
+operation, network, listener, Freewallet integration, Person Server change,
+Misty access, physical action, G28 or G29 is authorized. Runtime success remains
+unverified. The unrelated PI routine-tool proposal is excluded and untouched.

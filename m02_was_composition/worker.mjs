@@ -10,7 +10,7 @@ import path from 'node:path'
 import tls from 'node:tls'
 import workerThreads from 'node:worker_threads'
 import { Readable } from 'node:stream'
-import { createRequire, syncBuiltinESMExports } from 'node:module'
+import { syncBuiltinESMExports } from 'node:module'
 import { pathToFileURL } from 'node:url'
 
 const MAX_INPUT = 65536
@@ -20,8 +20,26 @@ const ID = /^[A-Za-z0-9._~-]+$/
 const RESERVED_COLLECTION = new Set(['backends','collections','export','import','linkset','policy','query','quotas'])
 const RESERVED_RESOURCE = new Set(['backend','linkset','meta','policy','query','quota'])
 const guardEvents = []
+const ERROR_STAGES = new Set(['canonicalization','input','mode','binding','boundary','holdpoint','identifier','readback','collision','prohibited_api','package_resolution','was_import','storage','cleanup','worker_exit'])
+let operationStage = 'input'
+const LOADER_SOURCE = `import fs from 'node:fs/promises'
+import path from 'node:path'
+import { fileURLToPath } from 'node:url'
+let resolved
+try {
+  const packageRoot = await fs.realpath(new URL('./node_modules/was-teaching-server', import.meta.url))
+  resolved = import.meta.resolve('was-teaching-server')
+  if (await fs.realpath(fileURLToPath(resolved)) !== path.join(packageRoot, 'dist', 'index.js')) throw new Error('identity')
+} catch {
+  const error = new Error('package_resolution'); error.stage = 'package_resolution'; throw error
+}
+let FileSystemBackend
+try { ({ FileSystemBackend } = await import('was-teaching-server')) }
+catch { const error = new Error('was_import'); error.stage = 'was_import'; throw error }
+export { FileSystemBackend }
+`
 
-function fail(stage, detail) { throw new Error(`${stage}:${detail}`) }
+function fail(stage, _detail) { const error = new Error(stage); error.stage = stage; throw error }
 
 function validate(value, where = '$') {
   if (value === null || typeof value === 'boolean') return
@@ -41,21 +59,21 @@ function validate(value, where = '$') {
   }
 }
 
-function ordered(value) {
-  if (Array.isArray(value)) return value.map(ordered)
+function serialize(value) {
+  if (Array.isArray(value)) return `[${value.map(serialize).join(',')}]`
   if (value && typeof value === 'object') {
-    return Object.fromEntries(Object.keys(value).sort().map(key => [key, ordered(value[key])]))
+    return `{${Object.keys(value).sort().map(key => `${JSON.stringify(key)}:${serialize(value[key])}`).join(',')}}`
   }
-  return value
+  return JSON.stringify(value)
 }
 
 function canonical(value) {
   validate(value)
-  return Buffer.from(JSON.stringify(ordered(value)), 'utf8')
+  return Buffer.from(serialize(value), 'utf8')
 }
 
 function canonicalSelfTest() {
-  const fixtures = [{ z: true, a: 1 }, { v: '\b\f\n\r\t\x00\x1f\x7f' }, { min: -SAFE_INTEGER, max: SAFE_INTEGER }]
+  const fixtures = [{ z: true, a: 1 }, { v: '\b\f\n\r\t\x00\x1f\x7f' }, { min: -SAFE_INTEGER, max: SAFE_INTEGER }, { '2': 'two', '10': 'ten', nested: [{ '2': false, '10': null }] }]
   let rejectedNegativeZero = false
   try { canonical({ v: -0 }) } catch { rejectedNegativeZero = true }
   if (!rejectedNegativeZero) fail('canonicalization', 'negative_zero')
@@ -108,6 +126,7 @@ async function readAll(stream) {
 }
 
 async function writeAndRead(backend, ids, envelope) {
+  operationStage = 'storage'
   const bytes = canonical(envelope)
   let idempotent = false
   let version
@@ -121,6 +140,7 @@ async function writeAndRead(backend, ids, envelope) {
     if (error?.constructor?.name !== 'PreconditionFailedError') throw error
     idempotent = true
   }
+  operationStage = 'readback'
   const result = await backend.getResource(ids)
   const stored = await readAll(result.resourceStream)
   if (result.storedResourceType !== 'application/json') fail('readback', 'content_type')
@@ -142,7 +162,7 @@ async function main() {
   assert.deepEqual(canonical(request), Buffer.concat(chunks))
   if (!['store', 'duplicate', 'collision', 'guard_child', 'guard_dns', 'guard_network', 'guard_worker', 'guard_spawn', 'guard_exec'].includes(request.mode)) fail('mode', 'unsupported')
   if (request.envelope?.interpretation !== 'person_server_evidence_only') fail('binding', 'interpretation')
-  if (request.mode !== 'store' && request.secondEnvelope?.request_id !== request.envelope?.request_id) fail('binding', 'second_request')
+  if (['duplicate', 'collision'].includes(request.mode) && request.secondEnvelope?.request_id !== request.envelope?.request_id) fail('binding', 'second_request')
   const events = guardEvents
   installGuards(events)
   if (request.mode === 'guard_dns') await dnsPromises.lookup(null)
@@ -150,6 +170,7 @@ async function main() {
   if (request.mode === 'guard_worker') new workerThreads.Worker('')
   if (request.mode === 'guard_spawn') childProcess.spawn('')
   if (request.mode === 'guard_exec') childProcess.exec('')
+  operationStage = 'boundary'
   const packageRoot = await fs.realpath(request.packageRoot)
   const dataRoot = await fs.realpath(request.dataRoot)
   if (!dataRoot.startsWith('/private/tmp/m02-stage3b-run-') || packageRoot.startsWith(dataRoot) || dataRoot.startsWith(packageRoot)) fail('boundary', 'data_root')
@@ -163,21 +184,26 @@ async function main() {
   try { await fs.access(request.releasePath) } catch { fail('holdpoint', 'not_released') }
   const linkRoot = request.moduleRoot
   if (!linkRoot.startsWith('/private/tmp/m02-stage3b-run-')) fail('boundary', 'module_root')
+  operationStage = 'package_resolution'
   await fs.mkdir(linkRoot)
-  const modules = path.join(linkRoot, 'node_modules')
-  await fs.mkdir(modules)
-  await fs.symlink(packageRoot, path.join(modules, 'was-teaching-server'), 'dir')
   try {
-    const resolver = createRequire(path.join(linkRoot, 'resolver.cjs'))
-    const entry = resolver.resolve('was-teaching-server')
-    assert.equal(await fs.realpath(entry), path.join(packageRoot, 'dist', 'index.js'))
-    const { FileSystemBackend } = await import(pathToFileURL(entry).href)
+    const modules = path.join(linkRoot, 'node_modules')
+    await fs.mkdir(modules)
+    const packageLink = path.join(modules, 'was-teaching-server')
+    await fs.symlink(packageRoot, packageLink, 'dir')
+    assert.equal(await fs.realpath(packageLink), packageRoot)
+    const loaderPath = path.join(linkRoot, 'loader.mjs')
+    await fs.writeFile(loaderPath, LOADER_SOURCE, { flag: 'wx', mode: 0o600 })
+    operationStage = 'was_import'
+    const { FileSystemBackend } = await import(pathToFileURL(loaderPath).href)
     const backendOptions = { dataDir: dataRoot, maxUploadBytes: MAX_READBACK, maxSpacesPerController: 1, maxCollectionsPerSpace: 1, maxResourcesPerSpace: 1 }
     if (request.mode === 'guard_child') backendOptions.capacityBytes = 1
+    operationStage = 'storage'
     const backend = new FileSystemBackend(backendOptions)
     const ids = { spaceId: 'soga-stage3b', collectionId: 'person-server-evidence', resourceId: request.envelope.request_id }
     if (!validId(ids.spaceId) || !validId(ids.collectionId, RESERVED_COLLECTION) || !validId(ids.resourceId, RESERVED_RESOURCE)) fail('identifier', 'invalid')
     const testDidKey = `did:key:z${base58btc(Buffer.concat([Buffer.from([0xed, 0x01]), crypto.randomBytes(32)]))}`
+    operationStage = 'storage'
     await backend.writeSpace({ spaceId: ids.spaceId, spaceDescription: { id: ids.spaceId, type: ['Space'], controller: testDidKey } })
     await backend.writeCollection({ spaceId: ids.spaceId, collectionId: ids.collectionId, collectionDescription: { id: ids.collectionId, type: ['Collection'] } })
     const first = await writeAndRead(backend, ids, request.envelope)
@@ -186,13 +212,14 @@ async function main() {
     assert.deepEqual(events, [])
     process.stdout.write(JSON.stringify({ ok: true, first, second, canonicalFixtures: canonicalSelfTest(), networkAttempts: events.length }))
   } finally {
-    await fs.rm(linkRoot, { recursive: true, force: true })
+    try { await fs.rm(linkRoot, { recursive: true, force: true }) }
+    catch { fail('cleanup', 'module_root') }
   }
 }
 
 main().catch(error => {
   const guarded = guardEvents.length > 0
-  const stage = guarded ? 'prohibited_api' : String(error?.message ?? 'worker_failure').split(':', 1)[0]
+  const stage = guarded ? 'prohibited_api' : ERROR_STAGES.has(error?.stage) ? error.stage : ERROR_STAGES.has(operationStage) ? operationStage : 'worker_exit'
   process.stderr.write(JSON.stringify({ ok: false, stage, guard: guarded ? guardEvents.at(-1) : null }))
   process.exitCode = 1
 })
