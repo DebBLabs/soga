@@ -1432,3 +1432,45 @@ No import, compilation, lint, test, candidate execution, retry, dependency
 operation, network, listener, Freewallet integration, Person Server change,
 Misty access, physical action, G28 or G29 is authorized. Runtime success remains
 unverified. The unrelated PI routine-tool proposal is excluded and untouched.
+
+## D-078 — Authorize create-only outer execution runner
+
+Recorded prospectively on 2026-09-17 after the PI agreed to create the necessary
+outer runner. Both blind request-047 reviews PASS the execution proposal at
+SHA-256 5b45bf79ad7241e9ce7ab1ee4626811bf2aadd21456551c79633fb496230b102,
+but identify its outer deadline/capture enforcement as an unresolved holdpoint.
+
+Authorize creation only of tools/m02_was_composition_execution.py, and a proposal
+addendum specifying that runner's invocation, attempt markers and limits. Both
+eligible blind reviewers must inspect the complete runner and addendum before
+commit or execution. No import, parse, compile, lint, test, runner execution,
+WAS execution, retry, network, listener, dependency operation, Freewallet,
+Misty access, physical action, G28 or G29. Existing source stays unchanged.
+
+## D-079 — Accept outer runner and authorize one corrected execution
+
+Recorded prospectively on 2026-09-17 after the PI authorized commit/push of the
+reviewed runner/proposals, one bounded synthetic check and, only on success,
+one diagnostic run, with no automatic retries. Both blind request-048 reviewers
+PASS the complete runner/addendum and records; request-047 independently passed
+the execution proposal. Final hashes verified against the actual files:
+- runner: c8ab204f84c7c976a117eb28b2ef70cb806d3719199aae3b57c0f68a6171ae3a
+- addendum: 2ba60853cad6380ea73983137cb60a8f27309b0ad7f90983e1b3a11bda5959e1
+- execution proposal: 5b45bf79ad7241e9ce7ab1ee4626811bf2aadd21456551c79633fb496230b102
+
+Authorize committing/pushing those exact artifacts, D-078, this prospective
+decision and synchronized state. Record the resulting full EXECUTION_HEAD and
+verify source/candidate/runtime inputs and pre-use controls before invocation.
+Authorize only the proposal/addendum's single synthetic step and conditional
+single diagnostic step under the reviewed limits and platform approval.
+An occupied attempt reservation, failed check, missing control or changed input
+stops the sequence. No retries or code changes. All three roots are retained
+research evidence: diagnostics-20260916-001, diagnostics-20260917-001 and
+outer-20260917-001 beneath /private/tmp/m02-stage3b-. The outer-group kill does
+not prove descendant cleanup; independently inspect and report incomplete
+cleanup rather than repair or retry. Evidence must receive blind dual review
+before PI acceptance. Record exact argv; timings include bounded shutdown grace;
+stream hashes on overflow describe retained prefixes. Invocation count23 is
+static unless actually measured; identifier/holdpoint categories are not induced.
+No network, listeners, dependencies/build, Docker, Freewallet, live Person Server
+change, personal data, payment, Misty access, physical action, G28 or G29.

@@ -36,11 +36,19 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Combined corrections accepted; execution proposal pending
+Phase: M02 — Corrected bounded execution authorized; attempt pending
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-077 accepts the request-046-reviewed five-file
+Active authorization boundary: D-079 authorizes commit/push of the blind
+request-048-reviewed runner/addendum and request-047 execution proposal, then
+one synthetic check and conditional single diagnostic run. All pre-use checks,
+finite limits, independent cleanup and blind dual evidence review apply.
+No automatic retry; source changes and all excluded activities remain barred.
+D-078 permits create-only outer runner and
+execution addendum; complete blind dual review and separate prospective PI
+execution authorization remain mandatory. No imports, tests or run occurred.
+D-077 accepts the request-046-reviewed five-file
 corrections after both blind independent PASS responses. Commit/push and
 preparation/review of a separate bounded execution proposal are authorized.
 No import, compilation, lint, tests, candidate execution or retry is authorized.
@@ -577,6 +585,12 @@ earlier queue checkpoints. D-076 authorized create-only implementation; D-077
 accepts the final request-046 sources after both blind independent reviews.
 Commit/push the accepted package, then prepare and independently review a separate
 finite execution proposal. Execution requires prospective PI authorization.
+Both request-047 reviewers PASS that proposal but identify outer bounds as an
+unresolved executable-source holdpoint. D-078 permits creation only of the outer
+runner and addendum; review both complete artifacts before commit or execution.
+Both request-048 reviewers PASS those complete artifacts; D-079 authorizes the
+reviewed one-attempt sequence prospectively. Record EXECUTION_HEAD after commit
+and verify preserved inputs before running. Stop on failed/missing controls.
 
 Research report: knowledge/research/M02_STAGE3B_SOURCE_ONLY_DIAGNOSIS_2026-09-17.md,
 SHA-256 8c0aa2f2a469489aaf86ed1ab95357571988feabfe917257853c5056bc7381a7.
