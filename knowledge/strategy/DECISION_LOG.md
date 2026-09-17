@@ -1474,3 +1474,34 @@ stream hashes on overflow describe retained prefixes. Invocation count23 is
 static unless actually measured; identifier/holdpoint categories are not induced.
 No network, listeners, dependencies/build, Docker, Freewallet, live Person Server
 change, personal data, payment, Misty access, physical action, G28 or G29.
+
+## D-080 — Accept corrected synthetic composition result and pause
+
+Recorded on 2026-09-17 after the PI selected this passing round as the stopping
+point and authorized commit/push. Both blind request-049 reviewers returned
+independent, non-authoring PASS with no blockers on evidence SHA-256
+bdd00f2b7eee1ff2a0eb622e89e17b46742da5f200b70c48a85748780d672db0.
+Their final independence statements and evidence pins were verified.
+
+Accept the single D-079 sequence at execution commit
+742ed046af7f50052423862dba187998b18546a6: synthetic9/9, focused34/34,
+zero failure/error/skip/truncation, successful execution/postflight and scoped
+independent cleanup. Retained record SHA-256
+a85b1e3d676e3fd72c882e5773df6057c44e993a0da8362d60ba2f0a08ff13a6,
+6337bytes,0600; exact transcription in durable repository evidence verified.
+Both one-time attempts are consumed. Prior negatives remain negative; causes
+are not retroactively established. Runtime invocation telemetry is unavailable;
+23 calls remains a static prediction. Listener comparison is scoped, not host-wide
+proof; raw outer streams were hashed but not retained. These disclosed limits
+do not prevent acceptance of this bounded result.
+
+Claim: synthetic Person Server result evidence storage/readback through the
+exact socket-free WAS filesystem backend under the tested contracts. Not live
+Person Server/token integration, Freewallet presentation or AAuth conformance.
+Authorize commit/push of the exact reviewed evidence, this acceptance and
+synchronized state. Pause implementation here; no next-stage authority.
+Retain old/new diagnostics, attempt markers and exact WAS environment unchanged
+pending separate disposition; repository transcription preserves the finding
+if temporary roots are lost. No retry, diagnosis, code change, dependency/build,
+external/network service, listener, wallet integration, personal data, payment,
+Misty access, physical action, G28 or G29. Excluded PI proposal untouched.
