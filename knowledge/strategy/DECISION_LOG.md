@@ -1356,3 +1356,39 @@ and synchronized canonical state. Pause here. Further diagnosis, code change,
 test/run, retry, dependency operation, external service, listener, Freewallet
 integration, personal data, payment, Misty access, physical actuation, G28,
 and G29 remain unauthorized. The unrelated PI proposal is excluded.
+
+## D-074 — Authorize source-only composition diagnosis
+
+Recorded on 2026-09-17 pursuant to the PI's “proceed”, before diagnosis report
+creation or any execution. Both blind request-042 reviewers passed the corrected
+request-041 proposal at SHA-256
+`eff8b224fdc717e765ebf0e5f35dbda32fc9003094d51692dfc426f2d5c4946b`;
+their independence statements and final hash were verified.
+
+Authorize only its local text/source inspection and standalone research report.
+No imports, tests, code execution, repairs, retry, network, dependency operation,
+listener, Freewallet integration, Misty access, physical action, G28 or G29.
+Report acceptance, canonical synchronization, commit/push and any subsequent
+implementation or execution require separate PI acceptance.
+
+## D-075 — Accept source-only diagnosis research
+
+Recorded on 2026-09-17 following the PI's current-session permission to proceed.
+Accept the request-043-reviewed report at SHA-256
+`8c0aa2f2a469489aaf86ed1ab95357571988feabfe917257853c5056bc7381a7`.
+Both reviewers returned PASS and disclosed blind independent/non-authoring review;
+the coordinator verified those statements. Their source verification was scoped,
+not an exhaustive dependency/runtime audit. No execution cause is established.
+
+The directly imported interpreter json module inspection is explicitly accepted
+as local read-only dependency research; its path/hash and limits are disclosed
+in the report. This grants no interpreter or candidate code execution.
+
+Authorize commit/push of the reviewed proposal/report, D-074, this acceptance,
+and synchronized state, and preparation/review of a combined create-only
+correction proposal. Source-supported package-resolution, guard-mode, byte-contract
+and fixture contradictions are research findings, not proof of repaired interop.
+The current-session permission does not prospectively adopt an unseen correction
+design or lift code/execution holdpoints. Implementation, imports, compilation,
+lint, tests, retry, network, dependencies, listeners, Freewallet integration,
+Misty access, physical action, G28 and G29 remain unauthorized.

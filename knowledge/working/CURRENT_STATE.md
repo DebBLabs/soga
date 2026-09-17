@@ -36,11 +36,15 @@ invalidated by the commit that updates it.
 Program: Embodied Governance Research Program
 (per `knowledge/strategy/PROGRAM_CHARTER.md`)
 
-Phase: M02 — Diagnostic negative result accepted; paused before further diagnosis
+Phase: M02 — Source-only diagnosis accepted; combined correction proposal next
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
 
-Active authorization boundary: D-073 accepts the D-072 diagnostic execution
+Active authorization boundary: D-075 accepts the blind request-043-reviewed
+source-only diagnosis under D-074 and authorizes its commit/push plus preparation
+and review of a combined create-only correction proposal. No code change or
+execution is authorized; specific prospective holdpoints remain in force.
+D-073 accepts the D-072 diagnostic execution
 as a gated negative result after both blind request-040 evidence reviewers
 returned PASS. The single attempt is consumed. Seven synthetic tests passed;
 31 focused composition tests produced seven failures and two errors. Test
@@ -563,14 +567,16 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-This round is complete and paused under D-073. Resume by reading live HEAD,
-git status, this state, and D-073; do not rely on earlier queue checkpoints.
+Source-only diagnosis is accepted under D-075 after both blind request-043
+reviewers returned PASS. Read live HEAD, git status and D-075; do not rely on
+earlier queue checkpoints. Prepare one combined create-only correction proposal.
 
-The next candidate task is a separately reviewed, prospectively authorized
-diagnosis of the current focused failures, including why the two CompositionError
-records lost stage information. A worker-provided stage outside the diagnostic
-allowlist is only a reviewer hypothesis, not an established cause. No new
-inspection, code change, run, or retry is authorized by this acceptance.
+Research report: knowledge/research/M02_STAGE3B_SOURCE_ONLY_DIAGNOSIS_2026-09-17.md,
+SHA-256 8c0aa2f2a469489aaf86ed1ab95357571988feabfe917257853c5056bc7381a7.
+Its package-root resolution, guard-mode binding, canonical byte contract and
+negative-fixture contradictions justify a combined correction proposal. Missing
+stage information and timeout liveness include unresolved runtime hypotheses.
+No code change, import, compilation, lint, test/run or retry is authorized.
 
 Accepted evidence: knowledge/research/M02_STAGE3B_DIAGNOSTIC_EXECUTION_EVIDENCE_2026-09-16.md
 at SHA-256 cdd474696d906a4467e7e1e0b7bf74b2f386a0fa6198660c7e3d77d8a26fa8ca.
