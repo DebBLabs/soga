@@ -1621,3 +1621,27 @@ No dependency acquisition or installation, implementation, import, compilation,
 testing, listener, network access, Steps 4–9, wallet or WAS integration, QR
 flow, Misty access, G28 or G29 is authorized. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-086 — Accept AAuth Phase 0 and authorize bounded dependency/reference research
+
+Recorded on 2026-09-20 after two blind independent reviewers returned PASS for
+the exact Phase 0 package:
+
+- dependency record SHA-256
+  `df78c6a267ba884dcb16b5ecc56b09ff3eed24ba9f4012db5302a5c66a28d3e9`;
+- normative matrix SHA-256
+  `2dc6a6e45e353113a56b4f318ca143f10024c5dbbb2332ac9087fe69dad0e003`.
+
+Accept the package's bounded result: the normative baseline is established, an
+Ed25519 provider is required and absent, but local evidence does not support an
+exact dependency selection. Authorize commit and push of the exact reviewed
+artifacts, this decision and synchronized canonical state.
+
+Authorize a bounded read-only network research phase to identify and verify one
+exact Ed25519 provider artifact and pin the authoritative companion specifications
+required for Phase 1: RFC 9421, RFC 9530, RFC 9651, and the exact HTTP Signature
+Keys draft referenced by AAuth `fcf656d`. Permit retrieval of documentation and
+package metadata only. No dependency download or installation, source
+implementation, import, compilation, testing, listener, wallet or WAS work,
+Misty access, G28 or G29 is authorized. Any acquisition or Phase 1 activity
+requires separate review and prospective PI authorization.
