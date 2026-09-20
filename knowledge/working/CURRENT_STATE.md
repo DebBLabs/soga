@@ -602,6 +602,12 @@ The next action is to draft and independently review a prospective implementatio
 proposal for report Steps 1–3 only. No implementation or execution is authorized.
 The existing M02 Stage 2 fixtures and accepted evidence must be preserved.
 
+D-085 accepts the exact independently reviewed Steps 1–3 proposal and authorizes
+Phase 0 only: create the dependency record and normative-requirement matrix from
+the pinned local source. No network access, dependency operation, implementation,
+import, compilation, test or listener is authorized. Both Phase 0 artifacts
+require blind independent review before PI disposition.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

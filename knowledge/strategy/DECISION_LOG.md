@@ -1599,3 +1599,25 @@ implementation, execution, dependency changes, network access, Steps 4–9,
 Freewallet or WAS integration, QR participation, external services, Misty
 access, physical action, G28 or G29. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-085 — Accept AAuth `-11` Steps 1–3 proposal and authorize Phase 0
+
+Recorded prospectively on 2026-09-20. The PI accepts
+`knowledge/proposals/M02_AAUTH_FCF656D_STEPS1_3_IMPLEMENTATION_PROPOSAL_2026-09-20.md`
+at exact SHA-256
+`f8b7f3d7ffd19e517e893304a2ef68bc8c1f7f8a407bbb5b7881ce9f11643f91`
+after two blind independent reviewers returned PASS and disclosed non-authorship
+and no cross-reading. Authorize commit and push of the exact reviewed proposal,
+this prospective decision and synchronized canonical state.
+
+Authorize Phase 0 only: create a dependency record and exact normative-
+requirement matrix against AAuth editor's-copy commit
+`fcf656de1926535f5bd6fc0538147ead6646e727`, including the HTTP-signature
+`alg` and `keyid` parameter rules identified during review. Phase 0 artifacts
+carry no selection, acquisition or implementation authority and must receive
+both blind independent reviews before PI disposition.
+
+No dependency acquisition or installation, implementation, import, compilation,
+testing, listener, network access, Steps 4–9, wallet or WAS integration, QR
+flow, Misty access, G28 or G29 is authorized. The unrelated PI routine-tool
+proposal remains excluded and untouched.
