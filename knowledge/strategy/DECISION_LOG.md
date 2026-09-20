@@ -1551,3 +1551,25 @@ Keep B-043 open pending separately authorized fixed-path restoration/verificatio
 or explicit abandonment. Pause here. No restoration, candidate/test execution,
 retry, source/dependency/build change, network, listener, wallet/PS integration,
 Misty access, physical action, G28/G29 or unrelated PI proposal change.
+
+## D-083 — Accept historical restoration and temporary-path degradation result
+
+Recorded on 2026-09-20 after the PI read and formally accepted both reports and
+the coordinator's conclusion. The reviewed utility ran once on 2026-09-18 and
+verified exact logical restoration of all 29,235 manifest entries, candidate
+commit/tree, and the 298-file `dist/` manifest. The durable backup remained
+unchanged. Accept that execution as an historically verified positive result.
+
+On 2026-09-20 AGy found the live `/private/tmp` tree missing five empty
+directories; local Git no longer recognized it. Accept the current temporary
+runtime as degraded and unusable for integration. Periodic macOS temporary-path
+maintenance is the probable cause from timing and filesystem evidence, not a
+directly observed deletion event. The durable backup remains intact.
+
+Review basis is disclosed: AGy supplied the eligible independent evidence
+review; Claude independently recomputed and corroborated all material facts but
+is ineligible because it authored the proposal and utility. PI acceptance of
+that basis is a package-specific deviation, not a change to D-064 or a claim of
+two eligible gates. B-043 remains open. No repeat restoration, runtime-path
+change, candidate execution, integration, commit/push, Misty access, G28 or G29
+is authorized by this decision.

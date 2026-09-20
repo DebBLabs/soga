@@ -1524,6 +1524,16 @@ path; backup is not an alternate runtime. Durability-control half is addressed;
 item remains OPEN pending separately authorized fixed-path restoration and
 independent verification, or explicit abandonment. No restoration authority.
 
+2026-09-20 update: one reviewed restoration succeeded on 2026-09-18 and matched
+all 29,235 entries, but the live `/private/tmp` tree later lost five empty
+directories and Git recognition while the durable backup remained exact. D-083
+accepts the historical restoration and the later degradation. B-043 remains
+OPEN: fixed-path restoration alone does not provide a dependable multi-day
+runtime. Future WAS-dependent execution requires either a reviewed configurable
+durable runtime path or a separately authorized restore, immediate identity
+verification and same-session use. Probable temporary-directory maintenance is
+recorded as an inference, not a directly observed deletion mechanism.
+
 **Concern:**
 
 D-058 and D-059 required the exact WAS checkout, dependency tree, runner cache,

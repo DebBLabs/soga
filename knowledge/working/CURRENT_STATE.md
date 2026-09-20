@@ -595,12 +595,14 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-STOPPING CHECKPOINT: D-080 accepted synthetic socket-free evidence composition;
-D-082 accepted durable environment preservation. On restart verify live HEAD,
-status, decisions and backup presence before proposing next work. Do not rerun
-or restore without prospective authorization. Temporary diagnostic/queue roots
-may disappear on reboot; durable reports transcribe primary records and utility.
-The WAS backup survives ordinary temp cleanup but not disk failure or deletion.
+CHECKPOINT: D-080 accepted synthetic socket-free evidence composition; D-082
+accepted durable environment preservation; D-083 accepts the successful
+2026-09-18 restoration and the later degradation of its `/private/tmp` copy.
+The current temporary tree is not a valid integration input. The durable WAS
+backup remains intact. Do not rerun restoration or depend on the temporary tree
+without prospective authorization and immediate identity verification. Before
+further WAS-dependent execution, separately review either a configurable durable
+runtime path or same-session restore/use plan. No integration is authorized.
 
 Source-only diagnosis is accepted under D-075 after both blind request-043
 reviewers returned PASS. Read live HEAD, git status and D-075; do not rely on
