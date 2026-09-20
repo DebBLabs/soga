@@ -1573,3 +1573,29 @@ that basis is a package-specific deviation, not a change to D-064 or a claim of
 two eligible gates. B-043 remains open. No repeat restoration, runtime-path
 change, candidate execution, integration, commit/push, Misty access, G28 or G29
 is authorized by this decision.
+
+## D-084 — Accept AAuth `-11` conformance-gap analysis at `fcf656d`
+
+Recorded on 2026-09-20 after two blind independent reviewers returned PASS for
+`knowledge/research/M02_AAUTH_FCF656D_CONFORMANCE_GAP_2026-09-20.md` at exact
+SHA-256 `048594716738b9192a5da7a81444a46636160eb5f0ba8dc7321e0d3254582bc6`.
+The primary source is the detached AAuth editor's-copy checkout at commit
+`fcf656de1926535f5bd6fc0538147ead6646e727`; the reviewed protocol file has
+SHA-256 `295ba2a0edd99dd077c4c877b6276608000419fdf4bbef2327da0c6e4d950953`.
+
+Accept the report as the authoritative gap analysis for the next AAuth track.
+It establishes that the current M02 Person Server is useful test scaffolding but
+is not AAuth `-11` conformant: its HMAC JWTs, request signing, metadata, mission
+handling and token endpoints do not implement the required asymmetric,
+typed-token, HTTP-message-signature and mission-bound flow. Preserve the
+existing accepted Stage 2 fixtures and evidence rather than rewriting them in
+place.
+
+The next permitted planning action is a prospective implementation proposal for
+Steps 1–3 only: pin the source profile; add asymmetric typed-token/JWKS support
+with strict algorithm and token-type checks; and add verified signed-agent
+requests with truthful interim metadata. This decision does not authorize that
+implementation, execution, dependency changes, network access, Steps 4–9,
+Freewallet or WAS integration, QR participation, external services, Misty
+access, physical action, G28 or G29. The unrelated PI routine-tool proposal
+remains excluded and untouched.

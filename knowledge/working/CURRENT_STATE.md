@@ -595,14 +595,20 @@ G23 — Primary Source Grounding
 
 ## Immediate Next Action
 
-CHECKPOINT: D-080 accepted synthetic socket-free evidence composition; D-082
-accepted durable environment preservation; D-083 accepts the successful
-2026-09-18 restoration and the later degradation of its `/private/tmp` copy.
-The current temporary tree is not a valid integration input. The durable WAS
-backup remains intact. Do not rerun restoration or depend on the temporary tree
-without prospective authorization and immediate identity verification. Before
-further WAS-dependent execution, separately review either a configurable durable
-runtime path or same-session restore/use plan. No integration is authorized.
+CHECKPOINT: D-084 accepts the AAuth `-11` conformance-gap analysis at editor's
+copy commit `fcf656de1926535f5bd6fc0538147ead6646e727`, exact report SHA-256
+`048594716738b9192a5da7a81444a46636160eb5f0ba8dc7321e0d3254582bc6`.
+The next action is to draft and independently review a prospective implementation
+proposal for report Steps 1–3 only. No implementation or execution is authorized.
+The existing M02 Stage 2 fixtures and accepted evidence must be preserved.
+
+D-080 accepted synthetic socket-free evidence composition; D-082 accepted
+durable environment preservation; D-083 accepts the successful 2026-09-18
+restoration and the later degradation of its `/private/tmp` copy. The current
+temporary tree is not a valid integration input. The durable WAS backup remains
+intact. Do not rerun restoration or depend on the temporary tree without
+prospective authorization and immediate identity verification. No further WAS
+integration is authorized.
 
 Source-only diagnosis is accepted under D-075 after both blind request-043
 reviewers returned PASS. Read live HEAD, git status and D-075; do not rely on
