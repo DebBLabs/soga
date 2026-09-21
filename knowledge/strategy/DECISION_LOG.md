@@ -1729,3 +1729,33 @@ Both resulting evidence packages require blind dual review before acceptance or
 use. No installation, import, matrix edit, implementation, compilation, testing,
 listener, wallet or WAS work, Misty access, G28 or G29 is authorized. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-091 — Accept AAuth Phase A/B0 evidence and authorize Phase B1 creation
+
+Recorded on 2026-09-21 after both blind independent reviewers returned PASS for
+the corrected evidence reports:
+
+- Phase A wheel-acquisition evidence SHA-256
+  `37097bedd3364881a25739688d465294a7a267f9a5f7fc113cb356a8f8c6d836`;
+- Phase B0 normative-source evidence SHA-256
+  `c1a6c52f2731db6d4009dd6e696eb244f99cfba61ced77d30b9582b636aad6b3`.
+
+Accept both one-shot executions as gated positive results. Accept these B0
+document hashes as mandatory Phase B1 input pins:
+
+- RFC 9421: `612655786bf4293bfc486e4177571467fbb3de6e6f0eea90cb74c346a34fdf3c`;
+- RFC 9530: `544dbb7d9afceafa8c9931d9924ca6cff2b4807274166d7ed2483342ef2cdd6a`;
+- RFC 9651: `fe27f2ec8819911afbe4bd11f6fcb947580da4c49e5423a1fff960e252ced26d`;
+- Signature Keys `-09`:
+  `b5e8602e217bbccd254b93419d0b54ec2b2a6cdce38351983624718029528a5d`.
+
+Authorize commit and push of the exact reviewed evidence, this decision, and
+synchronized canonical state. Authorize create-only implementation of the
+separate Phase 1 normative-matrix extension from the preserved pinned documents.
+Also authorize creation only of a bounded proposal for isolated installation
+and verification of the four acquired wheels. Both artifacts require blind dual
+review before acceptance or installation.
+
+No installation, import, implementation, compilation, testing, listener, wallet
+or WAS work, Misty access, G28 or G29 is authorized. The unrelated PI
+routine-tool proposal remains excluded and untouched.

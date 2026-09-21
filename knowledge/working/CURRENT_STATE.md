@@ -617,9 +617,11 @@ wheel-acquisition and Phase B normative-source/matrix requests. Create-only
 implementation of their Phase A and Phase B0 retrieval controllers is
 authorized. D-090 accepts both exact controllers and prospectively authorizes
 one committed execution of each at its fixed temporary target, with zero
-redirects and no retry. Resulting evidence requires blind dual review before
-acceptance or use. No installation, import, matrix edit, implementation,
-compilation, test or listener is authorized.
+redirects and no retry. D-091 accepts both positive evidence packages and pins
+the four normative-document hashes for Phase B1. Create-only work is authorized
+for the separate normative-matrix extension and an isolated wheel-installation
+proposal; both require blind dual review. No installation, import,
+implementation, compilation, test or listener is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
