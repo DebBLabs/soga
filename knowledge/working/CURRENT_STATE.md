@@ -663,6 +663,13 @@ remains a gated negative; R2 is positive. Request 040 reviewed R2
 retrospectively after a disclosed PI-authorized package-specific deviation.
 Future execution returns to prospective blind review of the exact instrument.
 
+D-100 accepts the independently reviewed AAuth Steps 1–3 Phase 1 create-only
+proposal and authorizes creation of its seven exact source/test files. No import,
+compilation, lint, test or execution is authorized. Every complete file requires
+blind dual review before commit or execution. JWK verification may reference
+`Ed25519PublicKey.from_public_bytes`, but no execution may rely on it until a
+separate bounded provider-evidence extension covers that API.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

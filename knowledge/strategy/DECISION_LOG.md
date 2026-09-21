@@ -1759,6 +1759,24 @@ No additional execution, dependency operation, AAuth implementation, network
 access, wallet/WAS work, Misty access, G28 or G29 is authorized. The unrelated
 PI routine-tool proposal remains excluded and untouched.
 
+## D-100 — Authorize AAuth Steps 1–3 Phase 1 create-only implementation
+
+Recorded on 2026-09-21 at PI instruction after both blind request-042 reviewers
+returned PASS.
+
+Accept
+`knowledge/proposals/M02_AAUTH_FCF656D_PHASE1_CREATE_ONLY_PROPOSAL_2026-09-21.md`
+at SHA-256
+`47f54e4cff5cc8ecfce46209a949194b522a63ef503994685ada0f1b09b4dbe4`.
+Authorize creation only of the seven source and test files named there, under
+its exact provider, normative, preservation, stop-rule and claim boundaries.
+
+Do not import, compile, lint, test or execute the created code. Both blind gates
+must review every complete file before commit or execution. No Step 4–9 work,
+dependency operation, listener, network access, wallet/WAS integration, QR
+flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
+PI routine-tool proposal remains excluded and untouched.
+
 ## D-090 — Accept AAuth retrieval controllers and authorize one execution each
 
 Recorded prospectively on 2026-09-21 after both blind independent reviewers
