@@ -625,8 +625,10 @@ on the bounded installation controller, with exact pip-version pinning and the
 private-scratch boundary. The controller requires blind dual review. No
 installation, import, native-code execution, implementation, compilation, test
 or listener is authorized. D-093 accepts the reviewed installation controller
-and authorizes one committed execution with no retry; its evidence requires
-blind dual review before any provider import or use.
+and its one committed execution stopped fail-closed on `tmp/xcrun_db` after pip
+reported success. D-094 accepts that gated negative result; the target remains
+unaccepted. Creation only of a static recovery-verification proposal is
+authorized. No retry, cleanup, import or native-code execution is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18

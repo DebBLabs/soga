@@ -1796,3 +1796,27 @@ review before any import or use.
 No provider import, bundled native-code execution, AAuth implementation,
 testing, listener, wallet or WAS work, Misty access, G28 or G29 is authorized.
 The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-094 — Accept isolated installation negative result and authorize recovery proposal
+
+Recorded on 2026-09-21 after both blind independent reviewers returned PASS for
+`knowledge/research/M02_AAUTH_FCF656D_ISOLATED_INSTALLATION_EVIDENCE_2026-09-21.md`
+at exact SHA-256
+`dc19a3cf34a583be625f1ed33d3b506b780986cee4a5b65cf613f1088ff781d3`.
+
+Accept the D-093 attempt as a gated negative result at the reviewed empty-scratch
+holdpoint. pip reported successful local installation of the four exact wheels,
+but the controller stopped before post-install source, RECORD, distribution-set
+and installed-tree verification because private scratch contained `xcrun_db`.
+The attempt is consumed and the preserved target remains unaccepted and unusable.
+
+Authorize commit and push of the exact reviewed evidence report, this decision,
+and synchronized canonical state. Authorize creation only of a recovery proposal
+for static verification of the preserved installed tree without rerunning pip,
+importing a provider, executing bundled native code, deleting `xcrun_db`, or
+modifying preserved state. Require blind dual review before any recovery verifier
+is created or executed.
+
+No retry, cleanup, import, implementation, testing, listener, wallet or WAS work,
+Misty access, G28 or G29 is authorized. The unrelated PI routine-tool proposal
+remains excluded and untouched.
