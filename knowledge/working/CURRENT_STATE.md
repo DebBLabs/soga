@@ -612,10 +612,12 @@ D-086 accepts the independently reviewed Phase 0 package. The next bounded
 research action is complete. D-087 accepts the exact four-wheel Ed25519
 dependency closure and pins RFC 9421, RFC 9530, RFC 9651 and HTTP Signature Keys
 `-09`. D-088 accepts the independently reviewed Phase 1 acquisition and
-matrix-extension proposal. The next action is creation and independent review
-of separate Phase A acquisition and Phase B exact-source/matrix requests. No
-wheel or document download, installation, implementation, import, compilation,
-test or listener is authorized.
+matrix-extension proposal. D-089 accepts the independently reviewed Phase A
+wheel-acquisition and Phase B normative-source/matrix requests. Create-only
+implementation of their Phase A and Phase B0 retrieval controllers is
+authorized; both complete controllers require blind dual review before commit
+or execution. No wheel or document download, installation, import, matrix edit,
+compilation, test or listener is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18

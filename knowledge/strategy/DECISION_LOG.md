@@ -1686,3 +1686,23 @@ redirect. No wheel or document download, installation, import, implementation,
 compilation, testing, listener, wallet or WAS work, Misty access, G28 or G29 is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-089 — Accept AAuth Phase A/B requests and authorize controller creation
+
+Recorded on 2026-09-21 after both blind independent reviewers returned PASS for
+the corrected requests:
+
+- Phase A exact-wheel acquisition request SHA-256
+  `aeef181ac6b5b6e3082cd53f0be595b91a511e312b4e6544c3603638af7a6163`;
+- Phase B normative-source and matrix request SHA-256
+  `69cb034a20a7ea33afbdd971f098aac044465dab9c0b731911ed021793522424`.
+
+Accept and authorize commit and push of the exact reviewed requests, this
+decision, and synchronized canonical state. Authorize create-only implementation
+of the Phase A wheel-acquisition controller and Phase B0 normative-source
+retrieval controller under the reviewed controls. Both complete controllers
+require blind dual review before commit or execution.
+
+No network retrieval, download, installation, import, matrix edit, compilation,
+testing, listener, wallet or WAS work, Misty access, G28 or G29 is authorized.
+The unrelated PI routine-tool proposal remains excluded and untouched.
