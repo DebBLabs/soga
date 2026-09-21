@@ -1780,3 +1780,19 @@ Any later provider verification must explicitly authorize execution of
 execution, AAuth implementation, testing, listener, wallet or WAS work, Misty
 access, G28 or G29 is authorized. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-093 — Accept isolated installation controller and authorize one execution
+
+Recorded prospectively on 2026-09-21 after both blind independent reviewers
+returned PASS for
+`tools/m02_aauth_fcf656d/install_verified_wheels.py` at exact SHA-256
+`84f4594b25a68f4560eeb575b7977cbfc7047331daddf9006ea578a2acd34b13`.
+
+Authorize commit and push of the exact reviewed controller, this decision, and
+synchronized canonical state. Then authorize one execution under the D-092
+proposal with no automatic retry. Require standalone evidence and blind dual
+review before any import or use.
+
+No provider import, bundled native-code execution, AAuth implementation,
+testing, listener, wallet or WAS work, Misty access, G28 or G29 is authorized.
+The unrelated PI routine-tool proposal remains excluded and untouched.
