@@ -655,6 +655,14 @@ the exact preserved 110-byte SHA-256 may pass; all other stderr fails. The R2
 result requires blind dual review before acceptance and establishes no AAuth
 conformance by itself.
 
+D-099 accepts bounded deterministic Ed25519 provider behavior for the pinned
+`cryptography 50.0.1` installation. RFC 8032 Section 7.1 Test 1 and the encoded
+negative cases passed, with byte-identical provider evidence across two runs.
+This is not AAuth, JWT or HTTP Message Signature conformance. The first run
+remains a gated negative; R2 is positive. Request 040 reviewed R2
+retrospectively after a disclosed PI-authorized package-specific deviation.
+Future execution returns to prospective blind review of the exact instrument.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
