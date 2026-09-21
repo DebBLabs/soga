@@ -615,8 +615,10 @@ dependency closure and pins RFC 9421, RFC 9530, RFC 9651 and HTTP Signature Keys
 matrix-extension proposal. D-089 accepts the independently reviewed Phase A
 wheel-acquisition and Phase B normative-source/matrix requests. Create-only
 implementation of their Phase A and Phase B0 retrieval controllers is
-authorized; both complete controllers require blind dual review before commit
-or execution. No wheel or document download, installation, import, matrix edit,
+authorized. D-090 accepts both exact controllers and prospectively authorizes
+one committed execution of each at its fixed temporary target, with zero
+redirects and no retry. Resulting evidence requires blind dual review before
+acceptance or use. No installation, import, matrix edit, implementation,
 compilation, test or listener is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted

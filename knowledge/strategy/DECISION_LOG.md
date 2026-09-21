@@ -1706,3 +1706,26 @@ require blind dual review before commit or execution.
 No network retrieval, download, installation, import, matrix edit, compilation,
 testing, listener, wallet or WAS work, Misty access, G28 or G29 is authorized.
 The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-090 — Accept AAuth retrieval controllers and authorize one execution each
+
+Recorded prospectively on 2026-09-21 after both blind independent reviewers
+returned PASS for the exact controllers:
+
+- Phase A wheel-acquisition controller SHA-256
+  `4105596b13aca01b467e7a8cb42dd79c118713d7fb152840f0c7c4e78ca8f427`;
+- Phase B0 normative-source controller SHA-256
+  `e47d48cfb90e8e621ed5a9e712157a06d940037b64cd68db33300d448b827034`.
+
+Authorize commit and push of the exact reviewed controllers, this prospective
+decision, and synchronized canonical state. After that commit, authorize one
+execution of each exact committed controller: Phase A at
+`/private/tmp/m02-aauth-fcf656d-phase1-20260921/wheels` and Phase B0 at
+`/private/tmp/m02-aauth-fcf656d-phase-b0-20260921/sources`. Permit only the
+exact HTTPS retrievals encoded in the controllers, with zero redirects, finite
+limits, fail-closed cleanup, no retries, and complete evidence.
+
+Both resulting evidence packages require blind dual review before acceptance or
+use. No installation, import, matrix edit, implementation, compilation, testing,
+listener, wallet or WAS work, Misty access, G28 or G29 is authorized. The
+unrelated PI routine-tool proposal remains excluded and untouched.
