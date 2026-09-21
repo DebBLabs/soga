@@ -1707,6 +1707,28 @@ No network retrieval, download, installation, import, matrix edit, compilation,
 testing, listener, wallet or WAS work, Misty access, G28 or G29 is authorized.
 The unrelated PI routine-tool proposal remains excluded and untouched.
 
+## D-098 — Record provider run negative and authorize exact-diagnostic R2
+
+Recorded on 2026-09-21 at PI instruction after both blind request-039 reviewers
+passed diagnosis of the preserved first-run evidence.
+
+The first provider execution at `a5e17aa` is consumed and remains a gated
+negative because the outer runner correctly rejected 110 nonempty stderr bytes.
+The child exited zero and produced an RFC 8032 Test 1 positive result, but that
+cryptographic finding remains unaccepted pending a clean outer-gate result.
+
+Authorize the narrow R2 runner correction and one committed execution described
+in `knowledge/proposals/M02_AAUTH_FCF656D_ED25519_PROVIDER_R2_PROPOSAL_2026-09-21.md`.
+Only empty stderr or exactly 110 bytes with SHA-256
+`2a13af67601624cb4924e88c89583b6d14c362a01c585716097d241c0a47bd61`
+may pass; raw stderr must still be preserved and any superset or other content
+must fail. The precise intermittent host trigger is not claimed.
+
+No retry, network access, dependency operation, AAuth conformance claim,
+listener, wallet/WAS work, Misty access, G28 or G29 is authorized. Resulting
+evidence requires blind dual review before acceptance. The unrelated PI
+routine-tool proposal remains excluded and untouched.
+
 ## D-090 — Accept AAuth retrieval controllers and authorize one execution each
 
 Recorded prospectively on 2026-09-21 after both blind independent reviewers

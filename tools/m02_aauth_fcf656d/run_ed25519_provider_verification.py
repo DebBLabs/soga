@@ -25,12 +25,16 @@ STATIC_EVIDENCE = Path(
     "/private/tmp/m02-aauth-fcf656d-static-recovery-20260921/"
     "static-verification-evidence.json"
 )
-EVIDENCE_DIR = Path("/private/tmp/m02-aauth-fcf656d-ed25519-provider-20260921")
+EVIDENCE_DIR = Path("/private/tmp/m02-aauth-fcf656d-ed25519-provider-r2-20260921")
 STDOUT_PATH = EVIDENCE_DIR / "provider-evidence.json"
 STDERR_PATH = EVIDENCE_DIR / "provider-stderr.bin"
 RUN_RECORD_PATH = EVIDENCE_DIR / "run-record.json"
 TIMEOUT_SECONDS = 30
 STREAM_LIMIT_BYTES = 1_000_000
+ALLOWED_DARWIN_STDERR_SHA256 = (
+    "2a13af67601624cb4924e88c89583b6d14c362a01c585716097d241c0a47bd61"
+)
+ALLOWED_DARWIN_STDERR_LENGTH = 110
 EXPECTED_STATIC_EVIDENCE_SHA256 = (
     "fe66cc77cc1e4ceabcd99968fd6ab372c6b066b0f0e8c48291660e3636f792b0"
 )
@@ -217,8 +221,13 @@ def main():
                     "unexpected provider result")
         except Exception as error:
             error_text = type(error).__name__ + ": " + str(error)
-    if error_text is None and stderr != b"":
-        error_text = "stderr is not empty"
+    stderr_sha256 = sha256_bytes(stderr)
+    allowed_darwin_stderr = (
+        len(stderr) == ALLOWED_DARWIN_STDERR_LENGTH
+        and stderr_sha256 == ALLOWED_DARWIN_STDERR_SHA256
+    )
+    if error_text is None and stderr != b"" and not allowed_darwin_stderr:
+        error_text = "stderr is neither empty nor the pinned Darwin diagnostic"
     positive = (error_text is None and exit_status == 0 and
                 parsed.get("result") == "ED25519_PROVIDER_VERIFIED")
     if not positive and error_text is None:
@@ -238,8 +247,9 @@ def main():
         "stdout_sha256": sha256_bytes(stdout),
         "stdout_preserved": not stdout_overflow,
         "stderr_length": len(stderr),
-        "stderr_sha256": sha256_bytes(stderr),
+        "stderr_sha256": stderr_sha256,
         "stderr_preserved": not stderr_overflow,
+        "pinned_darwin_stderr_matched": allowed_darwin_stderr,
         "parsed_result": parsed_value if isinstance(parsed_value, str) else None,
         "command": command,
         "environment": CHILD_ENV,

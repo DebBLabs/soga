@@ -647,6 +647,14 @@ identity, filesystem containment and RECORD completeness for purposes of
 planning provider-behavior verification. No retry, provider import or
 native-code execution is authorized.
 
+D-098 records the first Ed25519 provider run as a consumed gated negative: the
+child exited zero with an RFC 8032 Test 1 positive result, but the outer runner
+rejected the recurring 110-byte Darwin temporary-directory diagnostic. One R2
+runner correction and committed execution is authorized. Only empty stderr or
+the exact preserved 110-byte SHA-256 may pass; all other stderr fails. The R2
+result requires blind dual review before acceptance and establishes no AAuth
+conformance by itself.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
