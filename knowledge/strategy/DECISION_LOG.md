@@ -1893,3 +1893,25 @@ Authorship disclosure: this entry was drafted by Claude Gate 1 at the PI's direc
 instruction rather than by the integrator. Under D-064, Gate 1 is therefore
 disqualified from serving as an independent reviewer of this entry, and any
 review of it must come from two other eligible non-authoring reviewers.
+
+## D-096 — Record consumed static-verifier execution and authorize no-execution recovery proposal
+
+Recorded on 2026-09-21 at PI instruction after both blind request-031 reviewers
+passed review of the preserved raw artifacts.
+
+Accept the single static-verifier execution as a consumed gated negative. The
+child verifier exited zero and emitted a positive static-verification document,
+and both reviewers independently corroborated its static findings. The runner
+correctly returned `FAILED` because it observed 110 stderr bytes. Those bytes
+were not preserved, so their origin cannot be diagnosed from the evidence and
+the installation remains unaccepted.
+
+Authorize creation only of a durable evidence report and a no-execution recovery
+proposal based on blind dual independent recomputation of the preserved bytes.
+Every future runner with an stderr holdpoint must preserve bounded raw stderr
+content before evaluating success.
+
+No retry, provider import, native-code execution, pip operation, AAuth
+implementation, listener, network access, wallet or WAS work, Misty access, G28
+or G29 is authorized. The unrelated PI routine-tool proposal remains excluded
+and untouched.

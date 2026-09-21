@@ -630,6 +630,21 @@ reported success. D-094 accepts that gated negative result; the target remains
 unaccepted. Creation only of a static recovery-verification proposal is
 authorized. No retry, cleanup, import or native-code execution is authorized.
 
+D-095 records standing determinations rather than advancing a phase: the AAuth
+basis remains `-11` at `fcf656d`; the governing Freewallet pin is `8e806c0`,
+release line 0.42.0, and the in-tree `external-repos/freewallet` copy at
+`403bc55`, version 0.38.0, is superseded evidence only; the socket-free WAS
+library path performs no zCap authorization; and the next build priority is the
+AAuth `-11` token exchange against a simulated Misty, recorded as a priority
+only and authorizing nothing.
+
+D-096 records the later static-verifier execution as a consumed gated negative:
+the child exited zero and its static findings were independently corroborated,
+but the runner observed 110 unpreserved stderr bytes. The installation remains
+unaccepted. Creation only of a durable evidence report and no-execution recovery
+proposal is authorized. No retry, provider import or native-code execution is
+authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
