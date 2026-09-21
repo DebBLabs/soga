@@ -1645,3 +1645,24 @@ package metadata only. No dependency download or installation, source
 implementation, import, compilation, testing, listener, wallet or WAS work,
 Misty access, G28 or G29 is authorized. Any acquisition or Phase 1 activity
 requires separate review and prospective PI authorization.
+
+## D-087 — Accept AAuth dependency/reference selection and authorize proposal creation
+
+Recorded on 2026-09-21 after AGy returned an independent PASS and Claude Gate 1
+returned PASS on a focused recheck that closed its sole evidence blocker. Accept
+`knowledge/research/M02_AAUTH_FCF656D_DEPENDENCY_AND_REFERENCE_SELECTION_2026-09-21.md`
+at exact SHA-256
+`dc6d1547dcc03fbac8acc3e38a6370a3406b6f11b3d7b07995bea33ec5cb105b`.
+The accepted result selects one exact four-wheel Ed25519 dependency closure and
+pins RFC 9421, RFC 9530, RFC 9651, and
+`draft-hardt-httpbis-signature-key-09`. The `pycparser` wheel hash was resolved
+by deterministic extraction from the directly retrieved version-specific PyPI
+JSON; no distribution artifact was downloaded.
+
+Authorize commit and push of the exact reviewed report, this decision, and
+synchronized canonical state. Authorize creation only of a proposal for
+acquiring the four exact hash-pinned wheels and extending the normative matrix
+for Phase 1. No dependency download or installation, implementation, import,
+compilation, testing, listener, wallet or WAS work, Misty access, G28 or G29 is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.

@@ -609,12 +609,12 @@ import, compilation, test or listener is authorized. Both Phase 0 artifacts
 require blind independent review before PI disposition.
 
 D-086 accepts the independently reviewed Phase 0 package. The next bounded
-action is read-only primary-source research for one exact Ed25519 provider
-artifact and the RFC 9421, RFC 9530, RFC 9651 and HTTP Signature Keys reference
-set. Documentation and package metadata retrieval only; no artifact download,
-installation, implementation, import, compilation, test or listener is
-authorized. Research findings require blind review before dependency acquisition
-or Phase 1 can be proposed.
+research action is complete. D-087 accepts the exact four-wheel Ed25519
+dependency closure and pins RFC 9421, RFC 9530, RFC 9651 and HTTP Signature Keys
+`-09`. The next action is creation and independent review of a proposal for
+exact-wheel acquisition and the Phase 1 normative-matrix extension. No artifact
+download, installation, implementation, import, compilation, test or listener
+is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
