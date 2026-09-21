@@ -1707,76 +1707,6 @@ No network retrieval, download, installation, import, matrix edit, compilation,
 testing, listener, wallet or WAS work, Misty access, G28 or G29 is authorized.
 The unrelated PI routine-tool proposal remains excluded and untouched.
 
-## D-098 — Record provider run negative and authorize exact-diagnostic R2
-
-Recorded on 2026-09-21 at PI instruction after both blind request-039 reviewers
-passed diagnosis of the preserved first-run evidence.
-
-The first provider execution at `a5e17aa` is consumed and remains a gated
-negative because the outer runner correctly rejected 110 nonempty stderr bytes.
-The child exited zero and produced an RFC 8032 Test 1 positive result, but that
-cryptographic finding remains unaccepted pending a clean outer-gate result.
-
-Authorize the narrow R2 runner correction and one committed execution described
-in `knowledge/proposals/M02_AAUTH_FCF656D_ED25519_PROVIDER_R2_PROPOSAL_2026-09-21.md`.
-Only empty stderr or exactly 110 bytes with SHA-256
-`2a13af67601624cb4924e88c89583b6d14c362a01c585716097d241c0a47bd61`
-may pass; raw stderr must still be preserved and any superset or other content
-must fail. The precise intermittent host trigger is not claimed.
-
-No retry, network access, dependency operation, AAuth conformance claim,
-listener, wallet/WAS work, Misty access, G28 or G29 is authorized. Resulting
-evidence requires blind dual review before acceptance. The unrelated PI
-routine-tool proposal remains excluded and untouched.
-
-## D-099 — Accept bounded Ed25519 provider behavior
-
-Recorded on 2026-09-21 at PI instruction after both blind request-040 reviewers
-returned PASS on the exact R2 evidence.
-
-Accept the request-040 evidence as establishing bounded deterministic Ed25519
-provider behavior for the pinned installation. RFC 8032 Section 7.1 Test 1
-reproduced byte-for-byte, all specified negative cases passed, and two separate
-executions produced byte-identical provider evidence at SHA-256
-`d6c7564e55e81fbc11931fb0306b9ce4c210f968fce587cc1f6919ebaba505fe`.
-
-This establishes provider behavior only, not AAuth conformance, JWT or HTTP
-Message Signature correctness, general native-code safety, or behavior beyond
-the encoded tests. The first execution remains a consumed gated negative. The
-110-byte Darwin diagnostic is accepted only as the exact pinned value.
-
-The corrected R2 runner at SHA-256
-`4158eae860fa492048267803faa94f68d185cc8a967b369b0dde8a0aa2ce947a`
-was committed and executed under D-098 before prospective blind dual static
-review. Both gates reviewed the exact runner and evidence retrospectively in
-request 040 and returned PASS. This was a PI-authorized, package-specific
-deviation and creates no precedent; future executions return to prospective
-review of the exact instrument.
-
-The durable evidence record is
-`knowledge/research/M02_AAUTH_FCF656D_ED25519_PROVIDER_R2_EVIDENCE_2026-09-21.md`.
-No additional execution, dependency operation, AAuth implementation, network
-access, wallet/WAS work, Misty access, G28 or G29 is authorized. The unrelated
-PI routine-tool proposal remains excluded and untouched.
-
-## D-100 — Authorize AAuth Steps 1–3 Phase 1 create-only implementation
-
-Recorded on 2026-09-21 at PI instruction after both blind request-042 reviewers
-returned PASS.
-
-Accept
-`knowledge/proposals/M02_AAUTH_FCF656D_PHASE1_CREATE_ONLY_PROPOSAL_2026-09-21.md`
-at SHA-256
-`47f54e4cff5cc8ecfce46209a949194b522a63ef503994685ada0f1b09b4dbe4`.
-Authorize creation only of the seven source and test files named there, under
-its exact provider, normative, preservation, stop-rule and claim boundaries.
-
-Do not import, compile, lint, test or execute the created code. Both blind gates
-must review every complete file before commit or execution. No Step 4–9 work,
-dependency operation, listener, network access, wallet/WAS integration, QR
-flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
-PI routine-tool proposal remains excluded and untouched.
-
 ## D-090 — Accept AAuth retrieval controllers and authorize one execution each
 
 Recorded prospectively on 2026-09-21 after both blind independent reviewers
@@ -2005,3 +1935,73 @@ implementation, listener, network access, wallet or WAS work, Misty access, G28
 or G29 is authorized. Any provider-behavior proposal must receive blind dual
 review and any later execution must receive separate prospective PI authority.
 The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-098 — Record provider run negative and authorize exact-diagnostic R2
+
+Recorded on 2026-09-21 at PI instruction after both blind request-039 reviewers
+passed diagnosis of the preserved first-run evidence.
+
+The first provider execution at `a5e17aa` is consumed and remains a gated
+negative because the outer runner correctly rejected 110 nonempty stderr bytes.
+The child exited zero and produced an RFC 8032 Test 1 positive result, but that
+cryptographic finding remains unaccepted pending a clean outer-gate result.
+
+Authorize the narrow R2 runner correction and one committed execution described
+in `knowledge/proposals/M02_AAUTH_FCF656D_ED25519_PROVIDER_R2_PROPOSAL_2026-09-21.md`.
+Only empty stderr or exactly 110 bytes with SHA-256
+`2a13af67601624cb4924e88c89583b6d14c362a01c585716097d241c0a47bd61`
+may pass; raw stderr must still be preserved and any superset or other content
+must fail. The precise intermittent host trigger is not claimed.
+
+No retry, network access, dependency operation, AAuth conformance claim,
+listener, wallet/WAS work, Misty access, G28 or G29 is authorized. Resulting
+evidence requires blind dual review before acceptance. The unrelated PI
+routine-tool proposal remains excluded and untouched.
+
+## D-099 — Accept bounded Ed25519 provider behavior
+
+Recorded on 2026-09-21 at PI instruction after both blind request-040 reviewers
+returned PASS on the exact R2 evidence.
+
+Accept the request-040 evidence as establishing bounded deterministic Ed25519
+provider behavior for the pinned installation. RFC 8032 Section 7.1 Test 1
+reproduced byte-for-byte, all specified negative cases passed, and two separate
+executions produced byte-identical provider evidence at SHA-256
+`d6c7564e55e81fbc11931fb0306b9ce4c210f968fce587cc1f6919ebaba505fe`.
+
+This establishes provider behavior only, not AAuth conformance, JWT or HTTP
+Message Signature correctness, general native-code safety, or behavior beyond
+the encoded tests. The first execution remains a consumed gated negative. The
+110-byte Darwin diagnostic is accepted only as the exact pinned value.
+
+The corrected R2 runner at SHA-256
+`4158eae860fa492048267803faa94f68d185cc8a967b369b0dde8a0aa2ce947a`
+was committed and executed under D-098 before prospective blind dual static
+review. Both gates reviewed the exact runner and evidence retrospectively in
+request 040 and returned PASS. This was a PI-authorized, package-specific
+deviation and creates no precedent; future executions return to prospective
+review of the exact instrument.
+
+The durable evidence record is
+`knowledge/research/M02_AAUTH_FCF656D_ED25519_PROVIDER_R2_EVIDENCE_2026-09-21.md`.
+No additional execution, dependency operation, AAuth implementation, network
+access, wallet/WAS work, Misty access, G28 or G29 is authorized. The unrelated
+PI routine-tool proposal remains excluded and untouched.
+
+## D-100 — Authorize AAuth Steps 1–3 Phase 1 create-only implementation
+
+Recorded on 2026-09-21 at PI instruction after both blind request-042 reviewers
+returned PASS.
+
+Accept
+`knowledge/proposals/M02_AAUTH_FCF656D_PHASE1_CREATE_ONLY_PROPOSAL_2026-09-21.md`
+at SHA-256
+`47f54e4cff5cc8ecfce46209a949194b522a63ef503994685ada0f1b09b4dbe4`.
+Authorize creation only of the seven source and test files named there, under
+its exact provider, normative, preservation, stop-rule and claim boundaries.
+
+Do not import, compile, lint, test or execute the created code. Both blind gates
+must review every complete file before commit or execution. No Step 4–9 work,
+dependency operation, listener, network access, wallet/WAS integration, QR
+flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
+PI routine-tool proposal remains excluded and untouched.
