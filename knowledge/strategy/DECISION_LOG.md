@@ -1759,3 +1759,24 @@ review before acceptance or installation.
 No installation, import, implementation, compilation, testing, listener, wallet
 or WAS work, Misty access, G28 or G29 is authorized. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-092 — Accept AAuth Phase B1 matrix and installation proposal
+
+Recorded on 2026-09-21 after both blind independent reviewers returned PASS for:
+
+- Phase B1 normative-matrix extension SHA-256
+  `ba6779c4ff2f01acfb35e87ff090f92297b65b204cf5c5b931e489749a49d3d4`;
+- isolated wheel-installation proposal SHA-256
+  `384c53ff69e9cfdbc108e57853b43704c084ad945b1330671cafd0c898da94b5`.
+
+Accept both artifacts and authorize commit and push of their exact reviewed
+bytes, this decision, and synchronized canonical state. Authorize create-only
+implementation of the bounded installation controller. The controller must pin
+and record the exact pip version and preserve the reviewed private-scratch
+boundary. It requires blind dual review before commit or execution.
+
+Any later provider verification must explicitly authorize execution of
+`cryptography`'s bundled native code. No installation, import, native-code
+execution, AAuth implementation, testing, listener, wallet or WAS work, Misty
+access, G28 or G29 is authorized. The unrelated PI routine-tool proposal
+remains excluded and untouched.

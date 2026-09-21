@@ -620,8 +620,11 @@ one committed execution of each at its fixed temporary target, with zero
 redirects and no retry. D-091 accepts both positive evidence packages and pins
 the four normative-document hashes for Phase B1. Create-only work is authorized
 for the separate normative-matrix extension and an isolated wheel-installation
-proposal; both require blind dual review. No installation, import,
-implementation, compilation, test or listener is authorized.
+proposal. D-092 accepts both reviewed artifacts and authorizes create-only work
+on the bounded installation controller, with exact pip-version pinning and the
+private-scratch boundary. The controller requires blind dual review. No
+installation, import, native-code execution, implementation, compilation, test
+or listener is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
