@@ -1666,3 +1666,23 @@ for Phase 1. No dependency download or installation, implementation, import,
 compilation, testing, listener, wallet or WAS work, Misty access, G28 or G29 is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-088 — Accept AAuth Phase 1 acquisition/matrix proposal and authorize request creation
+
+Recorded on 2026-09-21 after both blind independent reviewers returned PASS for
+`knowledge/proposals/M02_AAUTH_FCF656D_PHASE1_ACQUISITION_AND_MATRIX_EXTENSION_PROPOSAL_2026-09-21.md`
+at exact SHA-256
+`26283f5e7e3346c7229fb7a241642f10e8a31f313cab542f32026b60dc3545e8`.
+The corrected proposal durably pins the four wheel URLs, hashes and sizes;
+separates incomplete-output cleanup from quarantine of complete hash-mismatched
+evidence; requires explicit authority for normative-document retrieval; and
+requires affirmative redirect evidence.
+
+Authorize commit and push of the exact reviewed proposal, this decision, and
+synchronized canonical state. Authorize creation only of separate bounded Phase
+A acquisition and Phase B exact-source retrieval/matrix-extension requests.
+The Phase A request must prohibit every redirect, including a same-host
+redirect. No wheel or document download, installation, import, implementation,
+compilation, testing, listener, wallet or WAS work, Misty access, G28 or G29 is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.
