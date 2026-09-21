@@ -1915,3 +1915,23 @@ No retry, provider import, native-code execution, pip operation, AAuth
 implementation, listener, network access, wallet or WAS work, Misty access, G28
 or G29 is authorized. The unrelated PI routine-tool proposal remains excluded
 and untouched.
+
+## D-097 — Accept preserved installation static properties by independent recomputation
+
+Recorded on 2026-09-21 at PI instruction, at
+`main @ 0800e450386a7315e6048cea45165d7cbd72aca0`, after both eligible blind
+reviewers independently recomputed the preserved D-093 bytes and returned PASS.
+The material this acceptance rests on is committed at that hash; this decision
+is the acceptance itself and takes effect on commit.
+
+Accept that the preserved installation has the pinned distribution identity,
+filesystem containment and RECORD completeness required to proceed to a
+separately proposed provider-behavior verification. The consumed static-verifier
+execution remains a gated negative and its 110 unpreserved stderr bytes remain
+unexplained. This acceptance does not turn that execution positive.
+
+No provider import, native-code execution, retry, pip operation, AAuth
+implementation, listener, network access, wallet or WAS work, Misty access, G28
+or G29 is authorized. Any provider-behavior proposal must receive blind dual
+review and any later execution must receive separate prospective PI authority.
+The unrelated PI routine-tool proposal remains excluded and untouched.

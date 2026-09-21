@@ -641,9 +641,11 @@ only and authorizing nothing.
 D-096 records the later static-verifier execution as a consumed gated negative:
 the child exited zero and its static findings were independently corroborated,
 but the runner observed 110 unpreserved stderr bytes. The installation remains
-unaccepted. Creation only of a durable evidence report and no-execution recovery
-proposal is authorized. No retry, provider import or native-code execution is
-authorized.
+negative at the execution level. D-097 separately accepts, through blind dual
+independent recomputation, the preserved installation's pinned distribution
+identity, filesystem containment and RECORD completeness for purposes of
+planning provider-behavior verification. No retry, provider import or
+native-code execution is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
