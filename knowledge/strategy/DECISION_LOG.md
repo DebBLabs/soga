@@ -1820,3 +1820,76 @@ is created or executed.
 No retry, cleanup, import, implementation, testing, listener, wallet or WAS work,
 Misty access, G28 or G29 is authorized. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-095 — Record standing AAuth, Freewallet, WAS-authorization and next-priority determinations
+
+Recorded on 2026-09-21 at PI instruction, at `main @ cc78065`. This decision
+records four determinations the PI stated directly. It is a record of standing
+basis and priority, not an acceptance of any package and not an authorization to
+build, execute or integrate anything.
+
+1. **AAuth basis.** The governing AAuth source remains `-11` at the editor's-copy
+   commit `fcf656de1926535f5bd6fc0538147ead6646e727`, protocol SHA-256
+   `295ba2a0edd99dd077c4c877b6276608000419fdf4bbef2327da0c6e4d950953`. This was
+   already established by D-084 and D-085 and is restated here as standing basis,
+   not newly decided. Published `-10` and the separate R3 editor draft must not be
+   conflated with it.
+
+2. **Freewallet pin.** The governing Freewallet pin for M02 wallet work is
+   `8e806c049b1134e36e72ab243ea3fbeb93153c37`, release line `0.42.0`, origin
+   `https://github.com/interop-alliance/freewallet.git`, as authorized for
+   detached checkout by D-038 and recorded in
+   `knowledge/research/M02_STAGE3A_EXACT_SOURCE_RUNTIME_EVIDENCE_2026-09-08.md:23`.
+   The in-tree working copy at `external-repos/freewallet` is a different and
+   older revision: `403bc554d35f92c2279cf4d7e59b8d676416431b`, `package.json`
+   version `0.38.0`, last commit 2026-08-14. That copy is prior evidence only. It
+   is superseded by the pin and must not be used as the wallet input for any M02
+   composition, conformance or integration claim. D-038 authorized detached
+   checkouts at the pin and did not update the in-tree copy, so the divergence is
+   expected and must not be silently reconciled by updating either one.
+   `knowledge/research/M02_STAGE1_WALLET_PERSON_SERVER_CONFORMANCE_REFRESH_2026-09-06.md:57`
+   records that Freewallet changed substantially between the two revisions.
+
+3. **ZCAP on the socket-free WAS library path.** The socket-free WAS library
+   composition does not perform zCap authorization when storing or reading Person
+   Server evidence. The governing disclosure is
+   `knowledge/proposals/M02_STAGE3B_PERSON_SERVER_WAS_COMPOSITION_PROPOSAL_2026-09-15.md:62-67`:
+   the worker does not use `createApp`, Fastify routes, onboarding tokens, zCaps,
+   HTTP or a listener, and direct storage-backend use "deliberately bypasses the
+   candidate's route-level DID and identifier validation, onboarding and zCap
+   authorization, and request hooks". Authorization in the selected WAS source
+   lives at the Fastify route layer, not in the storage backend, so composing the
+   backend as a local library removes it. Consequently every accepted socket-free
+   result proves storage-backend composition only, never WAS protocol
+   authorization or route behavior.
+
+   The earlier Stage 3lib harness is a distinct and narrower case that must not be
+   cited as the bypass disclosure. `tools/m02_stage3lib/harness.mjs:255`, echoed in
+   `knowledge/research/M02_STAGE3LIB_PHASE2_EXECUTION_EVIDENCE_2026-09-14.md:94,107-108`,
+   records that resource creation and precondition scope were *skipped* because
+   "no resource exists; creating one requires zcap verification not supplied by
+   this phase". That harness declined to perform the zCap-requiring operation
+   rather than going around it. Both facts are now recorded here because no prior
+   decision in this log mentioned zCap at all.
+
+4. **Next build priority.** The next build priority is the AAuth `-11` token
+   exchange exercised against a simulated Misty. No such simulator exists in the
+   repository, and nothing about it has been proposed, reviewed or authorized. It
+   requires a prospective proposal, blind dual independent review under D-064 and
+   explicit PI authorization before any source is created or run. Recording the
+   priority does not schedule, authorize or pre-approve it, and does not displace
+   the open D-094 static recovery track.
+
+This decision authorizes no implementation, execution, import, native-code
+execution, compilation, test, listener, dependency or package operation, network
+access, restoration, commit beyond this record and synchronized canonical state,
+Freewallet or WAS integration, wallet custody, personal data, payment, physical
+actuation, G28 or G29. It authorizes no Misty access: a simulated Misty is a
+software target only, and Beryl router placement remains a hard prerequisite
+before any physical Misty access is even proposable. The unrelated PI
+routine-tool proposal remains excluded and untouched.
+
+Authorship disclosure: this entry was drafted by Claude Gate 1 at the PI's direct
+instruction rather than by the integrator. Under D-064, Gate 1 is therefore
+disqualified from serving as an independent reviewer of this entry, and any
+review of it must come from two other eligible non-authoring reviewers.
