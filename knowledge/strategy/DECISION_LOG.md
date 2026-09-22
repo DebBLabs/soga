@@ -2025,3 +2025,31 @@ must review the complete files before commit or execution. No AAuth Phase 1
 execution, dependency operation, network access, listener, wallet/WAS work,
 Misty access, G28 or G29 is authorized. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-102 — Accept bounded Ed25519 provider extension evidence
+
+Recorded on 2026-09-22 at PI instruction after both blind request-050 reviewers
+returned PASS with no blocking findings.
+
+Accept the single provider-extension execution as a gated positive result. The
+accepted evidence hashes are:
+
+- provider evidence:
+  `8b4676330643dea6db04c23027bf0e002ca752514a409337712f6ad416a5da8c`;
+- exact 110-byte stderr:
+  `2a13af67601624cb4924e88c89583b6d14c362a01c585716097d241c0a47bd61`;
+- run record:
+  `c83fbe9b632f32445f17720fe2aa77131068bb926fd4f1ec72bd5b3b2525714b`.
+
+The pinned provider successfully exercised
+`Ed25519PublicKey.from_public_bytes` and `Ed25519PrivateKey.generate()` under
+the encoded positive and negative cases without recording generated key or
+signature material. The durable record is
+`knowledge/research/M02_AAUTH_FCF656D_PROVIDER_EXTENSION_EVIDENCE_2026-09-22.md`.
+
+This establishes provider behavior only, not AAuth, JOSE, JWT, HTTP Message
+Signature, Structured Fields or randomness conformance. It closes the provider
+holdpoints for a separately authorized AAuth Phase 1 test execution. It does not
+authorize that execution or any additional execution, dependency operation,
+network access, listener, wallet/WAS work, Misty access, G28 or G29. The
+unrelated PI routine-tool proposal remains excluded and untouched.

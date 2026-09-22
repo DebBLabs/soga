@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-09-16
+Last Updated: 2026-09-22
 
 ---
 
@@ -46,6 +46,12 @@ B-043 remains open; any restoration to the hardcoded path requires separate
 review and prospective authorization. No further work is authorized; paused.
 
 Active Sprint: M02 — Wallet-Assisted AAuth Person Server
+
+Active authorization boundary: D-102 accepts the blind dual-reviewed bounded
+Ed25519 provider extension. Both provider holdpoints for the created AAuth
+Phase 1 package are closed. The AAuth package itself has not been imported,
+compiled, linted, tested or executed. Its first bounded test execution requires
+a separate prospective proposal, blind dual review and PI authorization.
 
 Active authorization boundary: D-080 accepts the request-049 blind dual-reviewed
 positive evidence and authorizes its commit/push, then pauses implementation.
@@ -675,6 +681,13 @@ authorizes creation only of its child and runner. The extension covers bounded
 `from_public_bytes` and `generate()` behavior without recording generated key or
 signature material. No import, compilation, lint, test or execution is
 authorized before blind dual static review of both complete files.
+
+D-102 accepts the single provider-extension execution after both blind
+request-050 reviewers returned PASS. The pinned provider demonstrated the
+bounded `from_public_bytes` and `generate()` behavior required by the created
+AAuth Phase 1 package, without recording generated material. This is provider
+evidence only. No AAuth Phase 1 test execution or broader conformance claim is
+authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
