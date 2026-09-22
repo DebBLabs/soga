@@ -2005,3 +2005,23 @@ must review every complete file before commit or execution. No Step 4–9 work,
 dependency operation, listener, network access, wallet/WAS integration, QR
 flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-101 — Authorize create-only Ed25519 provider API extension
+
+Recorded on 2026-09-22 at PI instruction after both blind request-048 reviewers
+returned PASS.
+
+Accept
+`knowledge/proposals/M02_AAUTH_FCF656D_PUBLIC_KEY_IMPORT_EXTENSION_PROPOSAL_2026-09-21.md`
+at SHA-256
+`b9916cd068db3e139f616664bcdfff43762613331a2e939dbced8e604ef1ac6a`.
+Authorize creation only of the specified child and runner covering bounded
+`Ed25519PublicKey.from_public_bytes` and `Ed25519PrivateKey.generate()` provider
+behavior. Generated key or signature bytes and their hashes must not enter
+evidence.
+
+Do not import, compile, lint, test or execute either source. Both blind gates
+must review the complete files before commit or execution. No AAuth Phase 1
+execution, dependency operation, network access, listener, wallet/WAS work,
+Misty access, G28 or G29 is authorized. The unrelated PI routine-tool proposal
+remains excluded and untouched.

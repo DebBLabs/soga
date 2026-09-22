@@ -670,6 +670,12 @@ blind dual review before commit or execution. JWK verification may reference
 `Ed25519PublicKey.from_public_bytes`, but no execution may rely on it until a
 separate bounded provider-evidence extension covers that API.
 
+D-101 accepts the independently reviewed provider API extension proposal and
+authorizes creation only of its child and runner. The extension covers bounded
+`from_public_bytes` and `generate()` behavior without recording generated key or
+signature material. No import, compilation, lint, test or execution is
+authorized before blind dual static review of both complete files.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
