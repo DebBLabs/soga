@@ -2188,3 +2188,24 @@ operation, network access, listener, October-exchange implementation,
 wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-109 — Authorize create-only minimal live AAuth exchange package
+
+Recorded on 2026-09-24 at PI instruction after both blind request-061 reviewers
+returned PASS with no blocking findings.
+
+Accept
+`knowledge/proposals/M02_AAUTH_FCF656D_MINIMAL_LIVE_EXCHANGE_PROPOSAL_2026-09-24.md`
+at SHA-256
+`e7e5b45c5acb6589ec624fe63866a45c20e5eddefd5326c498ee748e04ccb075`.
+Authorize commit and push of that exact proposal, followed by create-only
+implementation of the complete identifiers, tokens, exchange, metadata
+extension and exchange-test package under its exact boundaries. Every complete
+created or modified file requires blind dual static review before commit or
+execution.
+
+Do not import, compile, lint, test or execute the created code. No dependency
+operation, network access, listener, external service, personal data, payment,
+wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.

@@ -732,6 +732,14 @@ bindings remained unchanged; confinement held; stderr was empty. This proves
 the bounded Phase 1 test claims only. A live AAuth token exchange remains
 unimplemented and unauthorized.
 
+D-109 accepts the blind dual-reviewed minimal live-exchange proposal and
+authorizes create-only implementation of its complete static package. The
+bounded claim is an in-memory three-party Ed25519 exchange from person token to
+resource token to supervised auth token and final resource enforcement,
+including wrong-token refusal and unchanged `mission_s256`. No import,
+compilation, lint, test or execution is authorized before blind dual review of
+every complete file.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
