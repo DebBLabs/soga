@@ -707,6 +707,15 @@ evidence review. Twenty-three of 24 tests passed; the deterministic
 `created=106`, `now=100`. The D-104 attempt is consumed. Source-only diagnosis
 of that case is authorized; correction and execution are not.
 
+D-106 accepts the source-only clock-skew diagnosis and corrected recovery
+proposal after blind dual review. The six-second future timestamp is inside the
+pinned 60-second window, so the failing fixture—not the implementation—is the
+defect. Create-only correction is authorized: change the excessive-future case
+to `created=161`, add the accepted `created=160` boundary case, then update only
+the controller's corrected-test hash and fixed evidence-directory constants.
+Both complete files require blind dual review before commit or execution. No
+test execution is authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

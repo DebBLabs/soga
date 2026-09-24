@@ -2117,3 +2117,28 @@ operation, network access, listener, October-exchange implementation,
 wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-106 — Accept clock-skew diagnosis and authorize create-only recovery
+
+Recorded on 2026-09-24 at PI instruction after Gate 1 passed the corrected
+proposal in request 057 and Gate 2 passed the original and corrected proposal
+in requests 056 and 057.
+
+Accept the source-only diagnosis at SHA-256
+`d4d526c234552ff5192751020486bad07404a3551d495cbf763672fae5533876`
+and the correction-and-rerun proposal at SHA-256
+`a4ccfa01da383f4e503fe1f791b93b5f0fcf169e8c8ddf5abdcc84ca126acbda`.
+The diagnosis establishes that `created=106`, `now=100` is inside the pinned
+60-second forward-skew window; the test fixture, not the implementation, is
+defective.
+
+Authorize commit and push of those exact artifacts, followed by create-only
+implementation of the exact test correction and the two permitted mechanical
+controller changes: the corrected test SHA-256 pin and the new fixed evidence
+directory. Both complete corrected files require blind dual static review
+before commit or execution.
+
+Do not execute tests. No implementation-source change, dependency operation,
+network access, listener, October-exchange implementation, wallet/WAS work, QR
+flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
+PI routine-tool proposal remains excluded and untouched.
