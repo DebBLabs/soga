@@ -747,6 +747,11 @@ exchange roles, separated metadata fixtures and a comprehensive negative suite.
 It has not been imported, compiled, linted, tested or executed. No controller
 creation or execution is authorized until a new prospective PI decision.
 
+D-111 authorizes create-only implementation of one bounded controller for the
+exact D-110 package and the existing Phase 1 tests. The controller must remain
+unexecuted and requires blind dual static review before commit or any run. No
+execution authority exists.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

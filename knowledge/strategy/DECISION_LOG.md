@@ -2238,3 +2238,20 @@ No dependency operation, network access, listener, external service, personal
 data, payment, wallet/WAS work, QR flow, Misty access, physical actuation, G28
 or G29 is authorized. The unrelated PI routine-tool proposal remains excluded
 and untouched.
+
+## D-111 — Authorize create-only minimal live-exchange execution controller
+
+Recorded on 2026-09-24 at PI instruction.
+
+Authorize creation only of a bounded execution controller for the D-110 minimal
+live AAuth exchange package at commit `3195161`. The controller must run only
+the exact committed Phase 1 and exchange test modules under the pinned provider,
+with finite time and output limits, exact source hashes, module-origin
+confinement, secret redaction, pre/post immutability checks, a new fixed evidence
+directory and no network or listener. The complete controller requires blind
+dual static review before commit or execution.
+
+Do not import, compile, lint, test or execute the controller or package. No
+dependency operation, external service, personal data, payment, wallet/WAS
+work, QR flow, Misty access, physical actuation, G28 or G29 is authorized. The
+unrelated PI routine-tool proposal remains excluded and untouched.
