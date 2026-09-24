@@ -33,7 +33,7 @@ D099_EVIDENCE = Path(
 D102_EVIDENCE = Path(
     "/private/tmp/m02-aauth-fcf656d-provider-extension-20260922/"
     "provider-extension-evidence.json")
-EVIDENCE_DIR = Path("/private/tmp/m02-aauth-fcf656d-phase1-tests-20260922")
+EVIDENCE_DIR = Path("/private/tmp/m02-aauth-fcf656d-phase1-tests-rerun-20260924")
 STDOUT_PATH = EVIDENCE_DIR / "phase1-test-evidence.json"
 STDERR_PATH = EVIDENCE_DIR / "phase1-test-stderr.bin"
 RUN_RECORD_PATH = EVIDENCE_DIR / "run-record.json"
@@ -65,7 +65,7 @@ PACKAGE_HASHES = {
     "m02_aauth_fcf656d/structured_fields.py":
         "9d774a03dd096577a9ce917b40f4c3693e30758319fa05f455feb3b734c78a71",
     "tests/test_m02_aauth_fcf656d.py":
-        "160f636b875145a11aa7e593b01aa8b1aa0420ffc58a3eadef589517856d0774",
+        "89b71359c6c071453fab289aa85443aa4f7156e4a2d263d8ac12f85bee4deaad",
 }
 WHEELS = (
     ("cryptography-50.0.1-cp39-abi3-macosx_11_0_arm64.whl", 4_035_307,

@@ -2142,3 +2142,22 @@ Do not execute tests. No implementation-source change, dependency operation,
 network access, listener, October-exchange implementation, wallet/WAS work, QR
 flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-107 — Authorize one corrected Phase 1 focused-test execution
+
+Recorded on 2026-09-24 at PI instruction after both blind request-058 reviewers
+returned PASS with no blocking findings.
+
+Accept the corrected clock-skew test at SHA-256
+`89b71359c6c071453fab289aa85443aa4f7156e4a2d263d8ac12f85bee4deaad`
+and the mechanically corrected controller at SHA-256
+`1d38794aa2e75e7a6889bd1465f2b24c2824e2236df77c049b1f9939bd50136a`.
+Authorize commit and push of those exact files, followed by exactly one bounded
+execution under the accepted D-106 recovery proposal. No automatic retry is
+permitted. The resulting evidence requires blind dual review before acceptance
+or further use.
+
+No additional source change, dependency operation, network access, listener,
+October-exchange implementation, wallet/WAS work, QR flow, Misty access,
+physical actuation, G28 or G29 is authorized. The unrelated PI routine-tool
+proposal remains excluded and untouched.

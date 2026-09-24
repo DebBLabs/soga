@@ -186,7 +186,9 @@ class HttpSignatureTests(Fixture):
         signed = sign_request(self.base_request(), self.assertion(), self.agent_private, created=100)
         with self.assertRaisesRegex(SignatureProfileError, "stale"):
             verify_request(signed, self.issuer_jwks, "aa-agent+jwt", now=161)
-        future = sign_request(self.base_request(), self.assertion(), self.agent_private, created=106)
+        boundary = sign_request(self.base_request(), self.assertion(), self.agent_private, created=160)
+        verify_request(boundary, self.issuer_jwks, "aa-agent+jwt", now=100)
+        future = sign_request(self.base_request(), self.assertion(), self.agent_private, created=161)
         with self.assertRaises(SignatureProfileError) as caught:
             verify_request(future, self.issuer_jwks, "aa-agent+jwt", now=100)
         self.assertEqual(caught.exception.code, "clock_skew")

@@ -716,6 +716,14 @@ the controller's corrected-test hash and fixed evidence-directory constants.
 Both complete files require blind dual review before commit or execution. No
 test execution is authorized.
 
+D-107 accepts the blind dual-reviewed corrected test at SHA-256
+`89b71359c6c071453fab289aa85443aa4f7156e4a2d263d8ac12f85bee4deaad`
+and corrected controller at SHA-256
+`1d38794aa2e75e7a6889bd1465f2b24c2824e2236df77c049b1f9939bd50136a`.
+Their commit and exactly one bounded focused-test execution are authorized. No
+automatic retry is permitted; evidence requires blind dual review before
+acceptance or further use.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
