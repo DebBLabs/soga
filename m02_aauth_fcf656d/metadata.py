@@ -25,3 +25,32 @@ def assert_interim_metadata(metadata):
         raise ValueError("metadata must remain test-only")
     return dict(metadata)
 
+
+def _https(value, name):
+    if not isinstance(value, str) or not value.startswith("https://"):
+        raise ValueError(name + " must use HTTPS")
+    return value
+
+
+def agent_provider_fixture_metadata(issuer, jwks_uri):
+    return {"issuer": _https(issuer, "issuer").rstrip("/"),
+            "jwks_uri": _https(jwks_uri, "jwks_uri"), "test_only": True,
+            "fixture_role": "agent-provider"}
+
+
+def person_server_fixture_metadata(issuer, jwks_uri, person_token_endpoint,
+                                   auth_token_endpoint):
+    return {"issuer": _https(issuer, "issuer").rstrip("/"),
+            "jwks_uri": _https(jwks_uri, "jwks_uri"),
+            "person_token_endpoint": _https(person_token_endpoint, "person_token_endpoint"),
+            "auth_token_endpoint": _https(auth_token_endpoint, "auth_token_endpoint"),
+            "test_only": True, "fixture_role": "person-server"}
+
+
+def resource_fixture_metadata(issuer, jwks_uri, authorization_endpoint):
+    return {"issuer": _https(issuer, "issuer").rstrip("/"),
+            "jwks_uri": _https(jwks_uri, "jwks_uri"),
+            "authorization_endpoint": _https(authorization_endpoint, "authorization_endpoint"),
+            "access_mode": "auth-token", "test_only": True,
+            "fixture_role": "resource"}
+

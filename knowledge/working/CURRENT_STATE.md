@@ -740,6 +740,13 @@ including wrong-token refusal and unchanged `mission_s256`. No import,
 compilation, lint, test or execution is authorized before blind dual review of
 every complete file.
 
+D-110 accepts the complete blind dual-reviewed minimal live-exchange static
+package and authorizes its commit and push only. The package contains strict
+identifiers, Ed25519 role tokens, transport-free Agent/Person Server/Resource
+exchange roles, separated metadata fixtures and a comprehensive negative suite.
+It has not been imported, compiled, linted, tested or executed. No controller
+creation or execution is authorized until a new prospective PI decision.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

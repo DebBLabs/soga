@@ -2209,3 +2209,32 @@ operation, network access, listener, external service, personal data, payment,
 wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-110 — Accept minimal live AAuth exchange static package
+
+Recorded on 2026-09-24 at PI instruction to submit the reviewed static package
+without execution, after both blind request-063 reviewers returned PASS with no
+blocking findings.
+
+Accept the complete static package at these SHA-256 values:
+
+- `m02_aauth_fcf656d/identifiers.py`:
+  `54c495785fc5fc26d24e3c406bb334d0022410faff37696d40220e1b83759579`;
+- `m02_aauth_fcf656d/tokens.py`:
+  `34f705123acb83772f9f2428409593233f004384c46b2cf96f0358615cf2dd04`;
+- `m02_aauth_fcf656d/exchange.py`:
+  `ed82a97873f7c535917dd0ecbecf81e31287015c3dfbc77396cb3dc8675fdf0f`;
+- `m02_aauth_fcf656d/metadata.py`:
+  `c1a473ee3f21ed4832668fadb87e9db72dbade4278f99aa35efff868db225a5a`;
+- `tests/test_m02_aauth_fcf656d_exchange.py`:
+  `89dcede33566a1531d9c5630d9598da940ffd7ac99dfb4610a875e3559aad916`.
+
+Authorize commit and push of those exact files and synchronized canonical
+state. Do not create an execution controller and do not import, compile, lint,
+test or execute the package. Any controller creation or execution requires a
+new prospective PI decision after the PI returns.
+
+No dependency operation, network access, listener, external service, personal
+data, payment, wallet/WAS work, QR flow, Misty access, physical actuation, G28
+or G29 is authorized. The unrelated PI routine-tool proposal remains excluded
+and untouched.
