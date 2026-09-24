@@ -701,6 +701,12 @@ and authorizes its commit followed by exactly one bounded Phase 1 focused-test
 execution. No retry is permitted; evidence requires blind dual review before
 acceptance or further use.
 
+D-105 accepts that single execution as a gated negative after blind dual
+evidence review. Twenty-three of 24 tests passed; the deterministic
+`test_created_window_skew_and_replay` failure observed no exception for
+`created=106`, `now=100`. The D-104 attempt is consumed. Source-only diagnosis
+of that case is authorized; correction and execution are not.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

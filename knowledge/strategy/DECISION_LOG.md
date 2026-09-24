@@ -2090,3 +2090,30 @@ authorize source correction, a second execution, dependency operation, network
 access, listener, the October token exchange, wallet/WAS work, QR flow, Misty
 access, physical actuation, G28 or G29. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-105 — Accept Phase 1 focused-test negative and authorize source-only diagnosis
+
+Recorded on 2026-09-24 at PI instruction after both blind request-055 reviewers
+returned PASS on the evidence.
+
+Accept the single D-104 execution as a gated negative. The accepted evidence
+hashes are:
+
+- focused-test evidence:
+  `3f00c0037f528d0f33cbed1faec55e10a97fc8778e7242218d6ffcaf1010c9e7`;
+- exact 110-byte stderr:
+  `2a13af67601624cb4924e88c89583b6d14c362a01c585716097d241c0a47bd61`;
+- run record:
+  `57b7695589d059aaf796b0ba03a3d438d0e2408c206e15e3d8111042243f8724`.
+
+Twenty-three of 24 tests passed. The deterministic failure was
+`test_created_window_skew_and_replay`: no `SignatureProfileError` was raised for
+`created=106`, `now=100`. The D-104 attempt is consumed. The durable record is
+`knowledge/research/M02_AAUTH_FCF656D_PHASE1_TEST_EXECUTION_EVIDENCE_2026-09-24.md`.
+
+Authorize bounded source-only diagnosis of that failure. No source
+modification, import, compilation, lint, test, execution, retry, dependency
+operation, network access, listener, October-exchange implementation,
+wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.
