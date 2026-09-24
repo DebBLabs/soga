@@ -695,6 +695,12 @@ or AAuth-package import, compilation, lint, test or execution is authorized
 before blind dual static review and a separate prospective PI execution
 decision.
 
+D-104 accepts the blind dual-reviewed controller at SHA-256
+`177b4f1231fb30ca053308a4dbfb726c05cdc5b917d6ed614a83c1c817ac4303`
+and authorizes its commit followed by exactly one bounded Phase 1 focused-test
+execution. No retry is permitted; evidence requires blind dual review before
+acceptance or further use.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

@@ -2072,3 +2072,21 @@ Do not import, compile, lint, test or execute the controller or AAuth package.
 No execution, dependency operation, network access, listener, wallet/WAS work,
 QR flow, Misty access, physical actuation, G28 or G29 is authorized. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-104 — Authorize one bounded AAuth Phase 1 test execution
+
+Recorded on 2026-09-24 at PI instruction after both blind request-054 reviewers
+returned PASS with no blocking findings.
+
+Accept `tools/m02_aauth_fcf656d/run_phase1_tests.py` at SHA-256
+`177b4f1231fb30ca053308a4dbfb726c05cdc5b917d6ed614a83c1c817ac4303`.
+Authorize commit and push of that exact controller, followed by exactly one
+bounded execution under the accepted proposal and D-103 controls. No automatic
+retry is permitted. The resulting evidence requires blind dual review before
+acceptance or further use.
+
+This authorizes only the claim-sized Phase 1 focused test execution. It does not
+authorize source correction, a second execution, dependency operation, network
+access, listener, the October token exchange, wallet/WAS work, QR flow, Misty
+access, physical actuation, G28 or G29. The unrelated PI routine-tool proposal
+remains excluded and untouched.
