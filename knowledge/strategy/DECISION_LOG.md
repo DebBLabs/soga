@@ -2161,3 +2161,30 @@ No additional source change, dependency operation, network access, listener,
 October-exchange implementation, wallet/WAS work, QR flow, Misty access,
 physical actuation, G28 or G29 is authorized. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-108 — Accept corrected Phase 1 focused-test positive evidence
+
+Recorded on 2026-09-24 at PI instruction after both blind request-059 reviewers
+returned PASS with no blocking findings.
+
+Accept the single D-107 execution as a gated positive result. The accepted
+evidence hashes are:
+
+- focused-test evidence:
+  `0b95d4f7d80607e36e00a557be707fcba71a6036a2df50ef7a0d78fd6da7bbf3`;
+- empty stderr:
+  `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`;
+- run record:
+  `5108b8390b55f1c46632b31b022352f8d29f07d614cbc16562fc33f873a38bd8`.
+
+All 24 focused tests passed with zero failures, errors, skips, mutation,
+confinement escape or evidence leakage, including the corrected 60/61-second
+forward clock-skew boundary. The durable record is
+`knowledge/research/M02_AAUTH_FCF656D_PHASE1_CORRECTED_TEST_EXECUTION_EVIDENCE_2026-09-24.md`.
+
+This establishes the bounded Phase 1 test claims only, not complete AAuth
+conformance or a live token exchange. No additional execution, dependency
+operation, network access, listener, October-exchange implementation,
+wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.
