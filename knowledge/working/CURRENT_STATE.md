@@ -689,6 +689,12 @@ AAuth Phase 1 package, without recording generated material. This is provider
 evidence only. No AAuth Phase 1 test execution or broader conformance claim is
 authorized.
 
+D-103 accepts the blind dual-reviewed, claim-sized Phase 1 test-execution
+proposal and authorizes creation only of its bounded controller. No controller
+or AAuth-package import, compilation, lint, test or execution is authorized
+before blind dual static review and a separate prospective PI execution
+decision.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

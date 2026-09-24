@@ -2053,3 +2053,22 @@ holdpoints for a separately authorized AAuth Phase 1 test execution. It does not
 authorize that execution or any additional execution, dependency operation,
 network access, listener, wallet/WAS work, Misty access, G28 or G29. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-103 — Authorize create-only AAuth Phase 1 test controller
+
+Recorded on 2026-09-24 at PI instruction after both blind request-052 reviewers
+returned PASS with no blocking findings.
+
+Accept
+`knowledge/proposals/M02_AAUTH_FCF656D_PHASE1_TEST_EXECUTION_PROPOSAL_2026-09-22.md`
+at SHA-256
+`588f42d098f6b45088bd14251773bbe800d3c51dc68265120fff448c4a39731e`.
+Authorize creation only of
+`tools/m02_aauth_fcf656d/run_phase1_tests.py` under the proposal's exact
+controls. The complete controller requires blind dual static review before
+commit or execution.
+
+Do not import, compile, lint, test or execute the controller or AAuth package.
+No execution, dependency operation, network access, listener, wallet/WAS work,
+QR flow, Misty access, physical actuation, G28 or G29 is authorized. The
+unrelated PI routine-tool proposal remains excluded and untouched.
