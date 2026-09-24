@@ -752,6 +752,13 @@ exact D-110 package and the existing Phase 1 tests. The controller must remain
 unexecuted and requires blind dual static review before commit or any run. No
 execution authority exists.
 
+D-112 accepts the corrected controller at SHA-256
+`059ea6fc0e420674c8383211b05957ae2b04d6492abb00c9a1d3140d372ce289`
+after both blind request-065 reviewers returned PASS. Commit and push that exact
+controller, then execute it exactly once under the D-111 controls. No automatic
+retry is authorized. The resulting evidence requires blind dual review before
+acceptance or further use.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

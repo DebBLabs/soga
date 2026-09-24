@@ -2255,3 +2255,20 @@ Do not import, compile, lint, test or execute the controller or package. No
 dependency operation, external service, personal data, payment, wallet/WAS
 work, QR flow, Misty access, physical actuation, G28 or G29 is authorized. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-112 — Accept live-exchange controller and authorize one bounded execution
+
+Recorded on 2026-09-24 at PI instruction after both blind request-065 reviewers
+returned PASS with no blocking findings.
+
+Accept `tools/m02_aauth_fcf656d/run_live_exchange_tests.py` at SHA-256
+`059ea6fc0e420674c8383211b05957ae2b04d6492abb00c9a1d3140d372ce289`.
+Authorize commit and push of that exact controller, followed by exactly one
+bounded execution under the D-111 controls. No automatic retry is authorized.
+The resulting evidence requires blind dual review before acceptance or further
+use.
+
+No additional execution, dependency operation, network access, listener,
+external service, personal data, payment, wallet/WAS work, QR flow, Misty
+access, physical actuation, G28 or G29 is authorized. The unrelated PI
+routine-tool proposal remains excluded and untouched.
