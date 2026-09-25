@@ -2272,3 +2272,27 @@ No additional execution, dependency operation, network access, listener,
 external service, personal data, payment, wallet/WAS work, QR flow, Misty
 access, physical actuation, G28 or G29 is authorized. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-113 — Accept minimal live AAuth exchange positive evidence
+
+Recorded on 2026-09-24 at PI instruction after both blind request-066 reviewers
+returned PASS with no blocking findings.
+
+Accept the single D-112 execution as a gated positive result. The accepted
+evidence hashes are:
+
+- live-exchange evidence:
+  `e0cf8734703625e1c5e49abbf273886b5fd8a2c64395950fdea83042910c47ec`;
+- permitted 110-byte stderr:
+  `2a13af67601624cb4924e88c89583b6d14c362a01c585716097d241c0a47bd61`;
+- run record:
+  `cc0782708dcf409f2be932d6f72e2238d6348d5c4b118216491704f67f6c7dbb`.
+
+All 35 tests passed with zero failures, errors, skips, timeout, overflow,
+mutation or confinement escape. The durable record is
+`knowledge/research/M02_AAUTH_FCF656D_MINIMAL_LIVE_EXCHANGE_EXECUTION_EVIDENCE_2026-09-24.md`.
+
+This establishes the bounded transport-free minimal AAuth exchange only, not
+complete AAuth conformance or live wallet, network, WAS, QR or Misty
+integration. No additional execution or other excluded activity is authorized.
+The unrelated PI routine-tool proposal remains excluded and untouched.
