@@ -2296,3 +2296,22 @@ This establishes the bounded transport-free minimal AAuth exchange only, not
 complete AAuth conformance or live wallet, network, WAS, QR or Misty
 integration. No additional execution or other excluded activity is authorized.
 The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-114 — Authorize create-only localhost AAuth transport and gateway package
+
+Recorded on 2026-09-24 at PI instruction after both blind request-068 reviewers
+returned PASS with no blocking findings.
+
+Accept
+`knowledge/proposals/M02_AAUTH_FCF656D_LOCALHOST_GATEWAY_PROPOSAL_2026-09-24.md`
+at SHA-256
+`804786a3f89a723f06e10962a66ec3f8728819f8c6e3ee1eb53163127fda50b1`.
+Authorize commit and push of that exact proposal, followed by create-only
+implementation of its complete localhost transport, SOGA supervision adapter
+and test package. Every complete created or modified file requires blind dual
+static review before commit or execution.
+
+Do not import, compile, lint, test, bind a listener or execute the created code.
+No dependency operation, external service, personal data, wallet/WAS work, QR
+flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
+PI routine-tool proposal remains excluded and untouched.

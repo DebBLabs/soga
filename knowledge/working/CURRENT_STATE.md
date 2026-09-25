@@ -766,6 +766,13 @@ mutation or confinement escape. This establishes only the transport-free
 minimal AAuth exchange, not complete conformance or live wallet, network, WAS,
 QR or Misty integration. No additional execution is authorized.
 
+D-114 accepts the blind dual-reviewed localhost transport and gateway proposal
+and authorizes create-only implementation of the complete static package. The
+package will wrap the accepted D-113 exchange in literal-loopback HTTP, use SOGA
+as the explicit Person Server supervision source and enforce auth-token checks
+at the resource boundary. No import, compilation, lint, test, listener binding
+or execution is authorized before blind dual review of every complete file.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
