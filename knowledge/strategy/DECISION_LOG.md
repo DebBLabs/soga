@@ -2360,3 +2360,19 @@ package. No additional dependency operation, external service, personal data,
 wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-117 — Accept localhost AAuth gateway execution controller
+
+Recorded on 2026-09-25 at PI instruction after both blind request-075
+reviewers returned PASS with no blocking findings.
+
+Accept `tools/m02_aauth_fcf656d/run_localhost_gateway_tests.py` at SHA-256
+`87b17c9a28313ae8399364d59f038377a792987857e202f4a89a71c38a307950`.
+Authorize commit and push of that exact controller and synchronized canonical
+state only. The controller remains unexecuted. Any execution requires a
+separate prospective PI decision.
+
+No listener binding, test execution, retry, dependency operation, external
+service, wallet/WAS work, QR flow, Misty access, physical action, G28 or G29 is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.

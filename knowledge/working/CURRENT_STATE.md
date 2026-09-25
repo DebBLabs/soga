@@ -785,6 +785,13 @@ implementation of one bounded execution controller is authorized; the complete
 controller requires blind dual static review before commit or execution. No
 listener binding or package execution is yet authorized.
 
+D-117 accepts the blind dual-reviewed localhost gateway execution controller
+at SHA-256
+`87b17c9a28313ae8399364d59f038377a792987857e202f4a89a71c38a307950`
+and authorizes commit and push only. The controller remains unexecuted; one
+bounded run requires separate prospective PI authority. No listener binding or
+test execution is authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
