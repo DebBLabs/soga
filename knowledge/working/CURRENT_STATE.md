@@ -779,6 +779,12 @@ HTTPS role identifiers as security identities, and use injected literal-loopback
 addresses only for test socket routing. The sprint does not claim issuer-based
 discovery. Create-only implementation remains authorized; execution does not.
 
+D-116 accepts the blind dual-reviewed localhost transport, SOGA supervision
+adapter and test package. The accepted source remains unexecuted. Create-only
+implementation of one bounded execution controller is authorized; the complete
+controller requires blind dual static review before commit or execution. No
+listener binding or package execution is yet authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

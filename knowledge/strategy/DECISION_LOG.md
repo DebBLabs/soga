@@ -2335,3 +2335,28 @@ Do not import, compile, lint, test, bind a listener or execute the created code.
 Every complete created file requires blind dual static review before commit or
 execution. All D-114 exclusions remain in force. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-116 — Accept localhost AAuth transport and SOGA gateway static package
+
+Recorded on 2026-09-24 at PI instruction after both blind request-073 reviewers
+returned PASS with no blocking findings.
+
+Accept the complete static package at these SHA-256 values:
+
+- `m02_aauth_fcf656d/soga_supervision.py`:
+  `af1f19eb0710027d7c161e07e060813b9be3f578f252f2a9f3d7f942640dee6a`;
+- `m02_aauth_fcf656d/localhost.py`:
+  `095f01512efeb865208c21f11bd0b3864b3ba54166a1e3a72993bc5d8df2183b`;
+- `tests/test_m02_aauth_fcf656d_localhost.py`:
+  `b61bd0359c0d43eb23b51b537b96dd951bd05558ae4530e117cd28f6b537d2cc`.
+
+Authorize commit and push of those exact reviewed files and synchronized
+canonical state. Authorize create-only implementation of one bounded execution
+controller under D-114 and D-115. The complete controller requires blind dual
+static review before commit or execution.
+
+Do not import, compile, lint, test, bind a listener or execute the controller or
+package. No additional dependency operation, external service, personal data,
+wallet/WAS work, QR flow, Misty access, physical actuation, G28 or G29 is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.
