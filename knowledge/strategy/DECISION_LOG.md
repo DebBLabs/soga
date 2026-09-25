@@ -2315,3 +2315,23 @@ Do not import, compile, lint, test, bind a listener or execute the created code.
 No dependency operation, external service, personal data, wallet/WAS work, QR
 flow, Misty access, physical actuation, G28 or G29 is authorized. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-115 — Accept localhost transport-address amendment
+
+Recorded on 2026-09-24 at PI instruction after both blind request-071 reviewers
+returned PASS with no blocking findings.
+
+Accept
+`knowledge/proposals/M02_AAUTH_FCF656D_LOCALHOST_TRANSPORT_ADDRESS_AMENDMENT_2026-09-24.md`
+at SHA-256
+`b47eee5c57836c1140d275602c2df6c8fecfe6511a92a3023726314b93cd5611`.
+Authorize commit and push of that exact amendment, then continue the D-114
+create-only implementation under the proposal as amended. Preserve every
+accepted D-113 source file unchanged. The conformant HTTPS role identifiers
+remain security identities; injected literal-loopback addresses are test-only
+socket routing and do not establish discovery.
+
+Do not import, compile, lint, test, bind a listener or execute the created code.
+Every complete created file requires blind dual static review before commit or
+execution. All D-114 exclusions remain in force. The unrelated PI routine-tool
+proposal remains excluded and untouched.

@@ -773,6 +773,12 @@ as the explicit Person Server supervision source and enforce auth-token checks
 at the resource boundary. No import, compilation, lint, test, listener binding
 or execution is authorized before blind dual review of every complete file.
 
+D-115 accepts the transport-address amendment after blind dual review. D-114
+implementation must keep every accepted D-113 source byte-identical, preserve
+HTTPS role identifiers as security identities, and use injected literal-loopback
+addresses only for test socket routing. The sprint does not claim issuer-based
+discovery. Create-only implementation remains authorized; execution does not.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
