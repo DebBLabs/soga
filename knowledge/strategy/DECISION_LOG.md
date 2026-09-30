@@ -2376,3 +2376,23 @@ No listener binding, test execution, retry, dependency operation, external
 service, wallet/WAS work, QR flow, Misty access, physical action, G28 or G29 is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-118 — Accept AAuth demo-runtime recovery plan and authorize Phase 1
+
+Recorded on 2026-09-30 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS with no remaining blocking findings.
+
+Accept
+`knowledge/proposals/M02_AAUTH_DEMO_RUNTIME_RECOVERY_AND_LOCALHOST_EXECUTION_PROPOSAL_2026-09-30.md`
+at SHA-256
+`776e354761413585d16793bb237de3e443dba8c02c9f5173d93fdfe768145886`.
+Authorize commit and push of that exact proposal and synchronized canonical
+state. Authorize Phase 1 create-only implementation of the external-input
+manifest, durable-runtime recovery controller, portability correction to the
+localhost gateway controller and focused static tests named by the proposal.
+
+Do not download, restore, install, import, compile, lint, test, bind a listener
+or execute created or modified source. The complete Phase 1 package requires
+blind dual review before commit or execution. All proposal exclusions remain
+in force. The unrelated PI routine-tool proposal remains excluded and
+untouched.

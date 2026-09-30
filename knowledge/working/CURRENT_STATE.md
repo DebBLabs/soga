@@ -792,6 +792,15 @@ and authorizes commit and push only. The controller remains unexecuted; one
 bounded run requires separate prospective PI authority. No listener binding or
 test execution is authorized.
 
+D-118 accepts the blind dual-reviewed demo-runtime recovery and localhost
+execution plan at SHA-256
+`776e354761413585d16793bb237de3e443dba8c02c9f5173d93fdfe768145886`.
+Phase 1 create-only implementation is authorized for the external-input
+manifest, recovery controller, portable localhost controller and focused static
+tests. No download, restoration, installation, import, compilation, lint, test,
+listener or execution is authorized. Review the complete Phase 1 package
+blindly before commit or use.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
