@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Bounded controller for the D-116 localhost AAuth gateway package."""
 
+import base64
+import csv
 import hashlib
 import importlib.util
 import io
 import json
 import os
 from pathlib import Path
+from pathlib import PurePosixPath
 import re
 import socket
 import subprocess
@@ -15,9 +18,12 @@ import time
 import unittest
 
 
-REPO = Path("/Users/debb/dev/soga-clean")
-PROVIDER_ROOT = Path("/private/tmp/m02-aauth-fcf656d-phase1-install-20260921/site-packages")
-EVIDENCE_DIR = Path("/private/tmp/m02-aauth-fcf656d-localhost-gateway-20260924")
+REPO = Path(__file__).resolve().parents[2]
+DURABLE_ROOT = REPO.parent / "research-evidence/soga"
+RUNTIME_ROOT = DURABLE_ROOT / "runtimes/aauth-fcf656d-provider"
+PROVIDER_ROOT = RUNTIME_ROOT / "site-packages"
+PROVIDER_MANIFEST = DURABLE_ROOT / "manifests/aauth-fcf656d-provider.json"
+EVIDENCE_DIR = DURABLE_ROOT / "executions/localhost-gateway"
 STDOUT_PATH = EVIDENCE_DIR / "localhost-gateway-evidence.json"
 STDERR_PATH = EVIDENCE_DIR / "localhost-gateway-stderr.bin"
 RUN_RECORD_PATH = EVIDENCE_DIR / "run-record.json"
@@ -44,6 +50,10 @@ HASHES = {
     "tests/test_m02_aauth_fcf656d.py": "89b71359c6c071453fab289aa85443aa4f7156e4a2d263d8ac12f85bee4deaad",
     "tests/test_m02_aauth_fcf656d_exchange.py": "89dcede33566a1531d9c5630d9598da940ffd7ac99dfb4610a875e3559aad916",
     "tests/test_m02_aauth_fcf656d_localhost.py": "b61bd0359c0d43eb23b51b537b96dd951bd05558ae4530e117cd28f6b537d2cc",
+}
+EXPECTED_DISTRIBUTIONS = {
+    "cryptography": "50.0.1", "cffi": "2.0.0",
+    "pycparser": "2.23", "typing-extensions": "4.15.0",
 }
 TEST_MODULES = (
     ("m02_phase1_tests", "tests/test_m02_aauth_fcf656d.py"),
@@ -80,6 +90,69 @@ def protected_state():
 
 
 def provider_state():
+    if (RUNTIME_ROOT.is_symlink() or PROVIDER_ROOT.resolve(strict=False).parent !=
+            RUNTIME_ROOT.resolve(strict=False)):
+        raise RuntimeError("provider is outside exact durable runtime root")
+    if not PROVIDER_MANIFEST.is_file() or PROVIDER_MANIFEST.is_symlink():
+        raise RuntimeError("durable provider manifest unavailable")
+    manifest = json.loads(PROVIDER_MANIFEST.read_text(encoding="utf-8"))
+    if (manifest.get("result") != "VERIFIED_DURABLE_RUNTIME" or
+            manifest.get("durable_root") != str(DURABLE_ROOT)):
+        raise RuntimeError("durable provider manifest is not accepted runtime evidence")
+    found = {}
+    accounted = set()
+    dist_infos = sorted(PROVIDER_ROOT.rglob("*.dist-info"))
+    if not dist_infos or any(path.parent != PROVIDER_ROOT or path.is_symlink()
+                             for path in dist_infos):
+        raise RuntimeError("provider distribution metadata is unsafe")
+    for dist_info in dist_infos:
+        metadata = dist_info / "METADATA"
+        if not metadata.is_file() or metadata.is_symlink():
+            raise RuntimeError("provider metadata unavailable")
+        identity = {}
+        for line in metadata.read_text(encoding="utf-8").splitlines():
+            if line.startswith("Name:") or line.startswith("Version:"):
+                key, value = line.split(":", 1)
+                if key.lower() in identity:
+                    raise RuntimeError("duplicate provider metadata identity")
+                identity[key.lower()] = value.strip()
+        name = identity.get("name", "").lower().replace("_", "-")
+        version = identity.get("version")
+        if name not in EXPECTED_DISTRIBUTIONS or name in found:
+            raise RuntimeError("unexpected provider distribution")
+        found[name] = version
+        record = dist_info / "RECORD"
+        if not record.is_file() or record.is_symlink():
+            raise RuntimeError("provider RECORD unavailable")
+        with record.open(newline="", encoding="utf-8") as handle:
+            for row in csv.reader(handle):
+                if len(row) != 3:
+                    raise RuntimeError("invalid provider RECORD row")
+                relative, encoded_hash, encoded_size = row
+                pure = PurePosixPath(relative)
+                if not relative or pure.is_absolute() or ".." in pure.parts:
+                    raise RuntimeError("unsafe provider RECORD path")
+                path = PROVIDER_ROOT.joinpath(*pure.parts)
+                if not path.is_file() or path.is_symlink():
+                    raise RuntimeError("provider RECORD target unavailable")
+                if not encoded_hash or not encoded_size:
+                    if path != record or encoded_hash or encoded_size:
+                        raise RuntimeError("unexpected unhashed provider RECORD entry")
+                else:
+                    algorithm, value = encoded_hash.split("=", 1)
+                    observed = base64.urlsafe_b64encode(
+                        bytes.fromhex(digest(path.read_bytes()))).decode().rstrip("=")
+                    if (algorithm != "sha256" or observed != value or
+                            path.stat().st_size != int(encoded_size)):
+                        raise RuntimeError("provider RECORD mismatch")
+                if relative in accounted:
+                    raise RuntimeError("duplicate provider RECORD path")
+                accounted.add(relative)
+    actual_files = {str(path.relative_to(PROVIDER_ROOT))
+                    for path in PROVIDER_ROOT.rglob("*")
+                    if path.is_file() and not path.is_symlink()}
+    if found != EXPECTED_DISTRIBUTIONS or actual_files != accounted:
+        raise RuntimeError("provider tree identity mismatch")
     paths = (
         PROVIDER_ROOT / "cryptography/__init__.py",
         PROVIDER_ROOT / "cryptography/hazmat/bindings/_rust.abi3.so",
@@ -92,6 +165,9 @@ def provider_state():
         if not path.is_file() or path.is_symlink():
             raise RuntimeError("pinned provider file unavailable")
         result[str(path.relative_to(PROVIDER_ROOT))] = digest(path.read_bytes())
+    result["manifest_sha256"] = digest(PROVIDER_MANIFEST.read_bytes())
+    result["distributions"] = found
+    result["record_files_verified"] = len(actual_files)
     return result
 
 
@@ -233,9 +309,11 @@ def parent_main():
     started = time.time()
     before = {"sources": protected_state(), "provider": provider_state(),
               "runner": runner_state()}
+    if not DURABLE_ROOT.is_dir() or DURABLE_ROOT.is_symlink():
+        raise RuntimeError("durable evidence root unavailable")
     if EVIDENCE_DIR.exists():
         raise RuntimeError("evidence directory already exists")
-    EVIDENCE_DIR.mkdir(mode=0o700)
+    EVIDENCE_DIR.mkdir(mode=0o700, parents=True)
     environment = dict(BASE_ENV)
     environment[CHILD_MODE] = "1"
     command = ["/usr/bin/python3", "-I", "-S", "-B", str(Path(__file__).resolve())]

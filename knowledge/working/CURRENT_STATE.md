@@ -801,6 +801,14 @@ tests. No download, restoration, installation, import, compilation, lint, test,
 listener or execution is authorized. Review the complete Phase 1 package
 blindly before commit or use.
 
+D-119 accepts the blind dual-reviewed and corrected Phase 1 recovery package:
+the external-input manifest, durable-runtime recovery controller, portable
+localhost gateway controller and focused static tests. The accepted hashes are
+recorded in the decision log. Commit is authorized; execution is not. No
+download, restoration, installation, import, compilation, lint, test or
+listener is authorized. A separately reviewed and prospectively authorized
+Phase 2 decision is required before the recovery controller may run.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

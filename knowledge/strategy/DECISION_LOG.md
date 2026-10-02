@@ -2396,3 +2396,29 @@ or execute created or modified source. The complete Phase 1 package requires
 blind dual review before commit or execution. All proposal exclusions remain
 in force. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-119 — Accept AAuth demo-runtime recovery Phase 1 instrument
+
+Recorded on 2026-10-02 at PI instruction after Gate 1 and Gate 2 completed
+blind request-001 reviews and blind request-002 correction rechecks. Gate 1
+returned NOT READY on the first pass for the macOS interpreter identity and
+failed-retrieval evidence handling; both corrections and the related
+ancestor-symlink hardening received independent PASS on the exact final files.
+
+Accept the D-118 Phase 1 package at these SHA-256 values:
+
+- `knowledge/working/EXTERNAL_INPUT_MANIFEST.md`:
+  `9a18ebdecf996c71a29c02423e80afe8c02ad6818b6f45c70985729bd8674c48`;
+- `tools/m02_aauth_fcf656d/restore_demo_runtime.py`:
+  `07f3d1e8a5d42811d2945358b3ff5a8ee157ed88c27586b02f2009e4750621bb`;
+- `tools/m02_aauth_fcf656d/run_localhost_gateway_tests.py`:
+  `e3005703baa5ea0e917f8eee48549003b91a74de4e4c041482ff9b8d7c70285e`;
+- `tests/test_m02_aauth_demo_runtime_recovery_static.py`:
+  `e1d97876c44e06522fbd9a090422f69d4b883bbffbe98ece524f3bf7bdb0c862`.
+
+Authorize commit of those exact reviewed files and synchronized canonical
+state. No recovery execution, wheel retrieval, dependency installation,
+provider import, compilation, lint, test, listener or localhost execution is
+authorized. Phase 2 requires a separate prospective PI authorization. All
+D-118 exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.
