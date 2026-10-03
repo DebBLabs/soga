@@ -2798,3 +2798,24 @@ synchronized canonical state. Do not execute the package. A separately
 reviewed execution authorization is required before any test or listener runs.
 All D-133 exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-135 — Accept approval-pending execution proposal and authorize one run
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-024 with no blockers.
+
+Accept
+`knowledge/proposals/M02_AAUTH_APPROVAL_PENDING_EXECUTION_PROPOSAL_2026-10-03.md`
+at SHA-256
+`7b69eae4f03d0300d4557c1054cc00b4d2d83fdde1b63953f82bcc7001aa2d0b`.
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state, followed by exactly one bounded execution of the
+D-134-accepted runner under the proposal's controls.
+
+Immediately before execution, require the permitted diff from source basis
+`27f8fdb1a84bb5aad8bc2b6534636c369991143b`, empty working-tree status for
+`engines`, `input_adapters`, `verify` and `advisory`, and those four `HEAD` tree
+IDs to be recorded. No automatic retry. Resulting durable evidence requires
+blind dual review and PI acceptance before further use. All proposal exclusions
+remain in force. The unrelated PI routine-tool proposal remains excluded and
+untouched.

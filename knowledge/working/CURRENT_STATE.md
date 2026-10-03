@@ -948,6 +948,15 @@ for the bounded 81-test runner. Commit and push are authorized. Execution is
 not authorized; a separately reviewed execution authorization is required
 before any test or listener runs. All D-133 exclusions remain in force.
 
+D-135 accepts the approval-pending execution proposal at SHA-256
+`7b69eae4f03d0300d4557c1054cc00b4d2d83fdde1b63953f82bcc7001aa2d0b`
+and authorizes exactly one bounded run of the D-134-accepted 81-test controller
+after the proposal, decision and canonical state are committed. Pre-execution
+must record the permitted diff from source basis `27f8fdb1`, empty status for
+the four protected SOGA directories and their `HEAD` tree IDs. No retry is
+authorized. Resulting evidence requires blind dual review and PI acceptance;
+all proposal exclusions remain in force.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
