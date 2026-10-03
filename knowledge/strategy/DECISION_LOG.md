@@ -2451,3 +2451,28 @@ lint, test, listener, Mockin or SOGA execution, recovery execution, wallet/WAS
 integration, personal data, QR flow, Misty access, physical action, G28 or G29
 is authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-121 — Accept Mockin/AAuth Phase 0 interoperability assessment
+
+Recorded on 2026-10-02 at PI instruction after Gate 1 and Gate 2 completed
+blind request-005 reviews and blind request-006 correction rechecks. Gate 1
+returned NOT READY on the first pass for missing governing-source attribution,
+Mockin's default HTTP issuer being incompatible with SOGA HTTPS role identities,
+and failure to classify Mockin's unauthenticated global configuration mutation
+surface. Both gates returned PASS on the corrected complete report.
+
+Accept
+`knowledge/research/M02_MOCKIN_AAUTH_INTEROPERABILITY_ASSESSMENT_2026-10-02.md`
+at SHA-256
+`93ac22df89052137a7489b94dd9f0797de0d244e6f396628db78414994d18fa6`.
+Record Mockin as a supplemental interoperability reference only, not the core
+demonstration Person Server and not a substitute for SOGA governance.
+
+Authorize commit and push of the exact reviewed report, this decision, the
+external-input manifest entries for pinned Mockin and AAuth sources, and
+synchronized canonical state. Return the active path to restoration and bounded
+execution of the independent SOGA/AAuth localhost demonstration.
+
+No Mockin execution, dependency operation, integration, listener, wallet/WAS
+work, QR flow, Misty access, G28 or G29 is authorized. The unrelated PI
+routine-tool proposal remains excluded and untouched.

@@ -818,6 +818,19 @@ Mockin's mock PS, SOGA supervision, resource enforcement and WAS storage. No
 dependency operation, import, build, test, listener or service execution is
 authorized.
 
+D-121 accepts the corrected Phase 0 Mockin/AAuth interoperability assessment
+after blind request-005 review and blind request-006 correction recheck. Mockin
+is a supplemental reference interoperability target only. It is not the core
+demonstration Person Server and cannot substitute for the independent SOGA PS
+without removing SOGA from auth-token issuance. The pinned Mockin and AAuth
+source inputs are recorded in the external-input manifest. No Mockin execution,
+dependency operation, integration or listener is authorized.
+
+The active path returns to restoration and bounded execution of the independent
+SOGA/AAuth localhost demonstration. D-119's recovery instrument remains
+committed and unexecuted; recovery and localhost execution each require their
+own prospective authority. Mockin must not delay this path.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

@@ -1,13 +1,44 @@
 # External Input Manifest
 
 Last updated: 2026-10-02  
-Authority: D-118  
+Authority: D-118 and D-121
 Repository-relative derivation: the durable root is the repository parent's
 `research-evidence/soga/` directory.
 
 This is the common discovery point for non-repository inputs used by SOGA.
 The paths below are derived by the reviewed controllers; they are not personal
 home-directory constants. Runtime and evidence bytes remain outside Git.
+
+## Mockin interoperability assessment inputs
+
+| Field | Value |
+|---|---|
+| Purpose | Source-only AAuth interoperability comparison; supplemental reference only |
+| Durable source path | `<repository-parent>/research-evidence/soga/inputs/mockin/06bb4e7cae491beaf143395a8040659a1196c4b8/source/` |
+| Official origin | `https://github.com/hellocoop/mockin.git` |
+| Commit | `06bb4e7cae491beaf143395a8040659a1196c4b8` |
+| Tree | `281a3aa737200ec66ca98caddb20b1dfd0a98687` |
+| Package identity | `@hellocoop/mockin==3.2.1`; Node `>=22`; MIT |
+| `package.json` SHA-256 | `8cc1abe2fa9a8c4d440ea3cae0c24c2d1068b428ea1ef1ff51d2662a4e73dc1f` |
+| `package-lock.json` SHA-256 | `4873cc09e8ed5dedca286cfa5834e98d6d805688f42008ffb7ef36e1c5bbc5f8` |
+| Classification | Pinned source evidence; not installed, built, executed or approved as the core PS |
+| Authorizing decisions | D-120 acquisition; D-121 evidence acceptance |
+| Last verified | 2026-10-02, detached and clean |
+
+## AAuth `fcf656d` editor source
+
+| Field | Value |
+|---|---|
+| Purpose | Governing editor-source baseline for the bounded AAuth profile and Mockin comparison |
+| Durable source path | `<repository-parent>/research-evidence/soga/inputs/aauth/fcf656d/source/` |
+| Official origin | `https://github.com/dickhardt/AAuth.git` |
+| Commit | `fcf656de1926535f5bd6fc0538147ead6646e727` |
+| Tree | `fe5a02d4a965557c0d31620c5bbb8f725fdccb94` |
+| Protocol file | `draft-hardt-oauth-aauth-protocol.md` |
+| Protocol SHA-256 | `295ba2a0edd99dd077c4c877b6276608000419fdf4bbef2327da0c6e4d950953` |
+| Classification | Pinned source evidence; upstream `HEAD` is not a substitute |
+| Authorizing decisions | D-120 restoration; D-121 evidence acceptance |
+| Last verified | 2026-10-02, detached and clean |
 
 ## AAuth `fcf656d` provider runtime
 
