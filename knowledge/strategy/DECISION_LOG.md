@@ -2422,3 +2422,32 @@ provider import, compilation, lint, test, listener or localhost execution is
 authorized. Phase 2 requires a separate prospective PI authorization. All
 D-118 exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-120 — Accept Mockin/AAuth interoperability assessment and authorize Phase 0
+
+Recorded on 2026-10-02 at PI instruction after Gate 1 and Gate 2 completed
+blind request-003 reviews and blind request-004 correction rechecks. Gate 1
+returned NOT READY on the first pass for missing normative baselines, incorrect
+SOGA role allocation and omitted mission/party-mode matrix rows. Both gates
+returned PASS on the corrected exact proposal.
+
+Accept
+`knowledge/proposals/M02_MOCKIN_AAUTH_INTEROPERABILITY_ASSESSMENT_PROPOSAL_2026-10-02.md`
+at SHA-256
+`fce9f0f5e48f3f2a4a792f1935da663b4ffd124ca70aa52ba02f8adf057ea6ea`.
+Authorize commit and push of the exact reviewed proposal and synchronized
+canonical state.
+
+Authorize Phase 0 exact-source acquisition and source-only assessment under the
+proposal: pin Hellō Mockin from its exact official Git origin; restore Dick
+Hardt's public AAuth editor source only at commit
+`fcf656de1926535f5bd6fc0538147ead6646e727` and require protocol SHA-256
+`295ba2a0edd99dd077c4c877b6276608000419fdf4bbef2327da0c6e4d950953`;
+retrieve only the pre-enumerated official Mockin and AAuth specification
+documents; and produce the complete compatibility matrix and evidence report.
+
+No package or container download, dependency installation, import, build,
+lint, test, listener, Mockin or SOGA execution, recovery execution, wallet/WAS
+integration, personal data, QR flow, Misty access, physical action, G28 or G29
+is authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.

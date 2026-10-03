@@ -809,6 +809,15 @@ download, restoration, installation, import, compilation, lint, test or
 listener is authorized. A separately reviewed and prospectively authorized
 Phase 2 decision is required before the recovery controller may run.
 
+D-120 accepts the blind dual-reviewed Mockin/AAuth interoperability assessment
+proposal. Phase 0 exact-source acquisition and source-only assessment are
+authorized for the official Mockin origin, the exact pinned `fcf656d` AAuth
+editor source and pre-enumerated official documents. The required output is a
+source-cited compatibility matrix that preserves the distinction between
+Mockin's mock PS, SOGA supervision, resource enforcement and WAS storage. No
+dependency operation, import, build, test, listener or service execution is
+authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
