@@ -2616,3 +2616,29 @@ the exact 53-test suite and literal loopback ephemeral listeners. No automatic
 retry is authorized. Resulting evidence requires blind dual review and PI
 acceptance. All prior exclusions remain in force; the unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-128 — Accept localhost AAuth gateway R2 positive evidence
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-012 with no blockers.
+
+Accept the single D-127 execution as a gated positive result. Accept
+`knowledge/research/M02_AAUTH_LOCALHOST_GATEWAY_R2_EXECUTION_EVIDENCE_2026-10-03.md`
+at SHA-256
+`c559fd0f53f45554aec9aa34322bee2288a0ec476384942757e18edafb39add3`,
+the durable evidence payload at SHA-256
+`c4ad8317e674f2bd8570d2b82d70bce985d1c74b462e996329a5e27d6c300c31`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`9035732a5a27966e7ef7a2025280f649fb19b24df99661df77eb8ae8ae54a256`.
+
+Record that all 53 tests passed with no failures, errors or skips, including
+the real SOGA-supervised four-hop exchange and corrected fail-closed connection
+handling. The D-127 attempt is consumed. Authorize commit and push of the exact
+reviewed evidence report, this decision and synchronized canonical state.
+
+This establishes only the bounded localhost gateway. It does not establish
+complete AAuth conformance, parent authorization, wallet/WAS, QR, presentation
+integration, Misty, G28 or G29. No additional execution is authorized. The
+unrelated PI routine-tool proposal remains excluded and untouched.

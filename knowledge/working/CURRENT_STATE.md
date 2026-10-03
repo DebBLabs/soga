@@ -873,8 +873,18 @@ D-127 accepts the corrected controller at SHA-256
 and authorizes one bounded execution of the exact 53-test suite using the
 accepted durable provider manifest and literal loopback ephemeral listeners.
 Evidence must be written to the new durable `localhost-gateway-r2` directory.
-No automatic retry is authorized; resulting evidence requires blind dual
-review and PI acceptance.
+The single attempt completed and request-012 blind dual evidence review passed.
+
+D-128 accepts the R2 execution as a gated positive result: all 53 tests passed
+with no failures, errors or skips, including the real SOGA-supervised four-hop
+exchange and corrected fail-closed connection handling. The accepted evidence
+report is
+`knowledge/research/M02_AAUTH_LOCALHOST_GATEWAY_R2_EXECUTION_EVIDENCE_2026-10-03.md`
+at SHA-256
+`c559fd0f53f45554aec9aa34322bee2288a0ec476384942757e18edafb39add3`.
+This establishes only the bounded localhost gateway—not complete AAuth
+conformance, parent authorization, wallet/WAS, QR, presentation integration,
+Misty, G28 or G29. No additional execution is authorized.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
