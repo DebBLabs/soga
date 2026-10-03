@@ -2483,8 +2483,9 @@ Recorded on 2026-10-02 at PI instruction after read-only preflight confirmed
 the exact D-119 controller, absent recovery targets and the pinned Python,
 platform and pip identities.
 
-Authorize one Phase 2 execution at repository commit
-`f3bf7e77cadb33a58f5109707c0d85136b2c0af1` of
+Authorize one Phase 2 execution of the controller from repository source basis
+`f3bf7e77cadb33a58f5109707c0d85136b2c0af1`, after this prospective decision
+is committed, namely
 `tools/m02_aauth_fcf656d/restore_demo_runtime.py` at SHA-256
 `07f3d1e8a5d42811d2945358b3ff5a8ee157ed88c27586b02f2009e4750621bb`
 under D-118 and D-119. Permit only the four exact hash-pinned wheel retrievals
