@@ -927,6 +927,16 @@ identity, parental or legal authority, consent, complete AAuth conformance, QR,
 wallet/WAS, presentation or Misty integration. The attempt is consumed and no
 additional execution is authorized.
 
+D-133 accepts the approval-pending lifecycle proposal at SHA-256
+`785e594325c2434505636b76d131914f21333c1d270ea7981ca9c9713a3c4619`.
+This is reusable core program work, not presentation-only scope. Create-only
+implementation is authorized for exactly the additive lifecycle module, its
+sixteen-test module and the bounded 81-test runner. Pending lifetime must be
+shorter than the held auth token's verified remaining lifetime, and an injected
+clock callable must govern signature, pending and token time. No D-132 source
+may change. Import, compilation, lint, tests, listeners and execution remain
+unauthorized pending blind dual static review.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

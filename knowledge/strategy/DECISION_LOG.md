@@ -2743,3 +2743,30 @@ no identity, parental or legal authority, consent, complete AAuth conformance,
 QR, wallet/WAS, presentation or Misty integration. No additional execution is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-133 — Accept approval-pending lifecycle proposal and authorize create-only implementation
+
+Recorded on 2026-10-03 at PI instruction after Gate 2 returned PASS on blind
+request-020 and Gate 1 returned PASS on the focused request-021 recheck.
+
+Accept
+`knowledge/proposals/M02_AAUTH_APPROVAL_PENDING_LIFECYCLE_PROPOSAL_2026-10-03.md`
+at SHA-256
+`785e594325c2434505636b76d131914f21333c1d270ea7981ca9c9713a3c4619`.
+Approval-pending is reusable core program work, not presentation-only scope.
+
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state, followed by create-only implementation of exactly
+three additive files:
+
+- `m02_aauth_fcf656d/approval_pending.py`;
+- `tests/test_m02_aauth_approval_pending.py`; and
+- `tools/m02_aauth_fcf656d/run_approval_pending_tests.py`.
+
+The implementation must require the pending lifetime to be shorter than the
+held auth token's verified remaining lifetime and use an injected clock callable
+for signature, pending and token time. Do not modify any D-132-accepted source;
+do not import, compile, lint, test, bind a listener or execute the created
+package. Require blind dual static review of all three complete files before
+commit or execution. All proposal exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.
