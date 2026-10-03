@@ -855,6 +855,20 @@ using the accepted durable runtime manifest. The run is limited to the exact
 output. No retry is authorized. Resulting evidence requires blind dual review
 and PI acceptance before any broader claim or next integration step.
 
+D-125 accepts the D-124 execution as a gated negative after both blind
+request-008 reviewers returned PASS. Fifty-two of 53 tests passed, including
+the real SOGA-supervised four-hop exchange. The sole failure was `GET /unknown`
+returning `501` where the test expected `404`. The D-124 attempt is consumed.
+The source-only diagnosis established connection desynchronization from unread
+body bytes on persistent HTTP/1.1 connections.
+
+D-126 accepts the request-010-reviewed correction for unsupported methods and
+early-rejected POST requests. Corrected runtime behavior remains unestablished.
+Create-only controller modification is authorized solely to update the two
+protected source hashes and select a new empty durable evidence directory.
+Blind dual static review is required before commit or execution; execution,
+listener creation and retry remain prohibited.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

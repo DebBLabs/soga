@@ -345,6 +345,8 @@ class LocalhostGatewayTests(unittest.TestCase):
                                         "Content-Length": str(len(body))})
                     response = connection.getresponse()
                     self.assertEqual(response.status, expected)
+                    if content_type != "application/json":
+                        self.assertEqual(response.getheader("Connection"), "close")
                     rendered = response.read().decode()
                     self.assertNotIn("eyJ", rendered)
                 finally:
@@ -355,11 +357,17 @@ class LocalhostGatewayTests(unittest.TestCase):
                                {"Content-Type": "application/json"})
             response = connection.getresponse()
             self.assertEqual(response.status, 405)
-            response.read()
+            self.assertEqual(response.getheader("Connection"), "close")
+            self.assertEqual(json.loads(response.read()),
+                             {"error": "method_not_allowed"})
+        finally:
+            connection.close()
+        connection = http.client.HTTPConnection(host, port, timeout=2)
+        try:
             connection.request("GET", "/unknown")
             response = connection.getresponse()
             self.assertEqual(response.status, 404)
-            response.read()
+            self.assertEqual(json.loads(response.read()), {"error": "not_found"})
         finally:
             connection.close()
 
@@ -376,6 +384,7 @@ class LocalhostGatewayTests(unittest.TestCase):
                     connection.endheaders()
                     response = connection.getresponse()
                     self.assertEqual(response.status, 400)
+                    self.assertEqual(response.getheader("Connection"), "close")
                     response.read()
                 finally:
                     connection.close()

@@ -177,6 +177,7 @@ def _handler_for(surface):
                 self._write(404, {"error": "not_found"}, {})
 
         def do_POST(self):
+            self._request_body_consumed = False
             try:
                 request = self._signed_request()
                 status, body, headers = surface.post(self.path, request)
@@ -198,10 +199,15 @@ def _handler_for(surface):
                 status, body, headers = 404, {"error": "not_found"}, {}
             except Exception:
                 status, body, headers = 500, {"error": "internal_error"}, {}
+            if not self._request_body_consumed:
+                self.close_connection = True
+                headers = {**headers, "Connection": "close"}
             self._write(status, body, headers)
 
         def do_PUT(self):
-            self._write(405, {"error": "method_not_allowed"}, {})
+            self.close_connection = True
+            self._write(405, {"error": "method_not_allowed"},
+                        {"Connection": "close"})
 
         do_DELETE = do_PUT
         do_PATCH = do_PUT
@@ -215,7 +221,9 @@ def _handler_for(surface):
             length = int(raw_length)
             if length <= 0 or length > MAX_HTTP_BYTES:
                 raise LocalhostProfileError("invalid body length")
-            envelope = json.loads(self.rfile.read(length).decode("utf-8"))
+            raw = self.rfile.read(length)
+            self._request_body_consumed = True
+            envelope = json.loads(raw.decode("utf-8"))
             if not isinstance(envelope, dict) or set(envelope) != {"headers", "body"}:
                 raise LocalhostProfileError("exact signed-request envelope required")
             headers = envelope["headers"]

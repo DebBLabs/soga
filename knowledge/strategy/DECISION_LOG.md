@@ -2543,3 +2543,56 @@ review before acceptance.
 No Mockin execution, external service, wallet/WAS work, QR flow, Misty access,
 G28 or G29 is authorized. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+## D-125 — Accept localhost AAuth gateway negative evidence and authorize diagnosis
+
+Recorded on 2026-10-02 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-008 with no blocking findings.
+
+Accept the single D-124 localhost execution as a gated negative result. Accept
+`knowledge/research/M02_AAUTH_LOCALHOST_GATEWAY_EXECUTION_EVIDENCE_2026-10-02.md`
+at SHA-256
+`99834361a76d0e4e04b5df7f15c0768c63aeef9f2e9b3892d87f86631ce3d605`,
+the durable evidence payload at SHA-256
+`f8c4f794fc09543868791bf7a9a4f38de3d26fa278c7671300766676b4ae54dc`,
+the run record at SHA-256
+`dd7f17b890ded48edee2fcb736918ca72fd772c0ec59eba9143c7a42e4090c20`
+and empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+
+Record that 52 of 53 tests passed, including the real SOGA-supervised four-hop
+exchange. The sole failure was `GET /unknown` returning `501` where the test
+expected `404`. The D-124 attempt is consumed. Authorize commit and push of the
+exact reviewed evidence, this decision and synchronized canonical state.
+
+Authorize bounded source-only diagnosis of the `501`/`404` behavior. No source
+modification, test execution, listener or retry is authorized. No Mockin,
+wallet/WAS, QR, Misty, G28 or G29 activity is authorized. The unrelated PI
+routine-tool proposal remains excluded and untouched.
+
+## D-126 — Accept localhost connection-desynchronization correction and authorize controller update
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind diff-only request-010.
+
+Accept the corrected diagnosis, correction proposal, localhost source and
+localhost tests at these exact SHA-256 values:
+
+- diagnosis: `34637ba94ceddd16ed11f11849831a61229cbc3edf2523b76a515cdd86d2d0d9`;
+- proposal: `3b2171286652469ac9deae09355f6356074a2240f086ca809ba6681a3fa432e9`;
+- `m02_aauth_fcf656d/localhost.py`:
+  `513f5947582873e741c1e3fbd1a5876805121dd36726745b090b99cdd20d26d7`;
+- `tests/test_m02_aauth_fcf656d_localhost.py`:
+  `d591d91085107f76e4a9afa46b003197bda0a722460741600594a043d96306bb`.
+
+The correction closes unsupported-method and early-rejected POST connections
+without draining untrusted bodies. Corrected runtime behavior remains
+unestablished until a separately authorized execution.
+
+Authorize create-only modification of
+`tools/m02_aauth_fcf656d/run_localhost_gateway_tests.py` to update only the two
+protected source hashes and select a new empty durable evidence directory,
+while preserving every other controller control. Require blind dual static
+review before commit or execution. No test, listener, rerun or other excluded
+activity is authorized. The unrelated PI routine-tool proposal remains
+excluded and untouched.
