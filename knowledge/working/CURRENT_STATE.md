@@ -838,6 +838,15 @@ offline installation and static verification. No retry or localhost gateway
 execution is authorized. The resulting runtime cannot be used until its
 durable evidence receives blind dual review and PI acceptance.
 
+D-123 accepts the D-122 recovery as a gated positive after both blind
+request-007 reviewers returned PASS. The durable runtime manifest is accepted
+at SHA-256
+`7d409a9990c2c57623b395d6a74643263f5c4c4e89b750b4a87e38bd680b4c8e`:
+all four pinned wheels and all 190 installed files verified, offline pip return
+code zero, empty stderr, no installed symlinks and empty scratch. The recovered
+runtime is eligible only for a separately authorized bounded localhost gateway
+execution. The D-122 attempt is consumed; no additional recovery is authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

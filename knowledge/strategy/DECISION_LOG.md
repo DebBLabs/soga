@@ -2497,3 +2497,26 @@ Do not execute the localhost gateway, import the provider outside the
 controller's bounded verification, open a listener, run Mockin, access
 wallet/WAS or Misty, or activate G28 or G29. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-123 — Accept AAuth demo-runtime recovery evidence
+
+Recorded on 2026-10-02 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-007 with no blocking findings.
+
+Accept the single D-122 recovery execution as a gated positive result. Accept
+`knowledge/research/M02_AAUTH_DEMO_RUNTIME_RECOVERY_EVIDENCE_2026-10-02.md`
+at SHA-256
+`459819423f1d3b1fdcbb44dcf7bd9caccd5e79bae5fc077e053f86b31f9f061d`
+and the durable runtime manifest at SHA-256
+`7d409a9990c2c57623b395d6a74643263f5c4c4e89b750b4a87e38bd680b4c8e`.
+
+Record that all four pinned wheels and all 190 installed files were verified,
+installation completed offline with empty stderr, and the D-122 attempt is
+consumed. Authorize commit and push of the exact reviewed evidence report, this
+decision, the external-input manifest status update and synchronized canonical
+state.
+
+The recovered runtime may be used only by a separately authorized bounded
+localhost gateway execution. No additional recovery, Mockin execution,
+wallet/WAS work, QR flow, Misty access, G28 or G29 is authorized. The unrelated
+PI routine-tool proposal remains excluded and untouched.

@@ -50,11 +50,11 @@ home-directory constants. Runtime and evidence bytes remain outside Git.
 | Durable scratch path | `<repository-parent>/research-evidence/soga/runtimes/aauth-fcf656d-provider/scratch/` |
 | Durable execution path | `<repository-parent>/research-evidence/soga/executions/localhost-gateway/` |
 | Manifest path | `<repository-parent>/research-evidence/soga/manifests/aauth-fcf656d-provider.json` |
-| Authorizing decision | D-118 Phase 1 create-only; recovery execution requires separate authority |
-| Status | Runtime absent after reboot; recovery instrument awaiting blind dual review |
+| Authorizing decision | D-118/D-119 instrument; D-122 execution; D-123 evidence acceptance |
+| Status | Durable runtime recovered and accepted; use requires separately authorized bounded localhost execution |
 | Preservation/runtime classification | Reproducible pinned runtime, not preservation evidence |
 | Platform baseline | CPython `3.9.6`; resolved interpreter `/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/bin/python3.9`; `sys.platform=darwin`; `platform.machine()=arm64`; pip `21.2.4` |
-| Last verified | 2026-09-24 before temporary input loss; durable recovery not yet executed |
+| Last verified | 2026-10-02 under D-122; manifest SHA-256 `7d409a9990c2c57623b395d6a74643263f5c4c4e89b750b4a87e38bd680b4c8e` |
 
 ### Exact wheel identities
 
