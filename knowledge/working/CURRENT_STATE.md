@@ -831,6 +831,13 @@ SOGA/AAuth localhost demonstration. D-119's recovery instrument remains
 committed and unexecuted; recovery and localhost execution each require their
 own prospective authority. Mockin must not delay this path.
 
+D-122 authorizes exactly one execution of the D-119 recovery controller at
+SHA-256 `07f3d1e8a5d42811d2945358b3ff5a8ee157ed88c27586b02f2009e4750621bb`.
+The run may retrieve only the four pinned wheels and perform the controller's
+offline installation and static verification. No retry or localhost gateway
+execution is authorized. The resulting runtime cannot be used until its
+durable evidence receives blind dual review and PI acceptance.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

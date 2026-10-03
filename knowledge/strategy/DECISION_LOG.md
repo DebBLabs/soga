@@ -2476,3 +2476,23 @@ execution of the independent SOGA/AAuth localhost demonstration.
 No Mockin execution, dependency operation, integration, listener, wallet/WAS
 work, QR flow, Misty access, G28 or G29 is authorized. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-122 — Authorize one AAuth demo-runtime recovery execution
+
+Recorded on 2026-10-02 at PI instruction after read-only preflight confirmed
+the exact D-119 controller, absent recovery targets and the pinned Python,
+platform and pip identities.
+
+Authorize one Phase 2 execution at repository commit
+`f3bf7e77cadb33a58f5109707c0d85136b2c0af1` of
+`tools/m02_aauth_fcf656d/restore_demo_runtime.py` at SHA-256
+`07f3d1e8a5d42811d2945358b3ff5a8ee157ed88c27586b02f2009e4750621bb`
+under D-118 and D-119. Permit only the four exact hash-pinned wheel retrievals
+and the offline installation and static verification encoded by the controller,
+with finite limits, zero redirects and no retry. Preserve durable evidence for
+blind dual review before any runtime use.
+
+Do not execute the localhost gateway, import the provider outside the
+controller's bounded verification, open a listener, run Mockin, access
+wallet/WAS or Misty, or activate G28 or G29. The unrelated PI routine-tool
+proposal remains excluded and untouched.
