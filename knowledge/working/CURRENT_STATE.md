@@ -866,8 +866,15 @@ D-126 accepts the request-010-reviewed correction for unsupported methods and
 early-rejected POST requests. Corrected runtime behavior remains unestablished.
 Create-only controller modification is authorized solely to update the two
 protected source hashes and select a new empty durable evidence directory.
-Blind dual static review is required before commit or execution; execution,
-listener creation and retry remain prohibited.
+Request-011 blind dual static review passed without blockers.
+
+D-127 accepts the corrected controller at SHA-256
+`2a3c04506fdfa371f63680a874979421e3288ca07bb421e26e17c2af0c11b32a`
+and authorizes one bounded execution of the exact 53-test suite using the
+accepted durable provider manifest and literal loopback ephemeral listeners.
+Evidence must be written to the new durable `localhost-gateway-r2` directory.
+No automatic retry is authorized; resulting evidence requires blind dual
+review and PI acceptance.
 
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18

@@ -2596,3 +2596,23 @@ while preserving every other controller control. Require blind dual static
 review before commit or execution. No test, listener, rerun or other excluded
 activity is authorized. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+## D-127 — Accept corrected localhost controller and authorize one bounded rerun
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-011 with no blockers.
+
+Accept `tools/m02_aauth_fcf656d/run_localhost_gateway_tests.py` at SHA-256
+`2a3c04506fdfa371f63680a874979421e3288ca07bb421e26e17c2af0c11b32a`.
+The controller pins the D-126-accepted localhost source and test hashes and
+selects the previously absent durable evidence directory
+`research-evidence/soga/executions/localhost-gateway-r2`. Every other
+controller safeguard remains unchanged.
+
+Authorize commit and push of the exact reviewed controller and exactly one
+bounded execution using the accepted durable provider manifest SHA-256
+`7d409a9990c2c57623b395d6a74643263f5c4c4e89b750b4a87e38bd680b4c8e`,
+the exact 53-test suite and literal loopback ephemeral listeners. No automatic
+retry is authorized. Resulting evidence requires blind dual review and PI
+acceptance. All prior exclusions remain in force; the unrelated PI
+routine-tool proposal remains excluded and untouched.

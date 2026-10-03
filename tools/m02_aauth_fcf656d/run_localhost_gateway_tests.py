@@ -23,7 +23,7 @@ DURABLE_ROOT = REPO.parent / "research-evidence/soga"
 RUNTIME_ROOT = DURABLE_ROOT / "runtimes/aauth-fcf656d-provider"
 PROVIDER_ROOT = RUNTIME_ROOT / "site-packages"
 PROVIDER_MANIFEST = DURABLE_ROOT / "manifests/aauth-fcf656d-provider.json"
-EVIDENCE_DIR = DURABLE_ROOT / "executions/localhost-gateway"
+EVIDENCE_DIR = DURABLE_ROOT / "executions/localhost-gateway-r2"
 STDOUT_PATH = EVIDENCE_DIR / "localhost-gateway-evidence.json"
 STDERR_PATH = EVIDENCE_DIR / "localhost-gateway-stderr.bin"
 RUN_RECORD_PATH = EVIDENCE_DIR / "run-record.json"
@@ -41,7 +41,7 @@ HASHES = {
     "m02_aauth_fcf656d/http_signatures.py": "f6ae4f4463852b310d09608d4a60084a566733e857098bcd42f2bc1a659cab65",
     "m02_aauth_fcf656d/identifiers.py": "54c495785fc5fc26d24e3c406bb334d0022410faff37696d40220e1b83759579",
     "m02_aauth_fcf656d/jose.py": "cda9b577746116e65c34977706593475a8637a3ec6823375dda7baffa961cdd4",
-    "m02_aauth_fcf656d/localhost.py": "095f01512efeb865208c21f11bd0b3864b3ba54166a1e3a72993bc5d8df2183b",
+    "m02_aauth_fcf656d/localhost.py": "513f5947582873e741c1e3fbd1a5876805121dd36726745b090b99cdd20d26d7",
     "m02_aauth_fcf656d/metadata.py": "c1a473ee3f21ed4832668fadb87e9db72dbade4278f99aa35efff868db225a5a",
     "m02_aauth_fcf656d/profile.py": "fb7b9b51ada64c7e45f61eb24991078cbe5d172cdf781887bf6843c27fb7afbf",
     "m02_aauth_fcf656d/soga_supervision.py": "af1f19eb0710027d7c161e07e060813b9be3f578f252f2a9f3d7f942640dee6a",
@@ -49,7 +49,7 @@ HASHES = {
     "m02_aauth_fcf656d/tokens.py": "34f705123acb83772f9f2428409593233f004384c46b2cf96f0358615cf2dd04",
     "tests/test_m02_aauth_fcf656d.py": "89b71359c6c071453fab289aa85443aa4f7156e4a2d263d8ac12f85bee4deaad",
     "tests/test_m02_aauth_fcf656d_exchange.py": "89dcede33566a1531d9c5630d9598da940ffd7ac99dfb4610a875e3559aad916",
-    "tests/test_m02_aauth_fcf656d_localhost.py": "b61bd0359c0d43eb23b51b537b96dd951bd05558ae4530e117cd28f6b537d2cc",
+    "tests/test_m02_aauth_fcf656d_localhost.py": "d591d91085107f76e4a9afa46b003197bda0a722460741600594a043d96306bb",
 }
 EXPECTED_DISTRIBUTIONS = {
     "cryptography": "50.0.1", "cffi": "2.0.0",
