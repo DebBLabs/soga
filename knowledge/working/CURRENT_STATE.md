@@ -886,6 +886,14 @@ This establishes only the bounded localhost gateway—not complete AAuth
 conformance, parent authorization, wallet/WAS, QR, presentation integration,
 Misty, G28 or G29. No additional execution is authorized.
 
+D-129 accepts the other-party approval demo proposal at SHA-256
+`a7fec93694f1e281d36a66df25df4a340953222c81de1897862e0e037087c413`.
+Create-only implementation is authorized for exactly three additive files: the
+other-party approval module, its twelve-test module and the bounded 65-test
+runner. Every accepted D-128 source remains frozen. No import, compilation,
+lint, test, listener or execution is authorized; all complete files require
+blind dual static review before commit or execution.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

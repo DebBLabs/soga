@@ -2642,3 +2642,30 @@ This establishes only the bounded localhost gateway. It does not establish
 complete AAuth conformance, parent authorization, wallet/WAS, QR, presentation
 integration, Misty, G28 or G29. No additional execution is authorized. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-129 — Accept other-party approval demo proposal and authorize create-only implementation
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind focused recheck request-014.
+
+Accept
+`knowledge/proposals/M02_AAUTH_OTHER_PARTY_APPROVAL_DEMO_PROPOSAL_2026-10-03.md`
+at SHA-256
+`a7fec93694f1e281d36a66df25df4a340953222c81de1897862e0e037087c413`.
+The accepted design is strictly additive: all D-128 sources remain frozen; the
+resource enforces a separate, explicitly unverified other-party policy at the
+point of action; SOGA remains necessary but not sufficient; and this stage
+does not emit AAuth `requirement=approval` without its required pending/polling
+protocol.
+
+Authorize commit and push of the exact proposal and create-only implementation
+of exactly three additive files:
+
+- `m02_aauth_fcf656d/other_party_approval.py`;
+- `tests/test_m02_aauth_other_party_approval.py`; and
+- `tools/m02_aauth_fcf656d/run_other_party_approval_tests.py`.
+
+Do not import, compile, lint, test, bind a listener or execute any created
+file. Require blind dual static review of all three complete files before
+commit or execution. All proposal exclusions remain in force. The unrelated
+PI routine-tool proposal remains excluded and untouched.
