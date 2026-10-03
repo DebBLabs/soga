@@ -2694,3 +2694,24 @@ synchronized canonical state. Do not execute the package. A separately
 reviewed execution authorization is required before any test or listener runs.
 All D-129 exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-131 — Accept other-party approval execution proposal and authorize one run
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 returned PASS
+on blind diff-only request-018.
+
+Accept
+`knowledge/proposals/M02_AAUTH_OTHER_PARTY_APPROVAL_EXECUTION_PROPOSAL_2026-10-03.md`
+at SHA-256
+`ecde84d8f546b6bba7fe6028d893d2ebc1197f9f81bee97936091aa6f90ab7e9`.
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state, followed by exactly one bounded execution of the
+D-130-accepted runner under the proposal's controls.
+
+Immediately before execution, require and record an empty
+`git status --porcelain -- engines input_adapters verify advisory`, the complete
+permitted diff from source basis
+`1a45a431ecc184508e107f4c79ff50e740cd11f0`, and the `HEAD` tree IDs for those
+four directories. No automatic retry. Resulting evidence requires blind dual
+review and PI acceptance before further use. All proposal exclusions remain in
+force. The unrelated PI routine-tool proposal remains excluded and untouched.

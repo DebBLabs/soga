@@ -905,6 +905,15 @@ for the bounded 65-test runner. Commit and push are authorized. Execution is
 not authorized; a separately reviewed execution authorization is required
 before any test or listener runs. All D-129 exclusions remain in force.
 
+D-131 accepts the other-party approval execution proposal at SHA-256
+`ecde84d8f546b6bba7fe6028d893d2ebc1197f9f81bee97936091aa6f90ab7e9`
+and authorizes exactly one bounded run of the D-130-accepted controller after
+the proposal, decision and canonical state are committed. Pre-execution must
+record the permitted diff from source basis `1a45a431`, empty working-tree
+status for `engines`, `input_adapters`, `verify` and `advisory`, and those four
+HEAD tree IDs. No retry is authorized. Resulting evidence requires blind dual
+review and PI acceptance; all proposal exclusions remain in force.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
