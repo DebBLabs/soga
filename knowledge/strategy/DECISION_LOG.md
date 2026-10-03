@@ -2715,3 +2715,31 @@ permitted diff from source basis
 four directories. No automatic retry. Resulting evidence requires blind dual
 review and PI acceptance before further use. All proposal exclusions remain in
 force. The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-132 — Accept other-party approval positive execution evidence
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind post-execution request-019.
+
+Accept the single D-131 execution as a gated positive result. Accept
+`knowledge/research/M02_AAUTH_OTHER_PARTY_APPROVAL_EXECUTION_EVIDENCE_2026-10-03.md`
+at SHA-256
+`d061ffe56280533dc751ebcacd0cf44f6f83b4d5ea2fc05fae98323b30bd63b7`,
+the durable evidence payload at SHA-256
+`47fc2c8fa7c063ae3bb03e42c6acc93e20d67345b96e1318437f635d2de2741d`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`da09d7cee3f28fe99727edffe499f5fbc7ae5b3dabd0ea2e6d618470d67a12b5`.
+
+Record that all 65 tests passed with no failures, errors or skips, preserving
+the accepted 53-test AAuth/SOGA localhost-gateway baseline and passing all
+twelve bounded other-party approval cases. The D-131 attempt is consumed.
+Authorize commit and push of the exact reviewed report, this decision and
+synchronized canonical state.
+
+The receipt remains explicitly `unverified-demo-input`. This result establishes
+no identity, parental or legal authority, consent, complete AAuth conformance,
+QR, wallet/WAS, presentation or Misty integration. No additional execution is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.

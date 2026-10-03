@@ -914,6 +914,19 @@ status for `engines`, `input_adapters`, `verify` and `advisory`, and those four
 HEAD tree IDs. No retry is authorized. Resulting evidence requires blind dual
 review and PI acceptance; all proposal exclusions remain in force.
 
+D-132 accepts the single D-131 execution as a gated positive result after both
+blind request-019 evidence reviewers returned PASS. All 65 tests passed with no
+failures, errors or skips, preserving the accepted 53-test AAuth/SOGA gateway
+baseline and passing the twelve bounded other-party approval cases. The
+accepted report is
+`knowledge/research/M02_AAUTH_OTHER_PARTY_APPROVAL_EXECUTION_EVIDENCE_2026-10-03.md`
+at SHA-256
+`d061ffe56280533dc751ebcacd0cf44f6f83b4d5ea2fc05fae98323b30bd63b7`.
+The receipt remains explicitly unverified demo input. This does not establish
+identity, parental or legal authority, consent, complete AAuth conformance, QR,
+wallet/WAS, presentation or Misty integration. The attempt is consumed and no
+additional execution is authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
