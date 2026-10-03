@@ -2520,3 +2520,26 @@ The recovered runtime may be used only by a separately authorized bounded
 localhost gateway execution. No additional recovery, Mockin execution,
 wallet/WAS work, QR flow, Misty access, G28 or G29 is authorized. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-124 — Authorize one bounded localhost AAuth gateway execution
+
+Recorded on 2026-10-02 at PI instruction after D-123 accepted the durable
+runtime and a read-only preflight confirmed the exact controller, accepted
+manifest and absent execution-evidence target.
+
+Authorize exactly one bounded execution after this prospective decision is
+committed, using the package from source basis
+`a6a0ebe3087ee974dcc4a60cd4c7f5738d7c8b74`, controller
+`tools/m02_aauth_fcf656d/run_localhost_gateway_tests.py` at SHA-256
+`e3005703baa5ea0e917f8eee48549003b91a74de4e4c041482ff9b8d7c70285e`,
+and accepted durable runtime manifest SHA-256
+`7d409a9990c2c57623b395d6a74643263f5c4c4e89b750b4a87e38bd680b4c8e`.
+
+Permit exactly the committed 53-test suite, literal `127.0.0.1` ephemeral
+listeners, the reviewed 90-second and output limits, and durable evidence
+creation. No automatic retry. The resulting evidence requires blind dual
+review before acceptance.
+
+No Mockin execution, external service, wallet/WAS work, QR flow, Misty access,
+G28 or G29 is authorized. The unrelated PI routine-tool proposal remains
+excluded and untouched.

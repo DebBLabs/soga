@@ -847,6 +847,14 @@ code zero, empty stderr, no installed symlinks and empty scratch. The recovered
 runtime is eligible only for a separately authorized bounded localhost gateway
 execution. The D-122 attempt is consumed; no additional recovery is authorized.
 
+D-124 authorizes exactly one execution of the accepted localhost AAuth gateway
+controller at SHA-256
+`e3005703baa5ea0e917f8eee48549003b91a74de4e4c041482ff9b8d7c70285e`
+using the accepted durable runtime manifest. The run is limited to the exact
+53-test suite, literal `127.0.0.1` ephemeral listeners, 90 seconds and bounded
+output. No retry is authorized. Resulting evidence requires blind dual review
+and PI acceptance before any broader claim or next integration step.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
