@@ -2669,3 +2669,28 @@ Do not import, compile, lint, test, bind a listener or execute any created
 file. Require blind dual static review of all three complete files before
 commit or execution. All proposal exclusions remain in force. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-130 — Accept other-party approval static package
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-016 with no blocking findings.
+
+Accept the three-file static package at these exact SHA-256 values:
+
+- `m02_aauth_fcf656d/other_party_approval.py`:
+  `c5a244da3ef5e6694df663af2ff0fb5cd83cdf928fa49c1ab708b197c35d78b0`;
+- `tests/test_m02_aauth_other_party_approval.py`:
+  `a24e5f76832a5b8df7e9ed67409c18b03ce4a2b773103d813285048019e30a66`;
+- `tools/m02_aauth_fcf656d/run_other_party_approval_tests.py`:
+  `b0fa483f3ab0ea343de847b8b4acb78096afc81bd81d3f69b0206ef579a3bdc1`.
+
+The package remains strictly additive and preserves all accepted D-128 source.
+The runner verifies the accepted base controller's regular-file status, exact
+hash and committed bytes before executing those already-verified bytes. It
+retains the base controller in its protected hash set.
+
+Authorize commit and push of the exact reviewed files, this decision and
+synchronized canonical state. Do not execute the package. A separately
+reviewed execution authorization is required before any test or listener runs.
+All D-129 exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.

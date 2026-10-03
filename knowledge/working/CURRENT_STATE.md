@@ -894,6 +894,17 @@ runner. Every accepted D-128 source remains frozen. No import, compilation,
 lint, test, listener or execution is authorized; all complete files require
 blind dual static review before commit or execution.
 
+D-130 accepts the three-file other-party approval static package after both
+blind request-016 reviewers returned PASS. The accepted hashes are
+`c5a244da3ef5e6694df663af2ff0fb5cd83cdf928fa49c1ab708b197c35d78b0`
+for the additive module,
+`a24e5f76832a5b8df7e9ed67409c18b03ce4a2b773103d813285048019e30a66`
+for its twelve-test module and
+`b0fa483f3ab0ea343de847b8b4acb78096afc81bd81d3f69b0206ef579a3bdc1`
+for the bounded 65-test runner. Commit and push are authorized. Execution is
+not authorized; a separately reviewed execution authorization is required
+before any test or listener runs. All D-129 exclusions remain in force.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
