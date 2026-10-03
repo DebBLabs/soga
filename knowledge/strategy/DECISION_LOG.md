@@ -2770,3 +2770,31 @@ do not import, compile, lint, test, bind a listener or execute the created
 package. Require blind dual static review of all three complete files before
 commit or execution. All proposal exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-134 — Accept approval-pending lifecycle static package
+
+Recorded on 2026-10-03 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind corrected-package request-023. Gate 1's five blocking
+request-022 findings were corrected before the successful review.
+
+Accept the three-file static package at these exact SHA-256 values:
+
+- `m02_aauth_fcf656d/approval_pending.py`:
+  `18717f7b64007c92f6fb893498f1329b8ed049bb6636eb586a44267588bea47b`;
+- `tests/test_m02_aauth_approval_pending.py`:
+  `314f567a39ac4388a8a49f39f0ba965200aa72c9aabb630bc3fecfda8bf6fdf8`;
+- `tools/m02_aauth_fcf656d/run_approval_pending_tests.py`:
+  `2d639991ef4c5aa918e9ee6328056450f56dcbfd6fdf9db2aaff63641b9cd4bc`.
+
+The accepted package uses one injected clock for authorization, initial
+invocation, pending state, polling and token time; preserves the accepted
+auth-token challenge; completes immediately for an already-active exact
+approval; closes rejected GET connections without draining; and retains the
+bounded 81-test runner and durable evidence target. Every D-132 source remains
+unchanged.
+
+Authorize commit and push of the exact reviewed files, this decision and
+synchronized canonical state. Do not execute the package. A separately
+reviewed execution authorization is required before any test or listener runs.
+All D-133 exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.
