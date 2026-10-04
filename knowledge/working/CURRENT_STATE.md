@@ -967,6 +967,15 @@ at SHA-256
 The attempt is consumed. Source-only diagnosis of that one failure is
 authorized; no modification, import, test, listener or retry is authorized.
 
+D-137 accepts the source diagnosis at SHA-256
+`9a2b676bf2601ec0ed23fe53da5d76b38c74a4b03ffdd029ba0605fd468827ed`
+and correction proposal at SHA-256
+`49cb1c3b3a39a88a1d5f9a070656b9285323ad71dd6a7c70088dce27f84bdc22`.
+The production `404` is the accepted privacy behavior; the test expectation is
+wrong. Create-only correction is authorized for exactly the approval-pending
+test and runner. Production code must remain byte-identical. No import, test,
+listener or execution is authorized pending blind dual static review.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

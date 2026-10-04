@@ -2847,3 +2847,36 @@ and synchronized canonical state. Authorize bounded source-only diagnosis of
 the sole failure. Do not modify source or tests, import, compile, lint, execute,
 open a listener or retry. All prior exclusions remain in force. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-137 — Accept approval-pending `404` diagnosis and authorize create-only correction
+
+Recorded on 2026-10-04 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-026 with no blockers.
+
+Accept
+`knowledge/research/M02_AAUTH_APPROVAL_PENDING_404_DIAGNOSIS_2026-10-04.md`
+at SHA-256
+`9a2b676bf2601ec0ed23fe53da5d76b38c74a4b03ffdd029ba0605fd468827ed`
+and
+`knowledge/proposals/M02_AAUTH_APPROVAL_PENDING_404_CORRECTION_PROPOSAL_2026-10-04.md`
+at SHA-256
+`49cb1c3b3a39a88a1d5f9a070656b9285323ad71dd6a7c70088dce27f84bdc22`.
+
+The accepted diagnosis establishes that HTTP `404` is the intended
+privacy-preserving response when a syntactically complete poll reaches a real
+pending location but signature verification fails. The D-136 failure is an
+overbroad test expectation, not a production lifecycle defect.
+
+Authorize commit and push of the exact reviewed artifacts, this prospective
+decision and synchronized canonical state. Authorize create-only modification
+of exactly two files: correct the response-status expectations in
+`tests/test_m02_aauth_approval_pending.py`; update only that test's protected
+hash and select the absent `approval-pending-v2` evidence directory in
+`tools/m02_aauth_fcf656d/run_approval_pending_tests.py`.
+
+Preserve `m02_aauth_fcf656d/approval_pending.py` byte-identical at SHA-256
+`18717f7b64007c92f6fb893498f1329b8ed049bb6636eb586a44267588bea47b`.
+Do not import, compile, lint, test, execute or open a listener. Require blind
+dual static review of both corrected files before commit or execution. All
+proposal exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.
