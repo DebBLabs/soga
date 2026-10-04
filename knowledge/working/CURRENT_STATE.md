@@ -957,6 +957,16 @@ the four protected SOGA directories and their `HEAD` tree IDs. No retry is
 authorized. Resulting evidence requires blind dual review and PI acceptance;
 all proposal exclusions remain in force.
 
+D-136 accepts the D-135 execution as a consumed gated negative after both
+blind request-025 reviewers returned PASS. All 81 tests ran: 80 passed and the
+sole malformed-signature subcase returned `404` where the test allowed only
+`400` or `401`. The accepted evidence report is
+`knowledge/research/M02_AAUTH_APPROVAL_PENDING_EXECUTION_EVIDENCE_2026-10-03.md`
+at SHA-256
+`fed0d30cd91838061de01e7c5439dcf326aa5537344f9a284462e1a4a4e27955`.
+The attempt is consumed. Source-only diagnosis of that one failure is
+authorized; no modification, import, test, listener or retry is authorized.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

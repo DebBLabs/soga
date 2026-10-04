@@ -2819,3 +2819,31 @@ IDs to be recorded. No automatic retry. Resulting durable evidence requires
 blind dual review and PI acceptance before further use. All proposal exclusions
 remain in force. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-136 — Accept approval-pending execution as a gated negative
+
+Recorded on 2026-10-04 at PI direction after Gate 1 and Gate 2 independently
+returned PASS on blind evidence-review request-025 with no blockers.
+
+Accept the single D-135 execution as a consumed gated negative. Accept
+`knowledge/research/M02_AAUTH_APPROVAL_PENDING_EXECUTION_EVIDENCE_2026-10-03.md`
+at SHA-256
+`fed0d30cd91838061de01e7c5439dcf326aa5537344f9a284462e1a4a4e27955`,
+the durable evidence payload at SHA-256
+`a84a6aecbde89c982e60962e2e306be0f7be9872a6e49ecd08cb96ed6f49314f`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`3f83b7c54a3ac00b072bfe9e8ad23ee73a59b0ee2516cc6588d0e1230a84d35e`.
+
+Record that all 81 expected tests ran: 80 passed and one failed. The sole
+failure was the malformed-signature subcase returning HTTP `404` where the
+test allowed only `400` or `401`. There were no errors, skips, timeout,
+overflow, protected-state mutation, confinement escape or stderr bytes. The
+D-135 attempt is consumed.
+
+Authorize commit and push of the exact reviewed evidence report, this decision
+and synchronized canonical state. Authorize bounded source-only diagnosis of
+the sole failure. Do not modify source or tests, import, compile, lint, execute,
+open a listener or retry. All prior exclusions remain in force. The unrelated
+PI routine-tool proposal remains excluded and untouched.
