@@ -2903,3 +2903,25 @@ synchronized canonical state. Do not execute the package. A separately
 reviewed prospective execution authorization is required before any test or
 listener runs. All D-137 exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-139 — Accept approval-pending R2 execution proposal and authorize one run
+
+Recorded on 2026-10-05 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind request-028 with no blockers.
+
+Accept
+`knowledge/proposals/M02_AAUTH_APPROVAL_PENDING_R2_EXECUTION_PROPOSAL_2026-10-05.md`
+at SHA-256
+`8b42353aba1a374f7328de4e28df917d9a21a5b932ca292961d25d1ac6cf7233`.
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state, followed by exactly one bounded execution of the
+D-138-accepted runner.
+
+Use full source basis `ad743c73c93425cf84d7b0ad9a4fd09325e79578`.
+Immediately before execution, record the complete permitted diff, empty
+working-tree status for `engines`, `input_adapters`, `verify` and `advisory`,
+and those four `HEAD` tree IDs. Write only to the initially absent durable
+`approval-pending-v2` evidence directory. No automatic retry. Resulting
+evidence requires blind dual review and PI acceptance before further use. All
+proposal exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.

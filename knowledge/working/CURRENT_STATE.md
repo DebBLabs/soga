@@ -984,6 +984,15 @@ after both blind request-027 reviewers returned PASS. Production code remains
 byte-identical. Commit and push are authorized. Execution is not authorized;
 a separately reviewed prospective execution decision is required.
 
+D-139 accepts the R2 execution proposal at SHA-256
+`8b42353aba1a374f7328de4e28df917d9a21a5b932ca292961d25d1ac6cf7233`
+and authorizes exactly one bounded run of the D-138-accepted runner after the
+proposal, decision and canonical state are committed. The full source basis is
+`ad743c73c93425cf84d7b0ad9a4fd09325e79578`; pre-execution must record the
+permitted diff, empty protected-directory status and four SOGA tree IDs.
+Evidence must be written only to the absent `approval-pending-v2` directory.
+No retry is authorized; evidence requires blind dual review and PI acceptance.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
