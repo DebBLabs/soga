@@ -1025,6 +1025,15 @@ for the bounded 93-test runner. Commit and push are authorized. Execution is
 not authorized; a separately reviewed prospective execution decision is
 required.
 
+D-143 accepts the demo operator execution proposal at SHA-256
+`9ec4382604cb42a74e935ce72e98fce0e645a1660f23e581dcd1d00799be77a4`
+after both blind request-034 reviewers returned PASS. It authorizes exactly one
+bounded execution of the committed 93-test runner after the proposal, decision
+and canonical state are committed. Pre-execution must record the permitted
+diff from `19294b449471ff898c4e88a1f9b68c2266ae518c`, empty protected-directory
+status and four SOGA tree IDs. No retry is authorized; evidence requires blind
+dual review and PI acceptance.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

@@ -3010,3 +3010,24 @@ proposal. Do not execute the package or open a listener. A prospective PI
 authorization after blind dual review of the execution proposal is required
 before any run. All D-141 exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-143 — Accept demo operator execution proposal and authorize one run
+
+Recorded on 2026-10-05 at PI direction to continue automatically after both
+blind request-034 reviewers returned PASS with no blockers.
+
+Accept
+`knowledge/proposals/M02_AAUTH_DEMO_OPERATOR_EXECUTION_PROPOSAL_2026-10-05.md`
+at SHA-256
+`9ec4382604cb42a74e935ce72e98fce0e645a1660f23e581dcd1d00799be77a4`.
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state, followed by exactly one bounded execution of the
+D-142-accepted runner under the proposal's controls.
+
+Use full source basis `19294b449471ff898c4e88a1f9b68c2266ae518c`.
+Immediately before execution, record the complete permitted diff, empty
+protected-directory status and four required `HEAD` tree IDs. Write only to
+the initially absent durable `demo-operator-v1` evidence directory. No
+automatic retry. Resulting evidence requires blind dual review and PI
+acceptance before further use. All proposal exclusions remain in force. The
+unrelated PI routine-tool proposal remains excluded and untouched.
