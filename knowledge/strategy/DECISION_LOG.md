@@ -3031,3 +3031,34 @@ the initially absent durable `demo-operator-v1` evidence directory. No
 automatic retry. Resulting evidence requires blind dual review and PI
 acceptance before further use. All proposal exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-144 — Accept demo operator adapter positive execution evidence
+
+Recorded on 2026-10-05 at PI direction after Gate 1 and Gate 2 independently
+returned PASS on blind evidence-review request-035 with no blockers.
+
+Accept the single D-143 execution as a gated positive result. Accept
+`knowledge/research/M02_AAUTH_DEMO_OPERATOR_EXECUTION_EVIDENCE_2026-10-05.md`
+at SHA-256
+`fd022d7b47e036cec0afaed698d017afa9e381f934ca0a7ff808469af697da72`,
+the durable evidence payload at SHA-256
+`36bf2a4f2f7b0e5abef76ceb14b3b793f79690b7a39ce1b74fffda4a0f7dc2ea`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`0e6298283bba4465aa00cbaa4778b1a25bd97cda7780365e5d8633e546380fea`.
+
+Record that all 93 tests passed with zero failures, errors, skips, expected
+failures, unexpected successes, timeout, overflow, protected-state mutation,
+confinement escape or retry. The D-143 attempt is consumed. Authorize commit
+and push of the exact reviewed evidence report, this decision and synchronized
+canonical state.
+
+This establishes only the bounded local demo-operator adapter feeding
+synthetic, explicitly unverified other-party state through the accepted
+standing-policy and held-request seams. It does not establish verified
+identity, parental or legal authority, consent or assent, presentation
+correctness, complete AAuth conformance, external services, wallet/WAS, QR,
+phone, Misty or physical-resource integration. No additional execution is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.

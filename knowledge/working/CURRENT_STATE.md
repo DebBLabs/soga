@@ -1034,6 +1034,18 @@ diff from `19294b449471ff898c4e88a1f9b68c2266ae518c`, empty protected-directory
 status and four SOGA tree IDs. No retry is authorized; evidence requires blind
 dual review and PI acceptance.
 
+D-144 accepts the D-143 execution as a gated positive result after both blind
+request-035 evidence reviewers returned PASS. All 93 tests passed with zero
+failures, errors, skips, timeout, overflow, mutation, confinement escape or
+retry. The accepted evidence report is
+`knowledge/research/M02_AAUTH_DEMO_OPERATOR_EXECUTION_EVIDENCE_2026-10-05.md`
+at SHA-256
+`fd022d7b47e036cec0afaed698d017afa9e381f934ca0a7ff808469af697da72`.
+This establishes only the bounded local operator adapter over the accepted
+standing-policy and held-request seams. No additional execution is authorized;
+verified authority, presentation correctness, wallet/WAS, QR and Misty remain
+outside the accepted claim.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
