@@ -39,7 +39,7 @@ exec(compile(BASE_BYTES, str(BASE_PATH), "exec"), base.__dict__)
 core = base.base
 
 DURABLE_ROOT = REPO.parent / "research-evidence/soga"
-EVIDENCE_DIR = DURABLE_ROOT / "executions/approval-pending-v1"
+EVIDENCE_DIR = DURABLE_ROOT / "executions/approval-pending-v2"
 STDOUT_PATH = EVIDENCE_DIR / "approval-pending-evidence.json"
 STDERR_PATH = EVIDENCE_DIR / "approval-pending-stderr.bin"
 RUN_RECORD_PATH = EVIDENCE_DIR / "run-record.json"
@@ -58,7 +58,7 @@ HASHES.update({
     "m02_aauth_fcf656d/approval_pending.py":
         "18717f7b64007c92f6fb893498f1329b8ed049bb6636eb586a44267588bea47b",
     "tests/test_m02_aauth_approval_pending.py":
-        "314f567a39ac4388a8a49f39f0ba965200aa72c9aabb630bc3fecfda8bf6fdf8",
+        "b0936449de6a143102ac012f7783ef138a5fe743a56fae41093b53d2eda37c69",
 })
 TEST_MODULES = base.TEST_MODULES + (
     ("m02_approval_pending_tests", "tests/test_m02_aauth_approval_pending.py"),

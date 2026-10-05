@@ -309,18 +309,18 @@ class ApprovalPendingTests(unittest.TestCase):
 
         host, port = self.mapping.destination(RESOURCE)
         cases = (
-            {},
-            {"Signature-Key": "malformed", "Signature-Input": "malformed",
-             "Signature": "malformed"},
-            {"Signature-Key": "x" * 16385, "Signature-Input": "x",
-             "Signature": "x"},
+            ({}, 401),
+            ({"Signature-Key": "malformed", "Signature-Input": "malformed",
+              "Signature": "malformed"}, 404),
+            ({"Signature-Key": "x" * 16385, "Signature-Input": "x",
+              "Signature": "x"}, 401),
         )
-        for headers_to_send in cases:
-            with self.subTest(headers=headers_to_send):
+        for headers_to_send, expected_status in cases:
+            with self.subTest(headers=headers_to_send, expected=expected_status):
                 connection = http.client.HTTPConnection(host, port, timeout=2)
                 connection.request("GET", path, headers=headers_to_send)
                 response = connection.getresponse()
-                self.assertIn(response.status, {400, 401})
+                self.assertEqual(response.status, expected_status)
                 self.assertEqual(response.getheader("Connection"), "close")
                 response.read()
                 connection.close()

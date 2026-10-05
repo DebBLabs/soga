@@ -2880,3 +2880,26 @@ Do not import, compile, lint, test, execute or open a listener. Require blind
 dual static review of both corrected files before commit or execution. All
 proposal exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-138 — Accept corrected approval-pending test and runner
+
+Recorded on 2026-10-05 at PI direction after Gate 1 and Gate 2 independently
+returned PASS on blind request-027 with no blockers.
+
+Accept the corrected files at these exact SHA-256 values:
+
+- `tests/test_m02_aauth_approval_pending.py`:
+  `b0936449de6a143102ac012f7783ef138a5fe743a56fae41093b53d2eda37c69`;
+- `tools/m02_aauth_fcf656d/run_approval_pending_tests.py`:
+  `fb76b2135042178a6915ddca03f409e85981ddf40df49937839355540aab0ee7`.
+
+The test now asserts the exact accepted response taxonomy. The runner updates
+only the corrected test hash and selects the absent durable evidence directory
+`approval-pending-v2`. The production module remains byte-identical at SHA-256
+`18717f7b64007c92f6fb893498f1329b8ed049bb6636eb586a44267588bea47b`.
+
+Authorize commit and push of the exact reviewed files, this decision and
+synchronized canonical state. Do not execute the package. A separately
+reviewed prospective execution authorization is required before any test or
+listener runs. All D-137 exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.

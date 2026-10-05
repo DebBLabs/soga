@@ -976,6 +976,14 @@ wrong. Create-only correction is authorized for exactly the approval-pending
 test and runner. Production code must remain byte-identical. No import, test,
 listener or execution is authorized pending blind dual static review.
 
+D-138 accepts the corrected approval-pending test at SHA-256
+`b0936449de6a143102ac012f7783ef138a5fe743a56fae41093b53d2eda37c69`
+and bounded runner at SHA-256
+`fb76b2135042178a6915ddca03f409e85981ddf40df49937839355540aab0ee7`
+after both blind request-027 reviewers returned PASS. Production code remains
+byte-identical. Commit and push are authorized. Execution is not authorized;
+a separately reviewed prospective execution decision is required.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
