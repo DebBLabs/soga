@@ -1005,6 +1005,16 @@ preserved 65-test baseline. No additional execution is authorized; complete
 AAuth conformance, verified approver authority, QR, wallet/WAS, presentation
 and Misty integration remain outside the accepted claim.
 
+D-141 accepts the demo operator adapter proposal at SHA-256
+`baf9abd037ddd35414e8556026be33992ab1d04185e2fe87eec8e8fcc0916441`
+on the combined review basis of AGy Gate 2's blind request-030 PASS and Claude
+Gate 1's focused request-031 PASS. Create-only implementation is authorized for
+exactly the additive adapter, its twelve-test module and bounded 93-test runner.
+The adapter formalizes standing-policy replacement and held-request resolution;
+it must not use `last_decision` or private store internals. D-140 source remains
+frozen. No import, compilation, lint, test, listener or execution is authorized
+pending blind dual static review of all three complete files.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current

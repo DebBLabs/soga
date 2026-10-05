@@ -2954,3 +2954,36 @@ establish complete AAuth conformance, verified approver identity, parental or
 legal authority, consent, QR, wallet/WAS, presentation or Misty integration.
 No additional execution is authorized. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-141 — Accept demo operator adapter proposal and authorize create-only implementation
+
+Recorded on 2026-10-05 at PI direction after AGy Gate 2 returned PASS on blind
+request-030 and Claude Gate 1 returned PASS on focused request-031. Gate 1
+raised two blockers in request-030; the corrected proposal resolves both and
+incorporates all three optional hardening observations. Gate 1 disclosed that
+Claude authored the external presentation bridge; Codex and Gate 2 remain the
+bridge's final reviewers.
+
+Accept
+`knowledge/proposals/M02_AAUTH_DEMO_OPERATOR_ADAPTER_PROPOSAL_2026-10-05.md`
+at SHA-256
+`baf9abd037ddd35414e8556026be33992ab1d04185e2fe87eec8e8fcc0916441`.
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state, then create-only implementation of exactly:
+
+- `m02_aauth_fcf656d/demo_operator.py`;
+- `tests/test_m02_aauth_demo_operator.py`; and
+- `tools/m02_aauth_fcf656d/run_demo_operator_tests.py`.
+
+The adapter must formalize both accepted in-process seams:
+`OtherPartyApprovalPolicy.replace()` for standing policy and
+`ApprovalPendingStore.resolve()` for held requests. It must never use
+`last_decision` or private pending-store internals. Binding mismatches are
+verified through the accepted signed poll's terminal `403`. All D-140 source
+must remain byte-identical.
+
+Do not import, compile, lint, test, execute or open a listener. Both blind gates
+must review every complete created file before commit or execution. Standing
+approval expires after 120 seconds and therefore requires a fresh operator
+input after expiry. All proposal exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.
