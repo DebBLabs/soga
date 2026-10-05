@@ -2987,3 +2987,26 @@ must review every complete created file before commit or execution. Standing
 approval expires after 120 seconds and therefore requires a fresh operator
 input after expiry. All proposal exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-142 — Accept demo operator adapter static package
+
+Recorded on 2026-10-05 at PI direction after AGy Gate 2 returned PASS on blind
+request-032 and Claude Gate 1 returned PASS on focused request-033. Gate 1's
+request-032 test-coverage blocker was corrected mechanically within the
+existing test method; production source remained byte-identical.
+
+Accept the exact static package at these SHA-256 values:
+
+- `m02_aauth_fcf656d/demo_operator.py`:
+  `b65160deffccf80220a0f466384a98ad1c3d21101dc44a1ee3b5d8099bf238a3`;
+- `tests/test_m02_aauth_demo_operator.py`:
+  `25abd4b5af7f8eaeaf1585d641bb8e08d024b2cabd09c685c0a319cad5b50f67`;
+- `tools/m02_aauth_fcf656d/run_demo_operator_tests.py`:
+  `37bc90282e1cf99226c8ce8086b82644a5c429cb7048f6ff9048778bbd95e112`.
+
+Authorize commit and push of those exact files, this decision and synchronized
+canonical state. Authorize creation only of a separate bounded execution
+proposal. Do not execute the package or open a listener. A prospective PI
+authorization after blind dual review of the execution proposal is required
+before any run. All D-141 exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.

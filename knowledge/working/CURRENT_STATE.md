@@ -1015,6 +1015,16 @@ it must not use `last_decision` or private store internals. D-140 source remains
 frozen. No import, compilation, lint, test, listener or execution is authorized
 pending blind dual static review of all three complete files.
 
+D-142 accepts the demo operator adapter static package after AGy Gate 2's blind
+request-032 PASS and Claude Gate 1's focused request-033 PASS. Accepted hashes
+are `b65160deffccf80220a0f466384a98ad1c3d21101dc44a1ee3b5d8099bf238a3`
+for the adapter, `25abd4b5af7f8eaeaf1585d641bb8e08d024b2cabd09c685c0a319cad5b50f67`
+for its twelve-test module and
+`37bc90282e1cf99226c8ce8086b82644a5c429cb7048f6ff9048778bbd95e112`
+for the bounded 93-test runner. Commit and push are authorized. Execution is
+not authorized; a separately reviewed prospective execution decision is
+required.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
