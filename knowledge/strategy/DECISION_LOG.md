@@ -2925,3 +2925,32 @@ and those four `HEAD` tree IDs. Write only to the initially absent durable
 evidence requires blind dual review and PI acceptance before further use. All
 proposal exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-140 — Accept approval-pending R2 positive execution evidence
+
+Recorded on 2026-10-05 at PI instruction after Gate 1 and Gate 2 independently
+returned PASS on blind evidence-review request-029 with no blockers.
+
+Accept the single D-139 execution as a gated positive result. Accept
+`knowledge/research/M02_AAUTH_APPROVAL_PENDING_R2_EXECUTION_EVIDENCE_2026-10-05.md`
+at SHA-256
+`bdd0702cc292d43b4f3f21b18bb3ee7892101a1d2f96684b5311a77ac619d733`,
+the durable evidence payload at SHA-256
+`21046ece1e1ea96c23a8bcb0675522680f60525666e3ca43e9b57ae841391f46`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`55f07847bd139d50132d5906416006d2ce24d947413b41393ce07dbe49873af3`.
+
+Record that all 81 tests passed with zero failures, errors, skips, expected
+failures, unexpected successes, timeout, overflow, protected-state mutation,
+confinement escape or retry. The D-139 attempt is consumed. Authorize commit
+and push of the exact reviewed evidence report, this decision and synchronized
+canonical state.
+
+This establishes only the bounded localhost approval-pending lifecycle and the
+preserved 65-test AAuth/SOGA and other-party-approval baseline. It does not
+establish complete AAuth conformance, verified approver identity, parental or
+legal authority, consent, QR, wallet/WAS, presentation or Misty integration.
+No additional execution is authorized. The unrelated PI routine-tool proposal
+remains excluded and untouched.

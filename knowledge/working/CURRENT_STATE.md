@@ -993,6 +993,18 @@ permitted diff, empty protected-directory status and four SOGA tree IDs.
 Evidence must be written only to the absent `approval-pending-v2` directory.
 No retry is authorized; evidence requires blind dual review and PI acceptance.
 
+D-140 accepts the D-139 R2 execution as a gated positive result after both
+blind request-029 reviewers returned PASS. All 81 tests passed with zero
+failures, errors, skips, timeout, overflow, mutation, confinement escape or
+retry. The accepted evidence report is
+`knowledge/research/M02_AAUTH_APPROVAL_PENDING_R2_EXECUTION_EVIDENCE_2026-10-05.md`
+at SHA-256
+`bdd0702cc292d43b4f3f21b18bb3ee7892101a1d2f96684b5311a77ac619d733`.
+This establishes only the bounded localhost approval-pending lifecycle and
+preserved 65-test baseline. No additional execution is authorized; complete
+AAuth conformance, verified approver authority, QR, wallet/WAS, presentation
+and Misty integration remain outside the accepted claim.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
