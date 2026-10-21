@@ -3062,3 +3062,31 @@ correctness, complete AAuth conformance, external services, wallet/WAS, QR,
 phone, Misty or physical-resource integration. No additional execution is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-145 — Accept IIW QR boundary and participant-session proposal; authorize create-only implementation
+
+Recorded on 2026-10-21 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind request-002 with no blockers.
+
+Accept
+`knowledge/research/IIW_QR_AND_REPRESENTATIVE_AUTHORITY_BOUNDARY_2026-10-21.md`
+at SHA-256
+`2ec44f0f211f81cdab09d869cb3bb1e0cdc48bc6cdfe817232c9773bdc2e245f`
+and
+`knowledge/proposals/IIW_REAL_QR_PARTICIPANT_SESSION_PROPOSAL_2026-10-21.md`
+at SHA-256
+`99a8cb37994f7b3e98fd89cdb1353c423899aa235d92a9ef8e761286b5fbb522`.
+
+Authorize commit and push of those exact artifacts, this prospective decision
+and synchronized canonical state, followed by create-only implementation of
+the proposal's six specified files. The participant page must remove the
+capability fragment from the visible URL immediately. Every response must set
+`Cache-Control: no-store` and `Referrer-Policy: no-referrer`.
+
+The implementation must stop before every AAuth/SOGA production seam. It may
+record only the bounded adult-participant fixture choice through a synthetic
+callback and must not characterize the participant as a parent or local
+operator. Do not import, compile, lint, test, execute, generate a live QR, open
+a listener or contact a device. Both blind gates must review every complete
+created file before commit or execution. All proposal exclusions remain in
+force. The unrelated PI routine-tool proposal remains excluded and untouched.

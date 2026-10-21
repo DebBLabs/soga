@@ -1046,6 +1046,19 @@ standing-policy and held-request seams. No additional execution is authorized;
 verified authority, presentation correctness, wallet/WAS, QR and Misty remain
 outside the accepted claim.
 
+D-145 accepts the IIW QR and representative-authority boundary record at
+SHA-256 `2ec44f0f211f81cdab09d869cb3bb1e0cdc48bc6cdfe817232c9773bdc2e245f`
+and the real QR participant-session proposal at SHA-256
+`99a8cb37994f7b3e98fd89cdb1353c423899aa235d92a9ef8e761286b5fbb522`
+after both blind request-002 reviewers returned PASS with no blockers.
+Create-only implementation of the proposal's six files is authorized. This
+phase is a standalone adult-participant fixture transport with a synthetic
+callback. It must stop before every AAuth/SOGA production seam and must not
+mischaracterize the participant as a parent or local operator. No import,
+compilation, lint, test, execution, live QR, listener or device contact is
+authorized pending blind dual static review of every complete created file.
+Public-event use still requires a separate G29 and privacy disposition.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
