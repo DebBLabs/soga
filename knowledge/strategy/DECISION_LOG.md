@@ -3090,3 +3090,34 @@ operator. Do not import, compile, lint, test, execute, generate a live QR, open
 a listener or contact a device. Both blind gates must review every complete
 created file before commit or execution. All proposal exclusions remain in
 force. The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-146 — Accept IIW QR participant-session static package
+
+Recorded on 2026-10-23 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned source-grounded PASS on request-005 with no blockers.
+AGy's earlier request-004 PASS was not counted because its narrative did not
+match the hash-pinned source; request-005 required and supplied an exact-source
+inventory matching the package.
+
+Accept the exact static package at these SHA-256 values:
+
+- `iiw_qr_session/session.py`:
+  `2aeeb9bd0e355b2d19521665dbc94569058355e34b365d534282d78f423c7907`;
+- `iiw_qr_session/gateway.py`:
+  `9c5824df29ff0909d76e22c65af0ba277cda6d4c9370a720a2613d4256c6e3b8`;
+- `iiw_qr_session/package.py`:
+  `3f079c3bd7c834758a1062926f5083d556497ab8013a2426ea5bef95584495c9`;
+- `tests/test_iiw_qr_session.py`:
+  `e700137956d85183a474d08ac7d67a2da2d073471acc65616ef31c7d4a113df4`;
+- `tools/iiw_qr_session/run_static_and_loopback_tests.py`:
+  `606832278adaf69dac6ddc84e63a74eef96068046fa83540537232df785b6ba4`;
+- `iiw_qr_session/README.md`:
+  `7d73b5c5dd0490031027059f31ca6ec1e942a628e54141b03e7b69178340e8f8`.
+
+Authorize commit and push of those exact files, this acceptance decision and
+synchronized canonical state. Authorize creation only of the bounded synthetic
+loopback execution proposal and exact runtime manifest required by the accepted
+controller. Do not execute tests, generate a live QR, open a listener, contact
+a device or connect participant input to any AAuth/SOGA production seam. Both
+artifacts require blind dual review before any run. All D-145 exclusions remain
+in force. The unrelated PI routine-tool proposal remains excluded and untouched.

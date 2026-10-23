@@ -1059,6 +1059,15 @@ compilation, lint, test, execution, live QR, listener or device contact is
 authorized pending blind dual static review of every complete created file.
 Public-event use still requires a separate G29 and privacy disposition.
 
+D-146 accepts the six-file IIW QR participant-session static package after
+source-grounded blind PASS from both gates on request-005. The accepted package
+contains the atomic adult-participant session, bounded HTTP transport, package
+and bind validation, 17 focused test definitions, bounded loopback controller
+and operator README. Commit and push are authorized. Creation only of the
+synthetic-loopback execution proposal and exact runtime manifest is authorized;
+no test, QR, listener, device contact or AAuth/SOGA production connection is
+authorized pending blind dual review and prospective PI authorization.
+
 D-080 accepted synthetic socket-free evidence composition; D-082 accepted
 durable environment preservation; D-083 accepts the successful 2026-09-18
 restoration and the later degradation of its `/private/tmp` copy. The current
