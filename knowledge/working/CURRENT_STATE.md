@@ -1128,3 +1128,15 @@ Exactly one bounded execution of the committed controller is authorized with no
 automatic retry. The resulting durable evidence requires blind dual review
 before acceptance or use. The semantic stop before every AAuth/SOGA production
 seam and all D-146 exclusions remain in force.
+
+D-148 accepts the D-147 IIW QR synthetic-loopback execution as a gated positive
+result after blind PASS from both gates on request-009. The accepted report is
+`knowledge/research/IIW_QR_SYNTHETIC_LOOPBACK_EXECUTION_EVIDENCE_2026-10-23.md`
+at SHA-256
+`b9a4d3cfb5e5a8be52f218ff943c6d6a5551e59be9e2c2baac50cfea682f5842`.
+All 17 tests passed with literal-loopback activity and no failure, error, skip,
+timeout, overflow, mutation, cleanup variance or retry. The attempt is consumed
+and no additional execution is authorized. The result establishes only the
+bounded adult-participant QR fixture transport and synthetic callback; every
+live-device, representative-authority, AAuth/SOGA production, presentation,
+wallet/WAS, Misty, G28 and G29 boundary remains open.

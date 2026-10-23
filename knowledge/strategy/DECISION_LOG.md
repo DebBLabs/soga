@@ -3148,3 +3148,32 @@ exclusions remain in force. This does not authorize a live QR, device contact,
 LAN access, verified identity, parental or legal authority, consent, wallet/WAS,
 Misty, G28 or G29. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-148 — Accept IIW QR synthetic-loopback execution evidence
+
+Recorded on 2026-10-23 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind evidence-review request-009 with no
+blockers.
+
+Accept the D-147 execution as a gated positive result. Accept
+`knowledge/research/IIW_QR_SYNTHETIC_LOOPBACK_EXECUTION_EVIDENCE_2026-10-23.md`
+at SHA-256
+`b9a4d3cfb5e5a8be52f218ff943c6d6a5551e59be9e2c2baac50cfea682f5842`,
+the evidence payload at SHA-256
+`b1e45a18b27ca194f0fda4639109d50d1e03e64594b79b018c7413b737b2d136`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`7e0a0efede0f2a17f9ce94c779381bb9a403cdf1d6c973719b162e3774c153ce`.
+
+Record that all 17 tests passed with literal-loopback activity and no failure,
+error, skip, timeout, overflow, mutation, cleanup variance or retry. The D-147
+attempt is consumed. Authorize commit and push of the exact reviewed evidence
+report, this decision and synchronized canonical state.
+
+This establishes only the bounded adult-participant QR fixture transport and
+synthetic callback. It does not establish a live QR or device interaction,
+verified identity, parental or legal authority, consent, an AAuth/SOGA
+production connection, wallet/WAS, presentation integration, Misty, G28 or
+G29. No additional execution is authorized. The unrelated PI routine-tool
+proposal remains excluded and untouched.
