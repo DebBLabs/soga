@@ -3121,3 +3121,30 @@ controller. Do not execute tests, generate a live QR, open a listener, contact
 a device or connect participant input to any AAuth/SOGA production seam. Both
 artifacts require blind dual review before any run. All D-145 exclusions remain
 in force. The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-147 — Accept IIW QR synthetic-loopback execution proposal and authorize one run
+
+Recorded on 2026-10-23 at PI direction after AGy Gate 2 returned an independent
+PASS on request-006 and Claude Gate 1 returned PASS on focused recheck
+request-008. The focused corrections addressed Gate 1's holdpoint,
+attempt-consumption and `/private/tmp` cleanup findings without changing the
+runtime manifest or widening authority.
+
+Accept
+`knowledge/proposals/IIW_QR_SYNTHETIC_LOOPBACK_EXECUTION_PROPOSAL_2026-10-23.md`
+at SHA-256
+`80dc0345b03f267a1c8f9e225070e0333a46adcc32ee268f051c26f183beb658`
+and `tools/iiw_qr_session/runtime-manifest.json` at SHA-256
+`2c11ec1ea27d6e8c2de0752fce4523bb1ffff7b6196286e78fb805dde44112c1`.
+
+Authorize commit and push of those exact artifacts, this prospective decision
+and synchronized canonical state, followed by exactly one bounded execution of
+the committed controller under the reviewed controls. No automatic retry.
+Both blind gates must review the resulting durable evidence before acceptance
+or further use.
+
+The semantic stop before every AAuth/SOGA production seam and all D-146
+exclusions remain in force. This does not authorize a live QR, device contact,
+LAN access, verified identity, parental or legal authority, consent, wallet/WAS,
+Misty, G28 or G29. The unrelated PI routine-tool proposal remains excluded and
+untouched.

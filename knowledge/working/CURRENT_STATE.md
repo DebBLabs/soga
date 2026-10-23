@@ -1118,3 +1118,13 @@ No external service, listener, personal data, payment, Misty access, physical
 actuation, G28, or G29 is authorized. Beryl placement is mandatory before future
 Misty access. The unrelated PI routine-tool proposal remains unadopted, unread,
 and untouched. No review-routing change is made.
+
+D-147 accepts the independently reviewed IIW QR synthetic-loopback execution
+proposal at SHA-256
+`80dc0345b03f267a1c8f9e225070e0333a46adcc32ee268f051c26f183beb658`
+and runtime manifest at SHA-256
+`2c11ec1ea27d6e8c2de0752fce4523bb1ffff7b6196286e78fb805dde44112c1`.
+Exactly one bounded execution of the committed controller is authorized with no
+automatic retry. The resulting durable evidence requires blind dual review
+before acceptance or use. The semantic stop before every AAuth/SOGA production
+seam and all D-146 exclusions remain in force.
