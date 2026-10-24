@@ -1140,3 +1140,12 @@ and no additional execution is authorized. The result establishes only the
 bounded adult-participant QR fixture transport and synthetic callback; every
 live-device, representative-authority, AAuth/SOGA production, presentation,
 wallet/WAS, Misty, G28 and G29 boundary remains open.
+
+D-149 accepts the independently reviewed fictional-parent QR connection
+proposal at SHA-256
+`81109c84b28a9f5c90bc3fda27b31c2d406df0cd82f2b7efb7c9a5fcba896532`.
+Create-only implementation of its seven additive files is authorized. The
+accepted adult-participant QR package and D-140/D-144 sources remain frozen.
+No import, compilation, lint, test, execution, QR generation, listener, device,
+presentation modification, Beryl/LAN, Misty, G28 or G29 is authorized pending
+blind dual static review of every complete created file.

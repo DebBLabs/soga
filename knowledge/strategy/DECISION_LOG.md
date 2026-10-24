@@ -3177,3 +3177,25 @@ verified identity, parental or legal authority, consent, an AAuth/SOGA
 production connection, wallet/WAS, presentation integration, Misty, G28 or
 G29. No additional execution is authorized. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-149 — Accept fictional-parent QR connection proposal and authorize create-only implementation
+
+Recorded on 2026-10-23 at PI direction after AGy Gate 2 returned independent
+PASS on blind request-010 and Claude Gate 1 returned PASS on focused recheck
+request-011. Gate 1's five source-grounded blockers were resolved without
+widening authority.
+
+Accept
+`knowledge/proposals/IIW_PERMISSION_TO_SPEAK_FICTIONAL_PARENT_CONNECTION_PROPOSAL_2026-10-23.md`
+at SHA-256
+`81109c84b28a9f5c90bc3fda27b31c2d406df0cd82f2b7efb7c9a5fcba896532`.
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state, followed by create-only implementation of its
+seven exact additive files.
+
+The D-148 adult-participant package and all D-140/D-144 accepted sources must
+remain byte-identical. Do not import, compile, lint, test, execute, generate a
+QR, open a listener, contact a device, modify the external presentation, or use
+Beryl/LAN. Both blind gates must review every complete created file before
+commit or execution. All proposal exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded, unread and untouched.
