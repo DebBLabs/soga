@@ -3199,3 +3199,36 @@ QR, open a listener, contact a device, modify the external presentation, or use
 Beryl/LAN. Both blind gates must review every complete created file before
 commit or execution. All proposal exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded, unread and untouched.
+
+## D-150 — Accept fictional-parent QR connection static package
+
+Recorded on 2026-10-26 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind focused static recheck request-014. The
+temporary queue was erased by reboot before acceptance; both completed review
+bodies were recovered from the durable Codex session transcript, and Codex
+recomputed all seven target hashes against the unchanged working tree.
+
+Accept the exact static package at these SHA-256 values:
+
+- `iiw_fictional_parent/session.py`:
+  `9e456f08bcc5351c9b47dd6e30809ae1cb16804505bbba77113fa65ec3c68972`;
+- `iiw_fictional_parent/gateway.py`:
+  `6bb1c45424adb71008600e0ebf6bd988efe325c5111d557bddf8fba70b1e30f0`;
+- `iiw_fictional_parent/connection.py`:
+  `d3cfec526e50d0443372d8b7ee66a269a8f61afdf36b86c33157b83c8a6cc24c`;
+- `iiw_fictional_parent/__init__.py`:
+  `98d94e37c9f0a72053e6f51835e464f4b4b8168d5cc69404098346a9aaca0ade`;
+- `tests/test_iiw_fictional_parent.py`:
+  `e7bfe9af2b333f591b7f47b203782b5848283479036a99bc684714c5429d826c`;
+- `tools/iiw_fictional_parent/run_static_and_loopback_tests.py`:
+  `ed0805e15e7765a3ee7619e711fd0d1d64a5eeadca40fc2a0542e1f3a33d185a`;
+- `iiw_fictional_parent/README.md`:
+  `ec58edd4fceafbecf51c7103f25591cb5f686c277a291ef2433b1e18ac3a3a92`.
+
+Authorize commit and push of those exact files, this acceptance decision and
+synchronized canonical state. Authorize creation only of the bounded synthetic
+loopback execution proposal and exact runtime manifest required by the accepted
+controller. Do not execute tests, generate a live QR, open a listener, contact
+a device, modify the presentation or connect to Misty. Both artifacts require
+blind dual review before any execution. All D-149 exclusions remain in force.
+The unrelated PI routine-tool proposal remains excluded and untouched.

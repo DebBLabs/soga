@@ -1149,3 +1149,13 @@ accepted adult-participant QR package and D-140/D-144 sources remain frozen.
 No import, compilation, lint, test, execution, QR generation, listener, device,
 presentation modification, Beryl/LAN, Misty, G28 or G29 is authorized pending
 blind dual static review of every complete created file.
+
+D-150 accepts the seven-file fictional-parent QR connection static package at
+the exact request-014 hashes after independent PASS from Claude Gate 1 and AGy
+Gate 2. Their temporary response files were erased by reboot; both review bodies
+were recovered from the durable Codex session transcript, and the seven source
+hashes were recomputed unchanged before acceptance. Commit and push the exact
+accepted package and canonical records. Creation only of its bounded synthetic
+loopback execution proposal and exact runtime manifest is authorized. No test,
+QR, listener, device, presentation modification, Beryl/LAN, Misty, G28 or G29
+is authorized pending blind dual review and prospective PI authorization.
