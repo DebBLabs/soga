@@ -3336,3 +3336,25 @@ review before any R2 execution.
 
 All prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-155 — Accept fictional-parent R2 execution artifacts and authorize one run
+
+Recorded on 2026-10-27 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind review request-024.
+
+Accept
+`knowledge/proposals/IIW_FICTIONAL_PARENT_SYNTHETIC_LOOPBACK_R2_EXECUTION_PROPOSAL_2026-10-27.md`
+at SHA-256
+`cbe7232c4a0df96b3838d74b5c9aa5f9d5b5a1e3db2028eb5852f92fcff89939`
+and revised `tools/iiw_fictional_parent/runtime-manifest.json` at SHA-256
+`df6d81d598edb89945bc9b70f03cafc984b87fa30245e840f5e15c6cc2f135c3`.
+
+Authorize commit and push of those exact artifacts, this prospective decision
+and synchronized canonical state, followed by exactly one bounded execution of
+the committed R2 controller under the reviewed controls. Preserve the accepted
+`iiw-fictional-parent-v1` evidence unchanged. No automatic retry. Both blind
+gates must review the resulting `iiw-fictional-parent-v2` durable evidence
+before acceptance or use.
+
+All prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.

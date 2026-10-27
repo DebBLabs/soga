@@ -1183,6 +1183,16 @@ import, compilation, test execution, listener or retry is authorized. All prior
 exclusions remain in force. The unrelated PI routine-tool proposal remains
 excluded and untouched.
 
+D-155 accepts the independently reviewed fictional-parent R2 execution proposal
+at SHA-256
+`cbe7232c4a0df96b3838d74b5c9aa5f9d5b5a1e3db2028eb5852f92fcff89939`
+and revised runtime manifest at SHA-256
+`df6d81d598edb89945bc9b70f03cafc984b87fa30245e840f5e15c6cc2f135c3`.
+Exactly one bounded R2 execution is authorized with no automatic retry. Preserve
+the accepted v1 evidence unchanged. Resulting v2 evidence requires blind dual
+review before acceptance or use. All prior exclusions remain in force. The
+unrelated PI routine-tool proposal remains excluded and untouched.
+
 D-154 accepts the corrected fictional-parent test at SHA-256
 `6cfbadf11a25a054e1c9d3a368eb9fac7d04c3eced48095ced99bdc38d23f114`
 and bounded controller at SHA-256
