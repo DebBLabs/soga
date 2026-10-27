@@ -3358,3 +3358,34 @@ before acceptance or use.
 
 All prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-156 — Accept fictional-parent synthetic-loopback R2 gated positive evidence
+
+Recorded on 2026-10-27 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind evidence review request-025.
+
+Accept the D-155 fictional-parent synthetic-loopback R2 execution as a gated
+positive result. Accept
+`knowledge/research/IIW_FICTIONAL_PARENT_SYNTHETIC_LOOPBACK_R2_EXECUTION_EVIDENCE_2026-10-27.md`
+at SHA-256
+`7279339b78d234ab722f459d17615dd92636532c746a5d88e609c0a85a873508`,
+the evidence payload at SHA-256
+`bdacc21dfdefa4f0eec774edc02718cd9b1f9198bb5f70428f2ac0649517a9b3`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`09df864813e9c72610ac1e4dcf597c4cfce15dc0cf674a0ddfa319e5023626fc`.
+
+Record that all 128 tests passed with zero failures, errors, skips, timeout,
+overflow, mutation, cleanup variance or retry, and that the accepted v1
+evidence remained byte-identical. The D-155 attempt is consumed. Authorize
+commit and push of the exact reviewed evidence report, this acceptance decision
+and synchronized canonical state.
+
+The claim is limited to the bounded localhost fictional-parent role-play with
+unverified fictional input and preserved AAuth/SOGA and QR baselines. It does
+not establish complete AAuth conformance, verified identity, real parental or
+legal authority, legal consent, live QR or phone interaction, presentation
+integration, wallet/WAS, Misty, G28 or G29. No additional execution is
+authorized. The unrelated PI routine-tool proposal remains excluded and
+untouched.

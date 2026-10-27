@@ -1212,3 +1212,19 @@ No test execution or listener is authorized; both complete corrected files
 require blind dual static review before commit or execution. All prior
 exclusions remain in force. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+D-156 accepts the D-155 fictional-parent synthetic-loopback R2 execution as a
+gated positive result after blind PASS from both gates on request-025. The
+accepted report is
+`knowledge/research/IIW_FICTIONAL_PARENT_SYNTHETIC_LOOPBACK_R2_EXECUTION_EVIDENCE_2026-10-27.md`
+at SHA-256
+`7279339b78d234ab722f459d17615dd92636532c746a5d88e609c0a85a873508`.
+All 128 tests passed with no failure, error, skip, timeout, overflow, mutation,
+cleanup variance or retry; the accepted v1 evidence remained byte-identical.
+The D-155 attempt is consumed and no additional execution is authorized. The
+result establishes only the bounded localhost fictional-parent role-play with
+unverified fictional input and preserved AAuth/SOGA and QR baselines. Complete
+AAuth conformance, verified identity, real parental or legal authority, legal
+consent, live QR or phone interaction, presentation integration, wallet/WAS,
+Misty, G28 and G29 remain unestablished and unauthorized. The unrelated PI
+routine-tool proposal remains excluded and untouched.
