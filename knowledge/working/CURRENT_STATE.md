@@ -1228,3 +1228,15 @@ AAuth conformance, verified identity, real parental or legal authority, legal
 consent, live QR or phone interaction, presentation integration, wallet/WAS,
 Misty, G28 and G29 remain unestablished and unauthorized. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+D-157 accepts the independently reviewed fictional-parent presentation
+connection proposal at SHA-256
+`6085ae81c254bcb20a055853f96c3aa6d1f6f6e3a4239e3a102288abbe2aff06`.
+Create-only implementation of its seven exact files is authorized in the
+separate presentation repository at basis commit
+`8aa6eec5d40eb671940b73238f8c08cc0c87be76`. No import, compilation, lint,
+test, execution, listener, live phone QR, device, Beryl/LAN, packaging, Misty,
+G28 or G29 activity is authorized. Every complete created or changed file
+requires blind dual static review before commit or execution. Accepted SOGA
+sources remain unchanged. The unrelated PI routine-tool proposal remains
+excluded and untouched.

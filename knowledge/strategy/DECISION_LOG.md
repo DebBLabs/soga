@@ -3389,3 +3389,32 @@ legal authority, legal consent, live QR or phone interaction, presentation
 integration, wallet/WAS, Misty, G28 or G29. No additional execution is
 authorized. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-157 — Accept fictional-parent presentation connection proposal
+
+Recorded on 2026-10-27 at PI direction after AGy Gate 2 returned independent
+PASS on focused recheck request-027 and Claude Gate 1 returned PASS on the
+mechanical clock-age recheck request-028. Claude's request-027 blocker required
+a fresh full composition immediately before every child approach; the final
+proposal incorporates that bound without widening authority.
+
+Accept
+`knowledge/proposals/IIW_FICTIONAL_PARENT_PRESENTATION_CONNECTION_PROPOSAL_2026-10-27.md`
+at SHA-256
+`6085ae81c254bcb20a055853f96c3aa6d1f6f6e3a4239e3a102288abbe2aff06`.
+Authorize commit and push of the exact proposal, this prospective decision and
+synchronized canonical state.
+
+Authorize create-only implementation of the seven specified files in the
+separate Permission to Speak presentation repository at basis commit
+`8aa6eec5d40eb671940b73238f8c08cc0c87be76`. Preserve every accepted SOGA
+source unchanged. Do not import, compile, lint, test, execute, open either
+localhost listener, generate a live phone QR, contact a device, use Beryl/LAN,
+package the presentation or connect to Misty. Both blind gates must review
+every complete changed or added file before commit or execution.
+
+The claim remains limited to a same-laptop fictional-parent role-play using
+unverified demo input. It does not establish verified identity, a real
+parent-child relationship, parental or legal authority, legal consent,
+complete AAuth conformance, live phone interaction, wallet/WAS, Misty, G28 or
+G29. The unrelated PI routine-tool proposal remains excluded and untouched.
