@@ -3287,3 +3287,32 @@ Authorize bounded source-only diagnosis of the sole failure. No source
 modification, import, compilation, test execution, listener or retry is
 authorized. All prior exclusions remain in force. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-153 — Accept standing-policy diagnosis and authorize create-only test correction
+
+Recorded on 2026-10-27 at PI direction after AGy Gate 2 returned independent
+PASS on blind request-021 and Claude Gate 1 returned PASS on focused text-only
+recheck request-022.
+
+Accept
+`knowledge/research/IIW_FICTIONAL_PARENT_STANDING_POLICY_CALL_DIAGNOSIS_2026-10-26.md`
+at SHA-256
+`dbc1208b5dceb1ce82bbf9ba9ac7bb96644fc695b785078d02bb53e55359ab5a`
+and
+`knowledge/proposals/IIW_FICTIONAL_PARENT_STANDING_POLICY_TEST_CORRECTION_PROPOSAL_2026-10-26.md`
+at SHA-256
+`2192f6fdc836a05cb1b9aab94243f32a9079e5c003aec1ee13268f5c1c72174d`.
+
+Authorize commit and push of those exact artifacts, this prospective decision
+and synchronized canonical state. Authorize create-only correction of
+`tests/test_iiw_fictional_parent.py` and
+`tools/iiw_fictional_parent/run_static_and_loopback_tests.py` exactly as
+specified: isolate held-input recording after the expected single standing-
+policy evaluation, preserve and compare the policy call count and receipt,
+update only the corrected test hash, and select the absent durable
+`iiw-fictional-parent-v2` evidence directory.
+
+Do not execute tests or open listeners. Both blind gates must review the two
+complete corrected files before commit or execution. All prior exclusions
+remain in force. The unrelated PI routine-tool proposal remains excluded and
+untouched.

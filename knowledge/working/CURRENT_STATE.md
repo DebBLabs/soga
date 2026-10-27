@@ -1182,3 +1182,13 @@ changed from `0` to `1`. Source-only diagnosis is authorized; no source change,
 import, compilation, test execution, listener or retry is authorized. All prior
 exclusions remain in force. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+D-153 accepts the independently reviewed standing-policy diagnosis and
+test-correction proposal. The D-152 failure is attributed to sampling the
+evaluation counter before the expected pending-path evaluation, not to a
+production standing-policy mutation. Create-only correction of
+`tests/test_iiw_fictional_parent.py` and its bounded controller is authorized.
+No test execution or listener is authorized; both complete corrected files
+require blind dual static review before commit or execution. All prior
+exclusions remain in force. The unrelated PI routine-tool proposal remains
+excluded and untouched.
