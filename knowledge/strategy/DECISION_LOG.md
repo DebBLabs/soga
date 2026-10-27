@@ -3258,3 +3258,32 @@ All proposal exclusions remain in force. This does not authorize a live QR,
 phone or device contact, Beryl/LAN access, presentation modification,
 wallet/WAS work, Misty access, physical action, G28 or G29. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-152 — Accept fictional-parent synthetic-loopback gated negative evidence
+
+Recorded on 2026-10-26 at PI direction after AGy Gate 2 returned PASS on blind
+full evidence recheck request-019 and Claude Gate 1 returned PASS on focused
+mechanical recheck request-020. Claude's sole request-019 blocker corrected the
+module-origin count split without changing the preserved execution evidence.
+
+Accept the D-151 execution as a gated negative result. Accept
+`knowledge/research/IIW_FICTIONAL_PARENT_SYNTHETIC_LOOPBACK_EXECUTION_EVIDENCE_2026-10-26.md`
+at SHA-256
+`097cd21fc02ab23665f65d31483ea9b232cdba92bfe3855ee4eea2831d6d9a1f`,
+the evidence payload at SHA-256
+`389882ae10f2df27d86e7600479b6390412c30b816ebf15308433c1e8c34aade`,
+empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`
+and the run record at SHA-256
+`9387a4ea73c70fa1caec0e1a92b10dd7ac27d630b267f5d826817a780289e623`.
+
+Record that 127 of 128 tests passed. The sole failure was
+`test_05_no_standing_policy_mutation`, where the standing-policy call count
+changed from `0` to `1`. The D-151 attempt is consumed. Authorize commit and
+push of the exact reviewed report, this acceptance decision and synchronized
+canonical state.
+
+Authorize bounded source-only diagnosis of the sole failure. No source
+modification, import, compilation, test execution, listener or retry is
+authorized. All prior exclusions remain in force. The unrelated PI routine-tool
+proposal remains excluded and untouched.

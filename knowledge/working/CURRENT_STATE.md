@@ -1170,3 +1170,15 @@ automatic retry. Durable evidence requires blind dual review before acceptance
 or use. No live QR, device, LAN, presentation modification, wallet/WAS, Misty,
 physical action, G28 or G29 is authorized. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+D-152 accepts the D-151 execution as a gated negative after blind evidence
+review. The reviewed report is
+`knowledge/research/IIW_FICTIONAL_PARENT_SYNTHETIC_LOOPBACK_EXECUTION_EVIDENCE_2026-10-26.md`
+at SHA-256
+`097cd21fc02ab23665f65d31483ea9b232cdba92bfe3855ee4eea2831d6d9a1f`.
+The attempt is consumed: 127 of 128 tests passed, with the sole failure in
+`test_05_no_standing_policy_mutation` after the standing-policy call count
+changed from `0` to `1`. Source-only diagnosis is authorized; no source change,
+import, compilation, test execution, listener or retry is authorized. All prior
+exclusions remain in force. The unrelated PI routine-tool proposal remains
+excluded and untouched.
