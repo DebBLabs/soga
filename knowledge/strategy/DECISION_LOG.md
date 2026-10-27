@@ -3232,3 +3232,29 @@ controller. Do not execute tests, generate a live QR, open a listener, contact
 a device, modify the presentation or connect to Misty. Both artifacts require
 blind dual review before any execution. All D-149 exclusions remain in force.
 The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-151 — Accept fictional-parent synthetic-loopback execution proposal and authorize one run
+
+Recorded on 2026-10-26 at PI direction after AGy Gate 2 returned independent
+PASS on blind full-artifact recheck request-016 and Claude Gate 1 returned PASS
+on focused mechanical recheck request-017. Claude's sole request-016 blocker
+corrected the literal `core.BASE_ENV` path without changing the runtime manifest
+or widening authority.
+
+Accept
+`knowledge/proposals/IIW_FICTIONAL_PARENT_SYNTHETIC_LOOPBACK_EXECUTION_PROPOSAL_2026-10-26.md`
+at SHA-256
+`487d67c3c7b826d29d1048dc88ddc057c2c9783a701bf1018fc4f90d82e93aef`
+and `tools/iiw_fictional_parent/runtime-manifest.json` at SHA-256
+`2e84c1e92d7e9e4571c4c16bb642da4b4773ce6e45451cae0a2a6caf63dbb205`.
+
+Authorize commit and push of those exact artifacts, this prospective decision
+and synchronized canonical state, followed by exactly one bounded execution of
+the committed controller under the reviewed controls. No automatic retry. Both
+blind gates must review the resulting durable evidence before acceptance or
+further use.
+
+All proposal exclusions remain in force. This does not authorize a live QR,
+phone or device contact, Beryl/LAN access, presentation modification,
+wallet/WAS work, Misty access, physical action, G28 or G29. The unrelated PI
+routine-tool proposal remains excluded and untouched.

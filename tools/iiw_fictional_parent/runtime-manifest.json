@@ -1,0 +1,58 @@
+{
+  "controller_chain": {
+    "tools/iiw_fictional_parent/run_static_and_loopback_tests.py": "ed0805e15e7765a3ee7619e711fd0d1d64a5eeadca40fc2a0542e1f3a33d185a",
+    "tools/m02_aauth_fcf656d/run_demo_operator_tests.py": "37bc90282e1cf99226c8ce8086b82644a5c429cb7048f6ff9048778bbd95e112",
+    "tools/m02_aauth_fcf656d/run_approval_pending_tests.py": "fb76b2135042178a6915ddca03f409e85981ddf40df49937839355540aab0ee7",
+    "tools/m02_aauth_fcf656d/run_other_party_approval_tests.py": "b0fa483f3ab0ea343de847b8b4acb78096afc81bd81d3f69b0206ef579a3bdc1",
+    "tools/m02_aauth_fcf656d/run_localhost_gateway_tests.py": "2a3c04506fdfa371f63680a874979421e3288ca07bb421e26e17c2af0c11b32a"
+  },
+  "files": {
+    "iiw_fictional_parent/README.md": "ec58edd4fceafbecf51c7103f25591cb5f686c277a291ef2433b1e18ac3a3a92",
+    "iiw_fictional_parent/__init__.py": "98d94e37c9f0a72053e6f51835e464f4b4b8168d5cc69404098346a9aaca0ade",
+    "iiw_fictional_parent/connection.py": "d3cfec526e50d0443372d8b7ee66a269a8f61afdf36b86c33157b83c8a6cc24c",
+    "iiw_fictional_parent/gateway.py": "6bb1c45424adb71008600e0ebf6bd988efe325c5111d557bddf8fba70b1e30f0",
+    "iiw_fictional_parent/session.py": "9e456f08bcc5351c9b47dd6e30809ae1cb16804505bbba77113fa65ec3c68972",
+    "iiw_qr_session/README.md": "7d73b5c5dd0490031027059f31ca6ec1e942a628e54141b03e7b69178340e8f8",
+    "iiw_qr_session/gateway.py": "9c5824df29ff0909d76e22c65af0ba277cda6d4c9370a720a2613d4256c6e3b8",
+    "iiw_qr_session/package.py": "3f079c3bd7c834758a1062926f5083d556497ab8013a2426ea5bef95584495c9",
+    "iiw_qr_session/session.py": "2aeeb9bd0e355b2d19521665dbc94569058355e34b365d534282d78f423c7907",
+    "m02_aauth_fcf656d/__init__.py": "c480bf75ecea51a368627cb00dabdd96ed9e48df784497ce9b7efee80f8f58e8",
+    "m02_aauth_fcf656d/approval_pending.py": "18717f7b64007c92f6fb893498f1329b8ed049bb6636eb586a44267588bea47b",
+    "m02_aauth_fcf656d/demo_operator.py": "b65160deffccf80220a0f466384a98ad1c3d21101dc44a1ee3b5d8099bf238a3",
+    "m02_aauth_fcf656d/exchange.py": "ed82a97873f7c535917dd0ecbecf81e31287015c3dfbc77396cb3dc8675fdf0f",
+    "m02_aauth_fcf656d/http_signatures.py": "f6ae4f4463852b310d09608d4a60084a566733e857098bcd42f2bc1a659cab65",
+    "m02_aauth_fcf656d/identifiers.py": "54c495785fc5fc26d24e3c406bb334d0022410faff37696d40220e1b83759579",
+    "m02_aauth_fcf656d/jose.py": "cda9b577746116e65c34977706593475a8637a3ec6823375dda7baffa961cdd4",
+    "m02_aauth_fcf656d/localhost.py": "513f5947582873e741c1e3fbd1a5876805121dd36726745b090b99cdd20d26d7",
+    "m02_aauth_fcf656d/metadata.py": "c1a473ee3f21ed4832668fadb87e9db72dbade4278f99aa35efff868db225a5a",
+    "m02_aauth_fcf656d/other_party_approval.py": "c5a244da3ef5e6694df663af2ff0fb5cd83cdf928fa49c1ab708b197c35d78b0",
+    "m02_aauth_fcf656d/profile.py": "fb7b9b51ada64c7e45f61eb24991078cbe5d172cdf781887bf6843c27fb7afbf",
+    "m02_aauth_fcf656d/soga_supervision.py": "af1f19eb0710027d7c161e07e060813b9be3f578f252f2a9f3d7f942640dee6a",
+    "m02_aauth_fcf656d/structured_fields.py": "9d774a03dd096577a9ce917b40f4c3693e30758319fa05f455feb3b734c78a71",
+    "m02_aauth_fcf656d/tokens.py": "34f705123acb83772f9f2428409593233f004384c46b2cf96f0358615cf2dd04",
+    "tests/test_iiw_fictional_parent.py": "e7bfe9af2b333f591b7f47b203782b5848283479036a99bc684714c5429d826c",
+    "tests/test_iiw_qr_session.py": "e700137956d85183a474d08ac7d67a2da2d073471acc65616ef31c7d4a113df4",
+    "tests/test_m02_aauth_approval_pending.py": "b0936449de6a143102ac012f7783ef138a5fe743a56fae41093b53d2eda37c69",
+    "tests/test_m02_aauth_demo_operator.py": "25abd4b5af7f8eaeaf1585d641bb8e08d024b2cabd09c685c0a319cad5b50f67",
+    "tests/test_m02_aauth_fcf656d.py": "89b71359c6c071453fab289aa85443aa4f7156e4a2d263d8ac12f85bee4deaad",
+    "tests/test_m02_aauth_fcf656d_exchange.py": "89dcede33566a1531d9c5630d9598da940ffd7ac99dfb4610a875e3559aad916",
+    "tests/test_m02_aauth_fcf656d_localhost.py": "d591d91085107f76e4a9afa46b003197bda0a722460741600594a043d96306bb",
+    "tests/test_m02_aauth_other_party_approval.py": "a24e5f76832a5b8df7e9ed67409c18b03ce4a2b773103d813285048019e30a66"
+  },
+  "fictional_parent_static_import_boundary": {
+    "allowed_qr_module": "iiw_qr_session.package",
+    "enforced_by": "tests/test_iiw_fictional_parent.py:test_18_same_tick_timer_precedence_and_frozen_sources",
+    "forbidden_qr_module": "iiw_qr_session.session",
+    "scope": "iiw_fictional_parent/*.py"
+  },
+  "interpreter": "/Library/Developer/CommandLineTools/usr/bin/python3",
+  "machine": "arm64",
+  "provider_manifest": {
+    "path": "/Users/debb/dev/research-evidence/soga/manifests/aauth-fcf656d-provider.json",
+    "sha256": "7d409a9990c2c57623b395d6a74643263f5c4c4e89b750b4a87e38bd680b4c8e"
+  },
+  "python": "3.9.6",
+  "schema": 1,
+  "source_basis_commit": "ec93a4bf604f078212ae015a0bec42252bf60032",
+  "system": "Darwin"
+}

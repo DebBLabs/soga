@@ -1159,3 +1159,14 @@ accepted package and canonical records. Creation only of its bounded synthetic
 loopback execution proposal and exact runtime manifest is authorized. No test,
 QR, listener, device, presentation modification, Beryl/LAN, Misty, G28 or G29
 is authorized pending blind dual review and prospective PI authorization.
+
+D-151 accepts the independently reviewed fictional-parent synthetic-loopback
+execution proposal at SHA-256
+`487d67c3c7b826d29d1048dc88ddc057c2c9783a701bf1018fc4f90d82e93aef`
+and runtime manifest at SHA-256
+`2e84c1e92d7e9e4571c4c16bb642da4b4773ce6e45451cae0a2a6caf63dbb205`.
+Exactly one bounded execution of the committed controller is authorized with no
+automatic retry. Durable evidence requires blind dual review before acceptance
+or use. No live QR, device, LAN, presentation modification, wallet/WAS, Misty,
+physical action, G28 or G29 is authorized. The unrelated PI routine-tool
+proposal remains excluded and untouched.
