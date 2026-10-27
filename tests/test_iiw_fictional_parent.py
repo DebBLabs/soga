@@ -77,10 +77,13 @@ class FictionalParentTests(unittest.TestCase):
                          (403, "approval_withdrawn"))
 
     def test_05_no_standing_policy_mutation(self):
-        before = self.base.policy.calls
         _, _, qr, connected = self.begin_encounter()
+        self.assertEqual(self.base.policy.calls, 1)
+        calls_before_record = self.base.policy.calls
+        receipt_before_record = self.base.policy.receipt
         connected.record(self.submit(qr))
-        self.assertEqual(self.base.policy.calls, before)
+        self.assertEqual(self.base.policy.calls, calls_before_record)
+        self.assertIs(self.base.policy.receipt, receipt_before_record)
         self.assertNotIn("replace_standing_input",
                          (REPO / "iiw_fictional_parent/connection.py").read_text())
 

@@ -3316,3 +3316,23 @@ Do not execute tests or open listeners. Both blind gates must review the two
 complete corrected files before commit or execution. All prior exclusions
 remain in force. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-154 — Accept fictional-parent standing-policy test correction
+
+Recorded on 2026-10-27 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind static review request-023.
+
+Accept `tests/test_iiw_fictional_parent.py` at SHA-256
+`6cfbadf11a25a054e1c9d3a368eb9fac7d04c3eced48095ced99bdc38d23f114`
+and `tools/iiw_fictional_parent/run_static_and_loopback_tests.py` at SHA-256
+`6e3b9d4fd18c9a34f84a86b8b6111e607c51b2e8a49a00a75c683d728c479153`.
+
+Authorize commit and push of those exact files, this acceptance decision and
+synchronized canonical state. Do not execute them. Authorize creation only of
+the R2 execution proposal and revised runtime manifest pinning the corrected
+test and controller, new source basis and absent
+`iiw-fictional-parent-v2` evidence directory. Both artifacts require blind dual
+review before any R2 execution.
+
+All prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.

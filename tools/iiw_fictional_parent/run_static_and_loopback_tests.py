@@ -40,7 +40,7 @@ exec(compile(BASE_BYTES, str(BASE_PATH), "exec"), base.__dict__)
 core = base.core
 
 DURABLE_ROOT = REPO.parent / "research-evidence/soga"
-EVIDENCE_DIR = DURABLE_ROOT / "executions/iiw-fictional-parent-v1"
+EVIDENCE_DIR = DURABLE_ROOT / "executions/iiw-fictional-parent-v2"
 STDOUT_PATH = EVIDENCE_DIR / "fictional-parent-evidence.json"
 STDERR_PATH = EVIDENCE_DIR / "fictional-parent-stderr.bin"
 RUN_RECORD_PATH = EVIDENCE_DIR / "run-record.json"
@@ -75,7 +75,7 @@ HASHES.update({
     "iiw_fictional_parent/README.md":
         "ec58edd4fceafbecf51c7103f25591cb5f686c277a291ef2433b1e18ac3a3a92",
     "tests/test_iiw_fictional_parent.py":
-        "e7bfe9af2b333f591b7f47b203782b5848283479036a99bc684714c5429d826c",
+        "6cfbadf11a25a054e1c9d3a368eb9fac7d04c3eced48095ced99bdc38d23f114",
 })
 TEST_MODULES = base.TEST_MODULES + (
     ("iiw_qr_session_tests", "tests/test_iiw_qr_session.py"),

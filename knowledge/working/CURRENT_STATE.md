@@ -1183,6 +1183,16 @@ import, compilation, test execution, listener or retry is authorized. All prior
 exclusions remain in force. The unrelated PI routine-tool proposal remains
 excluded and untouched.
 
+D-154 accepts the corrected fictional-parent test at SHA-256
+`6cfbadf11a25a054e1c9d3a368eb9fac7d04c3eced48095ced99bdc38d23f114`
+and bounded controller at SHA-256
+`6e3b9d4fd18c9a34f84a86b8b6111e607c51b2e8a49a00a75c683d728c479153`
+after blind PASS from both gates. Commit and push are authorized; execution is
+not. Creation only of a revised R2 execution proposal and runtime manifest is
+authorized. Both require blind dual review before any R2 run. All prior
+exclusions remain in force. The unrelated PI routine-tool proposal remains
+excluded and untouched.
+
 D-153 accepts the independently reviewed standing-policy diagnosis and
 test-correction proposal. The D-152 failure is attributed to sampling the
 evaluation counter before the expected pending-path evaluation, not to a
