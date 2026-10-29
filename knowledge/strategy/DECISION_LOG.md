@@ -1988,6 +1988,7 @@ No additional execution, dependency operation, AAuth implementation, network
 access, wallet/WAS work, Misty access, G28 or G29 is authorized. The unrelated
 PI routine-tool proposal remains excluded and untouched.
 
+
 ## D-100 — Authorize AAuth Steps 1–3 Phase 1 create-only implementation
 
 Recorded on 2026-09-21 at PI instruction after both blind request-042 reviewers
@@ -3443,3 +3444,32 @@ generate a live QR, contact devices, implement Project Agent, or activate
 mBot2 or Misty. Both blind gates must review every complete changed file before
 commit or execution. All proposal exclusions remain in force. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-159 — Accept iPad-first table-session static package
+
+Recorded on 2026-10-29 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind final static review request-037.
+
+Accept the exact seven-file package in the separate Permission to Speak
+presentation repository at the request-037 hashes:
+
+- `bridge.py` — `a71bb86a1dd86b80d58e67699f1c6db9bfd9725ab209c1d6fe8d5d4daacf31d6`;
+- `index.html` — `c4f2f7b3aee369c2a425c20e6ff8d26b36a781d92ea790379be5fbbd576ab774`;
+- `README.md` — `7a90108e1435c90c5e1f5bd83fb4f5fc8c7fcf899e9ed89e389b91129b0bd83a`;
+- `CHECKLIST.md` — `4cd07b4aa0d2dc82c6b4cf6c94f012c643aff27c0c5abf1461771675b2add5b3`;
+- `warmup.sh` — `e5615e3629547fc09bb7755dc6dc407582ac787476b56c9d7ae5a224962d12f2`;
+- `test_fictional_parent_presentation.py` —
+  `69371f1fb336f92c42857f939310a4621b9a22f6b98dc1dde08f43b9b9ea54ae`;
+- `run_fictional_parent_presentation_tests.py` —
+  `81d82ea71646c4a8d20968dba24e009beca5f037efd9435717e96c5d77c3ee0e`.
+
+The package is committed in that repository as `a139376`. That repository
+has no configured `origin`, so no presentation push occurred.
+
+Authorize commit and push of the exact accepted package and these canonical
+records. Authorize creation only of a bounded synthetic-loopback execution
+proposal and exact runtime manifest. No test, execution, listener, Beryl/LAN
+access, live QR, device contact, Project Agent, mBot2, Misty, G28 or G29 is
+authorized pending blind dual review and prospective PI authorization. All
+D-158 exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.

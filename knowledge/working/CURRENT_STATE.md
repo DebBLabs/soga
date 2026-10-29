@@ -1254,3 +1254,13 @@ device contact, Project Agent implementation, mBot2, Misty, G28 or G29 is
 authorized. Every complete changed file requires blind dual static review
 before commit or execution. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+D-159 accepts the seven-file iPad-first table-session package after blind PASS
+from Claude Gate 1 and AGy Gate 2 on request-037. The exact package is committed
+in the separate presentation repository as `a139376`; that repository has no
+configured remote, so it could not be pushed. The package remains unexecuted.
+Creation only of a bounded synthetic-loopback execution proposal and exact
+runtime manifest is authorized. No test, execution, listener, Beryl/LAN, live
+QR, device, Project Agent, mBot2, Misty, G28 or G29 activity is authorized
+without blind dual review and prospective PI authorization. The unrelated PI
+routine-tool proposal remains excluded and untouched.
