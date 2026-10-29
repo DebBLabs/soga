@@ -3418,3 +3418,28 @@ unverified demo input. It does not establish verified identity, a real
 parent-child relationship, parental or legal authority, legal consent,
 complete AAuth conformance, live phone interaction, wallet/WAS, Misty, G28 or
 G29. The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-158 — Accept iPad-first table-session foundation proposal
+
+Recorded on 2026-10-29 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind mechanical recheck request-033.
+
+Accept
+`knowledge/proposals/IIW_IPAD_FIRST_TABLE_SESSION_FOUNDATION_PROPOSAL_2026-10-29.md`
+at SHA-256
+`be5eebe5941cdee06fa2afdffb25a6419b3a44e734a80aa6f7bc19a75fa887eb`.
+Authorize commit and push of the exact reviewed proposal, this prospective
+decision and synchronized canonical state.
+
+Authorize create-only implementation within the proposal's exact seven-file
+boundary in the separate Permission to Speak presentation repository. The
+implementation includes the two-path opening and final open-questions screen.
+D-158 closes and supersedes D-157's unexecuted create-only implementation
+authority; it does not create a parallel path. Preserve accepted SOGA sources
+unchanged.
+
+Do not import, compile, lint, test, execute, bind listeners, access Beryl,
+generate a live QR, contact devices, implement Project Agent, or activate
+mBot2 or Misty. Both blind gates must review every complete changed file before
+commit or execution. All proposal exclusions remain in force. The unrelated
+PI routine-tool proposal remains excluded and untouched.

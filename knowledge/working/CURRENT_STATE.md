@@ -1240,3 +1240,17 @@ G28 or G29 activity is authorized. Every complete created or changed file
 requires blind dual static review before commit or execution. Accepted SOGA
 sources remain unchanged. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+D-158 accepts the independently reviewed iPad-first table-session foundation
+proposal at SHA-256
+`be5eebe5941cdee06fa2afdffb25a6419b3a44e734a80aa6f7bc19a75fa887eb`
+after blind PASS from Claude Gate 1 and AGy Gate 2 on request-033. Commit and
+push of the exact proposal and canonical records are authorized. Create-only
+implementation is authorized within the proposal's exact seven-file boundary,
+including the two-path opening and final open-questions screen. D-158 closes
+and supersedes D-157's unexecuted create-only authority. No import,
+compilation, lint, test, execution, listener, Beryl/LAN access, live QR,
+device contact, Project Agent implementation, mBot2, Misty, G28 or G29 is
+authorized. Every complete changed file requires blind dual static review
+before commit or execution. The unrelated PI routine-tool proposal remains
+excluded and untouched.
