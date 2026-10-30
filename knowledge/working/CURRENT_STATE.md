@@ -1353,3 +1353,17 @@ byte-identical and the D-166 attempt is consumed. Creation only of a bounded
 Beryl/iPad live-rehearsal proposal is authorized. No LAN listener, QR, device
 contact or additional execution is authorized. All exclusions remain in force;
 the unrelated PI routine-tool proposal remains excluded and untouched.
+
+D-168 accepts the independently reviewed path-specific completion-pages
+proposal at SHA-256
+`ae62dff6db809d0c41b0cb877c91349c919f55a3c30cc7d49444b0490f223adb`.
+Create-only implementation is authorized in exactly seven presentation files
+for separate Permission to Speak and Project Agent endings plus a bounded
+display-only terminal-outcome enum. No import, compilation, lint, test,
+execution, listener, Beryl access, QR or device contact is authorized. Both
+blind gates must review all seven complete files before commit or execution,
+and the PI must visually verify both endings before any Beryl/iPad rehearsal.
+Request-052's rehearsal-control PASS is preserved, but its old presentation
+pins must be replaced after the corrected package is accepted. All exclusions
+remain in force; the unrelated PI routine-tool proposal remains excluded and
+untouched.

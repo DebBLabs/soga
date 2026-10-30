@@ -3665,3 +3665,33 @@ listener, live QR, device contact, Project Agent, mBot2, Misty or additional
 execution is authorized. Both blind gates must review the proposal before any
 live rehearsal. All prior exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-168 — Accept path-specific completion-pages proposal
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused recheck request-054.
+
+Accept
+`knowledge/proposals/IIW_PATH_SPECIFIC_COMPLETION_PAGES_PROPOSAL_2026-10-29.md`
+at SHA-256
+`ae62dff6db809d0c41b0cb877c91349c919f55a3c30cc7d49444b0490f223adb`.
+Authorize commit and push of the exact proposal, this decision and synchronized
+canonical state.
+
+Authorize create-only implementation in the separate presentation repository
+of the proposal's exact seven-file boundary: `index.html`, `bridge.py`,
+`test_fictional_parent_presentation.py`,
+`run_fictional_parent_presentation_tests.py`, `table-runtime-manifest.json`,
+`README.md` and `CHECKLIST.md`. The implementation includes the bounded
+display-only terminal-outcome enum and separate Permission to Speak and Project
+Agent completion pages. Do not import, compile, lint, test, execute, open
+listeners, access Beryl, generate a QR or contact a device. Both blind gates
+must review all seven complete files before commit or execution. Preserve both
+accepted evidence sets byte-identical.
+
+The corrected pages require PI visual verification before the Beryl/iPad
+rehearsal is accepted or executed. The request-052 dual PASS remains preserved
+as review of the rehearsal controls; its old presentation pins are not accepted
+for execution and must be replaced after the correction is accepted. All prior
+exclusions remain in force. The unrelated PI routine-tool proposal remains
+excluded and untouched.
