@@ -1286,3 +1286,15 @@ repository has no remote. Creation only of the final bounded execution
 authorization is permitted. No test, execution or listener is authorized. All
 prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+D-162 accepts the final bounded execution authorization at SHA-256
+`fddc8618c682d313ddcfe1a3cfee7eebea3c55d27a6d43c53f8a506f56eacd94`
+after blind PASS from both gates on request-044. The authorization document
+must remain untracked until after execution and evidence review. Exactly one
+execution of controller SHA-256
+`cb7e5758d5d707d698bf4d973b8a1ac7970e9bb62e809c13918d278eabd4283b`
+using manifest SHA-256
+`ad33928a2d1e7bce6a47aecd437c92ce73d014879b16281c1ab3837b70abdd59`
+is authorized under all reviewed controls. No retry. Resulting evidence
+requires blind dual review before acceptance or use. All exclusions remain in
+force; the unrelated PI routine-tool proposal remains excluded and untouched.

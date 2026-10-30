@@ -3515,3 +3515,24 @@ Authorize commit of those exact artifacts and synchronized canonical records.
 Authorize creation only of the final bounded execution authorization. No test,
 execution or listener is authorized. All prior exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-162 — Authorize one bounded iPad-first table synthetic execution
+
+Recorded on 2026-10-29 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused recheck request-044.
+
+Accept the final bounded execution authorization at SHA-256
+`fddc8618c682d313ddcfe1a3cfee7eebea3c55d27a6d43c53f8a506f56eacd94`.
+Per its reviewed preflight rule, that authorization document remains untracked
+until after execution and evidence review; this decision and synchronized
+current state are the only SOGA paths changed before the run.
+
+Authorize exactly one bounded execution of the committed presentation
+controller at SHA-256
+`cb7e5758d5d707d698bf4d973b8a1ac7970e9bb62e809c13918d278eabd4283b`
+using runtime manifest SHA-256
+`ad33928a2d1e7bce6a47aecd437c92ce73d014879b16281c1ab3837b70abdd59`,
+under all reviewed pre-start holdpoints, finite limits, literal-loopback
+boundaries, stop rules and exclusions. No automatic retry. Both blind gates
+must review resulting durable evidence before acceptance or use. The unrelated
+PI routine-tool proposal remains excluded and untouched.
