@@ -3636,3 +3636,32 @@ after the run; write only to the absent `iiw-table-foundation-v2` directory. No
 automatic retry. Both blind gates must review resulting evidence before
 acceptance or use. All prior exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-167 — Accept iPad-first table R2 gated positive evidence
+
+Recorded on 2026-10-29 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind evidence review request-050.
+
+Accept the D-166 R2 execution as a gated positive result. Accept
+`knowledge/research/IIW_IPAD_FIRST_TABLE_R2_EXECUTION_EVIDENCE_2026-10-29.md`
+at SHA-256
+`39d7fbda5718e0f3c242af3e47376df01284f7937f90c20f06e9c69b6c0f70ad`,
+durable v2 `evidence.json` at SHA-256
+`0880071a0d3b4290bca4f3160a4e1ee67063df4c12a9de6a249cbcd08ee7eaed`,
+`stdout.txt` at SHA-256
+`60060ef0b76ccc13deb55fb3414d17c125e1ee57234cbae2c0f65cb23b1e360a`
+and `stderr.txt` at SHA-256
+`455b0a00f3c3823a55f2b6dbd90f946032ba853c11e8c6e5e47064da24f210d7`.
+
+All 159 tests passed: 128 accepted fictional-parent baseline tests and 31
+iPad-first presentation tests, with zero failure, error, skip, timeout,
+overflow, mutation, cleanup variance or retry. Accepted v1 evidence remained
+byte-identical. The D-166 attempt is consumed.
+
+Authorize commit and push of the exact reviewed evidence report, this decision
+and synchronized canonical state. Authorize creation only of a bounded
+Beryl/iPad live-rehearsal proposal using the accepted table package. No LAN
+listener, live QR, device contact, Project Agent, mBot2, Misty or additional
+execution is authorized. Both blind gates must review the proposal before any
+live rehearsal. All prior exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.

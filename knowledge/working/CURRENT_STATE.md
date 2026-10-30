@@ -1341,3 +1341,15 @@ evidence must remain byte-identical; only the absent v2 path may be written. No
 retry. Resulting evidence requires blind dual review before acceptance or use.
 All exclusions remain in force; the unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+D-167 accepts the D-166 iPad-first table R2 execution as a gated positive after
+blind request-050 PASS from both gates. The accepted report is
+`knowledge/research/IIW_IPAD_FIRST_TABLE_R2_EXECUTION_EVIDENCE_2026-10-29.md`
+at SHA-256
+`39d7fbda5718e0f3c242af3e47376df01284f7937f90c20f06e9c69b6c0f70ad`.
+All 159 tests passed: 128 baseline and 31 presentation, with no failure, error,
+skip, timeout, overflow, mutation, cleanup variance or retry. V1 evidence stayed
+byte-identical and the D-166 attempt is consumed. Creation only of a bounded
+Beryl/iPad live-rehearsal proposal is authorized. No LAN listener, QR, device
+contact or additional execution is authorized. All exclusions remain in force;
+the unrelated PI routine-tool proposal remains excluded and untouched.
