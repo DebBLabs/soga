@@ -3611,3 +3611,28 @@ evidence path. Do not import, compile, lint, test, execute or open listeners.
 Both blind gates must review all three complete files before commit or
 execution. All prior exclusions remain in force. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-166 — Accept corrected Test 19 R2 package and authorize one execution
+
+Recorded on 2026-10-29 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind static review request-049.
+
+Accept the corrected presentation files:
+
+- `test_fictional_parent_presentation.py` at SHA-256
+  `d190758c39c6a9f20bae35a4a5a6e1548be347beaa6ca91776d79da98c770f8d`;
+- `run_fictional_parent_presentation_tests.py` at SHA-256
+  `f7a0758641bd77001058302f4c96266e509d519938d603d4c65b423ac8c71a3c`;
+- `table-runtime-manifest.json` at SHA-256
+  `41ec44ec5b518e068a8834f952be5abd49d7a82f98e996e8d5bf29243fc96724`.
+
+The exact files are committed in the separate presentation repository as
+`b7772026f54196c0b370fd70012ca0f30b0c4ef3`. That repository has no configured
+remote.
+
+Authorize exactly one bounded R2 execution under D-165 after all reviewed
+pre-start holdpoints pass. Preserve and verify accepted v1 evidence before and
+after the run; write only to the absent `iiw-table-foundation-v2` directory. No
+automatic retry. Both blind gates must review resulting evidence before
+acceptance or use. All prior exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.

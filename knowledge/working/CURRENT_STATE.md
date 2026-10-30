@@ -1331,3 +1331,13 @@ uses a new absent evidence path. No import, compilation, lint, test, execution
 or listener is authorized. Both blind gates must review all three complete
 files before commit or execution. All exclusions remain in force; the unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+D-166 accepts the corrected Test 19 R2 test, controller and manifest after
+blind request-049 PASS from both gates. Their exact hashes are recorded in the
+decision log and the files are committed locally in the presentation repository
+as `b777202`; that repository has no remote. Exactly one bounded R2 execution
+is authorized after every D-165 pre-start holdpoint passes. Accepted v1
+evidence must remain byte-identical; only the absent v2 path may be written. No
+retry. Resulting evidence requires blind dual review before acceptance or use.
+All exclusions remain in force; the unrelated PI routine-tool proposal remains
+excluded and untouched.
