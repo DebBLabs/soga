@@ -1443,3 +1443,18 @@ pending blind dual evidence review and explicit PI visual acceptance. No QR
 scan, iPad/device contact, encounter, AAuth/SOGA decision, Project Agent,
 mBot2, Misty, G28 or G29 is authorized. All exclusions remain in force; the
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+D-175 accepts the D-174 Beryl Phase A R2 execution as a gated positive after
+blind request-066 PASS from both gates. The accepted report is
+`knowledge/research/IIW_BERYL_PHASE_A_VISUAL_PREVIEW_R2_EXECUTION_EVIDENCE_2026-10-30.md`
+at SHA-256
+`2d42d035d73995f15a7e2e4631cf6ad8e317f3492c8cd57e5ce2a3b049758b2e`.
+The three laptop screens were visually accepted in full-screen mode; Beryl had
+exactly the laptop; state remained `IDLE`; port `4318` remained unused;
+cleanup passed; prior evidence remained byte-identical; and no retry occurred.
+The D-174 attempt is consumed. Phase B remains blocked. Creation only of a
+focused presentation-cleanup proposal is authorized; no implementation,
+execution, listener, QR, device contact, Misty or mBot2 is authorized. Both
+blind gates must review the proposal before further work. All exclusions remain
+in force; the unrelated PI routine-tool proposal remains excluded and
+untouched.

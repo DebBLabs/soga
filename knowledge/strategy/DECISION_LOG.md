@@ -3864,3 +3864,35 @@ No QR scan, iPad or other device contact, encounter, AAuth/SOGA decision,
 Project Agent execution, mBot2, Misty, G28 or G29 is authorized. All prior
 exclusions remain in force. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+## D-175 — Accept Beryl Phase A R2 gated positive evidence and hold Phase B for cleanup
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind evidence-review request-066.
+
+Accept the D-174 execution as a gated positive result. Accept
+`knowledge/research/IIW_BERYL_PHASE_A_VISUAL_PREVIEW_R2_EXECUTION_EVIDENCE_2026-10-30.md`
+at SHA-256
+`2d42d035d73995f15a7e2e4631cf6ad8e317f3492c8cd57e5ce2a3b049758b2e`,
+durable `evidence.json` at SHA-256
+`f3ebf391e9bc4faf2807b1eda8c692b5d589f401ecf49bdaefe9bf1c56a12d30`,
+`bridge.stdout.txt` at SHA-256
+`6580f36e7445f6110f93c45cf3242177e930be7f3c342f87283b1b5576a01300`
+and empty `bridge.stderr.txt` at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+
+The three reviewed laptop screens were visually accepted in full-screen mode;
+Beryl contained exactly the laptop; state remained `IDLE`; port `4318`
+remained unused; cleanup passed; accepted prior evidence remained
+byte-identical; and no retry occurred. The D-174 attempt is consumed.
+
+Authorize commit and push of the exact reviewed evidence report, this decision
+and synchronized canonical state. Keep Phase B blocked. Authorize creation only
+of a focused presentation-cleanup proposal covering centered/full-screen
+layout, simplified path-specific information, removal of stale-demo cues, and
+one consolidated operator checklist while preserving accepted functional
+behavior and evidence. Do not execute, open listeners, scan a QR, contact the
+iPad or another device, or connect Misty or mBot2. Both blind gates must review
+the proposal before implementation or execution. All prior exclusions remain
+in force. The unrelated PI routine-tool proposal remains excluded and
+untouched.
