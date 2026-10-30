@@ -1367,3 +1367,14 @@ Request-052's rehearsal-control PASS is preserved, but its old presentation
 pins must be replaced after the corrected package is accepted. All exclusions
 remain in force; the unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+D-169 accepts the exact seven-file path-specific completion-pages static
+package after request-056 closed the sole manifest blocker. The exact hashes
+are recorded in the decision log. Commit of the reviewed presentation files
+and exactly one bounded synthetic execution are authorized, writing only to
+the absent iiw-table-path-endings-v1 durable evidence directory and preserving
+both prior evidence sets byte-identical. No retry. Resulting evidence requires
+blind dual review before acceptance or visual preview. No Beryl, live QR, iPad,
+Project Agent execution, mBot2 or Misty is authorized. All exclusions remain
+in force; the unrelated PI routine-tool proposal remains excluded and
+untouched.

@@ -3695,3 +3695,39 @@ as review of the rehearsal controls; its old presentation pins are not accepted
 for execution and must be replaced after the correction is accepted. All prior
 exclusions remain in force. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+## D-169 — Accept path-specific completion-pages static package and authorize one execution
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused recheck request-056, closing the sole
+request-055 manifest blocker.
+
+Accept the exact reviewed presentation files:
+
+- index.html at SHA-256
+  343b861999625b7397dcce05b2ac28eb3af9e54249f3eec292f3c65513872d52;
+- bridge.py at SHA-256
+  242395156a760bfc9cd8e33474274c7c5302a903e793cc36a26f1d5d435f4a27;
+- test_fictional_parent_presentation.py at SHA-256
+  56ab1fdd2e5a3200229bfb25d481fdb2d938b757bc9ca8738f965164f0e8b1b4;
+- run_fictional_parent_presentation_tests.py at SHA-256
+  e07b168fd9728c2ce8e32040becdd51dd2a47ff01a978567cec78b664962c8e4;
+- table-runtime-manifest.json at SHA-256
+  4228ef92300b73934c734a0568e7f22d83779e7310cf2ad04c5c3d5543388b86;
+- README.md at SHA-256
+  033c30683c99994fdc47c93426743cc27c6e290d0d725d2b44bcf74da1b061b7;
+  and
+- CHECKLIST.md at SHA-256
+  035cda302df01b4ecf6fc0f2846737443a9d8e3d59266bae9d135bd1eb9d7004.
+
+Authorize committing those exact files in the separate presentation repository
+and commit and push of this decision and synchronized canonical state.
+
+Authorize exactly one bounded synthetic execution of the reviewed controller
+under D-168, writing only to the absent durable
+iiw-table-path-endings-v1 evidence directory and preserving both accepted prior
+evidence sets byte-identical. No automatic retry. Both blind gates must review
+resulting evidence before acceptance or visual preview. No Beryl access, live
+QR, iPad contact, Project Agent execution, mBot2 or Misty is authorized. All
+prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.
