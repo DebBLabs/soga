@@ -3896,3 +3896,30 @@ iPad or another device, or connect Misty or mBot2. Both blind gates must review
 the proposal before implementation or execution. All prior exclusions remain
 in force. The unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+## D-176 — Accept Flow A stable-target and meeting-agent separation proposal
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused recheck request-070, closing all request-069
+blockers.
+
+Accept
+`knowledge/proposals/IIW_FLOW_A_STABLE_TARGET_AND_MEETING_AGENT_SEPARATION_PROPOSAL_2026-10-30.md`
+at SHA-256
+`505d30876278771f6efac8fa03329f7740215f9ef5bff1687f1e52c3cd8f6b82`.
+Authorize commit and push of the exact reviewed proposal, this decision and synchronized
+canonical state.
+
+Authorize bounded implementation and file updates, without commit or execution, within
+the proposal's exact seven-file presentation boundary. Make the public table single-
+path, remove the Project Agent table route and screens, apply only the exact approved
+singular navigation wording, and preserve the PI-locked Flow A without unapproved
+editorial, visual, behavioral or navigation changes. Every visitor-visible state
+transition must have an explicit truthful runtime source.
+
+Do not import, compile, lint, test, execute, open listeners, access Beryl, generate or
+scan a QR code, contact a device, prepare or run a meeting-agent session, or perform
+Project Agent, mBot2, CyberPi, Misty, sensor, speech, movement, Phase B, G28 or G29 work.
+The complete changed files, exact hashes, runtime-source mapping and string-by-string
+Flow A comparison require blind dual static review before commit or execution. The
+unrelated PI routine-tool proposal remains excluded, unread and untouched.

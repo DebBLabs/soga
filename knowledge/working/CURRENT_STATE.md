@@ -1458,3 +1458,18 @@ execution, listener, QR, device contact, Misty or mBot2 is authorized. Both
 blind gates must review the proposal before further work. All exclusions remain
 in force; the unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+D-176 accepts the independently reviewed Flow A stable-target and meeting-agent
+separation proposal at SHA-256
+`505d30876278771f6efac8fa03329f7740215f9ef5bff1687f1e52c3cd8f6b82`.
+The public IIW table is now single-path Permission to Speak; the live multi-agent
+experience is held for a later, separately controlled meeting proposal. Bounded,
+uncommitted and unexecuted updates are authorized only in the proposal's exact seven-
+file presentation boundary. The PI-locked Flow A may not receive unapproved editorial,
+visual, behavioral or navigation changes. Every visible state transition requires an
+explicit truthful runtime source. Blind dual static review of the complete changed
+files, hashes, runtime-source mapping and string comparison is required before commit
+or execution. Phase B, listeners, Beryl, QR/device contact, meeting-agent execution,
+Project Agent, mBot2, CyberPi, Misty, sensors, speech, movement, G28 and G29 remain
+unauthorized. The unrelated PI routine-tool proposal remains excluded, unread and
+untouched.
