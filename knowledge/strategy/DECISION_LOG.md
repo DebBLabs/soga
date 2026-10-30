@@ -3838,3 +3838,29 @@ corrected repository basis and allow-list. Do not execute the corrected
 launcher. Both blind gates must review the complete corrected launcher and R2
 execution request before commit or execution. All prior exclusions remain in
 force. The unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-174 — Accept corrected Beryl Phase A launcher and authorize one R2 visual preview
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind static review request-065.
+
+Accept the corrected launcher
+`/Users/debb/dev/permission-to-speak-work/permission-to-speak/run_beryl_visual_preview.py`
+at SHA-256
+`39f7036135a9c9d2a41dd55383f675422a4670bb94f80f5b1554672dc30ae688`
+and
+`knowledge/proposals/IIW_BERYL_PHASE_A_VISUAL_PREVIEW_R2_EXECUTION_REQUEST_2026-10-30.md`
+at SHA-256
+`0deb9ea8d1a9e1901de9bd171b6063c65dfd001dbb567bb5b28999177b32f1b6`.
+
+Authorize commit of the exact launcher in the presentation repository and
+commit and push of the exact R2 request, this decision and synchronized
+canonical state. Authorize exactly one bounded R2 Phase A execution only after
+every reviewed pre-invocation holdpoint passes. Beryl must contain exactly the
+laptop. No automatic retry. Both blind gates must review resulting durable
+evidence and the PI must record explicit visual acceptance before Phase B.
+
+No QR scan, iPad or other device contact, encounter, AAuth/SOGA decision,
+Project Agent execution, mBot2, Misty, G28 or G29 is authorized. All prior
+exclusions remain in force. The unrelated PI routine-tool proposal remains
+excluded and untouched.

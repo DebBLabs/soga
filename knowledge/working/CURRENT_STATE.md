@@ -1431,3 +1431,15 @@ allow-list controls. No launcher execution is authorized. The complete
 corrected launcher and R2 request require blind dual review before commit or
 execution. All exclusions remain in force; the unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+D-174 accepts the corrected Beryl Phase A launcher at SHA-256
+`39f7036135a9c9d2a41dd55383f675422a4670bb94f80f5b1554672dc30ae688`
+and R2 execution request at SHA-256
+`0deb9ea8d1a9e1901de9bd171b6063c65dfd001dbb567bb5b28999177b32f1b6`
+after blind request-065 PASS from both gates. Exactly one bounded R2 Phase A
+execution is authorized only after every reviewed pre-invocation holdpoint
+passes and Beryl contains exactly the laptop. No retry. Phase B remains blocked
+pending blind dual evidence review and explicit PI visual acceptance. No QR
+scan, iPad/device contact, encounter, AAuth/SOGA decision, Project Agent,
+mBot2, Misty, G28 or G29 is authorized. All exclusions remain in force; the
+unrelated PI routine-tool proposal remains excluded and untouched.
