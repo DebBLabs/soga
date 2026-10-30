@@ -1404,3 +1404,16 @@ Agent, mBot2, Misty or preview execution is authorized. Both blind gates must
 review the Phase A launcher and execution request before execution. All prior
 exclusions remain in force; the unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+D-172 accepts the Phase A laptop-only visual-preview launcher at SHA-256
+`82f701c0ad1d1825eeb98b988796d0161223616a2e2e2863da99bb746cfcacbe`
+and execution request at SHA-256
+`a821d9e12205783f2a019f0d79032996a07e03843231fb2ae2ccbfc9ba9b2a58`
+after blind request-061 PASS from both gates. One bounded Phase A execution is
+authorized on literal `en0` / `192.168.8.247`, with exactly the laptop on Beryl
+and only the initially absent `iiw-beryl-phase-a-visual-preview-v1` evidence
+directory writable. No retry. Phase B remains blocked pending blind dual
+evidence review and explicit PI visual acceptance. No QR scan, iPad/device
+contact, encounter, AAuth/SOGA decision, Project Agent, mBot2, Misty, G28 or
+G29 is authorized. All prior exclusions remain in force; the unrelated PI
+routine-tool proposal remains excluded and untouched.

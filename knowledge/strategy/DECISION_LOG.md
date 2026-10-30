@@ -3783,3 +3783,30 @@ device, begin Phase B, activate Project Agent, mBot2 or Misty, or execute the
 preview. Both blind gates must review the Phase A launcher and execution request
 before Phase A execution. All prior exclusions remain in force. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-172 — Accept Beryl Phase A launcher and authorize one visual preview
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused recheck request-061.
+
+Accept the create-only Phase A launcher
+`/Users/debb/dev/permission-to-speak-work/permission-to-speak/run_beryl_visual_preview.py`
+at SHA-256
+`82f701c0ad1d1825eeb98b988796d0161223616a2e2e2863da99bb746cfcacbe`
+and
+`knowledge/proposals/IIW_BERYL_PHASE_A_VISUAL_PREVIEW_EXECUTION_REQUEST_2026-10-30.md`
+at SHA-256
+`a821d9e12205783f2a019f0d79032996a07e03843231fb2ae2ccbfc9ba9b2a58`.
+Authorize committing the exact launcher in the separate presentation
+repository and commit and push of the exact request, this decision and
+synchronized canonical state.
+
+Authorize exactly one bounded Phase A execution under the reviewed controls,
+using literal interface `en0`, Beryl IPv4 `192.168.8.247` and the initially
+absent durable evidence directory `iiw-beryl-phase-a-visual-preview-v1`. The
+Beryl associated-client list must contain exactly the laptop. No automatic
+retry. Both blind gates must review the resulting evidence and the PI must
+record explicit visual acceptance before Phase B. No QR scan, iPad or other
+device contact, encounter, AAuth/SOGA decision, Project Agent execution, mBot2,
+Misty, G28 or G29 is authorized. All prior exclusions remain in force. The
+unrelated PI routine-tool proposal remains excluded and untouched.
