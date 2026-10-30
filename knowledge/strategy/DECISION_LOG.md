@@ -3923,3 +3923,38 @@ Project Agent, mBot2, CyberPi, Misty, sensor, speech, movement, Phase B, G28 or 
 The complete changed files, exact hashes, runtime-source mapping and string-by-string
 Flow A comparison require blind dual static review before commit or execution. The
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
+
+## D-177 — Accept and commit the Flow A single-path presentation package
+
+Recorded on 2026-10-30 at PI direction after AGy Gate 2 independently returned
+PASS on blind static review request-071 and Claude Gate 1 returned PASS on
+focused mechanical recheck request-073, closing the request-071 and request-072
+blockers.
+
+Accept the D-176 seven-file presentation package at these exact SHA-256 values:
+
+- `index.html`: `e0c0d70726078f0c856703c3a193995db4b79bd7c6fc549ce0d355aa75b13c09`
+- `bridge.py`: `49aefec832d857e216369c2f333b2eadafa7df6aeface0a2be47b77fee5e5361`
+- `test_fictional_parent_presentation.py`: `7101e34aa7cbaa182ad36db80cc0a21f453d7155a81468f6fead427fd1e7450f`
+- `run_fictional_parent_presentation_tests.py`: `f99c608cb22bc0f733a46d828bd2f40a7f04dd460db87a9153fe3854a5c30745`
+- `table-runtime-manifest.json`: `c24904769499e9f5455bfdf7f6592416c032b6825d2176d09af63c4f1af327ca`
+- `README.md`: `7db4f0bdd670a18b9f739c03485c26a9632cb159cf3cbdd83169e427bb8dc718`
+- `CHECKLIST.md`: `e4422c9fecc85278aa65d720ece5ce97f4fda6309c343652d84bed383624482e`
+
+The package is committed in the separate presentation repository at
+`5de1c70c258733d73117101aa556a9baabf4c2a8`. The PI-locked Flow A visual
+reference remains byte-identical at SHA-256
+`f47935a08aa5d3680efa4c4d6ef76f625791ea91187ca763ed1d4bc901b43f1c`.
+
+The public table is single-path Permission to Speak. The Project Agent table
+route and screens are absent. Visible runtime state is limited to the reviewed
+bridge sources; child sensing, child-response timeout, robot speech, robot
+movement and movement completion are not rendered as events that occurred.
+
+Authorize creation only of a bounded single-path Beryl laptop-preview proposal
+and execution request. No presentation execution, listener, Beryl access, QR
+generation or scan, iPad/device contact, meeting-agent preparation or
+execution, Project Agent, mBot2, CyberPi, Misty, sensor, speech or movement work
+is authorized. Both blind gates must review the proposal and request before any
+preview execution. All prior exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded, unread and untouched.

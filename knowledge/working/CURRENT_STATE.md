@@ -1473,3 +1473,17 @@ or execution. Phase B, listeners, Beryl, QR/device contact, meeting-agent execut
 Project Agent, mBot2, CyberPi, Misty, sensors, speech, movement, G28 and G29 remain
 unauthorized. The unrelated PI routine-tool proposal remains excluded, unread and
 untouched.
+
+D-177 accepts and commits the independently reviewed D-176 seven-file Flow A
+single-path presentation package. The presentation repository commit is
+`5de1c70c258733d73117101aa556a9baabf4c2a8`; the PI-locked Flow A visual
+reference remains byte-identical at SHA-256
+`f47935a08aa5d3680efa4c4d6ef76f625791ea91187ca763ed1d4bc901b43f1c`.
+The public table now contains only Permission to Speak, with runtime-backed
+state and no Project Agent table route. Creation only of a bounded single-path
+Beryl laptop-preview proposal and execution request is authorized. No preview
+execution, listener, Beryl, QR/device contact, meeting-agent work, Project
+Agent, mBot2, CyberPi, Misty, sensors, speech, movement, G28 or G29 is
+authorized. Both blind gates must review the proposal and request before any
+preview execution. All prior exclusions remain in force; the unrelated PI
+routine-tool proposal remains excluded, unread and untouched.
