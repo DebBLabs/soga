@@ -3536,3 +3536,31 @@ under all reviewed pre-start holdpoints, finite limits, literal-loopback
 boundaries, stop rules and exclusions. No automatic retry. Both blind gates
 must review resulting durable evidence before acceptance or use. The unrelated
 PI routine-tool proposal remains excluded and untouched.
+
+## D-163 — Accept iPad-first table synthetic execution gated negative
+
+Recorded on 2026-10-29 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind evidence review request-045.
+
+Accept the D-162 execution as a gated negative. Accept
+`knowledge/research/IIW_IPAD_FIRST_TABLE_SYNTHETIC_EXECUTION_EVIDENCE_2026-10-29.md`
+at SHA-256
+`e8b9f7049e3d8dc6219bf06e11f886a3868b9562e52943438ccb57b99a132b6f`,
+durable `evidence.json` at SHA-256
+`5e5a5ad498a24a6bee1917fb76bdf8853081968b814cafdfc2801c295ea4bb33`,
+`stdout.txt` at SHA-256
+`7358f9848273c939efba7c596d6d5a27d1fd16cb08582facb5b953c18cb28315`
+and `stderr.txt` at SHA-256
+`cf09f5c4f2f080e2ac7662a8281aa132ee05f71b9519a2446b18d0b03551acb3`.
+
+The accepted fictional-parent baseline passed 128 of 128 tests. The
+presentation suite passed 30 of 31. The sole failure was the whole-file
+negative assertion in `test_19_proxy_forwards_raw_choice_under_lock`. The
+D-162 attempt is consumed and no retry is authorized.
+
+Authorize commit and push of the exact reviewed evidence report, the final
+execution authorization document, this decision and synchronized canonical
+state. Authorize bounded source-only diagnosis of the sole failed assertion,
+with no source modification, import, compilation, test execution, listener or
+retry. All prior exclusions remain in force. The unrelated PI routine-tool
+proposal remains excluded and untouched.

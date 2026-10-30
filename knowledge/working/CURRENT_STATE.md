@@ -1298,3 +1298,16 @@ using manifest SHA-256
 is authorized under all reviewed controls. No retry. Resulting evidence
 requires blind dual review before acceptance or use. All exclusions remain in
 force; the unrelated PI routine-tool proposal remains excluded and untouched.
+
+D-163 accepts the D-162 iPad-first table synthetic execution as a gated
+negative after blind evidence-review PASS from both gates on request-045. The
+accepted report is
+`knowledge/research/IIW_IPAD_FIRST_TABLE_SYNTHETIC_EXECUTION_EVIDENCE_2026-10-29.md`
+at SHA-256
+`e8b9f7049e3d8dc6219bf06e11f886a3868b9562e52943438ccb57b99a132b6f`.
+The baseline passed 128/128; the presentation suite passed 30/31. The sole
+failure was the whole-file negative assertion in
+`test_19_proxy_forwards_raw_choice_under_lock`. The D-162 attempt is consumed;
+no retry. Bounded source-only diagnosis is authorized, but no source change,
+import, compilation, test, listener or retry. All exclusions remain in force;
+the unrelated PI routine-tool proposal remains excluded and untouched.
