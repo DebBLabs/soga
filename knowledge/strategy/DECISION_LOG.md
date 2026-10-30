@@ -3810,3 +3810,31 @@ record explicit visual acceptance before Phase B. No QR scan, iPad or other
 device contact, encounter, AAuth/SOGA decision, Project Agent execution, mBot2,
 Misty, G28 or G29 is authorized. All prior exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+## D-173 — Accept Beryl Phase A stopped-at-preflight diagnosis and authorize create-only recovery
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused recheck request-064, closing both
+request-063 blockers.
+
+Accept
+`knowledge/research/IIW_BERYL_PHASE_A_STATUS_PREFLIGHT_DIAGNOSIS_2026-10-30.md`
+at SHA-256
+`694225bd6bc6989aff9604530d455168793f2907a25b9ba778a89fdade675827`
+and
+`knowledge/proposals/IIW_BERYL_PHASE_A_STATUS_PREFLIGHT_CORRECTION_PROPOSAL_2026-10-30.md`
+at SHA-256
+`8f25ea14c72518fb3ab2c9d108807975b8a554f8a34c0645c61c1baf2f39bd45`.
+
+The D-172 invocation is a consumed stopped attempt at the source-identity
+holdpoint. No listener, preview, QR, device contact or evidence-directory
+creation occurred.
+
+Authorize commit and push of the exact reviewed diagnosis and proposal, this
+decision and synchronized canonical state. Authorize create-only correction of
+`run_beryl_visual_preview.py` under the exact reviewed proposal, including
+full-path untracked-file checking, pinned local-settings verification, and the
+corrected repository basis and allow-list. Do not execute the corrected
+launcher. Both blind gates must review the complete corrected launcher and R2
+execution request before commit or execution. All prior exclusions remain in
+force. The unrelated PI routine-tool proposal remains excluded and untouched.

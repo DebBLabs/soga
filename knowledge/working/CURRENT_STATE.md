@@ -1417,3 +1417,17 @@ evidence review and explicit PI visual acceptance. No QR scan, iPad/device
 contact, encounter, AAuth/SOGA decision, Project Agent, mBot2, Misty, G28 or
 G29 is authorized. All prior exclusions remain in force; the unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+D-173 accepts the independently reviewed Beryl Phase A status-preflight
+diagnosis at SHA-256
+`694225bd6bc6989aff9604530d455168793f2907a25b9ba778a89fdade675827`
+and correction proposal at SHA-256
+`8f25ea14c72518fb3ab2c9d108807975b8a554f8a34c0645c61c1baf2f39bd45`.
+The D-172 invocation is consumed as a stopped attempt at the source-identity
+holdpoint; no listener, preview, QR, device contact or evidence directory was
+created. Create-only correction of the Phase A launcher is authorized under
+the reviewed full-path status, local-settings hash, repository-basis and
+allow-list controls. No launcher execution is authorized. The complete
+corrected launcher and R2 request require blind dual review before commit or
+execution. All exclusions remain in force; the unrelated PI routine-tool
+proposal remains excluded and untouched.
