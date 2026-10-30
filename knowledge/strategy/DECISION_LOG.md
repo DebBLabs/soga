@@ -3731,3 +3731,35 @@ resulting evidence before acceptance or visual preview. No Beryl access, live
 QR, iPad contact, Project Agent execution, mBot2 or Misty is authorized. All
 prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-170 — Accept path-specific completion-pages gated positive evidence
+
+Recorded on 2026-10-30 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind evidence-review request-057.
+
+Accept the D-169 synthetic execution as a gated positive result. Accept
+knowledge/research/IIW_PATH_SPECIFIC_COMPLETION_PAGES_EXECUTION_EVIDENCE_2026-10-30.md
+at SHA-256
+f5dd4f7e85c157ee9dd64ba0ddf92d6c7f37e4a16a70307d7fe151c45f8eb5e0,
+durable evidence.json at SHA-256
+9609063de1faf0ab2f8f12be6d3936d7ef548a74864e8f32059015a851431989,
+stdout.txt at SHA-256
+752fb3cf069d5c9bbfc0914818d8b7c0bfeafe6c4b7411f1e867eb61adad5415
+and stderr.txt at SHA-256
+b7fc17d365eb1f3623c53dcc39f3126231c718aad84dee058a6ce4b6b14baa9c.
+
+All 163 tests passed: 128 accepted baseline tests and 35 path-specific
+presentation tests, with zero failure, error, skip, timeout, overflow, mutation
+or retry. Both prior evidence sets remained byte-identical. The D-169 attempt is
+consumed.
+
+Authorize commit and push of the exact reviewed evidence report, this decision
+and synchronized canonical state. Authorize correction only of the existing
+Beryl/iPad rehearsal proposal to pin presentation commit
+fa6ccaa2f2fe65c043219380e127cb14f454eae9 and the accepted corrected hashes,
+and to add a separately controlled laptop-only Beryl visual-preview phase for
+PI inspection of both endings before any QR scan or iPad contact. Both blind
+gates must review the corrected proposal before any preview or rehearsal. No
+Beryl access, listener, QR, device contact, Project Agent execution, mBot2 or
+Misty is yet authorized. All prior exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.

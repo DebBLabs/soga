@@ -1378,3 +1378,17 @@ blind dual review before acceptance or visual preview. No Beryl, live QR, iPad,
 Project Agent execution, mBot2 or Misty is authorized. All exclusions remain
 in force; the unrelated PI routine-tool proposal remains excluded and
 untouched.
+
+D-170 accepts the D-169 path-specific completion-pages synthetic execution as a
+gated positive after blind request-057 PASS from both gates. The accepted report
+is knowledge/research/IIW_PATH_SPECIFIC_COMPLETION_PAGES_EXECUTION_EVIDENCE_2026-10-30.md
+at SHA-256
+f5dd4f7e85c157ee9dd64ba0ddf92d6c7f37e4a16a70307d7fe151c45f8eb5e0.
+All 163 tests passed: 128 baseline and 35 presentation, with no failure, error,
+skip, timeout, overflow, mutation or retry; both prior evidence sets remained
+byte-identical. The attempt is consumed. Correction only of the Beryl/iPad
+proposal is authorized to re-pin presentation commit fa6ccaa and add a
+separately controlled laptop-only visual-preview phase before any iPad
+rehearsal. No Beryl access, listener, QR, device contact, Project Agent
+execution, mBot2 or Misty is authorized. All exclusions remain in force; the
+unrelated PI routine-tool proposal remains excluded and untouched.
