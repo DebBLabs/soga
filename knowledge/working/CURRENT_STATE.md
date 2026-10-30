@@ -1321,3 +1321,13 @@ correction for this finding. Creation only of one combined test-correction and
 R2 execution proposal is authorized. No source change, test, listener or retry
 is authorized. All exclusions remain in force; the unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+D-165 accepts the independently reviewed combined Test 19 correction and R2
+proposal at SHA-256
+`4c8e36d7363ee9a956be415e6e3a853bdf2239dc9b479cb8bf3661a89ba4e22a`.
+Create-only implementation is authorized for the exact presentation test,
+controller and manifest. `bridge.py` and v1 evidence must remain unchanged; v2
+uses a new absent evidence path. No import, compilation, lint, test, execution
+or listener is authorized. Both blind gates must review all three complete
+files before commit or execution. All exclusions remain in force; the unrelated
+PI routine-tool proposal remains excluded and untouched.

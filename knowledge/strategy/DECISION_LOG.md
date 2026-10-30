@@ -3588,3 +3588,26 @@ preserved v1 evidence and a new absent `iiw-table-foundation-v2` evidence path.
 No source modification, test, listener or retry is yet authorized. All prior
 exclusions remain in force. The unrelated PI routine-tool proposal remains
 excluded and untouched.
+
+## D-165 — Accept iPad-first table Test 19 correction and R2 proposal
+
+Recorded on 2026-10-29 at PI direction after AGy Gate 2 returned independent
+PASS on request-047 and Claude Gate 1 closed its single checklist blocker on
+focused recheck request-048.
+
+Accept
+`knowledge/proposals/IIW_IPAD_FIRST_TABLE_TEST19_CORRECTION_R2_PROPOSAL_2026-10-29.md`
+at SHA-256
+`4c8e36d7363ee9a956be415e6e3a853bdf2239dc9b479cb8bf3661a89ba4e22a`.
+Authorize commit and push of the exact proposal, this decision and synchronized
+canonical state.
+
+Authorize create-only implementation of the exact three-file correction in the
+presentation repository: `test_fictional_parent_presentation.py`,
+`run_fictional_parent_presentation_tests.py` and
+`table-runtime-manifest.json`. Preserve `bridge.py` byte-identical, preserve
+accepted v1 evidence and select the new absent `iiw-table-foundation-v2`
+evidence path. Do not import, compile, lint, test, execute or open listeners.
+Both blind gates must review all three complete files before commit or
+execution. All prior exclusions remain in force. The unrelated PI routine-tool
+proposal remains excluded and untouched.
