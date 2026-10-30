@@ -3496,3 +3496,22 @@ revised manifest before commit or execution.
 
 All prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-161 — Accept corrected iPad-first table controller and manifest
+
+Recorded on 2026-10-29 at PI direction after AGy Gate 2 returned independent
+PASS on request-041 and Claude Gate 1 closed its single mechanical blocker on
+focused recheck request-042.
+
+Accept the corrected presentation controller at SHA-256
+`cb7e5758d5d707d698bf4d973b8a1ac7970e9bb62e809c13918d278eabd4283b`
+and revised runtime manifest at SHA-256
+`ad33928a2d1e7bce6a47aecd437c92ce73d014879b16281c1ab3837b70abdd59`.
+The exact artifacts are committed in the separate presentation repository as
+`15a855fea252e7b7ea14936326d5f4b06312b86a`. That repository has no configured
+remote, so no presentation push is possible.
+
+Authorize commit of those exact artifacts and synchronized canonical records.
+Authorize creation only of the final bounded execution authorization. No test,
+execution or listener is authorized. All prior exclusions remain in force. The
+unrelated PI routine-tool proposal remains excluded and untouched.

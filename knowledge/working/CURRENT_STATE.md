@@ -1275,3 +1275,14 @@ corresponding manifest update is authorized. No test, execution or listener is
 authorized; both corrected artifacts require blind dual static review before
 commit or execution. All prior exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+D-161 accepts the corrected iPad-first table controller at SHA-256
+`cb7e5758d5d707d698bf4d973b8a1ac7970e9bb62e809c13918d278eabd4283b`
+and revised runtime manifest at SHA-256
+`ad33928a2d1e7bce6a47aecd437c92ce73d014879b16281c1ab3837b70abdd59`
+after AGy request-041 PASS and Claude focused request-042 PASS. The artifacts
+are committed locally in the presentation repository as `15a855f`; that
+repository has no remote. Creation only of the final bounded execution
+authorization is permitted. No test, execution or listener is authorized. All
+prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.
