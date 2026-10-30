@@ -3958,3 +3958,38 @@ execution, Project Agent, mBot2, CyberPi, Misty, sensor, speech or movement work
 is authorized. Both blind gates must review the proposal and request before any
 preview execution. All prior exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded, unread and untouched.
+
+## D-178 — Accept single-path Beryl preview proposal and authorize read-only preflight
+
+Recorded on 2026-10-30 at PI direction after AGy Gate 2 independently returned
+PASS on blind review request-074 and Claude Gate 1 returned PASS on focused
+recheck request-075, closing both request-074 blockers.
+
+Accept
+`knowledge/proposals/IIW_FLOW_A_SINGLE_PATH_BERYL_PREVIEW_PROPOSAL_2026-10-30.md`
+at SHA-256
+`0a1dcbee2669a1d4dc27b9caa89a5776f3a7f8ae59a059f135b1b1ff3cfb2a03`
+and the currently non-executable
+`knowledge/proposals/IIW_FLOW_A_SINGLE_PATH_BERYL_PREVIEW_EXECUTION_REQUEST_2026-10-30.md`
+at SHA-256
+`a77d93bdcf9df9998eaab1253f6a336366974f690d35d0f1d467eb4946f27a53`.
+
+Authorize commit and push of those exact documents, this decision and
+synchronized canonical state.
+
+After the PI manually joins the laptop to Beryl, authorize one read-only local
+interface/address preflight without opening the Beryl admin page. Permit only
+the reviewed local route/interface inventory, `ipconfig getifaddr` and
+`ifconfig <interface> inet` checks needed to establish exactly one private IPv4
+address. Record the exact interface and literal IPv4. If they cannot be
+established exactly, stop.
+
+After successful preflight, authorize create-only correction of
+`run_beryl_visual_preview.py` under the exact reviewed proposal and completion
+of the execution request with the exact launcher hash, bases, allow-lists,
+expected status outputs and pinned interface/address. Do not execute the
+launcher, open a listener, generate or scan a QR code, contact the iPad or
+another device, or begin an encounter. The complete launcher and completed
+request require blind dual static review before any preview execution. All
+prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded, unread and untouched.

@@ -1487,3 +1487,18 @@ Agent, mBot2, CyberPi, Misty, sensors, speech, movement, G28 or G29 is
 authorized. Both blind gates must review the proposal and request before any
 preview execution. All prior exclusions remain in force; the unrelated PI
 routine-tool proposal remains excluded, unread and untouched.
+
+D-178 accepts the independently reviewed single-path Beryl laptop-preview
+proposal at SHA-256
+`0a1dcbee2669a1d4dc27b9caa89a5776f3a7f8ae59a059f135b1b1ff3cfb2a03`
+and its non-executable request at SHA-256
+`a77d93bdcf9df9998eaab1253f6a336366974f690d35d0f1d467eb4946f27a53`.
+After the PI manually joins the laptop to Beryl, one read-only local
+interface/address preflight is authorized. Successful preflight authorizes
+create-only launcher correction and completion of the exact request. No
+launcher execution, listener, QR generation or scan, device contact,
+encounter, meeting-agent work, Project Agent, mBot2, CyberPi, Misty, sensors,
+speech, movement, G28 or G29 is authorized. Blind dual static review of the
+complete launcher and completed request is required before preview execution.
+All prior exclusions remain in force; the unrelated PI routine-tool proposal
+remains excluded, unread and untouched.
