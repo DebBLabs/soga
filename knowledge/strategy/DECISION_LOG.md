@@ -3473,3 +3473,26 @@ access, live QR, device contact, Project Agent, mBot2, Misty, G28 or G29 is
 authorized pending blind dual review and prospective PI authorization. All
 D-158 exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded and untouched.
+
+## D-160 — Accept iPad-first table synthetic execution proposal
+
+Recorded on 2026-10-29 at PI direction after AGy Gate 2 returned PASS on blind
+request-039 and Claude Gate 1 returned PASS on the request-040 mechanical
+recheck.
+
+Accept
+`knowledge/proposals/IIW_IPAD_FIRST_TABLE_SYNTHETIC_EXECUTION_PROPOSAL_2026-10-29.md`
+at SHA-256
+`5e76e78e20a0baa4cc43f27933eae931145d986c45e484829753277a03521e93`
+and the current presentation `table-runtime-manifest.json` at SHA-256
+`3c03563f5f3873c6e00da4a9d4c1b28cd6437225f1c8793e57662816a6092a19`.
+
+Authorize commit and push of the exact proposal, this acceptance decision and
+synchronized canonical state. Authorize create-only correction of
+`run_fictional_parent_presentation_tests.py` limited to the reviewed
+basis-check logic, plus the corresponding manifest update. Do not execute tests
+or open listeners. Both blind gates must review the corrected controller and
+revised manifest before commit or execution.
+
+All prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded and untouched.

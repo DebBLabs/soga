@@ -1264,3 +1264,14 @@ runtime manifest is authorized. No test, execution, listener, Beryl/LAN, live
 QR, device, Project Agent, mBot2, Misty, G28 or G29 activity is authorized
 without blind dual review and prospective PI authorization. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+D-160 accepts the independently reviewed iPad-first table synthetic-loopback
+execution proposal at SHA-256
+`5e76e78e20a0baa4cc43f27933eae931145d986c45e484829753277a03521e93`
+and current runtime manifest at SHA-256
+`3c03563f5f3873c6e00da4a9d4c1b28cd6437225f1c8793e57662816a6092a19`.
+Create-only correction of the presentation controller's basis-check logic and
+corresponding manifest update is authorized. No test, execution or listener is
+authorized; both corrected artifacts require blind dual static review before
+commit or execution. All prior exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded and untouched.
