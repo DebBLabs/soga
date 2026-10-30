@@ -1311,3 +1311,13 @@ failure was the whole-file negative assertion in
 no retry. Bounded source-only diagnosis is authorized, but no source change,
 import, compilation, test, listener or retry. All exclusions remain in force;
 the unrelated PI routine-tool proposal remains excluded and untouched.
+
+D-164 accepts the independently reviewed Test 19 source diagnosis at SHA-256
+`f6c08a50efe6ed6bbcff84c9b3e68d745c502df1e9828a2b234bf87707f9ecfd`.
+The raw fictional-parent choice bytes are forwarded unchanged under the bridge
+lock; the sole D-162 failure is the test's whole-file negative assertion
+matching the unrelated outbound response serializer. `bridge.py` requires no
+correction for this finding. Creation only of one combined test-correction and
+R2 execution proposal is authorized. No source change, test, listener or retry
+is authorized. All exclusions remain in force; the unrelated PI routine-tool
+proposal remains excluded and untouched.

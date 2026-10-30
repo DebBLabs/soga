@@ -3564,3 +3564,27 @@ state. Authorize bounded source-only diagnosis of the sole failed assertion,
 with no source modification, import, compilation, test execution, listener or
 retry. All prior exclusions remain in force. The unrelated PI routine-tool
 proposal remains excluded and untouched.
+
+## D-164 — Accept iPad-first table Test 19 source diagnosis
+
+Recorded on 2026-10-29 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind source-diagnosis review request-046.
+
+Accept
+`knowledge/research/IIW_IPAD_FIRST_TABLE_TEST19_SOURCE_DIAGNOSIS_2026-10-29.md`
+at SHA-256
+`f6c08a50efe6ed6bbcff84c9b3e68d745c502df1e9828a2b234bf87707f9ecfd`.
+The accepted source establishes that the fictional-parent choice path forwards
+`raw_body` unchanged under the bridge lock and returns before the later JSON
+parse branch. The sole D-162 failure came from Test 19's whole-file negative
+assertion matching the unrelated outbound response serializer in `_send`.
+`bridge.py` requires no correction for this finding.
+
+Authorize commit and push of the exact diagnosis, this decision and synchronized
+canonical state. Authorize creation only of one combined test-correction and R2
+execution proposal. The later source correction must be limited to Test 19,
+with corresponding controller/manifest and reviewed basis/allow-list treatment,
+preserved v1 evidence and a new absent `iiw-table-foundation-v2` evidence path.
+No source modification, test, listener or retry is yet authorized. All prior
+exclusions remain in force. The unrelated PI routine-tool proposal remains
+excluded and untouched.
