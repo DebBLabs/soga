@@ -1392,3 +1392,15 @@ separately controlled laptop-only visual-preview phase before any iPad
 rehearsal. No Beryl access, listener, QR, device contact, Project Agent
 execution, mBot2 or Misty is authorized. All exclusions remain in force; the
 unrelated PI routine-tool proposal remains excluded and untouched.
+
+D-171 accepts the corrected two-phase Beryl visual-preview and iPad live-
+rehearsal proposal at SHA-256
+`d7a3fca4cd60a1967576ef6f8452a10ecfeee28fcf9c2a05f1374affd160523c`
+after AGy Gate 2 request-058 PASS and Claude Gate 1 focused request-059 PASS.
+Read-only Beryl/interface preflight and creation only of the bounded Phase A
+laptop-only visual-preview launcher and execution request are authorized. No
+Beryl access, listener, QR generation or scan, device contact, Phase B, Project
+Agent, mBot2, Misty or preview execution is authorized. Both blind gates must
+review the Phase A launcher and execution request before execution. All prior
+exclusions remain in force; the unrelated PI routine-tool proposal remains
+excluded and untouched.

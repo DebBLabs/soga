@@ -3763,3 +3763,23 @@ gates must review the corrected proposal before any preview or rehearsal. No
 Beryl access, listener, QR, device contact, Project Agent execution, mBot2 or
 Misty is yet authorized. All prior exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded and untouched.
+
+## D-171 — Accept corrected Beryl visual-preview and iPad rehearsal proposal
+
+Recorded on 2026-10-30 at PI direction after AGy Gate 2 returned PASS on
+request-058 and Claude Gate 1 returned PASS on focused recheck request-059.
+
+Accept
+`knowledge/proposals/IIW_BERYL_IPAD_LIVE_REHEARSAL_PROPOSAL_2026-10-29.md`
+at SHA-256
+`d7a3fca4cd60a1967576ef6f8452a10ecfeee28fcf9c2a05f1374affd160523c`.
+Authorize commit and push of the exact reviewed proposal, this decision and
+synchronized canonical state.
+
+Authorize read-only Beryl/interface preflight and creation only of the bounded
+Phase A laptop-only visual-preview launcher and execution request. Do not access
+Beryl, open a listener, generate or scan a QR code, contact the iPad or another
+device, begin Phase B, activate Project Agent, mBot2 or Misty, or execute the
+preview. Both blind gates must review the Phase A launcher and execution request
+before Phase A execution. All prior exclusions remain in force. The unrelated
+PI routine-tool proposal remains excluded and untouched.
