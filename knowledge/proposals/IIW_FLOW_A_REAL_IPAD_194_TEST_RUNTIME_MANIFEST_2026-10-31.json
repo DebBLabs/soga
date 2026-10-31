@@ -1,0 +1,75 @@
+{
+  "schema": 1,
+  "status": "CORRECTED_AFTER_REQUEST_086_NOT_AUTHORIZED_FOR_EXECUTION",
+  "proposal": "knowledge/proposals/IIW_FLOW_A_REAL_IPAD_194_TEST_EXECUTION_PROPOSAL_2026-10-31.md",
+  "proposal_sha256": "e60a104dbfd2066e72e8ac8cd397af6e04af71eb30817e7b14811cae46585dd4",
+  "presentation_repository": "/Users/debb/dev/permission-to-speak-work/permission-to-speak",
+  "presentation_commit": "964f12626c9220e45a634d85fa407205aa9d9f3d",
+  "presentation_remote": "https://github.com/DebBLabs/permission-to-speak.git",
+  "soga_source_basis": "8746e0cc383ec9d48ab16c89bcea5a88c79ed4d8",
+  "presentation_source_basis": "3a8a919b80b674b4681b961e932133c2ec38488d",
+  "controller": {
+    "path": "run_fictional_parent_presentation_tests.py",
+    "sha256": "e66d8a9063ef8050cbba3259f45a6196b7d7b54f26040ccf20ecd74f25f0a3e3",
+    "timeout_seconds": 150,
+    "stream_limit_bytes": 2000000,
+    "expected_baseline_tests": 128,
+    "expected_presentation_tests": 66,
+    "expected_total_tests": 194
+  },
+  "runtime": {
+    "system": "Darwin",
+    "machine": "arm64",
+    "interpreter": "/usr/bin/python3",
+    "interpreter_resolved": "/Library/Developer/CommandLineTools/usr/bin/python3",
+    "python": "3.9.6"
+  },
+  "evidence_path": "/Users/debb/dev/research-evidence/soga/evidence/iiw-flow-a-real-ipad-v1",
+  "evidence_path_must_be_absent": true,
+  "automatic_retry": false,
+  "execution_documents_must_remain_untracked_through_evidence_review": true,
+  "soga_tracked_paths_permitted_after_basis": [
+    "knowledge/strategy/DECISION_LOG.md",
+    "knowledge/working/CURRENT_STATE.md"
+  ],
+  "operator_observations": {
+    "before_and_after": [
+      "bounded listener inventory using lsof -nP -iTCP -sTCP:LISTEN",
+      "bounded process inventory for prior or remaining bridge/controller children",
+      "ports 4317 and 4318 unused"
+    ],
+    "after_only": [
+      "evidence directory contains exactly evidence.json, stdout.txt and stderr.txt"
+    ],
+    "classification": "recorded operator observations, not controller-enforced OS network confinement"
+  },
+  "files": {
+    "bridge.py": "ce732d1ce8be18618e6187b35e1770680785365c99782501075c7338983292b2",
+    "flow-a-live.html": "6e02bdb5f2bdb8e9dd4a8cbc5fde21c273f93f8ba76fdddf7130a6373b2ce3d7",
+    "flow-a-approved.html": "6e02bdb5f2bdb8e9dd4a8cbc5fde21c273f93f8ba76fdddf7130a6373b2ce3d7",
+    "index.html": "f2023fb096e0bf59567ee6efbcef45f22ef65fec294332f08b2ac8cacd9e8c86",
+    "test_fictional_parent_presentation.py": "59463258334b2febbe22ea4924c66c6527dd45592f0e7a87decf778f6d245d48",
+    "run_fictional_parent_presentation_tests.py": "e66d8a9063ef8050cbba3259f45a6196b7d7b54f26040ccf20ecd74f25f0a3e3",
+    "table-runtime-manifest.json": "b9cf7cf9f6994cd8f23fcad9b9a9a61515cf0a7fb5ae5d921d88bfce67fe0f67",
+    "FLOW_A_RUNTIME_MAPPING_2026-10-31.md": "45f1eb905a5a798daafbcd4f4c6b650629430727530cefb57ba8a6e7d2628572",
+    "README.md": "824d6113fbc382912eff0fc519536d5ee765b369559e83e4708689ae7ab55b03",
+    "CHECKLIST.md": "dd71f30704130c08a6257977f342e418180d028b8387b6a5c4f3b1305aaba022"
+  },
+  "claim_boundary": "bounded synthetic-loopback behavior of the exact accepted Flow A package and preserved 128-test SOGA baseline only",
+  "excluded": [
+    "execution before blind dual review and prospective PI authorization",
+    "Beryl or LAN access",
+    "live QR generation or scan",
+    "iPad or device contact",
+    "wallet or WAS integration",
+    "mBot2",
+    "CyberPi",
+    "Misty",
+    "sensors",
+    "speech",
+    "movement",
+    "G28",
+    "G29",
+    "PI routine-tool proposal"
+  ]
+}

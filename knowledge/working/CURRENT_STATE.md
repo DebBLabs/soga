@@ -1552,3 +1552,15 @@ limits, the absent `iiw-flow-a-real-ipad-v1` evidence directory and no retry.
 The execution-planning and authorization documents remain untracked through
 execution and blind evidence review. No Beryl/LAN, live QR, iPad/device,
 wallet/WAS, robot, sensor, speech, movement, G28 or G29 work is authorized.
+
+D-183 accepts the D-182 execution as a gated positive result after independent
+request-088 PASS from Claude Gate 1 and AGy Gate 2. All 194 tests passed: 128
+accepted SOGA baseline tests and 66 Flow A presentation tests, with both child
+return codes zero and no failure, error, skip, timeout, overflow, measured
+mutation or retry. The accepted evidence report SHA-256 is
+`c11615021ad5b7e0c796d9e5ee522752e230aaf5ccdcc8061dfa34b97d046a29`;
+the exact three durable evidence files are recorded in D-183. The stopped
+preflight preview was the PI-authorized literal-loopback walkthrough, not a
+Beryl listener or test attempt. The claim remains bounded synthetic loopback
+only. Creation only of a Beryl/iPad live-rehearsal proposal and operator
+checklist is authorized; no rehearsal or further execution is authorized.
