@@ -1502,3 +1502,18 @@ speech, movement, G28 or G29 is authorized. Blind dual static review of the
 complete launcher and completed request is required before preview execution.
 All prior exclusions remain in force; the unrelated PI routine-tool proposal
 remains excluded, unread and untouched.
+
+D-179 accepts the exact single-path Beryl preview launcher at SHA-256
+`c6f8a408f864e1e7eedd4220989e8a506ff8a1eac46615e0c97ec89519ff5f09`
+and completed request at SHA-256
+`c6fc5556e6c878537aa27f9aac937bfbb5b01eb249f7aba88867c0daa61207e9`.
+The launcher is committed in the presentation repository at
+`3a8a919b80b674b4681b961e932133c2ec38488d`. D-179 explicitly reorders
+D-176 holdpoints 4–6 for one laptop-only, no-encounter visual preview and
+authorizes one bounded attempt on `en0` / `192.168.8.247`, with no retry and
+blind dual evidence review afterward. The complete 163-test execution and
+accepted evidence remain mandatory before Phase B, QR/iPad rehearsal,
+encounter execution or public use. No QR scan, device contact, decision,
+meeting-agent, Project Agent, mBot2, CyberPi, Misty, sensor, speech, movement,
+G28 or G29 work is authorized. All prior exclusions remain in force; the
+unrelated PI routine-tool proposal remains excluded, unread and untouched.

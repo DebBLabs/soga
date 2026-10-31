@@ -3993,3 +3993,41 @@ another device, or begin an encounter. The complete launcher and completed
 request require blind dual static review before any preview execution. All
 prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded, unread and untouched.
+
+## D-179 — Accept single-path preview launcher and authorize one reordered preview
+
+Recorded on 2026-10-30 at PI direction after AGy Gate 2 independently returned
+PASS on blind static review request-076 and Claude Gate 1 confirmed that the
+launcher and completed request were technically correct while raising the
+D-176 holdpoint-order decision for PI disposition.
+
+Accept the corrected presentation launcher
+`run_beryl_visual_preview.py` at SHA-256
+`c6f8a408f864e1e7eedd4220989e8a506ff8a1eac46615e0c97ec89519ff5f09`
+and completed
+`knowledge/proposals/IIW_FLOW_A_SINGLE_PATH_BERYL_PREVIEW_EXECUTION_REQUEST_2026-10-30.md`
+at SHA-256
+`c6fc5556e6c878537aa27f9aac937bfbb5b01eb249f7aba88867c0daa61207e9`.
+The launcher is committed in the presentation repository at
+`3a8a919b80b674b4681b961e932133c2ec38488d`.
+
+Explicitly reorder D-176 holdpoints 4–6 for this laptop-only visual preview.
+The preview may precede the 163-test execution because its reviewed operator
+path performs only laptop GETs, cannot scan the QR, begin an encounter, submit
+a choice, invoke an AAuth/SOGA decision or change application state. This is a
+package-specific sequencing decision and creates no precedent.
+
+Authorize commit and push of the exact completed request, this decision and
+synchronized canonical state. Then authorize exactly one bounded laptop-only
+Beryl preview under the reviewed controls, using interface `en0`, literal IPv4
+`192.168.8.247`, and the initially absent
+`iiw-beryl-single-path-preview-v1` evidence directory. No automatic retry.
+Resulting evidence requires blind dual review and explicit PI visual acceptance.
+
+The complete 163-test execution and accepted evidence remain mandatory before
+Phase B, QR/iPad rehearsal, encounter execution or public use. The preview
+launcher is expected to be superseded and re-pinned after that evidence is
+accepted. No QR scan, iPad/device contact, encounter, AAuth/SOGA decision,
+meeting-agent work, Project Agent, mBot2, CyberPi, Misty, sensor, speech or
+movement work is authorized. All prior exclusions remain in force. The
+unrelated PI routine-tool proposal remains excluded, unread and untouched.
