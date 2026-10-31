@@ -1577,3 +1577,16 @@ and protocol SHA-256
 `295ba2a0edd99dd077c4c877b6276608000419fdf4bbef2327da0c6e4d950953`
 is authorized. No launcher creation, rehearsal, listener, Beryl, QR, device or
 robot activity is authorized pending blind dual review and PI acceptance.
+
+D-185 accepts the source-only Flow A step-2 AAuth `fcf656d` readiness
+reconciliation at SHA-256
+`04a8f3acdb5289b5a0562daebbed9a729ba09c034ff4d50ddf40feac5715d226`
+after independent focused request-093 PASS from Claude Gate 1 and AGy Gate 2.
+The visible sequence accurately represents the bounded three-party AAuth token
+flow. The literal paths and SOGA/demo bindings remain local composition, while
+`requirement=approval` and its deferred-response polling primitive are defined
+by AAuth `fcf656d`. No visitor-visible wording change is required. Creation
+only of the bounded Beryl/iPad rehearsal launcher and execution request is
+authorized under D-184; both require blind dual review before execution. No
+launcher execution, Beryl, listener, QR, iPad/device or robot activity is
+authorized.

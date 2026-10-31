@@ -4185,3 +4185,31 @@ No launcher creation or execution, Beryl access, listener, QR generation or
 scan, iPad contact, mBot2, CyberPi, Misty, sensor, speech or movement is
 authorized. All prior exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded, unread and untouched.
+
+## D-185 — Accept Flow A step-2 AAuth readiness reconciliation and authorize launcher creation only
+
+Recorded on 2026-10-31 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused request-093, closing their common
+request-092 blocker.
+
+Accept
+`knowledge/research/IIW_FLOW_A_STEP2_AAUTH_FCF656D_READINESS_RECONCILIATION_2026-10-31.md`
+at SHA-256
+`04a8f3acdb5289b5a0562daebbed9a729ba09c034ff4d50ddf40feac5715d226`.
+
+The visible sequence accurately represents the bounded three-party AAuth token
+flow. The literal endpoint paths, SOGA policy and bindings, fictional-adult
+input channel, interaction-zone rules and timing windows remain local
+composition. `requirement=approval` and its deferred-response polling primitive
+are defined by AAuth `fcf656d`. No visitor-visible wording change is required.
+
+Authorize commit and push of the exact reconciliation, this decision and
+synchronized canonical state. Authorize creation only of the bounded
+Beryl/iPad rehearsal launcher and execution request under the D-184 accepted
+proposal and checklist. The exact launcher and request require blind dual
+review before any rehearsal execution.
+
+No launcher execution, Beryl access, listener, QR generation or scan, iPad
+contact, mBot2, CyberPi, Misty, sensor, speech or movement is authorized. All
+prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded, unread and untouched.
