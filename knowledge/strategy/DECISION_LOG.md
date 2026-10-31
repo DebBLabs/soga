@@ -4091,3 +4091,30 @@ network, Beryl, QR, device, robot, G28 or G29 authority. The unreviewed 194-test
 proposal and runtime manifest may record the new private remote but remain
 unaccepted and non-executable. The unrelated PI routine-tool proposal remains
 excluded, unread and untouched.
+
+## D-182 — Accept corrected Flow A 194-test plan and authorize one bounded execution
+
+Recorded on 2026-10-31 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on request-087, closing both request-086 blockers.
+
+Accept the corrected execution proposal at SHA-256
+`e60a104dbfd2066e72e8ac8cd397af6e04af71eb30817e7b14811cae46585dd4`
+and companion runtime manifest at SHA-256
+`647f3be5a1ecc1eaf5163962ff4f9ffd5cbe97a18595925ced78c03d335c82b3`.
+The proposal, manifest, execution request and authorization must remain
+untracked through execution and blind evidence review so the accepted
+controller's tracked SOGA allow-list remains satisfiable.
+
+Authorize exactly one bounded execution of the committed 194-test controller
+at SHA-256
+`e66d8a9063ef8050cbba3259f45a6196b7d7b54f26040ccf20ecd74f25f0a3e3`
+under the corrected proposal and manifest. Require every reviewed pre-start
+holdpoint; recorded before-and-after listener and process observations; the
+initially absent `iiw-flow-a-real-ipad-v1` evidence directory; exactly three
+evidence files; finite limits; and no automatic retry. Resulting durable
+evidence requires blind dual review before acceptance or use.
+
+No Beryl/LAN access, live QR generation or scan, iPad/device contact,
+wallet/WAS work, mBot2, CyberPi, Misty, sensors, speech, movement, G28 or G29
+is authorized. The unrelated PI routine-tool proposal remains excluded,
+unread and untouched.

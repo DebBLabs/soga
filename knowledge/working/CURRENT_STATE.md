@@ -1539,3 +1539,16 @@ Git bundle is stored outside temporary space at
 SHA-256
 `e2784106f39e22f763883a57844a49cfe1f3ec41e290809dcdd64b184ad42386`.
 This changes preservation only and grants no additional execution authority.
+
+D-182 accepts the corrected Flow A 194-test execution proposal at SHA-256
+`e60a104dbfd2066e72e8ac8cd397af6e04af71eb30817e7b14811cae46585dd4`
+and runtime manifest at SHA-256
+`647f3be5a1ecc1eaf5163962ff4f9ffd5cbe97a18595925ced78c03d335c82b3`
+after independent request-087 PASS from Claude Gate 1 and AGy Gate 2. Exactly
+one bounded execution of controller SHA-256
+`e66d8a9063ef8050cbba3259f45a6196b7d7b54f26040ccf20ecd74f25f0a3e3`
+is authorized with all reviewed holdpoints, operator observations, finite
+limits, the absent `iiw-flow-a-real-ipad-v1` evidence directory and no retry.
+The execution-planning and authorization documents remain untracked through
+execution and blind evidence review. No Beryl/LAN, live QR, iPad/device,
+wallet/WAS, robot, sensor, speech, movement, G28 or G29 work is authorized.
