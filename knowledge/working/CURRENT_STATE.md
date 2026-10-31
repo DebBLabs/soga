@@ -1517,3 +1517,15 @@ encounter execution or public use. No QR scan, device contact, decision,
 meeting-agent, Project Agent, mBot2, CyberPi, Misty, sensor, speech, movement,
 G28 or G29 work is authorized. All prior exclusions remain in force; the
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
+
+D-180 accepts the exact ten-file Flow A real-iPad reconciliation package after
+blind request-085 PASS from Claude Gate 1 and AGy Gate 2. The presentation
+package is committed locally at
+`964f12626c9220e45a634d85fa407205aa9d9f3d`; its repository has no configured
+remote, so no push is claimed. The PI-locked Flow A screens and wording remain
+frozen. Creation only of the bounded 194-test execution proposal and companion
+runtime manifest is authorized. Those artifacts are unaccepted and
+non-executable pending blind dual review. No test, listener, Beryl, QR,
+iPad/device contact, mBot2, CyberPi, Misty, sensor, speech, movement, G28 or G29
+is authorized. All prior exclusions remain in force; the unrelated PI
+routine-tool proposal remains excluded, unread and untouched.

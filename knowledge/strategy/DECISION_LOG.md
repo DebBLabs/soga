@@ -4031,3 +4031,41 @@ accepted. No QR scan, iPad/device contact, encounter, AAuth/SOGA decision,
 meeting-agent work, Project Agent, mBot2, CyberPi, Misty, sensor, speech or
 movement work is authorized. All prior exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
+
+## D-180 — Accept Flow A real-iPad reconciliation package and authorize execution-plan creation only
+
+Recorded on 2026-10-31 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on blind focused recheck request-085, closing the
+request-083 and request-084 blockers.
+
+Accept the Flow A real-iPad reconciliation package at these exact SHA-256
+values:
+
+- `bridge.py`: `ce732d1ce8be18618e6187b35e1770680785365c99782501075c7338983292b2`
+- `flow-a-live.html`: `6e02bdb5f2bdb8e9dd4a8cbc5fde21c273f93f8ba76fdddf7130a6373b2ce3d7`
+- `flow-a-approved.html`: `6e02bdb5f2bdb8e9dd4a8cbc5fde21c273f93f8ba76fdddf7130a6373b2ce3d7`
+- `index.html`: `f2023fb096e0bf59567ee6efbcef45f22ef65fec294332f08b2ac8cacd9e8c86`
+- `test_fictional_parent_presentation.py`: `59463258334b2febbe22ea4924c66c6527dd45592f0e7a87decf778f6d245d48`
+- `run_fictional_parent_presentation_tests.py`: `e66d8a9063ef8050cbba3259f45a6196b7d7b54f26040ccf20ecd74f25f0a3e3`
+- `table-runtime-manifest.json`: `b9cf7cf9f6994cd8f23fcad9b9a9a61515cf0a7fb5ae5d921d88bfce67fe0f67`
+- `FLOW_A_RUNTIME_MAPPING_2026-10-31.md`: `45f1eb905a5a798daafbcd4f4c6b650629430727530cefb57ba8a6e7d2628572`
+- `README.md`: `824d6113fbc382912eff0fc519536d5ee765b369559e83e4708689ae7ab55b03`
+- `CHECKLIST.md`: `dd71f30704130c08a6257977f342e418180d028b8387b6a5c4f3b1305aaba022`
+
+The exact package is committed locally in the separate presentation repository
+at `964f12626c9220e45a634d85fa407205aa9d9f3d`. That repository has no
+configured remote, so no push occurred and none is claimed. Preserve the
+PI-locked Flow A screens and wording unchanged.
+
+Authorize creation only of
+`knowledge/proposals/IIW_FLOW_A_REAL_IPAD_194_TEST_EXECUTION_PROPOSAL_2026-10-31.md`
+and companion
+`knowledge/proposals/IIW_FLOW_A_REAL_IPAD_194_TEST_RUNTIME_MANIFEST_2026-10-31.json`.
+They remain unaccepted and non-executable pending blind dual review. The future
+package is exactly 194 tests: 128 accepted SOGA baseline tests plus 66
+presentation tests.
+
+No test, import, compilation, lint, execution, listener, Beryl access, live QR,
+iPad/device contact, mBot2, CyberPi, Misty, sensor, speech, movement, G28 or G29
+is authorized. All prior exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded, unread and untouched.
