@@ -1529,3 +1529,13 @@ non-executable pending blind dual review. No test, listener, Beryl, QR,
 iPad/device contact, mBot2, CyberPi, Misty, sensor, speech, movement, G28 or G29
 is authorized. All prior exclusions remain in force; the unrelated PI
 routine-tool proposal remains excluded, unread and untouched.
+
+D-181 durably preserves the complete Permission to Speak repository and tags
+at the private remote `https://github.com/DebBLabs/permission-to-speak`, with
+`origin/main` verified at accepted commit
+`964f12626c9220e45a634d85fa407205aa9d9f3d`. A separately verified complete
+Git bundle is stored outside temporary space at
+`/Users/debb/dev/research-evidence/permission-to-speak-2026-10-31.bundle`,
+SHA-256
+`e2784106f39e22f763883a57844a49cfe1f3ec41e290809dcdd64b184ad42386`.
+This changes preservation only and grants no additional execution authority.

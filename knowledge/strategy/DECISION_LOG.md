@@ -4069,3 +4069,25 @@ No test, import, compilation, lint, execution, listener, Beryl access, live QR,
 iPad/device contact, mBot2, CyberPi, Misty, sensor, speech, movement, G28 or G29
 is authorized. All prior exclusions remain in force. The unrelated PI
 routine-tool proposal remains excluded, unread and untouched.
+
+## D-181 — Preserve the Permission to Speak repository durably
+
+Recorded on 2026-10-31 at PI direction after D-180.
+
+The complete presentation repository and all tags are preserved in the private
+GitHub repository `https://github.com/DebBLabs/permission-to-speak`. Remote
+`origin/main` was verified to equal the accepted local commit
+`964f12626c9220e45a634d85fa407205aa9d9f3d`.
+
+A second complete-history backup is preserved at
+`/Users/debb/dev/research-evidence/permission-to-speak-2026-10-31.bundle` at
+SHA-256
+`e2784106f39e22f763883a57844a49cfe1f3ec41e290809dcdd64b184ad42386`.
+`git bundle verify` reported a complete history containing `main`, `HEAD` and
+all eight presentation tags.
+
+This preservation action grants no implementation, test, execution, listener,
+network, Beryl, QR, device, robot, G28 or G29 authority. The unreviewed 194-test
+proposal and runtime manifest may record the new private remote but remain
+unaccepted and non-executable. The unrelated PI routine-tool proposal remains
+excluded, unread and untouched.
