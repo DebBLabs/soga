@@ -1564,3 +1564,16 @@ preflight preview was the PI-authorized literal-loopback walkthrough, not a
 Beryl listener or test attempt. The claim remains bounded synthetic loopback
 only. Creation only of a Beryl/iPad live-rehearsal proposal and operator
 checklist is authorized; no rehearsal or further execution is authorized.
+
+D-184 accepts the independently reviewed Beryl/iPad live-rehearsal proposal at
+SHA-256
+`5b5398cfdea334525d578c354e7c4d50a6e3b069e87e719703721c67e8dc0ae8`
+and operator checklist at SHA-256
+`1a2eba2d871f65e808378dd74b8f73eb4961ebf15118c757f7e4c8326aa57d13`.
+The PI confirms the exact target-state robot wording and the no-identifiable-
+child image boundary for a no-screenshot, no-robot rehearsal. Creation only of
+a source reconciliation report against AAuth commit `fcf656de1926535f5bd6fc0538147ead6646e727`
+and protocol SHA-256
+`295ba2a0edd99dd077c4c877b6276608000419fdf4bbef2327da0c6e4d950953`
+is authorized. No launcher creation, rehearsal, listener, Beryl, QR, device or
+robot activity is authorized pending blind dual review and PI acceptance.

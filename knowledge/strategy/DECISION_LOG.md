@@ -4155,3 +4155,33 @@ Authorize creation only of a bounded Beryl/iPad live-rehearsal proposal and
 operator checklist using the accepted package. No live rehearsal or additional
 execution is authorized. The unrelated PI routine-tool proposal remains
 excluded, unread and untouched.
+
+## D-184 — Accept Beryl/iPad rehearsal plan and authorize protocol reconciliation only
+
+Recorded on 2026-10-31 at PI direction. AGy Gate 2 and Claude Gate 1 returned
+PASS on request-090; Claude returned PASS on focused request-091 for the exact
+final wording.
+
+Accept the Flow A Beryl/iPad live-rehearsal proposal at SHA-256
+`5b5398cfdea334525d578c354e7c4d50a6e3b069e87e719703721c67e8dc0ae8`
+and operator checklist at SHA-256
+`1a2eba2d871f65e808378dd74b8f73eb4961ebf15118c757f7e4c8326aa57d13`.
+
+The PI confirms that the exact accepted mBot2/CyberPi, question, five-second
+pause and no-dance wording may be displayed as target-state explanation during
+the no-robot rehearsal and must not be presented as executed physical action.
+The PI also confirms that the accepted on-screen images contain no identifiable
+real child or undisclosed personal information and may be displayed under the
+no-screenshot rehearsal rule.
+
+Authorize creation only of a source-only readiness reconciliation report
+verifying the visible step-2 protocol screen against AAuth commit
+`fcf656de1926535f5bd6fc0538147ead6646e727` and protocol SHA-256
+`295ba2a0edd99dd077c4c877b6276608000419fdf4bbef2327da0c6e4d950953`.
+The report requires blind dual review and PI acceptance before any rehearsal
+launcher may be created.
+
+No launcher creation or execution, Beryl access, listener, QR generation or
+scan, iPad contact, mBot2, CyberPi, Misty, sensor, speech or movement is
+authorized. All prior exclusions remain in force. The unrelated PI
+routine-tool proposal remains excluded, unread and untouched.
