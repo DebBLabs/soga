@@ -4237,6 +4237,28 @@ No robot, mBot2, CyberPi, Misty, sensor, speech, movement, wallet/WAS, G28 or
 G29 activity is authorized. All prior exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
 
+## D-189 — Accept real-iPad origin diagnosis and authorize diagnostic implementation only
+
+Recorded on 2026-11-01 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on corrected-proposal request-103.
+
+Accept the source diagnosis at SHA-256
+`9e369f28c9475fb25c0940c52bdfab9cf2ecb3a1aabcb49088ed9519f951f753`
+and corrected origin-diagnostic proposal at SHA-256
+`656e1ed7bf8ca276dbdd7b7535e226f1aadf86f05b357b12579cd67efa3055a3`.
+
+Authorize commit and push of those exact artifacts, this decision and
+synchronized canonical state. Authorize create-only implementation of the
+bounded diagnostic-only mode, tests, launcher and execution request under the
+accepted proposal. Normal presentation behavior and all PI-locked Flow A
+screens and wording must remain unchanged. The complete implementation requires
+blind dual static review before commit or execution.
+
+No test or diagnostic execution, listener, Beryl access, QR generation or scan,
+iPad/device contact, terminal AAuth/SOGA decision or robot activity is
+authorized. All prior exclusions remain in force. The unrelated PI routine-tool
+proposal remains excluded, unread and untouched.
+
 ## D-188 — Accept Beryl/iPad R2 as a gated negative and authorize source-only diagnosis
 
 Recorded on 2026-11-01 at PI direction. AGy Gate 2 returned PASS on request-099;
