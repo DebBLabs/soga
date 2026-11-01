@@ -15,7 +15,7 @@ SOGA basis: `bf81e2fc57f24e4de3ed6b6f20afb9c90bc934c9`
 - `test_fictional_parent_presentation.py` SHA-256
   `c46ab4435ce6926e72a5ffff90b505d51a9dbeb26d52f5a5d12cc4ad57e4cb3c`
 - `run_beryl_origin_diagnostic.py` SHA-256
-  `a91109abdf46827d3e5d4570d7a74d4a7c5799da18d9b2064dfd00e701323a1b`
+  `20d0246be8c1353dc50dbabc9814bfa8b05e4f5445eac3585463d10d439c0335`
 
 Accepted D-188 report SHA-256:
 `312e574c4d1a3bfab5439b46f5593a66c351e39e8636667e0b526ed47cb43dd8`.
@@ -37,6 +37,8 @@ pre-invocation holdpoints. A failure here does not consume the attempt:
 
 - exact committed presentation and SOGA bases, exact source hashes and exact
   allow-lists limited to this request plus the authorizing decision/current state;
+- exact pinned SOGA `.claude/settings.local.json` identity while Git runs in
+  the reviewed stripped environment;
 - unchanged protected SOGA trees, the complete accepted evidence set, D-183 and
   D-188 reports, provider manifest, D-187 v2 evidence, and preserved-empty v1;
 - interface `en0` with literal Beryl IPv4 `192.168.8.247`, unchanged firewall,
