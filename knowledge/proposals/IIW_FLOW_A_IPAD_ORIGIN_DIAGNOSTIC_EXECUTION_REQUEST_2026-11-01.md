@@ -15,7 +15,7 @@ SOGA basis: `bf81e2fc57f24e4de3ed6b6f20afb9c90bc934c9`
 - `test_fictional_parent_presentation.py` SHA-256
   `c46ab4435ce6926e72a5ffff90b505d51a9dbeb26d52f5a5d12cc4ad57e4cb3c`
 - `run_beryl_origin_diagnostic.py` SHA-256
-  `20d0246be8c1353dc50dbabc9814bfa8b05e4f5445eac3585463d10d439c0335`
+  `7aacfda1c115cbc63afa2f3ba6b2e96410dad146c2505f98710e4402779c7e43`
 
 Accepted D-188 report SHA-256:
 `312e574c4d1a3bfab5439b46f5593a66c351e39e8636667e0b526ed47cb43dd8`.
@@ -27,7 +27,9 @@ After the exact package is committed and separately authorized, permit exactly
 one execution of the exact diagnostic launcher. The initially absent durable
 evidence directory must be:
 
-`/Users/debb/dev/research-evidence/soga/evidence/iiw-flow-a-ipad-origin-diagnostic-v1`
+`/Users/debb/dev/research-evidence/soga/evidence/iiw-flow-a-ipad-origin-diagnostic-v2`
+
+The stopped v1 diagnostic evidence must remain present and byte-identical.
 
 Before the evidence directory is created, the launcher must enforce these
 pre-invocation holdpoints. A failure here does not consume the attempt:
@@ -50,6 +52,8 @@ After those holdpoints pass, the launcher must enforce:
 
 - a 300-second total limit and 2,000,000-byte limit for each child stream;
 - diagnostic-only bridge mode with background polling disabled;
+- print the exact table URL and open that exact URL automatically in Safari
+  after bridge readiness and before waiting for the iPad interaction;
 - one QR scan, lease claim and approach submission;
 - if approach is not `EXACT`, preservation of its existing fail-closed response
   and immediate stop;
