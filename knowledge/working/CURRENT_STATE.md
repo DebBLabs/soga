@@ -1610,3 +1610,11 @@ committed at presentation commit `bdb3b75`, and R2 request SHA-256
 One R2 Beryl/iPad rehearsal is authorized only after all eight holdpoints pass;
 v1 remains unchanged and v2 must initially be absent. No retry or robot
 activity is authorized.
+
+D-188 accepts the D-187 R2 rehearsal as a gated negative at evidence-report
+SHA-256 `312e574c4d1a3bfab5439b46f5593a66c351e39e8636667e0b526ed47cb43dd8`.
+The operator entered STOPPED and no scenario completed; cleanup and preservation
+passed. The reported `forbidden_origin` event is not instrumented, so its exact
+request header and page remain unresolved. Source-only diagnosis and creation
+only of a correction proposal are authorized; source modification, execution,
+device access and retry remain prohibited pending blind dual review.

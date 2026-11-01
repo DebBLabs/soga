@@ -4237,6 +4237,33 @@ No robot, mBot2, CyberPi, Misty, sensor, speech, movement, wallet/WAS, G28 or
 G29 activity is authorized. All prior exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
 
+## D-188 — Accept Beryl/iPad R2 as a gated negative and authorize source-only diagnosis
+
+Recorded on 2026-11-01 at PI direction. AGy Gate 2 returned PASS on request-099;
+Claude Gate 1 returned PASS after focused request-101 closed the report-wording
+blocker.
+
+Accept the reviewed evidence report at SHA-256
+`312e574c4d1a3bfab5439b46f5593a66c351e39e8636667e0b526ed47cb43dd8`,
+evidence payload at SHA-256
+`3223834ba64914bbd4ec21d6be392aad7560eb1ba54776f1dd5764b3f4a712e3`,
+stdout at SHA-256
+`d9a3c2edeea58b2813ad2274190ade7eb6d658faf5742a5ef819ce9dce3988a2`,
+and empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+
+The operator entered STOPPED; no scenario completed. Cleanup passed, both
+listeners closed, accepted evidence and sources remained unchanged, and v1
+remained preserved empty. The PI-reported `forbidden_origin` observation is
+uninstrumented; no actual Origin header or exact page is inferred from the
+evidence.
+
+Authorize commit and push of the exact report, this decision and synchronized
+canonical state. Authorize bounded source-only diagnosis of the real-iPad
+origin rejection and creation only of a correction proposal. No source change,
+test, listener, Beryl/device access, retry or robot activity is authorized.
+Blind dual review is required before implementing any correction.
+
 ## D-187 — Accept stopped-attempt recovery and authorize one R2 Beryl/iPad rehearsal
 
 Recorded on 2026-11-01 at PI direction after Claude Gate 1 and AGy Gate 2
