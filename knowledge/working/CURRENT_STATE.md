@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-09-22
+Last Updated: 2026-11-01
 
 ---
 
@@ -1628,3 +1628,15 @@ execution request is authorized. Normal presentation behavior and all PI-locked
 Flow A screens/wording remain frozen. No test, listener, Beryl/QR/iPad access,
 diagnostic execution, terminal decision or robot activity is authorized; the
 complete created package requires blind dual static review before commit or use.
+
+D-190 accepts the independently reviewed corrected Origin-diagnostic package
+after request-106 PASS from Claude Gate 1 and AGy Gate 2. The exact presentation
+files are committed and pushed at `b44363b`; normal presentation behavior and
+all PI-locked Flow A screens and wording remain unchanged. The accepted
+194-test controller and D-187 rehearsal launcher are superseded. Exactly one
+bounded Beryl/iPad Origin diagnostic is authorized only after every reviewed
+pre-invocation holdpoint passes, with no retry. It may observe one approach and
+one role-play choice, but the choice must be intercepted before proxy, policy,
+store resolution or terminal AAuth/SOGA decision. Evidence requires blind dual
+review and PI acceptance. No directed response, additional encounter or robot
+activity is authorized; all prior exclusions remain in force.

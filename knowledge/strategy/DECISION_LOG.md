@@ -4314,3 +4314,35 @@ acceptance or use.
 No robot, mBot2, CyberPi, Misty, sensor, speech, movement, wallet/WAS, G28 or
 G29 activity is authorized. All prior exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
+
+## D-190 — Accept corrected Origin diagnostic and authorize one bounded execution
+
+Recorded on 2026-11-01 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on focused request-106.
+
+Accept the corrected diagnostic package at these exact SHA-256 values:
+
+- `bridge.py`: `67157d1afeaab13c5f81c238b34e7e82f43ca80ee0f42681f57f1324bc6f176d`
+- unchanged `index.html`: `f2023fb096e0bf59567ee6efbcef45f22ef65fec294332f08b2ac8cacd9e8c86`
+- `test_fictional_parent_presentation.py`: `c46ab4435ce6926e72a5ffff90b505d51a9dbeb26d52f5a5d12cc4ad57e4cb3c`
+- `run_beryl_origin_diagnostic.py`: `8114030e3c2006133c2c2c756c49fe3b0f186acce1dd5a996475660bfd9f6297`
+- execution request: `bae2669e776d2b4228074e0d57e5e3f1ee41edffbfa5a566509bc5ee0373007b`
+
+The exact presentation files are committed and pushed at `b44363b`. Normal
+presentation behavior and all PI-locked Flow A screens and wording remain
+unchanged. The accepted 194-test controller and D-187 rehearsal launcher are
+superseded by this corrected diagnostic package.
+
+Authorize commit and push of the exact execution request, this decision and
+synchronized canonical state. Then authorize exactly one bounded Beryl/iPad
+Origin-diagnostic execution under the reviewed request, only after every
+pre-invocation holdpoint passes. Permit exactly the reviewed laptop and
+controlled iPad A, Safari, diagnostic-only bridge, one QR scan, one approach
+and one role-play choice. The choice must be intercepted before proxy, policy,
+store resolution or terminal AAuth/SOGA decision. No automatic retry. Resulting
+durable evidence requires blind dual review and PI acceptance before use.
+
+No directed response, additional encounter, wallet/WAS work, robot, mBot2,
+CyberPi, Misty, sensor, speech, movement, G28 or G29 activity is authorized.
+All prior exclusions remain in force. The unrelated PI routine-tool proposal
+remains excluded, unread and untouched.
