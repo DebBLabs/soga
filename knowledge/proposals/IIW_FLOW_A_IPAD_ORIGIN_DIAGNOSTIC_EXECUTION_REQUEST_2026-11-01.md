@@ -15,7 +15,7 @@ SOGA basis: `bf81e2fc57f24e4de3ed6b6f20afb9c90bc934c9`
 - `test_fictional_parent_presentation.py` SHA-256
   `c46ab4435ce6926e72a5ffff90b505d51a9dbeb26d52f5a5d12cc4ad57e4cb3c`
 - `run_beryl_origin_diagnostic.py` SHA-256
-  `8114030e3c2006133c2c2c756c49fe3b0f186acce1dd5a996475660bfd9f6297`
+  `a91109abdf46827d3e5d4570d7a74d4a7c5799da18d9b2064dfd00e701323a1b`
 
 Accepted D-188 report SHA-256:
 `312e574c4d1a3bfab5439b46f5593a66c351e39e8636667e0b526ed47cb43dd8`.
@@ -31,6 +31,9 @@ evidence directory must be:
 
 Before the evidence directory is created, the launcher must enforce these
 pre-invocation holdpoints. A failure here does not consume the attempt:
+
+- report exactly one fixed, non-sensitive `PREFLIGHT_STOPPED:<STAGE>` label
+  identifying the failed holdpoint without disclosing exception text or values;
 
 - exact committed presentation and SOGA bases, exact source hashes and exact
   allow-lists limited to this request plus the authorizing decision/current state;
