@@ -4236,3 +4236,32 @@ and PI acceptance before use.
 No robot, mBot2, CyberPi, Misty, sensor, speech, movement, wallet/WAS, G28 or
 G29 activity is authorized. All prior exclusions remain in force. The
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
+
+## D-187 — Accept stopped-attempt recovery and authorize one R2 Beryl/iPad rehearsal
+
+Recorded on 2026-11-01 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on request-098.
+
+Accept the stopped-attempt recovery at SHA-256
+`1eba5687f4e01b304681ae10d7fd2b0e0618b3e7a836d23af9c0ddc75c7e227c`,
+corrected launcher at SHA-256
+`28393dad720a91230ca7e8e4a03773f3763d201187f692c7c9a7de5b1adfab55`,
+and R2 request at SHA-256
+`333b1bf8cf73bfabca07dd45b2921963947c4527942e33391892906dd2dab698`.
+The corrected launcher is committed in the presentation repository at
+`bdb3b75`.
+
+The first D-186 invocation is a consumed stopped attempt. Its empty v1
+directory remains preserved. The orphaned exact reviewed bridge was terminated
+and ports 4317 and 4318 were confirmed unused.
+
+Authorize commit and push of the exact recovery records, this decision and
+synchronized canonical state. Then authorize exactly one bounded R2 rehearsal
+only after all eight external pre-invocation holdpoints pass. Preserve v1 and
+write only to initially absent v2. No automatic retry. Require the reviewed
+post-exit listener/process check and blind dual evidence review before
+acceptance or use.
+
+No robot, mBot2, CyberPi, Misty, sensor, speech, movement, wallet/WAS, G28 or
+G29 activity is authorized. All prior exclusions remain in force. The
+unrelated PI routine-tool proposal remains excluded, unread and untouched.

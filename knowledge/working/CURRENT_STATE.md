@@ -1600,3 +1600,13 @@ committed in the presentation repository at `1e3e492`. Exactly one bounded
 Beryl/iPad rehearsal is authorized only after all external pre-invocation
 holdpoints pass. No automatic retry. Resulting evidence requires blind dual
 review and PI acceptance. No robot or other excluded activity is authorized.
+
+D-187 records the first D-186 invocation as a consumed stopped attempt with
+its empty v1 directory preserved and the orphaned reviewed bridge terminated.
+It accepts the request-098-reviewed recovery, corrected launcher SHA-256
+`28393dad720a91230ca7e8e4a03773f3763d201187f692c7c9a7de5b1adfab55`
+committed at presentation commit `bdb3b75`, and R2 request SHA-256
+`333b1bf8cf73bfabca07dd45b2921963947c4527942e33391892906dd2dab698`.
+One R2 Beryl/iPad rehearsal is authorized only after all eight holdpoints pass;
+v1 remains unchanged and v2 must initially be absent. No retry or robot
+activity is authorized.
