@@ -1590,3 +1590,13 @@ only of the bounded Beryl/iPad rehearsal launcher and execution request is
 authorized under D-184; both require blind dual review before execution. No
 launcher execution, Beryl, listener, QR, iPad/device or robot activity is
 authorized.
+
+D-186 accepts the exact dual-reviewed Beryl/iPad rehearsal launcher at SHA-256
+`f92ab65eb2b40e222afeb0d297cfcf28823f1f01b87156cebca69b22292ecdad`
+and execution request at SHA-256
+`3bb09dc1828c42043f1720e9acd470215c44f82d6eb6bbc6e6e4fa29b38f70bd`
+after request-096 PASS from Claude Gate 1 and AGy Gate 2. The launcher is
+committed in the presentation repository at `1e3e492`. Exactly one bounded
+Beryl/iPad rehearsal is authorized only after all external pre-invocation
+holdpoints pass. No automatic retry. Resulting evidence requires blind dual
+review and PI acceptance. No robot or other excluded activity is authorized.

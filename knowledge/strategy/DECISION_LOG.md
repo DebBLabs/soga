@@ -4213,3 +4213,26 @@ No launcher execution, Beryl access, listener, QR generation or scan, iPad
 contact, mBot2, CyberPi, Misty, sensor, speech or movement is authorized. All
 prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded, unread and untouched.
+
+## D-186 — Accept Beryl/iPad rehearsal instrument and authorize one bounded rehearsal
+
+Recorded on 2026-11-01 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on request-096 for the exact final bytes.
+
+Accept the corrected presentation launcher at SHA-256
+`f92ab65eb2b40e222afeb0d297cfcf28823f1f01b87156cebca69b22292ecdad`
+and the execution request at SHA-256
+`3bb09dc1828c42043f1720e9acd470215c44f82d6eb6bbc6e6e4fa29b38f70bd`.
+The launcher is committed in the presentation repository at `1e3e492`.
+
+Authorize commit and push of the exact execution request, this decision and
+synchronized canonical state. Then authorize exactly one bounded Beryl/iPad
+rehearsal under the reviewed controls, only after every external
+pre-invocation holdpoint passes. Permit exactly the laptop and controlled iPad
+A on Beryl, the reviewed listeners and the three role-play scenarios. No
+automatic retry. The resulting durable evidence requires blind dual review
+and PI acceptance before use.
+
+No robot, mBot2, CyberPi, Misty, sensor, speech, movement, wallet/WAS, G28 or
+G29 activity is authorized. All prior exclusions remain in force. The
+unrelated PI routine-tool proposal remains excluded, unread and untouched.
