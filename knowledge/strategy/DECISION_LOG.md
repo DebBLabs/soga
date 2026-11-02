@@ -4413,3 +4413,32 @@ the controlled laptop and iPad only. This validation produces no durable
 evidence and does not replace D-191. No robot, mBot2, CyberPi, Misty, sensor,
 speech or movement activity is authorized. The unrelated PI routine-tool
 proposal remains excluded, unread and untouched.
+
+## D-193 — Accept corrected IIW Shared Robot Gateway proposal
+
+Recorded on 2026-11-02 at PI direction after AGy Gate 2 independently returned
+PASS on the original request-112 review, Claude Gate 1 identified and rechecked
+the lifecycle, mode-separation and interim-network corrections in requests 112
+through 115, and AGy Gate 2 independently returned PASS on the complete corrected
+proposal in request 115.
+
+Accept the corrected `IIW_SHARED_ROBOT_GATEWAY_PROPOSAL_2026-11-02.md` at
+SHA-256
+`31f529286303a8f49f214745f835b6412a806097552e4c8237883b421243f780`.
+The accepted proposal preserves the D-191/D-192 public Flow A demonstration
+byte-identical and robot-free. Robot action requires a separately reviewed robot
+mode with exact invitation wording, an internal lifecycle seam, complete
+before/during/after stop handling, truthful receipts and the reviewed
+dual-network boundary.
+
+Authorize commit and push of the exact reviewed proposal, this decision and
+synchronized canonical state. Authorize creation only of an exact implementation
+proposal after the physical handoff identifies the selected Misty unit and
+verifies its identity, and establishes the supported mBot2/CyberPi control
+interface. The implementation proposal requires blind dual review before any
+implementation.
+
+No implementation, import, compilation, lint, test, listener, network change,
+Beryl access, Misty access, mBot2/CyberPi access, speech, light, sensor read,
+movement or physical execution is authorized. The unrelated PI routine-tool
+proposal remains excluded, unread and untouched.

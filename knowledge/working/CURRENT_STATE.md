@@ -1667,3 +1667,18 @@ The hotspot is an outbound collaboration uplink only; the demo remains local,
 with exactly the laptop and controlled iPad A on Beryl and no port forwarding
 or remote administration. One no-evidence public-mode validation is authorized.
 Robot activity remains unauthorized.
+
+D-193 accepts the corrected IIW Shared Robot Gateway proposal at SHA-256
+`31f529286303a8f49f214745f835b6412a806097552e4c8237883b421243f780`
+after Claude Gate 1 and AGy Gate 2 request-115 PASS. The accepted D-191/D-192
+public Flow A demonstration remains byte-identical and robot-free. The gateway
+proposal separates public and robot modes, fixes the exact invitation, defines
+the internal lifecycle producer and complete stop behavior, preserves truthful
+physical-outcome claims, and prohibits participant and robot devices from
+sharing Beryl before the separately reviewed dual-network phase.
+
+Creation only of an exact implementation proposal is authorized after the
+physical handoff identifies and verifies the selected Misty unit and establishes
+the supported mBot2/CyberPi control interface. No implementation, code execution,
+network/device access or physical robot activity is authorized. The unrelated
+PI routine-tool proposal remains excluded, unread and untouched.
