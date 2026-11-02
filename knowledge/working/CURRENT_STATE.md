@@ -1655,3 +1655,15 @@ operation, wallet/WAS or robot action. Creation only of a simplified public
 launcher and checklist and a separate mBot2/CyberPi integration proposal is
 authorized. No physical robot activation or movement is authorized pending
 review.
+
+D-192 accepts the independently reviewed simplified public table launcher at
+SHA-256 `27c0be9b8ecd4ba42dbac6a6a8055cdcc2209cefee735a8cffdb0cfb9a4356ac`
+and operator checklist at SHA-256
+`04e2fa1c2d34d18121b81749bc6dca6c44ff7dbca422c4868032c5f43170b127`.
+They are committed and pushed in the presentation repository at `c943e59`.
+The launcher removes rehearsal prompts and evidence collection while retaining
+the accepted address, port, minimal-environment and clean-shutdown controls.
+The hotspot is an outbound collaboration uplink only; the demo remains local,
+with exactly the laptop and controlled iPad A on Beryl and no port forwarding
+or remote administration. One no-evidence public-mode validation is authorized.
+Robot activity remains unauthorized.

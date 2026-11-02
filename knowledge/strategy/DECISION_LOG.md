@@ -4381,3 +4381,35 @@ evidence prompts, plus a separate mBot2/CyberPi integration proposal. mBot2,
 CyberPi and Misty must not be activated or moved before review authorizes a
 physical-robot execution. All prior exclusions remain in force. The unrelated
 PI routine-tool proposal remains excluded, unread and untouched.
+
+## D-192 — Accept simplified IIW public launcher and checklist
+
+Recorded on 2026-11-02 at PI direction after AGy Gate 2 returned PASS on
+request-110 and Claude Gate 1 closed its two request-110 blockers with a focused
+PASS on request-111.
+
+Accept the simplified public launcher `Start IIW Table.command` at SHA-256
+`27c0be9b8ecd4ba42dbac6a6a8055cdcc2209cefee735a8cffdb0cfb9a4356ac`
+and `IIW_TABLE_OPERATOR_CHECKLIST.md` at SHA-256
+`04e2fa1c2d34d18121b81749bc6dca6c44ff7dbca422c4868032c5f43170b127`.
+The exact files are committed and pushed in the presentation repository at
+`c943e59`.
+
+The launcher has no rehearsal attestations, evidence collection, retry,
+simulation fallback or robot activity. It fails closed unless literal
+`192.168.8.247` is assigned to `en0` and ports 4317 and 4318 are unused, then
+runs the accepted live bridge under the reviewed minimal environment. It opens
+only `/table` and `/flow-a`, and Control-C reaches the bridge for clean
+shutdown.
+
+The cellular hotspot provides an outbound collaboration uplink to Beryl while
+the demo remains on local Beryl and loopback addresses. Exactly the laptop and
+controlled iPad A may be associated with Beryl. Port forwarding and remote
+administration must not be enabled.
+
+Authorize commit and push of this decision and synchronized canonical state.
+Authorize one public-mode validation using the exact committed launcher with
+the controlled laptop and iPad only. This validation produces no durable
+evidence and does not replace D-191. No robot, mBot2, CyberPi, Misty, sensor,
+speech or movement activity is authorized. The unrelated PI routine-tool
+proposal remains excluded, unread and untouched.
