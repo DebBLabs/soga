@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-11-01
+Last Updated: 2026-11-02
 
 ---
 
@@ -1640,3 +1640,18 @@ one role-play choice, but the choice must be intercepted before proxy, policy,
 store resolution or terminal AAuth/SOGA decision. Evidence requires blind dual
 review and PI acceptance. No directed response, additional encounter or robot
 activity is authorized; all prior exclusions remain in force.
+
+D-191 accepts the complete Beryl/iPad v11 rehearsal as a gated positive after
+independent request-109 PASS from Claude Gate 1 and AGy Gate 2. The controlled
+laptop, Beryl and controlled iPad completed Leave before approach, Approve and
+Finish, Decline and Finish, and Approve then Withdraw. Pending and terminal
+states were sampled for every decision path, cleanup and preservation passed,
+and no retry occurred. The exact durable evidence is recorded in
+`knowledge/research/IIW_FLOW_A_BERYL_IPAD_V11_REHEARSAL_EVIDENCE_2026-11-02.md`.
+The accepted claim is the bounded real local laptop/Beryl/iPad interaction and
+associated AAuth/SOGA decision flow only; it does not establish identity,
+parenthood, legal authority or consent, full AAuth conformance, public-phone
+operation, wallet/WAS or robot action. Creation only of a simplified public
+launcher and checklist and a separate mBot2/CyberPi integration proposal is
+authorized. No physical robot activation or movement is authorized pending
+review.

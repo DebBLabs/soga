@@ -4346,3 +4346,38 @@ No directed response, additional encounter, wallet/WAS work, robot, mBot2,
 CyberPi, Misty, sensor, speech, movement, G28 or G29 activity is authorized.
 All prior exclusions remain in force. The unrelated PI routine-tool proposal
 remains excluded, unread and untouched.
+
+## D-191 — Accept complete Flow A Beryl/iPad v11 rehearsal
+
+Recorded on 2026-11-02 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on request-109.
+
+Accept the complete IIW Flow A Beryl/iPad v11 rehearsal as a gated positive
+result. Accept `evidence.json` at SHA-256
+`b863e09dede1dfe0462ebbfa12c2ce6e6e7dfb439874e750b5d831659885d9d5`,
+stdout at SHA-256
+`669f6f984ee8699fb3182f69a635523b8a6b4047ac7fc77f9c1232f55fd2b81d`,
+and empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+
+The controlled laptop, Beryl and controlled iPad completed all four reviewed
+paths: Leave before approach without creating an authorization decision;
+Approve followed by Finish; Decline followed by Finish; and Approve followed
+by Withdraw. Pending and terminal states were observed for every decision
+path. Cleanup passed, ports 4317 and 4318 were unused before and after, the
+associated-client count was exactly two, prior evidence and reviewed sources
+remained byte-identical, and no retry occurred.
+
+This establishes the real bounded local interaction among the laptop, Beryl
+and controlled iPad and the associated local AAuth/SOGA decision flow. It does
+not establish verified identity, parenthood, legal authority or consent,
+complete AAuth conformance, public-phone operation, wallet/WAS integration, or
+physical robot action.
+
+Authorize commit and push of the exact reviewed durable evidence report, this
+decision and synchronized canonical state. Authorize creation only of a
+simplified public-demo launcher and operator checklist without rehearsal
+evidence prompts, plus a separate mBot2/CyberPi integration proposal. mBot2,
+CyberPi and Misty must not be activated or moved before review authorizes a
+physical-robot execution. All prior exclusions remain in force. The unrelated
+PI routine-tool proposal remains excluded, unread and untouched.
