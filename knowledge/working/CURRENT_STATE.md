@@ -1682,3 +1682,20 @@ physical handoff identifies and verifies the selected Misty unit and establishes
 the supported mBot2/CyberPi control interface. No implementation, code execution,
 network/device access or physical robot activity is authorized. The unrelated
 PI routine-tool proposal remains excluded, unread and untouched.
+
+D-194 accepts the independently reviewed Misty-first Shared Gateway amendment at
+SHA-256
+`a110e9bc41daf351ab53e385de0df26d21b866d3319492e689711ef98e031085`.
+The Misty B handoff values are PI-reported and must be independently confirmed
+before physical access. The mBot2/CyberPi interface remains unresolved despite
+successful bench assembly and baseline bring-up, so the create-only phase uses
+only the zero-I/O unavailable placeholder
+`urn:debblabs:mbot2-iiw:unavailable` with no fallback.
+
+Creation only of the exact ten-file additive Misty-first gateway package is
+authorized. The accepted public Flow A remains byte-identical and robot-free.
+The complete created files require blind dual static review before commit or
+execution. No import, compilation, lint, test, execution, listener, network or
+device access, HTTP request, speech, light, sensor read, movement or physical
+robot activity is authorized. The unrelated PI routine-tool proposal remains
+excluded, unread and untouched.

@@ -4442,3 +4442,37 @@ No implementation, import, compilation, lint, test, listener, network change,
 Beryl access, Misty access, mBot2/CyberPi access, speech, light, sensor read,
 movement or physical execution is authorized. The unrelated PI routine-tool
 proposal remains excluded, unread and untouched.
+
+## D-194 — Accept Misty-first Shared Gateway amendment and authorize create-only implementation
+
+Recorded on 2026-11-02 at PI direction after AGy Gate 2 returned PASS on the
+complete corrected proposal in requests 116 through 118 and Claude Gate 1
+closed its request-116 through request-118 blockers with focused request-119
+PASS.
+
+Accept `IIW_MISTY_FIRST_GATEWAY_AMENDMENT_PROPOSAL_2026-11-02.md` at whole-file
+SHA-256
+`a110e9bc41daf351ab53e385de0df26d21b866d3319492e689711ef98e031085`.
+The Misty B handoff values are PI-reported inputs and must be independently
+confirmed before physical access. Acceptance records the PI-reported handoff as
+meeting D-193's Misty input for this create-only phase. It does not independently
+verify the robot identity or authorize physical contact.
+
+The amendment deliberately permits the shared gateway core and Misty adapter to
+be created while the mBot2/CyberPi runtime interface remains unresolved. The
+mBot2 bench assembly and baseline bring-up reported on 2026-11-02 does not yet
+establish a supported gateway interface. This phase therefore binds mBot2 only
+to `urn:debblabs:mbot2-iiw:unavailable`, performs zero mBot2 I/O and permits no
+fallback.
+
+Authorize commit and push of the exact reviewed amendment, this decision and
+synchronized canonical state. Authorize create-only implementation of the exact
+ten-file additive package under the amendment's controls. Preserve the accepted
+public Flow A demonstration byte-identical and robot-free. The complete created
+package and exact hashes require blind dual static review before commit or
+execution.
+
+No import, compilation, lint, test, execution, listener, Beryl access, Misty or
+mBot2 contact, HTTP request, speech, light, sensor read, movement or physical
+robot activity is authorized. The unrelated PI routine-tool proposal remains
+excluded, unread and untouched.
