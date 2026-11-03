@@ -4578,3 +4578,28 @@ completion-event transport, runtime tick driving, restart persistence,
 physical behavior, mBot2 behavior, or complete AAuth conformance. No physical
 robot execution or additional test execution is authorized. The unrelated PI
 routine-tool proposal remains excluded, unread and untouched.
+
+## D-198 — Accept Misty B stop-only verification proposal
+
+Recorded on 2026-11-03 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS with zero blockers on the final corrected proposal
+in request 134.
+
+Accept `IIW_MISTY_STOP_ONLY_VERIFICATION_PROPOSAL_2026-11-03.md` at whole-file
+SHA-256
+`f86690e4009979821189fa2240da9dd17f61472076c9b2847c31916b6a5d30bd`.
+Explicitly authorize this stop-only stage to precede the completion-event,
+runtime-driver and restart/lock stages defined by the D-194 sequence. This
+ordering decision closes no physical hold by itself.
+
+Authorize commit and push of the exact reviewed proposal, this prospective
+decision and synchronized canonical state. Then authorize create-only
+implementation of the proposal's exact six-file package. Preserve the accepted
+public Flow A demonstration and accepted Misty gateway package byte-identical.
+Every complete created file requires blind dual static review before commit or
+execution.
+
+No import, compilation, lint, test, execution, listener, Beryl access, Misty or
+mBot2 contact, robot command, speech, light, display, camera, microphone,
+sensor read, movement or other physical capability is authorized. The
+unrelated PI routine-tool proposal remains excluded, unread and untouched.
