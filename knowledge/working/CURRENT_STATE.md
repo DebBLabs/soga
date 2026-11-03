@@ -46,6 +46,13 @@ Only creation and blind dual review of a bounded synthetic execution proposal
 using the accepted runtime manifest is authorized. Physical work remains
 blocked on separate prospective review and PI authorization.
 
+Active authorization boundary: D-196 accepts the blind dual-reviewed Misty
+gateway synthetic execution proposal preserved outside the repository. Other
+SOGA repository work is frozen until this execution completes. One external
+execution request may be created and blind dual reviewed. If both gates PASS
+the exact request, exactly one bounded synthetic execution is authorized with
+no automatic retry. No network, Beryl or physical robot activity is authorized.
+
 Durable preservation accepted under D-082 after both blind request-051 PASS
 reviews. Backup: /Users/debb/dev/research-evidence/m02-was-20260917-001/environment.
 Full source/dependency/cache/build manifest verified independently by both gates;

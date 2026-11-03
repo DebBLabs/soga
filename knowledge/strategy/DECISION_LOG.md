@@ -4508,3 +4508,34 @@ work additionally requires reviewed completion-event driving, restart/lock
 behavior, harmless stop-only response verification and an exact execution
 command. All prior exclusions remain in force. The unrelated PI routine-tool
 proposal remains excluded, unread and untouched.
+
+## D-196 — Accept Misty gateway synthetic execution proposal
+
+Recorded on 2026-11-02 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on the corrected proposal in request 128.
+
+Accept the IIW Misty-first Gateway synthetic execution proposal at SHA-256
+`81d2d32848cc97b246cf112f5d0ca686e89fe19955f196e70d4fb1424c3d0b86`.
+The exact reviewed bytes are preserved outside the repository at
+`/Users/debb/dev/research-evidence/soga/proposals/IIW_MISTY_GATEWAY_SYNTHETIC_EXECUTION_PROPOSAL_2026-11-02.md`.
+The temporary untracked repository review copy is removed so it cannot violate
+the controller's clean-tree boundary.
+
+Authorize commit and push of this decision and synchronized canonical state.
+Freeze other SOGA repository work until the bounded synthetic execution is
+complete. Authorize creation and blind dual review of one external execution
+request pinning the resulting HEAD, controller SHA-256
+`a5e17e25d61dfb089ccdd8447b73337dcc60a7c7eff5c5f211a8990b2c46063e`,
+manifest SHA-256
+`27c0758984fa0653652d52cd8d47c45276fe357a6888f0f9b232c5037bd45aa6`
+and an external preflight-observation location.
+
+After both gates PASS that exact request, authorize exactly one bounded
+synthetic execution under the reviewed proposal and controller. Execution
+authority must be recorded outside the repository before invocation and added
+to the durable decision record afterward. No automatic retry.
+
+No listener, Beryl access, Misty or mBot2 contact, network request, robot
+command, speech, light, sensor read, movement or physical execution is
+authorized. The unrelated PI routine-tool proposal remains excluded, unread
+and untouched.
