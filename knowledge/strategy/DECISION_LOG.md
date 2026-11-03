@@ -4539,3 +4539,42 @@ No listener, Beryl access, Misty or mBot2 contact, network request, robot
 command, speech, light, sensor read, movement or physical execution is
 authorized. The unrelated PI routine-tool proposal remains excluded, unread
 and untouched.
+
+## D-197 — Accept Misty gateway synthetic execution and named preflight departure
+
+Recorded on 2026-11-03 at PI direction after the exact D-196 execution request
+received blind dual PASS in request 129, the single authorized synthetic
+execution completed, AGy Gate 2 returned PASS on the evidence in request 130,
+and Claude Gate 1 verified the clean run while identifying one preflight-record
+departure.
+
+Accept the operator clarification at SHA-256
+`a251241bb9ee2faa6971689f49dc86256fe65fc5802c32b9c187ec7665da71f7`.
+The read-only observations were made at approximately 23:09 on 2026-11-02;
+durable placement was delayed by the required host-filesystem approval; and
+the critical live holdpoints were rechecked before invocation.
+
+Explicitly accept that the external preflight JSON did not independently
+enumerate and recompute every holdpoint-5 hash. It relied on completed
+request-129 review verification and the pinned controller's
+pre-evidence-directory recomputation. The controller captured every hash in
+`evidence.json.before`, recomputed them afterward, and the complete before and
+after states matched the manifest. This is a package-specific recordkeeping
+departure and creates no precedent.
+
+Accept the synthetic execution evidence at SHA-256
+`865be12385e54b52434bde60eec983b20b33638985ac8c5241bca3157938395f`,
+stdout at SHA-256
+`6722a9705301502675c49c585a14d602e0b78efabc2e254fe464f3b724ff1547`,
+and empty stderr at SHA-256
+`e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855`.
+All 34 static and synthetic tests passed with protected state unchanged.
+
+Authorize commit and push of the exact durable evidence report, this decision,
+the exact execution authority, the exact accepted proposal and synchronized
+canonical state. This establishes bounded static and synthetic gateway
+behavior only—not Misty contact or behavior, real StopSpeaking response shape,
+completion-event transport, runtime tick driving, restart persistence,
+physical behavior, mBot2 behavior, or complete AAuth conformance. No physical
+robot execution or additional test execution is authorized. The unrelated PI
+routine-tool proposal remains excluded, unread and untouched.
