@@ -4476,3 +4476,35 @@ No import, compilation, lint, test, execution, listener, Beryl access, Misty or
 mBot2 contact, HTTP request, speech, light, sensor read, movement or physical
 robot activity is authorized. The unrelated PI routine-tool proposal remains
 excluded, unread and untouched.
+
+## D-195 — Accept Misty-first Shared Robot Gateway static package
+
+Recorded on 2026-11-02 at PI direction after Claude Gate 1 and AGy Gate 2
+independently returned PASS on the complete ten-file package, concluding with
+request 126.
+
+Accept the exact reviewed package at these SHA-256 values:
+
+- `robot_gateway/__init__.py` — `5b47838faf89cc5ffef24de7e5dd47b43e02dd5da3012cff177a647a79e69665`
+- `robot_gateway/gateway.py` — `4c84438d4ba190d99f786691aa04e5269841cf6ab84de97ed803a9edf537361d`
+- `robot_gateway/coordinator.py` — `560ddee2fc6c0a97b368b912012695700cb181734902c305de44c826a01c147b`
+- `robot_gateway/misty_invitation.py` — `9cc15d18dc449a5cec43a02b0be87ce1523018eb97390ff5c673b2f3d091619e`
+- `robot_gateway/strict_json_post.py` — `679f72fd2b9dc7f9e49c6598810e5d5186daf326ab7fcc05a3048c4eb36d16fa`
+- `robot_gateway/unavailable_mbot2.py` — `74dc6235a7d8b99c3ff56ba3be51034e1ca9b4df7ee71836ca38f779ca6624c1`
+- `robot_gateway/README.md` — `05f5c4bbb28adaa3de83f02fa9d05ca3b32f755d9bf1db521d98c48c742bc362`
+- `tests/test_robot_gateway_misty_phase.py` — `06aadc95bfd035ddb04a94e3d178af3f902a73e3f273f7d223ee32a871fa6c75`
+- `tools/robot_gateway/run_static_and_synthetic_tests.py` — `a5e17e25d61dfb089ccdd8447b73337dcc60a7c7eff5c5f211a8990b2c46063e`
+- `tools/robot_gateway/misty-phase-runtime-manifest.json` — `27c0758984fa0653652d52cd8d47c45276fe357a6888f0f9b232c5037bd45aa6`
+
+Authorize commit and push of the exact package, this decision and synchronized
+canonical state. Preserve the accepted public Flow A demonstration
+byte-identical and robot-free. Authorize creation only of the bounded synthetic
+execution proposal using the exact accepted runtime manifest. Blind dual review
+and separate PI authorization are required before execution.
+
+No test, listener, Beryl access, Misty or mBot2 contact, HTTP request, speech,
+light, sensor read, movement or physical execution is authorized. Physical
+work additionally requires reviewed completion-event driving, restart/lock
+behavior, harmless stop-only response verification and an exact execution
+command. All prior exclusions remain in force. The unrelated PI routine-tool
+proposal remains excluded, unread and untouched.

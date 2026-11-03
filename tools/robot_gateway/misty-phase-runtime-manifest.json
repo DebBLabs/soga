@@ -1,0 +1,37 @@
+{
+  "schema": "iiw-misty-gateway-runtime-manifest-v1",
+  "repository_basis": "e1071cddc057c2f7ab70967f06532de92e16d0ab",
+  "presentation_basis": "c943e594270045daa64694f44c33e3602a8181e6",
+  "expected_test_count": 34,
+  "interpreter": "/usr/bin/python3",
+  "timeout_seconds": 60,
+  "max_stream_bytes": 2000000,
+  "evidence_directory": "/Users/debb/dev/research-evidence/soga/evidence/iiw-misty-gateway-static-v1",
+  "source_sha256": {
+    "robot_gateway/README.md": "05f5c4bbb28adaa3de83f02fa9d05ca3b32f755d9bf1db521d98c48c742bc362",
+    "robot_gateway/__init__.py": "5b47838faf89cc5ffef24de7e5dd47b43e02dd5da3012cff177a647a79e69665",
+    "robot_gateway/coordinator.py": "560ddee2fc6c0a97b368b912012695700cb181734902c305de44c826a01c147b",
+    "robot_gateway/gateway.py": "4c84438d4ba190d99f786691aa04e5269841cf6ab84de97ed803a9edf537361d",
+    "robot_gateway/misty_invitation.py": "9cc15d18dc449a5cec43a02b0be87ce1523018eb97390ff5c673b2f3d091619e",
+    "robot_gateway/strict_json_post.py": "679f72fd2b9dc7f9e49c6598810e5d5186daf326ab7fcc05a3048c4eb36d16fa",
+    "robot_gateway/unavailable_mbot2.py": "74dc6235a7d8b99c3ff56ba3be51034e1ca9b4df7ee71836ca38f779ca6624c1",
+    "tests/test_robot_gateway_misty_phase.py": "06aadc95bfd035ddb04a94e3d178af3f902a73e3f273f7d223ee32a871fa6c75"
+  },
+  "preserved_sha256": {
+    "g27_tip_jar/adapter.py": "5f410b99c9c0b9388f3829d40869b6e6c6b0987fa9412b450ce6ca91f46e3bdc",
+    "m01_qr/http_transport.py": "e657d8f447501e497f6125cbb555d9e02fdd4270c97cc2c067ccd2c0a6608c45",
+    "m01_qr/misty_signal_adapter.py": "b8cd91ef3f9b43ba0a315418477d6f5caa5068bdfb6a5f7a044c1be631a3d34c"
+  },
+  "presentation_sha256": {
+    "bridge.py": "b044191e767084c1e6ac4d272eb756aa4fee1370cea3c0cbd5ab75b4ffb4754b",
+    "index.html": "60c54ee203225797a1f026a17bbdfddb73a7ca8c8ececf7cf882eb3cd4286da7",
+    "Start IIW Table.command": "27c0be9b8ecd4ba42dbac6a6a8055cdcc2209cefee735a8cffdb0cfb9a4356ac",
+    "IIW_TABLE_OPERATOR_CHECKLIST.md": "04e2fa1c2d34d18121b81749bc6dca6c44ff7dbca422c4868032c5f43170b127"
+  },
+  "accepted_evidence_sha256": {
+    "/Users/debb/dev/research-evidence/soga/evidence/iiw-flow-a-beryl-ipad-rehearsal-v11/evidence.json": "b863e09dede1dfe0462ebbfa12c2ce6e6e7dfb439874e750b5d831659885d9d5",
+    "/Users/debb/dev/research-evidence/soga/evidence/iiw-flow-a-beryl-ipad-rehearsal-v11/bridge.stdout.txt": "669f6f984ee8699fb3182f69a635523b8a6b4047ac7fc77f9c1232f55fd2b81d",
+    "/Users/debb/dev/research-evidence/soga/evidence/iiw-flow-a-beryl-ipad-rehearsal-v11/bridge.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "/Users/debb/dev/soga-clean/knowledge/research/IIW_FLOW_A_BERYL_IPAD_V11_REHEARSAL_EVIDENCE_2026-11-02.md": "4885723c1f04dce61b257f3dd01b6935604f0bb6d39c52ffc91efff89358a14a"
+  }
+}

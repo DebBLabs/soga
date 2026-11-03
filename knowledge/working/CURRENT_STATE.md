@@ -38,6 +38,14 @@ Program: Embodied Governance Research Program
 
 Phase: M02 — Corrected synthetic composition accepted; paused
 
+Active authorization boundary: D-195 accepts the blind dual-reviewed ten-file
+Misty-first Shared Robot Gateway static package. The accepted public Flow A
+demonstration remains byte-identical and robot-free. The package has not been
+imported, compiled, linted, tested or executed and no robot has been contacted.
+Only creation and blind dual review of a bounded synthetic execution proposal
+using the accepted runtime manifest is authorized. Physical work remains
+blocked on separate prospective review and PI authorization.
+
 Durable preservation accepted under D-082 after both blind request-051 PASS
 reviews. Backup: /Users/debb/dev/research-evidence/m02-was-20260917-001/environment.
 Full source/dependency/cache/build manifest verified independently by both gates;
