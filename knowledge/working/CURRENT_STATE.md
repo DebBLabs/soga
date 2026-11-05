@@ -1730,3 +1730,7 @@ execution. No import, compilation, lint, test, execution, listener, network or
 device access, HTTP request, speech, light, sensor read, movement or physical
 robot activity is authorized. The unrelated PI routine-tool proposal remains
 excluded, unread and untouched.
+
+CyberPi offline protocol verification: D-200 accepts the exact proposal
+reviewed in requests 141 and 142. Public Flow A and the shared gateway retain
+their existing behavior. No execution or hardware authority is granted.
