@@ -4603,3 +4603,20 @@ No import, compilation, lint, test, execution, listener, Beryl access, Misty or
 mBot2 contact, robot command, speech, light, display, camera, microphone,
 sensor read, movement or other physical capability is authorized. The
 unrelated PI routine-tool proposal remains excluded, unread and untouched.
+
+## D-199 — Accept the complete D-198 Misty stop-only package
+
+On 2026-11-05 Pacific, the PI accepted the exact six-file package and
+authorized its commit after Claude Gate 1 request 157 and AGy Gate 2 request
+158 independently passed static review. The narrow CyberPi coexistence
+correction passed requests 151 and 152 and was accepted separately. The
+controllers permit only the six named CyberPi paths as additions relative
+to the pinned basis. This decision grants no execution or hardware authority.
+
+Exact accepted SHA-256:
+ca033be9e0cd777bda209af16f5dbaddc88f7ba29a675c6cc862fb24e7adf076  robot_gateway/STOP_ONLY_VERIFICATION.md
+238acf403a0b7cf1f4b11ba8dd98edcd0675df5acbaed7e06b29db2b2e4cc614  robot_gateway/misty_stop_probe.py
+0e48d2bee3a0d53d8c7d2a294b0d1e29e9c16dd2a71da424fd339188da406680  tests/test_robot_gateway_misty_stop_only_probe.py
+1c5619723227c34e80c029125044cbb12cc87f46bf9fdfadf6cf89c894198ac8  tools/robot_gateway/misty-stop-only-runtime-manifest.json
+b779f2b2db235760e417aa6f2946659250fc70a820f0a4e7416112808a249aa4  tools/robot_gateway/run_misty_stop_only_probe.py
+819ee163609fa3aba2bc10f5a65cedc82e42d9d45763001ec7e2817750e89bbd  tools/robot_gateway/run_misty_stop_only_synthetic_tests.py

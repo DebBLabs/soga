@@ -63,12 +63,11 @@ activity is authorized. Misty contact remains blocked pending separate review
 and prospective PI authorization of harmless stop-only response verification,
 completion-event driving, restart/lock behavior and the exact physical command.
 
-Active authorization boundary: D-198 accepts the blind dual-reviewed Misty B
-stop-only verification proposal and permits its stage to precede the remaining
-physical holds. Only create-only implementation of the exact six-file package
-is authorized. No file may be imported, compiled, linted, tested, executed or
-committed before complete blind dual static review. No Beryl or robot contact
-is authorized.
+Active authorization boundary: D-199 accepts the complete six-file D-198
+Misty B stop-only package after independent static PASS results 157 and 158.
+The narrow CyberPi coexistence correction is accepted from 151 and 152.
+The exact package is authorized for commit. Execution and hardware contact
+require separate prospective authority.
 
 Durable preservation accepted under D-082 after both blind request-051 PASS
 reviews. Backup: /Users/debb/dev/research-evidence/m02-was-20260917-001/environment.
