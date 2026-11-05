@@ -4629,3 +4629,17 @@ Claude request 141 and AGy request 142 passed the exact bytes. The accepted
 D-199 package provides the reviewed repository coexistence rule. The PI
 authorized out-of-repository staging before this proposal commit. The scope
 is offline protocol candidates only, with no adapter or hardware authority.
+
+## D-201 — Accept the CyberPi offline protocol package and D-198 pins
+
+On 2026-11-05 Pacific, the PI accepted revision 3 after Claude 147 and AGy 148
+passed and accepted the final D-198 hash update after Claude 159 and AGy 160
+passed. The PI authorized committing the exact package. Execution requires
+a separately pinned request, blind dual review and prospective PI approval.
+
+Exact accepted SHA-256:
+f9eaf386a7dcf0a5fb464c33f355f9d4fc422edeb13c605aafc3020413587147  robot_gateway/CYBERPI_PROTOCOL_VERIFICATION.md
+57189ba2841802f6ca507c14d82bf96e2965268c41e7cb36ecc380c31599d805  robot_gateway/cyberpi_f3f4_protocol.py
+bc23f436a1eca2df2417ac89cf052c183757df752791923dc774991013a1d3ea  tests/test_robot_gateway_cyberpi_protocol.py
+4d05c17577218fc74a91b6eac1d7515658652c51b502ecbcac21ab1dfab9ae1e  tools/robot_gateway/cyberpi-protocol-runtime-manifest.json
+519c0841097687b0f7936305619b3c09fab7c8c011962bfb68dd0f38d6a01812  tools/robot_gateway/run_cyberpi_protocol_tests.py

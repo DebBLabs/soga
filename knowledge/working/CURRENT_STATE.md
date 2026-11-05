@@ -1734,3 +1734,8 @@ excluded, unread and untouched.
 CyberPi offline protocol verification: D-200 accepts the exact proposal
 reviewed in requests 141 and 142. Public Flow A and the shared gateway retain
 their existing behavior. No execution or hardware authority is granted.
+
+D-201 accepts the five-file CyberPi package reviewed in 147/148 and the
+final D-198 hash update reviewed in 159/160. The next gate is blind review
+of an exact, bounded synthetic execution request. Execution, hardware
+contact and public integration remain outside the current authority.
