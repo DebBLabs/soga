@@ -4643,3 +4643,19 @@ f9eaf386a7dcf0a5fb464c33f355f9d4fc422edeb13c605aafc3020413587147  robot_gateway/
 bc23f436a1eca2df2417ac89cf052c183757df752791923dc774991013a1d3ea  tests/test_robot_gateway_cyberpi_protocol.py
 4d05c17577218fc74a91b6eac1d7515658652c51b502ecbcac21ab1dfab9ae1e  tools/robot_gateway/cyberpi-protocol-runtime-manifest.json
 519c0841097687b0f7936305619b3c09fab7c8c011962bfb68dd0f38d6a01812  tools/robot_gateway/run_cyberpi_protocol_tests.py
+
+## D-202 — Accept the CyberPi Git environment correction
+
+On 2026-11-09 Eastern, the PI accepted and authorized committing the exact
+controller correction after Claude request 171 and AGy request 172 returned
+PASS with zero blockers. Controller SHA-256:
+9e2dd66433a1f6a0f877d7601fc3e29f9c26717ae3d92eeffb4690a6b4b5b330.
+
+Only the Git helper environment gains explicit HOME=/Users/debb, matching
+the preflight status environment. The test child environment and all protected
+hash checks remain as reviewed. The prior single attempt under request hash
+78356cae9941e8509470c7dc986d641afce41fc93ad32121f775e2b1bf476ad6
+refused before tests or evidence creation because Git without HOME reported
+an additional untracked settings file. That attempt was not retried.
+A new exact request must undergo blind review and prospective PI approval
+before another attempt. Hardware contact remains unauthorized.

@@ -1739,3 +1739,10 @@ D-201 accepts the five-file CyberPi package reviewed in 147/148 and the
 final D-198 hash update reviewed in 159/160. The next gate is blind review
 of an exact, bounded synthetic execution request. Execution, hardware
 contact and public integration remain outside the current authority.
+
+D-202 accepts the CyberPi controller Git-environment correction reviewed in
+171/172. The first approved offline attempt refused at preflight before
+starting the child. No synthetic test result exists from that attempt.
+The next step is blind review of a new request pinned to this commit.
+No new execution or hardware contact is authorized. Switching revision 3
+passed draft static review 173/174 and remains staged outside the repository.

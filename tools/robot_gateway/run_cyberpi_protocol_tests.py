@@ -47,7 +47,7 @@ def digest(path):
 def git(root, *args):
     return subprocess.check_output(
         ["/usr/bin/git", "--no-optional-locks", "-C", str(root), *args],
-        timeout=5, env={"PATH": "/usr/bin:/bin", "LC_ALL": "C"},
+        timeout=5, env={"PATH": "/usr/bin:/bin", "LC_ALL": "C", "HOME": "/Users/debb"},
     ).decode().splitlines()
 
 
