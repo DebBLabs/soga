@@ -1752,3 +1752,8 @@ and D-205 record accepted observation and runtime proposals, exact packages
 and the reviewed coexistence amendment. Package commits require blind
 review of the protected D-198 hash updates. Execution and physical steps
 remain separately gated.
+
+D-206 records the observation and switching/runtime packages committed after
+201/202 passed their protected-hash updates. The 19 observation and 39
+switching/runtime synthetic tests are pending exact execution request
+reviews and PI approval. Misty B and mBot2 remain the first two endpoints.
