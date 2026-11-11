@@ -4659,3 +4659,39 @@ refused before tests or evidence creation because Git without HOME reported
 an additional untracked settings file. That attempt was not retried.
 A new exact request must undergo blind review and prospective PI approval
 before another attempt. Hardware contact remains unauthorized.
+
+## D-203 — Accept CyberPi offline protocol evidence
+
+The PI accepted the evidence reviewed in 177/178 after the one offline R3 run
+at 5ac840123ae9301a415d7631374a03ae8e18d805. All 14 tests passed and the
+before/after snapshots match. This establishes candidate consistency only.
+Request SHA-256: 7b1715e9f4f31d7cd99372ce8202beb40b9167fc0d3be2040c81eb771271edc9.
+Evidence: /Users/debb/dev/research-evidence/soga/evidence/iiw-cyberpi-synthetic-2026-11-09-v2.
+child.log: 1a9f5820f1f149b92f8a0b3c057e26c120717dfde4e3d5cb4c759d06eaeed39d.
+result.json: aecb46446bcab0be2fd5859da3e3e50d5ef0097f47a2e6d140bbc7d2263b85e6.
+The interpreter pin attests the wrapper. There is no device observation.
+
+## D-204 — Accept observation and switching proposals and reviewed packages
+
+The PI accepted the observation proposal (183/184), runtime proposal
+(185/186), and switching revision 3 (173/174). On 2026-11-11 Eastern the PI
+accepted the exact observation-v2 (197/198), runtime-v3 (199/200), and
+D-199 coexistence amendment (191/192) files. The PI authorized canonical
+records, coexistence and proposal commits, and package commits after blind
+review of the protected-hash updates and dependent manifest digests.
+Synthetic execution, device opens and hardware contact require separate
+prospective approval.
+
+## D-205 — Accept the exact D-199 coexistence amendment
+
+The reviewed amendment allows the 23 named additions relative to the
+existing D-198 basis. All existing repository and execution guards remain.
+The historical CyberPi evidence remains pinned to its historical HEAD.
+Any future run of its original controller requires a separately reviewed
+repin of the four changed D-198 files. No rerun is requested.
+
+Reviewed amendment bytes:
+d6e6bd2f2a6d4669d2b784155fa8a6236f0b95494ce6199e8d735986455bee64  robot_gateway/STOP_ONLY_VERIFICATION.md
+f4a84b8b1a3e732009afeaf56ba443177c7acf62844ce25074cb4cad0761ab99  tools/robot_gateway/misty-stop-only-runtime-manifest.json
+fa9cf1650124f50028c7146610503ceb509729ea5d7b5fe6bf9faed217f00270  tools/robot_gateway/run_misty_stop_only_probe.py
+1075c9c2528544b35a1e4b29c15cd632cc7cabeb7f45ac895ac1ba76cb4af867  tools/robot_gateway/run_misty_stop_only_synthetic_tests.py

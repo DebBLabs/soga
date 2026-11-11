@@ -15,7 +15,7 @@ from pathlib import Path
 ROOT = Path("/Users/debb/dev/soga-clean")
 PRESENTATION = Path("/Users/debb/dev/permission-to-speak-work/permission-to-speak")
 MANIFEST = ROOT / "tools/robot_gateway/misty-stop-only-runtime-manifest.json"
-MANIFEST_SHA256 = "1c5619723227c34e80c029125044cbb12cc87f46bf9fdfadf6cf89c894198ac8"
+MANIFEST_SHA256 = "f4a84b8b1a3e732009afeaf56ba443177c7acf62844ce25074cb4cad0761ab99"
 TEST_MODULE = ROOT / "tests/test_robot_gateway_misty_stop_only_probe.py"
 EXPECTED_STATUS = ["?? knowledge/proposals/PI_ROUTINE_TOOL_APPROVAL_DELEGATION_PROPOSAL_2026-09-08.md"]
 PACKAGE_PATHS = {
@@ -34,6 +34,23 @@ CYBERPI_ADDITION_PATHS = {
     "tests/test_robot_gateway_cyberpi_protocol.py",
     "tools/robot_gateway/run_cyberpi_protocol_tests.py",
     "tools/robot_gateway/cyberpi-protocol-runtime-manifest.json",
+    "knowledge/proposals/MBOT2_FIRST_PROTOCOL_OBSERVATION_R2_2026-11-09.md",
+    "knowledge/proposals/TWO_ROBOT_SWITCHING_RUNTIME_R2_2026-11-09.md",
+    "robot_gateway/CYBERPI_NONE_OBSERVATION.md",
+    "robot_gateway/OPERATOR_RUNTIME.md",
+    "robot_gateway/SWITCHING_REVIEW.md",
+    "robot_gateway/cyberpi_none_observation.py",
+    "robot_gateway/operator_runtime.py",
+    "robot_gateway/owned_gateway.py",
+    "robot_gateway/switching.py",
+    "tests/test_robot_gateway_cyberpi_none_observation.py",
+    "tests/test_robot_gateway_operator_runtime.py",
+    "tests/test_switching.py",
+    "tools/robot_gateway/cyberpi-none-runtime-manifest.json",
+    "tools/robot_gateway/operator-runtime-manifest.json",
+    "tools/robot_gateway/run_cyberpi_none_physical.py",
+    "tools/robot_gateway/run_cyberpi_none_synthetic.py",
+    "tools/robot_gateway/run_operator_runtime_synthetic.py",
 }
 ALLOWED_COMMIT_PATHS = PACKAGE_PATHS | {
     "knowledge/strategy/DECISION_LOG.md",

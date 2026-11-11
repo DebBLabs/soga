@@ -1746,3 +1746,9 @@ starting the child. No synthetic test result exists from that attempt.
 The next step is blind review of a new request pinned to this commit.
 No new execution or hardware contact is authorized. Switching revision 3
 passed draft static review 173/174 and remains staged outside the repository.
+
+D-203 records the accepted historical CyberPi synthetic evidence. D-204
+and D-205 record accepted observation and runtime proposals, exact packages
+and the reviewed coexistence amendment. Package commits require blind
+review of the protected D-198 hash updates. Execution and physical steps
+remain separately gated.

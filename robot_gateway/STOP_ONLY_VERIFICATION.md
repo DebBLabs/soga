@@ -83,6 +83,23 @@ through physical execution. The only additional paths permitted are:
 - `tests/test_robot_gateway_cyberpi_protocol.py`
 - `tools/robot_gateway/run_cyberpi_protocol_tests.py`
 - `tools/robot_gateway/cyberpi-protocol-runtime-manifest.json`
+- `knowledge/proposals/MBOT2_FIRST_PROTOCOL_OBSERVATION_R2_2026-11-09.md`
+- `knowledge/proposals/TWO_ROBOT_SWITCHING_RUNTIME_R2_2026-11-09.md`
+- `robot_gateway/CYBERPI_NONE_OBSERVATION.md`
+- `robot_gateway/OPERATOR_RUNTIME.md`
+- `robot_gateway/SWITCHING_REVIEW.md`
+- `robot_gateway/cyberpi_none_observation.py`
+- `robot_gateway/operator_runtime.py`
+- `robot_gateway/owned_gateway.py`
+- `robot_gateway/switching.py`
+- `tests/test_robot_gateway_cyberpi_none_observation.py`
+- `tests/test_robot_gateway_operator_runtime.py`
+- `tests/test_switching.py`
+- `tools/robot_gateway/cyberpi-none-runtime-manifest.json`
+- `tools/robot_gateway/operator-runtime-manifest.json`
+- `tools/robot_gateway/run_cyberpi_none_physical.py`
+- `tools/robot_gateway/run_cyberpi_none_synthetic.py`
+- `tools/robot_gateway/run_operator_runtime_synthetic.py`
 
 Each additional path must appear as an addition in the cumulative diff
 relative to the pinned basis. Both controllers disable rename detection.
