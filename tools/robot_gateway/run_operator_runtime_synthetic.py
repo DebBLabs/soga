@@ -25,7 +25,7 @@ from typing import Protocol, runtime_checkable
 ROOT = Path("/Users/debb/dev/soga-clean")
 HERE = Path(__file__).absolute()
 MANIFEST = HERE.with_name("operator-runtime-manifest.json")
-MANIFEST_SHA = "ecaeed140abd80d8462a3fc455507a32f4028a1b901b4870d25d74c31adf8528"
+MANIFEST_SHA = "a7dea9d4c584bbdd37e18182233ad1d1721d15b9088963e5e59f9b70cd527343"
 EVIDENCE_ROOT = Path("/Users/debb/dev/research-evidence/soga/evidence")
 EXCLUDED = ["?? knowledge/proposals/PI_ROUTINE_TOOL_APPROVAL_DELEGATION_PROPOSAL_2026-09-08.md"]
 DENY_PROCESS = {"subprocess.Popen", "os.system", "os.fork", "os.forkpty", "os.exec",

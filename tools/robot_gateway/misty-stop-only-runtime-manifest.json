@@ -23,7 +23,7 @@
   "source_sha256": {
     "robot_gateway/misty_stop_probe.py": "238acf403a0b7cf1f4b11ba8dd98edcd0675df5acbaed7e06b29db2b2e4cc614",
     "tests/test_robot_gateway_misty_stop_only_probe.py": "0e48d2bee3a0d53d8c7d2a294b0d1e29e9c16dd2a71da424fd339188da406680",
-    "robot_gateway/STOP_ONLY_VERIFICATION.md": "d6e6bd2f2a6d4669d2b784155fa8a6236f0b95494ce6199e8d735986455bee64"
+    "robot_gateway/STOP_ONLY_VERIFICATION.md": "1a4c5ce9e0a71c1bc00d8dda3f5f595b0d9d8d2167b44b0c2381c115f8721095"
   },
   "accepted_gateway_sha256": {
     "robot_gateway/README.md": "05f5c4bbb28adaa3de83f02fa9d05ca3b32f755d9bf1db521d98c48c742bc362",

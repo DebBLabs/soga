@@ -16,7 +16,7 @@ from pathlib import Path
 ROOT = Path("/Users/debb/dev/soga-clean")
 PRESENTATION = Path("/Users/debb/dev/permission-to-speak-work/permission-to-speak")
 MANIFEST_PATH = ROOT / "tools/robot_gateway/misty-stop-only-runtime-manifest.json"
-MANIFEST_SHA256 = "f4a84b8b1a3e732009afeaf56ba443177c7acf62844ce25074cb4cad0761ab99"
+MANIFEST_SHA256 = "fb703622518ec514b8d8a34f05d502e0ba74dc803ced34d904c05c1c6e065a74"
 PROBE_PATH = ROOT / "robot_gateway/misty_stop_probe.py"
 REQUEST_PATH = Path("/Users/debb/dev/research-evidence/soga/requests/IIW_MISTY_STOP_ONLY_PHYSICAL_EXECUTION_REQUEST.md")
 AUTHORITY_PATH = Path("/Users/debb/dev/research-evidence/soga/authorizations/IIW_MISTY_STOP_ONLY_PHYSICAL_EXECUTION_AUTHORITY.md")
@@ -33,6 +33,12 @@ PACKAGE_PATHS = {
 }
 # The separately reviewed CyberPi package may coexist only as new paths.
 CYBERPI_ADDITION_PATHS = {
+    "robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md",
+    "robot_gateway/cyberpi_none_observation_v3.py",
+    "tests/test_cyberpi_none_observation_v3.py",
+    "tools/robot_gateway/cyberpi-none-v3-runtime-manifest.json",
+    "tools/robot_gateway/run_cyberpi_none_physical_v3.py",
+    "tools/robot_gateway/run_cyberpi_none_synthetic_v3.py",
     "knowledge/proposals/IIW_MBOT2_CYBERPI_PROTOCOL_VERIFICATION_PROPOSAL_2026-11-05.md",
     "robot_gateway/cyberpi_f3f4_protocol.py",
     "robot_gateway/CYBERPI_PROTOCOL_VERIFICATION.md",

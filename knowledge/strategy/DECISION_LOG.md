@@ -4720,3 +4720,37 @@ ecaeed140abd80d8462a3fc455507a32f4028a1b901b4870d25d74c31adf8528  tools/robot_ga
 4d0a6f3f909c9a51381af6aa42c5835d069a44e8670384eb977a3c7108fa7fc0  robot_gateway/owned_gateway.py
 de3dd6ddb435bf1cb0309e010930302cc1337745485cad4ff96c28c6484798ac  robot_gateway/switching.py
 26bc2af2ac8db4367212ef191cfec264f3e2e627ebb7ef92b3a5953f7c8bb1c3  tests/test_switching.py
+
+## D-207 — Adopt two-stage mBot2 preflight and D-199 coexistence
+
+2026-11-11. Recorded at PI direction after Gate 1 requests 217, 221 and
+227 and Gate 2 requests 218, 222 and 228 passed their respective scopes.
+The PI prospectively adopted the two-stage departure in the gateway chat:
+both gates review the exact stable request and live-fact rules before
+preflight, and the PI separately approves the exact stable request digest
+and fresh preflight digest before the single physical attempt.
+
+The PI adopted the two-stage preflight review procedure and accepted the
+six-file v3 draft reviewed in 221/222 and the coexistence design reviewed
+in 227/228. Older protocol and observation v2 remain historical-only.
+The six exact additional paths are admitted as additions in both Misty
+controllers. The switching/runtime manifest pins the four amended D-199
+bytes. These records confer no execution or hardware authority.
+
+- Implementation proposal SHA-256: 9ec51bce328f2aac23e4633bb92dfa73a8e8df56574ea5e1bfafb91616415e70.
+- Coexistence design revision 2 SHA-256: 739bef569ccf3477c1714d641c12621630862c6e55017a847663544c759522c1.
+- Reviewed v3 baseline and exact coexistence file hashes:
+  - `robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md` `273305a3bf88ca8669fc2f583362f787b54f68b322de3c8af35cbcd180ffd437`
+  - `robot_gateway/cyberpi_none_observation_v3.py` `236ee4c5a44ef984d3ef0e5724250d4d6437ecea3613d4692ebd76313c85a292`
+  - `tests/test_cyberpi_none_observation_v3.py` `09f73a7e9f28265e2d86bb845abea9f1805541ee6519693a6c3a7dfc5e6cd44e`
+  - `tools/robot_gateway/cyberpi-none-v3-runtime-manifest.json` `d5de46167c68f9073ecca9950b04b92cac905c31114276e0df2f535c0eb7d9cc`
+  - `tools/robot_gateway/run_cyberpi_none_physical_v3.py` `1c20c41652292adecdf9e47373f258eaa6b548f503364a803a8c89d81016a223`
+  - `tools/robot_gateway/run_cyberpi_none_synthetic_v3.py` `d543c862a15b0ce2adbf3424d7ff0928593e5a11df78fa6865929c99c8c7c7f4`
+  - `robot_gateway/STOP_ONLY_VERIFICATION.md` `1a4c5ce9e0a71c1bc00d8dda3f5f595b0d9d8d2167b44b0c2381c115f8721095`
+  - `tools/robot_gateway/misty-stop-only-runtime-manifest.json` `fb703622518ec514b8d8a34f05d502e0ba74dc803ced34d904c05c1c6e065a74`
+  - `tools/robot_gateway/run_misty_stop_only_probe.py` `95102ff99e74feaf3499441be990488085a5d28c8125a3368c70aec6da64a2ac`
+  - `tools/robot_gateway/run_misty_stop_only_synthetic_tests.py` `46d95c55ff45017215d75c92dd680195683893f1e78e173810a1f41b3d80493e`
+  - `tools/robot_gateway/operator-runtime-manifest.json` `a7dea9d4c584bbdd37e18182233ad1d1721d15b9088963e5e59f9b70cd527343`
+  - `tools/robot_gateway/run_operator_runtime_synthetic.py` `cde9a0035b4cc0508e86a9008994d8880369ae2bc5f9c021eee411cf31b9232b`
+
+The final v3 repin is recorded separately to avoid a hash cycle.

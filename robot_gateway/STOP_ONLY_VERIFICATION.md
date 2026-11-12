@@ -144,3 +144,20 @@ The narrow parser deliberately validates HTTP version, header names, framing,
 chunk termination and bounds more strictly than the frozen accepted transport.
 The accepted transport remains byte-identical in this stage; its parser finding
 must be resolved before any Speak execution.
+
+## CyberPi observation revision 3 coexistence
+
+The unchanged D-199 repository basis and presentation checks allow these
+exact six CyberPi paths only as additions.
+
+- `robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md`
+- `robot_gateway/cyberpi_none_observation_v3.py`
+- `tests/test_cyberpi_none_observation_v3.py`
+- `tools/robot_gateway/cyberpi-none-v3-runtime-manifest.json`
+- `tools/robot_gateway/run_cyberpi_none_physical_v3.py`
+- `tools/robot_gateway/run_cyberpi_none_synthetic_v3.py`
+
+Existing protocol and observation v2 artifacts remain historical-only.
+The operator runtime receives reviewed D-199 dependency hash updates.
+Earlier requests and execution evidence remain bound to their original
+commits and manifests. This change grants no Misty execution authority.
