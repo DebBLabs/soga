@@ -93,8 +93,8 @@
     "/Users/debb/dev/soga-clean/knowledge/proposals/IIW_MISTY_STOP_ONLY_VERIFICATION_PROPOSAL_2026-11-03.md": "f86690e4009979821189fa2240da9dd17f61472076c9b2847c31916b6a5d30bd",
     "/Users/debb/dev/soga-clean/knowledge/proposals/MBOT2_FIRST_PROTOCOL_OBSERVATION_R2_2026-11-09.md": "e4f77a818fd291a69f853d86df9d24cc3afac3bd3c65bb456c060ca4db20f398",
     "/Users/debb/dev/soga-clean/knowledge/proposals/TWO_ROBOT_SWITCHING_RUNTIME_R2_2026-11-09.md": "59fddaab5fb5167c1da0a80c80974d54b5e1e524b24720140940a283e6717bb3",
-    "/Users/debb/dev/soga-clean/knowledge/strategy/DECISION_LOG.md": "e5d9a9e052225090ce744451522b37ebf1d450ed32f68f4851181551f0c8dd6f",
-    "/Users/debb/dev/soga-clean/knowledge/working/CURRENT_STATE.md": "62bcd1d6408514e390efe64795eb0149aca8867a22d6322983a770fa3eff67b5",
+    "/Users/debb/dev/soga-clean/knowledge/strategy/DECISION_LOG.md": "69d7d5a6667755ab48d710422edafca2a5cea373fd0787654d4fb53504ca6e09",
+    "/Users/debb/dev/soga-clean/knowledge/working/CURRENT_STATE.md": "943b6ca09e59b1543b92a0a499a5f75d63189c838fa53d27c7d085883fead1e4",
     "/Users/debb/dev/soga-clean/robot_gateway/CYBERPI_NONE_OBSERVATION.md": "45aea9d45bf0b954a12c4ed7782835a68ef3ff76389dd584f90db65ba34ee4f2",
     "/Users/debb/dev/soga-clean/robot_gateway/CYBERPI_PROTOCOL_VERIFICATION.md": "f9eaf386a7dcf0a5fb464c33f355f9d4fc422edeb13c605aafc3020413587147",
     "/Users/debb/dev/soga-clean/robot_gateway/OPERATOR_RUNTIME.md": "0d15a71feadcf88b8d6e33e208cd5bcf989b6b2bba2a93fbb69cfc4650aeabdf",
@@ -161,15 +161,15 @@
     "/Users/debb/dev/soga-clean/tools/robot_gateway/run_operator_runtime_synthetic.py": "cde9a0035b4cc0508e86a9008994d8880369ae2bc5f9c021eee411cf31b9232b",
     "/Users/debb/dev/soga-clean/tools/robot_gateway/run_static_and_synthetic_tests.py": "a5e17e25d61dfb089ccdd8447b73337dcc60a7c7eff5c5f211a8990b2c46063e"
   },
-  "repository_basis": "dbddcddcdd3d05ab33ff543dfc6ba3e81e072b49",
+  "repository_basis": "68e7a2d5f7c1167412c4110ad4f5fb644839162c",
   "schema": "cyberpi-none-runtime-v3",
   "sources": {
-    "robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md": "232d88e1622dfe4906d6f0c8f747e4116b956a4e520bd2fe427d28b25a03188d",
+    "robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md": "8503e0a5d7f0a7502f69d172b27d0cb9ee136f6c0751cdef5ec8dac945de1cd8",
     "robot_gateway/cyberpi_f3f4_protocol.py": "57189ba2841802f6ca507c14d82bf96e2965268c41e7cb36ecc380c31599d805",
-    "robot_gateway/cyberpi_none_observation_v3.py": "856aa3b672cd8c9ce19e6536dc6a19fbcaf6fd5e598c0299af8e20517b3b58ff",
-    "tests/test_cyberpi_none_observation_v3.py": "c2cf57111e04e38749f7ca788d1a29c412ae902d059f1e8b2bf4d6f1ff55f289"
+    "robot_gateway/cyberpi_none_observation_v3.py": "e30fbc92b5498d1ebb450549942672e9185dbabaa4bbd4914668f1cc7f1b5f57",
+    "tests/test_cyberpi_none_observation_v3.py": "0a1e9c34837831daf026cc8ccbaf93eab3cf2b76b397d01d678f8374e30ba3fa"
   },
-  "test_count": 29,
+  "test_count": 32,
   "tests": [
     [
       "none_observation_tests",

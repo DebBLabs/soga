@@ -17,7 +17,8 @@ two-stage review procedure approved by Deb after gates 217/218.
    other robot controllers and verify the intended USB association.
    With USB disconnected, chassis stable and wheels raised, observe
    battery-only stored boot for 15–300 seconds. Record display/LED
-   baseline and no motion, sound or animation. Quiet observation cannot
+   baseline and no wheel movement or sound. Record the observed startup visuals
+   using the schema below. Quiet observation cannot
    exclude delayed stored behavior. Confirm both power disconnects are
    within reach, turn motor/battery power off, then connect USB only if
    logic USB power and motor power off are independently confirmable.
@@ -77,8 +78,8 @@ command, Misty contact, gateway, listener, output or movement is in scope.
 Use explicit SIGINT/SIGTERM handlers and single forwarding. A missing
 worker report means close unknown even when watchdog kill is false. Parent
 SIGKILL can orphan the worker up to its independent budget, and watchdog
-kill or power loss can lose worker raw bytes. Any motion, sound, animation
-or baseline change means immediately turn off motor/battery and unplug USB,
+kill or power loss can lose worker raw bytes. Any wheel movement or sound, or a visual change outside the narrowly allowed
+startup sequence described below, means immediately turn off motor/battery and unplug USB,
 then interrupt the process if still running. After any outcome remove both
 sources and record power-off, time and anomalies separately. No process
 record proves physical shutdown.
@@ -98,4 +99,63 @@ and uses only fake device, process, signature, reservation and clock seams
 in its test child. It does not load the physical controller. No run or
 test is authorized here. The reviewed coexistence and canonical commit
 sequence requires final reviewed repins against actual post-amendment
-records. This draft pins the reviewed staged coexistence and canonical record bytes.
+records. This final draft pins the complete proposed canonical record bytes.
+Coexistence is reconciled without changing any Misty or operator-runtime file.
+
+
+## Adopted startup baseline amendment (285/286)
+
+The preflight replaces `no_motion_sound_animation` with
+`no_wheel_motion_or_sound_observed: true` and requires
+`battery_startup_visual_baseline` to equal exactly
+`white_near_wheels_blue_eye_flashes_screen_flash_then_blank`.
+The old schema refuses. This records Deb's USB-disconnected observation;
+it is not a firmware-normality or safety assertion. G subsequently described
+a blank screen as typical. Deb did not press Home. No Home-button result,
+exact flash count or measured duration is established by that earlier session.
+
+`boot_baseline_record` remains a string, now containing a JSON object with
+exactly `duration_seconds`, `screen`, and `lights`. The duration must be a
+finite number equal to the actually measured `standalone_observed_seconds`
+(15 through 300 seconds). Both narratives must be strings of 12 through
+400 stripped characters. Empty, enum-only and recognized placeholder text
+refuse; duplicate or extra keys refuse. These structural checks cannot prove
+truth or detect every possible placeholder. Deb must supply the actual
+observation, not copy a sample or infer unmeasured facts.
+
+For a later separately approved attempt, continuously watch the robot and
+use a visible gateway timer. At most one matching visual startup sequence
+is allowed within the existing 12-second passive window after serial open,
+and only if it settles to the confirmed stable display/light baseline before
+the window ends. If it is not clearly settled in time, remove power before
+the window ends. Repeated, differing, uncertain or ongoing flashing refuses.
+Any visual change before serial open, including USB cable connection, still
+refuses. Any new or continuing visual change during write, response, close
+or afterward requires immediate removal of both power sources. Wheel motion
+or sound always requires immediate power removal. A refusal is terminal for
+that preflight/attempt; do not reclassify it or retry while continuing.
+
+Serial quiet does not detect visual stability. There is no automatic visual
+gate, and the write can race with a human noticing a change. If Deb cannot
+recognize the sequence and act within this window, refuse the attempt.
+Independent motor isolation and confirmed USB logic power remain required.
+
+G's November 3 handoff contains a driver that opens serial once, passively
+drains for 10.5 seconds, probes brightness, then sends an online frame.
+That historical report supplies context; this package does not import or
+execute that driver, probe brightness, enter online mode, or write a label.
+The literal None frame, parser, capture algorithm and limits are unchanged.
+
+This six-file draft contains 32 statically counted test methods, not test
+results. Historical accepted evidence stays at its original hashes. The
+manifest records the inspected pre-change HEAD as repository basis and pins
+the complete proposed canonical records. All other protected pins are unchanged.
+The exact final eight-file reconciliation still needs blind review and separate
+commit approval; the future execution request must bind the actual new HEAD.
+A new exact offline request and separate execution approval are required;
+275/276 cannot authorize changed bytes. Accepted revised offline evidence
+must precede a new reviewed physical request and separate physical approval.
+
+Use concise ASCII screen/light narratives in the live procedure to avoid JSON
+escaping expansion beyond the overall 1024-character boot-record limit. Write
+them from that live run; do not copy the synthetic fixture narratives.

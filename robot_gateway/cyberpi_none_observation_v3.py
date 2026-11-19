@@ -1,4 +1,5 @@
 """Bounded observation algorithm with injected I/O. No device access."""
+import json
 import math
 
 
@@ -8,6 +9,7 @@ QUIET_SECONDS = 1.0
 WRITE_SECONDS = 0.5
 RESPONSE_SECONDS = 2.0
 WALL_SECONDS = 18.0
+BATTERY_VISUAL_BASELINE = "white_near_wheels_blue_eye_flashes_screen_flash_then_blank"
 BOOT_LIMIT = 4096
 RESPONSE_LIMIT = 1024
 
@@ -209,12 +211,39 @@ class SerialIO:
         return outcome
 
 
+def validate_boot_record(raw, measured_seconds):
+    """Validate an operator narrative; content truth remains an operator attestation."""
+    def unique_fields(pairs):
+        record = {}
+        for key, value in pairs:
+            if key in record:
+                raise ValueError("duplicate_field")
+            record[key] = value
+        return record
+
+    try:
+        record = json.loads(raw, object_pairs_hook=unique_fields)
+    except (ValueError, RecursionError) as error:
+        raise RuntimeError("boot_baseline_record_required") from error
+    if (type(record) is not dict or set(record) != {"duration_seconds", "screen", "lights"}
+            or type(record["duration_seconds"]) not in (int, float)
+            or not math.isfinite(record["duration_seconds"])
+            or record["duration_seconds"] != measured_seconds):
+        raise RuntimeError("boot_baseline_duration_required")
+    for key in ("screen", "lights"):
+        value = record[key]
+        if (type(value) is not str or not 12 <= len(value.strip()) <= 400
+                or value.strip().lower() in {"not observed", "not yet observed", "unknown baseline",
+                                            "placeholder text", BATTERY_VISUAL_BASELINE}):
+            raise RuntimeError("boot_baseline_narrative_required")
+
+
 def validate_preflight(preflight, now, device=None):
     required = {"confirmed_by", "observed_at", "device_path", "device_rdev", "unit_claim",
-                "firmware_claim", "standalone_observed_seconds", "no_motion_sound_animation",
+                "firmware_claim", "standalone_observed_seconds", "no_wheel_motion_or_sound_observed",
                 "wheels_raised", "power_controls_accessible", "motor_power_off",
                 "usb_logic_power_confirmed", "no_competing_owner", "boot_baseline_record", "misty_units",
-                "attempt_id", "host"}
+                "attempt_id", "host", "battery_startup_visual_baseline"}
     if type(preflight) is not dict or set(preflight) != required or preflight["confirmed_by"] != "Deb":
         raise RuntimeError("preflight_schema")
     for key in ("unit_claim", "firmware_claim", "boot_baseline_record", "device_path", "attempt_id", "host"):
@@ -227,12 +256,15 @@ def validate_preflight(preflight, now, device=None):
         for unit in preflight["misty_units"]
     ):
         raise RuntimeError("misty_inventory_required")
-    for key in ("no_motion_sound_animation", "wheels_raised", "power_controls_accessible",
+    for key in ("no_wheel_motion_or_sound_observed", "wheels_raised", "power_controls_accessible",
                 "motor_power_off", "usb_logic_power_confirmed", "no_competing_owner"):
         if preflight[key] is not True:
             raise RuntimeError("preflight_hold:" + key)
     if type(preflight["standalone_observed_seconds"]) not in (int, float) or not 15 <= preflight["standalone_observed_seconds"] <= 300:
         raise RuntimeError("stored_boot_observation")
+    if preflight["battery_startup_visual_baseline"] != BATTERY_VISUAL_BASELINE:
+        raise RuntimeError("battery_visual_baseline_required")
+    validate_boot_record(preflight["boot_baseline_record"], preflight["standalone_observed_seconds"])
     if type(preflight["observed_at"]) not in (int, float) or not 0 <= now - preflight["observed_at"] <= 120:
         raise RuntimeError("stale_preflight")
     if type(preflight["device_rdev"]) is not int or preflight["device_rdev"] < 0:

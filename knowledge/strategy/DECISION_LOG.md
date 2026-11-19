@@ -4754,3 +4754,61 @@ bytes. These records confer no execution or hardware authority.
   - `tools/robot_gateway/run_operator_runtime_synthetic.py` `cde9a0035b4cc0508e86a9008994d8880369ae2bc5f9c021eee411cf31b9232b`
 
 The final v3 repin is recorded separately to avoid a hash cycle.
+
+
+## D-208 — Accept the mBot2 startup-baseline implementation; stage final reconciliation
+
+2026-11-19 Eastern. The PI adopted the proposal reviewed in 285/286,
+then accepted the exact six-file implementation reviewed independently in
+Claude 287 and AGy 288. Both reviews PASS for implementation-draft readiness;
+neither review authorizes commit, test execution or physical activity.
+The PI authorized final repository reconciliation and dependent hash updates
+outside the repository, blind review, correction of blockers and continued
+polling. No commit, tests or hardware contact are authorized at this stage.
+
+The adopted schema replaces no_motion_sound_animation with the literal
+Boolean no_wheel_motion_or_sound_observed and requires the fixed battery
+visual baseline. The boot narrative contains an actually measured 15–300
+second observation and separate screen/light descriptions. The guide allows
+only one matching post-open startup sequence within the existing 12-second
+passive window, settled before its end. Human observation is not an automatic
+visual gate; a write can race with noticing a change. Wheel movement or sound
+always aborts. Cable-connection visual change still refuses. No Home-button
+test occurred. G described the blank screen as typical; the recorded session
+has no measured duration or flash count and cannot supply fresh preflight facts.
+
+Accepted implementation-draft hashes (historical 287/288 bytes, before final
+record/hash reconciliation; not the final commit candidate):
+31b2dfa6720721a4bc2098e3386f65ca3c2a0d2a75eda3631b787f4544fd613e  robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md
+e30fbc92b5498d1ebb450549942672e9185dbabaa4bbd4914668f1cc7f1b5f57  robot_gateway/cyberpi_none_observation_v3.py
+0a1e9c34837831daf026cc8ccbaf93eab3cf2b76b397d01d678f8374e30ba3fa  tests/test_cyberpi_none_observation_v3.py
+3c6fea83b79aad7ae0994711a6b0829979b85ace9401bc77b4bd41419a2d2e7a  tools/robot_gateway/cyberpi-none-v3-runtime-manifest.json
+13ed4a091adbba3a1339c551a0521890e765298bcaf25918866271d7c4e65748  tools/robot_gateway/run_cyberpi_none_physical_v3.py
+3415eb8d3106c0b36d5bc4e724dadc4d32ed629c3d2e59f05e12b3e57bee4eb9  tools/robot_gateway/run_cyberpi_none_synthetic_v3.py
+
+The final reconciliation retains the accepted module and test bytes. It
+clarifies the guide, pins these complete proposed canonical records in the
+v3 manifest, updates its repository_basis to the inspected pre-change HEAD
+68e7a2d5f7c1167412c4110ad4f5fb644839162c, and cascades the manifest hash into
+both v3 controllers. All other protected hashes and all status guards remain
+unchanged. The final eight-file candidate and every exact final SHA-256 are
+listed outside this repository in observation-v3-startup-final-r1/RECONCILIATION.txt.
+This avoids recording a manifest hash in a record that the manifest itself pins.
+The repository_basis is a historical pre-change reference, not the future
+commit HEAD; exact future execution requests must bind the actual new HEAD.
+
+Read-only comparison against Misty's original basis
+6aeb117a21445a90e52c81705f151d7c8afc7d8c shows that all six v3 paths are still
+net additions. Updating their content does not change that net-addition status.
+The two canonical record paths are already allowed. Therefore no Misty file,
+controller, manifest or shared gateway byte requires a change. The operator
+runtime manifest does not pin these v3 paths or the canonical records, so it
+also needs no change. Preserve all historical evidence at its original hashes.
+
+The 29-test v3 historical evidence accepted in 245/246 remains historical:
+no revised 32-test result exists. After final blind review, separately obtain
+commit authorization for the exact eight files; after commit prepare a new
+exact offline request pinned to actual HEAD, review it and obtain separate
+execution approval. After accepted revised offline evidence, prepare a new
+reviewed physical request and obtain separate live preflight and signed-attempt
+authority. Request 275/276 cannot execute revised bytes. No retry is authorized.

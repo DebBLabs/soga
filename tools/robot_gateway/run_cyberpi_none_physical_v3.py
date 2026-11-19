@@ -16,7 +16,7 @@ ROOT = Path("/Users/debb/dev/soga-clean")
 EVIDENCE_ROOT = Path("/Users/debb/dev/research-evidence/soga/evidence")
 HERE = Path(__file__).absolute()
 MANIFEST = HERE.with_name("cyberpi-none-v3-runtime-manifest.json")
-MANIFEST_SHA = "b318339737efd66e5fcecec6aa703d541a0e19743c3944f49827e47d88f73461"
+MANIFEST_SHA = "21f3465643ae3507c60d9c07ed7aae48d9f37df7979cd75c58e8d6f34f0ae9a9"
 PROBE = ROOT / "robot_gateway/cyberpi_none_observation_v3.py"
 PROTOCOL = ROOT / "robot_gateway/cyberpi_f3f4_protocol.py"
 

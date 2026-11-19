@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-11-03
+Last Updated: 2026-11-19
 
 ---
 
@@ -1784,3 +1784,19 @@ bytes. These records confer no execution or hardware authority.
   - `tools/robot_gateway/run_operator_runtime_synthetic.py` `cde9a0035b4cc0508e86a9008994d8880369ae2bc5f9c021eee411cf31b9232b`
 
 The final v3 repin is recorded separately to avoid a hash cycle.
+
+## Current mBot2 startup reconciliation — November 19, 2026
+
+This section is the current authority for this bounded task; preceding entries
+remain historical. D-208 records PI acceptance of the six-file startup draft
+passed in 287/288 and approval to prepare final outside-repository canonical
+records and dependent hash updates for blind review. No commit, tests or
+hardware contact are authorized. The revised 32-test suite has not run.
+The 29-test evidence accepted in 245/246 remains historical only. Misty,
+shared gateway and public Flow A bytes are unchanged. The final eight-file
+candidate is listed outside the repository in
+observation-v3-startup-final-r1/RECONCILIATION.txt, avoiding a hash cycle.
+Final static review precedes separate commit authority; an exact new offline
+request and execution approval follow the commit. Accepted revised offline
+evidence precedes replacement physical-request review and separate physical
+authority. Request 275/276 cannot execute changed bytes.

@@ -1,4 +1,5 @@
 """Synthetic fake I/O only. Controller injects observation and protocol modules."""
+import json
 import unittest
 
 
@@ -253,17 +254,21 @@ class PhysicalGateTests(unittest.TestCase):
             "confirmed_by": "Deb", "attempt_id": "reviewed-attempt", "host": "reviewed-host",
             "observed_at": 100.0, "device_path": "/dev/cu.fake", "device_rdev": 7,
             "unit_claim": "selected-unit", "firmware_claim": "44.01.016",
-            "standalone_observed_seconds": 15, "no_motion_sound_animation": True,
+            "standalone_observed_seconds": 15, "no_wheel_motion_or_sound_observed": True,
             "wheels_raised": True, "power_controls_accessible": True, "motor_power_off": True,
             "usb_logic_power_confirmed": True, "no_competing_owner": True,
-            "boot_baseline_record": "static baseline",
+            "battery_startup_visual_baseline": observation.BATTERY_VISUAL_BASELINE,
+            "boot_baseline_record": json.dumps({
+                "duration_seconds": 15, "screen": "Startup flash followed by blank screen.",
+                "lights": "White near wheels and blue eye flashes observed.",
+            }),
             "misty_units": [{"unit": "Misty B", "state": "powered_off", "excluded": True}],
         }
         self.metadata = {"canonical": True, "parent": "/dev", "name": "cu.fake", "character": True, "rdev": 7}
 
     def test_preflight_refuses_each_missing_safety_hold(self):
         observation.validate_preflight(self.preflight, 100.0, self.metadata)
-        for key in ("no_motion_sound_animation", "wheels_raised", "power_controls_accessible",
+        for key in ("no_wheel_motion_or_sound_observed", "wheels_raised", "power_controls_accessible",
                     "motor_power_off", "usb_logic_power_confirmed", "no_competing_owner"):
             with self.subTest(key=key), self.assertRaisesRegex(RuntimeError, "preflight_hold"):
                 observation.validate_preflight(self.preflight | {key: False}, 100.0, self.metadata)
@@ -279,6 +284,33 @@ class PhysicalGateTests(unittest.TestCase):
         ):
             with self.subTest(error=error), self.assertRaisesRegex(RuntimeError, error):
                 observation.validate_preflight(self.preflight | update, now, metadata)
+
+    def test_previous_animation_hold_schema_is_rejected(self):
+        previous = dict(self.preflight)
+        del previous["battery_startup_visual_baseline"]
+        previous["no_motion_sound_animation"] = previous.pop("no_wheel_motion_or_sound_observed")
+        with self.assertRaisesRegex(RuntimeError, "preflight_schema"):
+            observation.validate_preflight(previous, 100, self.metadata)
+
+    def test_visual_baseline_is_exact_and_motion_sound_hold_is_literal(self):
+        for baseline in ("quiet", "", None, True):
+            with self.subTest(baseline=baseline), self.assertRaisesRegex(RuntimeError, "battery_visual_baseline_required"):
+                observation.validate_preflight(self.preflight | {"battery_startup_visual_baseline": baseline}, 100, self.metadata)
+        for hold in (False, 1, "true", None):
+            with self.subTest(hold=hold), self.assertRaisesRegex(RuntimeError, "preflight_hold"):
+                observation.validate_preflight(self.preflight | {"no_wheel_motion_or_sound_observed": hold}, 100, self.metadata)
+
+    def test_boot_record_requires_measured_duration_and_both_narratives(self):
+        good = json.loads(self.preflight["boot_baseline_record"])
+        for update in ({"duration_seconds": True}, {"duration_seconds": 16},
+                       {"duration_seconds": float("nan")}, {"screen": ""},
+                       {"lights": "not observed"}, {"screen": observation.BATTERY_VISUAL_BASELINE},
+                       {"extra": "field"}):
+            with self.subTest(update=update), self.assertRaisesRegex(RuntimeError, "boot_baseline_"):
+                observation.validate_preflight(self.preflight | {"boot_baseline_record": json.dumps(good | update)}, 100, self.metadata)
+        for raw in ("static baseline", "{}", "null", '{"duration_seconds":15,"duration_seconds":15,"screen":"observed flash","lights":"observed lights"}'):
+            with self.subTest(raw=raw), self.assertRaisesRegex(RuntimeError, "boot_baseline_"):
+                observation.validate_preflight(self.preflight | {"boot_baseline_record": raw}, 100, self.metadata)
 
     def test_authority_exact_request_risk_and_attempt_count(self):
         authority = {"stable_request_sha256": "hash", "preflight_sha256": "facts",
