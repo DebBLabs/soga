@@ -23,7 +23,7 @@ from typing import Protocol, runtime_checkable
 ROOT = Path("/Users/debb/dev/soga-clean")
 HERE = Path(__file__).absolute()
 MANIFEST = HERE.with_name("cyberpi-none-v3-runtime-manifest.json")
-MANIFEST_SHA = "21f3465643ae3507c60d9c07ed7aae48d9f37df7979cd75c58e8d6f34f0ae9a9"
+MANIFEST_SHA = "e4ff9c364e8949ca010048b876a29a3a92d30c98e37f10c30256b502e6bfb230"
 EVIDENCE_ROOT = Path("/Users/debb/dev/research-evidence/soga/evidence")
 EXCLUDED = ["?? knowledge/proposals/PI_ROUTINE_TOOL_APPROVAL_DELEGATION_PROPOSAL_2026-09-08.md"]
 DENY_PROCESS = {"subprocess.Popen", "os.system", "os.fork", "os.forkpty", "os.exec",

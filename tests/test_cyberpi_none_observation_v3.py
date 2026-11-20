@@ -251,92 +251,163 @@ class SerialLayerTests(unittest.TestCase):
 class PhysicalGateTests(unittest.TestCase):
     def setUp(self):
         self.preflight = {
-            "confirmed_by": "Deb", "attempt_id": "reviewed-attempt", "host": "reviewed-host",
-            "observed_at": 100.0, "device_path": "/dev/cu.fake", "device_rdev": 7,
+            "confirmed_by": "Deb", "attempt_id": "cyberpi-none-v3-physical-reviewed-attempt",
+            "host": "reviewed-host", "observed_at": 100.0,
+            "device_path": "/dev/cu.fake", "device_rdev": 7,
             "unit_claim": "selected-unit", "firmware_claim": "44.01.016",
-            "standalone_observed_seconds": 15, "no_wheel_motion_or_sound_observed": True,
-            "wheels_raised": True, "power_controls_accessible": True, "motor_power_off": True,
-            "usb_logic_power_confirmed": True, "no_competing_owner": True,
-            "battery_startup_visual_baseline": observation.BATTERY_VISUAL_BASELINE,
-            "boot_baseline_record": json.dumps({
-                "duration_seconds": 15, "screen": "Startup flash followed by blank screen.",
-                "lights": "White near wheels and blue eye flashes observed.",
-            }),
-            "misty_units": [{"unit": "Misty B", "state": "powered_off", "excluded": True}],
+            "wheels_raised": True, "power_controls_accessible": True, "no_competing_owner": True,
+            "misty_units": [dict(unit) for unit in observation.MISTY_UNITS],
+            "shield_switch_off": True, "motor_connection_state": "connected_no_isolation_claim",
+            "support_configuration": "assembled_freely_resting_passive_support",
+            "usb_connection_state_at_approval": "disconnected",
+            "usb_startup_evidence_sha256": observation.USB_STARTUP_EVIDENCE_SHA256,
+            "device_identity_basis": "prior_passive_record_rechecked_at_open",
+            "device_identity_record_sha256": "a" * 64, "support_clearance_confirmed": True,
+            "accept_connected_motor_uncertainty": True,
+            "accept_freely_resting_support_uncertainty": True,
+            "accept_usb_stop_uncertainty": True, "serial_topology_unambiguous": True,
         }
         self.metadata = {"canonical": True, "parent": "/dev", "name": "cu.fake", "character": True, "rdev": 7}
+        self.request = {key: self.preflight[key] for key in
+                        ("host", "attempt_id", "unit_claim", "firmware_claim", "misty_units",
+                         "device_identity_record_sha256")}
+        self.request.update(execution_policy=observation.EXECUTION_POLICY)
+        self.identity = {
+            "schema": "cyberpi-passive-identity-v1", "confirmed_by": "Deb",
+            "host": "reviewed-host", "unit_claim": "selected-unit",
+            "device_path": "/dev/cu.fake", "device_rdev": 7, "observed_at": 90,
+            "method": "manual_usb_namespace_metadata_no_serial_open",
+            "approval_reference": "prior-manual-session", "namespace_unambiguous": True,
+        }
+        self.authority = {
+            "stable_request_sha256": "b" * 64, "preflight_sha256": "c" * 64,
+            "attempt_id": self.preflight["attempt_id"], "approved_by": "Deb", "attempts": 1,
+            "approval_reference": observation.APPROVAL_REFERENCE_PREFIX + "actual-approval",
+            "approved_at": 101, "expires_at": 120,
+            "accept_candidate_uncertainty": True, "accept_reset_uncertainty": True,
+        }
 
-    def test_preflight_refuses_each_missing_safety_hold(self):
-        observation.validate_preflight(self.preflight, 100.0, self.metadata)
-        for key in ("no_wheel_motion_or_sound_observed", "wheels_raised", "power_controls_accessible",
-                    "motor_power_off", "usb_logic_power_confirmed", "no_competing_owner"):
-            with self.subTest(key=key), self.assertRaisesRegex(RuntimeError, "preflight_hold"):
-                observation.validate_preflight(self.preflight | {key: False}, 100.0, self.metadata)
+    def test_cold_preflight_requires_each_literal_hold(self):
+        # No node metadata exists at cold approval; actual-open validation is separate.
+        observation.validate_preflight(self.preflight, 100)
+        observation.validate_preflight(self.preflight, 100, self.metadata)
+        for key in ("wheels_raised", "power_controls_accessible", "no_competing_owner",
+                    "shield_switch_off", "support_clearance_confirmed", "accept_connected_motor_uncertainty",
+                    "accept_freely_resting_support_uncertainty", "accept_usb_stop_uncertainty",
+                    "serial_topology_unambiguous"):
+            for value in (False, 1, "true", None):
+                with self.subTest(key=key, value=value), self.assertRaisesRegex(RuntimeError, "preflight_hold"):
+                    observation.validate_preflight(self.preflight | {key: value}, 100)
 
-    def test_stale_future_short_boot_and_wrong_device_refused(self):
-        for update, now, metadata, error in (
-            ({"observed_at": -21}, 100, self.metadata, "stale_preflight"),
-            ({"observed_at": 101}, 100, self.metadata, "stale_preflight"),
-            ({"standalone_observed_seconds": 14}, 100, self.metadata, "stored_boot_observation"),
-            ({}, 100, self.metadata | {"canonical": False}, "device_path_required"),
-            ({}, 100, self.metadata | {"character": False}, "device_identity_mismatch"),
-            ({}, 100, self.metadata | {"rdev": 8}, "device_identity_mismatch"),
-        ):
-            with self.subTest(error=error), self.assertRaisesRegex(RuntimeError, error):
-                observation.validate_preflight(self.preflight | update, now, metadata)
+    def test_exact_cold_schema_rejects_missing_legacy_and_extra_fields(self):
+        for key in self.preflight:
+            missing = dict(self.preflight)
+            del missing[key]
+            with self.subTest(missing=key), self.assertRaisesRegex(RuntimeError, "preflight_schema"):
+                observation.validate_preflight(missing, 100)
+        for key in ("motor_power_off", "usb_logic_power_confirmed", "standalone_observed_seconds",
+                    "no_wheel_motion_or_sound_observed", "boot_baseline_record",
+                    "battery_startup_visual_baseline", "no_motion_sound_animation", "extra"):
+            with self.subTest(legacy=key), self.assertRaisesRegex(RuntimeError, "preflight_schema"):
+                observation.validate_preflight(self.preflight | {key: True}, 100)
 
-    def test_previous_animation_hold_schema_is_rejected(self):
-        previous = dict(self.preflight)
-        del previous["battery_startup_visual_baseline"]
-        previous["no_motion_sound_animation"] = previous.pop("no_wheel_motion_or_sound_observed")
-        with self.assertRaisesRegex(RuntimeError, "preflight_schema"):
-            observation.validate_preflight(previous, 100, self.metadata)
+    def test_configuration_and_reference_modes_are_exact(self):
+        for key in ("motor_connection_state", "support_configuration", "usb_connection_state_at_approval",
+                    "device_identity_basis", "usb_startup_evidence_sha256"):
+            for value in ("other", "", True, None):
+                with self.subTest(key=key, value=value), self.assertRaisesRegex(RuntimeError, "preflight_policy"):
+                    observation.validate_preflight(self.preflight | {key: value}, 100)
+        for value in ("a", "A" * 64, "g" * 64, True, None):
+            with self.subTest(digest=value), self.assertRaisesRegex(RuntimeError, "prior_identity_digest_required"):
+                observation.validate_preflight(self.preflight | {"device_identity_record_sha256": value}, 100)
 
-    def test_visual_baseline_is_exact_and_motion_sound_hold_is_literal(self):
-        for baseline in ("quiet", "", None, True):
-            with self.subTest(baseline=baseline), self.assertRaisesRegex(RuntimeError, "battery_visual_baseline_required"):
-                observation.validate_preflight(self.preflight | {"battery_startup_visual_baseline": baseline}, 100, self.metadata)
-        for hold in (False, 1, "true", None):
-            with self.subTest(hold=hold), self.assertRaisesRegex(RuntimeError, "preflight_hold"):
-                observation.validate_preflight(self.preflight | {"no_wheel_motion_or_sound_observed": hold}, 100, self.metadata)
+    def test_stale_future_and_actual_device_changes_refuse(self):
+        for timestamp in (-21, 101, True, float("nan"), float("inf"), "100"):
+            with self.subTest(timestamp=timestamp), self.assertRaisesRegex(RuntimeError, "stale_preflight"):
+                observation.validate_preflight(self.preflight | {"observed_at": timestamp}, 100)
+        for metadata, error in ((self.metadata | {"canonical": False}, "device_path_required"),
+                                (self.metadata | {"character": False}, "device_identity_mismatch"),
+                                (self.metadata | {"rdev": 8}, "device_identity_mismatch")):
+            with self.subTest(metadata=metadata), self.assertRaisesRegex(RuntimeError, error):
+                observation.validate_preflight(self.preflight, 100, metadata)
+        for path in ("/dev/cu.", "/dev/cu.fake/other", "/tmp/cu.fake", "/dev/cu.bad name"):
+            with self.subTest(path=path), self.assertRaisesRegex(RuntimeError, "device_path_required"):
+                observation.validate_preflight(self.preflight | {"device_path": path}, 100)
+        for rdev in (True, -1, "7"):
+            with self.subTest(rdev=rdev), self.assertRaisesRegex(RuntimeError, "device_identity_mismatch"):
+                observation.validate_preflight(self.preflight | {"device_rdev": rdev}, 100)
 
-    def test_boot_record_requires_measured_duration_and_both_narratives(self):
-        good = json.loads(self.preflight["boot_baseline_record"])
-        for update in ({"duration_seconds": True}, {"duration_seconds": 16},
-                       {"duration_seconds": float("nan")}, {"screen": ""},
-                       {"lights": "not observed"}, {"screen": observation.BATTERY_VISUAL_BASELINE},
-                       {"extra": "field"}):
-            with self.subTest(update=update), self.assertRaisesRegex(RuntimeError, "boot_baseline_"):
-                observation.validate_preflight(self.preflight | {"boot_baseline_record": json.dumps(good | update)}, 100, self.metadata)
-        for raw in ("static baseline", "{}", "null", '{"duration_seconds":15,"duration_seconds":15,"screen":"observed flash","lights":"observed lights"}'):
-            with self.subTest(raw=raw), self.assertRaisesRegex(RuntimeError, "boot_baseline_"):
-                observation.validate_preflight(self.preflight | {"boot_baseline_record": raw}, 100, self.metadata)
+    def test_misty_inventory_rejects_missing_or_nonliteral_exclusion(self):
+        for units in ([], self.preflight["misty_units"][:1],
+                      [self.preflight["misty_units"][0] | {"excluded": 1}, self.preflight["misty_units"][1]]):
+            with self.subTest(units=units), self.assertRaisesRegex(RuntimeError, "misty_inventory_required"):
+                observation.validate_preflight(self.preflight | {"misty_units": units}, 100)
 
     def test_authority_exact_request_risk_and_attempt_count(self):
-        authority = {"stable_request_sha256": "hash", "preflight_sha256": "facts",
-                     "attempt_id": "reviewed-attempt", "approved_by": "Deb", "attempts": 1,
-                     "approval_reference": "approval", "approved_at": 101, "expires_at": 120,
-                     "accept_candidate_uncertainty": True, "accept_reset_uncertainty": True}
-
         def validate(record, verify):
-            observation.validate_authority(record, "hash", "facts", "reviewed-attempt", verify)
-
-        validate(authority, lambda: True)
-        for change in ({"stable_request_sha256": "other"}, {"preflight_sha256": "other"},
+            observation.validate_authority(record, "b" * 64, "c" * 64, self.preflight["attempt_id"], verify)
+        validate(self.authority, lambda: True)
+        for change in ({"stable_request_sha256": "d" * 64}, {"preflight_sha256": "e" * 64},
                        {"attempt_id": "other"}, {"attempts": 2}, {"attempts": True},
-                       {"approval_reference": ""}, {"accept_reset_uncertainty": False}, {"extra": True}):
+                       {"approval_reference": ""}, {"accept_reset_uncertainty": False},
+                       {"approved_at": True}, {"approved_at": 120}, {"expires_at": 222}, {"extra": True}):
             with self.subTest(change=change), self.assertRaisesRegex(RuntimeError, "physical_authority_required"):
-                validate(authority | change, lambda: self.fail("invalid record reached signature verification"))
+                validate(self.authority | change, lambda: self.fail("invalid record reached verifier"))
         for invalid in (False, 1, None):
             with self.subTest(invalid=invalid), self.assertRaisesRegex(RuntimeError, "approval_signature_required"):
-                validate(authority, lambda: invalid)
+                validate(self.authority, lambda: invalid)
 
-    def test_host_unit_firmware_and_exclusions_bind_exactly(self):
-        request = dict(self.preflight)
-        observation.validate_binding(self.preflight, request)
-        for key in ("host", "attempt_id", "unit_claim", "firmware_claim", "misty_units"):
+    def test_signer_token_constraints_and_scope_prefix(self):
+        for reference in (observation.APPROVAL_REFERENCE_PREFIX, "old-approval", "x" * 129,
+                          observation.APPROVAL_REFERENCE_PREFIX + "bad space", "é"):
+            with self.subTest(reference=reference), self.assertRaisesRegex(RuntimeError, "physical_authority_required"):
+                observation.validate_authority(self.authority | {"approval_reference": reference},
+                                               "b" * 64, "c" * 64, self.preflight["attempt_id"], lambda: True)
+        for attempt in ("old-attempt", "cyberpi-none-v3-physical-", "x" * 129):
+            with self.subTest(attempt=attempt), self.assertRaisesRegex(RuntimeError, "physical_authority_required"):
+                observation.validate_authority(self.authority | {"attempt_id": attempt},
+                                               "b" * 64, "c" * 64, attempt, lambda: True)
+        reference = observation.APPROVAL_REFERENCE_PREFIX + "x" * (128 - len(observation.APPROVAL_REFERENCE_PREFIX))
+        observation.validate_authority(self.authority | {"approval_reference": reference},
+                                       "b" * 64, "c" * 64, self.preflight["attempt_id"], lambda: True)
+
+    def test_all_cold_identity_bindings_and_execution_policy_are_exact(self):
+        observation.validate_binding(self.preflight, self.request)
+        for key in ("host", "attempt_id", "unit_claim", "firmware_claim", "misty_units",
+                    "device_identity_record_sha256"):
             with self.subTest(key=key), self.assertRaisesRegex(RuntimeError, "preflight_binding_mismatch"):
-                observation.validate_binding(self.preflight, request | {key: "other"})
+                observation.validate_binding(self.preflight, self.request | {key: "other"})
+        with self.assertRaisesRegex(RuntimeError, "execution_policy_required"):
+            observation.validate_binding(self.preflight, self.request | {"execution_policy": "old"})
+
+    def test_prior_identity_valid_record_and_hash_refusal(self):
+        observation.validate_prior_identity(self.identity, self.preflight, self.request, "a" * 64)
+        for digest in ("b" * 64, "bad", None):
+            with self.subTest(digest=digest), self.assertRaisesRegex(RuntimeError, "prior_identity_hash_mismatch"):
+                observation.validate_prior_identity(self.identity, self.preflight, self.request, digest)
+        with self.assertRaisesRegex(RuntimeError, "prior_identity_hash_mismatch"):
+            observation.validate_prior_identity(self.identity, self.preflight,
+                                                self.request | {"device_identity_record_sha256": "b" * 64}, "a" * 64)
+
+    def test_prior_identity_schema_and_chronology_refuse(self):
+        for update in ({"extra": 1}, {"schema": "old"}, {"confirmed_by": "other"},
+                       {"method": "serial_probe"}, {"namespace_unambiguous": 1}, {"approval_reference": ""}):
+            with self.subTest(update=update), self.assertRaisesRegex(RuntimeError, "prior_identity_schema"):
+                observation.validate_prior_identity(self.identity | update, self.preflight, self.request, "a" * 64)
+        for value in (True, 0, 101, float("inf"), float("nan"), "90"):
+            with self.subTest(value=value), self.assertRaisesRegex(RuntimeError, "prior_identity_chronology"):
+                observation.validate_prior_identity(self.identity | {"observed_at": value},
+                                                    self.preflight, self.request, "a" * 64)
+
+    def test_prior_identity_unit_host_path_and_rdev_bind_to_cold_facts(self):
+        for key, value in (("host", "other"), ("unit_claim", "other"),
+                           ("device_path", "/dev/cu.other"), ("device_rdev", 8)):
+            with self.subTest(key=key), self.assertRaisesRegex(RuntimeError, "prior_identity_binding_mismatch"):
+                observation.validate_prior_identity(self.identity | {key: value},
+                                                    self.preflight, self.request, "a" * 64)
+        with self.assertRaisesRegex(RuntimeError, "prior_identity_binding_mismatch"):
+            observation.validate_prior_identity(self.identity, self.preflight,
+                                                self.request | {"host": "other"}, "a" * 64)
 
     def test_expiry_after_pins_and_early_cutoff(self):
         authority = {"approved_at": 101, "expires_at": 120}

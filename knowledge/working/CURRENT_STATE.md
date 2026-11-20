@@ -1,7 +1,7 @@
 # CURRENT STATE
 ## Deb B Labs Research Program
 
-Last Updated: 2026-11-19
+Last Updated: 2026-11-20
 
 ---
 
@@ -1800,3 +1800,31 @@ Final static review precedes separate commit authority; an exact new offline
 request and execution approval follow the commit. Accepted revised offline
 evidence precedes replacement physical-request review and separate physical
 authority. Request 275/276 cannot execute changed bytes.
+
+## Current supported mBot2 cold-sign reconciliation — November 20, 2026
+
+This section is current for this bounded task; preceding stage descriptions
+remain historical. D-209 records accepted 295/296 historical 32-test evidence,
+accepted limited 311/312 manual USB evidence, adopted combined design 313/314
+and accepted six-file implementation draft 315/316. The current authority is
+outside-repository final record/hash reconciliation and blind review only.
+No commits, tests, signing, USB connection or hardware contact are authorized.
+The revised 36-method suite has not run; no prior identity record exists here.
+
+The revised design truthfully records connected motors and freely resting
+support, uses cold approval/signing with mBot2 USB disconnected, and retains
+existing iPad/key compatibility. It retires unsupported isolation claims and
+the fresh battery-only startup prerequisite. Procedural 75/90 checkpoints
+and 65-second USB cap do not prove timing or stopping; the hard 120-second
+opening deadline and core algorithm/byte/time limits remain unchanged.
+
+Final candidate hashes are listed externally in
+observation-v3-supported-cold-sign-final-r1/RECONCILIATION.txt to avoid cycles.
+Misty/shared gateway/operator-runtime/public Flow A bytes and all status
+guards stay intact. Final review precedes separate commit authority, an
+exact reviewed offline request/one-run approval and accepted evidence.
+A reviewed, separately authorized passive identity exposure and new physical
+request/paper digest precede any live cold preflight/signature/invocation.
+299/300 and the old live schema cannot execute revised bytes. Preserve all
+historical evidence. After any eventual commit, freeze these canonical bytes
+through the reviewed run or obtain a separately reviewed repin.

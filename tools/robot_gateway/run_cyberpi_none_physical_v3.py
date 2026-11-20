@@ -16,12 +16,12 @@ ROOT = Path("/Users/debb/dev/soga-clean")
 EVIDENCE_ROOT = Path("/Users/debb/dev/research-evidence/soga/evidence")
 HERE = Path(__file__).absolute()
 MANIFEST = HERE.with_name("cyberpi-none-v3-runtime-manifest.json")
-MANIFEST_SHA = "21f3465643ae3507c60d9c07ed7aae48d9f37df7979cd75c58e8d6f34f0ae9a9"
+MANIFEST_SHA = "e4ff9c364e8949ca010048b876a29a3a92d30c98e37f10c30256b502e6bfb230"
 PROBE = ROOT / "robot_gateway/cyberpi_none_observation_v3.py"
 PROTOCOL = ROOT / "robot_gateway/cyberpi_f3f4_protocol.py"
 
 
-def read_regular(path):
+def read_regular(path, limit=None):
     path = Path(path)
     if not path.is_absolute() or path.resolve() != path or not stat.S_ISREG(path.lstat().st_mode):
         raise RuntimeError("canonical_regular_file_required")
@@ -29,7 +29,10 @@ def read_regular(path):
     with os.fdopen(fd, "rb") as stream:
         if not stat.S_ISREG(os.fstat(stream.fileno()).st_mode):
             raise RuntimeError("regular_file_required")
-        return stream.read()
+        data = stream.read() if limit is None else stream.read(limit + 1)
+        if limit is not None and len(data) > limit:
+            raise RuntimeError("record_size_limit")
+        return data
 
 
 def sha(data):
@@ -71,6 +74,11 @@ def pins(request, manifest, probe):
         if value != expected:
             raise RuntimeError("protected_hash_mismatch")
         observed[absolute] = value
+    identity_path = request["device_identity_record"]
+    identity_digest = sha(read_regular(identity_path, limit=16384))
+    if identity_digest != request["device_identity_record_sha256"]:
+        raise RuntimeError("prior_identity_hash_mismatch")
+    observed[identity_path] = identity_digest
     runtime = request["runtime"]
     if type(runtime) is not dict or not runtime:
         raise RuntimeError("runtime_pins_required")
@@ -248,7 +256,8 @@ def main():
                      "command", "evidence", "preflight", "authority", "authority_signature",
                      "attempt_id", "host", "unit_claim", "firmware_claim", "misty_units",
                      "approval_public_key", "approval_public_key_sha256", "verifier",
-                     "operation", "operator", "limits"}
+                     "operation", "operator", "limits", "device_identity_record",
+                     "device_identity_record_sha256", "execution_policy"}
     if set(request) != expected_keys or request["operator"] != "Deb" or request["host"] != os.uname().nodename:
         raise RuntimeError("request_schema_or_host")
     if request["operation"] != "literal_none_observation" or request["limits"] != manifest["physical_limits"]:
@@ -271,6 +280,9 @@ def main():
                              lambda: verify_signature(request, authority_bytes))
     probe.validate_preflight(preflight, initial[0])
     probe.validate_binding(preflight, request)
+    identity_bytes = read_regular(request["device_identity_record"], limit=16384)
+    identity = json.loads(identity_bytes, object_pairs_hook=unique)
+    probe.validate_prior_identity(identity, preflight, request, sha(identity_bytes))
     probe.remaining(preflight, authority, initial)
     evidence = Path(request["evidence"])
     if evidence.parent != EVIDENCE_ROOT or evidence.resolve() != evidence or os.path.lexists(evidence):

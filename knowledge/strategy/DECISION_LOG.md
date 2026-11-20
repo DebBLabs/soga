@@ -4812,3 +4812,86 @@ exact offline request pinned to actual HEAD, review it and obtain separate
 execution approval. After accepted revised offline evidence, prepare a new
 reviewed physical request and obtain separate live preflight and signed-attempt
 authority. Request 275/276 cannot execute revised bytes. No retry is authorized.
+
+
+## D-209 — Accept supported cold-sign mBot2 draft; stage final reconciliation
+
+2026-11-20 Eastern. This entry records PI decisions and stage boundaries;
+it grants no commit, test or physical authority. D-208 and earlier entries
+remain historical. The exact eight-file startup package was committed as
+0c0ff6fcfe72835a939c4ff197cc369ce17be9b7 after 289/290 and PI authority.
+Its single 32-test offline run passed; 295/296 evidence was accepted. That
+historical evidence does not execute or cover the newly revised validators.
+
+The PI accepted the operator-reported manual USB observation reviewed in
+311/312: 15 seconds reported, blue lights and a charging display then blank,
+no wheel rotation/sound/support motion, blue light out after unplugging.
+This is an operator report, not independent timing, isolation, firmware,
+rail-state or shutdown proof. No protocol frame or device metadata was read.
+The recorded support is freely resting; no straps, disassembly, motor-lead
+removal or helper is required by the subsequently adopted design.
+
+The PI adopted combined design 313/314 with recorded drafting requirements,
+then accepted the six complete supported cold-sign implementation files
+passed in 315/316. The PI authorized final records/hash drafting outside the
+repository for blind review and correction, not copying/committing them yet.
+The revised suite has 36 statically counted methods and has not run.
+
+The adopted design explicitly replaces the two unsupported isolation holds,
+retires the fresh battery-only power-on prerequisite and its old schema,
+and uses 24-key cold preflight and 24-key request schemas. Motors remain
+connected on a freely resting passive support with actual wheel/edge/object/
+cable clearance and explicit displacement/manual-stop uncertainty acceptance.
+The cold record binds a separately obtained, reviewed passive identity record;
+actual canonical character-device/rdev/fd checks remain at open. No identity
+record or device-path claim is invented by this stage.
+
+The existing iPad app/key and ten-key authority format remain, with strict
+signer-compatible tokens and a scope-specific approval-reference prefix.
+Signing occurs while mBot2 USB is disconnected. Proposed procedural receipt
+and invocation checkpoints are observed_at+75 and +90; the hard open deadline
+remains +120. The 65-second attended USB-connected cap is procedural and
+longer than the 15-second sample, not measured exposure proof or hardware
+shutdown. Parent startup has no guaranteed 30-second bound. Fresh connected
+settled state is prospectively blank display with visibly stable blue
+indicator(s), not an assertion of historically measured steadiness. No-change
+at cable connection refuses. Post-open no-change or one matching reset sequence
+is prospective/unobserved and bounded by the existing 12-second passive window.
+No automatic visual gate or guarantee against human/write races is claimed.
+
+Accepted implementation-draft hashes (historical 315/316 bytes before final
+canonical/source/manifest/controller reconciliation; not final commit hashes):
+d64c5e771f7fb1ff44bc2880e1033255bfb2023dab13248810b8965e0488e949  robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md
+592387c47ceb839585ec4483e170ea702d3ac1d670929921957ee42e61528cc5  robot_gateway/cyberpi_none_observation_v3.py
+7bd83f3ed18d18a7afb2fa15003d1df5c63c516a9b7b95c5907f08fcfb6292bc  tests/test_cyberpi_none_observation_v3.py
+9540864f6614e3a82c4cff6beff3e32c0114332d8403ef54d85e583093d90e73  tools/robot_gateway/cyberpi-none-v3-runtime-manifest.json
+effd6620cb8432c7cef9532848b03a005864ab5f0c1df7b785a7e839f281378f  tools/robot_gateway/run_cyberpi_none_physical_v3.py
+0fdaf8e33fa01dd05fe717b089cea7498578915c518676f6466cfcfb2fec7f0e  tools/robot_gateway/run_cyberpi_none_synthetic_v3.py
+
+The final reconciliation preserves those module/test bytes, clarifies only
+staging/coexistence wording in the guide, updates repository_basis to the
+inspected pre-change HEAD 0c0ff6fcfe72835a939c4ff197cc369ce17be9b7, pins these
+complete proposed canonical record bytes, and cascades guide/manifest/controller
+hashes. The final eight files and exact final SHA-256 values live outside the
+repository in observation-v3-supported-cold-sign-final-r1/RECONCILIATION.txt.
+Do not embed downstream final hashes here: that would create a cycle with the
+manifest protecting this record. Future exact requests bind actual new HEAD.
+
+Read-only reconciliation of both Misty stop-only guards confirms that all six
+v3 paths remain net additions relative to their original basis
+6aeb117a21445a90e52c81705f151d7c8afc7d8c; changing their bytes does not change
+that two-point A status. Both canonical paths are already allowed. Other
+runtime manifests do not pin these eight paths. No Misty, shared gateway,
+operator-runtime, public Flow A or status-guard byte is changed. Older
+controllers/evidence remain historical at their original hashes; no rerun.
+
+Next boundaries: final blind reconciliation review; separate exact commit
+approval; new exact offline request review and separate one-run authority;
+accepted revised offline evidence; separately reviewed and authorized passive
+identity exposure; then a new exact physical request/paper digest and separate
+cold preflight, signing and one-shot authority. The identity file parser and
+physical-controller schema integration are static-reviewed only; synthetic
+tests do not import that controller. Prior identity has no maximum age and
+is not cryptographic unit identity; final request review must use the most
+recent reviewed session for the actual unit/cable/port. Old request 299/300
+cannot execute revised bytes. No USB or hardware contact is authorized now.

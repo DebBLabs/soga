@@ -26,6 +26,9 @@
     "write_ready_seconds": 0.5
   },
   "protected": {
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_ATTENDED_USB_EVIDENCE_ACCEPTANCE_2026-11-20.txt": "cf02a1b346c2e2bdd920beb9dc76797ae8345decbd7e2b410f604180bdb0fddc",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_COMBINED_AMENDMENT_ADOPTION_2026-11-20.txt": "e7fadf890b78603cff3776470d94de48ad5ff25b1d9ae7ae498bf7cb4e6c2b4a",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/operator-evidence/mbot2-attended-usb-2026-11-20-v1/OPERATOR_OBSERVATION.md": "10d86396e771db383e2989712883a05cef4ca9f89ca748f7c030b958af0cdb7f",
     "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/proposals/MBOT2_FIRST_PROTOCOL_OBSERVATION_R2_2026-11-09.md": "e4f77a818fd291a69f853d86df9d24cc3afac3bd3c65bb456c060ca4db20f398",
     "/Users/debb/dev/permission-to-speak-work/permission-to-speak/.gitignore": "9db41820090214cd11b0682d9e420709288fa5e1de26dcb1fb452470c7c2ed81",
     "/Users/debb/dev/permission-to-speak-work/permission-to-speak/AUTHORIZATION_2026-10-03.md": "2da3ac51e6265acbd9a8dcb001999d711bd2b46c50afbccc5300673187bfacda",
@@ -93,8 +96,8 @@
     "/Users/debb/dev/soga-clean/knowledge/proposals/IIW_MISTY_STOP_ONLY_VERIFICATION_PROPOSAL_2026-11-03.md": "f86690e4009979821189fa2240da9dd17f61472076c9b2847c31916b6a5d30bd",
     "/Users/debb/dev/soga-clean/knowledge/proposals/MBOT2_FIRST_PROTOCOL_OBSERVATION_R2_2026-11-09.md": "e4f77a818fd291a69f853d86df9d24cc3afac3bd3c65bb456c060ca4db20f398",
     "/Users/debb/dev/soga-clean/knowledge/proposals/TWO_ROBOT_SWITCHING_RUNTIME_R2_2026-11-09.md": "59fddaab5fb5167c1da0a80c80974d54b5e1e524b24720140940a283e6717bb3",
-    "/Users/debb/dev/soga-clean/knowledge/strategy/DECISION_LOG.md": "69d7d5a6667755ab48d710422edafca2a5cea373fd0787654d4fb53504ca6e09",
-    "/Users/debb/dev/soga-clean/knowledge/working/CURRENT_STATE.md": "943b6ca09e59b1543b92a0a499a5f75d63189c838fa53d27c7d085883fead1e4",
+    "/Users/debb/dev/soga-clean/knowledge/strategy/DECISION_LOG.md": "480201295e55d01e07a2bebf5b70483a2f4172fa7034762ba0911eaa925b454e",
+    "/Users/debb/dev/soga-clean/knowledge/working/CURRENT_STATE.md": "2aa484c144df8086bc6cefe8d03e5623718db2e441f183b831208b0e11ddb047",
     "/Users/debb/dev/soga-clean/robot_gateway/CYBERPI_NONE_OBSERVATION.md": "45aea9d45bf0b954a12c4ed7782835a68ef3ff76389dd584f90db65ba34ee4f2",
     "/Users/debb/dev/soga-clean/robot_gateway/CYBERPI_PROTOCOL_VERIFICATION.md": "f9eaf386a7dcf0a5fb464c33f355f9d4fc422edeb13c605aafc3020413587147",
     "/Users/debb/dev/soga-clean/robot_gateway/OPERATOR_RUNTIME.md": "0d15a71feadcf88b8d6e33e208cd5bcf989b6b2bba2a93fbb69cfc4650aeabdf",
@@ -161,15 +164,15 @@
     "/Users/debb/dev/soga-clean/tools/robot_gateway/run_operator_runtime_synthetic.py": "cde9a0035b4cc0508e86a9008994d8880369ae2bc5f9c021eee411cf31b9232b",
     "/Users/debb/dev/soga-clean/tools/robot_gateway/run_static_and_synthetic_tests.py": "a5e17e25d61dfb089ccdd8447b73337dcc60a7c7eff5c5f211a8990b2c46063e"
   },
-  "repository_basis": "68e7a2d5f7c1167412c4110ad4f5fb644839162c",
+  "repository_basis": "0c0ff6fcfe72835a939c4ff197cc369ce17be9b7",
   "schema": "cyberpi-none-runtime-v3",
   "sources": {
-    "robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md": "8503e0a5d7f0a7502f69d172b27d0cb9ee136f6c0751cdef5ec8dac945de1cd8",
+    "robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md": "2ab057d13d8258fd2b25a0c5fd345d9bea690db8e03a04cfc82b4f64eaabfeaf",
     "robot_gateway/cyberpi_f3f4_protocol.py": "57189ba2841802f6ca507c14d82bf96e2965268c41e7cb36ecc380c31599d805",
-    "robot_gateway/cyberpi_none_observation_v3.py": "e30fbc92b5498d1ebb450549942672e9185dbabaa4bbd4914668f1cc7f1b5f57",
-    "tests/test_cyberpi_none_observation_v3.py": "0a1e9c34837831daf026cc8ccbaf93eab3cf2b76b397d01d678f8374e30ba3fa"
+    "robot_gateway/cyberpi_none_observation_v3.py": "592387c47ceb839585ec4483e170ea702d3ac1d670929921957ee42e61528cc5",
+    "tests/test_cyberpi_none_observation_v3.py": "7bd83f3ed18d18a7afb2fa15003d1df5c63c516a9b7b95c5907f08fcfb6292bc"
   },
-  "test_count": 32,
+  "test_count": 36,
   "tests": [
     [
       "none_observation_tests",

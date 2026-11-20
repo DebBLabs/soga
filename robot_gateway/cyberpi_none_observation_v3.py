@@ -1,5 +1,4 @@
 """Bounded observation algorithm with injected I/O. No device access."""
-import json
 import math
 
 
@@ -9,7 +8,13 @@ QUIET_SECONDS = 1.0
 WRITE_SECONDS = 0.5
 RESPONSE_SECONDS = 2.0
 WALL_SECONDS = 18.0
-BATTERY_VISUAL_BASELINE = "white_near_wheels_blue_eye_flashes_screen_flash_then_blank"
+USB_STARTUP_EVIDENCE_SHA256 = "10d86396e771db383e2989712883a05cef4ca9f89ca748f7c030b958af0cdb7f"
+EXECUTION_POLICY = "cold_sign_supported_usb_v1"
+APPROVAL_REFERENCE_PREFIX = "cold-sign-lifted-connected-stop-uncertain-v1."
+MISTY_UNITS = [
+    {"unit": "Misty A urn:debblabs:misty-a:20221304273", "state": "powered_off", "excluded": True},
+    {"unit": "Misty B urn:debblabs:misty-b:20193802932", "state": "powered_off", "excluded": True},
+]
 BOOT_LIMIT = 4096
 RESPONSE_LIMIT = 1024
 
@@ -211,67 +216,67 @@ class SerialIO:
         return outcome
 
 
-def validate_boot_record(raw, measured_seconds):
-    """Validate an operator narrative; content truth remains an operator attestation."""
-    def unique_fields(pairs):
-        record = {}
-        for key, value in pairs:
-            if key in record:
-                raise ValueError("duplicate_field")
-            record[key] = value
-        return record
+def is_digest(value):
+    return type(value) is str and len(value) == 64 and all(c in "0123456789abcdef" for c in value)
 
-    try:
-        record = json.loads(raw, object_pairs_hook=unique_fields)
-    except (ValueError, RecursionError) as error:
-        raise RuntimeError("boot_baseline_record_required") from error
-    if (type(record) is not dict or set(record) != {"duration_seconds", "screen", "lights"}
-            or type(record["duration_seconds"]) not in (int, float)
-            or not math.isfinite(record["duration_seconds"])
-            or record["duration_seconds"] != measured_seconds):
-        raise RuntimeError("boot_baseline_duration_required")
-    for key in ("screen", "lights"):
-        value = record[key]
-        if (type(value) is not str or not 12 <= len(value.strip()) <= 400
-                or value.strip().lower() in {"not observed", "not yet observed", "unknown baseline",
-                                            "placeholder text", BATTERY_VISUAL_BASELINE}):
-            raise RuntimeError("boot_baseline_narrative_required")
+
+def is_signer_token(value):
+    allowed = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789._-"
+    return type(value) is str and 1 <= len(value) <= 128 and all(c in allowed for c in value)
+
+
+def validate_device_claim(path, rdev):
+    if (type(path) is not str or not path.startswith("/dev/cu.")
+            or len(path) <= len("/dev/cu.") or "/" in path[len("/dev/"):]
+            or len(path) > 1024 or any(ord(c) <= 32 or ord(c) >= 127 for c in path)):
+        raise RuntimeError("device_path_required")
+    if type(rdev) is not int or rdev < 0:
+        raise RuntimeError("device_identity_mismatch")
 
 
 def validate_preflight(preflight, now, device=None):
+    """Cold operator attestations; device=None does not inspect a present node."""
     required = {"confirmed_by", "observed_at", "device_path", "device_rdev", "unit_claim",
-                "firmware_claim", "standalone_observed_seconds", "no_wheel_motion_or_sound_observed",
-                "wheels_raised", "power_controls_accessible", "motor_power_off",
-                "usb_logic_power_confirmed", "no_competing_owner", "boot_baseline_record", "misty_units",
-                "attempt_id", "host", "battery_startup_visual_baseline"}
+                "firmware_claim", "wheels_raised", "power_controls_accessible",
+                "no_competing_owner", "misty_units", "attempt_id", "host",
+                "shield_switch_off", "motor_connection_state", "support_configuration",
+                "usb_connection_state_at_approval", "usb_startup_evidence_sha256",
+                "device_identity_basis", "device_identity_record_sha256",
+                "support_clearance_confirmed", "accept_connected_motor_uncertainty",
+                "accept_freely_resting_support_uncertainty", "accept_usb_stop_uncertainty",
+                "serial_topology_unambiguous"}
     if type(preflight) is not dict or set(preflight) != required or preflight["confirmed_by"] != "Deb":
         raise RuntimeError("preflight_schema")
-    for key in ("unit_claim", "firmware_claim", "boot_baseline_record", "device_path", "attempt_id", "host"):
-        if type(preflight[key]) is not str or not preflight[key] or len(preflight[key]) > 1024:
+    for key in ("unit_claim", "firmware_claim", "attempt_id", "host"):
+        if type(preflight[key]) is not str or not preflight[key].strip() or len(preflight[key]) > 1024:
             raise RuntimeError("preflight_claim_required")
-    if type(preflight["misty_units"]) is not list or any(
-        type(unit) is not dict or set(unit) != {"unit", "state", "excluded"} or
-        type(unit["unit"]) is not str or not unit["unit"] or
-        unit["state"] != "powered_off" or unit["excluded"] is not True
-        for unit in preflight["misty_units"]
-    ):
+    if (type(preflight["misty_units"]) is not list or preflight["misty_units"] != MISTY_UNITS
+            or any(type(unit) is not dict or unit.get("excluded") is not True
+                   for unit in preflight["misty_units"])):
         raise RuntimeError("misty_inventory_required")
-    for key in ("no_wheel_motion_or_sound_observed", "wheels_raised", "power_controls_accessible",
-                "motor_power_off", "usb_logic_power_confirmed", "no_competing_owner"):
+    for key in ("wheels_raised", "power_controls_accessible", "no_competing_owner",
+                "shield_switch_off", "support_clearance_confirmed", "accept_connected_motor_uncertainty",
+                "accept_freely_resting_support_uncertainty", "accept_usb_stop_uncertainty",
+                "serial_topology_unambiguous"):
         if preflight[key] is not True:
             raise RuntimeError("preflight_hold:" + key)
-    if type(preflight["standalone_observed_seconds"]) not in (int, float) or not 15 <= preflight["standalone_observed_seconds"] <= 300:
-        raise RuntimeError("stored_boot_observation")
-    if preflight["battery_startup_visual_baseline"] != BATTERY_VISUAL_BASELINE:
-        raise RuntimeError("battery_visual_baseline_required")
-    validate_boot_record(preflight["boot_baseline_record"], preflight["standalone_observed_seconds"])
-    if type(preflight["observed_at"]) not in (int, float) or not 0 <= now - preflight["observed_at"] <= 120:
+    for key, expected in (
+        ("motor_connection_state", "connected_no_isolation_claim"),
+        ("support_configuration", "assembled_freely_resting_passive_support"),
+        ("usb_connection_state_at_approval", "disconnected"),
+        ("device_identity_basis", "prior_passive_record_rechecked_at_open"),
+        ("usb_startup_evidence_sha256", USB_STARTUP_EVIDENCE_SHA256),
+    ):
+        if type(preflight[key]) is not str or preflight[key] != expected:
+            raise RuntimeError("preflight_policy:" + key)
+    if not is_digest(preflight["device_identity_record_sha256"]):
+        raise RuntimeError("prior_identity_digest_required")
+    if (type(now) not in (int, float) or not math.isfinite(now)
+            or type(preflight["observed_at"]) not in (int, float)
+            or not math.isfinite(preflight["observed_at"]) or preflight["observed_at"] <= 0
+            or not 0 <= now - preflight["observed_at"] <= 120):
         raise RuntimeError("stale_preflight")
-    if type(preflight["device_rdev"]) is not int or preflight["device_rdev"] < 0:
-        raise RuntimeError("device_identity_mismatch")
-    path = preflight["device_path"]
-    if not path.startswith("/dev/cu.") or "/" in path[len("/dev/"):]:
-        raise RuntimeError("device_path_required")
+    validate_device_claim(preflight["device_path"], preflight["device_rdev"])
     if device is None:
         return
     if not device["canonical"] or device["parent"] != "/dev" or not device["name"].startswith("cu."):
@@ -284,24 +289,60 @@ def validate_authority(authority, request_hash, preflight_hash, attempt_id, veri
     required = {"stable_request_sha256", "preflight_sha256", "attempt_id", "approved_by",
                 "approval_reference", "approved_at", "expires_at", "attempts",
                 "accept_candidate_uncertainty", "accept_reset_uncertainty"}
-    if (type(authority) is not dict or set(authority) != required
+    if type(authority) is not dict or set(authority) != required:
+        raise RuntimeError("physical_authority_required")
+    reference = authority["approval_reference"]
+    if (not is_digest(authority["stable_request_sha256"]) or not is_digest(authority["preflight_sha256"])
             or authority["stable_request_sha256"] != request_hash
             or authority["preflight_sha256"] != preflight_hash
-            or authority["attempt_id"] != attempt_id or authority["approved_by"] != "Deb"
-            or type(authority["approval_reference"]) is not str
-            or not authority["approval_reference"] or len(authority["approval_reference"]) > 1024
+            or authority["attempt_id"] != attempt_id or not is_signer_token(attempt_id)
+            or not attempt_id.startswith("cyberpi-none-v3-physical-")
+            or len(attempt_id) == len("cyberpi-none-v3-physical-") or authority["approved_by"] != "Deb"
+            or not is_signer_token(reference) or not reference.startswith(APPROVAL_REFERENCE_PREFIX)
+            or len(reference) == len(APPROVAL_REFERENCE_PREFIX)
             or type(authority["attempts"]) is not int or authority["attempts"] != 1
             or authority["accept_candidate_uncertainty"] is not True
-            or authority["accept_reset_uncertainty"] is not True):
+            or authority["accept_reset_uncertainty"] is not True
+            or type(authority["approved_at"]) is not int or type(authority["expires_at"]) is not int
+            or not 0 <= authority["approved_at"] < authority["expires_at"] < 10_000_000_000
+            or authority["expires_at"] - authority["approved_at"] > 120):
         raise RuntimeError("physical_authority_required")
     if verify() is not True:
         raise RuntimeError("approval_signature_required")
 
 
 def validate_binding(preflight, request):
-    for key in ("attempt_id", "host", "unit_claim", "firmware_claim", "misty_units"):
+    if request.get("execution_policy") != EXECUTION_POLICY:
+        raise RuntimeError("execution_policy_required")
+    for key in ("attempt_id", "host", "unit_claim", "firmware_claim", "misty_units",
+                "device_identity_record_sha256"):
         if preflight[key] != request[key]:
             raise RuntimeError("preflight_binding_mismatch:" + key)
+
+
+def validate_prior_identity(record, preflight, request, actual_digest):
+    """A signed request binds a prior operator record, not cryptographic unit identity."""
+    if (not is_digest(actual_digest) or actual_digest != request["device_identity_record_sha256"]
+            or actual_digest != preflight["device_identity_record_sha256"]):
+        raise RuntimeError("prior_identity_hash_mismatch")
+    required = {"schema", "confirmed_by", "host", "unit_claim", "device_path", "device_rdev",
+                "observed_at", "method", "approval_reference", "namespace_unambiguous"}
+    if (type(record) is not dict or set(record) != required
+            or record["schema"] != "cyberpi-passive-identity-v1" or record["confirmed_by"] != "Deb"
+            or record["method"] != "manual_usb_namespace_metadata_no_serial_open"
+            or record["namespace_unambiguous"] is not True
+            or not is_signer_token(record["approval_reference"])):
+        raise RuntimeError("prior_identity_schema")
+    validate_device_claim(record["device_path"], record["device_rdev"])
+    if (type(record["observed_at"]) not in (int, float) or not math.isfinite(record["observed_at"])
+            or not 0 < record["observed_at"] <= preflight["observed_at"]):
+        raise RuntimeError("prior_identity_chronology")
+    for key in ("host", "unit_claim", "device_path", "device_rdev"):
+        if record[key] != preflight[key]:
+            raise RuntimeError("prior_identity_binding_mismatch:" + key)
+    for key in ("host", "unit_claim"):
+        if record[key] != request[key]:
+            raise RuntimeError("prior_identity_binding_mismatch:" + key)
 
 
 def checked_sample(sample):
