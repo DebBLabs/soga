@@ -28,7 +28,14 @@
   "protected": {
     "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_ATTENDED_USB_EVIDENCE_ACCEPTANCE_2026-11-20.txt": "cf02a1b346c2e2bdd920beb9dc76797ae8345decbd7e2b410f604180bdb0fddc",
     "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_COMBINED_AMENDMENT_ADOPTION_2026-11-20.txt": "e7fadf890b78603cff3776470d94de48ad5ff25b1d9ae7ae498bf7cb4e6c2b4a",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_PASSIVE_IDENTITY_2026-11-20.json": "ad9aefa7a48e2c33d5498e5f352283dcc288348e5fac7e72e6272e60aab807c2",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_PASSIVE_IDENTITY_COMPANION_2026-11-20.json": "6cd8a7896d5b64d03f4962a355cab90861600d79f7fda254a521b009dd12f620",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_SHIELD_ON_IMPLEMENTATION_373_374_ACCEPTANCE_2026-11-20.json": "79f8c8f000c131cbf398f2f61bc11ca06f88915b33e234b0cafa0de0b68f216f",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/accepted/MBOT2_USB_IDENTITY_AND_SHIELD_ON_ADOPTION_2026-11-20.json": "9c41388a3863c7f35f68c7abec2ea66aea4102719c99c05df2d9dd23a9894db7",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/diagnostics/MBOT2_SHIELD_ON_PROTOCOL_RECONCILIATION_PROPOSAL_2026-11-20.md": "ed76845a740b9c731ed6df578cdcea75ed67ef7cbd3ee91e035f1e8e4772cbe0",
     "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/operator-evidence/mbot2-attended-usb-2026-11-20-v1/OPERATOR_OBSERVATION.md": "10d86396e771db383e2989712883a05cef4ca9f89ca748f7c030b958af0cdb7f",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/operator-evidence/mbot2-current-usb-serial-2026-11-20-v2/OPERATOR_POSTFLIGHT.json": "d5a6b9e5a5f35d9aba233b88b5b9f9b59efc9950c306ebc18b2142deacc7890f",
+    "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/operator-evidence/mbot2-current-usb-serial-2026-11-20-v2/snapshot.json": "48cde73ada109a64657c97108b6c0f3cc7bd298c2e2a037ddbac718a047b50c7",
     "/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/proposals/MBOT2_FIRST_PROTOCOL_OBSERVATION_R2_2026-11-09.md": "e4f77a818fd291a69f853d86df9d24cc3afac3bd3c65bb456c060ca4db20f398",
     "/Users/debb/dev/permission-to-speak-work/permission-to-speak/.gitignore": "9db41820090214cd11b0682d9e420709288fa5e1de26dcb1fb452470c7c2ed81",
     "/Users/debb/dev/permission-to-speak-work/permission-to-speak/AUTHORIZATION_2026-10-03.md": "2da3ac51e6265acbd9a8dcb001999d711bd2b46c50afbccc5300673187bfacda",
@@ -96,8 +103,8 @@
     "/Users/debb/dev/soga-clean/knowledge/proposals/IIW_MISTY_STOP_ONLY_VERIFICATION_PROPOSAL_2026-11-03.md": "f86690e4009979821189fa2240da9dd17f61472076c9b2847c31916b6a5d30bd",
     "/Users/debb/dev/soga-clean/knowledge/proposals/MBOT2_FIRST_PROTOCOL_OBSERVATION_R2_2026-11-09.md": "e4f77a818fd291a69f853d86df9d24cc3afac3bd3c65bb456c060ca4db20f398",
     "/Users/debb/dev/soga-clean/knowledge/proposals/TWO_ROBOT_SWITCHING_RUNTIME_R2_2026-11-09.md": "59fddaab5fb5167c1da0a80c80974d54b5e1e524b24720140940a283e6717bb3",
-    "/Users/debb/dev/soga-clean/knowledge/strategy/DECISION_LOG.md": "480201295e55d01e07a2bebf5b70483a2f4172fa7034762ba0911eaa925b454e",
-    "/Users/debb/dev/soga-clean/knowledge/working/CURRENT_STATE.md": "2aa484c144df8086bc6cefe8d03e5623718db2e441f183b831208b0e11ddb047",
+    "/Users/debb/dev/soga-clean/knowledge/strategy/DECISION_LOG.md": "3536ffbfd6cb38fa697f33e8ade00883d38909651eccaacf116b0c7de1887a29",
+    "/Users/debb/dev/soga-clean/knowledge/working/CURRENT_STATE.md": "22cc01588d8a25500213e2edf9aa3de46e1506ce74707387d5563947b3ebe306",
     "/Users/debb/dev/soga-clean/robot_gateway/CYBERPI_NONE_OBSERVATION.md": "45aea9d45bf0b954a12c4ed7782835a68ef3ff76389dd584f90db65ba34ee4f2",
     "/Users/debb/dev/soga-clean/robot_gateway/CYBERPI_PROTOCOL_VERIFICATION.md": "f9eaf386a7dcf0a5fb464c33f355f9d4fc422edeb13c605aafc3020413587147",
     "/Users/debb/dev/soga-clean/robot_gateway/OPERATOR_RUNTIME.md": "0d15a71feadcf88b8d6e33e208cd5bcf989b6b2bba2a93fbb69cfc4650aeabdf",
@@ -164,13 +171,13 @@
     "/Users/debb/dev/soga-clean/tools/robot_gateway/run_operator_runtime_synthetic.py": "cde9a0035b4cc0508e86a9008994d8880369ae2bc5f9c021eee411cf31b9232b",
     "/Users/debb/dev/soga-clean/tools/robot_gateway/run_static_and_synthetic_tests.py": "a5e17e25d61dfb089ccdd8447b73337dcc60a7c7eff5c5f211a8990b2c46063e"
   },
-  "repository_basis": "0c0ff6fcfe72835a939c4ff197cc369ce17be9b7",
+  "repository_basis": "10b9dd657d564e80deec80a044776b7711ffeb06",
   "schema": "cyberpi-none-runtime-v3",
   "sources": {
-    "robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md": "2ab057d13d8258fd2b25a0c5fd345d9bea690db8e03a04cfc82b4f64eaabfeaf",
+    "robot_gateway/CYBERPI_NONE_OBSERVATION_V3.md": "4ae28c98964af42b978658ef54e2400eb7fbead3367bee7c918b8d56e94b3f01",
     "robot_gateway/cyberpi_f3f4_protocol.py": "57189ba2841802f6ca507c14d82bf96e2965268c41e7cb36ecc380c31599d805",
-    "robot_gateway/cyberpi_none_observation_v3.py": "592387c47ceb839585ec4483e170ea702d3ac1d670929921957ee42e61528cc5",
-    "tests/test_cyberpi_none_observation_v3.py": "7bd83f3ed18d18a7afb2fa15003d1df5c63c516a9b7b95c5907f08fcfb6292bc"
+    "robot_gateway/cyberpi_none_observation_v3.py": "c79a226d423f363bf9d20040d0c7a9a3afd028da446ee420a04134e3ccb4cccd",
+    "tests/test_cyberpi_none_observation_v3.py": "14f1482baefcd2621d5555f32108cacc8d70a4b754c1d3b1d848ee0b5c434a78"
   },
   "test_count": 36,
   "tests": [

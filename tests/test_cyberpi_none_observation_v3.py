@@ -266,6 +266,7 @@ class PhysicalGateTests(unittest.TestCase):
             "accept_connected_motor_uncertainty": True,
             "accept_freely_resting_support_uncertainty": True,
             "accept_usb_stop_uncertainty": True, "serial_topology_unambiguous": True,
+            "accept_shield_on_battery_program_uncertainty": True,
         }
         self.metadata = {"canonical": True, "parent": "/dev", "name": "cu.fake", "character": True, "rdev": 7}
         self.request = {key: self.preflight[key] for key in
@@ -294,7 +295,7 @@ class PhysicalGateTests(unittest.TestCase):
         for key in ("wheels_raised", "power_controls_accessible", "no_competing_owner",
                     "shield_switch_off", "support_clearance_confirmed", "accept_connected_motor_uncertainty",
                     "accept_freely_resting_support_uncertainty", "accept_usb_stop_uncertainty",
-                    "serial_topology_unambiguous"):
+                    "serial_topology_unambiguous", "accept_shield_on_battery_program_uncertainty"):
             for value in (False, 1, "true", None):
                 with self.subTest(key=key, value=value), self.assertRaisesRegex(RuntimeError, "preflight_hold"):
                     observation.validate_preflight(self.preflight | {key: value}, 100)
@@ -359,6 +360,7 @@ class PhysicalGateTests(unittest.TestCase):
 
     def test_signer_token_constraints_and_scope_prefix(self):
         for reference in (observation.APPROVAL_REFERENCE_PREFIX, "old-approval", "x" * 129,
+                          "cold-sign-lifted-connected-stop-uncertain-v1.actual-approval",
                           observation.APPROVAL_REFERENCE_PREFIX + "bad space", "é"):
             with self.subTest(reference=reference), self.assertRaisesRegex(RuntimeError, "physical_authority_required"):
                 observation.validate_authority(self.authority | {"approval_reference": reference},
@@ -377,8 +379,9 @@ class PhysicalGateTests(unittest.TestCase):
                     "device_identity_record_sha256"):
             with self.subTest(key=key), self.assertRaisesRegex(RuntimeError, "preflight_binding_mismatch"):
                 observation.validate_binding(self.preflight, self.request | {key: "other"})
-        with self.assertRaisesRegex(RuntimeError, "execution_policy_required"):
-            observation.validate_binding(self.preflight, self.request | {"execution_policy": "old"})
+        for policy in ("old", "cold_sign_supported_usb_v1", "cold_sign_supported_usb_shield_on_v1", None, True):
+            with self.subTest(policy=policy), self.assertRaisesRegex(RuntimeError, "execution_policy_required"):
+                observation.validate_binding(self.preflight, self.request | {"execution_policy": policy})
 
     def test_prior_identity_valid_record_and_hash_refusal(self):
         observation.validate_prior_identity(self.identity, self.preflight, self.request, "a" * 64)

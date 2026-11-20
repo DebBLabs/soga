@@ -4895,3 +4895,68 @@ tests do not import that controller. Prior identity has no maximum age and
 is not cryptographic unit identity; final request review must use the most
 recent reviewed session for the actual unit/cable/port. Old request 299/300
 cannot execute revised bytes. No USB or hardware contact is authorized now.
+
+
+## D-210 — Accept captured mBot2 USB identity and shield-ON draft; stage final reconciliation
+
+Date: 2026-11-20. Status: prospective canonical record; complete bytes staged
+outside the repository for blind review. PI acceptance of the 373/374 six-file
+implementation is recorded externally; copying or committing this final eight-file candidate remains unauthorized. Earlier bounded-stage records are historical.
+
+The supported cold-sign baseline was committed by separately authorized action,
+and its 36-test fake-only offline result was accepted after 323/324. It establishes
+only that old offline suite, not this revised implementation or live protocol.
+The physical controller's request/identity-file integration remains static-reviewed;
+the synthetic runner does not import that controller. No old request/signature
+or evidence is execution authority for these changed bytes.
+
+Following separately authorized passive/manual diagnostics, a changed cable AND
+changed Genesys hub port produced USBSerial 1a86:7523/location 0x00120000. Exact
+365/366 one-shot metadata capture identified /dev/cu.usbserial-120,rdev 150994951
+and a matching AppleUSBCHCOM descriptor entry carrying that callout. No serial
+open or protocol command occurred. Evidence367/368 and corrected prospective
+identity371/372 were accepted by Deb, who confirmed same assembled unit and no
+other USB serial device added. Current OFF/unplugged/stable state was confirmed.
+The accepted 10-key identity, companion and source snapshot remain external and
+immutable. Neither immutable hardware identity, live firmware, cable-only cause,
+future node persistence nor a working gateway is established. Prior session
+exact timing/prompt/motion/sound detail remains unknown unless Deb recalls it.
+
+The PI adopted proposal369/370 without an additional OFF-only trial, accepting
+that ON necessity is unproven, then accepted six-file implementation373/374.
+The new draft keeps truthful cold shield_switch_off=true, uses25-key preflight
+with explicit accept_shield_on_battery_program_uncertainty=true, new request policy
+cold_sign_supported_usb_shield_on_v2 and signer-compatible reference prefix
+cold-sign-shield-on-lifted-connected-stop-uncertain-v2. It preserves the 24-key
+request and 10-key authority/iPad app/key; signing occurs with robots OFF and mBot USB
+absent. After receipt, iPad disconnects before mBot USB, with same replacement
+cable/hub port. One identifiable accessory Allow click only before invocation is
+the sole Mac-action exception while energized. Motors connected/freelyresting
+lifted-clearwheels remain. ON can run stored programs; stopping requires shield OFF
+FIRST thenUSB unplug. No shutdown/isolation/visualsensing guarantee is claimed.
+
+Final procedure clarifications narrow allowed ON settling to blank/dark only,
+remove unobserved CyberOS menu as an accepted class, settle byconnection + 12s and
+invoke byconnection + 15s or refuse. Existing cold receipt+75/invoke+90/open+120,
+65s total USB/ON procedural cap and all core probe/byte/time/one-attempt/no-retry limits
+are unchanged. This longer than 15s exposure remains unproven and requires later
+explicit physical authority. No extra /dev discovery or G handshake/demo permitted.
+
+The final reconciliation preserves373/374 module/test bytes, changes only guide
+clarifications and dependent hashes, updates the inspected pre-change basis to
+10b9dd657d564e80deec80a044776b7711ffeb06, pins these proposed canonical records,
+and retains all historical protected evidence. Both Misty guards admit all six v3
+paths as net additions against 6aeb117a21445a90e52c81705f151d7c8afc7d8c, with both
+canonical paths already allowed. No Misty/status guard/shared gateway/public Flow A/
+operator runtime change is needed. Read-only dependency report and exact eight-file
+hashes reside outside the repository in observation-v3-shield-on-final-r1/RECONCILIATION.json;
+no downstream final hashes embedded here, avoiding a hash cycle.
+
+Boundaries: final blind review and separate exact commit authority; then a new exact
+offline request/blindreview/separateonerun authority and accepted revisedoffline
+evidence; then new exact physical request against actual HEAD/current hashes/identity,
+new trusted paper digest and separate cold facts/signing/physical invocation approval.
+No commits,pushes,imports,compilation,lint,tests,signing,USBconnection or hardware
+contact authorized by this record. Unrelated PI proposal remains unread/untouched.
+Freeze canonical bytes after any eventual commit through approvedruns, or separately
+review any repin. Older requests 299/300 and old v1 policy cannotexecute this package.

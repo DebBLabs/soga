@@ -9,8 +9,8 @@ WRITE_SECONDS = 0.5
 RESPONSE_SECONDS = 2.0
 WALL_SECONDS = 18.0
 USB_STARTUP_EVIDENCE_SHA256 = "10d86396e771db383e2989712883a05cef4ca9f89ca748f7c030b958af0cdb7f"
-EXECUTION_POLICY = "cold_sign_supported_usb_v1"
-APPROVAL_REFERENCE_PREFIX = "cold-sign-lifted-connected-stop-uncertain-v1."
+EXECUTION_POLICY = "cold_sign_supported_usb_shield_on_v2"
+APPROVAL_REFERENCE_PREFIX = "cold-sign-shield-on-lifted-connected-stop-uncertain-v2."
 MISTY_UNITS = [
     {"unit": "Misty A urn:debblabs:misty-a:20221304273", "state": "powered_off", "excluded": True},
     {"unit": "Misty B urn:debblabs:misty-b:20193802932", "state": "powered_off", "excluded": True},
@@ -244,7 +244,7 @@ def validate_preflight(preflight, now, device=None):
                 "device_identity_basis", "device_identity_record_sha256",
                 "support_clearance_confirmed", "accept_connected_motor_uncertainty",
                 "accept_freely_resting_support_uncertainty", "accept_usb_stop_uncertainty",
-                "serial_topology_unambiguous"}
+                "serial_topology_unambiguous", "accept_shield_on_battery_program_uncertainty"}
     if type(preflight) is not dict or set(preflight) != required or preflight["confirmed_by"] != "Deb":
         raise RuntimeError("preflight_schema")
     for key in ("unit_claim", "firmware_claim", "attempt_id", "host"):
@@ -257,7 +257,7 @@ def validate_preflight(preflight, now, device=None):
     for key in ("wheels_raised", "power_controls_accessible", "no_competing_owner",
                 "shield_switch_off", "support_clearance_confirmed", "accept_connected_motor_uncertainty",
                 "accept_freely_resting_support_uncertainty", "accept_usb_stop_uncertainty",
-                "serial_topology_unambiguous"):
+                "serial_topology_unambiguous", "accept_shield_on_battery_program_uncertainty"):
         if preflight[key] is not True:
             raise RuntimeError("preflight_hold:" + key)
     for key, expected in (

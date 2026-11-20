@@ -1828,3 +1828,48 @@ request/paper digest precede any live cold preflight/signature/invocation.
 299/300 and the old live schema cannot execute revised bytes. Preserve all
 historical evidence. After any eventual commit, freeze these canonical bytes
 through the reviewed run or obtain a separately reviewed repin.
+
+
+## Current mBot2 shield-ON final reconciliation — November 20, 2026
+
+This section supersedes preceding bounded-task stage descriptions; they remain
+historical. D-210 records accepted 367/368 USB metadata evidence and 371/372 corrected
+identity, adopted 369/370 ON proposal and accepted 373/374 six-file implementation.
+Current authority is complete final eight-file canonical/hash drafting OUTSIDE repository
+and blind static review ONLY. No copying/commit, push, tests, signing or hardware.
+
+Observed: exact 365/366 capture ran once without serial opens/protocol commands and
+recorded /dev/cu.usbserial-120,rdev 150994951 with USB Serial 1a86:7523/location 0x00120000
+and matching AppleUSBCHCOM callout. Both cable AND hub port changed; cause not isolated.
+Deb confirmed same assembled mBot2/no other USB serial device added and later OFF/unplugged/
+stable. Identity record SHA-256 ad9aefa7a48e2c33d5498e5f352283dcc288348e5fac7e72e6272e60aab807c2
+and companion/source capture are protected external inputs, not cryptographic unit/
+firmware identity. Unknown manual session details stay unknown; ask once before a powered step.
+Any future path/rdev/fd change refuses with no automatic fallback or evidence edit.
+
+Cold preflight remains OFF and disconnected through iPad approval. New 25th risk key,
+request policy and signer reference scope bind the subsequent ON departure. The
+24-key request and 10-key authority/app/key stay. Same replacement cable/hub port,
+iPad removed after receipt, one optional Allow click before invocation only, no Mac navigation
+or Home press during capture. Initial settle by USB + 12s, invoke by USB + 15s or refuse;
+cold+75/+90/+120 and 65s USB total cap unchanged. Battery ON exposure is prospective/
+unproven; shield OFF FIRST plus USB removal SECOND are required with no guarantee.
+ON necessity was not proved and no extra OFF-only trial was required by PI adoption.
+The pure observe/SerialIO/parser/clock/limits bytes remain unchanged. Existing
+36 fake-test methods have revised guard coverage but HAVE NOT RUN for this draft.
+Prior 323/324 accepted 36-test evidence applies only to old committed cold-sign bytes.
+
+Proposed complete eight-file hashes and read-only coexistence report live externally in
+observation-v3-shield-on-final-r1/RECONCILIATION.json (no canonical hash cycle).
+All six v3 paths remain net additions against the original Misty guard basis; both canonical
+paths already allowed; other manifests do not pin this eight-file candidate. Misty/public
+Flow A/shared gateway/operator runtime/status guard bytes stay intact. Source basis is
+only documentary; future exact requests must bind actual new HEAD after any separately
+authorized commit. Do not embed a self-invalidating current HEAD in this document.
+
+Next: final blind review; separate exact commit; new exact offline request review/one-run
+approval/evidence acceptance; then new exact physical request/current paper digest,
+separate cold preflight/signature/physical authority. No prior USB trial or signature
+authorizes a protocol open. No robot completion/neutral/stop/mission/switching/full
+gateway demo has been demonstrated by these USB metadata results. All historical evidence
+is preserved, and the unrelated PI proposal remains unread/untouched.
