@@ -1,0 +1,416 @@
+UMA / ADRIAN REPLY — TEAM REVIEW HANDOFF FOR CLAUDE (CHAT)
+November 23, 2026. CG + Claude Code + AGy. Advisory only; nothing sent.
+
+Basis: Deb supplied Adrian's two emails, Claude(chat)'s draft and six review questions. Independent originals393/394 were completed before peer exchange. Focused discussion395/396 reconciled specific differences. CG's original thoughts, both reviewer originals and both follow-ups are appended unchanged below. Later corrections supersede originals where stated. Input/request also remains in this local folder.
+
+No email, public posting, repo modification, commit, build, tests, signing or hardware action was performed for this review. Full first SENT reply, Alan's earlier messages and Alec's prior context were not supplied; we do not reconstruct them. The review assesses continuity against Deb's stated intent and the supplied text, not an independently verified copy of the sent email. Source/code context remains 51d19d07915937160747b9177d228de1f1429e08.
+
+CONSOLIDATED ANSWERS TO THE SIX QUESTIONS
+
+1. Position: retain unregistered Alice as an open requirements use case without conceding Adrian's personal scope proposal or presenting it as a group decision. Acknowledge his explicit agreement that standing and registration requirements should be clear. Ask where the case belongs; do not preselect UMA extension or claim UMA cannot represent it.
+
+2. Defensibility: revise these claims before sending.
+- Remove "nobody here owns a resource." UMA's resource owner is a functional authorization role, not property ownership. Do not map the child to property or assert no protected capability exists. Leave the proposed case's protocol-role mapping open.
+- Replace categorical "outside UMA's current assumptions" with an open question about how the roles, registration relationships and standing evidence apply to this case. Distinguish resource registration, personal account enrollment, pre-set policy conditions and standing. Lack of a local account does not establish absence of an agent or AS serving the parent, or global UMA impossibility.
+- Label parental permission as a scenario requirement, not a general legal rule about who always decides for a child. The key question is how the relevant authority is established.
+- Remove "happens ... every day" and imminent-public-agent predictions. They are unnecessary prevalence assertions. "We don't know ..." is a statement of our knowledge, not a documented survey; it can be omitted without weakening the requirement.
+- State behavior when REQUIRED evidence/permission is absent, insufficient or withdrawn. Research-demo acceptance of unverified input is neither proof of standing nor permission to lower real-world assurance.
+- Do not add a HIPAA/legal rebuttal or infer Alice's physical absence in Adrian's Lab example. In our own example the parent is present; presence allows asking but does not establish authority.
+
+Primary standards support: UMA 2.0 Grant1.2 defines roles functionally;1.3 leaves policy setting outside this specification;3.1 does not assume relevant policy conditions already defined. Federated Authorization defines PAT/RS-AS resource registration. These provisions do not decide every personal-enrollment or guardian-standing question.
+https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html
+https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html
+CG directly retrieved the published Grant Recommendation and the official Federated Authorization source. Claude Code reports its fetcher was denied access to the Recommendation and checked corresponding IETF -00 texts instead. That source-access limitation is retained in its original comments; no claim of line-by-line personal verification is silently upgraded.
+
+3. Disclosure: the farmers-market scenario states parties and a required outcome, without revealing code, flows or state taxonomy. Keep it at that level. No need to invoke the demo as authority. If the demo is named, state it simulated the encounter, used unverified affected-party input and had no robot/camera connected. Do not imply validated guardianship or a demonstrated physical stop. Prefer ordinary "speaking to the child" over implementation terms.
+
+4. Standing/delegation: do not add "standing, not delegation" or assert a legal/philosophical classification of parental authority. Describe the basis and limits of the claimed authority, leaving how established open. Separate that question from whether a software agent is authorized to represent a person. Both reviewers ultimately agree the missing Alan messages prevent certifying that the draft resolves or avoids every part of his disagreement. No claim Alan's theory was adjudicated.
+
+5. Opening: reconciled firm-but-invitational choice:
+"Thanks, Adrian. We'd like to keep unregistered Alice visible as an open use case for the group to consider. We agree that registration requirements and standing should be explicit."
+This states what we want, acknowledges agreement, and leaves the group decision open. Both reviewers endorse it. CG initially preferred the original explanatory opening to avoid a scope clash; the discussion changed CG's preference to this combined version. Claude Code also replaced its first preference with the combined wording.
+
+6. Credibility: the main risk for UMA experts is confusing legal ownership with the resource-owner role, then inferring protocol impossibility from no personal account. Other risks are prescribing UMA extension before mapping the use case, taking a position on guardian law or Alan's unseen argument, implying the fictional demo established standing, and presenting agent identity alone as current authority. The person-agent distinction is already part of OAuth/UMA roles; explain why its authority/scope/current conditions matter to this case, without presenting the distinction as a new discovery. Keep observer/AI-assistance disclosure, preserve any needed IPR statement from Deb's chosen posture, and don't make legal claims about it. Signature style remains Deb's choice because the actual earlier sent sign-off isn't supplied.
+
+REQUIREMENT WORDING TO RETAIN
+Where this scenario requires permission from someone authorized to decide for the child, the resource side should state what evidence of permission and authority it needs. Speaking to the child should not proceed when that required evidence is missing or insufficient, or permission is withheld or withdrawn. What was relied on should be traceable. This is a proposed requirement, not a claim of verified demo assurance or universally binding law.
+
+PERSON / AGENT WORDING
+Yes, keep the distinction visible in the requirements. Bob's agent acts under Bob's authority, which can lapse or narrow. Alice may respond herself or through an agent. Whenever an agent represents a person, the applicable authority, scope and conditions must still hold when the action occurs. This describes the required outcome, without prescribing an authentication or protocol mechanism.
+
+SUGGESTED REVISED TEXT FOR CLAUDE TO ADAPT — NOT APPROVED OR SENT
+
+Thanks, Adrian. We'd like to keep unregistered Alice visible as an open use case for the group to consider. We agree that registration requirements and standing should be explicit.
+
+Here is the example behind our question. An operator's robot at a farmers market is about to speak to a child. In this scenario, the interaction requires permission from the child's parent, while the operator's authority governs the robot. Neither the parent nor the child has enrolled with the operator's service, and the parent is present when the interaction is proposed. How the parent's authority is established is part of the question. We offer the example to examine how the relevant roles, registration relationships and permission requirements fit together, and where that case belongs in the requirements.
+
+We would want the resource side to be explicit about what evidence of permission and authority it requires. If that evidence is missing or insufficient, or permission is withheld or withdrawn, speaking to the child should not proceed. What was relied on should be traceable. Keeping the use case and its unresolved preconditions visible would preserve that question even if the initial work concentrates on registered Alice.
+
+On your second question: yes, we'd keep the distinction between a person and their agent visible in the requirements. Bob's agent acts under Bob's authority, which can lapse or narrow while the agent keeps going. Alice may answer directly or through her agent. Whenever an agent acts for a person, the applicable authority, scope and conditions must still hold when the action occurs.
+
+[Deb chooses sign-off. Observer/AI-assistance wording can read: "Still writing as an observer, not a WG-UMA participant; this round drafted with Claude and reviewed by CG, Claude Code and AGy." If Deb retains the earlier explicit IPR non-acceptance statement, retain it as her factual posture without adding legal interpretations.]
+
+ATTRIBUTED DISCUSSION CHANGES / DIFFERENCES
+- AGy initially answered that the wording avoids taking Alan's side. After discussion it accepted the narrower claim: Alan's messages are missing, so no certification is possible; parental authority should be a scenario assumption and an open evidentiary question.
+- AGy initially treated the draft's stricter standing requirement as conflicting with the unverified demo. Both follow-ups accepted the simulation-versus-deployment distinction; no reviewer now treats the demo as proof of standing or a mandate for weak real-world assurance. Claude Code prefers plain evidence requirements over receipt/assurance-field wording; CG adopts that preference for the email.
+- Claude Code withdrew its proposed "no authorization server acts for them" clause: no personal account does not imply no AS or agent elsewhere.
+- AGy withdrew the Lab-absence comparison and its every-day/imminent-public-agent claims.
+- Both endorse the combined opening and current agent authority/scope/conditions requirement.
+- Claude Code cautions that assigning robot=protected resource and operator=owner prematurely settles a role-mapping hypothesis. AGy's final suggested text still includes that mapping. CG leaves mapping open in the consolidated proposed text; the original alternatives remain below, not falsely labelled unanimous wording.
+- This handoff is a reasoned advisory consolidation, not unanimous endorsement of every sentence in any original draft. The proposed consolidated text itself has not been emailed or adopted by Deb.
+
+ORIGINALS AND FOLLOW-UPS — VERBATIM APPENDICES
+The exact payloads below are preserved byte-for-byte between markers. Some original claims were revised above; retention documents the reasoning rather than re-endorsing superseded statements. Private thread input is not included as a published source and nothing from this packet has been posted to GitHub.
+
+
+=== CG original assessment ===
+SHA-256: f220a5de7e7549d333b3139782aff94f034e40759b14f5b6261f524e832d6b4b
+BEGIN VERBATIM CG_ORIGINAL_COMMENTS.txt
+CG independent advisory comments before reading393/394. Nothing sent; no build/publication authorization.
+
+1 Position: keep unregistered affected-party case as open requirements-boundary use case; Adrian gave personal scope proposal, not group disposition. Draft mostly holds that stance but implies actual UMA exclusion too confidently, then asks extension prematurely. Distinguish accepted narrower work scope vs whether requirements capture excluded case somewhere. Describe boundary, not claim group must solve scenario or every real-world event needs protocol.
+2 Source/claims: quoted Adrian email is supplied primary conversation text; no need to fact-check his HIPAA analogy as legal truth, and don't repeat it as legal conclusion. Farmers-market example is illustrative proposed requirement, supported by public demonstration scenario but not a real tested robot encounter. Operator-authority-covers-robot is a scenario assumption, not all legal/social authority. Child affected + claimed parent relationship needs standing evidence; parent's decision matters is our scoped requirement, not universal guardianship law or denial of child interests. Neither child nor parent has account is scenario assumption; nobody owns a resource conflates protocol control with property ownership. UMA2 Grant1.2 defines owner as entity capable of granting access, not legal title; AS/RS still exist in a deployment. Lack of parent registration alone does not establish universal UMA impossibility. Grant1.3 says policy-setting/RO-AS communications outside this spec. Use open question whether UMA profiles can represent necessary relationships without prior affected-party enrollment. We don't know reliable widely available way is honest epistemic report but not surveyed conclusion, need not keep to make requirement. Neither real-world every-day prevalence nor universal insufficiency needs asserted.
+3 Disclosure: market/robot/child/guardian scenario is already public, requirement description not mechanism. Do not add QR receipts/state taxonomy/hashes/flows. Avoid suggesting parent identity verified or already working physical stop. Current demonstration is simulated encounter with unverified affected-party input and no robot/camera.
+4 Standing/delegation: standing basis/limits to decide for affected person and agent authority to represent a person are distinct questions; not mutually exclusive theories. Full Alan disagreement absent, cannot certify not taking sides. Do not categorically declare guardianship not delegation; use claimed authority/evidence and avoid adjudicating law. Where parent acts for child, refer to applicable permission and evidence, not uncontested parent absolute entitlement. Reply person-agentquestion yes as requirements concern, not demand particular wire distinction or auth method.
+5 Opening: prefer first substantive opening (raised unregisteredAlice deliberately) over firmer out-of-scope contrast; it retains position without sounding like a rebuttal to personal scope suggestion. Possible wording Thanks, Adrian. We raised unregistered Alice to make the requirements boundary explicit. Here is the example behind the question. Group scope still open, not dictated.
+6 Credibility: strongest problems nobody ownsresource, outside UMA currentassumptions as settled, could UMA beextended before exploringexistingprofiles, and at-action check that agent stillspeaksforperson incomplete (relevant authority/scope/current applicable affectedpartypermission; actor token not alone proof). Define no directedaction when requiredstandingevidencecannotbeestablished as OUR scenario requirement, not universal law or existingdemoability. Alice may answer herself; require authority only when agentrepresentsher, not conflate parentstandingwithagentdelegation. Same personagentdistinctionis alreadyfundamental toOAuth client/requestingparty/resourceowner roles; say why still relevant, not present asnovel insight. No IPRstatementneedinventlegaladvice; initialbriefrequiredobserverAI disclosure should remain appropriate concise.
+
+Primary source consulted:
+https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html sections1.2,1.3,3.3.4 (Recommendation2018)
+Initial reasoning uses prior local publicdemo boundary already inspected: SPEAKER_SCRIPT.md, FLOW_A_RUNTIME_MAPPING_2026-10-31.md. Full first sentreply and Alan messages unavailable in current supplied request: do not infer their exactposition.
+
+END VERBATIM CG_ORIGINAL_COMMENTS.txt
+
+
+=== Claude Code original review393 ===
+SHA-256: 0ecde6e88419772aaf5d8cccdbb3d90d45b06519a590c6eaa8223dffe232b51c
+BEGIN VERBATIM CLAUDE_CODE_ORIGINAL_393.txt
+CLAUDE CODE (GATE 1) — ORIGINAL REVIEW, QUEUE 393 — ADVISORY ONLY
+Date: 2026-11-23. Reviewer: Claude Code (Opus 5.5).
+Input read: DEB_REVIEW_REQUEST_VERBATIM.txt sha256 ca8903a38c5e5e0e71b451d80805f1b1f8da544c4d57cd1940ce6a41fb5dac37 (5261 bytes), read in full.
+Not read: CG_ORIGINAL_COMMENTS.txt, STATUS.json, peer queues, the PI routine-tool proposal. No code run, nothing sent, no repo writes.
+This entire file is my original review. Nothing is reproduced from an earlier review; there are no later additions yet.
+
+LABELS USED: [SPEC] spec text · [ADRIAN] Adrian's emails as pasted · [SCENARIO] illustrative facts · [POLICY] our policy choice · [REPORT] meeting/personal report · [HYP] hypothesis · [UNK] unknown.
+
+PRIMARY SOURCES CHECKED (static reads)
+S1 draft-maler-oauth-umagrant-00 (IETF copy of UMA 2.0 Grant; the Kantara page returned 403, so the Recommendation's wording could not be compared line by line [UNK]):
+  §1.2 resource owner: "An entity capable of granting access to a protected resource, the 'user' in User-Managed Access."
+  §1.2 requesting party: "A natural or legal person that uses a client to seek access to a protected resource."
+  §1.2 authorization server: "A server that protects, on a resource owner's behalf, resources hosted at a resource server."
+  §1.3: "policy condition setting is outside the scope of this specification." §3.1: the process "does not assume that any relevant policy conditions have already been defined at the authorization server."
+S2 draft-maler-oauth-umafedauthz-00 (UMA Federated Authorization):
+  §1.3 "The issuance of the PAT represents the authorization of the resource owner"; §3 "Protection of a resource at the authorization server begins on successful registration."
+Takeaway [SPEC]: "resource owner" is a ROLE (the entity able to grant access), not property ownership. The prior-registration assumption is in Federated Authorization (PAT + resource registration). The Grant spec alone does not require pre-set policy.
+
+Q1. HOLDS POSITION WITHOUT CONCEDING OR OVERREACHING?
+Mostly yes. The draft does not accept "out of scope", and it does not treat Adrian's view as the WG's. Three problems:
+ (a) "nobody here owns a resource" — overreach and an UMA misreading (S1). Eve will catch it. The accurate point: no protected resource is registered for the affected person, and no authorization server acts for them (S2 §3, §1.3). Change to: "no resource is registered on the child's or parent's behalf and no authorization server acts for them, so it sits outside UMA's usual registration assumptions."
+ (b) "it happens in the real world every day" — unsourced and close to a universal claim. Drop it, or use "situations with this shape are common enough to plan for" [HYP].
+ (c) The draft does not acknowledge where Adrian agrees with us. [ADRIAN] "The issue of standing is relevant, and the resource server needs to be explicit about Alice's registration requirements." Noting that agreement makes the reply stronger and concedes nothing. Suggested: "We agree standing is relevant and that the resource server should be explicit about its registration requirements. Our case is the one where those requirements can't be met at the moment of action."
+ Retain: the affected party's permission as a separate condition from Bob's authority (consistent with our first reply); "whether UMA could be extended ... or whether it belongs elsewhere" (no claim UMA must change).
+
+Q2. EVERY CLAIM DEFENSIBLE?
+ - "operator's authority covers the robot" — [SCENARIO]; fine.
+ - "it's the parent's decision that matters, based on the parent's standing to decide for the child" — reads as a legal rule. Who may decide for a child varies by jurisdiction and context, and I make no legal conclusion. Mark it as our scenario choice: "In this scenario we treat the parent as the one who decides for the child."
+ - "Neither the child nor the parent has an account with anyone" — [SCENARIO]; fine, but say "in this scenario".
+ - "The shape is close to UMA: someone other than the requester must approve" — defensible with S1 (requesting party ≠ resource owner role).
+ - "nobody ... owns a resource" — not defensible as written (Q1a).
+ - "sits outside UMA's current assumptions" — defensible only with the registration framing (S2 §3). Name the assumption: registration.
+ - "We don't know of a reliable, widely available way today to establish a parent's standing on the spot" — defensible as a statement of our knowledge. Adrian's HIE "KYC-like assurance" example is registration-based, not on-the-spot, so it does not contradict this; it may be worth saying so.
+ - "the minimum is defined behavior when standing can't be established: the directed action doesn't proceed" — [POLICY], a requirement, not spec text. Keep it labelled as what we'd require. "Directed" is our internal vocabulary; use "the action toward the child".
+ - "every day" — not sourced (Q1b).
+ - Agent paragraph: "authority can lapse or narrow while the agent keeps going" — defensible as a requirement statement; it is consistent with RFC 8693 §4.1 (act claims are informational; prior actors are not for access decisions) and with AAuth -11 §11.12 revocation, both checked in 391. Don't cite them in the email unless asked.
+ - Legal/HIPAA: the draft makes no HIPAA claim. Keep it that way; Adrian's HIPAA framing is his [ADRIAN].
+
+Q3. DOES THE FARMERS-MARKET EXAMPLE REVEAL DESIGN BEYOND THE REQUIREMENT?
+As drafted, no. It describes parties and an outcome (does not proceed). It does not describe states, flows, a gate, tokens or code. Cautions:
+ - The draft does not call it our IIW demo. If Deb adds that, it must not suggest the demo established anything it didn't. [REPORT, from our own records] The parent demo had no robot or camera and did not verify the parent's input or guardianship; no hardware stop was shown. Safe wording if wanted: "the scenario we used in a public IIW demo (no robot hardware; the parent's input was not verified)". Or leave the demo out; I'd leave it out.
+ - Avoid "directed action", "HOLD", "gate" and "affected-party check" as terms of art; they point at our design.
+
+Q4. DOES THE GUARDIANSHIP FRAMING AVOID TAKING A SIDE WITH ALAN?
+The draft never says "standing, not delegation" literally. That's good; it should not add it. I have not seen Alan's original messages and cannot characterise his theory or the disagreement [UNK], so I don't adjudicate. Two phrases lean:
+ - "based on the parent's standing to decide for the child" implies the parent's power is standing rather than delegation. Neutral alternative: "the parent is the one who decides for the child here; how that authority is established (standing, delegation, or something else) is part of the open question."
+ - The agent paragraph ("the agent still speaks for the person") is agency/delegation language. That is fine, because it answers Adrian's person-vs-agent question, not the guardian question. Keep the two topics in separate paragraphs, as the draft does.
+
+Q5. WHICH OPENING?
+Prefer the alternative (firmer), slightly trimmed:
+  "Thanks, Adrian. We'd keep unregistered Alice in view as an open case rather than out of scope, so here's the example behind it."
+Reasons: it states our position in the first line and doesn't concede. It frames the matter as Adrian's view versus ours, not the group's. "As an open case" matches our first reply, which raised these as open questions, not demands. The original "We raised unregistered Alice deliberately" is accurate but slightly defensive, and it doesn't say what we want.
+
+Q6. ANYTHING THAT WOULD MAKE US LOOK UNINFORMED?
+ - Eve (UMA editor): "owns a resource". Use the role and registration framing (Q1a).
+ - Adrian: not engaging his main points. He said (i) enforcement inside the RS, such as whether it uses an AS, is out of scope; (ii) Alice cares about her right to private policies; (iii) the RS should be explicit about registration requirements; (iv) pseudonyms are an option. One sentence acknowledging (iii) is enough (Q1c). We need not rebut (i): our requirement is about outcome at the moment of action, not how the RS enforces it. Saying that in one clause would show we read him: "we're not asking how the RS enforces this, only that the outcome is defined."
+ - Alan: we can't characterise his position, so the reply should not mention it [UNK].
+ - Harvey (traceability): "Recording the use case ... keeps the gap visible" suits him; keep it.
+ - Alec: no context given on Alec [UNK]; neutral tone is fine.
+ - Disclosure: the AI-assistance line is present. Our first reply's "not a WG-UMA participant" note is absent. I'd keep a short version ("still writing as an observer, not a WG-UMA participant") because the IPR position hasn't changed [POLICY].
+ - Agent paragraph: "check that the agent still speaks for the person" omits limits. Add "and within the limits the person set" so it covers narrowing, not just lapse.
+ Tone overall: courteous, not combative. With the fixes above, it reads as informed.
+
+MINIMAL PROPOSED WORDING (criteria-level edits only; Deb decides)
+ P1 Opening: as in Q5.
+ P2 After the opening: "We agree standing is relevant and that the resource server should be explicit about its registration requirements; our case is the one where those can't be met at the moment of action."
+ P3 Replace "it's the parent's decision that matters, based on the parent's standing to decide for the child" with "in this scenario the parent is the one who decides for the child; how that authority is established is part of the open question."
+ P4 Replace "But nobody here owns a resource or registered in advance, so it sits outside UMA's current assumptions" with "But no resource is registered on the child's or parent's behalf and no authorization server acts for them, so it sits outside UMA's usual registration assumptions."
+ P5 Delete "because it happens in the real world every day" (end the sentence at "somewhere").
+ P6 "the directed action doesn't proceed" becomes "the action toward the child doesn't proceed".
+ P7 Last line of the agent paragraph: "check that the agent still speaks for the person, and within the limits that person set."
+ P8 Signature: add "(Still writing as an observer, not a WG-UMA participant.)"
+
+UNKNOWNS: the full text of our first sent reply; Alan's messages; Alec's role; Kantara Recommendation wording versus the -00 drafts.
+VERDICT (advisory): the draft is close. Fix P3–P5 before sending; P1, P2, P6–P8 are recommended.
+
+END VERBATIM CLAUDE_CODE_ORIGINAL_393.txt
+
+
+=== AGy original review394 ===
+SHA-256: 255b4bddae7fe3634ddc635476bed22c72576abe1990e9291b37752f2d4a74d9
+BEGIN VERBATIM AGY_ORIGINAL_394.txt
+# Independent Gate 2 Advisory Review — Request 394 (Draft Reply to Adrian Gropper's Two WG-UMA Emails)
+
+- **Reviewer:** AGy (Gate 2 Independent Reviewer)
+- **Timestamp:** `2026-11-23T14:56:00-05:00` (`2026-11-23T11:56:00-08:00`)
+- **Loaded Repository Commit (`HEAD` in `/Users/debb/dev/soga-clean`):** `51d19d07915937160747b9177d228de1f1429e08`
+- **Verified Input SHA-256 Digest (`0` mismatches):**
+  - `/Users/debb/.codex/.chatgpt-projects/g-p-67f534560c7c8191b0c173e830e9c1a2/robot-gateway-work/uma-adrian-reply-review-2026-11-23/DEB_REVIEW_REQUEST_VERBATIM.txt` (59 lines): `ca8903a38c5e5e0e71b451d80805f1b1f8da544c4d57cd1940ce6a41fb5dac37`
+- **Scope & Constraints Compliance:** Original independent advisory review only. No peer queue (`393`, etc.) or CG findings were read prior to writing this response. No repository/code edits, builds, tests, imports, device/hardware access, or external messages were performed. Private email excerpts are reviewed strictly in this local workspace response and not committed to GitHub.
+
+---
+
+## 1. Epistemic & Category Distinctions Used in This Review
+
+To avoid conflating different kinds of statements across the thread and draft:
+- **Spec Text (Normative Standards):** OAuth 2.0 (`RFC 6749` Section 1.1), UMA 2.0 Grant (`oauth-uma-grant-2.0` Section 1.3), and UMA 2.0 Federated Authorization (`rec-oauth-uma-federated-authz-2.0` Section 3) definitions of *resource*, *resource owner*, *resource server*, *requesting party*, and *resource set registration*.
+- **Quoted Thread Context (Not Adjudicated Here):** Adrian Gropper's 2:04 PM and 2:15 PM emails (`DEB_REVIEW_REQUEST_VERBATIM.txt` lines 8–22), including his HIPAA/Lab and Palantir/LexisNexis analogies (quoted context only; no legal or HIPAA conclusions are drawn).
+- **Unknowns (Not Inferred):** (i) The exact final text of Deb's first sent email on the WG-UMA thread; (ii) the verbatim text and context of any disagreement with Alan Karp regarding delegation vs. guardianship/standing; and (iii) Alec's prior messages or specific role on the thread.
+- **Illustrative Scenario Facts vs. Public IIW Demo Behavior vs. Policy Choice:**
+  - *Illustrative real-world scenario:* An operator's robot at a farmers market wanting to speak to a child where neither parent nor child has pre-registered an account (`/Users/debb/dev/permission-to-speak-work/permission-to-speak/SPEAKER_SCRIPT.md` lines 28–91).
+  - *Observed public IIW Flow A demo behavior:* Localhost-only simulation with a fictional child (`fictional-child-1`), no physical robot or camera connected, and an explicitly **unverified** adult QR tap (`assurance="unverified-demo-input"`, `/Users/debb/dev/soga-clean/m02_aauth_fcf656d/other_party_approval.py` lines 27, 46–47, 138–143; `SPEAKER_SCRIPT.md` lines 99–100, 161–166), where the simulated response *proceeds* if the adult taps `ALLOW`, and does *not* proceed (or stops the presentation) on no answer, `DECLINE`, `EXPIRED`, or `WITHDRAW` (`/Users/debb/dev/permission-to-speak-work/permission-to-speak/FLOW_A_RUNTIME_MAPPING_2026-10-31.md` lines 14–23).
+  - *Policy choice / requirement:* Whether a deployment requires verified standing before a directed action may proceed, or permits an unverified on-the-spot assertion for a low-risk action while logging the exact assurance level and refusing whenever required permission/standing is absent or withdrawn.
+
+---
+
+## 2. Answers to the Six Review Questions (`DEB_REVIEW_REQUEST_VERBATIM.txt` lines 50–56)
+
+### Q1. Does the draft hold our first reply's position without conceding or overreaching?
+
+- **Mostly yes on holding the position against Adrian's `"out of scope"` move, with two adjustments needed so it neither overreaches on our own demo policy nor drifts from our first reply's stance on extending UMA:**
+  1. **What to retain:**
+     - The four fixes Claude already made (`DEB_REVIEW_REQUEST_VERBATIM.txt` lines 45–48) are right: the draft no longer calls Adrian's `"I consider ... out of scope"` reasonable, no longer treats Adrian's personal view as a WG decision, softens *"no reliable public way today"* to *"We don't know of a reliable, widely available way today"*, and attributes the two-condition framing to *"our earlier note"*.
+     - Paragraph 3 (`line 35`) holds our core action-time requirement when answering Adrian's 2:15 PM question: keeping the distinction between a person and their agent in scope and requiring a check at the moment of action that the agent still speaks for the person within current authority.
+  2. **What to change (two places):**
+     - **Change A — Avoid contradicting our first reply on "extending UMA" (`line 33`):**
+       - Our first reply (`uma-thread-brief.md` lines 22, 37; Round 2 consolidated reply) stated: *"We're not sure UMA 2.0 itself needs to be extended to deliver this."*
+       - Line 33 of the new draft says: *"We offer this as a use case for the group to weigh: whether UMA could be extended to support it, or whether it belongs elsewhere."*
+       - Since Adrian's Google Doc is a **use-cases and requirements** document (`uma-thread-brief.md` line 8), frame the question around **whether this use case belongs in the group's requirements/use-case set** (regardless of which protocol mechanism delivers it), rather than inviting a UMA protocol extension we just said may not be needed.
+     - **Change B — Align the fallback behavior (`line 33`) with both Adrian's paragraph 3 (`line 15`) and our public IIW demo:**
+       - Line 33 currently says: *"We don't know of a reliable, widely available way today to establish a parent's standing on the spot. Until there is one, the minimum is defined behavior when standing can't be established: the directed action doesn't proceed."*
+       - Written that broadly, this implies that *until* a widely available way to prove parental standing on the spot is invented, a robot can **never** speak to a child even when the parent standing right there says `"yes"`—which conflicts with our own public IIW *Permission to Speak* demo (where the action *does* proceed when the adult taps `ALLOW`, with the decision receipt explicitly recording `approval_assurance="unverified-demo-input"`, and does *not* proceed when permission is absent, declined, expired, or withdrawn; `SPEAKER_SCRIPT.md` lines 99–100, 118–126; `other_party_approval.py` lines 115–143).
+       - **Fix:** State that the resource's policy must be explicit about what assurance of standing it requires (matching Adrian's line 15), that the action toward the child **does not proceed when required permission or standing cannot be established (or is withdrawn)**, and that the log must record the actual assurance level (including when an answer is unverified) rather than assuming standing was proven.
+
+### Q2. Is every claim defensible with a source? Flag any that are not.
+
+- **Two claims in paragraph 1 (`line 31`) and one in paragraph 2 (`line 33`) need tightening to be fully defensible against primary sources:**
+  1. **Flagged Claim 1 (`line 31`): *"But nobody here owns a resource or registered in advance, so it sits outside UMA's current assumptions."***
+     - **Why `"nobody here owns a resource"` is not defensible against OAuth/UMA spec text:**
+       - In OAuth 2.0 (`RFC 6749` Section 1.1, `https://www.rfc-editor.org/rfc/rfc6749#section-1.1`) and Kantara UMA 2.0 (`oauth-uma-grant-2.0` Section 1.3, `https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html`), a **resource** is any protected API, capability, or object hosted by a Resource Server, and **resource owner** is a functional role (*"An entity capable of granting access to a protected resource"*), not legal property ownership.
+       - In our farmers-market architecture (`m02_aauth_fcf656d/other_party_approval.py` lines 14, 160–188; `SPEAKER_SCRIPT.md` lines 137–141), there **is** a protected resource: the robot's speech/interaction capability (`ApprovalGovernedResource`), operated by the musician/operator (Bob).
+       - What actually sits outside UMA 2.0's federated authorization assumptions (`rec-oauth-uma-federated-authz-2.0` Section 3, `https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html`) is that **the affected party whose permission is needed (the child/parent, Alice) is not the party hosting a pre-registered resource set at an Authorization Server**: neither the parent nor the child registered a resource or policy with an AS in advance.
+     - **Correction:** Replace *"But nobody here owns a resource or registered in advance"* with *"Here the resource being invoked is the operator's robot, not a resource Alice pre-registered with a resource server or authorization server in advance"*.
+  2. **Flagged Claim 2 (`line 33`): *"Either way it has to be addressed somewhere, because it happens in the real world every day."***
+     - **Nuance:** At farmers markets today, children approach the stuffed unicorn tip jar every market day (`SPEAKER_SCRIPT.md` lines 30–48), whereas an autonomous robot speaking to children at the market is the **prospective embodied-agent scenario** (`SPEAKER_SCRIPT.md` lines 52–75: *"So what if it could respond?... Intended behavior"*).
+     - **Correction:** Reword slightly so we don't imply autonomous robots are already interrogating children at farmers markets every day—e.g., *"Interactions with people who never pre-registered an account happen in the physical world every day, and agents acting in public spaces will hit this boundary immediately."*
+  3. **Flagged Claim 3 (`line 33`): *"Until there is one, the minimum is defined behavior when standing can't be established: the directed action doesn't proceed."***
+     - See Q1 Change B above: distinguish between **permission/standing that fails the resource's required assurance (or is absent/withdrawn)** -> action does not proceed, vs. **recording the actual assurance level** when an on-the-spot unverified assertion is used in a bounded demo.
+  4. **Verified/Defensible Claims to Retain:**
+     - *"An operator's robot at a farmers market wants to speak to a child. The operator's authority covers the robot. The child is the affected party, and it's the parent's decision that matters, based on the parent's standing to decide for the child. Neither the child nor the parent has an account with anyone."* — Defensible as our illustrative use case (`SPEAKER_SCRIPT.md` lines 68–87, 146–154).
+     - *"We don't know of a reliable, widely available way today to establish a parent's standing on the spot."* — Defensible as a statement of our team's knowledge (`SPEAKER_SCRIPT.md` lines 147–154).
+     - *"Bob's agent acts under Bob's authority, and that authority can lapse or narrow while the agent keeps going. Alice's answer may also come through her agent. In both cases the requirement is the same: when the action happens, check that the agent still speaks for the person."* — Defensible as a functional requirement (`AAUTH_FINDINGS_2026-08-05.md` lines 20–24; `G26_MISSION_PERMISSION_DECISION.md` lines 10–18; `m02_aauth_fcf656d/soga_supervision.py` lines 15–38).
+
+### Q3. Does the farmers-market example (our public IIW demo) reveal design beyond the requirement?
+
+- **No — with one minor vocabulary tweak recommended:**
+  - The farmers-market example was presented publicly at IIW / AAuth Night (`SPEAKER_SCRIPT.md` lines 28–91) specifically to illustrate the **requirement and gap**, and the draft reply states only *who* the parties are (operator, robot, child, parent) and *what* must happen at the boundary, without exposing SOGA's internal decision states (`ALLOW`, `RESTRICT`, `HOLDING`, `DENY`), QR session/lease mechanics (`iiw_qr_session/`, `FLOW_A_RUNTIME_MAPPING_2026-10-31.md`), or AAuth `202` `/pending/` implementation (`m02_aauth_fcf656d/approval_pending.py`).
+  - **Minor vocabulary tweak (`line 33`):** Replace the internal repo term `"the directed action"` (`DIRECTED_SCOPE` in `m02_aauth_fcf656d/other_party_approval.py` lines 14, 113) with plain English (`"the action toward the child"` or `"speaking to the child"`).
+
+### Q4. Does the guardianship framing ("standing, not delegation") avoid taking a side in the open disagreement with Alan?
+
+- **Yes:**
+  - First, because the original messages between Deb and Alan on delegation vs. guardianship are not in our workspace files (marked **unknown**), we do not adjudicate Alan's theory.
+  - Second, the draft text (`lines 31–35`) never uses the word *"guardianship"* and never argues `"standing, not delegation"`. Instead, it uses Adrian's own word from his 2:04 PM and 2:15 PM emails (**"standing"**, `lines 15, 20`) to describe why the parent's decision matters for the child (`"based on the parent's standing to decide for the child"`).
+  - Third, in paragraph 3 (`line 35`), when answering Adrian's 2:15 PM question about `Alice and Alice's agent, or Bob and Bob's agent`, the draft uses neutral agency phrasing (*"Bob's agent acts under Bob's authority... check that the agent still speaks for the person"*). That cleanly separates:
+    1. **Why the affected party (parent/Alice) has a say in an encounter they didn't initiate** (standing), from
+    2. **Whether a software agent currently has live authority from the person it represents** (Bob -> Bob's agent; Alice -> Alice's agent).
+  - This avoids taking a side on whether parental authority is philosophically classified as "delegation" while keeping the operational requirement crystal clear.
+
+### Q5. Which opening is better, and why?
+
+- **The Alternative Opening (`line 42`) is better** (optionally combined with `"raised deliberately"`):
+  > *"Thanks, Adrian. We'd keep unregistered Alice in view rather than out of scope, so here's the example behind it, for the group to consider."*
+- **Why:**
+  1. Adrian's 2:04 PM email (`line 11`) led with an explicit scoping claim: *"I consider the situation where Alice is not pre-registered with the resource server out of scope."*
+  2. The draft's current opening (`line 29`: *"We raised unregistered Alice deliberately, so here's the example behind it..."*) explains our past motive for asking the question, but leaves Adrian's `"out of scope"` label uncontested in the opening sentence.
+  3. The alternative opening (`"We'd keep unregistered Alice in view rather than out of scope..."`) politely and directly states our substantive position on scope while immediately placing the decision with the whole group (`"for the group to consider"`).
+
+### Q6. Anything that would make us look uninformed to Adrian, Eve, Alan, Harvey or Alec.
+
+1. **To Eve Maler & Alan Karp — Saying `"nobody here owns a resource"` (`line 31`):**
+   - As detailed in Q2 above, Eve Maler authored the UMA 2.0 specs where *"Resource Owner"* is a protocol role and a robot API/capability *is* a protected resource. Saying *"Here the resource being invoked is the operator's robot, not a resource Alice pre-registered with a resource server or authorization server in advance"* shows exact command of UMA 2.0's architecture.
+2. **To Adrian Gropper — Failing to contrast his absent-Alice Lab/HIPAA case with our present-Alice encounter (`lines 11–16` vs. `line 31`):**
+   - In Adrian's Lab/HIPAA and Palantir/LexisNexis examples (`lines 11–16`), Alice is **not present** when Bob requests her data from the Lab, so an unregistered Alice has `"effectively zero control"`.
+   - In our farmers-market example, the affected child and parent **are physically present** at the moment of action, so even without pre-registration, the resource side *can* hold the action and ask the parent on the spot. Adding one clause noting this distinction (*"Unlike a back-office lab or data-broker query where an unregistered Alice isn't even present, here the affected party is right there when the action is about to happen"*) directly engages Adrian's argument rather than talking past his HIPAA/Lab point.
+3. **To Harvey Reed (NIST IR 8536 traceability) & anyone who saw our IIW demo — Overstating `"when standing can't be established: the directed action doesn't proceed"` (`line 33`):**
+   - As noted in Q1/Q2, if an IIW attendee recalls that in *Permission to Speak* the robot's simulated response *did* proceed on an unverified QR tap (`assurance="unverified-demo-input"`), claiming unconditionally that *"until there is [a way to establish a parent's standing on the spot]... the directed action doesn't proceed"* could look inconsistent with our own demo.
+   - Tying this instead to **explicit resource policy on required assurance + traceable logging of actual assurance** (and refusing whenever required permission/standing is absent, insufficient for the policy, or withdrawn) aligns with our actual code (`other_party_approval.py` lines 70–92, 115–145), Adrian's paragraph 3 (`line 15`: *"the resource server needs to be explicit about Alice's registration requirements"*), and Harvey's traceability focus.
+4. **To All Recipients — Sign-off and Review Attribution Line (`lines 37–38`):**
+   - Ensure the sign-off (`"Deb B, team lead"` vs. `"Debbie"`) matches Deb's first sent email on the thread, and if the first sent email did not already carry the non-member / non-Kantara-IPR observer note on this exact thread, keep a brief observer/non-IPR parenthetical so the message is self-contained if quoted.
+
+---
+
+## 3. Minimal Proposed Wording (Preserving Structure, Tone, and Requirement-Only Boundary)
+
+> Adrian, Eve, Alan, Harvey, Alec,
+>
+> Thanks, Adrian. We'd keep unregistered Alice in view rather than out of scope, so here's the concrete example behind it, for the group to consider.
+>
+> An operator's robot at a farmers market wants to speak to a child. The operator's authority covers the robot. The child is the affected party, and it's the parent's decision that matters, based on the parent's standing to decide for the child. Neither the child nor the parent has an account with anyone. Unlike a back-end lab or data-broker query where an unregistered Alice isn't present, here the affected party is right there when the action is about to happen. The shape is close to UMA—someone other than the requester must approve before the action proceeds—but the resource being invoked is the operator's robot, not a resource Alice pre-registered with a resource server or authorization server in advance. That's why our earlier note treated the affected party's permission as a separate condition from Bob's authority, and why standing matters.
+>
+> Whether this use case is addressed in UMA or elsewhere, interactions with people who haven't pre-registered happen in the real world every day, and agents acting in public spaces will hit this boundary immediately. We don't know of a reliable, widely available way today to verify a parent's standing on the spot. Until there is one, the minimum is that the resource side be explicit about what assurance it requires, record what assurance was actually established (or that an answer was unverified), and not proceed with the action toward the child when required permission or standing isn't met or is withdrawn. Recording the use case, and what evidence would satisfy standing, keeps the gap visible rather than dropped.
+>
+> On your second question: yes, we'd keep the distinction between a person and their agent in scope. Bob's agent acts under Bob's authority, and that authority can lapse or narrow while the agent keeps going. Alice's answer may also come through her agent. In both cases the requirement is the same: when the action happens, check that the agent still speaks for the person within current limits.
+>
+> Deb B, team lead
+> (Observer / non-Kantara member; this round drafted with Claude and reviewed by [names after review])
+
+END VERBATIM AGY_ORIGINAL_394.txt
+
+
+=== Shared follow-up questions ===
+SHA-256: e201ed3e292015c83ee340c313a4a37db12037ba7b7fb26a395b5764ff2b3539
+BEGIN VERBATIM FOCUSED_FOLLOWUP.txt
+Advisory reconciliation only. Both initial originals preserved. Read393/394 plus CG original. Please address five narrowly focused questions, retaining disagreements, no rewrite of originals:
+1 AGy says draft avoids taking sides with Alan, while CC/CG say fullAlanmessages absent means cannotcertify. Agree with narrower statement: no explicit categorical standing-not-delegation, but assert no theoryofguardianship and label parentaldecision as scenario assumption; no legalrule and cannotclaimresolvedAlan? If disagree explain.
+2 AGy says noactionwithoutstanding conflictswithdemo unverifiedALLOW. Distinguish researchsimulation behavior from policyforrealdeployment: unverifieddemoinput notproofstanding, nor doesdemoworkingauthorize lowerassurance inrealuse. Can retain requirement noactionwhen requiredpermission/standing evidence unmet, with policy specifying requiredassurance. This does NOT declare unverified onspotclaim adequate forchildinteraction nor tie properpolicy todemoimplementation. Agree? Prefer plain what evidence is required and what happens when it is missing; don't publish design.
+3 Source recommendation direct accessible to CG: https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html §1.2 functionalowner,§1.3 policysettingoutofscope, §3.1 noassumptionpolicyalreadydefined. Federated https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html §1.3/1.5/3 PAT/resource-registration. Distinguish resource registration, personalaccountenrollment, policyconditionssetinadvance, identification/standing. Do not inferUMAglobalimpossibility or parentmustownproperty; phrase case testsrole/assurancerelationships and askwherebelongs, notrequiresUMAextension. CC suggestion noASactsforthem is addedscenarioassumption not universal inferredfromnoaccount. Agree?
+4 AGy suggests contrasting absentAliceLab withpresentparent; presence is scenariofact and permitsasking, notproofstanding. AdrianemaildoesnotasserteveryLabAlicephysicallyabsent; don'tinventlegal/HIPAApremise. Can make owncaseparentpresentwithoutclaimabouthisexample? Drop prevalence every-day/immediatefuture assertion as unnecessaryunsourced.
+5 Bothpreferfirmeropening; CG initiallypreferredoriginal toavoidscopeclash. CG revises to firmbutinvitational: Thanks, Adrian. We'd like to keep unregistered Alice visible as an open use case for the group to consider. We agree that registration requirements and standing should be explicit. This statesownpreference, acknowledgesagreement, no implicitgroupdecision or conceded exclusion. Agentparagraph: yesperson-agent distinction matters, authority+scope+currentconditions notjustidentity; do notdefineprotocolmechanism. Any remaining material issue? Return concise finalcomments, retainanydisagreement, no PASS/buildauthority. Sources/wording only. Noemails/publication/commits/code/tests/hardware.
+
+END VERBATIM FOCUSED_FOLLOWUP.txt
+
+
+=== Claude Code follow-up395 ===
+SHA-256: ea15e876bd49a4081bf0602eff7e7d880c216604dc2834f27a88f23d0c244205
+BEGIN VERBATIM CLAUDE_CODE_FOLLOWUP_395.txt
+CLAUDE CODE (GATE 1) — ORIGINAL FOLLOW-UP, QUEUE 395 — ADVISORY ONLY. No PASS/build authority; sources and wording only.
+Inputs, sha256 verified (0 mismatches): FOCUSED_FOLLOWUP e201ed3e…, CLAUDE_CODE_ORIGINAL_393 0ecde6e8… (mine, unchanged), AGY_ORIGINAL_394 255b4bdd…, CG_ORIGINAL_COMMENTS f220a5de…. Static reads only; nothing sent, run or committed.
+
+1 ALAN / STANDING. Agree with the narrower statement. The draft makes no explicit categorical "standing, not delegation" claim. With Alan's messages absent, nobody can certify that the reply doesn't take a side. So the reply should assert no theory of guardianship and no legal rule, and should label the parent's decision as a scenario assumption. That is what my 393 P3 aimed at ("in this scenario the parent is the one who decides for the child; how that authority is established is part of the open question"). RETAINED DISAGREEMENT with AGy's Q4 "Yes": "based on the parent's standing to decide for the child" still classifies the parent's power. AGy's proposed text keeps that phrase; I would change it.
+
+2 DEMO vs REAL POLICY. Agree. AGy is right that my 393 wording ("doesn't proceed when standing can't be established") ignored the fact that the research simulation proceeded on unverified input. The CG framing fixes it. The demo's unverified ALLOW is neither proof of standing nor a precedent for lower assurance in real use. The requirement can stand: no action when the required permission or standing evidence is unmet, with the policy specifying what is required. RETAINED DISAGREEMENT with AGy's wording "record what assurance was actually established (or that an answer was unverified)". It edges toward our receipt design, and it implies unverified answers may be an acceptable outcome. Preferred plain wording: "The resource side should say what evidence of permission and standing it requires. If that evidence is missing, insufficient or withdrawn, the action toward the child doesn't proceed, and what was relied on should be traceable."
+
+3 SOURCES / UMA FRAMING. Agree, with one self-correction. CORRECTION C1: my 393 P4 "no authorization server acts for them" is an added scenario assumption, not something that follows from "no account". I withdraw it. Keep four things distinct:
+ (a) resource registration (Fed Authz §3: protection begins on successful registration; PAT represents RO authorization, §1.3/§1.5);
+ (b) personal account enrollment;
+ (c) policy conditions set in advance (the Grant says these are out of scope, §1.3, and are not assumed already defined, §3.1);
+ (d) identification and standing.
+ Phrase the case as testing role and assurance relationships, and ask where it belongs. Don't infer that UMA can't do it, that it needs extending, or that the parent must own property. RETAINED DISAGREEMENT with AGy's "the resource being invoked is the operator's robot". That maps the protocol roles for the group (robot capability = protected resource, operator as owner side). It is a modelling hypothesis, and it arguably settles the very role question we're asking. Leave the mapping open.
+ Source note: the Kantara Recommendation URLs returned 403 to my fetcher. I checked the IETF -00 drafts (draft-maler-oauth-umagrant-00 §1.2/§1.3/§3.1; draft-maler-oauth-umafedauthz-00 §1.3/§1.5/§3). The quoted text matches what CG cites from the Recommendation. Citing the Recommendation URLs is fine, but I have not personally confirmed its wording [UNK].
+
+4 PRESENCE / PREVALENCE. Agree. The parent's presence is a scenario fact. It permits asking on the spot; it doesn't prove standing. We can state our case ("here the parent is present when the action is about to happen") without characterising Adrian's Lab example. His email doesn't say Alice is always absent, so AGy's "unlike a back-end lab ... where Alice isn't present" contrast should go. Drop all prevalence and imminence claims: "every day" and AGy's "agents in public spaces will hit this boundary immediately". Both are unsourced and unnecessary.
+
+5 OPENING / AGENT PARAGRAPH. CG's revised opening is acceptable to me and supersedes my 393 Q5 preference: "Thanks, Adrian. We'd like to keep unregistered Alice visible as an open use case for the group to consider. We agree that registration requirements and standing should be explicit." It states our preference, records agreement and concedes nothing. Agent paragraph: agree it should cover authority, scope and current conditions, not just identity, without naming a mechanism. Two additions from CG I endorse: Alice may answer herself, so an agent check applies only when an agent represents her; and the person/agent distinction is already basic to OAuth/UMA roles, so say why it still matters rather than presenting it as new.
+ Remaining material issues:
+ (i) keep the concise observer + AI-assistance disclosure;
+ (ii) either don't mention the IIW demo, or say it was simulated, with no robot/camera and unverified input;
+ (iii) whether "Deb B, team lead" matches the first sent email's sign-off is unknown; Deb to check;
+ (iv) my 393 P5 (delete "every day") and the "directed action" fix still apply.
+ No other material issues.
+
+END VERBATIM CLAUDE_CODE_FOLLOWUP_395.txt
+
+
+=== AGy follow-up396 ===
+SHA-256: d3492798239b1b0189c58340a0abb787ecfbb5d3ff7feda167c220999133cea7
+BEGIN VERBATIM AGY_FOLLOWUP_396.txt
+# Independent Gate 2 Advisory Follow-Up — Request 396 (Focused Reconciliation on Draft Reply to Adrian Gropper)
+
+- **Reviewer:** AGy (Gate 2 Independent Reviewer)
+- **Timestamp:** `2026-11-23T15:00:00-05:00` (`2026-11-23T12:00:00-08:00`)
+- **Loaded Repository Commit (`HEAD` in `/Users/debb/dev/soga-clean`):** `51d19d07915937160747b9177d228de1f1429e08`
+- **Verified Input Digests (`0` mismatches):**
+  - `uma-adrian-reply-review-2026-11-23/CLAUDE_CODE_ORIGINAL_393.txt`: `0ecde6e88419772aaf5d8cccdbb3d90d45b06519a590c6eaa8223dffe232b51c`
+  - `uma-adrian-reply-review-2026-11-23/AGY_ORIGINAL_394.txt`: `255b4bddae7fe3634ddc635476bed22c72576abe1990e9291b37752f2d4a74d9`
+  - `uma-adrian-reply-review-2026-11-23/CG_ORIGINAL_COMMENTS.txt`: `f220a5de7e7549d333b3139782aff94f034e40759b14f5b6261f524e832d6b4b`
+  - `uma-adrian-reply-review-2026-11-23/FOCUSED_FOLLOWUP.txt`: `e201ed3e292015c83ee340c313a4a37db12037ba7b7fb26a395b5764ff2b3539`
+- **Scope Compliance:** Advisory reconciliation only. Originals (`393`, `394`, `CG_ORIGINAL_COMMENTS.txt`) remain untouched. No code/repo edits, builds, tests, hardware access, or external messages.
+
+---
+
+## Responses to the Five Focused Follow-Up Questions (`FOCUSED_FOLLOWUP.txt`)
+
+### 1. Standing vs. Delegation & Avoiding Unverified Claims About Alan's Position
+
+- **Decision: Agree with the narrower statement.**
+- **Reasoning:**
+  - Because Alan Karp's earlier messages on guardianship/delegation are not in our workspace inputs (`[UNK]`), we cannot certify that any draft phrasing resolves Alan's point.
+  - Both Claude Code (`393` lines 28, 45–46) and CG (`CG_ORIGINAL_COMMENTS.txt` lines 4, 6) rightly note that `"it's the parent's decision that matters, based on the parent's standing to decide for the child"` could be read as stating a general legal rule or taking an implicit stance that parental authority is "standing" rather than "delegation".
+  - **Reconciled treatment:** Do not assert any theory of guardianship or legal rule, and do not use `"standing, not delegation"`. Instead, state as our **scenario assumption** that an action toward the child requires permission from an adult with authority/standing for that child (in this scenario, the parent), and treat how that standing or authority is established as part of the open question.
+
+### 2. Distinguishing Research-Simulation Behavior From Real-Deployment Assurance Policy
+
+- **Decision: Agree completely.**
+- **Reasoning:**
+  - Separating **research-simulation behavior** (where our robot-free IIW demo accepted `unverified-demo-input` on a fictional child solely to exercise the held-request and withdrawal flow) from **real-deployment policy** cleanly resolves the tension I raised in `394`.
+  - An unverified tap in a fictional demo is **not** proof of standing and does **not** mean unverified on-the-spot claims are adequate for real interactions with children.
+  - **Reconciled treatment:** Keep the plain requirement statement—*what permission and standing evidence are required must be explicit, and when that required evidence is missing (or permission is withdrawn), the action toward the child does not proceed*—without referencing the IIW demo's unverified input mode or internal `approval_assurance` receipt fields.
+
+### 3. Primary UMA 2.0 Sources (`Grant §1.2/§1.3/§3.1` & `Federated Authorization §1.3/§1.5/§3`), Role/Registration Distinctions, and Avoiding Added Assumptions
+
+- **Decision: Agree completely.**
+- **Reasoning & Primary-Source Alignment:**
+  - From `https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-grant-2.0.html`:
+    - `§1.2`: `resource owner` is a functional role (*"An entity capable of granting access to a protected resource"*), not property ownership.
+    - `§1.3` & `§3.1`: Policy condition setting is outside the Grant spec's scope, and the grant process *"does not assume that any relevant policy conditions have already been defined at the authorization server."*
+  - From `https://docs.kantarainitiative.org/uma/wg/rec-oauth-uma-federated-authz-2.0.html` (`§1.3`, `§1.5`, `§3`):
+    - Protection of a resource at an AS begins with PAT issuance and resource registration by the Resource Server.
+  - **Four distinct concepts kept separate:** (i) resource registration at an AS, (ii) personal account enrollment by the affected party/parent, (iii) whether policy conditions were pre-defined at an AS, and (iv) identification/standing assurance at the moment of action.
+  - **Agree on two specific corrections:**
+    1. Do **not** infer global UMA impossibility or ask whether UMA *"could be extended"*; instead, frame the scenario as testing how role, registration, and standing-assurance relationships apply when the affected party has not pre-registered with the resource side, and ask where that case belongs in the requirements.
+    2. Do **not** add Claude Code's universal clause *"and no authorization server acts for them"` (`393` lines 21, 68) as an inference from having no account with the robot operator—whether the parent has no agent/AS at all or brings her own agent/AS (Eve Maler's "Carol" question) is a separate scenario variable.
+
+### 4. Stating Parent Presence Without Characterizing Adrian's Lab/HIPAA Example & Dropping Prevalence Claims
+
+- **Decision: Agree — I withdraw the comparative clause about Adrian's Lab/HIPAA example and drop the every-day / immediate-future prevalence assertion.**
+- **Reasoning:**
+  - Adrian's email did not rest on physical absence at a Lab, and we should not characterize his HIPAA analogy.
+  - In our farmers-market scenario, the parent's presence is simply a **scenario fact** that allows a decision to be requested on the spot, while presence alone still does not prove standing.
+  - Dropping *"because it happens in the real world every day"* (and my `394` replacement about *"every day / hit this boundary immediately"*) removes an unnecessary, unsourced prevalence claim.
+
+### 5. Opening Sentences, Person-vs.-Agent Paragraph, and Check for Remaining Material Issues
+
+- **Decision: Agree with CG's revised firm-but-invitational opening and the person-vs.-agent paragraph refinement. No remaining material issues or disagreements.**
+- **Why CG's revised opening is the strongest choice:**
+  > *"Thanks, Adrian. We'd like to keep unregistered Alice visible as an open use case for the group to consider. We agree that registration requirements and standing should be explicit."*
+  - It holds our position (`keep unregistered Alice visible as an open use case for the group to consider`), acknowledges explicit agreement with Adrian's third paragraph (`registration requirements and standing should be explicit`), and avoids both concession and unnecessary friction.
+- **Why the person-vs.-agent refinement works:**
+  - Emphasizing that at the moment of action the check covers **current authority, scope/limits, and applicable conditions** (not merely agent identity) answers Adrian's 2:15 PM question for both `Bob / Bob's agent` and `Alice / Alice's agent` (when an agent acts for Alice) without prescribing a wire mechanism.
+
+---
+
+## Consolidated Minimal Proposed Reply Wording (Advisory)
+
+> Adrian, Eve, Alan, Harvey, Alec,
+>
+> Thanks, Adrian. We'd like to keep unregistered Alice visible as an open use case for the group to consider. We agree that registration requirements and standing should be explicit.
+>
+> Here is the example behind our question. In this scenario, an operator's robot at a farmers market wants to speak to a child. The operator's authority covers the robot, the child is the affected party, and speaking to the child requires permission from the child's parent. Neither the child nor the parent has pre-registered an account with the operator or the resource server, though the parent is present when the interaction is about to happen. The shape is close to UMA—someone other than the requester must approve before the action proceeds—but the resource being controlled is the operator's robot rather than a resource registered on the child's or parent's behalf in advance. That is why our earlier note treated the affected party's permission as a separate condition from Bob's authority, and why this case tests how role, registration, and standing assumptions fit together.
+>
+> We offer this as a requirements boundary case for the group to weigh where it belongs. We don't know of a reliable, widely available way today to establish a parent's standing on the spot. When the registration or standing evidence a resource requires cannot be established—or when permission is withheld or withdrawn—the minimum requirement is defined behavior: the action toward the child does not proceed. Keeping the use case visible, along with what evidence would satisfy standing, prevents that gap from being dropped silently.
+>
+> On your second question: yes, we'd keep the distinction between a person and their agent in scope. Bob's agent acts under Bob's authority, and that authority can lapse or narrow while the agent keeps going. Alice may answer directly or through her own agent. Wherever an agent acts for a person, the requirement at the moment of action is to check that the agent's authority, scope, and conditions from that person still hold.
+>
+> Deb B, team lead
+> (Still writing as an observer, not a WG-UMA participant; this round drafted with Claude and reviewed by [names after review])
+
+END VERBATIM AGY_FOLLOWUP_396.txt
